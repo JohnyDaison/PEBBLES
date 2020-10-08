@@ -1,0 +1,1 @@
+connect_to = "shoot_through_wall/success-taunt";

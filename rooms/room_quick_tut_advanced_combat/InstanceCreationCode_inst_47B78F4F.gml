@@ -1,0 +1,1 @@
+message = "During the 10 seconds of Blink Rush you can spam Blink.";

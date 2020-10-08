@@ -1,0 +1,1 @@
+waypoint_id = "left_under_under_platform";

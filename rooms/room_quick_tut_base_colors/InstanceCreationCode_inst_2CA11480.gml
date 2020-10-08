@@ -1,0 +1,1 @@
+comment = "These turrets are Red, but normally they cycle through RGB.";

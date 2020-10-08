@@ -1,0 +1,1 @@
+waypoint_id = "reach_jump_pad/success";

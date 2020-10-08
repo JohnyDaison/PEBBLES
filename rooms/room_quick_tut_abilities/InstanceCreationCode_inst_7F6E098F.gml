@@ -1,0 +1,1 @@
+waypoint_id = "pickup_base_teleport/active";

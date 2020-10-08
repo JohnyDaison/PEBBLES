@@ -1,0 +1,1 @@
+zone_id = "doublejump_pickup/start";

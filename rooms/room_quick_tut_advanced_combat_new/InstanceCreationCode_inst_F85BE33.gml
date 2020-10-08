@@ -1,0 +1,1 @@
+zone_id = "white_pad/start";

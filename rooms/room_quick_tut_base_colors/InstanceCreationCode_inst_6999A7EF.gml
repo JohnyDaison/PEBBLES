@@ -1,0 +1,1 @@
+waypoint_id = "green_orbit/success";

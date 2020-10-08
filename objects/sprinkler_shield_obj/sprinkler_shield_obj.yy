@@ -1,0 +1,42 @@
+{
+  "spriteId": {
+    "name": "sprinkler_shield_spr",
+    "path": "sprites/sprinkler_shield_spr/sprinkler_shield_spr.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "equipment_obj",
+    "path": "objects/equipment_obj/equipment_obj.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":56.0,"y":56.0,},
+    {"x":56.0,"y":56.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"sprinkler_shield_obj","path":"objects/sprinkler_shield_obj/sprinkler_shield_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "equipment",
+    "path": "folders/Objects/Game/equipment.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sprinkler_shield_obj",
+  "tags": [],
+  "resourceType": "GMObject",
+}

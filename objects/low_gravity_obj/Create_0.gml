@@ -1,0 +1,1 @@
+low_gravity_coef = 0.1656; // 0.01;

@@ -1,0 +1,1 @@
+zone_id = "open_gate_red";

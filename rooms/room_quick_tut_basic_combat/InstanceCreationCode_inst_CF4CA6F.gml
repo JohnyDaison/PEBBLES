@@ -1,0 +1,1 @@
+zone_id = "recharge_pad/success";

@@ -1,0 +1,1 @@
+zone_id = "goto_haste/start";

@@ -1,0 +1,1 @@
+wallclimb_point = true;

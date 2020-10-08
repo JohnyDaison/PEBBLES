@@ -1,0 +1,1 @@
+waypoint_id = "small_tree_top";

@@ -1,0 +1,1 @@
+add_frame(match_summary_window);

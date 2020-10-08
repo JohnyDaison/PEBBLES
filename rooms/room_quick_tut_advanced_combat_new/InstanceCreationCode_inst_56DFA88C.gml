@@ -1,0 +1,1 @@
+connect_to = "white_pad/success-taunt";

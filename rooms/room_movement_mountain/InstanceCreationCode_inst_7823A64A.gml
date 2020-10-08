@@ -1,0 +1,1 @@
+waypoint_id = "gloves_pickup/active";

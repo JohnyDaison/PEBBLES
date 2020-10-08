@@ -1,0 +1,1 @@
+waypoint_id = "charged_jump_pickup";

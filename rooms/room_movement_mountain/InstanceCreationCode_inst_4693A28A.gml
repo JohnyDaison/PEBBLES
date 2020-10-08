@@ -1,0 +1,1 @@
+zone_id = "wall_jump/failure";

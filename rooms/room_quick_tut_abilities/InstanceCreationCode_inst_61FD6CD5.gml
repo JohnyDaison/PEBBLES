@@ -1,0 +1,1 @@
+zone_id = "tp_rush_a/start";

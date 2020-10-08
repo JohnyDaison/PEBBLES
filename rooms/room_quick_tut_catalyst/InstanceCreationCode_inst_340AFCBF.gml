@@ -1,0 +1,1 @@
+waypoint_id = "quick_shot/active";

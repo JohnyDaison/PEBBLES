@@ -1,0 +1,9 @@
+function new_place_onup() {
+	if(room == level_editor && !instance_exists(clear_tool))
+	{
+	    instance_create(0,0,clear_tool);
+	}
+
+
+
+}

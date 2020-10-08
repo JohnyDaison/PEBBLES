@@ -1,0 +1,1 @@
+zone_id = "battery_spawner/success";

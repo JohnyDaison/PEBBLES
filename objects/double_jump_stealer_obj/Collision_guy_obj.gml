@@ -1,0 +1,1 @@
+other.doublejump_count = other.max_doublejumps;

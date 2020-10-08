@@ -1,0 +1,1 @@
+waypoint_id = "forest_ledge";

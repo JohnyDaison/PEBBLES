@@ -1,0 +1,1 @@
+waypoint_id = "down_in_forest";

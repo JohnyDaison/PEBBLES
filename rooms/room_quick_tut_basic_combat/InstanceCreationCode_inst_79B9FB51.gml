@@ -1,0 +1,1 @@
+connect_to = "wallclimb_channeling_sparks";

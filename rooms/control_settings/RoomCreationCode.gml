@@ -1,0 +1,1 @@
+add_frame(control_settings_window);

@@ -1,0 +1,1 @@
+comment = "You can kill Color Snake by shooting its head off.";

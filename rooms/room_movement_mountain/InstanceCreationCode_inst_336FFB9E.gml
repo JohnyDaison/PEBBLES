@@ -1,0 +1,1 @@
+zone_id = "double_jump2/failure";

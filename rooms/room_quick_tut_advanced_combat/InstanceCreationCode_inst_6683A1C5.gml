@@ -1,0 +1,1 @@
+connect_to = "red_color_body/success";

@@ -1,0 +1,1 @@
+add_frame(main_menu_window);

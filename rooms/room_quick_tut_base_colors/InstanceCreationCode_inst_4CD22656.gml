@@ -1,0 +1,1 @@
+comment = "Matching Body Color doesn't remove the Status effect immediately.|You just stop receiving it.";

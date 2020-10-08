@@ -1,0 +1,1 @@
+waypoint_id = "dive_jump_end";

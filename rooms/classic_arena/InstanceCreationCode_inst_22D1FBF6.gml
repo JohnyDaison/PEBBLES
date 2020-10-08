@@ -1,0 +1,1 @@
+waypoint_id = "left_spawn_inner_edge";

@@ -1,0 +1,1 @@
+zone_id = "reach_wall_jump/start";

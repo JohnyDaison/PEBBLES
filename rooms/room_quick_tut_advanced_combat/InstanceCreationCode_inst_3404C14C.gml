@@ -1,0 +1,1 @@
+waypoint_id = "get_past_guards/success-taunt";

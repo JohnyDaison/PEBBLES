@@ -1,0 +1,1 @@
+zone_id = "intro_exit/success";

@@ -1,0 +1,1 @@
+zone_id = "exit_level/success";

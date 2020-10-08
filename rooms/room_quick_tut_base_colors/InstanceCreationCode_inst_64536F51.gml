@@ -1,0 +1,1 @@
+waypoint_id = "red_hill_top";

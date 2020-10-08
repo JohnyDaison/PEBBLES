@@ -1,0 +1,94 @@
+event_inherited();
+
+count = ds_map_size(self.cameras);
+total_x = 0;
+total_y = 0;
+var i,ii;
+
+if(count>0 && !on) //&& view_visible[0]
+{
+    //view_visible[0]=false;
+    
+    if(my_chunkgrid != noone)
+    {
+        observer_remove(my_chunkgrid, id);
+    }
+    for(i=1;i<=count;i+=1)
+    {
+        cam = cameras[? i];
+        cam.on = true;
+        if(cam.my_chunkgrid == noone)
+        {
+            observer_add(chunkgrid_obj, cam.id);
+        }
+        total_x += cam.x;
+        total_y += cam.y;
+    }
+    
+    x = total_x/count;
+    y = total_y/count;
+    
+    if(gamemode_obj.object_index == campaign_obj)
+    {
+        followed_x = x;
+        followed_y = y;
+    }
+    
+    __view_set( e__VW.XView, view, x-__view_get( e__VW.WView, view )/2 ); 
+    __view_set( e__VW.YView, view, y-(__view_get( e__VW.HView, view )-singleton_obj.player_panel_height)/2 );
+
+    if(ter_list_length > 0)
+    {
+        for(ii=ter_list_length-1; ii>=0; ii-=1)
+        {
+            ter_block = ds_list_find_value(ter_list, ii);
+            if(!is_undefined(ter_block) && instance_exists(ter_block))
+            {
+               ter_block.visible = false;
+            }
+        }
+        ds_list_clear(ter_list);
+        ter_list_length = 0;
+    }
+}
+
+if(on || count == 0) // !view_visible[0] &&
+{
+    //view_visible[0]=true;
+    for(i=1;i<=count;i+=1)
+    {
+        cam = cameras[? i];
+        cam.on = false;
+
+        with(cam)
+        {
+            if(ter_list_length > 0)
+            {
+                for(ii = ter_list_length-1; ii>=0; ii-=1)
+                {
+                    ter_block = ds_list_find_value(ter_list, ii);
+                    if(!is_undefined(ter_block) && instance_exists(ter_block))
+                    {
+                       ter_block.visible = false;
+                    }
+                }
+                ds_list_clear(ter_list);
+                ter_list_length = 0;
+            }
+        }
+        
+        if(cam.my_chunkgrid != noone)
+        {
+            observer_remove(chunkgrid_obj, cam.id);
+        }
+    }
+    
+    if(my_chunkgrid == noone)
+    {
+        observer_add(chunkgrid_obj, id);
+    }
+}
+
+bg_xoffset += bg_hspeed;
+bg_yoffset += bg_vspeed;
+

@@ -1,0 +1,1 @@
+add_frame(graphic_settings_window);

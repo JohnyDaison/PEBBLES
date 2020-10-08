@@ -1,0 +1,1 @@
+waypoint_id = "left_bottom_near_fall";

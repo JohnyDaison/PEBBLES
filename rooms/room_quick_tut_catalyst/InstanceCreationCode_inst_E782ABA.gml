@@ -1,0 +1,1 @@
+comment = "Turrets auto-fire when their block Bursts.";

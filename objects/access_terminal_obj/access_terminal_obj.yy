@@ -1,0 +1,46 @@
+{
+  "spriteId": {
+    "name": "access_terminal2_spr",
+    "path": "sprites/access_terminal2_spr/access_terminal2_spr.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": {
+    "name": "square63_mask",
+    "path": "sprites/square63_mask/square63_mask.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "structure_obj",
+    "path": "objects/structure_obj/structure_obj.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":20.0,"y":30.0,},
+    {"x":20.0,"y":20.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"access_terminal_obj","path":"objects/access_terminal_obj/access_terminal_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"access_terminal_obj","path":"objects/access_terminal_obj/access_terminal_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "energy",
+    "path": "folders/Objects/Game/structures/energy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "access_terminal_obj",
+  "tags": [],
+  "resourceType": "GMObject",
+}

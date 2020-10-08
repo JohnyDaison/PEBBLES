@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "ingame_screen_editor_spr",
+    "path": "sprites/ingame_screen_editor_spr/ingame_screen_editor_spr.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "structure_obj",
+    "path": "objects/structure_obj/structure_obj.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":20.0,"y":30.0,},
+    {"x":20.0,"y":20.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ingame_screen_obj","path":"objects/ingame_screen_obj/ingame_screen_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"ingame_screen_obj","path":"objects/ingame_screen_obj/ingame_screen_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "structures",
+    "path": "folders/Objects/Game/structures.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ingame_screen_obj",
+  "tags": [],
+  "resourceType": "GMObject",
+}

@@ -1,0 +1,1 @@
+waypoint_id = "triple_jump/failure";

@@ -1,0 +1,1 @@
+zone_id = "shoot_through_wall/start";

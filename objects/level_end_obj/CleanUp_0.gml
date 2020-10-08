@@ -1,0 +1,1 @@
+ds_map_destroy(object_exit_step);

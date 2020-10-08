@@ -1,0 +1,1 @@
+waypoint_id = "open_gate_red/active";

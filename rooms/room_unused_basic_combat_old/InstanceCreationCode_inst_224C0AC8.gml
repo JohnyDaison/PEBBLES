@@ -1,0 +1,1 @@
+waypoint_id = "tower_smallblock3";

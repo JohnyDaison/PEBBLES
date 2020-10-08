@@ -1,0 +1,1 @@
+message = "Dedication is the key to success.";

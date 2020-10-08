@@ -1,0 +1,1 @@
+lockon_range = 26 * 32;

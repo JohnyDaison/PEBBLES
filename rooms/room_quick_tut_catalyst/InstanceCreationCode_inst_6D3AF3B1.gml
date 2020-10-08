@@ -1,0 +1,1 @@
+waypoint_id = "color_body/success";

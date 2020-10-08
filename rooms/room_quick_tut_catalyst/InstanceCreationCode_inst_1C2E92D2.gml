@@ -1,0 +1,1 @@
+connect_to = "catalyst_pickup/success";

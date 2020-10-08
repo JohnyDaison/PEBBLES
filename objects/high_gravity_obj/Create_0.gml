@@ -1,0 +1,1 @@
+high_gravity_coef = 1.5;

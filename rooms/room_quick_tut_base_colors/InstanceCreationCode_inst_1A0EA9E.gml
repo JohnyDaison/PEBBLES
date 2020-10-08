@@ -1,0 +1,1 @@
+waypoint_id = "base_colors_start";

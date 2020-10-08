@@ -1,0 +1,83 @@
+action_inherited();
+with (status_effect_overlay) {
+/// INIT and STEP
+if(!ready)
+{
+    if(instance_exists(my_player) && instance_exists(my_guy) && view_enabled)
+    {
+        if(instance_exists(my_player.my_camera))
+        {
+            my_camera = my_player.my_camera;
+
+            offset_set = false;
+            if(__view_get( e__VW.Visible, my_camera.view ))
+            {
+                self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
+                self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );
+                offset_set = true;
+            }
+            if(!offset_set)
+            {
+                self.view_x_offset = __view_get( e__VW.XPort, 0 ) + (__view_get( e__VW.WPort, 0 )/2)*(my_camera.view-1);
+                self.view_y_offset = __view_get( e__VW.YPort, 0 );
+            }
+            
+           ready = true;
+        }
+    }
+}
+
+if(ready && instance_exists(my_guy))
+{ 
+    // UPDATE VALUES
+    
+    // POSITIONS
+    x = __view_get( e__VW.WPort, my_camera.view ) - my_camera.border_width + self.view_x_offset;
+    y = my_camera.border_width + 256 + self.view_y_offset;
+
+    // EFFECTS  
+    var effect, effect_left, i, index;
+
+    for(i = 0; i < DB.status_effect_count; i++)
+    {
+        effect_id = status_list[| i];
+        effect = DB.status_effects[? effect_id];
+        effect_left = my_guy.status_left[? effect_id];
+        index = ds_list_find_index(status_order, effect_id);
+        
+        if(effect_left > 0 && DB.color_effects[? effect.color] != effect)
+        {
+            if(index == -1)
+            {
+                ds_list_add(status_order, effect_id);
+                status_alpha[? effect_id] = 1;
+            }
+            else
+            {
+                if(status_alpha[? effect_id] < 0.5)
+                {
+                    status_alpha[? effect_id] += status_fade_rate;
+                }
+                else
+                {
+                    status_alpha[? effect_id] = 1;
+                }
+            }
+            
+        }
+        else
+        {     
+            if(index >= 0)
+            {
+                status_alpha[? effect_id] -= status_fade_rate;
+                
+                if(status_alpha[? effect_id] < 0)
+                {                        
+                    ds_list_delete(status_order, index);
+                }
+            }
+        }       
+    }
+}
+
+}

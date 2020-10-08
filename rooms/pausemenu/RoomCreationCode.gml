@@ -1,0 +1,1 @@
+add_frame(pause_menu_window);

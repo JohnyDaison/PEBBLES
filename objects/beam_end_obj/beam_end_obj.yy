@@ -1,0 +1,42 @@
+{
+  "spriteId": {
+    "name": "beam_end_mask",
+    "path": "sprites/beam_end_mask/beam_end_mask.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "spell_obj",
+    "path": "objects/spell_obj/spell_obj.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":24.0,"y":24.0,},
+    {"x":24.0,"y":24.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"wall_obj","path":"objects/wall_obj/wall_obj.yy",},"parent":{"name":"beam_end_obj","path":"objects/beam_end_obj/beam_end_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "area",
+    "path": "folders/Objects/Game/spells/area.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "beam_end_obj",
+  "tags": [],
+  "resourceType": "GMObject",
+}

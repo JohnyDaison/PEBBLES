@@ -1,0 +1,1 @@
+waypoint_id = "wall_jump_start_point";

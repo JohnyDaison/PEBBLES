@@ -1,0 +1,1 @@
+waypoint_id = "red_body/success";

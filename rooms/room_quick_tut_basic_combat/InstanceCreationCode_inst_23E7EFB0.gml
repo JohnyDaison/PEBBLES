@@ -1,0 +1,1 @@
+zone_id = "spawn_sprinkler";

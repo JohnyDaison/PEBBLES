@@ -1,0 +1,1 @@
+waypoint_id = "blue_after_tricky_jump";

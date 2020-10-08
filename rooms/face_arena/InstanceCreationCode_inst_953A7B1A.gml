@@ -1,0 +1,1 @@
+field_power = 0.75;

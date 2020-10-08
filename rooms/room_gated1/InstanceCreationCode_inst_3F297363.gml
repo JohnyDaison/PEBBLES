@@ -1,0 +1,1 @@
+shield_size = 2;

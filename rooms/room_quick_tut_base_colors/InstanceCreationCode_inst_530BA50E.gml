@@ -1,0 +1,1 @@
+waypoint_id = "blue_checkpoint";

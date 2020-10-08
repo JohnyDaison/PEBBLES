@@ -1,0 +1,1 @@
+zone_id = "cannon_shoot/start";

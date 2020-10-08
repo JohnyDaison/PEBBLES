@@ -1,0 +1,1 @@
+zone_id = "capture_base_crystal";

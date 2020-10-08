@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "jump_pad_icon",
+    "path": "sprites/jump_pad_icon/jump_pad_icon.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "non_terrain_obj",
+    "path": "objects/non_terrain_obj/non_terrain_obj.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":1.0,"y":1.0,},
+    {"x":17.0,"y":17.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"structure_obj","path":"objects/structure_obj/structure_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"structure_obj","path":"objects/structure_obj/structure_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "environment",
+    "path": "folders/Objects/Game parents/environment.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "structure_obj",
+  "tags": [],
+  "resourceType": "GMObject",
+}

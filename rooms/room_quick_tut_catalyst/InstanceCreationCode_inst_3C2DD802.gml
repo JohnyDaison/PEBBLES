@@ -1,0 +1,1 @@
+waypoint_id = "catalyst_pickup/success";

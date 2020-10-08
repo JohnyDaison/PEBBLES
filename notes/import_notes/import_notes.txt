@@ -1,0 +1,5 @@
+info_font, info_window, info_close, gui_infoarea - don't seem to be used anywhere
+TODO: refurbish info_window to be useful debug mode popup to display instance info
+ 
+Background scaling and offset are wrong
+Text positions are wrong

@@ -1,0 +1,1 @@
+waypoint_id = "gloves_area_ledge_bottom";

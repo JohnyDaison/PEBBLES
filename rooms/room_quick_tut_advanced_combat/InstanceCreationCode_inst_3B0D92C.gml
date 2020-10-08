@@ -1,0 +1,1 @@
+waypoint_id = "shield_pickup/success-taunt";
