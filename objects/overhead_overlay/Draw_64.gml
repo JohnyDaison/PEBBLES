@@ -246,7 +246,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     // STATUS EFFECTS PANEL
     
     var ii, status_count, effect, panel_width, bar_height, status_color, status_tint, status_icon;
-    var xx = x, active_count = 0;
+    var xx = x, visible_count = 0;
     
     status_count = ds_map_size(status_order);
     for(i=1; i<=status_count; i++)
@@ -254,12 +254,12 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
         status_color = status_order[? i];
         effect = DB.color_effects[? status_color];
 
-        if(my_guy.status_left[? effect.codename] > 0)
+        if(status_card_visible[? effect.codename])
         {
-            active_count += 1;
+            visible_count += 1;
         }
     }
-    panel_width = active_count*(status_bar_space + status_bar_width) + status_bar_space;
+    panel_width = visible_count * (status_bar_space + status_bar_width) + status_bar_space;
     status_panel_y = move_lock_y - 32;
         
     for(i=1; i<=status_count; i++)
