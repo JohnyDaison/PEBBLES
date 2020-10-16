@@ -897,6 +897,7 @@
     {"id":{"name":"fast_match_start_keyboard","path":"scripts/fast_match_start_keyboard/fast_match_start_keyboard.yy",},"order":6,},
     {"id":{"name":"fast_match_start_joysticks","path":"scripts/fast_match_start_joysticks/fast_match_start_joysticks.yy",},"order":7,},
     {"id":{"name":"closed_quarters_joysticks","path":"scripts/closed_quarters_joysticks/closed_quarters_joysticks.yy",},"order":8,},
+    {"id":{"name":"room_empty_base","path":"rooms/room_empty_base/room_empty_base.yy",},"order":5,},
     {"id":{"name":"classic_match_joysticks","path":"scripts/classic_match_joysticks/classic_match_joysticks.yy",},"order":9,},
     {"id":{"name":"match_restart","path":"scripts/match_restart/match_restart.yy",},"order":10,},
     {"id":{"name":"fast_4match_start","path":"scripts/fast_4match_start/fast_4match_start.yy",},"order":11,},
@@ -1494,6 +1495,7 @@
     {"id":{"name":"gm_volleyball_start","path":"scripts/gm_volleyball_start/gm_volleyball_start.yy",},"order":6,},
     {"id":{"name":"gm_survival_start","path":"scripts/gm_survival_start/gm_survival_start.yy",},"order":7,},
     {"id":{"name":"gm_roguelike_start","path":"scripts/gm_roguelike_start/gm_roguelike_start.yy",},"order":8,},
+    {"id":{"name":"loop_world_obj","path":"objects/loop_world_obj/loop_world_obj.yy",},"order":0,},
     {"id":{"name":"gm_quick_tutorial_start","path":"scripts/gm_quick_tutorial_start/gm_quick_tutorial_start.yy",},"order":9,},
     {"id":{"name":"gm_test_mode_start","path":"scripts/gm_test_mode_start/gm_test_mode_start.yy",},"order":10,},
     {"id":{"name":"mods_update_state","path":"scripts/mods_update_state/mods_update_state.yy",},"order":5,},
@@ -2050,6 +2052,7 @@
     {"name":"room_quick_tut_advanced_combat_new","path":"rooms/room_quick_tut_advanced_combat_new/room_quick_tut_advanced_combat_new.yy",},
     {"name":"room_quick_tut_abilities","path":"rooms/room_quick_tut_abilities/room_quick_tut_abilities.yy",},
     {"name":"room_unused_basic_combat_old","path":"rooms/room_unused_basic_combat_old/room_unused_basic_combat_old.yy",},
+    {"name":"room_empty_base","path":"rooms/room_empty_base/room_empty_base.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -2342,6 +2345,8 @@
     {"folderPath":"folders/Scripts/test.yy","order":29,"resourceVersion":"1.0","name":"test","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/methods.yy","order":30,"resourceVersion":"1.0","name":"methods","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/methods/guy.yy","order":1,"resourceVersion":"1.0","name":"guy","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Rooms/worlds/Loop World.yy","order":4,"resourceVersion":"1.0","name":"Loop World","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Worlds/Loop World.yy","order":6,"resourceVersion":"1.0","name":"Loop World","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

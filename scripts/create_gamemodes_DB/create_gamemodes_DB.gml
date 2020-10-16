@@ -334,6 +334,14 @@ function create_gamemodes_DB() {
 	default_mods = gm[? "default_modifiers"];
 	default_mods[? "tut_guide"] = true;
 
+    // Loop world
+	gm = gamemode_create("loop_world", "Loop world", campaign_obj, loop_world_obj);
+	gm[? "description"] = "Not linear!";
+	gm[? "min_real_players"] = 0;
+	gm[? "max_players"] = 1;
+    gm[? "start_place_room"] = room_empty_base;
+    gm[? "is_coop"] = true;
+
 
 	// Test mode
 	gm = gamemode_create("test_mode", "Extras", campaign_obj, test_world_obj);
