@@ -1,3 +1,5 @@
+place_graph.destroy();
+
 var count = ds_list_size(places);
 for(i=count-1;i>=0;i--)
 {

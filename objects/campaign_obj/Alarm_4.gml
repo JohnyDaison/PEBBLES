@@ -9,13 +9,20 @@ with(place_controller_obj)
 do_room_cleanup();
 
 var cur_index = ds_list_find_index(world.places, world.current_place);
-var next = (world.places[|(cur_index+1)]);
+var next = noone;
+
+if (world.next_place != noone) {
+    var next = world.next_place;
+} else {
+    var next = (world.places[|(cur_index+1)]);
+}
 
 // add current stats to tournament_stats
 
 if(reached_limit_name != "user_terminated" && next && instance_exists(next))
 {
     world.current_place = next.id;
+    world.next_place = noone;
     arena_name = next.name;
     single_cam = world.current_place.single_cam;
     limit_reached = false;
