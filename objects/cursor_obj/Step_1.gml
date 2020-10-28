@@ -1,5 +1,3 @@
-//tooltip = string(instance_number(wallclimb_item_obj));
-
 view_drag = false;
 if(instance_exists(editor_camera))
 {
@@ -102,16 +100,48 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
 {
     singleton_obj.last_gui_device = mouse;
     var focused_frame = frame_manager.focused_child;
+    var focused_is_modal = false;
+    var focused_name = "noone";
     var focus_found = false;
-    show_debug_message("focused frame: " + string(focused_frame));
+    if(instance_exists(focused_frame)) {
+        focused_is_modal = focused_frame.modal;
+        focused_name = object_get_name(object_index);
+    }
+    show_debug_message("focused frame: " + focused_name);
+    
+    var new_frame = noone;
+    var new_is_modal = false;
+    var new_is_console = false;
+    
+    with(empty_frame)
+    {
+        if(visible 
+            && x <= cursor_obj.x && cursor_obj.x < x + width 
+            && y <= cursor_obj.y && cursor_obj.y < y + height)
+        {
+            var name = object_get_name(object_index);
+            show_debug_message("cursor is in frame " + name);
+            var is_console = object_index == console_window;
+            
+            if(!new_is_console && (new_frame == noone || is_console 
+                    || (!focused_is_modal && !new_is_modal) || modal)) {
+                show_debug_message("frame " + name + " is considered");
+                new_frame = id;
+                new_is_modal = modal 
+                new_is_console = is_console;
+            }
+        }
+    }
+    
+    var force_new = new_is_modal || new_is_console;
     
     if(instance_exists(focused_frame))
     {
-        show_debug_message("focused object_index: " + object_get_name(focused_frame.object_index));
+        show_debug_message("focused object_index: " + focused_name);
         
         if(object_is_ancestor(focused_frame.object_index, empty_frame))
         {
-            if(focused_frame.modal)
+            if(focused_is_modal && !force_new)
             {
                 focus_found = true;
             }
@@ -123,7 +153,7 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
                     {
                         if(visible && !focus_found && x <= cursor_obj.x && cursor_obj.x < x+width && y <= cursor_obj.y && cursor_obj.y < y+height)
                         {
-                            show_debug_message("cursor is in frame " + string(id));
+                            show_debug_message("cursor is in frame " + focused_name);
                             if(focused)
                             {
                                 show_debug_message("manager focused on me and I am");
@@ -145,23 +175,21 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
     if(!focus_found)
     {
         show_debug_message("focused frame not found, clearing all");
-        gui_clear_focus(frame_manager);
+        gui_clear_focus(frame_manager, force_new);
     } 
     else if(instance_exists(cursor_obj.focus) && !cursor_obj.focus.visible)
     {
         show_debug_message("focused element invisible, clearing all");
-        gui_clear_focus(frame_manager);   
+        gui_clear_focus(frame_manager, force_new);   
     }
     
-    with(empty_frame)
-    {
-        if(visible && !focus_found && x <= cursor_obj.x && cursor_obj.x < x+width && y <= cursor_obj.y && cursor_obj.y < y+height)
-        {
-            show_debug_message("cursor is in frame " + string(id));
+    if(!focus_found && new_frame != noone) {
+        with(new_frame) {
             gui_get_focus();
-            cursor_obj.focus_found = true;    
+            cursor_obj.focus_found = true; 
         }
     }
+    
     if(focus_found)
     {
         show_debug_message("focus found, clearing tools");

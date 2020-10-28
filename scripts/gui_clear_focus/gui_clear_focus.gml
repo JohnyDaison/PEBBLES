@@ -1,14 +1,16 @@
-function gui_clear_focus(argument0) {
+function gui_clear_focus(frame) {
 	var ret = true;
-	if(instance_exists(argument0))
+    var force = false;
+    if(argument_count > 1) {
+        force = argument[1];
+    }
+    
+	if(instance_exists(frame))
 	{
-	    with(argument0)
+	    with(frame)
 	    {
-	         ret = gui_lose_focus();
+	         ret = gui_lose_focus(force);
 	    }
 	}
 	return ret;
-
-
-
 }

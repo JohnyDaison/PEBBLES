@@ -1,9 +1,14 @@
 function gui_lose_focus() {
+    var force = false;
+    if(argument_count > 0) {
+        force = argument[0];
+    }
+    
 	//show_debug_message("losing focus");
 	//show_debug_message("id: "+string(id));
 	if(object_is_ancestor(object_index, gui_object))
 	{
-	    if(modal) return false;
+	    if(modal && !force) return false;
         
 	    var count = ds_list_size(self.gui_content);
 	    //show_debug_message("content count: "+string(count));
@@ -16,7 +21,7 @@ function gui_lose_focus() {
 	        {
 	            with(child)
 	            {
-	                if(gui_lose_focus())
+	                if(gui_lose_focus(force))
 	                {
 	                    other.content_focused = -1;
 	                    other.focused_child = noone;
