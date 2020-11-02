@@ -179,6 +179,8 @@ function create_player_things() {
 	    add_player_overlay(status_effect_overlay, player);
 	    add_player_overlay(radial_overlay, player);
 	    player.battlefeed = add_player_overlay(battlefeed_overlay, player);   
+        
+        add_player_overlay(color_info_overlay, player);
 	}
 
 	ii = instance_create(x,y,name_plate_window);

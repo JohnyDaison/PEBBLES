@@ -162,7 +162,7 @@ if(inst != noone)
         instance_create(inst.x,inst.y,spawn_effect_obj);
         
     rand_color = ds_map_find_value(DB.colormap, irandom_range(g_black, g_white));
-    singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.03);
+    singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.02);
     singleton_obj.bgcolor_updated = false;
 }
 

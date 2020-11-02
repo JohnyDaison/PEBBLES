@@ -75,7 +75,7 @@ if(self.draw_heading)
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 
-    my_draw_text(window_axis, y+heading_offset, string_hash_to_newline(self.text));
+    my_draw_text(window_axis, y+heading_offset, self.text);
 }
 
 // debug
