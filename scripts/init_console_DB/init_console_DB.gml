@@ -14,7 +14,7 @@ function init_console_DB() {
 	ds_list_add(ccs, "mode debug");
 	ds_list_add(ccs, "mode test");
 	ds_list_add(ccs, "mode play");
-
+    
 	/*
 	ds_list_add(ccs, "playerquests 1");
 	ds_list_add(ccs, "playerquestrecheck 1");
@@ -61,6 +61,7 @@ function init_console_DB() {
 	add_console_script("listds", list_ds, "");
 	add_console_script("getprop", getprop, "object, string");
 	add_console_script("setprop", setprop, "object, string, string");
+    add_console_script("setnumber", set_number, "object, string, number");
 	add_console_script("objname", obj_getname, "number", "Return name of the object with given id");
 	add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given id");
 
@@ -122,7 +123,7 @@ function init_console_DB() {
 
 	ds_list_add(debug, "replace", "transform", "chunks", "chunksoff", "findholders", "listevents", "navgraph");
 
-	ds_list_add(debug, "count", "grouplist", "instlist", "instinfo", "listds", "getprop", "setprop", "objname", "spritename");
+	ds_list_add(debug, "count", "grouplist", "instlist", "instinfo", "listds", "getprop", "setprop", "setnumber", "objname", "spritename");
 
 	ds_list_add(debug, "camfollow", "camgoto", "camreset");
 

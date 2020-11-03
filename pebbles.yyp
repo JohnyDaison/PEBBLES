@@ -1605,6 +1605,7 @@
     {"id":{"name":"guy_obj","path":"objects/guy_obj/guy_obj.yy",},"order":1,},
     {"id":{"name":"basic_bot","path":"objects/basic_bot/basic_bot.yy",},"order":0,},
     {"id":{"name":"non_game_obj","path":"objects/non_game_obj/non_game_obj.yy",},"order":11,},
+    {"id":{"name":"set_number","path":"scripts/set_number/set_number.yy",},"order":11,},
     {"id":{"name":"npc_waypoint_obj","path":"objects/npc_waypoint_obj/npc_waypoint_obj.yy",},"order":1,},
     {"id":{"name":"equipment_obj","path":"objects/equipment_obj/equipment_obj.yy",},"order":4,},
     {"id":{"name":"sprinkler_shield_obj","path":"objects/sprinkler_shield_obj/sprinkler_shield_obj.yy",},"order":0,},
