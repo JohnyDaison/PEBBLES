@@ -26,7 +26,7 @@ for(var col = g_black; col <= g_white; col += 1)
     draw_rectangle(col_x - (base_halfsize + 1), yy + row_height/2 - (base_halfsize + 1), 
                    col_x + base_halfsize, yy + row_height/2 + base_halfsize, false);
     
-    draw_set_alpha(0.1);
+    draw_set_alpha(1);
     //draw_set_color(color_value);
     draw_rectangle(col_x - base_halfsize, yy + row_height/2 - base_halfsize, 
                    col_x + base_halfsize - 1, yy + row_height/2 + base_halfsize - 1, false);
@@ -54,6 +54,7 @@ for(var row = g_black; row <= g_white; row += 1)
     draw_rectangle(col_x - (base_halfsize + 1), row_y - (base_halfsize + 1), 
                    col_x + base_halfsize, row_y + base_halfsize, false);
     
+    draw_set_alpha(1);
     //draw_set_color(rcolor_value);
     draw_rectangle(col_x - base_halfsize, row_y - base_halfsize, 
                    col_x + base_halfsize - 1, row_y + base_halfsize - 1, false);
@@ -75,6 +76,7 @@ for(var row = g_black; row <= g_white; row += 1)
                        col_x + halfsize, row_y + halfsize, false);
     
         //draw_set_color(rcolor_value);
+        draw_set_alpha(1);
         draw_rectangle(col_x - halfsize, row_y - halfsize, 
                        col_x + halfsize - 1, row_y + halfsize - 1, false);
                        

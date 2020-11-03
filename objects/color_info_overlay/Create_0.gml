@@ -12,6 +12,10 @@ self.height = 256;
 abi_panel_height = 61;
 margin = 8;
 
+// to prevent blink in wrong position
+x = -1000;
+y = -1000;
+
 window_x_center = x + self.width / 2;
 window_y_center = y + self.height / 2;
 
