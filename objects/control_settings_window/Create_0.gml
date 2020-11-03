@@ -7,6 +7,8 @@ y = room_height/2-self.height/2;
 self.text = "Control Settings";
 self.modal = true;
 
+var labels;
+
 labels[up] = "Up";
 labels[down] = "Down";
 labels[left] = "Left";
@@ -24,6 +26,10 @@ labels[inventory_1] = "Item 1";
 labels[inventory_2] = "Item 2";
 labels[inventory_3] = "Item 3";
 labels[inventory_4] = "Item 4";
+labels[colorinfo] = "Color Info";
+labels[pause] = "Pause";
+
+input_count = colorinfo + 1;
 
 
 top_line = 64;
@@ -43,7 +49,7 @@ gui_add_label(column_size*9/2, 0, "Gamepad 2");
 
 eloffset_y = y + column_start;
 
-for(i=0;i<=16;i+=1)
+for(i=0; i < input_count; i+=1)
 {
     gui_add_label(column_size*1/2, 32*i, labels[i]);
     

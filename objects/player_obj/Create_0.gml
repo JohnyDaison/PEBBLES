@@ -22,6 +22,8 @@ is_cpu = false;
 cpu_difficulty = 1;
 title = "";
 battlefeed = noone;
+display_color_info = false;
+color_info = noone;
 
 var i;
 

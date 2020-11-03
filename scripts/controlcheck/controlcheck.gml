@@ -3,11 +3,7 @@
 /// @param input_method
 /// @param state
 /// @param control_id
-function controlcheck(argument0, argument1, argument2) {
-	var input_method = argument0;
-	var state = argument1;
-	var control_id = argument2;
-
+function controlcheck(input_method, state, control_id) {
 	if(input_method == cpu_control)
 	{
 	    return false;
@@ -152,7 +148,4 @@ function controlcheck(argument0, argument1, argument2) {
 	        }
 	    }
 	}
-
-
-
 }

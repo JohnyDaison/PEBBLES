@@ -1,3 +1,18 @@
+// OVERLAYS
+self.show_fps = false;
+self.show_keyboard_state = false;
+self.show_joystick_state = false;
+self.show_colorimatrix = false;
+self.show_terrain = false;
+self.show_chunkgrid = false;
+self.show_minimap = false;
+self.show_console = "hide";
+self.show_console_mode = "peek";
+
+self.game_speed = 60;
+self.master_volume = 50;
+
+
 // INPUTS
 
 instance_create(0,0, keyboard1_obj);
@@ -12,19 +27,6 @@ for(i=0;i<4;i++)
     inst.number = i+1;
 }
 
-// OVERLAYS
-self.show_fps = false;
-self.show_keyboard_state = false;
-self.show_joystick_state = false;
-self.show_colorimatrix = false;
-self.show_terrain = false;
-self.show_chunkgrid = false;
-self.show_minimap = false;
-self.show_console = "hide";
-self.show_console_mode = "peek";
-
-self.game_speed = 60;
-self.master_volume = 50;
 
 // TERRAIN GRID
 grid_cell_size = 96; //96

@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 input_id = keyboard1;
 
 binds[? up] =  ord("W");
@@ -24,4 +25,5 @@ binds[? inventory_1] =  ord("1");
 binds[? inventory_2] =  ord("2");
 binds[? inventory_3] =  ord("3");
 binds[? inventory_4] =  ord("4");
+binds[? colorinfo] =  ord("N");
 

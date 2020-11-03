@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 type = gamepad;
 number = 0;
 index = -1;
@@ -29,5 +30,5 @@ binds[? inventory_1] =  gp_padu;
 binds[? inventory_2] =  gp_padl;
 binds[? inventory_3] =  gp_padd;
 binds[? inventory_4] =  gp_padr;
-
-
+binds[? colorinfo] =  gp_select;
+binds[? pause] =  gp_start;

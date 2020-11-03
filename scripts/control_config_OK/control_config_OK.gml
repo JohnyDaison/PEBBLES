@@ -1,7 +1,8 @@
 function control_config_OK() {
 	var cswindow = control_settings_window.id;
 	var gui_list = cswindow.gui_content;
-	for(i=0;i<12;i+=1)
+    
+	for(i=0; i < cswindow.input_count; i+=1)
 	{
 	    keyboard1_obj.binds[? i] =
 	        (ds_list_find_value(gui_list, cswindow.key1[i])).key;
@@ -23,7 +24,4 @@ function control_config_OK() {
 
 	close_frame(cswindow);
 	room_goto(mainmenu);
-
-
-
 }

@@ -911,7 +911,7 @@ if( joystick1_obj.states[# joy_right,held] || joystick2_obj.states[# joy_right,h
 } 
 */
 
-for(i=0;i<4;i+=1)
+for(i=right; i<=down; i+=1)
 {                
     DB.gui_controls[# i,pressed] = false;
     DB.gui_controls[# i,released] = false;

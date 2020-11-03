@@ -175,20 +175,21 @@ function init_script() {
 	ds_map_replace(glowstick, "guy_flip", guy_flip);
 	ds_map_replace(glowstick, "guy_backflip", guy_backflip);
 
+    var i, ii, init_val;
 
 	// GUI CONTROLS
-	for(i=0;i<4;i+=1) // directions
+	for(i=right; i<=down; i+=1) // directions
 	{
-	    for(ii=0;ii<4;ii+=1) // free to released
+	    for(ii=free; ii<=released; ii+=1) // free to released
 	    {
 	        init_val = (ii==free);
 	        DB.gui_controls[# i,ii] = init_val;
 	    }
 	}
 
-	for(i=20;i<23;i+=1) // commands
+	for(i=confirm; i<=stepmode; i+=1) // commands
 	{
-	    for(ii=0;ii<4;ii+=1) // free to released
+	    for(ii=free; ii<=released; ii+=1) // free to released
 	    {
 	        init_val = (ii==free);
 	        DB.gui_controls[# i,ii] = init_val;

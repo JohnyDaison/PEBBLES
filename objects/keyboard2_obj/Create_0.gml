@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 input_id = keyboard2;
 
 binds[? up] =  219;
@@ -24,4 +25,4 @@ binds[? inventory_1] =  vk_numpad1;
 binds[? inventory_2] =  vk_numpad2;
 binds[? inventory_3] =  vk_numpad3;
 binds[? inventory_4] =  vk_enter;
-
+binds[? colorinfo] =  vk_pagedown;
