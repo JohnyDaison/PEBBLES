@@ -325,6 +325,7 @@
     {"id":{"name":"minimap_bigbolt_spr","path":"sprites/minimap_bigbolt_spr/minimap_bigbolt_spr.yy",},"order":14,},
     {"id":{"name":"minimap_smallbolt_spr","path":"sprites/minimap_smallbolt_spr/minimap_smallbolt_spr.yy",},"order":15,},
     {"id":{"name":"restartX_icon","path":"sprites/restartX_icon/restartX_icon.yy",},"order":16,},
+    {"id":{"name":"row_arrow_spr","path":"sprites/row_arrow_spr/row_arrow_spr.yy",},"order":0,},
     {"id":{"name":"restart_icon","path":"sprites/restart_icon/restart_icon.yy",},"order":17,},
     {"id":{"name":"text_input_icon_spr","path":"sprites/text_input_icon_spr/text_input_icon_spr.yy",},"order":18,},
     {"id":{"name":"tick_spr","path":"sprites/tick_spr/tick_spr.yy",},"order":0,},
@@ -1486,6 +1487,7 @@
     {"id":{"name":"my_instance_nearest","path":"scripts/my_instance_nearest/my_instance_nearest.yy",},"order":4,},
     {"id":{"name":"my_instance_exists","path":"scripts/my_instance_exists/my_instance_exists.yy",},"order":5,},
     {"id":{"name":"get_collision_params","path":"scripts/get_collision_params/get_collision_params.yy",},"order":6,},
+    {"id":{"name":"heal_power_spr","path":"sprites/heal_power_spr/heal_power_spr.yy",},"order":1,},
     {"id":{"name":"get_cached_collision_params","path":"scripts/get_cached_collision_params/get_cached_collision_params.yy",},"order":7,},
     {"id":{"name":"my_move_bounce","path":"scripts/my_move_bounce/my_move_bounce.yy",},"order":8,},
     {"id":{"name":"my_instance_nearest_in_range","path":"scripts/my_instance_nearest_in_range/my_instance_nearest_in_range.yy",},"order":9,},
@@ -2361,6 +2363,7 @@
     {"folderPath":"folders/Rooms/worlds/Loop World.yy","order":4,"resourceVersion":"1.0","name":"Loop World","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Worlds/Loop World.yy","order":6,"resourceVersion":"1.0","name":"Loop World","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Structs.yy","order":14,"resourceVersion":"1.0","name":"Structs","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/GUI/color_power_pane.yy","order":14,"resourceVersion":"1.0","name":"color_power_pane","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
