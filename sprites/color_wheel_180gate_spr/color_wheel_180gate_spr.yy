@@ -70,7 +70,7 @@
     "eventStubScript": null,
     "parent": {"name":"color_wheel_180gate_spr","path":"sprites/color_wheel_180gate_spr/color_wheel_180gate_spr.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "color_wheel_180gate_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },

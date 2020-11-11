@@ -24,15 +24,7 @@ for(var col = g_black; col <= g_white; col += 1)
     draw_rectangle(col_x - column_width/2, yy,
                    col_x + column_width/2 - 1, yy + row_height - 1, false);
 
-    
-    draw_set_alpha(0.5);
-    draw_set_color(color_value);
-    draw_ellipse(col_x - base_halfsize - 1, row_y - base_halfsize - 1, 
-                   col_x + base_halfsize - 1, row_y + base_halfsize - 1, false);
-    
-    draw_set_alpha(1);
-    draw_ellipse(col_x - base_halfsize, row_y - base_halfsize,
-                   col_x + base_halfsize - 2, row_y + base_halfsize - 2, false);
+    draw_sprite_ext(column_circle_spr, 0, col_x, row_y, 1, 1, 0, color_value, 1);
                    
     if(ds_list_find_index(gaps_after, color) != -1) {
         col_shift += gap_size;
