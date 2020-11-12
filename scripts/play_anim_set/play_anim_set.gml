@@ -144,6 +144,16 @@ function play_anim_set(argument0) {
 	                                control_type = "abstract";
 	                                state = how;
 	                                break;
+                                    
+                                case "colorinfo":
+	                                control = "back_button";
+	                                control_type = "button";
+	                                break;
+                                    
+                                case "pause":
+	                                control = "start_button";
+	                                control_type = "button";
+	                                break;
 	                        }
                         
 	                        switch(how)

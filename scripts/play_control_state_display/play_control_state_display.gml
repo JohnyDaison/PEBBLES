@@ -46,6 +46,18 @@ function play_control_state_display(argument0, argument1, argument2, argument3) 
 	        display.bg_sprite = analog_stick_bg_spr;
 	        display.bg_tint = DB.colormap[? g_white];
 	    }
+        else if(control = "back_button")
+	    {
+	        display.fg_sprite = back_button_arrow_spr;
+	        display.bg_sprite = back_button_bg_spr;
+	        display.bg_tint = DB.colormap[? g_white];
+	    }
+        else if(control = "start_button")
+	    {
+	        display.fg_sprite = start_button_arrow_spr;
+	        display.bg_sprite = back_button_bg_spr;
+	        display.bg_tint = DB.colormap[? g_white];
+	    }
     
 	    if(state == "held")
 	    {
@@ -57,6 +69,11 @@ function play_control_state_display(argument0, argument1, argument2, argument3) 
 	        if(display.bg_sprite == analog_stick_bg_spr)
 	        {
 	            display.sprite = analog_stick_highlight_spr;
+	        }
+            
+            if(display.bg_sprite == back_button_bg_spr)
+	        {
+	            display.sprite = back_button_highlight_spr;
 	        }
 	    }
 	    else
