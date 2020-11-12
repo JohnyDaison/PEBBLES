@@ -10,6 +10,7 @@ function console_help_script() {
 
 	var i, arg_i, script, script_str, list = DB.console_modes[? DB.console_mode];
 	var count = ds_list_size(list), filtered_count = 0,  optional = false, name, cur_arg;
+    var name_start_index = 4, arguments_start_index = 25, help_start_index = 50;
 
 	for(i = -1; i < count; i++)
 	{
@@ -41,14 +42,14 @@ function console_help_script() {
     
     
     
-	    while(string_length(script_str) < 4)
+	    while(string_length(script_str) < name_start_index)
 	    {
 	        script_str += " ";
 	    }
     
 	    script_str += " " + name;
     
-	    while(string_length(script_str) < 20)
+	    while(string_length(script_str) < arguments_start_index)
 	    {
 	        script_str += " ";
 	    }
@@ -83,7 +84,7 @@ function console_help_script() {
 	        }
 	    }
     
-	    while(string_length(script_str) < 50)
+	    while(string_length(script_str) < help_start_index)
 	    {
 	        script_str += " ";
 	    }
