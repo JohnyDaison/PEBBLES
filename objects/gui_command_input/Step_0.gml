@@ -44,6 +44,7 @@ if(visible)
                 {             
                     self.text = keyboard_string;
                     parse_user_command();
+                    history_index = -1;
                     //gui_dropdown_script();
                 }
                 self.active = !self.active;
@@ -118,6 +119,8 @@ if(visible)
             else if(!tab_mode && (up_key || down_key))
             {
                 var dir = 0, count = ds_list_size(DB.console_command_history);
+                var last_index = count - 1;
+                
                 if(up_key)
                     dir--;
                 if(down_key)
@@ -125,11 +128,17 @@ if(visible)
                 
                 if(count > 0) {
                     if(history_index == -1)
-                        history_index = 0;
+                        history_index = last_index;
                 
                     if(history_mode)
                     {
-                        history_index = (history_index + count + dir) mod count;
+                        history_index += dir;
+                        
+                        if (history_index < 0)
+                            history_index = 0;
+                            
+                        if (history_index > last_index)
+                            history_index = last_index;
                     }
                 
                     self.text = DB.console_command_history[| history_index];
