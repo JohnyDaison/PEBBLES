@@ -145,7 +145,4 @@ function init_console_DB() {
 	}
 
 	debug_keys_map = create_debug_keys_map();
-
-
-
 }

@@ -1,7 +1,7 @@
 /// @description player_quest_log_printout(player_number, [level_of_detail])
 /// @function player_quest_log_printout
 /// @param player_number
-/// @param  [level_of_detail]
+/// @param [level_of_detail]
 function player_quest_log_printout() {
 	var number = argument[0];
 	var level_of_detail = 2;
@@ -30,7 +30,4 @@ function player_quest_log_printout() {
 	}
 
 	my_console_write("=============================================");
-
-
-
 }
