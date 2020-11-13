@@ -37,6 +37,11 @@ place.forced_modifiers[? "turrets"] = true;
 //add_place_in_room(room_star_test, "A Star", 0,0, 4800,4800, 384);
 
 
+place = add_place_in_room(room_chaos_order_test, "Order and Chaos", 0,0, 2048,2048, 0);
+place.description = "Order and Chaos";
+ds_list_add(place.level_configs_list, "match");
+
+
 place = add_place_in_room(room_displays_test, "Displays", 0,0, 4800,4800, 384);
 place.controller = display_test_place_controller_obj;
 ds_list_add(place.level_configs_list, "match");
