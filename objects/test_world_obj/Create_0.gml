@@ -31,6 +31,7 @@ place.description = "Boom! Boom! BOOM!";
 ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "cannons"] = true;
+place.forced_modifiers[? "turrets"] = true;
 
 
 //add_place_in_room(room_star_test, "A Star", 0,0, 4800,4800, 384);
