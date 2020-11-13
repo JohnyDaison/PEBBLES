@@ -46,7 +46,7 @@ if(reached_limit_name != "user_terminated" && next && instance_exists(next))
 }
 else
 {
-    if(mode == "quick_tutorial" || mode == "training")
+    if(is_coop)
     {
         goto_mainmenu();
     }
