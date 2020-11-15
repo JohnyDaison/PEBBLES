@@ -297,7 +297,6 @@ function create_gamemodes_DB() {
 
 
 	// Old Training
-
 	gm = gamemode_create("training", "Challenge", campaign_obj, world_1_obj);
 	//gm[? "description"] = "This was originally supposed to be the tutorial-as-campaign, but it's way too hard for tutorial. Does have some art.";
 	gm[? "description"] = "Experimental levels for experienced players! These were originally supposed to be a part of the tutorial. They're way too hard, but have some art.";
@@ -334,6 +333,7 @@ function create_gamemodes_DB() {
 	default_mods = gm[? "default_modifiers"];
 	default_mods[? "tut_guide"] = true;
 
+
     // Loop world
 	gm = gamemode_create("loop_world", "Loop world", campaign_obj, loop_world_obj);
 	gm[? "description"] = "Not linear!";
@@ -351,6 +351,9 @@ function create_gamemodes_DB() {
 	gm[? "max_players"] = 2;
 	gm[? "is_coop"] = false;
 
+    default_mods = gm[? "default_modifiers"];
+    default_mods[? "black_color"] = true;
+	default_mods[? "abilities"] = true;
 
 	/*
 	// Roguelike

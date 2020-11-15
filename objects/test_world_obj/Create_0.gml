@@ -4,27 +4,34 @@ name = "Test world";
 
 var place;
 
+
 place = add_place_in_room(room_all_items_test, "Items", 0,0, 4800,4800, 0);
 ds_list_add(place.level_configs_list, "tutorial");
 
 place.forced_modifiers[? "black_color"] = true;
 place.forced_modifiers[? "abilities"] = true;
 
+
 place = add_place_in_room(room_energy_test, "Energy", 0,0, 4800,4800, 0);
 ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "turrets"] = true;
 
-//place = add_place_in_room(tutorial, "Old Tut", 0,0, 3168,1632, 0);
+/*
+place = add_place_in_room(tutorial, "Old Tut", 0,0, 3168,1632, 0);
+ds_list_add(place.level_configs_list, "match");
+*/
 
 place = add_place_in_room(room_smoke_test, "Smoke", 0,0, 3200,3200, 0);
 ds_list_add(place.level_configs_list, "inventory");
+
 
 place = add_place_in_room(room_bigbang_test, "The Big Bang", 0,0, 3200,3200, 384);
 ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "black_color"] = true;
 place.forced_modifiers[? "abilities"] = true;
+
 
 place = add_place_in_room(room_weapons_test, "Weapons", 0,0, 9600,4800, 384);
 place.description = "Boom! Boom! BOOM!";
@@ -48,6 +55,7 @@ ds_list_add(place.level_configs_list, "match");
 
 place.default_modifiers[? "black_color"] = true;
 place.default_modifiers[? "abilities"] = true;
+
 
 place = add_place_in_room(room_void_test, "Void", 0,0, 4800,4800, 384);
 place.controller = autogenerate_place_controller_obj;
