@@ -80,6 +80,7 @@
     {"id":{"name":"big_proj_backup2","path":"sprites/big_proj_backup2/big_proj_backup2.yy",},"order":1,},
     {"id":{"name":"big_proj_backup","path":"sprites/big_proj_backup/big_proj_backup.yy",},"order":2,},
     {"id":{"name":"small_projectile","path":"sprites/small_projectile/small_projectile.yy",},"order":3,},
+    {"id":{"name":"room_show_off","path":"rooms/room_show_off/room_show_off.yy",},"order":13,},
     {"id":{"name":"energyball_base","path":"sprites/energyball_base/energyball_base.yy",},"order":4,},
     {"id":{"name":"energyball_unit_spr","path":"sprites/energyball_unit_spr/energyball_unit_spr.yy",},"order":5,},
     {"id":{"name":"hl_energyball_orig","path":"sprites/hl_energyball_orig/hl_energyball_orig.yy",},"order":6,},
@@ -2079,6 +2080,7 @@
     {"name":"room_loop_world_1","path":"rooms/room_loop_world_1/room_loop_world_1.yy",},
     {"name":"room_loop_world_2","path":"rooms/room_loop_world_2/room_loop_world_2.yy",},
     {"name":"room_chaos_order_test","path":"rooms/room_chaos_order_test/room_chaos_order_test.yy",},
+    {"name":"room_show_off","path":"rooms/room_show_off/room_show_off.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

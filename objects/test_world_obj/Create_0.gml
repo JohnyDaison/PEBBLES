@@ -49,6 +49,14 @@ place.description = "Order and Chaos";
 ds_list_add(place.level_configs_list, "match");
 
 
+place = add_place_in_room(room_show_off, "Show Off!", 0,0, 2368,2048, 0);
+place.description = "Quick jumps";
+ds_list_add(place.level_configs_list, "match");
+
+place.forced_modifiers[? "abilities"] = false;
+place.forced_modifiers[? "random_item_spawner"] = false;
+
+
 place = add_place_in_room(room_displays_test, "Displays", 0,0, 4800,4800, 384);
 place.controller = display_test_place_controller_obj;
 ds_list_add(place.level_configs_list, "match");
