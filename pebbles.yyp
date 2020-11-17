@@ -698,6 +698,7 @@
     {"id":{"name":"burner_spr","path":"sprites/burner_spr/burner_spr.yy",},"order":18,},
     {"id":{"name":"point_light_emitter_spr","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"order":19,},
     {"id":{"name":"target_structure_spr","path":"sprites/target_structure_spr/target_structure_spr.yy",},"order":20,},
+    {"id":{"name":"tricrystal_base_spr","path":"sprites/tricrystal_base_spr/tricrystal_base_spr.yy",},"order":39,},
     {"id":{"name":"alarm_light_emitter_spr","path":"sprites/alarm_light_emitter_spr/alarm_light_emitter_spr.yy",},"order":21,},
     {"id":{"name":"rectangle_light_emitter_spr","path":"sprites/rectangle_light_emitter_spr/rectangle_light_emitter_spr.yy",},"order":22,},
     {"id":{"name":"fg_rectangle_light_emitter_spr","path":"sprites/fg_rectangle_light_emitter_spr/fg_rectangle_light_emitter_spr.yy",},"order":23,},
