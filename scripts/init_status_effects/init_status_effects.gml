@@ -15,7 +15,7 @@ function init_status_effects() {
 	}
 
 	burn_popup = noone;
-
+    heal_popup = noone;
 
 
 }

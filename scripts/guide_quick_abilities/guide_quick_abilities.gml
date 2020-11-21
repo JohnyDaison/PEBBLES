@@ -41,7 +41,7 @@ function guide_quick_abilities() {
 	                wanna_cast = true;
 	            }
             
-	            if(my_color == g_green && tint_updated && !speaking && nearest_waypoint.waypoint_id == "use_heal/active" && abi_script[? g_green] == empty_script)
+	            if(my_color == g_green && tint_updated && !speaking && nearest_waypoint.waypoint_id == "use_heal/active" && status_left[? "heal"] == 0)
 	            {
 	                abi_cooldown[? g_green] = 0;
             

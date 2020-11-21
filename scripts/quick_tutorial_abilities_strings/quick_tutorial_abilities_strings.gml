@@ -5,7 +5,7 @@ function quick_tutorial_abilities_strings() {
 
 	I18n[? quest_id + "/intro/success-taunt"] = "Every Color has one.";
 
-	I18n[? quest_id + "/use_heal/active"] = "Regain 100 HP over 5 s.";
+	I18n[? quest_id + "/use_heal/active"] = "Regain 120 HP over 5 s.";
 
 	I18n[? quest_id + "/pickup_invis/active"] = "Replenish your Abilities on this Pad.";
 
