@@ -16,7 +16,7 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
             {
                 if(camera.on)
                 {
-                    view_num = camera.view;
+                    var view_num = camera.view;
                     
                     if(x > __view_get( e__VW.XView, view_num ) && x < (__view_get( e__VW.XView, view_num ) + __view_get( e__VW.WView, view_num ))
                     && y > __view_get( e__VW.YView, view_num ) && y < (__view_get( e__VW.YView, view_num ) + __view_get( e__VW.HView, view_num )))
@@ -26,18 +26,21 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                         yy = floor((y - __view_get( e__VW.YView, view_num ))*camera.zoom_level + __view_get( e__VW.YPort, view_num ));
     
                         // SIZE
-                        base_charge = max_charge + overcharge;
+                        var base_charge = max_charge + overcharge;
                         
-                        base_bar_width = base_charge*60 * camera.zoom_level;
-                        feed_bar_width = collapse_threshold*60 * camera.zoom_level;
-                        total_bar_width = base_bar_width + feed_bar_width;
+                        var base_bar_width = base_charge*60 * camera.zoom_level;
+                        var feed_bar_width = collapse_threshold*60 * camera.zoom_level;
+                        var total_bar_width = base_bar_width + feed_bar_width;
 
                         bar_dist = base_radius*max_charge*size_coef -16;
                         
-                        left_border = round(xx - base_bar_width/2);
-                        right_border = round(xx + base_bar_width/2);
-                        top_border = yy + bar_dist;
-                        bottom_border = yy + bar_dist + bar_height;
+                        var left_border = floor(xx - base_bar_width/2);
+                        var right_border = ceil(xx + base_bar_width/2);
+                        var top_border = yy + bar_dist;
+                        var bottom_border = yy + bar_dist + bar_height;
+                        
+                        // COLOR
+                        var bg_color, border_color;
                         
                         if(my_color == g_white)
                         {
@@ -51,31 +54,26 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                         }
                         
                         draw_set_color(bg_color);
-                        draw_rectangle(left_border, top_border, right_border-1, bottom_border, false);
+                        draw_rectangle(left_border, top_border, right_border, bottom_border, false);
                         
-                        base_bar_ratio = 1 - 2*charge/base_charge;
-                        base_bar_ratio = clamp(base_bar_ratio,-1,1);
-                        /*
-                        base_bar_color = make_color_rgb((max(base_bar_ratio,0)-1)*-255,(min(base_bar_ratio,0)+1)*255,0);
-                        base_bar_color = merge_color(base_bar_color,c_white,0.5);
-                        */
                         
                         draw_set_color(base_bar_color);
-                        draw_rectangle(left_border, top_border, left_border+floor((charge/base_charge)*(base_bar_width-1)), bottom_border,false);
-                        feed_width = 0;
+                        draw_rectangle(left_border, top_border, left_border + floor((charge / base_charge) * base_bar_width), bottom_border,false);
+                        var feed_width = 0;
                         if(charge > base_charge)
                         {
                             draw_set_color(feed_bar_color);
-                            feed_width = floor(((charge-base_charge)/collapse_threshold)*(feed_bar_width-1));
-                            draw_rectangle(left_border + base_bar_width, top_border,
-                                left_border + base_bar_width + feed_width, bottom_border,false);
+                            feed_width = floor( ((charge-base_charge) / collapse_threshold) * feed_bar_width);
+                            draw_rectangle(right_border + 2, top_border,
+                                right_border + 2 + feed_width, bottom_border, false);
                         }
                         
+                        
                         draw_set_color(border_color);
-                        draw_rectangle(left_border-1, top_border-1, right_border-1, bottom_border,true);
+                        draw_rectangle(left_border, top_border, right_border, bottom_border,true);
                         if(feed_width > 0)
                         {
-                            draw_rectangle(right_border, top_border-1, right_border+feed_width, bottom_border,true);
+                            draw_rectangle(right_border + 2 , top_border, right_border + 2 + feed_width, bottom_border,true);
                         }
                     }
                 }
