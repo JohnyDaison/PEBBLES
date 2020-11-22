@@ -125,11 +125,7 @@ function init_console_DB() {
 
 	ds_list_add(debug, "count", "grouplist", "instlist", "instinfo", "listds", "getprop", "setprop", "setnumber", "objname", "spritename");
 
-	ds_list_add(debug, "camfollow", "camgoto", "camreset");
-
 	ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
-
-	ds_list_add(debug, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 	console_modes[? "debug"] = debug;
 
 
