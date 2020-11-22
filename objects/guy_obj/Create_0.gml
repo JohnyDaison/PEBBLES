@@ -90,7 +90,6 @@ self.shield_repair_time = 180;
 self.ball_chargerate = 1;
 self.base_ball_chargerate = 1;
 self.ball_overcharge = 0;
-self.ball_ubercharge_boost = 1.5;
 
 self.auto_choose_channel_orbs = true;
 self.auto_choose_channel_orbs_delay = 10;

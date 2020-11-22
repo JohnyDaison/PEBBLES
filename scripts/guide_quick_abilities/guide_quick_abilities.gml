@@ -251,7 +251,7 @@ function guide_quick_abilities() {
 	                wanna_cast = true;
 	            }
 
-	            if(my_color == g_purple && tint_updated && nearest_waypoint.waypoint_id == "use_ubershield/active" && abi_script[? g_purple] == empty_script
+	            if(my_color == g_purple && tint_updated && nearest_waypoint.waypoint_id == "use_ubershield/active" && status_left[? "ubershield"] == 0
 	            && abi_cooldown[? g_purple] < (abi_cooldown_length[? g_purple] - 2 * abi_script_delay[? g_purple]) )
 	            {
 	                abi_cooldown[? g_purple] = 0;
