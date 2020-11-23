@@ -405,30 +405,6 @@ function init_script() {
 	DB.colordirs[? g_blue] = 2.66;
 	DB.colordirs[? g_purple] = 3.33;
 
-	// STATUS EFFECTS
-	DB.status_effects = ds_map_create();
-
-	DB.status_effects[? "burn"] = instance_create(0,0, status_burn_obj).id;
-	DB.status_effects[? "frozen"] = instance_create(0,0, status_frozen_obj).id;
-	DB.status_effects[? "slow"] = instance_create(0,0, status_slow_obj).id;
-	DB.status_effects[? "confusion"] = instance_create(0,0, status_confusion_obj).id;
-	DB.status_effects[? "weakness"] = instance_create(0,0, status_weakness_obj).id;
-	DB.status_effects[? "suppressed"] = instance_create(0,0, status_suppressed_obj).id;
-	DB.status_effects[? "bounce"] = instance_create(0,0, status_bounce_obj).id;
-	DB.status_effects[? "heavy_shots"] = instance_create(0,0, status_heavy_shots_obj).id;
-
-	DB.status_effects[? "tp_rush"] = instance_create(0,0, status_tp_rush_obj).id;
-	DB.status_effects[? "overcharge"] = instance_create(0,0, status_overcharge_obj).id;
-	DB.status_effects[? "shield_down"] = instance_create(0,0, status_shield_down_obj).id;
-
-	DB.status_effects[? "berserk"] = instance_create(0,0, status_berserk_obj).id;
-	DB.status_effects[? "heal"] = instance_create(0,0, status_heal_obj).id;
-	DB.status_effects[? "haste"] = instance_create(0,0, status_haste_obj).id;
-	DB.status_effects[? "ubershield"] = instance_create(0,0, status_ubershield_obj).id;
-	DB.status_effects[? "invis"] = instance_create(0,0, status_invis_obj).id;
-
-	DB.status_effect_count = ds_map_size(DB.status_effects);
-
 	// COLOR TO EFFECT MAP
 	DB.color_effects = ds_map_create();
 

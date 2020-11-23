@@ -1,10 +1,10 @@
 function update_status_effects() {
-	var effect_id = ds_map_find_first(DB.status_effects);
-	var effect;
+	var effect_id, effect;
 
 	for(var i=0; i < DB.status_effect_count; i++)
 	{
-	    effect = DB.status_effects[? effect_id];
+	    effect_id = DB.status_effects_list[| i];
+        effect = DB.status_effects[? effect_id];
     
 	    // STEP SCRIPT
 	    if(status_left[? effect_id] > 0)
@@ -71,10 +71,5 @@ function update_status_effects() {
 	            particles.active = true;
 	        }
 	    }
-    
-	    effect_id = ds_map_find_next(DB.status_effects, effect_id);
 	}
-
-
-
 }

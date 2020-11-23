@@ -20,6 +20,7 @@ ds_grid_destroy(colormatrix);
 ds_map_destroy(colordirs);
 
 ds_map_destroy(status_effects);
+ds_list_destroy(status_effects_list);
 ds_map_destroy(color_effects);
 /*
 ds_map_destroy(arenas);

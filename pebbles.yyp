@@ -1747,6 +1747,7 @@
     {"id":{"name":"holo_armored_wall_obj","path":"objects/holo_armored_wall_obj/holo_armored_wall_obj.yy",},"order":5,},
     {"id":{"name":"npc_sight_blocker_obj","path":"objects/npc_sight_blocker_obj/npc_sight_blocker_obj.yy",},"order":6,},
     {"id":{"name":"wall_regenerator_obj","path":"objects/wall_regenerator_obj/wall_regenerator_obj.yy",},"order":7,},
+    {"id":{"name":"init_status_effects_DB","path":"scripts/init_status_effects_DB/init_status_effects_DB.yy",},"order":6,},
     {"id":{"name":"status_effect_obj","path":"objects/status_effect_obj/status_effect_obj.yy",},"order":6,},
     {"id":{"name":"status_shield_down_obj","path":"objects/status_shield_down_obj/status_shield_down_obj.yy",},"order":0,},
     {"id":{"name":"status_burn_obj","path":"objects/status_burn_obj/status_burn_obj.yy",},"order":1,},

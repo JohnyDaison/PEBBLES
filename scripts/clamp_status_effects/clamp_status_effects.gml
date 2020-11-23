@@ -1,9 +1,9 @@
 function clamp_status_effects() {
-	var effect_id = ds_map_find_first(DB.status_effects);
-	var effect;
+	var effect_id, effect;
 
 	for(var i=0; i<DB.status_effect_count; i++)
 	{
+        effect_id = DB.status_effects_list[| i];
 	    effect = DB.status_effects[? effect_id];
     
 	    if(status_left[? effect_id] <= 0)
@@ -23,10 +23,5 @@ function clamp_status_effects() {
 	    {
 	        status_left[? effect_id] = effect.max_charge;
 	    }
-    
-	    effect_id = ds_map_find_next(DB.status_effects, effect_id);
 	}
-
-
-
 }

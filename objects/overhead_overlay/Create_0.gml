@@ -69,14 +69,14 @@ status_order[? i++] = g_yellow;
 status_order[? i++] = g_white;
 status_order[? i++] = g_octarine;
 
-var effect_id = ds_map_find_first(DB.status_effects);
+var effect_id;
 
-while(!is_undefined(effect_id))
+for(var i=0; i<DB.status_effect_count; i++)
 {
+    effect_id = DB.status_effects_list[| i];
+    
     status_card_visible[? effect_id] = false;
     status_last_active[? effect_id] = 0;
-    
-    effect_id = ds_map_find_next(DB.status_effects, effect_id);
 }
 
 
