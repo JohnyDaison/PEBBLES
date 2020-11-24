@@ -6,7 +6,7 @@
     "path": "folders/Scripts/status effects/effects/abis.yy",
   },
   "resourceVersion": "1.0",
-  "name": "status_invis_start",
+  "name": "status_invisibility_start",
   "tags": [],
   "resourceType": "GMScript",
 }

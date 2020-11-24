@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"haste_icon","path":"sprites/haste_icon/haste_icon.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "haste_icon",
     "tags": [],
     "resourceType": "GMSequence",
   },

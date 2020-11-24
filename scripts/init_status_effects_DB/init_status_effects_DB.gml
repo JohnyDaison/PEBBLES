@@ -18,7 +18,7 @@ function init_status_effects_DB() {
 	status_effects[? "heal"] = instance_create(0,0, status_heal_obj).id;
 	status_effects[? "haste"] = instance_create(0,0, status_haste_obj).id;
 	status_effects[? "ubershield"] = instance_create(0,0, status_ubershield_obj).id;
-	status_effects[? "invis"] = instance_create(0,0, status_invis_obj).id;
+	status_effects[? "invisibility"] = instance_create(0,0, status_invisibility_obj).id;
 
 	status_effect_count = ds_map_size(status_effects);
     

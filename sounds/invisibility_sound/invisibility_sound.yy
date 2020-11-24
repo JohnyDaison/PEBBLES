@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "invis_sound",
+  "soundFile": "invisibility_sound",
   "duration": 0.613662,
   "parent": {
     "name": "abilities",
     "path": "folders/Sounds/abilities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "invis_sound",
+  "name": "invisibility_sound",
   "tags": [],
   "resourceType": "GMSound",
 }

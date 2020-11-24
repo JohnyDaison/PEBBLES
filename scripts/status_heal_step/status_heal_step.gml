@@ -29,6 +29,5 @@ function status_heal_step() {
 	    }
 	}
     
-    
     my_player.healed_dmg_total += actual_heal;
 }

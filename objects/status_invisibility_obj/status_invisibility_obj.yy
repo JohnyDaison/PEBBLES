@@ -21,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"status_invis_obj","path":"objects/status_invis_obj/status_invis_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"status_invisibility_obj","path":"objects/status_invisibility_obj/status_invisibility_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +30,7 @@
     "path": "folders/Objects/Game/status effects/buffs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "status_invis_obj",
+  "name": "status_invisibility_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

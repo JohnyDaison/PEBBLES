@@ -32,7 +32,4 @@ function quick_tutorial_abilities_strings() {
 	//I18n[? quest_id + "/tp_rush_b/success-taunt"] = "You see?";
 
 	I18n[? quest_id + "/exit_level/active"] = "This concludes your training.";
-
-
-
 }

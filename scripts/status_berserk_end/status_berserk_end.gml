@@ -5,7 +5,4 @@ function status_berserk_end() {
 	self.spell_cooldown = 10;
 	self.shield_chargerate = 1;
 	self.berserk = false;
-
-
-
 }
