@@ -2,7 +2,7 @@ event_inherited();
 
 name = "World 1";
 
-var i=0, place;
+var place;
 
 place = add_place_in_room(room_movement_mountain, "Get a move on!", 0,0, 10720,7200, 0);
 place.description = "Learn to perform various kinds of jumps.";

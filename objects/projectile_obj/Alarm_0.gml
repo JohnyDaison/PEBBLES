@@ -1,15 +1,8 @@
 ///@description SET UP FRICTION AND MODS
 friction = orig_friction;
 
-var be_heavy = mod_get_state("heavy_shots");
-
-if(!be_heavy)
-{
-    if(object_is_child(my_guy, guy_obj) && my_guy.status_left[? "heavy_shots"] > 0)
-    {
-        be_heavy = true;
-    }
-}
+var be_heavy = mod_get_state("heavy_shots") ||
+                (object_is_child(my_guy, guy_obj) && my_guy.status_left[? "heavy_shots"] > 0);
 
 if(be_heavy)
 {

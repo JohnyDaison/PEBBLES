@@ -24,10 +24,16 @@ with(guy_obj)
         }
         else
         {
-            my_shield.size_coef = 1.5 * (1 - 0.3 * clamp(my_player.ball_touches - place_controller_obj.allowed_touches, 0, 1));
+            if (world_obj.current_place.room_id != football_field) {
+                my_shield.size_coef = 1.5 * (1 - 0.3 * clamp(my_player.ball_touches - place_controller_obj.allowed_touches, 0, 1));
+            }
         }
         
         damage = 0;
+        
+        if (world_obj.current_place.room_id == football_field) {
+            status_left[? "haste"] = 60;
+        }
     }
 }
 
@@ -101,15 +107,17 @@ else
                 }
                 */
                 
-                var new_color;
+                if (world_obj.current_place.room_id != football_field) {
+                    var new_color;
                 
-                do
-                {
-                    new_color = irandom_range(g_red, g_white);   
+                    do
+                    {
+                        new_color = irandom_range(g_red, g_white);   
+                    }
+                    until(place_controller_obj.current_color != new_color)
+                
+                    place_controller_obj.current_color = new_color;
                 }
-                until(place_controller_obj.current_color != new_color)
-                
-                place_controller_obj.current_color = new_color;
                 
                 with(game_obj)
                 {

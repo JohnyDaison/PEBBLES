@@ -22,8 +22,15 @@ if(!gamemode_obj.limit_reached && instance_exists(guy_obj))
     inst.vspeed = -1;   
     inst.speed = 8;   
     inst.gravity_coef = 0.15;
+    if (world_obj.current_place.room_id == football_field) {
+        inst.gravity_coef = 0.3;
+    }
+    
     inst.gravity = inst.gravity_coef;
     inst.orig_friction = 0.015;
+    if (world_obj.current_place.room_id == football_field) {
+        inst.orig_friction = 0.03;
+    }
     inst.was_stopped = true;
     inst.tracked = true;
     inst.max_speed = 14;

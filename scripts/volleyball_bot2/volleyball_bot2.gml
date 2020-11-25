@@ -1,8 +1,7 @@
-function volleyball_bot2(argument0) {
+function volleyball_bot2(near_player) {
 	if(npc_active || next_phase != 0)
 	{
 	    // NEAR PLAYER
-	    var near_player = argument0;
 	    var go_to_spawner = false;
 
 	    if(instance_exists(place_controller_obj.da_ball))
@@ -260,6 +259,4 @@ function volleyball_bot2(argument0) {
 	        speech_start("bark/oops");
 	    }
 	}
-
-
 }
