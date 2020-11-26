@@ -1,12 +1,20 @@
 function update_display() {
 	with(singleton_obj)
 	{   
-	    if(vsync != vsync_set)
+	    if(aa_level != aa_level_set || vsync != vsync_set)
 	    {
 	        display_reset(aa_level, vsync);
+            aa_level_set = aa_level;
 	        vsync_set = vsync;
 	        display_updated = false;
 	    }
+        
+        if(interpolate != interpolate_set)
+        {
+            gpu_set_texfilter(interpolate);
+            interpolate_set = interpolate;
+			display_updated = false;
+        }
     
 	    if(fullscreen)
 	    {

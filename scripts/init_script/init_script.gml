@@ -569,6 +569,8 @@ function init_script() {
 	singleton_obj.draw_object_labels =  !!ini_read_real("Graphics", "draw_object_labels", singleton_obj.draw_object_labels);
 	singleton_obj.scale_up_gui =        !!ini_read_real("Graphics", "scale_up_gui", singleton_obj.scale_up_gui);
 	singleton_obj.vsync =               !!ini_read_real("Graphics", "vsync", singleton_obj.vsync);
+    singleton_obj.aa_level =            !!ini_read_real("Graphics", "aa_level", singleton_obj.aa_level);
+    singleton_obj.interpolate =         !!ini_read_real("Graphics", "interpolate", singleton_obj.interpolate);
 
 
 	singleton_obj.game_speed =      round(clamp( ini_read_real("Game", "game_speed", singleton_obj.game_speed),  30, 60));

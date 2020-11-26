@@ -56,11 +56,14 @@ player_panel_height = 112;
 fullscreen = false;
 fullscreen_set = false;
 aa_level = 0;
+aa_level_set = 0;
 vsync = true;
 vsync_set = false;
 display_updated = false;
 do_my_visible_optim = true;
 scale_up_gui = true;
+interpolate = true;
+interpolate_set = false;
 
 windowed_width = 1280;
 windowed_height = 720;

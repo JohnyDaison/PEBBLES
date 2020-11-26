@@ -5,6 +5,8 @@ function graphic_config_OK() {
 	ini_write_real("Graphics", "scale_up_gui", singleton_obj.scale_up_gui);
 	ini_write_string("Graphics", "resolution", string(singleton_obj.windowed_width) + "x" + string(singleton_obj.windowed_height));
 	ini_write_real("Graphics", "vsync", singleton_obj.vsync);
+    ini_write_real("Graphics", "aa_level", singleton_obj.aa_level);
+    ini_write_real("Graphics", "interpolate", singleton_obj.interpolate);
 
 	ini_write_real("Sound", "master_volume", singleton_obj.master_volume);
 	ini_write_real("Game", "game_speed", singleton_obj.game_speed);

@@ -27,7 +27,9 @@ function graphic_config_apply() {
 	    fullscreen_height = res_height;
 	}
 
-	singleton_obj.vsync = gswindow.vsync_checkbox.checked;
+	singleton_obj.aa_level = gswindow.aa_input.value;
+    singleton_obj.interpolate = gswindow.interpolate_checkbox.checked;
+    singleton_obj.vsync = gswindow.vsync_checkbox.checked;
 
 	singleton_obj.display_updated = false;
 	update_display();

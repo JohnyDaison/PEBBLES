@@ -55,6 +55,32 @@ i.centered = true;
 
 eloffset_y += left_line_height;
 
+
+i = gui_add_label(0,-16, "Anti-aliasing");
+i.centered = true;
+
+ii = gui_add_int_input(196,0, singleton_obj.aa_level, 0, 2);
+ii.value_step = 2;
+aa_input = ii.id;
+
+
+eloffset_y += left_line_height;
+
+
+interpolate_checkbox = gui_add_checkbox(32,0);
+if(singleton_obj.interpolate)
+{
+    interpolate_checkbox.checked = true;
+    interpolate_checkbox.show_icon = true;
+}
+
+i = gui_add_label(64,-16, "Interpolation");
+i.centered = true;
+
+
+eloffset_y += left_line_height;
+
+
 scale_gui_checkbox = gui_add_checkbox(32,0);
 
 if(singleton_obj.scale_up_gui)
