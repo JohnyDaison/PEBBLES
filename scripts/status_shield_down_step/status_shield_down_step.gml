@@ -3,7 +3,4 @@ function status_shield_down_step() {
 	{
 	    status_left[? "shield_down"] = 0;
 	}
-
-
-
 }

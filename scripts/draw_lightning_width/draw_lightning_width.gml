@@ -7,16 +7,7 @@
 /// @param width
 /// @param steps
 /// @param thickness
-function draw_lightning_width(argument0, argument1, argument2, argument3, argument4, argument5, argument6) {
-
-	var x1 = argument0;
-	var y1 = argument1;
-	var x2 = argument2;
-	var y2 = argument3;
-	var width = argument4;
-	var steps = argument5;
-	var thickness = argument6;
-
+function draw_lightning_width(x1,y1, x2,y2, width, steps, thickness) {
 	var xdiff = x2 - x1;
 	var ydiff = y2 - y1;
 	var lgt_r1 = -0.5*width; 
@@ -39,7 +30,4 @@ function draw_lightning_width(argument0, argument1, argument2, argument3, argume
 	    temp_x1 = temp_x2;
 	    temp_y1 = temp_y2;
 	}
-
-
-
 }

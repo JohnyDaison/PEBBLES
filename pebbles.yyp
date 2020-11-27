@@ -1930,6 +1930,7 @@
     {"id":{"name":"quick_tut_advanced_combat_new_place_controller_obj","path":"objects/quick_tut_advanced_combat_new_place_controller_obj/quick_tut_advanced_combat_new_place_controller_obj.yy",},"order":6,},
     {"id":{"name":"quick_tut_abilities_place_controller_obj","path":"objects/quick_tut_abilities_place_controller_obj/quick_tut_abilities_place_controller_obj.yy",},"order":7,},
     {"id":{"name":"test_world_obj","path":"objects/test_world_obj/test_world_obj.yy",},"order":0,},
+    {"id":{"name":"shield_down_sparks_obj","path":"objects/shield_down_sparks_obj/shield_down_sparks_obj.yy",},"order":13,},
     {"id":{"name":"run_jump_place_controller_obj","path":"objects/run_jump_place_controller_obj/run_jump_place_controller_obj.yy",},"order":1,},
     {"id":{"name":"display_test_place_controller_obj","path":"objects/display_test_place_controller_obj/display_test_place_controller_obj.yy",},"order":2,},
     {"id":{"name":"back_button_arrow_spr","path":"sprites/back_button_arrow_spr/back_button_arrow_spr.yy",},"order":14,},
