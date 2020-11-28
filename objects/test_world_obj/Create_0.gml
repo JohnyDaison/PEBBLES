@@ -53,6 +53,7 @@ place = add_place_in_room(room_show_off, "Show Off!", 0,0, 2368,2048, 0);
 place.description = "Quick jumps";
 ds_list_add(place.level_configs_list, "match");
 
+place.forced_modifiers[? "black_color"] = false;
 place.forced_modifiers[? "abilities"] = false;
 place.forced_modifiers[? "random_item_spawner"] = false;
 
