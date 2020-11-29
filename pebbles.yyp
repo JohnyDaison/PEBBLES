@@ -647,6 +647,7 @@
     {"id":{"name":"beam_turret_spr","path":"sprites/beam_turret_spr/beam_turret_spr.yy",},"order":4,},
     {"id":{"name":"turret_mount2_base_spr","path":"sprites/turret_mount2_base_spr/turret_mount2_base_spr.yy",},"order":5,},
     {"id":{"name":"turret_mount2_spr","path":"sprites/turret_mount2_spr/turret_mount2_spr.yy",},"order":6,},
+    {"id":{"name":"init_abilities_DB","path":"scripts/init_abilities_DB/init_abilities_DB.yy",},"order":5,},
     {"id":{"name":"turret_mount4_base_spr","path":"sprites/turret_mount4_base_spr/turret_mount4_base_spr.yy",},"order":7,},
     {"id":{"name":"turret_mount4_spr","path":"sprites/turret_mount4_spr/turret_mount4_spr.yy",},"order":8,},
     {"id":{"name":"turret_body_base","path":"sprites/turret_body_base/turret_body_base.yy",},"order":9,},

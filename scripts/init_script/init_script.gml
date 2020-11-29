@@ -88,53 +88,6 @@ function init_script() {
 	ds_list_add(DB.arena_names,  "Snake test");
 	*/
 
-
-	// MAP OF GAME COLORS TO ABILITIES
-	DB.abimap = ds_map_create();
-	DB.abimap[? -1] =   "self_destruct";
-	DB.abimap[? g_black] =   "rewind";
-	DB.abimap[? g_red] =  "berserk";
-	DB.abimap[? g_green] =  "heal";
-	DB.abimap[? g_blue] =  "teleport";
-	DB.abimap[? g_yellow] =  "haste";
-	DB.abimap[? g_purple] =  "ubershield";
-	DB.abimap[? g_azure] =  "invisibility";
-	DB.abimap[? g_white] =  "base_teleport";
-
-	DB.abi_name_map = ds_map_create();
-	DB.abi_name_map[? -1] =   "Self destruct";
-	DB.abi_name_map[? g_black] =   "Rewind";
-	DB.abi_name_map[? g_red] =  "Berserk";
-	DB.abi_name_map[? g_green] =  "Heal";
-	DB.abi_name_map[? g_blue] =  "Blink";
-	DB.abi_name_map[? g_yellow] =  "Haste";
-	DB.abi_name_map[? g_purple] =  "Ubershield";
-	DB.abi_name_map[? g_azure] =  "Invisibility";
-	DB.abi_name_map[? g_white] =  "Teleport";
-
-	DB.abi_description_map = ds_map_create();
-	DB.abi_description_map[? -1] =   "End your existence.";
-	DB.abi_description_map[? g_black] =   "Go 2 seconds back in time.";
-	DB.abi_description_map[? g_red] =  "Charge spells faster.";
-	DB.abi_description_map[? g_green] =  "Regenerate HP over time.";
-	DB.abi_description_map[? g_blue] =  "Instantly appear elsewhere.";
-	DB.abi_description_map[? g_yellow] =  "Run faster.";
-	DB.abi_description_map[? g_purple] =  "Double your Shield or create new one.";
-	DB.abi_description_map[? g_azure] =  "Make Turrets, Mobs and NPCs ignore you.";
-	DB.abi_description_map[? g_white] =  "Return to Base.";
-
-	DB.abi_icons = ds_map_create();
-	DB.abi_icons[? -1] =   selfdestruct_icon;
-	DB.abi_icons[? g_black] =   flashback_icon;
-	DB.abi_icons[? g_red] =  berserk_icon;
-	DB.abi_icons[? g_green] =  heal_icon;
-	DB.abi_icons[? g_blue] =  teleport_icon;
-	DB.abi_icons[? g_yellow] =  haste_icon;
-	DB.abi_icons[? g_purple] =  ubershield_icon;
-	DB.abi_icons[? g_azure] =  invisibility_icon;
-	DB.abi_icons[? g_white] =  chaos_drive_icon;
-
-
 	create_collision_map(DB);
 
 	// LIMITS MAP

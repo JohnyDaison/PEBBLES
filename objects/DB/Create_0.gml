@@ -7,6 +7,9 @@ init_status_effects_DB();
 // COLORS
 init_colors_DB();
 
+// ABILITIES
+init_abilities_DB();
+
 // ORB REGEN SPEEDS
 orb_regen_speeds = ds_map_create();
 orb_regen_speeds[? spd_none] = 0;
@@ -17,16 +20,6 @@ orb_regen_speeds[? spd_fast] = 0.001;
 orb_regen_speeds[? spd_veryfast] = 0.01;
 orb_regen_speeds[? spd_instant] = 10;
 
-// BASE ABILITY COOLDOWNS
-abi_cooldowns = ds_map_create();
-abi_cooldowns[? g_black] = 7200;
-abi_cooldowns[? g_red] = 2220;
-abi_cooldowns[? g_green] = 2700;
-abi_cooldowns[? g_blue] = 900;
-abi_cooldowns[? g_yellow] = 1600;
-abi_cooldowns[? g_purple] = 1620;
-abi_cooldowns[? g_azure] = 4200;
-abi_cooldowns[? g_white] = 36000;
 
 npc_waypoint_connect_dist = 640;
 npc_waypoint_disconnect_dist = 1280;
