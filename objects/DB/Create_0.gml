@@ -4,6 +4,9 @@ init_controls_DB();
 // STATUS EFFECTS
 init_status_effects_DB();
 
+// COLORS
+init_colors_DB();
+
 // ORB REGEN SPEEDS
 orb_regen_speeds = ds_map_create();
 orb_regen_speeds[? spd_none] = 0;

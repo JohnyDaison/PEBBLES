@@ -91,6 +91,7 @@
     {"id":{"name":"tiny_glowcore_spr","path":"sprites/tiny_glowcore_spr/tiny_glowcore_spr.yy",},"order":11,},
     {"id":{"name":"medium_glowcore_spr","path":"sprites/medium_glowcore_spr/medium_glowcore_spr.yy",},"order":12,},
     {"id":{"name":"dash_wave_spr","path":"sprites/dash_wave_spr/dash_wave_spr.yy",},"order":19,},
+    {"id":{"name":"init_colors_DB","path":"scripts/init_colors_DB/init_colors_DB.yy",},"order":4,},
     {"id":{"name":"dash_wave_spr_old","path":"sprites/dash_wave_spr_old/dash_wave_spr_old.yy",},"order":20,},
     {"id":{"name":"black_aoe","path":"sprites/black_aoe/black_aoe.yy",},"order":0,},
     {"id":{"name":"black_bolt_highlight","path":"sprites/black_bolt_highlight/black_bolt_highlight.yy",},"order":1,},
