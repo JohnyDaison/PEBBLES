@@ -1,3 +1,6 @@
+// CONTROLS
+init_controls_DB();
+
 // STATUS EFFECTS
 init_status_effects_DB();
 
@@ -88,26 +91,6 @@ terrain_config[? "bounce_threshold"] = terrain_config[? "status_threshold"];
 terrain_config[? "max_energy"] = 2.5;
 
 
-// CONTROL SETS
-
-i=0;
-control_set_names = ds_list_create();
-control_set_names[| i++] = "CPU";
-control_set_names[| i++] = "Keyboard 1";
-control_set_names[| i++] = "Keyboard 2";
-control_set_names[| i++] = "Joystick 1";
-control_set_names[| i++] = "Joystick 2";
-control_set_names[| i++] = "Gamepad";
-//control_set_names[| i++] = "Nothing";
-
-i=0;
-control_set_order = ds_list_create();
-control_set_order[| i++] = gamepad;
-control_set_order[| i++] = cpu_control_set;
-control_set_order[| i++] = keyboard1;
-control_set_order[| i++] = keyboard2;
-
-gui_controls = ds_grid_create(stepmode+1, released+1);
 
 
 // GAMEMODES

@@ -1809,6 +1809,7 @@
     {"id":{"name":"green_orb_obj","path":"objects/green_orb_obj/green_orb_obj.yy",},"order":3,},
     {"id":{"name":"blue_orb_obj","path":"objects/blue_orb_obj/blue_orb_obj.yy",},"order":4,},
     {"id":{"name":"gate_enabled_obj","path":"objects/gate_enabled_obj/gate_enabled_obj.yy",},"order":0,},
+    {"id":{"name":"init_controls_DB","path":"scripts/init_controls_DB/init_controls_DB.yy",},"order":2,},
     {"id":{"name":"gate_active_obj","path":"objects/gate_active_obj/gate_active_obj.yy",},"order":1,},
     {"id":{"name":"editor_antenna_obj","path":"objects/editor_antenna_obj/editor_antenna_obj.yy",},"order":2,},
     {"id":{"name":"editor_drain_rod_obj","path":"objects/editor_drain_rod_obj/editor_drain_rod_obj.yy",},"order":3,},

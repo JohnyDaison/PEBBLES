@@ -16,131 +16,6 @@ function init_script() {
 	DB.sound_cutoff_dist = 800;
 	DB.max_jump_pad_power = 35;
 
-	// CONTROLS
-	DB.mouse_has_moved = false;
-	DB.keynames = ds_map_create();
-	DB.joynames = ds_map_create();
-	DB.padnames = ds_map_create();
-
-	DB.keynames[? vk_left] =  "Left";
-	DB.keynames[? vk_right] =  "Right";
-	DB.keynames[? vk_up] =  "Up";
-	DB.keynames[? vk_down] =  "Down";
-	DB.keynames[? vk_enter] =  "Enter";
-	DB.keynames[? vk_escape] =  "Esc";
-	DB.keynames[? vk_space] =  "Space";
-	DB.keynames[? vk_shift] =  "Shift";
-	DB.keynames[? vk_control] =  "Ctrl";
-	DB.keynames[? vk_alt] =  "Alt";
-	DB.keynames[? vk_backspace] =  "Backspace";
-	DB.keynames[? vk_tab] =  "Tab";
-	DB.keynames[? vk_home] =  "Home";
-	DB.keynames[? vk_end] =  "End";
-	DB.keynames[? vk_delete] =  "Delete";
-	DB.keynames[? vk_insert] =  "Insert";
-	DB.keynames[? vk_pageup] =  "Page Up";
-	DB.keynames[? vk_pagedown] =  "Page Down";
-	DB.keynames[? vk_pause] =  "Pause";
-	DB.keynames[? vk_printscreen] =  "PrtScr";
-	i=0;
-	repeat(12)
-	{
-	    DB.keynames[? vk_f1+i] =  "F"+string(i+1);
-	    i+=1;
-	}
-
-	i=0;
-	repeat(10)
-	{
-	    DB.keynames[? 48+i] =  string(i);
-	    i+=1;
-	}
-	i=0;
-	repeat(10)
-	{
-	    DB.keynames[? vk_numpad0+i] =  "NUM"+string(i);
-	    i+=1;
-	}
-
-	DB.keynames[? vk_multiply] =  "NUM*";
-	DB.keynames[? vk_divide] =  "NUM/";
-	DB.keynames[? vk_add] =  "NUM+";
-	DB.keynames[? vk_subtract] =  "NUM-";
-	DB.keynames[? vk_decimal] =  "NUM.";
-	DB.keynames[? vk_lshift] =  "L Shift";
-	DB.keynames[? vk_lcontrol] =  "L Ctrl";
-	DB.keynames[? vk_lalt] =  "L Alt";
-	DB.keynames[? vk_rshift] =  "R Shift";
-	DB.keynames[? vk_rcontrol] =  "R Ctrl";
-	DB.keynames[? vk_ralt] =  "R Alt";
-
-	DB.keynames[? 186] =  ";";
-	DB.keynames[? 187] =  "=";
-	DB.keynames[? 188] =  ",";
-	DB.keynames[? 189] =  "-";
-	DB.keynames[? 190] =  ".";
-	DB.keynames[? 191] =  "/";
-	DB.keynames[? 192] =  "`";
-
-	DB.keynames[? 219] =  "[";
-	DB.keynames[? 220] =  "\\";
-	DB.keynames[? 221] =  "]";
-	DB.keynames[? 222] =  "'";
-
-	// JOYSTICKS NAMES
-	DB.joynames[? joy_up] =  "Stick Up";
-	DB.joynames[? joy_down] =  "Stick Down";
-	DB.joynames[? joy_left] =  "Stick Left";
-	DB.joynames[? joy_right] =  "Stick Right";
-	DB.joynames[? joy_dpad_up] =  "D-Pad Up";
-	DB.joynames[? joy_dpad_down] =  "D-Pad Down";
-	DB.joynames[? joy_dpad_left] =  "D-Pad Left";
-	DB.joynames[? joy_dpad_right] =  "D-Pad Right";
-	DB.joynames[? joy_rtrigger] =  "R Trigger";
-	DB.joynames[? joy_ltrigger] =  "L Trigger";
-	DB.joynames[? joy_look] =  "Joy Look";
-
-	DB.joynames[? 1] =  "(A)";
-	DB.joynames[? 2] =  "(B)";
-	DB.joynames[? 3] =  "(X)";
-	DB.joynames[? 4] =  "(Y)";
-	DB.joynames[? 5] =  "L Bumper";
-	DB.joynames[? 6] =  "R Bumper";
-	DB.joynames[? 7] =  "Back (<)";
-	DB.joynames[? 8] =  "Start (>)";
-	DB.joynames[? 9] =  "Stick Button";
-	DB.joynames[? 10] =  "RS Button";
-
-	for(i=11;i<20;i+=1)
-	{
-	    DB.joynames[? i] =  "Joy Button "+string(i);
-	}
-
-	// GAMEPAD NAMES
-	DB.padnames[? gamepad_up] =  "Stick Up";
-	DB.padnames[? gamepad_down] =  "Stick Down";
-	DB.padnames[? gamepad_left] =  "Stick Left";
-	DB.padnames[? gamepad_right] =  "Stick Right";
-	DB.padnames[? gp_padu] =  "D-Pad Up";
-	DB.padnames[? gp_padd] =  "D-Pad Down";
-	DB.padnames[? gp_padl] =  "D-Pad Left";
-	DB.padnames[? gp_padr] =  "D-Pad Right";
-	DB.padnames[? gp_shoulderrb] =  "R Trigger";
-	DB.padnames[? gp_shoulderlb] =  "L Trigger";
-	DB.padnames[? gamepad_stick] =  "Stick Button";
-
-	DB.padnames[? gp_face1] =  "(A)";
-	DB.padnames[? gp_face2] =  "(B)";
-	DB.padnames[? gp_face3] =  "(X)";
-	DB.padnames[? gp_face4] =  "(Y)";
-	DB.padnames[? gp_shoulderl] =  "L Bumper";
-	DB.padnames[? gp_shoulderr] =  "R Bumper";
-	DB.padnames[? gp_select] =  "Back (<)";
-	DB.padnames[? gp_start] =  "Start (>)";
-	DB.padnames[? gp_stickl] =  "LStick Button";
-	DB.padnames[? gp_stickr] =  "RStick Button";
-
-
 	// GUY SKINS
 	DB.guy_skins = ds_map_create();
 	//DB.guy_skins[? "orig"] = ds_map_create();
@@ -174,27 +49,6 @@ function init_script() {
 	ds_map_replace(glowstick, "guy_wallclimbup", guy_wallclimbup);
 	ds_map_replace(glowstick, "guy_flip", guy_flip);
 	ds_map_replace(glowstick, "guy_backflip", guy_backflip);
-
-    var i, ii, init_val;
-
-	// GUI CONTROLS
-	for(i=right; i<=down; i+=1) // directions
-	{
-	    for(ii=free; ii<=released; ii+=1) // free to released
-	    {
-	        init_val = (ii==free);
-	        DB.gui_controls[# i,ii] = init_val;
-	    }
-	}
-
-	for(i=confirm; i<=stepmode; i+=1) // commands
-	{
-	    for(ii=free; ii<=released; ii+=1) // free to released
-	    {
-	        init_val = (ii==free);
-	        DB.gui_controls[# i,ii] = init_val;
-	    }
-	}
 
 
 	// PLAYERS
@@ -390,7 +244,7 @@ function init_script() {
 	ds_grid_set_region(DB.colormatrix, g_black, g_octarine, g_white, g_octarine, pow[4]);
 
 	// the main diagonal minus black and octarine
-	for(i=g_red; i<=g_white; i+=1)
+	for(var i=g_red; i<=g_white; i+=1)
 	{
 	    ds_grid_set(DB.colormatrix, i, i, pow[0]);
 	}
@@ -583,7 +437,4 @@ function init_script() {
 
 
 	show_debug_message("INIT END");
-
-
-
 }
