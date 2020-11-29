@@ -150,3 +150,6 @@ speech_terms_define();
 
 
 circle_precision = 24;
+
+// GUY SKINS
+init_skins_DB();

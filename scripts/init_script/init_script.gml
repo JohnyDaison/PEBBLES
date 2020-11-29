@@ -16,41 +16,7 @@ function init_script() {
 	DB.sound_cutoff_dist = 800;
 	DB.max_jump_pad_power = 35;
 
-	// GUY SKINS
-	DB.guy_skins = ds_map_create();
-	//DB.guy_skins[? "orig"] = ds_map_create();
-	DB.guy_skins[? "glowstick"] = ds_map_create();
-	//DB.guy_skins[? "blackbody"] = ds_map_create();
-	var glowstick = DB.guy_skins[? "glowstick"];
-
-	ds_map_replace(glowstick, "guy_stand", guy_stand);
-	ds_map_replace(glowstick, "guy_idle", guy_idle);
-	ds_map_replace(glowstick, "guy_walk", guy_walk);
-	ds_map_replace(glowstick, "guy_turn", guy_turn);
-	ds_map_replace(glowstick, "guy_run", guy_run);
-	ds_map_replace(glowstick, "guy_skid", guy_skid);
-	ds_map_replace(glowstick, "guy_hurt", guy_hurt);
-	ds_map_replace(glowstick, "guy_dead", guy_dead);
-	ds_map_replace(glowstick, "guy_jump", guy_jump);
-	ds_map_replace(glowstick, "guy_fall", guy_fall);
-	ds_map_replace(glowstick, "guy_gettingup", guy_gettingup);
-	ds_map_replace(glowstick, "guy_gettingdown", guy_gettingdown);
-	ds_map_replace(glowstick, "guy_flybackwards", guy_flybackwards);
-	ds_map_replace(glowstick, "guy_knockedback", guy_knockedback);
-	ds_map_replace(glowstick, "guy_knockedforward", guy_knockedforward);
-	ds_map_replace(glowstick, "guy_channeling", guy_channeling);
-	ds_map_replace(glowstick, "guy_charging", guy_charging);
-	ds_map_replace(glowstick, "guy_casting_forward", guy_casting_forward);
-	ds_map_replace(glowstick, "guy_casting_up", guy_casting_up);
-	ds_map_replace(glowstick, "guy_casting_down", guy_casting_down);
-	ds_map_replace(glowstick, "guy_crouch", guy_crouch);
-	ds_map_replace(glowstick, "guy_walljumphold", guy_walljumphold);
-	ds_map_replace(glowstick, "guy_wallclimbhold", guy_wallclimbhold);
-	ds_map_replace(glowstick, "guy_wallclimbup", guy_wallclimbup);
-	ds_map_replace(glowstick, "guy_flip", guy_flip);
-	ds_map_replace(glowstick, "guy_backflip", guy_backflip);
-
-
+	
 	// PLAYERS
 	DB.player_names = ds_list_create();
 

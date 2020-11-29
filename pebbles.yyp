@@ -1265,6 +1265,7 @@
     {"id":{"name":"achiev_shadow_ninja","path":"scripts/achiev_shadow_ninja/achiev_shadow_ninja.yy",},"order":3,},
     {"id":{"name":"achiev_idle_pickup","path":"scripts/achiev_idle_pickup/achiev_idle_pickup.yy",},"order":4,},
     {"id":{"name":"draw_lightning_width","path":"scripts/draw_lightning_width/draw_lightning_width.yy",},"order":0,},
+    {"id":{"name":"init_skins_DB","path":"scripts/init_skins_DB/init_skins_DB.yy",},"order":3,},
     {"id":{"name":"draw_orb_belt_gui","path":"scripts/draw_orb_belt_gui/draw_orb_belt_gui.yy",},"order":1,},
     {"id":{"name":"draw_light_circle","path":"scripts/draw_light_circle/draw_light_circle.yy",},"order":2,},
     {"id":{"name":"draw_light_arc","path":"scripts/draw_light_arc/draw_light_arc.yy",},"order":3,},
