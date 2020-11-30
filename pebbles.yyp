@@ -1759,6 +1759,7 @@
     {"id":{"name":"status_slow_obj","path":"objects/status_slow_obj/status_slow_obj.yy",},"order":3,},
     {"id":{"name":"status_weakness_obj","path":"objects/status_weakness_obj/status_weakness_obj.yy",},"order":4,},
     {"id":{"name":"status_confusion_obj","path":"objects/status_confusion_obj/status_confusion_obj.yy",},"order":5,},
+    {"id":{"name":"bad_status_effects_mod_icon","path":"sprites/bad_status_effects_mod_icon/bad_status_effects_mod_icon.yy",},"order":53,},
     {"id":{"name":"status_bounce_obj","path":"objects/status_bounce_obj/status_bounce_obj.yy",},"order":6,},
     {"id":{"name":"status_suppressed_obj","path":"objects/status_suppressed_obj/status_suppressed_obj.yy",},"order":7,},
     {"id":{"name":"status_heavy_shots_obj","path":"objects/status_heavy_shots_obj/status_heavy_shots_obj.yy",},"order":8,},
