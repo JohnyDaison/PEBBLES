@@ -5,8 +5,6 @@ reticles = false;
 draw_status = false;
 border_color = c_white; // c_black
 border_width = 8;
-panel_bg_color = merge_color(c_black,c_dkgray,0.1);
-panel_frame_color = c_dkgray;
 look_zoom_delay = 2;
 observer_range = 3;
 
@@ -15,9 +13,7 @@ view_x = 0;
 view_y = 0;
 view_surface = noone;
 width = 0;
-panel_height = 0;
-view_height = 0; 
-panel_y = 0; 
+height = 0;
     
 damage_cover_alpha = 0;
 death_cover_show = false;
@@ -54,7 +50,6 @@ move_speed_x = 0;
 move_speed_y = 0;
 desired_move_speed_x = 0;
 desired_move_speed_y = 0;
-panel_y = 0;
 on = false;
 only_cam = false;
 
@@ -66,7 +61,6 @@ shield_col = c_orange;
 
 inner_color = c_orange;
 outer_color = c_orange;
-draw_panel = false;
 
 // read terrain
 self.read_terrain = true;

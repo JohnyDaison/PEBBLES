@@ -178,7 +178,7 @@ if(instance_exists(match_obj))
                                        - floor(view_yview[0]/32)* mini_block_size;
     
             minimap_player_view_right = minimap_player_view_left + minimap_view_width/2;
-            minimap_player_view_bottom = minimap_player_view_top + minimap_view_height - floor(singleton_obj.player_panel_height/32) * mini_block_size;
+            minimap_player_view_bottom = minimap_player_view_top + minimap_view_height;
             */
     
             minimap_player_x = minimap_view_left + floor( (guy.x-6)/(32/mini_block_size) )

@@ -51,8 +51,6 @@ last_gui_device = -1;
 
 
 // GFX
-player_panel_height = 112;
-
 fullscreen = false;
 fullscreen_set = false;
 aa_level = 0;
