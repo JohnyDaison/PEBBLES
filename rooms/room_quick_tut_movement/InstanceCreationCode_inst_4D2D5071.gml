@@ -1,0 +1,1 @@
+waypoint_id = "impact_mechanic_end";

@@ -36,6 +36,9 @@ anim_sets[? "wall_climb"] = wall_climb_anim_set;
 anim_groups[? "wall_jump"] = noone;
 anim_sets[? "wall_jump"] = wall_jump_anim_set;
 
+anim_groups[? "impact_mechanic"] = noone;
+anim_sets[? "impact_mechanic"] = impact_mechanic_anim_set;
+
 anim_groups[? "dive_jump"] = noone;
 anim_sets[? "dive_jump"] = dive_jump_anim_set;
 

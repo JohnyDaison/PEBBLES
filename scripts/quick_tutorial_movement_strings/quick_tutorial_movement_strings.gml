@@ -24,10 +24,14 @@ function quick_tutorial_movement_strings() {
 	I18n[? "quick_tutorial_movement/wall_jump/active"] = "Don't rush it.|Just AIM left BEFORE you jump off the wall.";
 	I18n[? "quick_tutorial_movement/wall_jump/success"] = "Good job!";
 
-	I18n[? "quick_tutorial_movement/dive_jump/active"] = "Hit the ground hard!";
-	I18n[? "quick_tutorial_movement/dive_jump/success"] = "Smashing!";
+	I18n[? "quick_tutorial_movement/impact_mechanic/active"] = "Hit the ground hard!";
+	I18n[? "quick_tutorial_movement/impact_mechanic/success"] = "Smashing!";
+    
+    I18n[? "quick_tutorial_movement/get_to_dive_jump/active"] = "Let's race!";
+    I18n[? "quick_tutorial_movement/get_to_dive_jump/success"] = "Hehe.";
+    
+    I18n[? "quick_tutorial_movement/dive_jump/active"] = "Dive into the fall!";
+	I18n[? "quick_tutorial_movement/dive_jump/success"] = "Crushed!";
 
-	I18n[? "quick_tutorial_movement/exit_level/active"] = "Let's add a bit of Color.";
-
-
+	I18n[? "quick_tutorial_movement/exit_level/active"] = "Now, Colors...";
 }

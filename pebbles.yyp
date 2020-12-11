@@ -1438,6 +1438,7 @@
     {"id":{"name":"player_quests_init","path":"scripts/player_quests_init/player_quests_init.yy",},"order":7,},
     {"id":{"name":"player_quests_destroy","path":"scripts/player_quests_destroy/player_quests_destroy.yy",},"order":8,},
     {"id":{"name":"player_quests_clear","path":"scripts/player_quests_clear/player_quests_clear.yy",},"order":9,},
+    {"id":{"name":"impact_mechanic_anim_set","path":"scripts/impact_mechanic_anim_set/impact_mechanic_anim_set.yy",},"order":14,},
     {"id":{"name":"quest_simple_nav_create","path":"scripts/quest_simple_nav_create/quest_simple_nav_create.yy",},"order":0,},
     {"id":{"name":"quest_item_pickup_create","path":"scripts/quest_item_pickup_create/quest_item_pickup_create.yy",},"order":1,},
     {"id":{"name":"quests_create","path":"scripts/quests_create/quests_create.yy",},"order":0,},

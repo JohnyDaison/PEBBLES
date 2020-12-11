@@ -54,8 +54,14 @@ function quick_tut_movement_quest() {
 
 	// Wall jump
 	quest_create_subtask(quest_id, "simple_nav", "wall_jump", "Wall Jump", "", i++, false);
+    
+    // Impact mechanic
+	quest_create_subtask(quest_id, "simple_nav", "impact_mechanic", "Impact mechanic", "", i++, true);
+    
+    // Get to Dive Jump
+	quest_create_subtask(quest_id, "simple_nav", "get_to_dive_jump", "Get to Dive Jump", "", i++, true);
 
-	// Dive jump
+	// Dive Jump
 	quest_create_subtask(quest_id, "simple_nav", "dive_jump", "Dive Jump", "", i++, true);
 
 	// Exit level

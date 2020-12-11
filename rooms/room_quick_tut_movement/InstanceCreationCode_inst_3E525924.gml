@@ -1,4 +1,4 @@
 object = infodisplay_obj;
-group_id = "dive_jump";
-index = 1;
+group_id = "impact_mechanic";
+index = 0;
 member_id = "";
