@@ -54,6 +54,8 @@ function tut_guide_teleport() {
 
 	has_tped = true;
 	speech_stop(true);
+    
+    npc_stuck = false;
 
 	/*
 	has_spoken = false;
@@ -68,7 +70,4 @@ function tut_guide_teleport() {
 	phase = 0;
 	demonstration_done = false;
 	*/
-
-
-
 }

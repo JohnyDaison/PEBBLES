@@ -103,21 +103,20 @@ function speech_start() {
 	}
 
 	// make popup
-	i = instance_create(x, bbox_top - bbox_y_offset, speech_popup_obj);
-	i.str = str;
-	i.my_color = speech_color;
-	i.source = id;
-	i.y_offset = (bbox_top - bbox_y_offset) - y;
+    if (str != "") {
+    	var i = instance_create(x, bbox_top - bbox_y_offset, speech_popup_obj);
+    	i.str = str;
+    	i.my_color = speech_color;
+    	i.source = id;
+    	i.y_offset = (bbox_top - bbox_y_offset) - y;
 
-	self.speech_popup = i;
-
-
-	self.speaking = true;
+    	self.speech_popup = i;
+        self.speaking = true;
+    }
+    
 	self.has_spoken = true;
 
 	ds_map_destroy(strings);
 
 	return true;
-
-
 }

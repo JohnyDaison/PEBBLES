@@ -832,14 +832,12 @@ function npc_guy2_step() {
 	}
 
 	// DONT MOVE WHEN BLACK PROJECTILE RETURNS
-	if(place_meeting(x,y, black_projectile_obj) && black_projectile_obj.my_guy == id)
+    var black_proj = instance_place(x,y, black_projectile_obj);
+	if(black_proj != noone && black_proj.my_guy == id)
 	{
 	    wanna_run = false;
 	    hor_dir_held = false;
 	    wanna_jump = false;
 	    npc_wanna_rest = true;
 	}
-
-
-
 }
