@@ -29,9 +29,9 @@ if(!custom_sprite)
         draw_set_alpha(fade_counter*image_alpha);
     
         draw_set_color(c_black);
-        my_draw_text(final_x-2, final_y-2, string_hash_to_newline(str));
+        my_draw_text(final_x-2, final_y-2, str);
         draw_set_color(c_white);
-        my_draw_text(final_x, final_y, string_hash_to_newline(str));
+        my_draw_text(final_x, final_y, str);
         
         draw_set_alpha(1);
     }

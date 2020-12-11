@@ -90,7 +90,6 @@ energy_cost[g_blue] = 0;
 soundtime = 0;
 my_charge_sound = noone;
 started = false;
-return_energy = false;
 
 light_bg_color = merge_colour(c_ltgray, c_white, 0.5);
 dark_bg_color = merge_colour(c_dkgray, c_black, 0.5);

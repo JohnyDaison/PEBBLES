@@ -1879,7 +1879,6 @@
     {"id":{"name":"chunkgrid_overlay","path":"objects/chunkgrid_overlay/chunkgrid_overlay.yy",},"order":17,},
     {"id":{"name":"popup_obj","path":"objects/popup_obj/popup_obj.yy",},"order":4,},
     {"id":{"name":"damage_popup_obj","path":"objects/damage_popup_obj/damage_popup_obj.yy",},"order":0,},
-    {"id":{"name":"energy_popup_obj","path":"objects/energy_popup_obj/energy_popup_obj.yy",},"order":1,},
     {"id":{"name":"text_popup_obj","path":"objects/text_popup_obj/text_popup_obj.yy",},"order":3,},
     {"id":{"name":"speech_popup_obj","path":"objects/speech_popup_obj/speech_popup_obj.yy",},"order":4,},
     {"id":{"name":"empty_window","path":"objects/empty_window/empty_window.yy",},"order":0,},

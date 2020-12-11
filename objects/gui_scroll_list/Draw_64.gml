@@ -54,13 +54,11 @@ if(cur_item != -1)
     {
         if(first_item > 0)
         {
-            //my_draw_text(x+self.main_width/2, y+2, string_hash_to_newline("..."));
             draw_sprite_ext(centered_arrow_spr, 0,
                             x+self.main_width/2, y + ends_height/2 + 3, 1,-1, 0, c_white, 1);
         }
         if(last_item < item_count-1)
         {
-            //my_draw_text(x+self.main_width/2, y + ends_height + 2 + max_items*item_height, string_hash_to_newline("..."));
             draw_sprite_ext(centered_arrow_spr, 0,
                             x+self.main_width/2, y + 1.5*ends_height - 2 + max_items*item_height, 1,1, 0, c_white, 1);
         }

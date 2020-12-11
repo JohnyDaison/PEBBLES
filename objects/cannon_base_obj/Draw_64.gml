@@ -69,10 +69,10 @@ if(!gamemode_obj.limit_reached)
         draw_sprite_ext(color_orb_icon, 0, number_x, number_y, 1+orb_light[? i],1+orb_light[? i],0, orb_tint, 0.8);
         
         draw_set_color(c_black);
-        my_draw_text(number_x+2, number_y+2, string_hash_to_newline(number_str));
+        my_draw_text(number_x+2, number_y+2, number_str);
         
         draw_set_color(c_white);
-        my_draw_text(number_x, number_y, string_hash_to_newline(number_str));
+        my_draw_text(number_x, number_y, number_str);
     }
     
     // OUT OF AMMO
@@ -83,10 +83,10 @@ if(!gamemode_obj.limit_reached)
         draw_set_valign(fa_middle);
         draw_set_alpha(1);
         draw_set_color(ammo_popup.tint - c_gray);
-        my_draw_text(gui_x + ammo_x - 1, gui_y + ammo_y - 1, string_hash_to_newline(ammo_popup.str));
-        my_draw_text(gui_x + ammo_x + 1, gui_y + ammo_y + 1, string_hash_to_newline(ammo_popup.str));
+        my_draw_text(gui_x + ammo_x - 1, gui_y + ammo_y - 1, ammo_popup.str);
+        my_draw_text(gui_x + ammo_x + 1, gui_y + ammo_y + 1, ammo_popup.str);
         draw_set_color(ammo_popup.tint);
-        my_draw_text(gui_x + ammo_x, gui_y + ammo_y, string_hash_to_newline(ammo_popup.str));
+        my_draw_text(gui_x + ammo_x, gui_y + ammo_y, ammo_popup.str);
         draw_set_halign(fa_left);
         draw_set_valign(fa_top);           
     }

@@ -17,9 +17,9 @@ for(i = 0; i < msg_count; i+=1)
         yy += 16 + padding_size;
         
         draw_set_color(c_black);
-        my_draw_text(x + width/2, yy+1, string_hash_to_newline(feed_str));
+        my_draw_text(x + width/2, yy+1, feed_str);
         draw_set_color(c_orange);
-        my_draw_text(x + width/2, yy, string_hash_to_newline(feed_str));
+        my_draw_text(x + width/2, yy, feed_str);
         
         yy += 16 + padding_size + content_spacing;
     }

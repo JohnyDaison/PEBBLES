@@ -47,7 +47,7 @@ else
     image_index = 0;
 }
 
-text_width = string_width(string_hash_to_newline(key_text));
+text_width = string_width(key_text);
 
 cent_x = x+self.width/2;
 cent_y = y+self.height/2;
@@ -74,7 +74,5 @@ else
     draw_sprite_ext(keyup_m,0,text_start,y,text_width,1,0,c_white,1);
     draw_sprite(keyup_r,0,text_end,y);
 }
-my_draw_text(cent_x+hor_offset,cent_y+key_offset,string_hash_to_newline(self.key_text));
 
-                                                  
-
+my_draw_text(cent_x + hor_offset, cent_y + key_offset, self.key_text);

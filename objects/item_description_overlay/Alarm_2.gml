@@ -25,7 +25,7 @@ if(message != "")
     while(width <= max_width && height > (line_height*max_lines)) 
     {   
         width += 32;
-        height = string_height_ext(string_hash_to_newline(message), line_height, width - 32);
+        height = string_height_ext(message, line_height, width - 32);
     }
     text_width = width;    
     

@@ -26,9 +26,6 @@ if(draw_debug)
     }
     */
     
-    my_draw_text(64, i, string_hash_to_newline("energy balls: " + string(instance_number(energyball_obj))));
+    my_draw_text(64, i, "energy balls: " + string(instance_number(energyball_obj)));
     i += step;
 }
-
-/* */
-/*  */

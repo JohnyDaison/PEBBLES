@@ -227,7 +227,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
         
         draw_set_color(abi_label_tint);
         draw_set_alpha(1 * min(1,abi_name_fade));
-        my_draw_text(abi_x, abi_y1 ,string_hash_to_newline(abi_name));
+        my_draw_text(abi_x, abi_y1, abi_name);
         
         // BG    
         draw_sprite_ext(bg_sprite,0,abi_x,abi_y2,1,1,0,c_white,0.9*min(1,abi_name_fade));

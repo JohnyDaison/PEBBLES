@@ -11,7 +11,7 @@ if(!hidden)
     
     mod_description_label.width = self.width - 2*spacing;
     my_draw_set_font(mod_description_label.font);
-    var height = string_height_ext(string_hash_to_newline(mod_description_label.text), mod_description_label.line_separation, mod_description_label.width-16);
+    var height = string_height_ext(mod_description_label.text, mod_description_label.line_separation, mod_description_label.width-16);
     mod_description_label.height = height + 8;
     
     self.height = 3*spacing + mod_icon_label.height + mod_description_label.height;

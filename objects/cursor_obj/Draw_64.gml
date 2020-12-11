@@ -16,7 +16,7 @@ if(tooltip != "")
     draw_set_halign(fa_left);
     draw_set_valign(fa_bottom);
     
-    var text = string_hash_to_newline(tooltip);
+    var text = tooltip;
     var tip_x = x + 8;
     var tip_y = y - 8;
     
