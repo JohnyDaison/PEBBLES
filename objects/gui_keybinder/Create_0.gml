@@ -1,14 +1,16 @@
-action_inherited();
-self.draw_border = true;
-self.draw_bg_color = true;
-self.depressed = false;
-self.color = c_black;
-self.font = keybinder_font;
-self.key = 0;
-self.last_key = 0;
-self.key_text = "";
-self.key_down = false;
-self.key_offset = 0;
+event_inherited();
+
+draw_border = true;
+draw_bg_color = true;
+depressed = false;
+color = c_black;
+font = keybinder_font;
+key = 0;
+last_key = 0;
+key_text = "";
+key_down = false;
+key_base_offset = -4;
+key_offset = key_base_offset;
 
 
 

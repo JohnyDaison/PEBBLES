@@ -17,7 +17,7 @@ self.offset_y = 0;
 
 self.window_axis = 0;
 self.draw_heading = true;
-self.heading_offset = 24;
+self.heading_offset = 16;
 self.keep_inside = true;
 
 self.shifted = false;

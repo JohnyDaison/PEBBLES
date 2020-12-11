@@ -4,6 +4,7 @@ if(!centered)
     y=y-height/2;
     centered = true;
 }
+
 draw_set_alpha(bg_alpha);
 if(self.draw_bg_color)
 {
@@ -36,16 +37,20 @@ my_draw_set_font(self.font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
+var key_press_offset = 0;
+
 if(key_down)
 {
-    key_offset = 0;
+    key_press_offset = 0;
     image_index = 1;
 }
 else
 {
-    key_offset = -2;
+    key_press_offset = -2;
     image_index = 0;
 }
+
+key_offset = key_base_offset + key_press_offset;
 
 text_width = string_width(key_text);
 
