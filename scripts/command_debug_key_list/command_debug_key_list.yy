@@ -6,7 +6,7 @@
     "path": "folders/Scripts/console/commands/other.yy",
   },
   "resourceVersion": "1.0",
-  "name": "debug_keys_list",
+  "name": "command_debug_key_list",
   "tags": [],
   "resourceType": "GMScript",
 }

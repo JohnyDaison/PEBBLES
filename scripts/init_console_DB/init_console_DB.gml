@@ -83,7 +83,7 @@ function init_console_DB() {
 
 	add_console_script("consolebg", console_background_toggle, "[number]", "Show/Hide console background");
 	add_console_script("mode", console_mode_command, "[string]", "Set and/or display console mode (play|test|debug)");
-	add_console_script("debugkeylist", debug_keys_list, "[string]", "List key combos usable in test/debug mode");
+	add_console_script("debugkeylist", command_debug_key_list, "[string]", "List key combos usable in test/debug mode");
 
 	add_console_script("circle_precision", circle_precision_command, "number", "Set number of triangles per circle (must be 4*k)");
 
@@ -142,5 +142,5 @@ function init_console_DB() {
 	    console_mode = "debug";
 	}
 
-	debug_keys_map = create_debug_keys_map();
+	debug_keys_list = create_debug_keys_list();
 }

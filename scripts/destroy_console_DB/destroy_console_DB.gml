@@ -1,5 +1,14 @@
 function destroy_console_DB() {
-	ds_map_destroy(debug_keys_map);
+    var count = ds_list_size(debug_keys_list);
+
+	var i, item;
+
+	for(i=0; i < count; i++)
+	{
+	    item = debug_keys_list[| i];
+        delete item;
+    }
+	ds_list_destroy(debug_keys_list);
 
 	var script = ds_map_find_first(console_scripts);
 	while(!is_undefined(script))
