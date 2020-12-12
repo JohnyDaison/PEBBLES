@@ -21,17 +21,16 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
     {
         case "peek":
             visible_line_count = 3;
-            max_slide_speed = 32;
             break;
         case "normal":
             visible_line_count = floor(resolution_coef * 12);
-            max_slide_speed = 48;
             break;
         case "full":
             visible_line_count = floor(resolution_coef * 30);
-            max_slide_speed = 64;
             break;
     }
+    
+    max_slide_speed = 32 * visible_line_count;
     
     self.height = (visible_line_count+1)*line_height + panel_height;
     slide_peak = -height/2;
@@ -45,3 +44,6 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
     
     show_state = singleton_obj.show_console;
 }
+
+DB.console_history_cur_item = history_list.cur_item;
+DB.console_history_selection_pos = history_list.selection_pos;

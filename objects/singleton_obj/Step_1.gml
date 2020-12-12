@@ -117,25 +117,20 @@ if(self.bgcolor_updated == false)
 // ~
 if(keyboard_check_pressed(192))
 {
-    if(self.show_console == "hide")
+    switch(show_console)
     {
-        self.show_console = show_console_mode; 
-    }
-    else
-    {
-        self.show_console = "hide";
-        switch(show_console_mode)
-        {
-            case "peek":
-                show_console_mode = "normal";
-                break;
-            case "normal":
-                show_console_mode = "full";
-                break;
-            case "full":
-                show_console_mode = "peek";
-                break;
-        }
+        case "hide":
+            show_console = "peek";
+            break;
+        case "peek":
+            show_console = "normal";
+            break;
+        case "normal":
+            show_console = "full";
+            break;
+        case "full":
+            show_console = "hide";
+            break;
     }
 }
 

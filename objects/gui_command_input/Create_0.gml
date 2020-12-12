@@ -1,16 +1,17 @@
-action_inherited();
-self.base_bg_color = c_ltgray;
-self.bg_color = self.base_bg_color;
-self.color = c_black;
-self.max_chars = 140;
-self.width = 256;
-self.prompt_str = "";
-self.list_picker = noone;
-self.items = DB.console_commands_saved;
-self.tab_text = "";
-self.tab_mode = false;
-self.history_mode = false;
-self.history_index = -1;
+event_inherited();
+
+base_bg_color = c_ltgray;
+bg_color = base_bg_color;
+color = c_black;
+max_chars = 140;
+width = 256;
+prompt_str = "";
+list_picker = noone;
+items = DB.console_commands_saved;
+tab_text = "";
+tab_mode = false;
+history_mode = false;
+command_history_index = -1;
 
 alarm[0] = 1;
 

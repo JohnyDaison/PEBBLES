@@ -44,7 +44,7 @@ if(visible)
                 {             
                     self.text = keyboard_string;
                     parse_user_command();
-                    history_index = -1;
+                    command_history_index = -1;
                     //gui_dropdown_script();
                 }
                 self.active = !self.active;
@@ -127,21 +127,21 @@ if(visible)
                     dir++;
                 
                 if(count > 0) {
-                    if(history_index == -1)
-                        history_index = last_index;
+                    if(command_history_index == -1)
+                        command_history_index = last_index;
                 
                     if(history_mode)
                     {
-                        history_index += dir;
+                        command_history_index += dir;
                         
-                        if (history_index < 0)
-                            history_index = 0;
+                        if (command_history_index < 0)
+                            command_history_index = 0;
                             
-                        if (history_index > last_index)
-                            history_index = last_index;
+                        if (command_history_index > last_index)
+                            command_history_index = last_index;
                     }
                 
-                    self.text = DB.console_command_history[| history_index];
+                    self.text = DB.console_command_history[| command_history_index];
                     history_mode = true;
                 }
             

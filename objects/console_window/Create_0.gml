@@ -61,7 +61,7 @@ gui_hide_element(ii.down_arrow);
 
 self.history_list_picker = ii;
 
-i = ii.scroll_list;
+i = history_list_picker.scroll_list;
 
 i.align_items = "left";
 i.draw_bg_color = false;
@@ -70,13 +70,12 @@ i.bg_color = c_black;
 i.text_color = c_white;
 i.alternate_lines = true;
 i.item_height = 32;
+i.bar_width = 16;
 i.item_padding = 0;
 i.highlight_color = merge_colour(c_black, c_purple, 0.5);
 i.select_color = merge_colour(c_black, c_lime, 0.5);
 i.max_items = visible_line_count;
 i.item_count = ds_list_size(i.items);
-i.cur_item = i.item_count;
-i.selection_pos = i.max_items;
 
 self.history_list = i;
 
@@ -156,7 +155,11 @@ for(i=0;i<count;i+=1)
 */
 
 
-console_window.history_list.cur_item = console_window.history_list.item_count;
-console_window.history_list.selection_pos = console_window.history_list.max_items;
+history_list.cur_item = DB.console_history_cur_item;
+history_list.selection_pos = DB.console_history_selection_pos;
+with(history_list)
+{
+    script_execute(item_change_script);
+}
 
 alarm[1] = 5;

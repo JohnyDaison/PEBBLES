@@ -7,7 +7,6 @@ self.show_terrain = false;
 self.show_chunkgrid = false;
 self.show_minimap = false;
 self.show_console = "hide";
-self.show_console_mode = "peek";
 
 self.game_speed = 60;
 self.master_volume = 50;
