@@ -24,7 +24,7 @@ function quick_tutorial_movement_strings() {
 	I18n[? "quick_tutorial_movement/wall_jump/active"] = "Don't rush it.|Just AIM left BEFORE you jump off the wall.";
 	I18n[? "quick_tutorial_movement/wall_jump/success"] = "Good job!";
 
-	I18n[? "quick_tutorial_movement/impact_mechanic/active"] = "Hit the ground hard!";
+	I18n[? "quick_tutorial_movement/impact_mechanic/active"] = "Hit the ground at high speed!";
 	I18n[? "quick_tutorial_movement/impact_mechanic/success"] = "Smashing!";
     
     I18n[? "quick_tutorial_movement/get_to_dive_jump/active"] = "Let's race!";
