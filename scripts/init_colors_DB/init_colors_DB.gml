@@ -67,9 +67,6 @@ function init_colors_DB() {
 
 	// init all - base
 	ds_grid_set_region(colormatrix, g_black, g_black, g_octarine, g_octarine, power_level[2]);
-
-	// basic and double vs black/dark
-	ds_grid_set_region(colormatrix, g_red, g_black, g_azure, g_black, power_level[3]);
     
 
 	// buffed basic vs. basic
@@ -105,9 +102,9 @@ function init_colors_DB() {
 
 
 	// basic vs. white 
-	ds_grid_set(colormatrix, g_red, g_white, power_level[3]);
-	ds_grid_set(colormatrix, g_green, g_white, power_level[3]);
-	ds_grid_set(colormatrix, g_blue, g_white, power_level[3]);
+	ds_grid_set(colormatrix, g_red, g_white, power_level[4]);
+	ds_grid_set(colormatrix, g_green, g_white, power_level[4]);
+	ds_grid_set(colormatrix, g_blue, g_white, power_level[4]);
 
 	// double vs. white
 	ds_grid_set(colormatrix, g_yellow, g_white, power_level[1]);
@@ -115,9 +112,14 @@ function init_colors_DB() {
 	ds_grid_set(colormatrix, g_azure, g_white, power_level[1]);
 
 	// white vs. basic
-	ds_grid_set(colormatrix, g_white, g_red, power_level[3]);
-	ds_grid_set(colormatrix, g_white, g_green, power_level[3]);
-	ds_grid_set(colormatrix, g_white, g_blue, power_level[3]);
+	ds_grid_set(colormatrix, g_white, g_red, power_level[2]);
+	ds_grid_set(colormatrix, g_white, g_green, power_level[2]);
+	ds_grid_set(colormatrix, g_white, g_blue, power_level[2]);
+    
+    // white vs. double
+	ds_grid_set(colormatrix, g_white, g_yellow, power_level[4]);
+	ds_grid_set(colormatrix, g_white, g_purple, power_level[4]);
+	ds_grid_set(colormatrix, g_white, g_azure, power_level[4]);
 
 	// white vs. black
 	ds_grid_set(colormatrix, g_white, g_black, power_level[4]);
