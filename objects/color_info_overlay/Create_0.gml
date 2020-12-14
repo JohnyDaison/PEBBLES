@@ -79,7 +79,29 @@ ii.height = 24;
 defense_label = ii;
 
 
-eloffset_y += line_height + 3 * margin;
+eloffset_y += line_height + margin;
+
+
+ii = gui_add_label(0, 0, "");
+ii.icon = heal_power_spr;
+ii.width = line_height;
+ii.height = line_height;
+ii.show_icon = true;
+ii.center_icon = true;
+ii.centered = true;
+
+healing_icon = ii;
+
+
+ii = gui_add_label(label_column_offset, 0, "HEAL");
+ii.centered = true;
+ii.width = label_column_width;
+ii.height = 24;
+
+healing_label = ii;
+
+
+eloffset_y += line_height + margin;
 
 
 ii = gui_add_label(0, 0, "");
