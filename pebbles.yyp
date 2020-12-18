@@ -1092,6 +1092,7 @@
     {"id":{"name":"base_has_crystals","path":"scripts/base_has_crystals/base_has_crystals.yy",},"order":1,},
     {"id":{"name":"base_can_heal_me","path":"scripts/base_can_heal_me/base_can_heal_me.yy",},"order":2,},
     {"id":{"name":"guy_consume_shard","path":"scripts/guy_consume_shard/guy_consume_shard.yy",},"order":3,},
+    {"id":{"name":"room_small_face_arena","path":"rooms/room_small_face_arena/room_small_face_arena.yy",},"order":18,},
     {"id":{"name":"turret_assign_player","path":"scripts/turret_assign_player/turret_assign_player.yy",},"order":25,},
     {"id":{"name":"phys_body_obj_push_other","path":"scripts/phys_body_obj_push_other/phys_body_obj_push_other.yy",},"order":26,},
     {"id":{"name":"empty_script","path":"scripts/empty_script/empty_script.yy",},"order":0,},
@@ -2091,6 +2092,7 @@
     {"name":"room_chaos_order_test","path":"rooms/room_chaos_order_test/room_chaos_order_test.yy",},
     {"name":"room_show_off","path":"rooms/room_show_off/room_show_off.yy",},
     {"name":"football_field","path":"rooms/football_field/football_field.yy",},
+    {"name":"room_small_face_arena","path":"rooms/room_small_face_arena/room_small_face_arena.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

@@ -33,6 +33,22 @@ place.description = "Medium size complex arena with a lot of Turrets, Spawners a
 place.controller = autogenerate_place_controller_obj;
 
 
+place = add_place_in_room(room_small_face_arena, "Small Face Arena", 0,0, 2048,2048, 0);
+place.description = "Very small arena.";
+place.controller = autogenerate_place_controller_obj;
+place.single_cam = true;
+place.forced_modifiers[? "turrets"] = false;
+place.forced_modifiers[? "cannons"] = false;
+place.forced_modifiers[? "mob_portals"] = false;
+
+place.forced_modifiers[? "random_item_spawner"] = false;
+place.forced_modifiers[? "snakes_on_a_plane"] = false;
+place.forced_modifiers[? "bolt_rain"] = false;
+place.forced_modifiers[? "slime_mob_rain"] = false;
+place.forced_modifiers[? "artifacts"] = false;
+place.forced_modifiers[? "lightning_strikes"] = false;
+
+
 place = add_place_in_room(face_arena, "Face Arena", 0,0, 3104,2016, 0);
 place.description = "Small arena with rounder geometry with a few Turrets and two gravity anomalies.";
 // TODO: this is shared, but shouldn't be the same
