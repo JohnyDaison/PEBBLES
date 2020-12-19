@@ -40,30 +40,25 @@ self.hp = normal_hp;
 self.dead = false;
 self.min_damage = 0;
 
-guy_drop_reserve_orbs();
-guy_die_from_damage();
-guy_die_from_falling();
-die = function() {
-    my_console_log("DIE " + object_get_name(object_index)  + string(id));
+function drop_reserve_orbs() {
+    guy_drop_reserve_orbs();
 }
 
-// HARDPOINTS
-/*
-hardpoint_x = ds_map_create();
-hardpoint_y = ds_map_create();
-hardpoint_type = ds_map_create();
-equipment_list = ds_list_create();
-*/
+function die_from_damage() {
+    guy_die_from_damage();
+}
+
+function die_from_falling() {
+    guy_die_from_falling();
+}
+
+
 init_equipment_sys();
 
 add_hardpoint(0,0, hp_shield);
 add_hardpoint(0,0, hp_shield);
 add_hardpoint(0,0, hp_shield);
 
-/*
-var inst = instance_create(x,y, sprinkler_shield_obj);
-body_equip(id, inst);
-*/
 
 // LOST CONTROL TRIGGERING
 self.lost_control_boost_threshold = 6;
