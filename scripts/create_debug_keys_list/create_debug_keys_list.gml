@@ -17,7 +17,7 @@ function create_debug_keys_list() {
 	ds_list_add(list, {input: "Alt + C", label: "Make guys near cursor lose control"});
 	ds_list_add(list, {input: "Ctrl + T", label: "Teleport a player's my_guy to cursor, player is chosen based on cursor color id"});
 	ds_list_add(list, {input: "Alt + D", label: "Drop terrain near cursor"});
-	ds_list_add(list, {input: "Alt + W", label: "Deal DoT to walls near cursor"});
+	ds_list_add(list, {input: "Alt + W", label: "Deal damage over time to walls near cursor"});
 	ds_list_add(list, {input: "Ctrl + E", label: "Delete terrain and platforms under cursor"});
 	ds_list_add(list, {input: "Alt + E", label: "Create random color explosion at cursor"});
 	ds_list_add(list, {input: "Alt + N", label: "Create lightning strike at cursor"});
