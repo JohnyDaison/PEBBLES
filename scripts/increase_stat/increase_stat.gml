@@ -10,7 +10,10 @@ function increase_stat() {
 	player = argument[0];
 	stat = argument[1];
 	incr = argument[2];
-	show = argument[3];
+    show = false;
+    if (argument_count > 3) {
+	    show = argument[3];
+    }
 
 	if(instance_exists(player))
 	{

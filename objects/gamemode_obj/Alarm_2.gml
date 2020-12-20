@@ -240,6 +240,18 @@ else
                 set_stat(id, "damage_to_spells_ratio", new_ratio, false);
             }
             
+            if(stats[? "hit_count"] > 0)
+            {
+                new_ratio = round((stats[? "attack_color_ratio_total"] * 100) / stats[? "hit_count"]);
+                set_stat(id, "attack_color_efficiency", new_ratio, false);
+            }
+            
+            if(stats[? "received_hits"] > 0)
+            {
+                new_ratio = round((stats[? "attack_color_ratio_total"] * 100) / stats[? "received_hits"]);
+                set_stat(id, "defense_color_efficiency", new_ratio, false);
+            }
+            
             set_stat(id, "channeling_time", floor(stats[? "channeling_time"]/singleton_obj.game_speed), false);
         }
 

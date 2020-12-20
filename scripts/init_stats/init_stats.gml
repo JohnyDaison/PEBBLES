@@ -31,6 +31,10 @@ function init_stats() {
 	stats[? "jumps"] = 0;
 	stats[? "damage_to_actions_ratio"] = 0;
 	stats[? "damage_to_spells_ratio"] = 0;
+    stats[? "attack_color_efficiency"] = 0;
+	stats[? "defense_color_efficiency"] = 0;
+    stats[? "hit_count"] = 0;
+    stats[? "received_hits"] = 0;
 
 	stats[? "kills"] = 0;
 	stats[? "personal_kills"] = 0;
@@ -122,8 +126,6 @@ function init_stats() {
 	stats[? "spellstreak"] = 0;
 	stats[? "abilitystreak"] = 0;
 	stats[? "combo"] = 0;
-
-
-
-
+    stats[? "attack_color_ratio_total"] = 0;
+	stats[? "defense_color_ratio_total"] = 0;
 }

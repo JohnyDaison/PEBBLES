@@ -143,14 +143,19 @@ function receive_damage() {
 	            if(shield_dmg != 0 && object_is_ancestor(other.object_index, projectile_obj))
 	            {
 	                create_damage_popup(shield_dmg, other.my_color, id);
-	                /*
-	                i = instance_create(other.x,other.y,damage_popup_obj);
-	                i.damage = shield_dmg;
-	                i.my_color = other.my_color;
-	                i.tint_updated = false;
-	                i.source = id;
-	                */
 	            }
+                
+                // EFFICIENCY STATS
+                if (other.my_player != my_player) {
+                    if(other.my_guy == other.my_player.my_guy) {
+                        increase_stat(other.my_player, "hit_count", 1);
+                        increase_stat(other.my_player, "attack_color_ratio_total", shield_ratio);
+                    }
+                    if(id == my_player.my_guy) {
+                        increase_stat(my_player, "received_hits", 1);
+                        increase_stat(my_player, "defense_color_ratio_total", shield_ratio);
+                    }
+                }
             
 	            // BEAM VS SHIELD UNDEBUFF
 	            if(other.object_index == beam_obj)
@@ -339,7 +344,7 @@ function receive_damage() {
 	            }
 
 	            // COMPUTE SPELL TO BODY
-	            power_ratio = get_power_ratio(other.my_color,my_color);
+	            var power_ratio = get_power_ratio(other.my_color,my_color);
 
 	            // ARC VS BODY DEBUFF
 	            if(other.object_index == energy_burst_obj)
@@ -666,6 +671,18 @@ function receive_damage() {
 	            {
 	                create_damage_popup(final_damage, other.my_color, id);
 	            }
+                
+                // EFFICIENCY STATS
+                if (other.my_player != my_player) {
+                    if(other.my_guy == other.my_player.my_guy) {
+                        increase_stat(other.my_player, "hit_count", 1);
+                        increase_stat(other.my_player, "attack_color_ratio_total", power_ratio);
+                    }
+                    if(id == my_player.my_guy) {
+                        increase_stat(my_player, "received_hits", 1);
+                        increase_stat(my_player, "defense_color_ratio_total", power_ratio);
+                    }
+                }
             
 	            // SFX
 	            if(object_is_ancestor(other.object_index,energyball_obj) || other.object_index == aoe_obj

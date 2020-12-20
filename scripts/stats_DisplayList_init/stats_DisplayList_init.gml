@@ -15,10 +15,18 @@ function stats_DisplayList_init(argument0, argument1) {
 	stats[| i++] = "score";
 	labels[| i]  = "Score from Achievements";
 	stats[| i++] = "achievements_score";
-	labels[| i]  = "Damage recieved";
-	stats[| i++] = "damage_received";
 	labels[| i]  = "Damage dealt";
 	stats[| i++] = "damage_dealt";
+    labels[| i]  = "Hit count";
+	stats[| i++] = "hit_count";
+    labels[| i]  = "Attack Color effic.(%)";
+	stats[| i++] = "attack_color_efficiency";
+	labels[| i]  = "Damage recieved";
+	stats[| i++] = "damage_received";
+    labels[| i]  = "Received hits";
+	stats[| i++] = "received_hits";
+    labels[| i]  = "Defense Color effic.(%)";
+	stats[| i++] = "defense_color_efficiency";
 	labels[| i]  = "Damage healed";
 	stats[| i++] = "damage_healed";
 	labels[| i]  = "Damage rewound";
@@ -35,7 +43,6 @@ function stats_DisplayList_init(argument0, argument1) {
 	stats[| i++] = "jumps";
 	labels[| i]  = "on Enemy side(%)";
 	stats[| i++] = "percent_on_opponents_half"; // display as *100/singleton_obj.step_count + '%'
-
 
 	labels[| i]  = "";
 	stats[| i++] = "";
