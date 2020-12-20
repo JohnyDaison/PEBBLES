@@ -1,13 +1,11 @@
-/// @description show_player_levels(number)
-/// @function show_player_levels
-/// @param number
-function show_player_levels() {
-	var number = argument[0];
+function show_player_levels(number) {
+	if(!instance_exists(gamemode_obj)) {
+        return 0;
+    }
+    
+    var player = gamemode_obj.players[? number];
 
-	var player = gamemode_obj.players[? number];
-
-	if(is_undefined(player))
-	{
+	if(is_undefined(player)) {
 	    return 0;
 	}
 
