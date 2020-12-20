@@ -30,7 +30,7 @@ function parse_command() {
 	            {
 	                cur_part += cur_char;
 	            }
-	            else
+	            else if(cur_part != "")
 	            {
 	                ds_list_add(command_split, cur_part);
 	                cur_part = "";
@@ -69,7 +69,7 @@ function parse_command() {
 	        }
 	    }
     
-	    // IF IT DOES
+	    // IF IT EXISTS
 	    if(console_script != "")
 	    {
 	        part_index = 1;

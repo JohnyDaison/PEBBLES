@@ -150,7 +150,14 @@ if(visible)
             {
                 if(tab_mode || history_mode)
                 {
-                    keyboard_string = self.text;
+                    var end_str = string_lettersdigits(keyboard_lastchar);
+                
+                    if(tab_mode)
+                    {
+                        end_str = " " + end_str;
+                    }
+
+                    keyboard_string = self.text + end_str;
                 }
             
                 tab_mode = false;
