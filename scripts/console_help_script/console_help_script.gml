@@ -7,6 +7,13 @@ function console_help_script() {
 	{
 	    search_str = argument[0];
 	}
+    
+    my_console_write("=================================");
+    my_console_write("Note: An 'object' parameter can usually be passed either:");
+    my_console_write("        * object name to affect instances of it and descendants");
+    my_console_write("        * instance id to target specific instance");
+    my_console_write("");
+    
 
 	var i, arg_i, script, script_str, list = DB.console_modes[? DB.console_mode];
 	var count = ds_list_size(list), filtered_count = 0,  optional = false, name, cur_arg;
@@ -99,17 +106,18 @@ function console_help_script() {
 	    }
     
 	    my_console_write(script_str);
+        
+        if(i == -1) {
+            my_console_write("------------------------------------------------------------------");
+        }
     
 	    if(i >= 0)
 	    {
 	        filtered_count++;
 	    }
 	}
+    
+    my_console_write("=================================");
 
 	return filtered_count;
-
-
-
-
-
 }

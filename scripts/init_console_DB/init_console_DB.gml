@@ -43,59 +43,59 @@ function init_console_DB() {
 	// NOTE: "object [, object, string]" is valid;
 	// "object, [object, string]" will be parsed the same as "object, object [, string]"
 
-	add_console_script("help", console_help_script, "[string]", "Type \"help str\" to filter commands which contain str");
+	add_console_script("help", console_help_script, "[string]", "Type \"help str\" to filter commands which contain string(1)");
 	add_console_script("noop", empty_script, "", "Does nothing");
-	add_console_script("parse", parse_stringvalue, "string, string", "(type, data) Parse given string data as a given type");
+	add_console_script("parse", parse_stringvalue, "string, string", "Parse given string(2) as the given type(1)");
 	add_console_script("restart", match_restart, "", "Restart the current room");
 	add_console_script("gamespeed", getset_gamespeed, "[number]", "Set and/or display current game speed");
 
-	add_console_script("replace", object_replace, "object, object");
-	add_console_script("transform", object_transform, "object [, object]");
-	add_console_script("chunks", chunk_optimizer, "[object]");
-	add_console_script("chunksoff", chunk_deoptimizer, "[object]");
-	add_console_script("findholders", find_holders, "string [, string]");
-	add_console_script("listevents", list_event_subscriptions, "");
-	add_console_script("navgraph", navgraph_command, "");
+	add_console_script("replace", object_replace, "object, object", "Destroy instances(1) and for each create an instance of object(2)");
+	add_console_script("transform", object_transform, "object [, object]", "Transform instances(1) to/from data_holder_obj");
+	add_console_script("chunks", chunk_optimizer, "", "Run chunk update");
+	add_console_script("chunksoff", chunk_deoptimizer, "", "Turn off chunk system");
+	add_console_script("findholders", find_holders, "string [, string]", "List data_holder_obj - (1) = 'all', or filter for key(1) == asset or number(2)");
+	add_console_script("listevents", list_event_subscriptions, "", "List all event subscriptions, grouped by events");
+	add_console_script("navgraph", navgraph_command, "", "Regenerate navigation graph");
 
-	add_console_script("count", my_instance_number, "object", "Count the number of active instances of given object");
-	add_console_script("grouplist", list_groups, "");
-	add_console_script("instlist", list_instances, "[object]");
-	add_console_script("instinfo", get_instance_info, "object");
-	add_console_script("killall", kill_all_command, "[object]");
-	add_console_script("spawn", spawn_command, "object [, number]");
-	add_console_script("listds", list_ds, "");
+	add_console_script("count", my_instance_number, "object", "Count the active instances of object(1)");
+	add_console_script("grouplist", list_groups, "", "List object groups and their member counts");
+	add_console_script("instlist", list_instances, "[object]", "List given instances. If no object(1) given, list possible values");
+	add_console_script("instinfo", get_instance_info, "object", "Show some info about given instance or first instance of given object");
+	add_console_script("killall", kill_all_command, "[object]", "Destroy all given instances (if object(1) not given, all game_obj)");
+	add_console_script("spawn", spawn_command, "object [, number]", "Spawn object(1) at mouse cursor, number(2) times");
+	add_console_script("listds", list_ds, "", "List dynamic structures in ds_registry");
 	add_console_script("getprop", getprop, "object, string");
 	add_console_script("setprop", setprop, "object, string, string");
-    add_console_script("setnumber", set_number, "object, string, number");
-	add_console_script("objname", obj_getname, "number", "Return name of the object with given id");
-	add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given id");
+    add_console_script("setnumber", set_number, "object, string, number", "For all instances(1) set variable(2) to number(3)");
+	add_console_script("objname", obj_getname, "number", "Return name of the object with given ID(1)");
+	add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given ID(1)");
 
-	add_console_script("camfollow", camera_override, "number, object", "Make a given camera follow given object");
-	add_console_script("camgoto", camera_position, "number, number, number", "(cam, x, y) Move a given camera to given coordinates");
-	add_console_script("camreset", camera_resume, "number", "Reset given camera to normal behavior");
+	add_console_script("camfollow", camera_override, "number, object", "Make the camera(1) follow instance(2)");
+	add_console_script("camgoto", camera_position, "number, number, number", "Move the camera(1) to coordinates[2,3]");
+	add_console_script("camreset", camera_resume, "number", "Reset the camera(1) to normal behavior");
 
-	add_console_script("questlist", quest_nodes_printout, "");
-	add_console_script("questdebug", quest_debug_printout, "[string]");
-	add_console_script("playerquests", player_quest_log_printout, "number [, number]", "Show quests of given player[, with a given level of detail]");
-	add_console_script("playerstartquest", player_quest_start_command, "number, string, string, string");
-	add_console_script("playerskiptoquest", player_quest_skip_to_command, "number, number");
-	add_console_script("playerquestrecheck", player_quests_recheck_command, "number");
-	add_console_script("goto_quest", go_to_quest_command, "number");
+	add_console_script("questlist", quest_nodes_printout, "", "List all quest IDs in the game");
+	add_console_script("questdebug", quest_debug_printout, "[string]", "Show definitions of all quests [whose ID contains string(1)]");
+	add_console_script("playerquests", player_quest_log_printout, "number [, number]", "Show quests of player(1)[, with level of detail(2)]");
+	add_console_script("playerstartquest", player_quest_start_command, "number, string, string, string", "Player(1) receives quest(2) with context(3) and type(4)");
+	add_console_script("playerskiptoquest", player_quest_skip_to_command, "number, number", "Complete all subquests of the player's(1) main quest up to index(2)");
+	add_console_script("playerquestrecheck", player_quests_recheck_command, "number", "Update the state of given player's(1) quests");
+	add_console_script("goto_quest", go_to_quest_command, "number", "For Player 1, complete all subquests of the main quest up to given index(1)");
 
-	add_console_script("playerlevels", show_player_levels, "number", "Show levels of given player");
+	add_console_script("playerlevels", show_player_levels, "number", "Show levels of player(1)");
 
 	add_console_script("consolebg", console_background_toggle, "[number]", "Show/Hide console background");
 	add_console_script("mode", console_mode_command, "[string]", "Set and/or display console mode (play|test|debug)");
-	add_console_script("debugkeylist", command_debug_key_list, "[string]", "List key combos usable in test/debug mode");
+	add_console_script("debugkeylist", command_debug_key_list, "[string]", "List key combos usable in test/debug mode[, filtered by string(1)]");
 
 	add_console_script("circle_precision", circle_precision_command, "number", "Set number of triangles per circle (must be 4*k)");
 
-	add_console_script("test", test_command, "string", "Run a test script with given id");
+	add_console_script("test", test_command, "string", "Run the test script with given ID(1)");
 
 	//add_console_script("iamcheatsindoodlin", console_mode_cheats, "");
 
 	//add_console_script("watch", watch_script, "string, string"); // label, command
-	//add_console_script("unwatch", unwatch_script, "number"); // watch id
+	//add_console_script("unwatch", unwatch_script, "number"); // watch ID
 
 	var common = ds_list_create();
 
