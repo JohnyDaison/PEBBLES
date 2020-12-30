@@ -9,7 +9,7 @@ if(singleton_obj.show_console == "hide")
     y = max(-height, y - slide_speed);
     if(y == -height)
     {
-        instance_destroy();
+        close_frame(id);
     }
 }
 
