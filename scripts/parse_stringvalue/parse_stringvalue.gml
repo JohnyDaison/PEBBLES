@@ -1,25 +1,24 @@
 /// @description parse_stringvalue(type, value_string)
 /// @function parse_stringvalue
 /// @param type
-/// @param  value_string
-function parse_stringvalue() {
-	var arg_type = argument[0];
-	var value_string = argument[1];
-
+/// @param value_string
+function parse_stringvalue(arg_type, value_string) {
 	var temp, obj_arg, script_arg, asset_arg;
-	var arg_valid, bad_input = false;
+	var arg_valid = false;
 
 	var result = undefined;
 	//my_console_log("part_index="+string(part_index) + " " + "arg_type="+string(arg_type));
 	temp = value_string;
-	arg_valid = false;
 
 	// TYPE
 	switch(arg_type)
 	{
 	    case "number":
-	        temp = real(temp);
-	        arg_valid = true;
+            if(is_string_number(temp))
+	        {
+                temp = real(temp);
+                arg_valid = true;
+            }
 	        break;
         
 	    case "string":
@@ -75,14 +74,15 @@ function parse_stringvalue() {
 	        break;
         
 	    case "assetornumber":
-	        asset_arg = asset_get_index(temp);    
+	        asset_arg = asset_get_index(temp);
         
 	        if(asset_arg > -1)
 	        {
 	            temp = asset_arg;
 	            arg_valid = true;
 	        }
-	        else {
+	        else if(is_string_number(temp))
+			{
 	            temp = real(temp);
 	            arg_valid = true;
 	        }
@@ -96,7 +96,4 @@ function parse_stringvalue() {
 	}
 
 	return result;
-
-
-
 }
