@@ -42,7 +42,7 @@ function parse_stringvalue(arg_type, value_string) {
 	                temp = obj_arg;
 	                arg_valid = true;
 	            }
-	            else
+	            else if(is_string_number(temp))
 	            {
 	                temp = real(temp);
 	                if(instance_exists(temp))
@@ -52,7 +52,7 @@ function parse_stringvalue(arg_type, value_string) {
 	            }
 	        }
         
-	        if(!arg_valid)
+	        if(!arg_valid && is_string_number(value_string))
 	        {
 	            obj_arg = real(value_string);
         
