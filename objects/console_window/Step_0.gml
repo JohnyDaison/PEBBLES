@@ -1,16 +1,6 @@
-slide_speed = max(0.1, sqrt(abs(1-abs( (y - slide_peak)/slide_peak )))*max_slide_speed);
-
-if(singleton_obj.show_console != "hide" && y<0)
-{
-    y = min(0, y + slide_speed);
-}
 if(singleton_obj.show_console == "hide")
 {
-    y = max(-height, y - slide_speed);
-    if(y == -height)
-    {
-        close_frame(id);
-    }
+    close_frame(id);
 }
 
 if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hide")
@@ -30,10 +20,7 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
             break;
     }
     
-    max_slide_speed = 32 * visible_line_count;
-    
     self.height = (visible_line_count+1)*line_height + panel_height;
-    slide_peak = -height/2;
     history_list_picker.height = self.height - panel_height;
     history_list.height = history_list_picker.height;
     

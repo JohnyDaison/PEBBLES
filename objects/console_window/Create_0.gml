@@ -3,8 +3,6 @@ event_inherited();
 self.line_height = 32;
 self.panel_height = 32;
 self.visible_line_count = 1;
-self.max_slide_speed = 32;
-self.slide_speed = 0;
 self.show_state = "hide";
 self.menu_open = false;
 self.show_backgrounds = true;
@@ -28,8 +26,7 @@ self.width = view_wport[0];
 self.height = (visible_line_count+1)*line_height + panel_height;
 
 x = 0;
-y = -height;
-slide_peak = -height/2;
+y = 0;
 
 self.keep_inside = false;
 
