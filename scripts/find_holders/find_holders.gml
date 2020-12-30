@@ -14,7 +14,7 @@ function find_holders() {
         
         if(is_string_number(value)) {
             value = parse_stringvalue("assetornumber", value);
-            type_str = "assetornumber";
+            type_str = "asset id or number";
         } else {
             var obj = parse_stringvalue("object", value);
             if(obj != noone) {
