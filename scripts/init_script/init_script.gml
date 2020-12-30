@@ -53,41 +53,7 @@ function init_script() {
 	DB.color_effects[? g_white] = DB.status_effects[? "heavy_shots"];
 	DB.color_effects[? g_octarine] = DB.status_effects[? "shield_down"];
 
-	// DEFAULT STARTING SLOTS NUMBER
-	/*
-	DB.arena_slots = 1;
-	DB.starting_slots = 0;
-	*/
-
-	// ARENAS
-	// TODO: this shouldn't be used anymore
-	/*
-	DB.arenas = ds_map_create();
-	DB.arena_names = ds_list_create();
-	var i=0;
-
-	DB.arenas[? i++] =   testroom;
-	ds_list_add(DB.arena_names,  "Testing Room");
-	DB.arenas[? i++] =   crumble_arena;
-	ds_list_add(DB.arena_names,  "4-Player Crumble");
-	DB.arenas[? i++] =   closed_quarters_arena;
-	ds_list_add(DB.arena_names,  "Closed Quarters");
-	DB.arenas[? i++] =   classic_arena;
-	ds_list_add(DB.arena_names,  "Classic Arena");
-	DB.arenas[? i++] =   face_arena;
-	ds_list_add(DB.arena_names,  "Second Arena");
-	DB.arenas[? i++] =   domination1;
-	ds_list_add(DB.arena_names,  "Domination");
-	DB.arenas[? i++] =   alpinus_sandbox;
-	ds_list_add(DB.arena_names,  "Alpinus Sandbox");
-	DB.arenas[? i++] =   skull_bones;
-	ds_list_add(DB.arena_names,  "Skull & Bones");
-	DB.arenas[? i++] =   big_arena;
-	ds_list_add(DB.arena_names,  "Big Arena");
-	DB.arenas[? i++] =   room_snake_test;
-	ds_list_add(DB.arena_names,  "Snake test");
-	*/
-
+    // COLLISION MAP FOR UNUSED COLLISION SYSTEM (was laggy)
 	create_collision_map(DB);
 
 	// LIMITS MAP
