@@ -1,6 +1,7 @@
 function abi_base_teleport() {
 	show_debug_message("base teleport used");
 	var abi_color = g_white;
+    var success = false;
 
 	if(instance_exists(my_base) && !(my_base.object_index == guy_spawner_obj && my_base.destroyed))
 	{
@@ -11,6 +12,7 @@ function abi_base_teleport() {
 	    speed = 0;
 	    self.abi_cooldown_length[? abi_color] = DB.abi_cooldowns[? abi_color];
 	    my_sound_play(base_tp_sound);
+        success = true;
 	}
 	else
 	{
@@ -18,6 +20,5 @@ function abi_base_teleport() {
 	    my_sound_play(failed_sound);
 	}
 
-
-
+    return success;
 }

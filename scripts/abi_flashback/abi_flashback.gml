@@ -1,5 +1,7 @@
 function abi_flashback() {
 	var abi_color = g_black;
+    var success = false;
+    
 	if(!flashback_disabled)
 	{
 	    var old_state_exists = !is_undefined(self.flashback_queue[| 0]);
@@ -23,6 +25,7 @@ function abi_flashback() {
       
 	        self.abi_script_delay[? abi_color] = 1;  
 	        self.abi_script[? abi_color] = abi_flashback_step;
+            success = true;
 	    }
 	    else
 	    {
@@ -31,6 +34,5 @@ function abi_flashback() {
 	    }
 	}
 
-
-
+    return success;
 }

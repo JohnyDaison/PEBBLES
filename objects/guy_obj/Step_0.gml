@@ -1732,23 +1732,23 @@ if(!self.frozen_in_time)
                     show_debug_message("abi color: "+string(my_abi_color));
                     
                     self.abi_script[? my_abi_color] = empty_script;
-                    script_execute(abilities[? my_abi_color]);
+                    var success = script_execute(abilities[? my_abi_color]);
                     abi_cooldown[? my_abi_color] = abi_cooldown_length[? my_abi_color];
                     abi_last_used[? my_abi_color] = step_count;
                     abi_last_script[? my_abi_color] = step_count;
                     
-                    increase_stat(my_player,"abilities",1,noone);
-                    increase_stat(my_player,"abilities"+string(my_abi_color),1,noone);
-                    increase_stat(my_player,"abilitystreak",1,noone);
-                    increase_stat(my_player,"combo",1,noone);
+                    if(success) {
+                        increase_stat(my_player,"abilities",1,noone);
+                        increase_stat(my_player,"abilities" + string(my_abi_color),1,noone);
+                        increase_stat(my_player,"abilitystreak",1,noone);
+                        increase_stat(my_player,"combo",1,noone);
                     
-                    var params = create_params_map();
-                    params[? "who"] = id;
-                    params[? "abi_color"] = my_abi_color;
+                        var params = create_params_map();
+                        params[? "who"] = id;
+                        params[? "abi_color"] = my_abi_color;
             
-                    broadcast_event("ability_use", id, params);
-                
-                    self.last_abi_color = my_abi_color;
+                        broadcast_event("ability_use", id, params);
+                    }
                 }
                 else
                 {

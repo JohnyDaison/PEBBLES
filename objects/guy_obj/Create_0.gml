@@ -450,7 +450,6 @@ self.my_color = g_black;
 self.new_colors = ds_list_create();
 self.my_last_color = my_color;
 self.my_abi_color = -1;
-self.last_abi_color = my_abi_color;
 self.my_abi_tint = c_dkgray;
 self.tint_updated = false;
 self.color_updated = true;

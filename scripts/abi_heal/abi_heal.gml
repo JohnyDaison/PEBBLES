@@ -1,6 +1,7 @@
 function abi_heal() {
 	show_debug_message("heal used");
 	var abi_color = g_green;
+    var success = true;
     
     status_left[? "heal"] += 300;
 
@@ -9,4 +10,6 @@ function abi_heal() {
 	{
 	    abi_cooldown_length[? abi_color] *= 1/2;
 	}
+    
+    return success;
 }

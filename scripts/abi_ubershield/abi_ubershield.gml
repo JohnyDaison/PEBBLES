@@ -1,11 +1,9 @@
 function abi_ubershield() {
     show_debug_message("ubershield used");
-    
-    var failed = false;
+    var abi_color = g_purple;
+    var success = false;
     
 	if (has_level(id, "shield" , 1)) {
-	    var abi_color = g_purple;
-        
 	    if (!instance_exists(my_shield) && my_color != g_black) {
 	        var i = instance_create(x,y,shield_obj);
 	        i.my_guy = id;
@@ -20,15 +18,14 @@ function abi_ubershield() {
 	    if (instance_exists(my_shield)) {
             status_left[? "ubershield"] += 420;
 	        abi_cooldown_length[? abi_color] = DB.abi_cooldowns[? abi_color];
-	    } else {
-            failed = true;
+            success = true;
 	    }
-	} else {
-        failed = true;
-    }
+	}
     
-    if (failed) {
+    if (!success) {
         my_sound_play(failed_sound);
         abi_cooldown_length[? abi_color] = 5;
 	}
+    
+    return success;
 }

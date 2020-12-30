@@ -65,5 +65,5 @@ function abi_teleport() {
 	    }
 	}
 
-
+    return success;
 }
