@@ -53,7 +53,7 @@ function init_console_DB() {
 	add_console_script("transform", object_transform, "object [, object]", "Transform instances(1) to/from data_holder_obj");
 	add_console_script("chunks", chunk_optimizer, "", "Run chunk update");
 	add_console_script("chunksoff", chunk_deoptimizer, "", "Turn off chunk system");
-	add_console_script("findholders", find_holders, "string [, string]", "List data_holder_obj - (1) = 'all', or filter for key(1) == asset or number(2)");
+	add_console_script("findholders", find_holders, "[string, string]", "List all data_holder_obj, or filter for key(1) == asset or number(2)");
 	add_console_script("listevents", list_event_subscriptions, "", "List all event subscriptions, grouped by events");
 	add_console_script("navgraph", navgraph_command, "", "Regenerate navigation graph");
 
