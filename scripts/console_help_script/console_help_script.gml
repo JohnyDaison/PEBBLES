@@ -83,11 +83,11 @@ function console_help_script() {
     
 	            arg_i += 1;
 	            cur_arg = script[? "arg" + string(arg_i)];    
-	        }
-    
-	        if(optional)
-	        {
-	            script_str += "]";
+                
+                if(optional)
+    	        {
+    	            script_str += "]";
+    	        }
 	        }
 	    }
     
