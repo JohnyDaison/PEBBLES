@@ -1,9 +1,6 @@
 /// @description is_string_number(string)
 /// @param string
-function is_string_number() {
-
-	var str = argument[0];
-
+function is_string_number(str) {
 	var length = string_length(str);
 	var invalid_character = false;
 	var digit_found = false;
@@ -26,10 +23,12 @@ function is_string_number() {
 	{
 	    first_part = string_copy(first_part, 2, length);
 	}
+    
+    var first_part_length = string_length(first_part);
 
-	for(var chr_i = 0; chr_i < length; chr_i++)
+	for(var chr_i = 1; chr_i <= first_part_length; chr_i++)
 	{
-	    chr_ord = string_ord_at(first_part, 0);
+	    chr_ord = string_ord_at(first_part, chr_i);
 	    if(chr_ord >= ord_0 && chr_ord <= ord_9)
 	    {
 	        digit_found = true;
@@ -40,8 +39,5 @@ function is_string_number() {
 	    }
 	}
 
-
 	return digit_found && !invalid_character;
-
-
 }
