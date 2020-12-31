@@ -778,25 +778,30 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // CTRL + V
         if(keyboard_check(vk_control) && keyboard_check_pressed(ord("V")))
         {
-            main_camera_obj.on = !main_camera_obj.on;
+            if(instance_exists(main_camera_obj)) {
+                main_camera_obj.on = !main_camera_obj.on;
+            }
         }
     
-        // MATCH LEVEL CONFIG HACK RESTART CHEAT
+        // RESTART WITH MATCH LOADOUT
         // ALT + U
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("U")))
         {
-            // LOAD MATCH LEVEL CONFIG
-            with(gamemode_obj)
-            {
-                levels_load_config("match");
-            }
-            var player = gamemode_obj.players[? 1];
-            with(player)
-            {
-                init_levels_player();
-            }
+            if(instance_exists(gamemode_obj)) {
+                
+                // LOAD MATCH LEVEL CONFIG
+                with(gamemode_obj)
+                {
+                    levels_load_config("match");
+                }
+                var player = gamemode_obj.players[? 1];
+                with(player)
+                {
+                    init_levels_player();
+                }
 
-            gamemode_obj.restart_match = true;
+                gamemode_obj.restart_match = true;
+            }
         }
     
         // HIGHLIGHT DATA HOLDERS
