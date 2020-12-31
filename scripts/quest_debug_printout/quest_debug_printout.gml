@@ -15,7 +15,7 @@ function quest_debug_printout() {
 
 	quest_count = ds_list_size(DB.quest_node_ids);
 
-	my_console_write("--------------------------------------");
+    
 	my_console_write("QUESTS TOTAL: " + string(quest_count));
 
 	for(i = 0; i < quest_count; i++)
@@ -30,7 +30,7 @@ function quest_debug_printout() {
 	    quest_node = DB.quest_nodes[? quest_id];
     
 	    // HEADER
-	    my_console_write("--------------------------------------");
+	    console_divider_level("-", 3);
 	    my_console_write(string(i) + " - " + quest_id);
     
 	    my_console_write("Name: " + quest_node[? "name"]);
@@ -111,7 +111,4 @@ function quest_debug_printout() {
 	my_console_write("DISPLAYED: " + string(filtered_count) + " of " + string(quest_count));
 
 	return filtered_count;
-
-
-
 }

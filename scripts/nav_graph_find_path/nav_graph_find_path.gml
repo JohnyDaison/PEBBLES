@@ -1,11 +1,4 @@
-/// @description nav_graph_find_path(start, end)
-/// @function nav_graph_find_path
-/// @param start
-/// @param  end
-function nav_graph_find_path(argument0, argument1) {
-	var start_node = argument0;
-	var end_node = argument1;
-
+function nav_graph_find_path(start_node, end_node) {
 	var path = ds_list_create();
 	var edge_length_coef = DB.npc_waypoint_edge_length_coef;
 	var debug_output = false;
@@ -53,7 +46,9 @@ function nav_graph_find_path(argument0, argument1) {
        
 	        if(debug_output)
 	        {
-	            my_console_write("=========A STAR=========");
+	            console_divider_level("=", 3);
+                my_console_write("A STAR");
+                console_divider_level("=", 3);
 	        }
         
 	        while(!done)
@@ -158,7 +153,4 @@ function nav_graph_find_path(argument0, argument1) {
 	}
 
 	return path;
-
-
-
 }

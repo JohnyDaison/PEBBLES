@@ -5,15 +5,13 @@ function list_event_subscriptions() {
 	var event_count = ds_list_size(event_manager.event_list);
 	var ev_i, event, sub_i, sub_count, subscriber, subscriber_str, script_str, source, source_str, final_str;
 
-	my_console_write("=================================");
-
 	for(ev_i = 0; ev_i < event_count; ev_i++)
 	{
 	    event = event_manager.event_list[| ev_i];
     
 	    if(ev_i != 0)
 	    {
-	        my_console_write("---------------------------------");
+            console_divider_level("-", 3);
 	    }
 	    my_console_write(event + ":");
     
@@ -55,10 +53,5 @@ function list_event_subscriptions() {
 	    }
 	}
 
-	my_console_write("=================================");
-
 	return event_count;
-
-
-
 }

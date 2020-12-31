@@ -17,15 +17,12 @@ function player_quest_log_printout(player_number) {
         return 0;
     }
 
-    my_console_write("==================QUEST LOG==================");
-
-    count = ds_list_size(player.root_quest_list);
+    var i, context;
+    var count = ds_list_size(player.root_quest_list);
 
     for(i = 0; i < count; i++) {
         context = player.root_quest_list[| i];
     
         player_quest_state_printout(player, context, 1, level_of_detail);
     }
-
-    my_console_write("=============================================");
 }
