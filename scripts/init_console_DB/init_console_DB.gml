@@ -1,7 +1,7 @@
 function init_console_DB() {
     console_history = ds_list_create();
     console_history_cur_item = -1;
-    console_history_selection_pos = 0;
+    console_history_selection_pos = -1;
     console_command_history = ds_list_create();
     console_menu = ds_map_create();
     console_scripts = ds_map_create();

@@ -152,8 +152,14 @@ for(i=0;i<count;i+=1)
 */
 
 
-history_list.cur_item = DB.console_history_cur_item;
-history_list.selection_pos = DB.console_history_selection_pos;
+if (DB.console_history_cur_item == -1) {
+    history_list.cur_item = history_list.item_count;	
+    history_list.selection_pos = history_list.max_items;
+} else {
+    history_list.cur_item = DB.console_history_cur_item;
+    history_list.selection_pos = DB.console_history_selection_pos;
+}
+
 with(history_list)
 {
     script_execute(item_change_script);
