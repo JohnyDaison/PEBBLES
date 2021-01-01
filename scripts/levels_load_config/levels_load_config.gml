@@ -62,6 +62,7 @@ function levels_load_config(argument0) {
 	else if(config == "tutorial")
 	{
 	    config_level_gamemode("guy_orbit",          "", "", 1);
+        config_level_gamemode("dark_mode",          "", "", 1);
 	    config_level_gamemode("blast_mode",         "", "", 1);
 	    config_level_gamemode("orb_storage_size",   "", "", 9);
 	    config_level_gamemode("recovery",           "", "", 6);
