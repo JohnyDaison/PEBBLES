@@ -20,7 +20,20 @@ if(ready || shrink_anim_phase > 0)
 
 if(ready && active && shrink_anim_phase == 1)
 {
-    draw_set_alpha(1);
+    // PROGRESS BAR
+    if(anim_set_steps_total > 1 && anim_set_progress > 0 && anim_set_duration > 0) {
+        var progress_ratio = anim_set_progress/anim_set_duration;
+        var max_bar_width = (bbox_right - bbox_left) - 2 * progress_bar_margin - 1;
+        var bar_width = ceil(progress_ratio * max_bar_width);
+        var bar_start_x = floor(bbox_left + progress_bar_margin);
+        var bar_start_y = floor(bbox_bottom - (progress_bar_margin + progress_bar_height - 1));
+    
+        draw_set_colour(progress_bar_color);
+        draw_set_alpha(progress_bar_alpha);
+        draw_rectangle(bar_start_x, bar_start_y, bar_start_x + bar_width - 1, bar_start_y + progress_bar_height - 1, false);
+    }
+    
+    // IMAGES
     if(sprite_exists(bg_sprite))
     {
         draw_sprite_ext(bg_sprite, sprite_step, x+bg_sprite_xx, y+bg_sprite_yy, anim_scale, anim_scale, anim_angle, bg_tint, anim_fade_ratio);
@@ -34,6 +47,8 @@ if(ready && active && shrink_anim_phase == 1)
         draw_sprite_ext(fg_sprite, sprite_step, x+sprite_xx, y+sprite_yy, anim_scale, anim_scale, anim_angle, fg_tint, anim_fade_ratio);
     }
     
+    // LABELS
+    draw_set_alpha(1);
     draw_set_colour(c_white);
     my_draw_set_font(infodisplay_font);
     draw_set_halign(fa_center);

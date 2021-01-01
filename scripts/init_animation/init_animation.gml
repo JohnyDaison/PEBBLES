@@ -1,7 +1,9 @@
 function init_animation() {
 	animation = noone;
 	start_step = -1;
-	anim_length = 0;
+    anim_set_steps_total = 0;
+    anim_set_duration = 0;
+    anim_set_progress = 0;
 	bg_sprite = noone;
 	sprite = noone;
 	fg_sprite = noone;
@@ -23,7 +25,4 @@ function init_animation() {
 	label_offset = 0;
 	sublabel_offset = 0;
 	single_text_mode = false;
-
-
-
 }

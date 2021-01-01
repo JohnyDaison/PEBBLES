@@ -7,7 +7,4 @@ function init_anim_set() {
 	anim_set_start = -1;
 
 	steps = ds_list_create();
-
-
-
 }

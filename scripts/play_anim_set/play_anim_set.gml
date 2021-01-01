@@ -1,9 +1,4 @@
-/// @description play_anim_set(current_step)
-/// @function play_anim_set
-/// @param current_step
-function play_anim_set(argument0) {
-	var current_step = argument0; //singleton_obj.step_count
-
+function play_anim_set(current_step) {
 	var i, temp_dur = 0, duration;
 	if(self.steps_total > 0 && self.duration_total > 0 && current_step >= 0)
 	{
@@ -19,7 +14,7 @@ function play_anim_set(argument0) {
 	            step = self.steps[| i];
 	            duration = step[? "duration"];
 	            var step_type = step[? "step_type"];
-	            var disp_obj = undefined, done = false;
+	            var disp_obj = undefined, target_disp = undefined, done = false;
             
 	            if(step_type == "display")
 	            {
@@ -232,11 +227,11 @@ function play_anim_set(argument0) {
                     
 	                    if(step_type == "connection")
 	                    {
-	                        x_diff = target_disp.x - disp_obj.x;
-	                        y_diff = target_disp.y - disp_obj.y;
+	                        var x_diff = target_disp.x - disp_obj.x;
+	                        var y_diff = target_disp.y - disp_obj.y;
                         
-	                        disp_obj.sprite_xx += x_diff*time;
-	                        disp_obj.sprite_yy += y_diff*time;
+	                        disp_obj.sprite_xx += x_diff * time;
+	                        disp_obj.sprite_yy += y_diff * time;
 	                        disp_obj.main_label = label;
 	                        disp_obj.sub_label = sublabel;
 	                    }
@@ -266,17 +261,15 @@ function play_anim_set(argument0) {
 	                    {
 	                        disp_obj.label_offset -= 4;
 	                    }
-                    
-                    
-	                }  
+                        
+                        disp_obj.anim_set_steps_total = steps_total;
+                        disp_obj.anim_set_duration = duration_total;
+                        disp_obj.anim_set_progress = current_step;
+	                }
 	            }
             
 	            temp_dur += duration;
 	        }
 	    }
-    
 	}
-
-
-
 }
