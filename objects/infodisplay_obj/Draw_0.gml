@@ -20,17 +20,28 @@ if(ready || shrink_anim_phase > 0)
 
 if(ready && active && shrink_anim_phase == 1)
 {
-    // PROGRESS BAR
-    if(anim_set_steps_total > 1 && anim_set_progress > 0 && anim_set_duration > 0) {
-        var progress_ratio = anim_set_progress/anim_set_duration;
-        var max_bar_width = (bbox_right - bbox_left) - 2 * progress_bar_margin - 1;
-        var bar_width = ceil(progress_ratio * max_bar_width);
-        var bar_start_x = floor(bbox_left + progress_bar_margin);
-        var bar_start_y = floor(bbox_bottom - (progress_bar_margin + progress_bar_height - 1));
+    // STEPS
+    if(anim_set_steps_total > 1 && anim_set_current_step > 0) {
+        var max_bar_width = (bbox_right - bbox_left) - 2 * step_indicator_margin;
+        var total_separators_width = step_indicator_margin * (anim_set_steps_total - 1);
+        var step_width = ceil((max_bar_width - total_separators_width)/anim_set_steps_total);
+        var bar_start_x = floor(bbox_left + step_indicator_margin);
+        var bar_start_y = floor(bbox_bottom - (step_indicator_margin + step_indicator_height - 1));
     
-        draw_set_colour(progress_bar_color);
-        draw_set_alpha(progress_bar_alpha);
-        draw_rectangle(bar_start_x, bar_start_y, bar_start_x + bar_width - 1, bar_start_y + progress_bar_height - 1, false);
+        draw_set_alpha(step_indicator_alpha);
+        
+        for(var step_i = 0; step_i < anim_set_steps_total; step_i++) {
+            if(step_i < anim_set_current_step) {
+                draw_set_colour(step_light_color);
+            } else {
+                draw_set_colour(step_dark_color);
+            }
+            
+            var step_start_x = bar_start_x + step_i * (step_width + step_indicator_margin);
+            
+            draw_rectangle(step_start_x, bar_start_y, 
+                           step_start_x + step_width - 1, bar_start_y + step_indicator_height - 1, false);
+        }
     }
     
     // IMAGES
