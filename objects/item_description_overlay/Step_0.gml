@@ -47,13 +47,8 @@ if(fadeout_step < fadeout_time)
 // MESSAGE
 if(message == "")
 {
-    self.cur_message_step = 0;
     instance_destroy();
     exit;
-}
-else
-{
-    self.cur_message_step += 1;
 }
 
 with(item_description_overlay)

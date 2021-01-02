@@ -18,7 +18,7 @@ if(!lost_control && !other.collected && holographic == other.holographic
             {
                 if(!has_level(id, tech, item.levels[? tech]))
                 {
-                    new_tech = true;   
+                    new_tech = true;
                 }
                 
                 tech = ds_map_find_next(item.levels, tech);
@@ -32,7 +32,7 @@ if(!lost_control && !other.collected && holographic == other.holographic
             {
                 if(!has_level(id, tech, 1))
                 {
-                    new_tech = true;   
+                    new_tech = true;
                 }
                 
                 tech = ds_map_find_next(item.levels, tech);
@@ -40,9 +40,10 @@ if(!lost_control && !other.collected && holographic == other.holographic
         }
         else
         {
-            new_tech = true;   
+            new_tech = true;
         }
         
+        var overlay;
         var show_desc =
             gamemode_obj.object_index == campaign_obj
             && instance_exists(my_player.my_camera)
@@ -52,10 +53,10 @@ if(!lost_control && !other.collected && holographic == other.holographic
             
         // currently only the level_upgrade items use this event
         // TODO: this should work in general, but only the first time you get that type of item
-            
+        
         if(show_desc)
         {
-            var overlay = add_player_overlay(item_description_overlay, my_player);
+            overlay = add_player_overlay(item_description_overlay, my_player);
         }
         
         with(item)
@@ -104,11 +105,10 @@ if(!lost_control && !other.collected && holographic == other.holographic
                 register_ds("params", ds_type_map, params, id);
             
                 broadcast_event("item_pickup", id, params);    
-            }   
+            }
             
             add_to_inventory(item);
         }
-        
-    } 
+    }
 }
 

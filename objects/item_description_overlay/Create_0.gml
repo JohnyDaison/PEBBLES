@@ -19,7 +19,6 @@ y = view_hview[0]/2-height/2;
 self.title = "Item title";
 self.image = item_placeholder_spr;
 self.message = "Item description";
-self.cur_message_step = 0;
 old_message = message;
 self.adjusted = false;
 my_guy = noone;
