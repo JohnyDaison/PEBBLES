@@ -217,7 +217,7 @@ function play_anim_set(current_step) {
                             disp_obj.anim_scale = scale;
                             disp_obj.main_label = label;
                             disp_obj.sub_label = sublabel;
-                            play_control_state_display(disp_obj.id, control, control_type, state);
+                            play_control_state_display(disp_obj.id, control, control_type, state, time);
                         }
                     
                         if(puppet != "" && state != "")

@@ -552,6 +552,7 @@
     {"id":{"name":"holo_indestr_color_wall_editor_spr","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"order":45,},
     {"id":{"name":"room_loop_world_1","path":"rooms/room_loop_world_1/room_loop_world_1.yy",},"order":0,},
     {"id":{"name":"gate_pass_spr","path":"sprites/gate_pass_spr/gate_pass_spr.yy",},"order":46,},
+    {"id":{"name":"control_dir_to_vector","path":"scripts/control_dir_to_vector/control_dir_to_vector.yy",},"order":29,},
     {"id":{"name":"gate_pass2_spr","path":"sprites/gate_pass2_spr/gate_pass2_spr.yy",},"order":47,},
     {"id":{"name":"semitransp_wall_spr_base","path":"sprites/semitransp_wall_spr_base/semitransp_wall_spr_base.yy",},"order":0,},
     {"id":{"name":"semitransp_wall_spr","path":"sprites/semitransp_wall_spr/semitransp_wall_spr.yy",},"order":1,},
