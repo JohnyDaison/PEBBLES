@@ -787,6 +787,7 @@
     {"id":{"name":"berserk_sound","path":"sounds/berserk_sound/berserk_sound.yy",},"order":1,},
     {"id":{"name":"heal_sound","path":"sounds/heal_sound/heal_sound.yy",},"order":2,},
     {"id":{"name":"tp_sound","path":"sounds/tp_sound/tp_sound.yy",},"order":3,},
+    {"id":{"name":"merge_anim_step_display","path":"scripts/merge_anim_step_display/merge_anim_step_display.yy",},"order":11,},
     {"id":{"name":"haste_sound","path":"sounds/haste_sound/haste_sound.yy",},"order":4,},
     {"id":{"name":"invisibility_sound","path":"sounds/invisibility_sound/invisibility_sound.yy",},"order":5,},
     {"id":{"name":"flashback_sound","path":"sounds/flashback_sound/flashback_sound.yy",},"order":6,},
