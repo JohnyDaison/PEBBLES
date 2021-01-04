@@ -14,9 +14,9 @@ color_count = ds_list_size(color_order);
 gaps_after = ds_list_create();
 ds_list_add(gaps_after, g_blue, g_azure);
 
-base_halfsize = 7;
-column_width = 20;
-row_height = 20;
+base_halfsize = 8;
+column_width = 26;
+row_height = 26;
 big_gap_size = 4;
 gap_size = 2;
 margin = 8;

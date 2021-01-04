@@ -7,8 +7,8 @@ draw_border = false;
 self.bg_color = c_black;
 self.bg_alpha = 0.8;
 
-self.width = 362;
-self.height = 248;
+self.width = 416;
+self.height = 302;
 abi_panel_height = 64;
 margin = 8;
 line_height = 24;
@@ -30,7 +30,7 @@ power_pane.centered = true;
 
 
 eloffset_x += power_pane.width + margin;
-eloffset_y += margin;
+eloffset_y = y + power_pane.margin + power_pane.heading_height;
 
 
 var ii, second_column_width = sprite_get_width(color_wheel_info_spr);
@@ -106,10 +106,13 @@ eloffset_y += line_height + margin;
 
 ii = gui_add_label(0, 0, "");
 ii.icon = color_wheel_info_spr;
-ii.width = sprite_get_width(ii.icon);
-ii.height = sprite_get_height(ii.icon);
+ii.width = sprite_get_width(ii.icon) - 1;
+ii.height = sprite_get_height(ii.icon) - 1;
 ii.show_icon = true;
 ii.center_icon = true;
 ii.centered = true;
+ii.draw_bg_color = false;
 
 color_wheel = ii;
+
+color_wheel.rel_y = power_pane.height - color_wheel.height - 1;
