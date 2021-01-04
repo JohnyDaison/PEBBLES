@@ -9,9 +9,6 @@ levels[? "colors_belt_size"] = 3;
 
 self.name = "Color Belts";
 
-/*
 self.description = 
 @"They let you equip Color Orbs!
 (3 slots per color)";
-*/
-
