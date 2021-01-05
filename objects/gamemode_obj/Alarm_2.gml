@@ -316,8 +316,12 @@ else
         {
             if(!is_coop)
             {
-                instance_create(winner.my_guy.x, winner.my_guy.y, winner_effect_obj);
-                instance_create(winner.my_base.x, winner.my_base.y, winner_effect_obj);
+                if(instance_exists(winner.my_guy)) {
+                    instance_create(winner.my_guy.x, winner.my_guy.y, winner_effect_obj);
+                }
+                if(instance_exists(winner.my_base)) {
+                    instance_create(winner.my_base.x, winner.my_base.y, winner_effect_obj);
+                }
             
                 if(player_defeat_count == player_count - 1)
                 {
