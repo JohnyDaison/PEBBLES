@@ -59,7 +59,8 @@ vsync_set = false;
 display_updated = false;
 do_my_visible_optim = true;
 scale_up_gui = true;
-interpolate = true;
+interpolate_menu = true;
+interpolate_game = false;
 interpolate_set = false;
 
 windowed_width = 1280;
