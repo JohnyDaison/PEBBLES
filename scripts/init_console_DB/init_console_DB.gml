@@ -71,6 +71,9 @@ function init_console_DB() {
     add_console_script("setnumber", set_number, "object, string, number", "For all instances(1) set variable(2) to number(3)");
     add_console_script("objname", obj_getname, "number", "Return name of the object with given ID(1)");
     add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given ID(1)");
+    add_console_script("dumpinst", command_dump_instance, "number", "List all variables and values of instance(1)");
+    add_console_script("dumplist", command_dump_list, "number", "List all values in list(1)");
+    add_console_script("dumpmap", command_dump_map, "number", "List all keys and values of map(1)");
 
     add_console_script("camfollow", camera_override, "number, object", "Make the camera(1) follow instance(2)");
     add_console_script("camgoto", camera_position, "number, number, number", "Move the camera(1) to coordinates[2,3]");
@@ -131,6 +134,7 @@ function init_console_DB() {
     ds_list_add(debug, "replace", "transform", "chunks", "chunksoff", "findholders", "listevents", "navgraph");
 
     ds_list_add(debug, "count", "grouplist", "instlist", "instinfo", "listds", "getprop", "setprop", "setnumber", "objname", "spritename");
+    ds_list_add(debug, "dumpinst", "dumplist", "dumpmap");
 
     ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
     console_modes[? "debug"] = debug;
