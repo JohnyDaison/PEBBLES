@@ -1,7 +1,13 @@
-/// @description  CREATE ALL THE THINGS
+/// @description START-UP GUY SPAWNERS / CREATE ALL THE THINGS
 with(guy_spawner_obj)
 {
     enabled = true;
+}
+
+// this is not completely correct, some turrets could be data_holder_obj by this time
+with(turret_obj)
+{
+    increase_stat(my_player, "starting_turrets", 1, false);
 }
 
 var pl = 1;
@@ -32,8 +38,8 @@ with(level_start_obj)
     start_found = true;
 }
 
-alarm[1] = 20;
 
+alarm[1] = 20;
 
 if(!start_found && instance_exists(guy_spawner_obj))
 {
