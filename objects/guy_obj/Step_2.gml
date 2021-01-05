@@ -492,6 +492,14 @@ if(self.warmed > 0)
     self.ball_chargerate -= self.warmed;
 self.warmed = 0;
 
+var always_sliding = mod_get_state("always_sliding");
+
+if(always_sliding && place_meeting(x,y+1,solid_terrain_obj)) {
+    if(speed > 0) {
+        sliding = true;
+    }
+}
+
 for(ii=0; ii<ter_list_length; ii+=1)
 {
     ter_block = ds_list_find_value(ter_list,ii);

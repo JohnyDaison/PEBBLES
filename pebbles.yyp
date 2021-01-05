@@ -1862,6 +1862,7 @@
     {"id":{"name":"gui_keybinder","path":"objects/gui_keybinder/gui_keybinder.yy",},"order":4,},
     {"id":{"name":"gui_text_input","path":"objects/gui_text_input/gui_text_input.yy",},"order":5,},
     {"id":{"name":"gui_gamepad_binder","path":"objects/gui_gamepad_binder/gui_gamepad_binder.yy",},"order":6,},
+    {"id":{"name":"always_sliding_mod_icon","path":"sprites/always_sliding_mod_icon/always_sliding_mod_icon.yy",},"order":54,},
     {"id":{"name":"gui_int_input","path":"objects/gui_int_input/gui_int_input.yy",},"order":0,},
     {"id":{"name":"gui_list_picker","path":"objects/gui_list_picker/gui_list_picker.yy",},"order":1,},
     {"id":{"name":"gui_dropdown","path":"objects/gui_dropdown/gui_dropdown.yy",},"order":2,},

@@ -23,6 +23,8 @@ function create_gamemodes_DB() {
 	gamemode_mod_create("indestr_terrain", "Indestructible Terrain", "bool", true, indestr_terrain_mod_icon, "All terrain is indestructible.");
 
 	gamemode_mod_create("regenerate_terrain", "Regenerate Terrain", "bool", true, regenerate_terrain_mod_icon, "Destroyed terrain will reform, with a delay.");
+    
+    gamemode_mod_create("always_sliding", "Slippery Floor", "bool", true, always_sliding_mod_icon, "You're always sliding around.");
 
 	gamemode_mod_create("orbs_energy_lock", "Orb Energy lock", "bool", true, orbs_energy_lock_mod_icon, "Orb energy will always be at 100%.");
 
@@ -95,6 +97,7 @@ function create_gamemodes_DB() {
 	forced_mods[? "weak_terrain"] = false;
 	forced_mods[? "indestr_terrain"] = false;
 	forced_mods[? "regenerate_terrain"] = false;
+    forced_mods[? "always_sliding"] = false;
 	forced_mods[? "black_color"] = true;
 	forced_mods[? "bolt_rain"] = false;
     forced_mods[? "bad_status_effects"] = true;
@@ -328,6 +331,7 @@ function create_gamemodes_DB() {
 	forced_mods[? "weak_terrain"] = false;
 	forced_mods[? "indestr_terrain"] = false;
 	forced_mods[? "regenerate_terrain"] = false;
+    forced_mods[? "always_sliding"] = false;
 	forced_mods[? "black_color"] = true;
 	forced_mods[? "bolt_rain"] = false;
     forced_mods[? "bad_status_effects"] = true;
