@@ -23,12 +23,8 @@ var i,ii;
 eloffset_x = x + 16;
 eloffset_y = y + top_line;
 
-fullscreen_checkbox = gui_add_checkbox(checkbox_column_x, 0);
-if(singleton_obj.fullscreen)
-{
-    fullscreen_checkbox.checked = true;
-    fullscreen_checkbox.show_icon = true;
-}
+
+fullscreen_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.fullscreen);
 
 i = gui_add_label(checkbox_label_x,-16, "Fullscreen");
 i.centered = true;
@@ -36,12 +32,8 @@ i.centered = true;
 
 eloffset_y += left_line_height;
 
-vsync_checkbox = gui_add_checkbox(checkbox_column_x, 0);
-if(singleton_obj.vsync)
-{
-    vsync_checkbox.checked = true;
-    vsync_checkbox.show_icon = true;
-}
+
+vsync_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.vsync);
 
 i = gui_add_label(checkbox_label_x,-16, "V-Sync");
 i.centered = true;
@@ -50,27 +42,16 @@ i.centered = true;
 eloffset_y += left_line_height;
 
 
-scale_gui_checkbox = gui_add_checkbox(checkbox_column_x, 0);
+scale_gui_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.scale_up_gui);
 
-if(singleton_obj.scale_up_gui)
-{
-    scale_gui_checkbox.checked = true;
-    scale_gui_checkbox.show_icon = true;
-}
-
-i = gui_add_label(checkbox_label_x,-16, "Upscale Menus");
+i = gui_add_label(checkbox_label_x,-16, "Upscale Menu");
 i.centered = true;
 
 
 eloffset_y += left_line_height;
 
 
-interpolate_menu_checkbox = gui_add_checkbox(checkbox_column_x, 0);
-if(singleton_obj.interpolate_menu)
-{
-    interpolate_menu_checkbox.checked = true;
-    interpolate_menu_checkbox.show_icon = true;
-}
+interpolate_menu_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.interpolate_menu);
 
 i = gui_add_label(checkbox_label_x,-16, "Interpolate Menu");
 i.centered = true;
@@ -80,12 +61,7 @@ i.width += 32;
 eloffset_y += left_line_height;
 
 
-interpolate_game_checkbox = gui_add_checkbox(checkbox_column_x, 0);
-if(singleton_obj.interpolate_game)
-{
-    interpolate_game_checkbox.checked = true;
-    interpolate_game_checkbox.show_icon = true;
-}
+interpolate_game_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.interpolate_game);
 
 i = gui_add_label(checkbox_label_x,-16, "Interpolate Game");
 i.centered = true;
@@ -107,13 +83,7 @@ aa_input = ii.id;
 eloffset_y += left_line_height;
 
 
-ff_checkbox = gui_add_checkbox(checkbox_column_x, 0);
-
-if(singleton_obj.force_feedback)
-{
-    ff_checkbox.checked = true;
-    ff_checkbox.show_icon = true;
-}
+ff_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.force_feedback);
 
 i = gui_add_label(checkbox_label_x,-16, "Controller Vibration");
 i.centered = true;
@@ -122,13 +92,8 @@ i.width += 64;
 
 eloffset_y += left_line_height;
 
-labels_checkbox = gui_add_checkbox(checkbox_column_x, 0);
 
-if(singleton_obj.draw_object_labels)
-{
-    labels_checkbox.checked = true;
-    labels_checkbox.show_icon = true;
-}
+labels_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.draw_object_labels);
 
 i = gui_add_label(checkbox_label_x,-16, "Show Labels");
 i.centered = true;

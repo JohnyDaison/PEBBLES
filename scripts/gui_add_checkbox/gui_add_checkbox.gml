@@ -1,26 +1,18 @@
-/// @description gui_add_checkbox(xx, yy, [size])
+/// @description gui_add_checkbox(xx, yy, [checked])
 /// @function gui_add_checkbox
 /// @param xx
 /// @param yy
-/// @param [size]
-function gui_add_checkbox() {
-	var xx,yy,ii, size;
+/// @param [checked]
+function gui_add_checkbox(xx, yy) {
+    var ii, checked;
 
-	xx = argument[0];
-	yy = argument[1];
+    ii = gui_child_init(xx + self.eloffset_x, yy + self.eloffset_y, gui_checkbox);
 
-	ii = gui_child_init(xx + self.eloffset_x, yy + self.eloffset_y, gui_checkbox);
-	size = ii.width;
+    if(argument_count > 2)
+    {
+        checked = argument[2];
+        ii.checked = checked;
+    }
 
-	if(argument_count > 2)
-	{
-	    size = argument[2];
-	    ii.height = size;
-	    ii.width = size;
-	}
-
-	return ii;
-
-
-
+    return ii;
 }
