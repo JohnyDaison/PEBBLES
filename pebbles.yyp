@@ -451,6 +451,7 @@
     {"id":{"name":"holo_spawners_mod2_icon","path":"sprites/holo_spawners_mod2_icon/holo_spawners_mod2_icon.yy",},"order":2,},
     {"id":{"name":"weak_terrain_modX_icon","path":"sprites/weak_terrain_modX_icon/weak_terrain_modX_icon.yy",},"order":3,},
     {"id":{"name":"weak_terrain_modX2_icon","path":"sprites/weak_terrain_modX2_icon/weak_terrain_modX2_icon.yy",},"order":4,},
+    {"id":{"name":"bf_icon_wall_burst","path":"sprites/bf_icon_wall_burst/bf_icon_wall_burst.yy",},"order":10,},
     {"id":{"name":"weak_terrain_modX3_icon","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"order":5,},
     {"id":{"name":"weak_terrain_mod3_icon","path":"sprites/weak_terrain_mod3_icon/weak_terrain_mod3_icon.yy",},"order":6,},
     {"id":{"name":"regenerate_terrain_modX_icon","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"order":7,},
