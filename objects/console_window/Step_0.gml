@@ -32,9 +32,6 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
     show_state = singleton_obj.show_console;
 }
 
-DB.console_history_cur_item = history_list.cur_item;
-DB.console_history_selection_pos = history_list.selection_pos;
-
 if (history_list.cur_item == history_list.item_count - 1) {
     DB.console_history_cur_item = -1;
     DB.console_history_selection_pos = -1;
