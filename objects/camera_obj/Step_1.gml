@@ -3,6 +3,11 @@ if(on && view != -1)
 {
     //show_debug_message("CAMERA "+string(view)+" ON");
     last_zoom_level = zoom_level;
+    var camera = view_get_camera(view);
+    var view_x = camera_get_view_x(camera);
+    var view_y = camera_get_view_y(camera);
+    var view_width = camera_get_view_width(camera);
+    var view_height = camera_get_view_height(camera);
     
     // FOLLOW GUY
     if(follow_guy && instance_exists(my_guy))
@@ -122,10 +127,10 @@ if(on && view != -1)
         zoom_level = clamp(zoom_level + dir*zoom_speed, min_zoom, normal_zoom);
     }
     
-    var half_xsize = (box_xsize/2);
-    var half_ysize = (box_ysize/2);
-    var x_margin = __view_get( e__VW.WView, view )/2 - half_xsize;
-    var y_margin = __view_get( e__VW.HView, view )/2 - half_ysize;
+    var half_xsize = box_xsize / 2;
+    var half_ysize = box_ysize / 2;
+    var x_margin = view_width/2 - half_xsize;
+    var y_margin = view_height/2 - half_ysize;
     
     followed_x = clamp(followed_x, x_margin, room_width - x_margin);
     followed_y = clamp(followed_y, y_margin, room_height - y_margin);
@@ -187,8 +192,8 @@ if(on && view != -1)
     {
         if(abs(x_dist-move_speed_x) > half_xsize)
         {
-            if((x_dist < 0 && __view_get( e__VW.XView, view ) > 0)
-            || (x_dist > 0 && __view_get( e__VW.XView, view ) < room_width - __view_get( e__VW.WView, view )))
+            if((x_dist < 0 && view_x > 0)
+            || (x_dist > 0 && view_x < room_width - view_width))
                 hspeed = move_speed_x;   
         }
         else
@@ -202,8 +207,8 @@ if(on && view != -1)
     {
         if(abs(y_dist-move_speed_y) > half_ysize)
         {
-            if((y_dist < 0 && __view_get( e__VW.YView, view ) > 0)
-            || (y_dist > 0 && __view_get( e__VW.YView, view ) < room_height - __view_get( e__VW.HView, view )))
+            if((y_dist < 0 && view_y > 0)
+            || (y_dist > 0 && view_y < room_height - view_height))
                 vspeed = move_speed_y;   
         }
         else
@@ -236,9 +241,9 @@ if(on && view != -1)
     // APPLY CHANGES
     if(view_enabled)
     {
-        if(__view_get( e__VW.Object, view ) != id)
+        if(camera_get_view_target(camera) != id)
         {
-            __view_set( e__VW.Object, view, id );    
+            camera_set_view_target(camera, id);
             update_display();
         }
         
@@ -250,14 +255,16 @@ if(on && view != -1)
         var old_x = x;
         var old_y = y;
             
-        __view_set( e__VW.XView, view, x - __view_get( e__VW.WView, view )/2 ); 
-        __view_set( e__VW.YView, view, y - (__view_get( e__VW.HView, view ))/2 );
+        view_x = x - view_width/2; 
+        view_y = y - view_height/2;
         
-        __view_set( e__VW.XView, view, max(0, min(__view_get( e__VW.XView, view ), room_width-__view_get( e__VW.WView, view ) )));
-        __view_set( e__VW.YView, view, max(0, min(__view_get( e__VW.YView, view ), room_height-__view_get( e__VW.HView, view ) )));
+        view_x = clamp(view_x, 0, room_width - view_width);
+        view_y = clamp(view_y, 0, room_height - view_height);
+        
+        camera_set_view_pos(camera, view_x, view_y);
             
-        x = __view_get( e__VW.XView, view ) + __view_get( e__VW.WView, view )/2; 
-        y = __view_get( e__VW.YView, view ) + (__view_get( e__VW.HView, view ))/2;
+        x = view_x + view_width/2; 
+        y = view_y + view_height/2;
         
         
         stop_zoom = false;
@@ -267,7 +274,7 @@ if(on && view != -1)
             hspeed = 0; 
         }
         
-        if(old_x != x && (__view_get( e__VW.XView, view ) == 0 || (__view_get( e__VW.XView, view )+__view_get( e__VW.WView, view )) >= room_width))
+        if(old_x != x && (view_x == 0 || (view_x + view_width) >= room_width))
         {
             stop_zoom = true;
             shake_dist = 0;
@@ -278,7 +285,7 @@ if(on && view != -1)
             vspeed = 0;    
         }
         
-        if(old_y != y && (__view_get( e__VW.YView, view ) == 0 || (__view_get( e__VW.YView, view )+__view_get( e__VW.HView, view )) >= room_height))
+        if(old_y != y && (view_y == 0 || (view_y + view_height) >= room_height))
         {
             stop_zoom = true;
             shake_dist = 0;
@@ -287,23 +294,8 @@ if(on && view != -1)
         x_dist = followed_x-(x+box_xoffset);
         y_dist = followed_y-(y+box_yoffset);
         
-        /*
-        move_speed_x = move_speed_coef * x_dist;
-        move_speed_y = move_speed_coef * y_dist;
 
-        // BOX CHECK
-        
-        if(abs(x_dist) > box_xsize/2 && abs(x+move_speed_x - room_width/2) < abs(room_width/2 - view_wview[view]/2)
-        && abs(y_dist) > box_ysize/2 && abs(y+move_speed_y - room_height/2) < abs(room_height/2 - view_hview[view]/2))
-        {
-            hspeed = move_speed_x; 
-            vspeed = move_speed_y;
-        }
-        else
-            speed = 0;
-        */
-        
-        __view_set( e__VW.Visible, view, true );
+        view_set_visible(view, true);
         
         if(view == 0 || view == 1)
         {
@@ -314,8 +306,5 @@ if(on && view != -1)
 }
 if(!on && view > -1)
 {
-    __view_set( e__VW.Visible, view, false );
+    view_set_visible(view, false);
 }
-
-/* */
-/*  */

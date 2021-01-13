@@ -1,10 +1,10 @@
 // DRAW FRAME
 if(on)
 {
-    view_x = __view_get( e__VW.XPort, view );
-    view_y = __view_get( e__VW.YPort, view );
-    width = __view_get( e__VW.WPort, view ) - 1;
-    height = __view_get( e__VW.HPort, view ) - 1; 
+    view_x = view_get_xport(view);
+    view_y = view_get_yport(view);
+    width = view_get_wport(view) - 1;
+    height = view_get_hport(view) - 1; 
     
     if(instance_exists(my_guy))
     {
@@ -97,7 +97,6 @@ if(on)
         // STATUS STRING
         if(draw_status)
         {
-            var status_y = view_y + height - 32;
             draw_set_colour(c_black);
             draw_set_alpha(0.8);
             draw_rectangle(view_x, status_y, view_x + width, view_y + height, false);
@@ -106,10 +105,25 @@ if(on)
             my_draw_set_font(label_font);
             draw_set_valign(fa_top);
             draw_set_halign(fa_center);
-            my_draw_text(view_x + border_width*2 + 100, status_y, "[" + string_format(x,7,2) + "," + string_format(y,7,2) + "] " );
-            my_draw_text(view_x + border_width*2 + 300, status_y, string_format(__view_get( e__VW.WPort, view ),7,2) + " x " + string_format(__view_get( e__VW.HPort, view ),7,2) );
-            my_draw_text(view_x + border_width*2 + 500, status_y, string_format(__view_get( e__VW.WView, view ),7,2) + " x " + string_format(__view_get( e__VW.HView, view ),7,2) );
-            my_draw_text(view_x + border_width*2 + 700, status_y, "(" + string_format(zoom_level,7,2) + ")" );
+            
+            var camera = view_get_camera(view);
+            var view_width = camera_get_view_width(camera);
+            var view_height = camera_get_view_height(camera);
+            var start_x = view_x + border_width*2;
+            var status_y = view_y + height - 32;
+            
+            var x_str = string_format(x, 7, 2);
+            var y_str = string_format(y, 7, 2);
+            var wport_str = string_format(view_get_wport(view), 7, 2);
+            var hport_str = string_format(view_get_hport(view), 7, 2);
+            var wview_str = string_format(view_width, 7, 2);
+            var hview_str = string_format(view_height, 7, 2);
+            var zoom_str = string_format(zoom_level, 7, 2);
+            
+            my_draw_text(start_x + 100, status_y, "[" + x_str + "," + y_str + "] " );
+            my_draw_text(start_x + 300, status_y, wport_str + " x " + hport_str );
+            my_draw_text(start_x + 500, status_y, wview_str + " x " + hview_str );
+            my_draw_text(start_x + 700, status_y, "(" + zoom_str + ")" );
         }
         
         // DEATH COVER
@@ -125,16 +139,17 @@ if(on)
         // DEBUG RETICLES
         if(reticles)
         {   
-            xview = __view_get( e__VW.XView, view );
-            yview = __view_get( e__VW.YView, view );
-            followed_gui_x = followed_x -xview +view_x;
-            followed_gui_y = followed_y -yview +view_y;
-            gui_x = x -xview +view_x;
-            gui_y = y -yview +view_y
+            var camera = view_get_camera(view);
+            var xview = camera_get_view_x(camera);
+            var yview = camera_get_view_y(camera);
+            var followed_gui_x = followed_x - xview + view_x;
+            var followed_gui_y = followed_y - yview + view_y;
+            var gui_x = x - xview + view_x;
+            var gui_y = y - yview + view_y
+            
             draw_set_alpha(1);
             
-            draw_set_colour(c_red);
-            
+            draw_set_colour(c_red);            
             draw_rectangle(followed_gui_x-24,followed_gui_y-24,followed_gui_x+24,followed_gui_y+24,true);
             
             draw_set_colour(c_green);
