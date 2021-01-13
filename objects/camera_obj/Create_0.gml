@@ -6,6 +6,7 @@ draw_status = false;
 border_color = c_white; // c_black
 border_width = 8;
 look_zoom_delay = 2;
+look_zoom_duration = 0.5;
 observer_range = 3;
 
 // view and panel
