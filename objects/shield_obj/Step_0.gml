@@ -22,8 +22,21 @@ else
     diff = 1;
 }
 
+
+// DETECT DESTRUCTION
+if(my_guy == id && charge >= threshold)
+{
+    done_for = true;
+}
+else if(my_guy != id && charge > collapse_threshold || charge <= 0)
+{
+    done_for = true;
+    collapsed = true;
+}
+
+
 // TODO: ADD ORB DRAIN HERE
-if(!channeled)
+if(!done_for && !channeled)
 {
     if(diff < 0 && my_guy != id)
     {
@@ -39,17 +52,6 @@ if(!channeled)
 }
 channeled = false;
 
-
-// DETECT DESTRUCTION
-if(my_guy == id && charge >= threshold)
-{
-    done_for = true;
-}
-else if(my_guy != id && charge > collapse_threshold || charge <= 0)
-{
-    done_for = true;
-    collapsed = true;
-}
 
 if(!instance_exists(my_guy))
 {
