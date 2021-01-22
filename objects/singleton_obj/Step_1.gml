@@ -123,9 +123,6 @@ if(keyboard_check_pressed(192))
             show_console = "peek";
             break;
         case "peek":
-            show_console = "normal";
-            break;
-        case "normal":
             show_console = "full";
             break;
         case "full":

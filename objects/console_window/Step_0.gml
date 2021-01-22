@@ -1,6 +1,7 @@
 if(singleton_obj.show_console == "hide")
 {
     close_frame(id);
+    exit;
 }
 
 if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hide")
