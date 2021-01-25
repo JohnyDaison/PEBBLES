@@ -1,1 +1,0 @@
-waypoint_id = "left_corner";

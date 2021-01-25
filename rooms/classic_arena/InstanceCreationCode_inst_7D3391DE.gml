@@ -1,1 +1,0 @@
-waypoint_id = "bottom_center_left";

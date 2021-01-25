@@ -1,1 +1,0 @@
-waypoint_id = "right_bottom_near_platform";

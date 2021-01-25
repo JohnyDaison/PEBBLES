@@ -1,1 +1,0 @@
-waypoint_id = "right_under_spawn_inner_edge";
