@@ -119,7 +119,7 @@ score_values[? "snake_kill"] = 30;
 // quests
 score_values[? "artifact_destroyed"] = 20;
 score_values[? "snake_trophy"] = 10;
-score_values[? "extra_crystal"] = 20;
+score_values[? "extra_shard"] = 20;
 score_values[? "extra_orb"] = 10;
 score_values[? "underdog_kill_bonus"] = 20;
 

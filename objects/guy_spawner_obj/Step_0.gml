@@ -50,7 +50,7 @@ if(self.enabled)
                             my_shield = i;
                         }
                         */
-                        increase_stat(player,"crystals_collected", 1, true);
+                        increase_stat(player,"shards_collected", 1, true);
                         my_sound_play(crystal_sound);
                     }   
                 }
@@ -64,9 +64,9 @@ if(self.enabled)
                         {
                             crystal = take_from_inventory(crystal, crystal.stack_size);
                     
-                            var score_gain = crystal.stack_size * gamemode_obj.score_values[? "extra_crystal"];
+                            var score_gain = crystal.stack_size * gamemode_obj.score_values[? "extra_shard"];
                     
-                            increase_stat(player,"extra_crystals", crystal.stack_size, false);
+                            increase_stat(player,"extra_shards", crystal.stack_size, false);
                             increase_stat(player,"score", score_gain, false);
                     
                             battlefeed_post_pickup(player, crystal.object_index, score_gain);
