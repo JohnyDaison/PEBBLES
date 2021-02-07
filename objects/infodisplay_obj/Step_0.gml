@@ -1,17 +1,4 @@
-/*
-if(script_exists(animation))
-{
-    if(start_step == -1)
-    {
-        start_step = singleton_obj.step_count;
-    }
-    var step = (singleton_obj.step_count - start_step) 
-                mod script_execute(animation,-1,"length");
-    script_execute(animation, step);    
-}
-*/
-
-if(ready)
+if(ready && !reset)
 {
     if(shrink_anim_phase < 1)
     {
@@ -37,10 +24,10 @@ else
         {
             shrink_anim_phase = 0;
             bg_anim_phase = 0;
+            reset = false;
         }
     }
 }
 
-//gives_light = (shrink_anim_phase == 1 && active);
-gives_light = (shrink_anim_phase > 0); //  && active
+gives_light = (shrink_anim_phase > 0);
 ambient_light = shrink_anim_phase*ambient_light_full;

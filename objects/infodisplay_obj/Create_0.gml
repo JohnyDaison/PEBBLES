@@ -49,6 +49,6 @@ width = 0;
 height = 0;
 ready = false;
 active = false;
+reset = false;
 immovable = true;
 walkable = false;
-

@@ -1,16 +1,9 @@
-/// @description clear_display(display)
-/// @function clear_display
-/// @param display
-function clear_display(argument0) {
-	var disp_obj = argument0;
-
-	if(instance_exists(disp_obj))
-	{
-	    empty_display(disp_obj);
-	    disp_obj.ready = false;
-	    disp_obj.active = false;
-	}
-
-
-
+function clear_display(display) {
+    if(instance_exists(display))
+    {
+        empty_display(display);
+        display.ready = false;
+        display.active = false;
+        display.reset = true;
+    }
 }
