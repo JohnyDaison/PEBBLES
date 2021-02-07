@@ -625,8 +625,10 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + Y
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("Y")))
         {
-            var item = instance_create(cursor_obj.room_x, cursor_obj.room_y, ability_pickup_obj);
-            item.my_color = cursor_obj.my_color;
+            if(cursor_obj.my_color != g_octarine) {
+                var item = instance_create(cursor_obj.room_x, cursor_obj.room_y, ability_pickup_obj);
+                item.my_color = cursor_obj.my_color;
+            }
         }
         
         // CREATE WAYPOINT AT CURSOR
