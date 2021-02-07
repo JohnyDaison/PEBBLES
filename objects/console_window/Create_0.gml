@@ -141,17 +141,6 @@ with(menu_pane)
     i.align = "left";
 }
 
-
-// LOAD HISTORY
-/*
-var count = ds_list_size(DB.console_history);
-for(i=0;i<count;i+=1)
-{
-    gui_add_scroll_item(self.history_list, DB.console_history[| i]);
-}
-*/
-
-
 if (DB.console_history_cur_item == -1) {
     history_list.cur_item = history_list.item_count;	
     history_list.selection_pos = history_list.max_items;
