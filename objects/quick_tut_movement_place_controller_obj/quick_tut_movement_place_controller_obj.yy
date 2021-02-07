@@ -23,7 +23,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"quick_tut_movement_place_controller_obj","path":"objects/quick_tut_movement_place_controller_obj/quick_tut_movement_place_controller_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"quick_tut_movement_place_controller_obj","path":"objects/quick_tut_movement_place_controller_obj/quick_tut_movement_place_controller_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"parent":{"name":"quick_tut_movement_place_controller_obj","path":"objects/quick_tut_movement_place_controller_obj/quick_tut_movement_place_controller_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
