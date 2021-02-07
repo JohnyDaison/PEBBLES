@@ -114,7 +114,7 @@ if(self.enabled)
     }
     
     // CONSUME CRYSTALS FOR BASE HEALTH
-    if(crystal_number > 1 && crystal_number > floor((1-damage/hp)*max_crystals) && damage >= crystal_heal)
+    if(crystal_number > 0 && crystal_number > ceil((1-damage/hp)*max_crystals) && damage >= crystal_heal)
     {
         var crystal = crystals[| crystal_number-1];
         ds_list_delete(crystals, crystal_number-1);
@@ -144,7 +144,7 @@ if(self.enabled)
     }
     
     // DESTRUCTION
-    if((damage > hp || done_for) && !self.destroyed)
+    if((damage >= hp || done_for) && !self.destroyed)
     {
         if(instance_exists(my_shield))
         {
