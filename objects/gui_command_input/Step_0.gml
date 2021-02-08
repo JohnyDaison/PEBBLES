@@ -98,16 +98,17 @@ if(visible)
             {
                 if(space_index == 0)
                 {
-                    var list = DB.console_modes[? DB.console_mode], count = ds_list_size(list);
-                    var command = self.text, index = ds_list_find_index(list, command), i, start;
+                    var list = DB.console_modes[? DB.console_mode];
+                    var count = ds_list_size(list);
+                    var command = self.text;
+                    var index = ds_list_find_index(list, command);
+                    var start = (index + 1) mod count;
             
-                    start = (index + 1) mod count;
-            
-                    for(i=0; i < count; i++)
+                    for(var i=0; i < count; i++)
                     {
                         index = (start + i) mod count;
                         command = list[| index];
-                        if(string_pos(tab_text, command) == 1)
+                        if(string_pos(tab_text, command) == 1 && ds_list_find_index(DB.console_secrets, command) == -1)
                         {
                             self.tab_mode = true;
                             self.text = command;

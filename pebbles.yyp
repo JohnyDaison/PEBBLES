@@ -1204,6 +1204,7 @@
     {"id":{"name":"structure_placer_toggle","path":"scripts/structure_placer_toggle/structure_placer_toggle.yy",},"order":6,},
     {"id":{"name":"tool_reset_onup","path":"scripts/tool_reset_onup/tool_reset_onup.yy",},"order":7,},
     {"id":{"name":"test_level_script","path":"scripts/test_level_script/test_level_script.yy",},"order":8,},
+    {"id":{"name":"elephant_command","path":"scripts/elephant_command/elephant_command.yy",},"order":13,},
     {"id":{"name":"end_test_script","path":"scripts/end_test_script/end_test_script.yy",},"order":9,},
     {"id":{"name":"new_place_onup","path":"scripts/new_place_onup/new_place_onup.yy",},"order":10,},
     {"id":{"name":"load_place_onup","path":"scripts/load_place_onup/load_place_onup.yy",},"order":11,},

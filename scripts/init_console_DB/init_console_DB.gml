@@ -40,8 +40,8 @@ function init_console_DB() {
 
     create_objectmap();
 
-    ds_list_add(console_secrets, "iamcheatsidoodlin");
-
+    ds_list_add(console_secrets, "iamcheatsidoodlin", "elephant");
+    
     // NOTE: "object [, object, string]" is valid;
     // "object, [object, string]" will be parsed the same as "object, object [, string]"
 
@@ -96,6 +96,7 @@ function init_console_DB() {
     add_console_script("circle_precision", circle_precision_command, "number", "Set number of triangles per circle (must be 4*k)");
 
     add_console_script("test", test_command, "string", "Run the test script with given ID(1)");
+    add_console_script("elephant", elephant_command, "", "Makes the Elephant in Main Menu come out right away");
 
     //add_console_script("iamcheatsindoodlin", console_mode_cheats, "");
 
@@ -104,7 +105,7 @@ function init_console_DB() {
 
     var common = ds_list_create();
 
-    ds_list_add(common, "help", "noop", "parse", "restart", "gamespeed");
+    ds_list_add(common, "help", "noop", "parse", "restart", "gamespeed", "elephant");
 
     ds_list_add(common, "playerlevels", "playerquests", "consolebg", "mode");
 
