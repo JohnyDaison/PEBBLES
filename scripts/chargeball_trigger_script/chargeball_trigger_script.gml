@@ -88,6 +88,7 @@ function chargeball_trigger_script() {
 	                        inst.my_player = self.my_player;
 	                        inst.charge = self.charge;
 	                        inst.max_charge = my_guy.shield_max_charge;
+                            inst.channel_maxboost = my_guy.shield_channel_maxboost;
 	                        inst.size_coef = my_guy.shield_size;
 	                        inst.my_color = self.my_color;
 	                        inst.holographic = self.holographic;

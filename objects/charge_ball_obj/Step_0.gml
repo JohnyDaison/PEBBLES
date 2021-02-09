@@ -244,7 +244,7 @@ if(charging && !firing)
                                 channel_step = max(0, channel_step - sign(shield.diff)*shield.cur_step);
                             }
                             
-                            var diff = shield_channel_threshold*orb_exhaustion_ratio - shield.charge;
+                            var diff = (shield.threshold + shield.channel_maxboost) * orb_exhaustion_ratio - shield.charge;
                         
                             //if(safety_lock)
                             //{

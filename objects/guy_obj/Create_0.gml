@@ -80,6 +80,7 @@ self.shield_max_charge = 1.5;
 self.shield_size = 0.75;
 self.shield_chargerate = 1;
 self.shield_overcharge = 0;
+self.shield_channel_maxboost = 0.5;
 self.shield_threshold = 5;
 self.shield_repair_time = 180;
 self.ball_chargerate = 1;

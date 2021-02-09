@@ -48,7 +48,6 @@ energy = charge;
 trig_charge = 0;
 chargerate = 1;
 channelrate = 0.5;
-shield_channel_threshold = 2;
 channeling = false;
 firing = false;
 dash_steps_left = 0;

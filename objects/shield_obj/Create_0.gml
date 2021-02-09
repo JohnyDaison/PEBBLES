@@ -17,6 +17,7 @@ low_charge = 0.5;
 collapse_threshold = 6;
 overcharge = 0;
 threshold = 0;
+channel_maxboost = 0;
 
 // glitching effect
 low_charge_ratio = 0.75;
