@@ -29,7 +29,7 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
             yy = floor((my_guy.y - __view_get( e__VW.YView, camera.view ))*camera.zoom_level + __view_get( e__VW.YPort, camera.view ));
         }
         
-        bar_dist = base_radius*0.5 + 16;
+        bar_dist = (base_radius * 0.5 + 16) * scale;
         
         // SIZE
         var base_charge = max(charge_step, max_charge + overcharge) * display_exhaustion_ratio;
