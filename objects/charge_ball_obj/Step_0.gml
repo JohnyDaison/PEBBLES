@@ -21,8 +21,8 @@ if(my_guy != id && my_color > -1)
     {
         overcharge -= my_guy.status_left[? "weakness"] / DB.status_effects[? "weakness"].max_charge;
     }
-    chargerate = my_guy.ball_chargerate;   
-    threshold = max_charge+overcharge+feeding_max; 
+    chargerate = my_guy.ball_chargerate;
+    threshold = max_charge + overcharge;
         
     max_orbs = get_level(id, "chargeball");
         
@@ -150,8 +150,8 @@ if(my_guy != id && my_color > -1)
 }
 
 
-threshold = (max_charge+overcharge+feeding_max) * orb_exhaustion_ratio;
-cur_charge_step = charge_step*chargerate * orb_exhaustion_ratio;
+threshold = (max_charge + overcharge) * orb_exhaustion_ratio;
+cur_charge_step = charge_step * chargerate * orb_exhaustion_ratio;
 
 // STOP CHARGING IF NO ORBS LEFT
 if(object_is_child(my_guy, guy_obj) && orb_count == 0) 
@@ -177,11 +177,7 @@ if(charging && !firing)
     //audio_sound_pitch(my_charge_sound, DB.colorpitch[? my_color]);
     
     // CHARGE STEP
-    if(safety_lock)
-    {
-        cur_charge_step = min(cur_charge_step, max(0, threshold - charge));
-    }
-    
+    cur_charge_step = min(cur_charge_step, max(0, threshold - charge));
     
     for(i=0; i<orb_count; i++) 
     {
@@ -192,19 +188,7 @@ if(charging && !firing)
         orb.energy = max(0, diff);
     }
     
-    if(orb_count == 1)
-    {
-        charge += 1.5*cur_charge_step;
-    }
-    else
-    {
-        charge += cur_charge_step;
-    }
-    
-    if(safety_lock)
-    {
-        charge = min(charge, threshold);
-    }
+    charge = min(charge + cur_charge_step, threshold);
     
     // FULL CHARGE
     if(charge >= threshold)
@@ -236,7 +220,7 @@ if(charging && !firing)
                     {
                         if(shield.my_color == my_color)
                         {
-                            var channel_step = charge_step*channelrate;
+                            var channel_step = charge_step * channelrate;
                             //var channel_step = cur_charge_step*channelrate;
                         
                             if(shield.threshold > shield.charge)
@@ -246,10 +230,7 @@ if(charging && !firing)
                             
                             var diff = (shield.threshold + shield.channel_maxboost) * orb_exhaustion_ratio - shield.charge;
                         
-                            //if(safety_lock)
-                            //{
-                                channel_step = min(channel_step, max(diff,0) );
-                            //}
+                            channel_step = min(channel_step, max(diff,0) );
                             
                             if(channel_step > 0)
                             {
@@ -397,7 +378,7 @@ else
 if(charge < 0)
     charge = 0;
     
-if(my_guy != id && safety_lock)
+if(my_guy != id)
 {
     charge = min(charge, threshold);
 }

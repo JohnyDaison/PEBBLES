@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 9;
+hp = 6;
 radius = 31;
 flight_speed = 2;
 max_speed = 3;

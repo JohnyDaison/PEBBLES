@@ -39,7 +39,7 @@ function quick_basic_combat_event_script(argument0, argument1, argument2, argume
 	        with(mob)
 	        {
 	            lockon_range = 1024;
-	            hp = 15;
+	            hp = 10;
 	            refire_time = 60;
 	            gun_count = 2;
 	            ammo_drop_count = 0;

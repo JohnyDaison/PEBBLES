@@ -8,7 +8,7 @@ buff = 1; //{-1;0;1}
 start_script = status_ubershield_start;
 end_script = status_ubershield_end;
 max_charge = 840;
-shield_boost = 1.5;
+shield_boost = 1;
 /*
 max_duration = 0;
 signal_ratio = 1000;

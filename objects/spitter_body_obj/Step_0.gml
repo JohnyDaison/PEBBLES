@@ -163,7 +163,7 @@ with(energyball_obj)
         {
             dir = point_direction(ball.x,ball.y, x,y);
         
-            motion_add(dir, 3*tracking_acc);
+            motion_add(dir, 2.5*tracking_acc);
         
             avoiding = true;
         }

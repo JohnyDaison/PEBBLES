@@ -13,7 +13,6 @@ immovable = true;
 turret = instance_create(x,y,charge_ball_obj);
 turret.my_guy = id;
 turret.my_mount = id;
-turret.feeding_max = 0;
 turret.my_color = g_white;
 turret.tint_updated = false;
 charge_ball = turret;

@@ -123,12 +123,7 @@ if(collided && holographic == other.holographic)
     if(power_ratio != 0)
     {
         var body_dmg = force*power_ratio;
-        
-        if(object_index == big_projectile_obj)
-        {
-            body_dmg *= 0.75;
-        }
-        
+
         other.scale_buffer += body_dmg;
         other.my_next_color = self.my_color;
         other.damage += body_dmg;

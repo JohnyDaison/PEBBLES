@@ -53,16 +53,13 @@ firing = false;
 dash_steps_left = 0;
 dash_interrupted = false;
 small_charge = 0.2;
-shot_delay = 6;
+shot_delay = 9;
 smoke_charge = 0.05;
 smoke_delay = 3;
 max_charge = 1;
 overcharge = 0;
 size_coef = 1;
 sprite_size = 0;
-feedingrate = 1;
-feeding_max = 0.5;
-safety_lock = true;
 autofire = false;
 charging = false;
 triggerable = true;
@@ -93,7 +90,6 @@ started = false;
 light_bg_color = merge_colour(c_ltgray, c_white, 0.5);
 dark_bg_color = merge_colour(c_dkgray, c_black, 0.5);
 base_bar_color = DB.colormap[? g_red];
-feed_bar_color = merge_colour(base_bar_color, c_white, 0.5);
 
 // COLOR EXHAUSTION
 /*
@@ -113,7 +109,7 @@ orb_exhaustion_ratio = 1;
 display_exhaustion_ratio = 1;
 
 // INIT
-threshold = (max_charge+overcharge+feeding_max) * orb_exhaustion_ratio;
+threshold = (max_charge + overcharge) * orb_exhaustion_ratio;
 
 // LIGHT
 gives_light = true;

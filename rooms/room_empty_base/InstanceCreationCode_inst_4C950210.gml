@@ -2,5 +2,5 @@
 //has_cannon = false;
 //my_player = noone;
 
-//gamemode_obj.spawner_shield_power = 5;
-//shield_threshold = 7;
+//gamemode_obj.spawner_shield_power = 4;
+//shield_threshold = 5;

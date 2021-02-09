@@ -90,7 +90,7 @@ star_fall = false;
 
 
 spawner_starting_damage = 0;
-spawner_shield_power = 8;
+spawner_shield_power = 6;
 
 soul_tear = 0.1;
 time_limit = 0;

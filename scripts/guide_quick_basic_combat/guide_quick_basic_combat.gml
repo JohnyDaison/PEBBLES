@@ -165,7 +165,7 @@ function guide_quick_basic_combat() {
 	                    desired_aim_dir = 0;
 	                    desired_aim_dist = 1;
                     
-	                    if(!casting && ( !charging || charge_ball.energy < (charge_ball.max_charge + charge_ball.overcharge + charge_ball.feeding_max) * charge_ball.orb_exhaustion_ratio ))
+	                    if(!casting && ( !charging || charge_ball.energy < (charge_ball.max_charge + charge_ball.overcharge) * charge_ball.orb_exhaustion_ratio ))
 	                    {
 	                        wanna_cast = true;
 	                    }
@@ -289,7 +289,7 @@ function guide_quick_basic_combat() {
 	            if((npc_waypoint == "start_dashing" || npc_waypoint == "reach_sprinkler/success") && airborne /*vspeed > 0*/ && !(instance_exists(landing_terrain))) //  || doublejump_count < max_doublejumps
 	            {
 	                desired_aim_dist = 1;
-	                if(!casting && (!charging || charge_ball.energy < (charge_ball.max_charge + charge_ball.feeding_max/2) * charge_ball.orb_exhaustion_ratio ) )
+	                if(!casting && (!charging || charge_ball.energy < charge_ball.max_charge * charge_ball.orb_exhaustion_ratio ) )
 	                {
 	                    wanna_cast = true;
 	                }

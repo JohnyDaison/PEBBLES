@@ -229,9 +229,9 @@ if(!destroyed && instance_exists(my_guy))
         self.my_shield = instance_create(x,y,shield_obj);
         my_shield.my_guy = id;
         my_shield.my_source = object_index;
-        my_shield.max_charge = 2.5;
-        my_shield.charge = my_shield.max_charge+1;
-        my_shield.size_coef = 0.8;
+        my_shield.max_charge = shield_power - shield_overcharge;
+        my_shield.charge = shield_power;
+        my_shield.size_coef = 1.2;
         my_shield.low_charge_ratio = 0.5;
         my_shield.field_power = 2;
         my_shield.my_color = shield_color;

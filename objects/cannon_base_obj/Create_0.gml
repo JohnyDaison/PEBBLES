@@ -24,7 +24,8 @@ barrel_anim_speed = 0.1;
 barrel_anim_index = 0;
 barrel_anim_length = 4;
 
-shield_overcharge = 1;
+shield_power = 2;
+shield_overcharge = 0.5;
 base_shield_chargerate = 0;
 shield_chargerate = base_shield_chargerate;
 shield_threshold = 6;
@@ -72,7 +73,7 @@ barrel_dist = 78;
 arrow_dist = 48;
 charging = false;
 autofire = false;
-ball_overcharge = 2.5;
+ball_overcharge = 3;
 ball_chargerate = 0.5;
 
 // PLATFORMS

@@ -245,9 +245,9 @@ if(self.enabled)
     {
         self.my_shield = instance_create(x,y,shield_obj);
         my_shield.my_guy = id;
-        my_shield.max_charge = gamemode_obj.spawner_shield_power;
-        my_shield.charge = my_shield.max_charge+1;
-        my_shield.size_coef = 0.5;
+        my_shield.max_charge = gamemode_obj.spawner_shield_power - shield_overcharge;
+        my_shield.charge = gamemode_obj.spawner_shield_power;
+        my_shield.size_coef = 0.75;
         my_shield.low_charge_ratio = 0.5;
         my_shield.field_power = 2;
         my_shield.my_color = g_white;

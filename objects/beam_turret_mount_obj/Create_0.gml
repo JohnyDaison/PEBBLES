@@ -2,7 +2,7 @@ event_inherited();
 
 aim_dir = 0;
 aim_dist = 32;
-ball_overcharge = 0;
+ball_overcharge = 0.5;
 ball_chargerate = 0.1;
 slots_absorbed = 5;
 

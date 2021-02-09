@@ -261,9 +261,9 @@ function chargeball_trigger_script() {
 	            {
 	                //inst = instance_create(x+43*facing,y,big_projectile_obj);
 	                //inst = instance_create(x,y,artillery_projectile_obj);
-	                inst = create_energy_ball(id, "artillery_shot", my_color, max_charge+overcharge+feeding_max);
+	                inst = create_energy_ball(id, "artillery_shot", my_color, max_charge + overcharge);
 	                //inst.my_player = self.my_player;
-	                //inst.force = max_charge+overcharge+feeding_max;
+	                //inst.force = max_charge + overcharge;
 	                inst.hspeed = rel_x;
 	                inst.vspeed = rel_y;   
 	                inst.speed = (7*(self.charge)+5);
