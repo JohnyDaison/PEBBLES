@@ -12,12 +12,16 @@ function chargeball_trigger_script() {
     
         var orb_count = 0;
         var is_guy = false;
+        var is_player_guy = false;
         var inst, hboost, vboost;
     
         if(object_is_ancestor(my_guy.object_index, guy_obj))
         {
             orb_count = self.orb_count;
             is_guy = true;
+            if(my_guy.id == my_player.my_guy) {
+                is_player_guy = true;
+            }
             // show_debug_message("orb_count: " + string(orb_count) + " my_color: " + string(my_color));
         }
         else
@@ -44,7 +48,9 @@ function chargeball_trigger_script() {
                     }
                     
                     ret = true;
-                    increase_stat(my_guy.my_player, "implosion_count", 1, false);
+                    if(is_player_guy) {
+                        increase_stat(my_guy.my_player, "implosion_count", 1, false);
+                    }
                 }
                 else
                 {
@@ -66,7 +72,9 @@ function chargeball_trigger_script() {
                     }
                     
                     ret = true;
-                    increase_stat(my_guy.my_player, "vortex_count", 1, false);
+                    if(is_player_guy) {
+                        increase_stat(my_guy.my_player, "vortex_count", 1, false);
+                    }
                 }
             }
         }
@@ -113,7 +121,9 @@ function chargeball_trigger_script() {
                     
                         if(ret)
                         {
-                            increase_stat(my_guy.my_player, "shield_count", 1, false);
+                            if(is_player_guy) {
+                                increase_stat(my_guy.my_player, "shield_count", 1, false);
+                            }
                             if(play_shield_sound)
                             {
                                 my_sound_play(shield_sound);
@@ -161,7 +171,9 @@ function chargeball_trigger_script() {
                     }
                 
                     ret = true;
-                    increase_stat(my_guy.my_player, "blast_count" , 1, false);
+                    if(is_player_guy) {
+                        increase_stat(my_guy.my_player, "blast_count" , 1, false);
+                    }
                 }
             
                 // BARRAGE
@@ -171,7 +183,9 @@ function chargeball_trigger_script() {
                     event_perform(ev_alarm,1);
                     
                     ret = true;
-                    increase_stat(my_guy.my_player, "barrage_count", 1, false);
+                    if(is_player_guy) {
+                        increase_stat(my_guy.my_player, "barrage_count", 1, false);
+                    }
                 }
             
                 // DASHWAVE
@@ -207,7 +221,9 @@ function chargeball_trigger_script() {
                     dash_steps_left = ceil(min(charge + 0.25, 1.25) * dash_base_steps);
                     
                     ret = true;
-                    increase_stat(my_guy.my_player, "dashwave_count", 1, false);
+                    if(is_player_guy) {
+                        increase_stat(my_guy.my_player, "dashwave_count", 1, false);
+                    }
                 }
 
             
@@ -287,7 +303,7 @@ function chargeball_trigger_script() {
                 }
             }
         
-            if(object_is_ancestor(my_guy.object_index, guy_obj))
+            if(is_player_guy)
             {
                 increase_stat(my_guy.my_player, "spells", 1, false);
                 increase_stat(my_guy.my_player, "spells" + string(my_color), 1, false);
@@ -329,7 +345,6 @@ function chargeball_trigger_script() {
                         shot_color = g_black;
                         slots_absorbed = 0;
                     }
-                
                 }
             
                 my_color = my_guy.shot_color;
