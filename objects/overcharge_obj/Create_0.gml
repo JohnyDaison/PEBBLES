@@ -11,4 +11,3 @@ self.pickup_sound = overcharge_sound;
 self.inventory_spr = sprite_index;
 
 self.name = "Overcharge";
-

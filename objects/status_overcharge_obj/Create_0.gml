@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 name = "Overcharge";
 color = g_red;
 icon = overcharge_spr;
@@ -12,6 +13,3 @@ max_duration = 0;
 signal_ratio = 1000;
 damage_ratio = 1000;
 */
-
-/* */
-/*  */

@@ -34,11 +34,11 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
         // SIZE
         var base_charge = max(charge_step, max_charge + overcharge) * display_exhaustion_ratio;
         
-        var base_bar_width = scale*base_charge*60; //*color_exhaustion_ratio;
+        var base_bar_width = scale * base_charge * 60;
         var total_bar_width = base_bar_width;
         
-        var left_border = floor(xx - total_bar_width/2);
-        var right_border = ceil(xx + total_bar_width/2);
+        var left_border = floor(xx - total_bar_width / 2);
+        var right_border = ceil(xx + total_bar_width / 2);
         var top_border = yy + bar_dist;
         var bottom_border = yy + bar_dist + bar_height;
 

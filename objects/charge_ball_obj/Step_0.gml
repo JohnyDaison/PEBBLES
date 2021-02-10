@@ -34,7 +34,8 @@ if(my_guy != id && my_color > -1)
     des_dir = point_direction(rel_x, rel_y, des_x, des_y);
     cur_dist = point_distance(rel_x, rel_y, des_x, des_y);   
         
-    cur_speed = min(cur_dist, base_speed*(1+cur_dist/(3*radius)));  
+    var distance_ratio = cur_dist / (3 * radius);
+    cur_speed = min(cur_dist, base_speed * (1 + distance_ratio));  
         
     // continue current movement
     if(cur_speed > 0)
@@ -53,14 +54,14 @@ if(my_guy != id && my_color > -1)
         }
         // start from main directions
         else if(rel_x == 0){
-            cur_dir = (floor((des_dir+90)/180)) * 180;      
+            cur_dir = floor((des_dir + 90) / 180) * 180;      
         }
         else if(rel_y == 0){
-            cur_dir = (floor(des_dir/180)+0.5) * 180;   
+            cur_dir = (0.5 + floor(des_dir / 180)) * 180;   
         }
         // start from diagonal
         else {
-            cur_dir = (floor(des_dir/90)+0.5) * 90;   
+            cur_dir = (0.5 + floor(des_dir / 90)) * 90;   
         }
     }
     cur_dist = point_distance(rel_x, rel_y, des_x, des_y);        
@@ -80,7 +81,7 @@ if(my_guy != id && my_color > -1)
     if(object_is_ancestor(my_guy.object_index, guy_obj))
     {
         // TERRAIN COL
-        if(desired_dist > 0) // && my_color > g_black
+        if(desired_dist > 0)
         {
             var collided = false, ter, field, body;
                 
@@ -290,10 +291,13 @@ else
             
             with(my_guy)
             {
-                var sprinkler_shield = instance_place(x+hspeed+xx, y+vspeed+yy, sprinkler_shield_obj);
-                var energy_shield = instance_place(x+hspeed+xx, y+vspeed+yy, shield_obj);
-                if(!place_meeting(x+hspeed+xx, y+vspeed+yy, terrain_obj)
-                && !place_meeting(x+hspeed+xx, y+vspeed+yy, gate_field_obj)
+                var next_x = x + hspeed + xx;
+                var next_y = y + vspeed + yy;
+                var sprinkler_shield = instance_place(next_x, next_y, sprinkler_shield_obj);
+                var energy_shield = instance_place(next_x, next_y, shield_obj);
+                
+                if(!place_meeting(next_x, next_y, terrain_obj)
+                && !place_meeting(next_x, next_y, gate_field_obj)
                 && (sprinkler_shield == noone || sprinkler_shield.my_guy == id)
                 && (energy_shield == noone || !iff_check("shield_will_push_me", id, energy_shield)))
                 {
@@ -317,7 +321,7 @@ else
 
                 dash_steps_left--;
             
-                i = instance_create(x,y, dash_wave_obj);
+                var i = instance_create(x,y, dash_wave_obj);
                 i.image_angle = dir;
                 i.my_player = self.my_player;
                 i.dash_dist = dash_dist;
@@ -329,12 +333,12 @@ else
             
                 if(dash_steps_left == 0)
                 {
-                    i.force = self.trig_charge*dash_end_ratio;
+                    i.force = self.trig_charge * dash_end_ratio;
                     i.knockback = true;
                 }
                 else
                 {
-                    i.force = self.trig_charge*dash_step_ratio;
+                    i.force = self.trig_charge * dash_step_ratio;
                     i.image_xscale = 0.5;
                     i.image_yscale = 0.5;
                 }
@@ -350,8 +354,8 @@ else
                 firing = false;
                 my_guy.air_dashing = false;
                 
-                my_guy.hspeed += xx*self.trig_charge/4;
-                my_guy.vspeed += yy*self.trig_charge/4;
+                my_guy.hspeed += xx * self.trig_charge / 4;
+                my_guy.vspeed += yy * self.trig_charge / 4;
             }
         }
     }
@@ -364,10 +368,10 @@ else
             {
                 charge -= cur_charge_step;
                 /*
-                for(i=0; i<orb_count; i++) 
+                for(i = 0; i < orb_count; i++) 
                 {
                     var orb = orbs[| i];
-                    orb.direct_input_buffer += cur_charge_step/orb_count;
+                    orb.direct_input_buffer += cur_charge_step / orb_count;
                 }
                 */
             }    

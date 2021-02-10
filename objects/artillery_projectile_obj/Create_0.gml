@@ -7,13 +7,8 @@ sprite_index = charge_ball2_spr;
 radius = 24;
 core_radius = 16;
 particle_count = 15;
-/*
-if(y > 0)
-{
-    my_sound_play(artillery_shot_sound, true);
-}
-*/
 orig_ambient_light = 0.8;
+
 self.name = "Artillery Shot";
 
 observer_range = 1;

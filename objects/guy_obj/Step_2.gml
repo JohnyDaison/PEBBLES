@@ -513,17 +513,6 @@ for(ii=0; ii<ter_list_length; ii+=1)
                 {
                     if(energy > behaviour_threshold && this_guy.my_color == my_color)
                     {
-                        // Active color exhaustion regen
-                        /*
-                        if(instance_exists(this_guy.charge_ball))
-                        {
-                            with(this_guy.charge_ball)
-                            {
-                                if(color_exhaustion[? my_color] >= color_exhaustion_regen)
-                                     color_exhaustion[? my_color] -= color_exhaustion_regen*0.2;
-                            }                                        
-                        }
-                        */
                         // TODO: ORB REPLENISH
                     }
                     if(energy > behaviour_threshold && this_guy.my_color != my_color && !this_guy.protected)

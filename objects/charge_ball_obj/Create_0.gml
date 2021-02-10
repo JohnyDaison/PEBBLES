@@ -4,7 +4,7 @@ my_guy = noone;
 my_chunkgrid = noone;
 orbs = ds_list_create();
 max_orbs = 9;
-orb_count = 0; //3
+orb_count = 0;
 orb_dist = 8;
 orb_base_size = 0.75;
 orb_angle_offset = 0;
@@ -90,19 +90,6 @@ started = false;
 light_bg_color = merge_colour(c_ltgray, c_white, 0.5);
 dark_bg_color = merge_colour(c_dkgray, c_black, 0.5);
 base_bar_color = DB.colormap[? g_red];
-
-// COLOR EXHAUSTION
-/*
-color_exhaustion = ds_map_create();
-for(var col=g_black; col <= g_octarine; col++)
-{
-    color_exhaustion[? col] = 0;     
-}
-color_exhaustion_rate = 1;
-color_exhaustion_regen = 0.015;
-color_exhaustion_max = 10;
-color_exhaustion_ratio = 1;
-*/
 
 orb_exhaustion_rate = 0.12;
 orb_exhaustion_ratio = 1;
