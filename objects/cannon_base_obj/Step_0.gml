@@ -79,9 +79,6 @@ if(!instance_exists(charge_ball))
 // MAIN CYCLE
 if(!destroyed && instance_exists(my_guy))
 {
-    //count = ds_list_size(charges);
-    //ball = instance_nearest(x,y, charge_ball_obj);
-    
     my_camera = my_guy.my_player.my_camera;
     if(my_camera == noone)
     {
@@ -169,8 +166,8 @@ if(!destroyed && instance_exists(my_guy))
         // AIMING
         if(my_guy.seated && my_guy.aim_dist > 0 && my_guy.wanna_cast)
         {
-            base_rel_dir = (aim_dir - base_angle + 180)mod 360 -180;
-            rel_dir = (my_guy.aim_dir - aim_dir + 180)mod 360 -180;
+            base_rel_dir = (aim_dir - base_angle + 180) mod 360 - 180;
+            rel_dir = (my_guy.aim_dir - aim_dir + 180) mod 360 - 180;
             cur_aim_speed = aim_speed * ((rel_dir div 45) + sign(rel_dir));
             
             if(cur_aim_speed > abs(rel_dir))
@@ -226,7 +223,7 @@ if(!destroyed && instance_exists(my_guy))
     // SHIELD RECHARGE
     if(!instance_exists(my_shield) && self.shield_ready)
     {
-        self.my_shield = instance_create(x,y,shield_obj);
+        self.my_shield = instance_create(x, y, shield_obj);
         my_shield.my_guy = id;
         my_shield.my_source = object_index;
         my_shield.max_charge = shield_power - shield_overcharge;

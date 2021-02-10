@@ -76,14 +76,6 @@ autofire = false;
 ball_overcharge = 3;
 ball_chargerate = 0.5;
 
-// PLATFORMS
-/*
-i = instance_create(x-32,y+48,platform_obj);
-i.my_struct = id;
-i = instance_create(x+32,y+48,platform_obj);
-i.my_struct = id;
-*/
-
 // LIGHT
 radius = 24;
 gives_light = true;

@@ -17,7 +17,7 @@ self.alarm[3] = 2;
 image_index = 0;
 image_speed = 0.4;
 image_alpha = 0.75;
-//size_pulse = 0;
+
 bar_dist = 28;
 bar_height = 6;
 

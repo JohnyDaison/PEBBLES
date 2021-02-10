@@ -22,7 +22,7 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
             xx = my_guy.gui_x;
             yy = my_guy.gui_y + 24;
         }
-        else //if(object_is_ancestor(my_guy.object_index, guy_obj))
+        else
         {
             scale = camera.zoom_level;
             xx = floor((my_guy.x - __view_get( e__VW.XView, camera.view ))*camera.zoom_level + __view_get( e__VW.XPort, camera.view ));

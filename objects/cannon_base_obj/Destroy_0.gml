@@ -12,7 +12,7 @@ if(!cancelled)
 {
     if(shot_color > g_black)
     {
-        ii = instance_create(x,y, slot_explosion_obj);
+        ii = instance_create(x, y, slot_explosion_obj);
         ii.my_guy = id;
         ii.my_color = shot_color;
         ii.my_source = object_index;
@@ -47,8 +47,8 @@ else
             instance_destroy();
     }
 }
-//ds_list_destroy(charges);
+
 ds_map_destroy(orbs);
 ds_map_destroy(orb_light);
 
-action_inherited();
+event_inherited();
