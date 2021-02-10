@@ -34,13 +34,13 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
         // SIZE
         var base_charge = max(charge_step, max_charge + overcharge) * display_exhaustion_ratio;
         
-        var base_bar_width = scale * base_charge * 60;
+        var base_bar_width = floor(scale * base_charge * 60);
         var total_bar_width = base_bar_width;
         
         var left_border = floor(xx - total_bar_width / 2);
-        var right_border = ceil(xx + total_bar_width / 2);
-        var top_border = yy + bar_dist;
-        var bottom_border = yy + bar_dist + bar_height;
+        var right_border = floor(xx + total_bar_width / 2);
+        var top_border = floor(yy + bar_dist);
+        var bottom_border = floor(yy + bar_dist + bar_height);
 
         // COLOR
         var bg_color, border_color;
@@ -65,8 +65,9 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
         draw_set_color(bg_color);
         draw_rectangle(left_border, top_border, right_border, bottom_border, false);
         
+        var bar_width = floor((charge / base_charge) * base_bar_width);
         draw_set_color(base_bar_color);
-        draw_rectangle(left_border, top_border, left_border+floor((charge/base_charge)*(base_bar_width)), bottom_border,false);        
+        draw_rectangle(left_border, top_border, left_border + bar_width, bottom_border, false);        
         
         draw_set_color(border_color);
         draw_rectangle(left_border, top_border, right_border, bottom_border, true);

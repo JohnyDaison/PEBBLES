@@ -28,16 +28,16 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                         // SIZE
                         var base_charge = max_charge + overcharge;
                         
-                        var base_bar_width = base_charge*60 * camera.zoom_level;
-                        var feed_bar_width = collapse_threshold*60 * camera.zoom_level;
+                        var base_bar_width = floor(base_charge * 60 * camera.zoom_level);
+                        var feed_bar_width = floor(collapse_threshold * 60 * camera.zoom_level);
                         var total_bar_width = base_bar_width + feed_bar_width;
 
                         bar_dist = (base_radius - 8) * max_charge * size_coef * camera.zoom_level;
                         
                         var left_border = floor(xx - base_bar_width/2);
-                        var right_border = ceil(xx + base_bar_width/2);
-                        var top_border = yy + bar_dist;
-                        var bottom_border = yy + bar_dist + bar_height;
+                        var right_border = floor(xx + base_bar_width/2);
+                        var top_border = floor(yy + bar_dist);
+                        var bottom_border = floor(yy + bar_dist + bar_height);
                         
                         // COLOR
                         var bg_color, border_color;
@@ -56,9 +56,9 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                         draw_set_color(bg_color);
                         draw_rectangle(left_border, top_border, right_border, bottom_border, false);
                         
-                        
+                        var bar_width = floor((charge / base_charge) * base_bar_width);
                         draw_set_color(base_bar_color);
-                        draw_rectangle(left_border, top_border, left_border + floor((charge / base_charge) * base_bar_width), bottom_border,false);
+                        draw_rectangle(left_border, top_border, left_border + bar_width, bottom_border, false);
                         var feed_width = 0;
                         if(charge > base_charge)
                         {
