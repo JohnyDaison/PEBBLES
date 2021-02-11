@@ -77,7 +77,7 @@ if(cover != cover_indestr)
     {
         if(mod_get_state("regenerate_terrain"))
         {
-            regen_obj = instance_create(xstart, ystart, wall_regenerator_obj);
+            var regen_obj = instance_create(xstart, ystart, wall_regenerator_obj);
             regen_obj.energy = orig_energy;
             regen_obj.my_color = orig_color;
             regen_obj.damage = orig_damage;

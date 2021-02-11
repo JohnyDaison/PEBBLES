@@ -4,7 +4,6 @@ if((self.my_color != other.my_color || self.my_color == g_octarine) || (xstart =
     if(!wallhit_played)
     {
         my_sound_play(shot_wallhit_sound);
-        //my_sound_play_colored(shot_wallhit_sound, my_color);
         wallhit_played = true;
     }
 }
@@ -72,16 +71,6 @@ if(!bounced && !collided)
     
     if(bounced)
     {
-        /*
-        if(speed > 0.2)
-        {
-            speed -= 0.2;
-        }
-        else
-        {
-            gravity = 0;
-        }
-        */
         if(orig_speed + speed_delta > 0.2)
         {
             speed = orig_speed + speed_delta;
@@ -92,7 +81,6 @@ if(!bounced && !collided)
         }
         else
         {
-            //speed = 0;
             gravity = 0;
         }
         
@@ -110,7 +98,6 @@ if(!bounced && !collided)
             if(!wallhit_played)
             {
                 my_sound_play(shot_wallhit_sound);
-                //my_sound_play_colored(shot_wallhit_sound, my_color);
                 wallhit_played = true;
             }
         }

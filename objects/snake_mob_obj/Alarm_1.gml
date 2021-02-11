@@ -1,13 +1,4 @@
-/// @description  INIT - FIND MEMBER BLOCKS
-
-// SNAKES NOT ENABLED
-/*
-if(!mod_get_state("snakes_on_a_plane"))
-{
-    instance_destroy();
-    exit;
-}
-*/
+/// @description INIT - FIND MEMBER BLOCKS
 
 //WAIT IF GUY IS TOO FAR
 var near_guy = instance_nearest(x,y,player_guy);
@@ -33,16 +24,6 @@ if(instance_exists(cur_ter) && cur_ter.x == x && cur_ter.y == y && cur_ter.cover
 // SUCCESS
 if(body_size >= head_size)
 {
-    /*
-    
-    for(i = 0; i < body_size; i++)
-    {
-        var ter = ter_group.members[| i];
-        ter.my_next_color = col;
-        ter.energy = max(ter.energy, 0.5);
-    }
-    */
-    
     var first = ter_group.members[| 0];
     var second = ter_group.members[| 1];
     travel_direction = point_direction(second.x, second.y, first.x, first.y);
@@ -58,6 +39,3 @@ else
 {
     instance_destroy();
 }
-
-/* */
-/*  */

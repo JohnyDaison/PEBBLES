@@ -17,4 +17,3 @@ image_index = 1;
 obj_center_xoff = 24;
 obj_center_yoff = 0;
 obj_center_offset = true;
-

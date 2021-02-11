@@ -1,6 +1,5 @@
 event_inherited();
 
-//my_color = g_octarine;
 my_color = irandom_range(g_red, g_azure);
 multicolor = true;
 connected_base = true;
@@ -12,7 +11,7 @@ eq_type = hp_weapon;
 unhittable = true;
 base_tint = c_gray;
 rel_rotation_acc = 0.02;
-max_rotation_speed = 5; // 6
+max_rotation_speed = 5;
 base_rotation_angle = 180;
 min_rotation_angle = -90;
 max_rotation_angle = 90;
@@ -24,4 +23,3 @@ image_index = 1;
 obj_center_xoff = 0;
 obj_center_yoff = 0;
 obj_center_offset = false;
-
