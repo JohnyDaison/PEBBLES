@@ -180,12 +180,17 @@ if(charging && !firing)
     // CHARGE STEP
     cur_charge_step = min(cur_charge_step, max(0, threshold - charge));
     
+    var orb_drain_step = 0;
+    if(orb_count != 0) {
+        orb_drain_step = orb_exhaustion_rate * cur_charge_step / orb_count;
+    }
+    
     for(i=0; i<orb_count; i++) 
     {
         var orb = orbs[| i];
-        var diff = orb.energy - orb_exhaustion_rate*cur_charge_step;
+        var diff = orb.energy - orb_drain_step;
         var missing_energy = max(0, -diff);
-        cur_charge_step -= missing_energy/orb_exhaustion_rate;
+        cur_charge_step -= missing_energy / orb_exhaustion_rate;
         orb.energy = max(0, diff);
     }
     
