@@ -42,9 +42,10 @@ for(i = 0; i < num && !have_spawned; i+=1)
         if(key == "snake" && mod_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period)
         {
             wall = instance_nearest(x,y, wall_obj);
-            if(wall != noone && !position_meeting(wall.x,wall.y, snake_mob_obj))
+            if(wall != noone && wall.cover != cover_indestr && !wall.moving && !wall.falling 
+                && !position_meeting(wall.x, wall.y, snake_mob_obj))
             {
-                inst = instance_create(wall.x,wall.y, snake_mob_obj); 
+                inst = instance_create(wall.x, wall.y, snake_mob_obj); 
                 gamemode_obj.stats[? "snakes_spawned"] += 1;
                 have_spawned = true;  
                 do_effect = true;      
