@@ -13,6 +13,7 @@ function init_status_effects_DB() {
 	status_effects[? "tp_rush"] = instance_create(0,0, status_tp_rush_obj).id;
 	status_effects[? "overcharge"] = instance_create(0,0, status_overcharge_obj).id;
 	status_effects[? "shield_down"] = instance_create(0,0, status_shield_down_obj).id;
+    status_effects[? "wall_trail"] = instance_create(0,0, status_wall_trail_obj).id;
 
 	status_effects[? "berserk"] = instance_create(0,0, status_berserk_obj).id;
 	status_effects[? "heal"] = instance_create(0,0, status_heal_obj).id;

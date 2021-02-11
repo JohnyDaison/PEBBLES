@@ -66,7 +66,7 @@ place.default_modifiers[? "black_color"] = true;
 place.default_modifiers[? "abilities"] = true;
 
 
-place = add_place_in_room(room_void_test, "Void", 0,0, 4800,4800, 384);
+place = add_place_in_room(room_void_test, "Void", 0,0, 4800,4800, 0);
 place.controller = autogenerate_place_controller_obj;
 ds_list_add(place.level_configs_list, "match");
 
@@ -83,7 +83,7 @@ ds_list_add(place.level_configs_list, "match");
 */
 
 
-place = add_place_in_room(room_snake_test, "Snakes", 0,0, 4800,4800, 640);
+place = add_place_in_room(room_snake_test, "Snakes", 0,0, 4800,4800, 0);
 place.description = "Room for testing snakes... it's a mess, what did you expect?";
 ds_list_add(place.level_configs_list, "match");
 
