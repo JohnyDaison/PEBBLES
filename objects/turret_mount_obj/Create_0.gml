@@ -1,6 +1,6 @@
 event_inherited();
 
-turret = instance_create(x+15,y+15,turret_body_obj);
+turret = instance_create(x + 15, y + 15, turret_body_obj);
 turret.my_mount = id;
 turret.my_struct = id;
 my_color = g_white;
