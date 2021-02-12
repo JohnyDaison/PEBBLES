@@ -2088,6 +2088,7 @@ if(!self.frozen_in_time)
         {
             //self.damage += self.channel_hp_cost*total_e_boost;
             channeling = false;
+            my_sound_stop(my_channel_sound);
             
             if(!self.safe_channeling)
             {
