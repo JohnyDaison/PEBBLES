@@ -4,6 +4,7 @@ if(!instance_exists(my_block))
     if(!place_meeting(x,y, my_block))
     {
         instance_destroy();
+        exit;
     }
     else
     {

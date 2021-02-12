@@ -291,22 +291,6 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 }
             }
             
-            /*
-            var xx = (cursor_obj.room_x div 32)*32;
-            var yy = (cursor_obj.room_y div 32)*32;
-            var structure = instance_position(xx,yy, perma_wall_structure_obj);
-            if(instance_exists(structure))
-            {
-                with(structure)
-                {
-                    done_for = true;
-                    cancelled = true;
-                    event_perform(ev_step, ev_step_end);
-                    instance_destroy();
-                }
-            }
-            */
-        
             var xx = (cursor_obj.room_x div 16)*16;
             var yy = (cursor_obj.room_y div 16)*16;
             var plat = instance_position(xx,yy, platform_obj);

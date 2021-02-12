@@ -28,6 +28,7 @@ if(done_for && !destroyed)
     {
         if(my_block == other.id)
         {
+            cancelled = cancelled || other.cancelled;
             instance_destroy();
         }
     }
