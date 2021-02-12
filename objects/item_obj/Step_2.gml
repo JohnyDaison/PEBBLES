@@ -43,7 +43,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
     if(place_meeting(x,y,terrain_obj))
     {
         //my_console_log("item in terrain");
-        var debug_str = "ITEM TERRAIN ";
+        //var debug_str = "ITEM TERRAIN ";
         
         var was_in_terrain = place_meeting(xprevious, yprevious, terrain_obj);
         var half_x = x - hspeed/2;
@@ -58,7 +58,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
         {
             moved = true;
             
-            debug_str += "halfway return ";
+            //debug_str += "halfway return ";
         }
         
         if(!moved)
@@ -98,7 +98,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
                 
                 if(min_dist < max_dist)
                 {
-                    debug_str += string(min_dist) + " ";
+                    //debug_str += string(min_dist) + " ";
                     break;
                 }
             
@@ -117,7 +117,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
                 y -= min_dist;
                 moved = true;
                 
-                debug_str += "90" + " ";
+                //debug_str += "90" + " ";
             }
         
         
@@ -134,7 +134,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
                     y += yy;
                     moved = true;
                     
-                    debug_str += string(dir) + " ";
+                    //debug_str += string(dir) + " ";
                 }
             }
         
@@ -143,10 +143,10 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
                 x = xprevious;
                 y = yprevious;
                 
-                debug_str += "return to previous ";
+                //debug_str += "return to previous ";
             }
             
-            my_console_log(debug_str);
+            //my_console_log(debug_str);
         
             ds_list_destroy(possible_dirs);
             ds_map_destroy(min_dists);
