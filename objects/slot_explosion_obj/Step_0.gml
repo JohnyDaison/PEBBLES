@@ -44,6 +44,7 @@ if(!fired && my_color != g_black)
         inst.my_color = self.my_color; 
         inst.my_guy = inst.id;
         inst.my_source = my_source;
+        inst.source_id = source_id;
         inst.holographic = self.holographic;
     }
     

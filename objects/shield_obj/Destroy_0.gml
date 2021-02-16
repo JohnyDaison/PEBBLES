@@ -22,7 +22,7 @@ if(instance_exists(my_guy) && my_guy != id)
                 yy = y + radius * ( random(1) - 0.5 );
                 i = instance_create(xx,yy, slot_explosion_obj);
                 i.my_color = my_color;
-                i.my_source = object_index;
+                i.my_source = object_index;                
                 i.energy = 5; 
                 i.holographic = holographic;
             }
@@ -47,6 +47,7 @@ if(instance_exists(my_guy) && my_guy != id)
             i.my_color = my_color; 
             i.my_guy = i.id;
             i.my_source = object_index;
+            i.source_id = old_guy.id;
             i.holographic = holographic;
         }
     }
