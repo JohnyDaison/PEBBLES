@@ -115,8 +115,8 @@ if(active)
     var over_burner_threshold = energy > behaviour_threshold;
     var over_burn_to_black_start_treshold = energy > 0;
     var burner_start_burn = over_burner_threshold || (burn_to_black && over_burn_to_black_start_treshold);
-    var burner_stop_burn = ( !burn_to_black && !over_burner_threshold );
-                        //|| ( burn_to_black && over_burn_to_black_start_treshold );
+    var burner_stop_burn = ( !burn_to_black && !over_burner_threshold )
+                        || ( burn_to_black && !over_burn_to_black_start_treshold );
     
     var above_start_bursting_threshold = energy > outburst_threshold;
     var below_burst_stop_threshold = energy < active_threshold;
