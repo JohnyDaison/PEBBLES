@@ -1,1 +1,0 @@
-zone_id = "return_to_start/start";
