@@ -52,7 +52,7 @@ if(!gamemode_obj.limit_reached)
     }
     
     // ORB NUMBERS
-    number_y = gui_y + 80;
+    number_y = gui_y + 64;
     slot_size = 24;
     slot_offset = -slot_size*1.5;
     my_draw_set_font(label_font);

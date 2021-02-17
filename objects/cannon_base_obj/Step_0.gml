@@ -71,8 +71,8 @@ if(!instance_exists(charge_ball))
         ii = instance_create(x,y-128,charge_ball_obj);
         ii.my_guy = id;
         ii.my_player = self.my_player;
-        ii.bar_height = 12;
-        charge_ball = ii;    
+        ii.bar_height = 8;
+        charge_ball = ii;
     }
 }
 
@@ -124,7 +124,7 @@ if(!destroyed && instance_exists(my_guy))
                 switch(i)
                 {
                     case g_red:
-                        my_player.stats[? "red_orbs"] += 1;                      
+                        my_player.stats[? "red_orbs"] += 1;
                         break;
                     case g_green:
                         my_player.stats[? "green_orbs"] += 1;

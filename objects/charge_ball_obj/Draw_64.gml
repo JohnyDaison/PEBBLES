@@ -12,13 +12,13 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
         
         if(!camera_found)
         {
-            exit;   
+            exit;
         }
         
         // POSITION
         if(my_guy.object_index == cannon_base_obj)
         {
-            scale = 0.6;
+            scale = 0.4;
             xx = my_guy.gui_x;
             yy = my_guy.gui_y + 24;
         }
@@ -61,7 +61,7 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
             border_color = light_bg_color;
         }
         
-        // DRAW        
+        // DRAW
         draw_set_color(bg_color);
         draw_rectangle(left_border, top_border, right_border, bottom_border, false);
         
@@ -82,6 +82,6 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
             draw_set_color(c_white);
             draw_set_halign(fa_center);
             my_draw_text(left_border + total_bar_width, bottom_border, "A");
-        }        
+        }
     }
 }
