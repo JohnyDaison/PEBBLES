@@ -677,7 +677,7 @@ function arena_bot3(argument0) {
 	            }
 	        }
         
-	        if(phase >= (round(10/bot_speed) + last_phase) || mod_get_state("orbs_energy_lock"))
+	        if(phase >= (round(10/bot_speed) + last_phase) || mod_get_state("color_orbs_energy_lock"))
 	        {
 	            next_phase = 0;
 	        }

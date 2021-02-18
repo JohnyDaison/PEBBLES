@@ -26,7 +26,7 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("always_sliding", "Slippery Floor", "bool", true, always_sliding_mod_icon, "You're always sliding around.");
 
-    gamemode_mod_create("orbs_energy_lock", "Orb Energy lock", "bool", true, orbs_energy_lock_mod_icon, "Orb energy will always be at 100%.");
+    gamemode_mod_create("color_orbs_energy_lock", "Color Orb Energy lock", "bool", true, orbs_energy_lock_mod_icon, "Color Orb energy will always be at 100%.");
 
     gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "bool", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below 50%.");
     orbs_energy_min_lock_coef = 0.5;
@@ -88,7 +88,7 @@ function create_gamemodes_DB() {
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "snakes_on_a_plane"] = false;
     forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "orbs_energy_lock"] = false;
+    forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
@@ -183,7 +183,7 @@ function create_gamemodes_DB() {
     forced_mods[? "mob_portals"] = false;
     forced_mods[? "holographic_spawners"] = true;
     forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "orbs_energy_lock"] = true;
+    forced_mods[? "color_orbs_energy_lock"] = true;
     forced_mods[? "orbs_energy_min_lock"] = true;
     forced_mods[? "tut_guide"] = false;
 
@@ -265,7 +265,7 @@ function create_gamemodes_DB() {
     forced_mods[? "random_item_spawner"] = false;
     forced_mods[? "snakes_on_a_plane"] = false;
     forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "orbs_energy_lock"] = false;
+    forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "cannons"] = false;
@@ -323,7 +323,7 @@ function create_gamemodes_DB() {
     forced_mods[? "cannons"] = true;
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "orbs_energy_lock"] = false;
+    forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;

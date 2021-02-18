@@ -365,7 +365,7 @@ function arena_bot2(argument0) {
         
 	        var belt, orb, i, chbi;
         
-	        if(!holding_wall && !mod_get_state("orbs_energy_lock"))
+	        if(!holding_wall && !mod_get_state("color_orbs_energy_lock"))
 	        {
 	            wanna_channel = true;
 	        }

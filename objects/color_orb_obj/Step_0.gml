@@ -99,7 +99,7 @@ if(mod_get_state("orbs_energy_min_lock") && my_color != g_black && energy < DB.o
     energy = DB.orbs_energy_min_lock_coef*base_energy;  
 }
 
-if(mod_get_state("orbs_energy_lock") && my_color != g_black && energy != base_energy)
+if(mod_get_state("color_orbs_energy_lock") && my_color != g_black && energy != base_energy)
 {
     energy = base_energy;
 }
