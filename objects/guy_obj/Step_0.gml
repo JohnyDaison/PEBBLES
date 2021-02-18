@@ -1891,8 +1891,7 @@ if(!self.frozen_in_time)
         if(!self.lost_control && !self.slots_triggered && self.current_slot == 0 && !self.locked && !self.seated)
         {
             // START CHARGING
-            if(self.wanna_cast && !self.have_casted && !self.wanna_abi && !self.charging
-            && (self.slots_absorbed > 0 || (self.slots_absorbed == 0 && my_color == g_black)))
+            if(self.wanna_cast && !self.have_casted && !self.wanna_abi && !self.charging)
             {
                 if(instance_exists(charge_ball))
                 {

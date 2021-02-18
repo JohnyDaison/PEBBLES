@@ -142,4 +142,12 @@ function levels_load_config(config) {
         config_level_gamemode("invisibility",       "", "", 0, 0);
         config_level_gamemode("base_teleport",      "", "", 0, 0);
     }
+    else if(config == "vortex")
+    {
+        config_level_gamemode("dark_mode",          "", "", 1);
+        config_level_gamemode("black_belt_size",    "", "", 1);
+        config_level_gamemode("orbs0",              "", "", 1);
+        config_level_gamemode("channeling",         "", "", 1);
+        config_level_gamemode("chargeball",         "", "", 1);
+    }
 }
