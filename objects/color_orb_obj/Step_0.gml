@@ -104,6 +104,11 @@ if(mod_get_state("color_orbs_energy_lock") && my_color != g_black && energy != b
     energy = base_energy;
 }
 
+if(mod_get_state("dark_orb_energy_lock") && my_color == g_black && energy != base_energy)
+{
+    energy = base_energy;
+}
+
 
 if(newly_got_steps > 0)
 {

@@ -312,6 +312,7 @@
     {"id":{"name":"keyup_l","path":"sprites/keyup_l/keyup_l.yy",},"order":6,},
     {"id":{"name":"keyup_m","path":"sprites/keyup_m/keyup_m.yy",},"order":7,},
     {"id":{"name":"keyup_r","path":"sprites/keyup_r/keyup_r.yy",},"order":8,},
+    {"id":{"name":"dark_orb_energy_lock_mod_icon","path":"sprites/dark_orb_energy_lock_mod_icon/dark_orb_energy_lock_mod_icon.yy",},"order":55,},
     {"id":{"name":"plus_spr","path":"sprites/plus_spr/plus_spr.yy",},"order":0,},
     {"id":{"name":"bigplus_spr","path":"sprites/bigplus_spr/bigplus_spr.yy",},"order":1,},
     {"id":{"name":"minus_spr","path":"sprites/minus_spr/minus_spr.yy",},"order":2,},
