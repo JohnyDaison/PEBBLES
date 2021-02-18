@@ -35,29 +35,6 @@ sudden_death = false;
 mods_state = ds_map_create();
 custom_mods = ds_map_create();
 
-//ban_respawn = false;
-//ban_base_crystals = false;
-//ban_cannons = false;
-//ban_turrets = false;
-//ban_mob_portals = false;
-//ban_black = false;
-//ban_abilities = false;
-//ban_tut_guide = false;
-//hp_death = false;
-//holographic_spawners = false;
-//weak_terrain = false;
-
-//random_item_spawner = false;
-//snakes_on_a_plane = false;
-//bolt_rain = false;
-//orbs_energy_lock = false;
-//orbs_energy_min_lock = false;
-//heavy_shots_mod = false;
-//slime_mob_rain = false;
-//create_artifacts = false;
-//lightning_strikes_mod = false;
-//tutorials = false;
-
 winner = noone;
 loser = noone;
 losers = ds_list_create();
