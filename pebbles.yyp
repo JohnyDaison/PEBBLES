@@ -1720,6 +1720,7 @@
     {"id":{"name":"bigbang_obj","path":"objects/bigbang_obj/bigbang_obj.yy",},"order":1,},
     {"id":{"name":"star_core_obj","path":"objects/star_core_obj/star_core_obj.yy",},"order":2,},
     {"id":{"name":"big_projectile_obj","path":"objects/big_projectile_obj/big_projectile_obj.yy",},"order":0,},
+    {"id":{"name":"small_football_field","path":"rooms/small_football_field/small_football_field.yy",},"order":19,},
     {"id":{"name":"artillery_projectile_obj","path":"objects/artillery_projectile_obj/artillery_projectile_obj.yy",},"order":1,},
     {"id":{"name":"small_projectile_obj","path":"objects/small_projectile_obj/small_projectile_obj.yy",},"order":2,},
     {"id":{"name":"slime_ball_obj","path":"objects/slime_ball_obj/slime_ball_obj.yy",},"order":3,},
@@ -2122,6 +2123,7 @@
     {"roomId":{"name":"room_show_off","path":"rooms/room_show_off/room_show_off.yy",},},
     {"roomId":{"name":"football_field","path":"rooms/football_field/football_field.yy",},},
     {"roomId":{"name":"room_small_face_arena","path":"rooms/room_small_face_arena/room_small_face_arena.yy",},},
+    {"roomId":{"name":"small_football_field","path":"rooms/small_football_field/small_football_field.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
