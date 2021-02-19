@@ -43,6 +43,7 @@ self.my_color = g_black;
 self.multicolor = true;
 self.tint_updated = false;
 self.tint = c_dkgray;
+self.forced_tint = c_white;
 self.new_tint = self.tint;
 self.alpha_ratio = 1;
 self.gives_light = false;

@@ -1,4 +1,4 @@
-function volleyball_event_script(event, source, context_str, params) {
+function hoopball_event_script(event, source, context_str, params) {
     if(gamemode_obj.limit_reached)
     {
         return;

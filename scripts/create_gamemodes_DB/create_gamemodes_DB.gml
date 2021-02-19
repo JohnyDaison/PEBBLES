@@ -288,6 +288,46 @@ function create_gamemodes_DB() {
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
+    
+    
+    // Hoopball
+    gm = gamemode_create("hoopball", "Hoopball", match_obj, hoopball_world);
+    gm[? "description"] = "Ball sport with Vortex.";
+    gm[? "base_level_config"] = "";
+    gm[? "start_script"] = gm_hoopball_start;
+    gm[? "min_players"] = 2;
+    gm[? "max_players"] = 4;
+
+    limits = gm[? "limits"];
+    limits[? "score"] = 10;
+
+    forced_mods = gm[? "forced_modifiers"];
+    forced_mods[? "hp_death"] = false;
+    forced_mods[? "one_death"] = false;
+    forced_mods[? "base_crystals"] = false;
+    forced_mods[? "holographic_spawners"] = false;
+    forced_mods[? "random_item_spawner"] = false;
+    forced_mods[? "snakes_on_a_plane"] = false;
+    forced_mods[? "bolt_rain"] = false;
+    forced_mods[? "color_orbs_energy_lock"] = false;
+    forced_mods[? "orbs_energy_min_lock"] = false;
+    forced_mods[? "tut_guide"] = false;
+    forced_mods[? "cannons"] = false;
+    forced_mods[? "turrets"] = false;
+    forced_mods[? "mob_portals"] = false;
+    forced_mods[? "bad_status_effects"] = false;
+    forced_mods[? "abilities"] = false;
+    forced_mods[? "tutorials"] = false;
+    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "slime_mob_rain"] = false;
+    forced_mods[? "artifacts"] = false;
+    forced_mods[? "lightning_strikes"] = false;
+
+    default_mods = gm[? "default_modifiers"];
+    default_mods[? "weak_terrain"] = true;
+    default_mods[? "regenerate_terrain"] = true;
+    default_mods[? "black_color"] = true;
+    default_mods[? "dark_orb_energy_lock"] = true;
 
 
     /*

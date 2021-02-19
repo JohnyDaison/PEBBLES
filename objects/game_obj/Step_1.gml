@@ -43,7 +43,7 @@ if(!tint_updated)
     }
     else
     {
-        tint = c_white;
+        tint = forced_tint;
     }
 }
 

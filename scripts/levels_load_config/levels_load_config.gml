@@ -149,5 +149,6 @@ function levels_load_config(config) {
         config_level_gamemode("orbs0",              "", "", 1);
         config_level_gamemode("channeling",         "", "", 1);
         config_level_gamemode("chargeball",         "", "", 1);
+        config_level_gamemode("guy_orbit",          "", "", 1);
     }
 }

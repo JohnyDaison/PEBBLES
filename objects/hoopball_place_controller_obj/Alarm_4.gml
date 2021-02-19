@@ -21,9 +21,10 @@ if(!gamemode_obj.limit_reached && instance_exists(guy_obj))
     inst.hspeed = dir * random_range(0.25, 0.5);
     inst.vspeed = -1;
     inst.speed = 8;
-    inst.gravity_coef = 0.15;
+    inst.gravity_coef = 0.4;
     inst.gravity = inst.gravity_coef;
-    inst.orig_friction = 0.015;
+    inst.orig_friction = 0.04;
+    inst.wall_bounce_damping = 0.8;
     inst.was_stopped = true;
     inst.tracked = true;
     inst.max_speed = 14;
