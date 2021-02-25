@@ -292,7 +292,7 @@ function create_gamemodes_DB() {
     
     // Hoopball
     gm = gamemode_create("hoopball", "Hoopball", match_obj, hoopball_world);
-    gm[? "description"] = "Ball sport with Vortex.";
+    gm[? "description"] = "Another ball sport.";
     gm[? "base_level_config"] = "";
     gm[? "start_script"] = gm_hoopball_start;
     gm[? "min_players"] = 2;
@@ -309,6 +309,8 @@ function create_gamemodes_DB() {
     forced_mods[? "random_item_spawner"] = false;
     forced_mods[? "snakes_on_a_plane"] = false;
     forced_mods[? "bolt_rain"] = false;
+    forced_mods[? "black_color"] = false;
+    forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "tut_guide"] = false;
@@ -326,8 +328,6 @@ function create_gamemodes_DB() {
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
-    default_mods[? "black_color"] = true;
-    default_mods[? "dark_orb_energy_lock"] = true;
 
 
     /*
