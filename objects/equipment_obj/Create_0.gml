@@ -14,4 +14,3 @@ eq_type = -1;
 unhittable = false;
 
 last_attacker_init();
-
