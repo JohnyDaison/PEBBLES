@@ -12,6 +12,7 @@ was_stopped = false;
 force = 0;
 gravity_coef = 0;
 orig_friction = 0;
+ground_friction_multiplier = 3;
 alarm[0] = 1;
 depth = -5;
 radius = 0;

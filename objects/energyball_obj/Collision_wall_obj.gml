@@ -16,8 +16,11 @@ if(!bounced && !collided)
     x_return = xprevious - orig_x;
     y_return = yprevious - orig_y;
     
-    var h_diff = xprevious - (other.x+16);
-    var v_diff = yprevious - (other.y+16);
+    var h_diff = xprevious - (other.x + other.obj_center_xoff);
+    var v_diff = yprevious - (other.y + other.obj_center_yoff);
+    
+    var h_bounced = false;
+    var v_bounced = false;
     
     orig_speed = speed;
     
@@ -33,6 +36,7 @@ if(!bounced && !collided)
             {
                 vspeed *= -1;
                 bounced = true;
+                v_bounced = true;
                 corner_bounced = false;
                 //show_debug_message("vert bounce");
             }
@@ -44,6 +48,7 @@ if(!bounced && !collided)
             {
                 hspeed *= -1;
                 bounced = true;
+                h_bounced = true;
                 corner_bounced = false;
                 //show_debug_message("hor bounce");
             }
@@ -57,8 +62,8 @@ if(!bounced && !collided)
         //show_debug_message("corner h_diff: "+string(h_diff));
         //show_debug_message("corner v_diff: "+string(v_diff));
         
-        normal_size = point_distance(0,0,h_diff,v_diff);
-        coef = speed/normal_size;
+        var normal_size = point_distance(0,0,h_diff,v_diff);
+        var coef = speed/normal_size;
         
         //show_debug_message("coef: "+string(coef));
         
@@ -71,21 +76,36 @@ if(!bounced && !collided)
     
     if(bounced)
     {
-        if(orig_speed + speed_delta > 0.2)
-        {
+        var bounce_coef = max(0, 1 - self.wall_bounce_damping);
+        
+        if(orig_speed + speed_delta > 0.2) {
             speed = orig_speed + speed_delta;
             if(holographic == other.holographic)
             {
                 other.energy += energy_delta;
             }
         }
-        else
+        
+        if(h_bounced && v_bounced) {
+            speed *= bounce_coef;
+        } else if(h_bounced) {
+            hspeed *= bounce_coef;
+        } else if(v_bounced) {
+            vspeed *= bounce_coef;
+        }
+        
+        if(abs(hspeed) <= 0.1 && h_bounced)
         {
+            hspeed = 0;
+        }
+        
+        if(abs(vspeed) <= gravity_coef && v_bounced)
+        {
+            vspeed = 0;
             gravity = 0;
         }
         
-        speed = max(0, speed - self.wall_bounce_damping);
-        if(speed > 0)
+        if(speed > stopped_threshold)
         {
             my_sound_play_colored(shot_bounce_sound, my_color);
         }

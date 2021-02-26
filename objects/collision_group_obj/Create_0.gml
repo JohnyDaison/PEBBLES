@@ -2,7 +2,7 @@ members = ds_list_create();
 self.annihilate = false;
 self.resolved = false;
 speed_threshold = 1;
-meeting_terrain = false;
+sitting_on_terrain = false;
 
 force = ds_map_create();
 for(i=g_red; i<g_white; i++)

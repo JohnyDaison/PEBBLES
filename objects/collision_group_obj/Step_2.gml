@@ -19,7 +19,7 @@ if(!self.resolved)
         }
     }
     
-    meeting_terrain = false;
+    sitting_on_terrain = false;
     
     count = ds_list_size(members);
     if(count > 1)

@@ -5,7 +5,7 @@ if(self.collided)
 {
     if(!self.shield_hit)
     {
-        explo = instance_create(x,y, slot_explosion_obj);   
+        explo = instance_create(x,y, slot_explosion_obj);
         explo.my_color = my_color;
         explo.my_player = my_player;
         explo.my_guy = explo;
@@ -68,17 +68,42 @@ with(energyball_obj)
     } 
 }
 
+var on_terrain = place_meeting(x,y+1, solid_terrain_obj);
+
+if(on_terrain) {
+    friction = orig_friction * ground_friction_multiplier;
+} else {
+    friction = orig_friction;
+}
 
 // FALLING START IF STOPPED
 if(speed <= stopped_threshold)
 {
     was_stopped = true;
-    meeting_terrain = place_meeting(x,y+1, solid_terrain_obj);
+    sitting_on_terrain = on_terrain;
     
-    if(!meeting_terrain)  
+    if(sitting_on_terrain)
     {
-        gravity = gravity_coef;
+        speed = 0;
+        gravity = 0;
         
+        if(instance_exists(col_group))
+        {
+            col_group.sitting_on_terrain = true;
+        }
+    }
+}
+else
+{
+    sitting_on_terrain = false;
+}
+
+if(was_stopped && !on_terrain)  
+{    
+    gravity = gravity_coef;
+    
+    if(speed <= stopped_threshold)
+    {
         var ball = instance_place(x,y, energyball_obj);
         if(instance_exists(ball) && ball.speed < ball.stopped_threshold)
         {
@@ -86,30 +111,19 @@ if(speed <= stopped_threshold)
                 x += choose(-2, 2);
             }
             
-            if(ball.y > y && ball.meeting_terrain)
+            if(ball.y > y && ball.sitting_on_terrain)
             {
+                speed = 0;
                 gravity = 0;
             }
         }
         
-        
-        if(instance_exists(col_group) && col_group.meeting_terrain)
+        if(instance_exists(col_group) && col_group.sitting_on_terrain)
         {
+            speed = 0;
             gravity = 0;
         }
     }
-    else
-    {
-        if(instance_exists(col_group))
-        {
-            col_group.meeting_terrain = true;
-        }
-    }
-    
-}
-else
-{
-    meeting_terrain = false;
 }
 
 

@@ -55,7 +55,7 @@ if(corner_bounced)
             */
             else
             {
-                //speed = 0;
+                vspeed = 0;
                 gravity = 0;
             }
             my_sound_play_colored(shot_bounce_sound, my_color);
@@ -79,8 +79,8 @@ if(corner_bounced)
             }
             else
             {
-                //speed = 0;
-                gravity = 0;
+                vspeed = 0;
+                gravity = 0;                
             }
         }
     }

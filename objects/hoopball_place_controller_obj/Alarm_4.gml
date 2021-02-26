@@ -24,7 +24,8 @@ if(!gamemode_obj.limit_reached && instance_exists(guy_obj))
     inst.gravity_coef = 0.4;
     inst.gravity = inst.gravity_coef;
     inst.orig_friction = 0.04;
-    inst.wall_bounce_damping = 0.8;
+    inst.ground_friction_multiplier = 3;
+    inst.wall_bounce_damping = 0.2;
     inst.was_stopped = true;
     inst.tracked = true;
     inst.max_speed = 14;
