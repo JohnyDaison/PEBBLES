@@ -1318,6 +1318,7 @@
     {"id":{"name":"double_jump_anim_set","path":"scripts/double_jump_anim_set/double_jump_anim_set.yy",},"order":4,},
     {"id":{"name":"double_jump2_anim_set","path":"scripts/double_jump2_anim_set/double_jump2_anim_set.yy",},"order":5,},
     {"id":{"name":"triple_jump_anim_set","path":"scripts/triple_jump_anim_set/triple_jump_anim_set.yy",},"order":6,},
+    {"id":{"name":"hoopball_shield_weapon_obj","path":"objects/hoopball_shield_weapon_obj/hoopball_shield_weapon_obj.yy",},"order":3,},
     {"id":{"name":"gui_add_color_power_pane","path":"scripts/gui_add_color_power_pane/gui_add_color_power_pane.yy",},"order":2,},
     {"id":{"name":"wall_climb_anim_set","path":"scripts/wall_climb_anim_set/wall_climb_anim_set.yy",},"order":7,},
     {"id":{"name":"wall_jump_anim_set","path":"scripts/wall_jump_anim_set/wall_jump_anim_set.yy",},"order":8,},

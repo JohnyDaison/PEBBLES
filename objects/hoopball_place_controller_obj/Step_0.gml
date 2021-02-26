@@ -16,14 +16,14 @@ with(guy_obj)
             inst.my_guy = id;
             inst.my_source = object_index;
             inst.my_player = self.my_player;
-            //inst.max_charge = 1;
             inst.charge = inst.max_charge;
-            inst.size_coef = 1.5;
-            inst.field_ratio = 0.5;
-            inst.field_power = 6;
+            inst.draw_bar = false;
             inst.my_color = place_controller_obj.current_color;
             inst.holographic = false;
             my_shield = inst.id;
+            
+            var equipment = instance_create(0,0, hoopball_shield_weapon_obj);
+            body_equip(id, equipment);
         }
         
         damage = 0;

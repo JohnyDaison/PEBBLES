@@ -58,6 +58,7 @@ init_equipment_sys();
 add_hardpoint(0,0, hp_shield);
 add_hardpoint(0,0, hp_shield);
 add_hardpoint(0,0, hp_shield);
+add_hardpoint(0,0, hp_weapon);
 
 
 // LOST CONTROL TRIGGERING
