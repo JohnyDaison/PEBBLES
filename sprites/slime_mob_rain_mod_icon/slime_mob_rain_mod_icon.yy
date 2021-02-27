@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"f7f1d4a6-1508-4b34-b9df-627fa401c0be","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"dae99134-fda3-4252-8df6-292868ff55c6","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"a63d7af4-eb44-48ed-8a63-39cf454f184a","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"d8caa90b-0be5-4536-ba8b-9a7e5a8c9145","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"a63d7af4-eb44-48ed-8a63-39cf454f184a","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"LayerId":{"name":"f7f1d4a6-1508-4b34-b9df-627fa401c0be","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"slime_mob_rain_mod_icon","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -47,7 +47,7 @@
             {"id":"cf7deaf6-06f2-4310-af9f-b0cf291d11e5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,

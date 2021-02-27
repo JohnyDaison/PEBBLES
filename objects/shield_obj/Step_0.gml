@@ -52,6 +52,7 @@ if(!done_for && !channeled)
 }
 channeled = false;
 
+energy = charge;
 
 if(!instance_exists(my_guy))
 {
@@ -62,6 +63,17 @@ if(!instance_exists(my_guy))
 if(!instance_exists(gamemode_obj))
 {
     instance_destroy();
+    exit;
+}
+
+// APPLY DESTRUCTION
+if(done_for)
+{
+    instance_destroy();
+    exit;
+}
+
+if(!mod_get_state("shield_push") && my_guy != id) {
     exit;
 }
 
@@ -164,12 +176,3 @@ if(overcharge > 0 && charge > max_charge && is_shielded(my_guy, "uber"))
     
     part_emitter_burst(system,em,pt,30);
 }
-
-energy = charge;
-
-// APPLY DESTRUCTION
-if(done_for)
-{
-    instance_destroy();
-}
-

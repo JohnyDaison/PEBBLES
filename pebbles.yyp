@@ -415,6 +415,7 @@
     {"id":{"name":"bf_icon_noone","path":"sprites/bf_icon_noone/bf_icon_noone.yy",},"order":3,},
     {"id":{"name":"bf_icon_guy","path":"sprites/bf_icon_guy/bf_icon_guy.yy",},"order":0,},
     {"id":{"name":"bf_icon_sprinkler","path":"sprites/bf_icon_sprinkler/bf_icon_sprinkler.yy",},"order":1,},
+    {"id":{"name":"shield_push_mod_icon","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"order":56,},
     {"id":{"name":"bf_icon_slime","path":"sprites/bf_icon_slime/bf_icon_slime.yy",},"order":2,},
     {"id":{"name":"bf_icon_mediumturret","path":"sprites/bf_icon_mediumturret/bf_icon_mediumturret.yy",},"order":3,},
     {"id":{"name":"bf_icon_smallturret","path":"sprites/bf_icon_smallturret/bf_icon_smallturret.yy",},"order":4,},

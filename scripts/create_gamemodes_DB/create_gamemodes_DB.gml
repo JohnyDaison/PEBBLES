@@ -36,6 +36,8 @@ function create_gamemodes_DB() {
     gamemode_mod_create("heavy_shots", "Heavy Bolts", "bool", true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
     gamemode_mod_create("equal_colors", "Equal Colors", "bool", true, equal_colors_mod_icon, "All Colors are equal in damage.");
+    
+    gamemode_mod_create("shield_push", "Shield Push", "bool", true, shield_push_mod_icon, "Shield pushes away mobs and characters.");
 
 
     // game elements
@@ -93,6 +95,9 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
+    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "equal_colors"] = false;
+    forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
     forced_mods[? "one_death"] = false;
@@ -107,8 +112,6 @@ function create_gamemodes_DB() {
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
     forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "heavy_shots"] = false;
-    forced_mods[? "equal_colors"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
@@ -130,6 +133,7 @@ function create_gamemodes_DB() {
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
+    forced_mods[? "shield_push"] = true;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "black_color"] = true;
@@ -157,6 +161,7 @@ function create_gamemodes_DB() {
     default_mods[? "turrets"] = true;
     default_mods[? "cannons"] = true;
     default_mods[? "mob_portals"] = true;
+    default_mods[? "shield_push"] = true;
 
     default_mods[? "hp_death"] = true;
     default_mods[? "base_crystals"] = true;
@@ -189,6 +194,7 @@ function create_gamemodes_DB() {
     forced_mods[? "color_orbs_energy_lock"] = true;
     forced_mods[? "orbs_energy_min_lock"] = true;
     forced_mods[? "tut_guide"] = false;
+    forced_mods[? "shield_push"] = true;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "random_item_spawner"] = true;
@@ -239,6 +245,7 @@ function create_gamemodes_DB() {
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "tut_guide"] = false;
+    forced_mods[? "shield_push"] = true;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "turrets"] = true;
@@ -272,6 +279,7 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
+    forced_mods[? "shield_push"] = true;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "cannons"] = false;
     forced_mods[? "turrets"] = false;
@@ -324,6 +332,7 @@ function create_gamemodes_DB() {
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
+    forced_mods[? "shield_push"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -371,6 +380,9 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
+    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "equal_colors"] = false;
+    forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
     forced_mods[? "one_death"] = false;
@@ -385,8 +397,6 @@ function create_gamemodes_DB() {
     forced_mods[? "abilities"] = true;
     forced_mods[? "tutorials"] = false;
     forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "heavy_shots"] = false;
-    forced_mods[? "equal_colors"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
@@ -413,6 +423,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = false;
 
     default_mods = gm[? "default_modifiers"];
+    default_mods[? "shield_push"] = true;
     default_mods[? "black_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;

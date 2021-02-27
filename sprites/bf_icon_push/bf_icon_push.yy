@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"bf_icon_push","path":"sprites/bf_icon_push/bf_icon_push.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "bf_icon_push",
     "tags": [],
     "resourceType": "GMSequence",
   },
