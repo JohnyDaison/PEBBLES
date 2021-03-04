@@ -1808,6 +1808,7 @@
     {"id":{"name":"filter_projector_group_obj","path":"objects/filter_projector_group_obj/filter_projector_group_obj.yy",},"order":1,},
     {"id":{"name":"display_group_obj","path":"objects/display_group_obj/display_group_obj.yy",},"order":2,},
     {"id":{"name":"zone_obj","path":"objects/zone_obj/zone_obj.yy",},"order":10,},
+    {"id":{"name":"vertigo_arena","path":"rooms/vertigo_arena/vertigo_arena.yy",},"order":20,},
     {"id":{"name":"guy_detect_zone_obj","path":"objects/guy_detect_zone_obj/guy_detect_zone_obj.yy",},"order":0,},
     {"id":{"name":"gate_field_detect_zone_obj","path":"objects/gate_field_detect_zone_obj/gate_field_detect_zone_obj.yy",},"order":1,},
     {"id":{"name":"energyball_detect_zone_obj","path":"objects/energyball_detect_zone_obj/energyball_detect_zone_obj.yy",},"order":2,},
@@ -2126,6 +2127,7 @@
     {"roomId":{"name":"hoopball_field","path":"rooms/hoopball_field/hoopball_field.yy",},},
     {"roomId":{"name":"room_small_face_arena","path":"rooms/room_small_face_arena/room_small_face_arena.yy",},},
     {"roomId":{"name":"small_football_field","path":"rooms/small_football_field/small_football_field.yy",},},
+    {"roomId":{"name":"vertigo_arena","path":"rooms/vertigo_arena/vertigo_arena.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
