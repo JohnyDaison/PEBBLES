@@ -10,7 +10,6 @@ image_index = 0;
 image_speed = 0;
 
 self.protected = false;
-step_count = 0;
 self.damage_tint_ratio = 0.5;
 my_shield = noone;
 last_attacker_init();

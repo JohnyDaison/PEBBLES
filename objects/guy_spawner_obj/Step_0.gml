@@ -126,6 +126,7 @@ if(self.enabled)
             instance_destroy();
         }
         damage -= crystal_heal;
+        crystal_number--;
     }
     
     // SHIELD REGEN BONUS

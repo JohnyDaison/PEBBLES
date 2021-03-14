@@ -23,7 +23,6 @@ self.size_pulse = 0;
 hover_offset = 8;
 
 self.protected = false;
-step_count = 0;
 self.damage_tint_ratio = 0.5;
 
 i = instance_create(x,y,shield_obj);
