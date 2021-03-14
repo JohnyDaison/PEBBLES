@@ -1,8 +1,4 @@
-/// @description guy_consume_shard(shard)
-/// @param shard
-function guy_consume_shard() {
-    var shard = argument[0];
-
+function guy_consume_shard(shard) {
     var score_gain = shard.stack_size * gamemode_obj.score_values[? "extra_shard"];
 
     increase_stat(my_player, "extra_shards", shard.stack_size, false);
@@ -12,10 +8,14 @@ function guy_consume_shard() {
     my_sound_play(shard.pickup_sound);
     my_sound_play(heal_sound);
 
-    damage = max(min_damage, damage - shard.energy);
+    var orig_damage = damage;
+    damage = max(min_damage, damage - shard.stack_size * shard.energy);
+    var damage_healed = orig_damage - damage;
+    my_player.healed_dmg_total += damage_healed;
+    
     // TODO: ORB REPLENISH
 
-    var i = create_damage_popup(-shard.energy, my_color, id, "crystal_heal");
+    var i = create_damage_popup(-shard.stack_size * shard.energy, my_color, id, "crystal_heal");
     i.y += 16;
 
     instance_destroy(shard);

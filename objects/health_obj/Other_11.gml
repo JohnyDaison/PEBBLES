@@ -3,7 +3,7 @@ my_sound_play(heal_sound);
 var total_boost = hp_boost*stack_size;
 var orig_damage = other.damage;
 other.damage = max(other.min_damage, other.damage - total_boost);
-other.my_player.healed_dmg_total += orig_damage - damage;
+other.my_player.healed_dmg_total += orig_damage - other.damage;
     
 create_text_popup("Health", my_color, id, 0, -48, true);
 

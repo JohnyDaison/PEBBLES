@@ -87,7 +87,9 @@ if(self.enabled)
             {
                 if(point_distance(x,y,guy.x,guy.y) < my_shield.radius)
                 {
-                    guy.damage = max(guy.min_damage, guy.damage - crystal_number*crystal_guy_regen);  
+                    var orig_damage = guy.damage;
+                    guy.damage = max(guy.min_damage, guy.damage - crystal_number*crystal_guy_regen);
+                    guy.my_player.healed_dmg_total += orig_damage - guy.damage;
             
                     var list, orb;
                     for(i=g_red; i<=g_blue; i++)
