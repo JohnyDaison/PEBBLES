@@ -41,13 +41,21 @@ if(split_done && str != "" && !fading)
             display_word_list[| word_index] = string_copy(word_list[| word_index], 1, word_progress);
             
             speech_volume = source.speech_volume;
-            speech_pitch = source.speech_pitch;
+            //speech_pitch = source.speech_pitch;
             
             if(!(char == " " || char == "\"" || char == "'" || char == "," || char == ":" || char == ";"
             || char == "." || char == "?" || char == "!"))
             {
-                //my_sound_play(speech_sound);
-                my_sound_play(choose(speech1_sound, speech2_sound, speech3_sound), true, speech_volume, speech_pitch);
+                var term_id = term_index_map[? word_index];
+                var is_term = !is_undefined(term_id);
+                var term_color = my_color;
+        
+                if(is_term)
+                {
+                    term_color = DB.term_color_map[? term_id];
+                }
+                
+                my_sound_play_colored(choose(speech1_sound, speech2_sound, speech3_sound), term_color, true, speech_volume);
             }
             
             spoken_count++;

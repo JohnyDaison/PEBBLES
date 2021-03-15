@@ -18,7 +18,7 @@ fade_out_dist = 60;
 rise_speed = 0.3;
 fade_out_length = floor(fade_out_dist / rise_speed);
 speech_volume = 0.5;
-speech_pitch = 1;
+//speech_pitch = 1;
 interrupted = false;
 
 str_width = 0;
