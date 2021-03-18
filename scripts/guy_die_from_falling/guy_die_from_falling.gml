@@ -239,4 +239,6 @@ function guy_die_from_falling() {
     chunk_deregister(chunkgrid_obj, id);
         
     schedule_chunk_optimizer();
+    
+    do_bullet_time(3);
 }

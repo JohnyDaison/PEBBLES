@@ -9,6 +9,10 @@ self.show_minimap = false;
 self.show_console = "hide";
 
 self.game_speed = 60;
+self.bullet_time_factor = 3;
+self.bullet_time_end_time = 0;
+self.game_speed_change_step = 5;
+self.current_game_speed = game_speed;
 self.master_volume = 50;
 
 

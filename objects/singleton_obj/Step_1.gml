@@ -6,6 +6,18 @@ if(step_count mod 60 == 0)
 if(room != match_summary && (!paused || has_unpaused))
 {
     step_count += 1;
+    
+    if(bullet_time_end_time > current_time) {
+        var bullet_time_game_speed = round(game_speed / bullet_time_factor);
+        
+        if(current_game_speed > bullet_time_game_speed) {
+            current_game_speed = max(current_game_speed - game_speed_change_step, bullet_time_game_speed);
+            game_set_speed(current_game_speed, gamespeed_fps);
+        }
+    } else if(current_game_speed < game_speed) {
+        current_game_speed = min(current_game_speed + game_speed_change_step, game_speed);
+        game_set_speed(current_game_speed, gamespeed_fps);
+    }
 }
 
 // OCTARINE VALUE

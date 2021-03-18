@@ -734,6 +734,7 @@
     {"id":{"name":"snake_trophy_icon","path":"sprites/snake_trophy_icon/snake_trophy_icon.yy",},"order":8,},
     {"id":{"name":"slime_base_spr","path":"sprites/slime_base_spr/slime_base_spr.yy",},"order":9,},
     {"id":{"name":"slime_spr","path":"sprites/slime_spr/slime_spr.yy",},"order":10,},
+    {"id":{"name":"do_bullet_time","path":"scripts/do_bullet_time/do_bullet_time.yy",},"order":30,},
     {"id":{"name":"slime_ball_spr","path":"sprites/slime_ball_spr/slime_ball_spr.yy",},"order":11,},
     {"id":{"name":"sprinkler_concept","path":"sprites/sprinkler_concept/sprinkler_concept.yy",},"order":0,},
     {"id":{"name":"sprinkler_body_test","path":"sprites/sprinkler_body_test/sprinkler_body_test.yy",},"order":1,},
