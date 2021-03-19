@@ -8,4 +8,3 @@ if(instance_exists(my_guy))
     if(part_system_exists(system))
         part_system_automatic_draw(system, !invisible);
 }
-
