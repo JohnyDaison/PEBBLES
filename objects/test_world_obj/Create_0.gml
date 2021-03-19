@@ -53,9 +53,15 @@ place = add_place_in_room(room_show_off, "Show Off!", 0,0, 2368,2048, 0);
 place.description = "Quick jumps";
 ds_list_add(place.level_configs_list, "match");
 
+place.forced_modifiers[? "color_orbs_energy_lock"] = true;
 place.forced_modifiers[? "black_color"] = false;
 place.forced_modifiers[? "abilities"] = false;
 place.forced_modifiers[? "random_item_spawner"] = false;
+place.forced_modifiers[? "snakes_on_a_plane"] = false;
+place.forced_modifiers[? "bolt_rain"] = false;
+place.forced_modifiers[? "slime_mob_rain"] = false;
+place.forced_modifiers[? "artifacts"] = false;
+place.forced_modifiers[? "lightning_strikes"] = false;
 
 
 place = add_place_in_room(room_displays_test, "Displays", 0,0, 4800,4800, 384);
