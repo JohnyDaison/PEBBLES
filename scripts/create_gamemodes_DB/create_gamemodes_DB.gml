@@ -16,9 +16,9 @@ function create_gamemodes_DB() {
 
     gamemode_mod_create("one_death", "One Death", "bool", true, one_death_mod2_icon, "Death is final.");
 
-    gamemode_mod_create("holographic_spawners", "Holographic Spawners", "bool", true, holo_spawners_mod2_icon, "Base Crystals can't be damaged by attacks, Respawning the Player will still damage them.");
+    gamemode_mod_create("holographic_spawners", "Holographic Spawners", "bool", true, holo_spawners_mod2_icon, "Base Crystals can't be damaged by attacks. Respawning the Player will still damage them.");
 
-    gamemode_mod_create("weak_terrain", "Weak Terrain", "bool", true, weak_terrain_mod3_icon, "Destructible terrain blocks will have only 1/3 of normal HP.");
+    gamemode_mod_create("weak_terrain", "Weak Terrain", "bool", true, weak_terrain_mod3_icon, "Destructible terrain has 1/3 of normal HP.");
 
     gamemode_mod_create("indestr_terrain", "Indestructible Terrain", "bool", true, indestr_terrain_mod_icon, "All terrain is indestructible.");
 
@@ -412,6 +412,12 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 1;
     gm[? "start_place_room"] = room_empty_base;
     gm[? "is_coop"] = true;
+    
+    forced_mods = gm[? "forced_modifiers"];
+    forced_mods[? "tut_guide"] = false;
+    
+    default_mods = gm[? "default_modifiers"];
+    default_mods[? "shield_push"] = true;
 
 
     // Test mode
@@ -421,6 +427,9 @@ function create_gamemodes_DB() {
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 2;
     gm[? "is_coop"] = false;
+    
+    forced_mods = gm[? "forced_modifiers"];
+    forced_mods[? "tut_guide"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "shield_push"] = true;
@@ -442,7 +451,4 @@ function create_gamemodes_DB() {
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "hp_death"] = true;
     */
-
-
-
 }
