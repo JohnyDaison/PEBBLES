@@ -116,11 +116,13 @@ for(i = 0; i < num && !have_spawned; i+=1)
             {
                 if(random(1) < lightning_strikes_prob_ratio)
                 {
-                    var target = instance_nearest(x-16,0, wall_obj);
-                
-                    inst = instance_create(target.x+15, target.y, lightning_strike_obj);
-                    inst.my_color = irandom_range(g_red, g_white);
-                    inst.image_yscale = (target.y+256)/16;
+                    var target = instance_nearest(x - 16, 0, wall_obj);
+                    
+                    if(instance_exists(target)) {
+                        inst = instance_create(target.x + 15, target.y, lightning_strike_obj);
+                        inst.my_color = irandom_range(g_red, g_white);
+                        inst.image_yscale = (target.y + 256) / 16;
+                    }
                 }
                 
                 have_spawned = true;
