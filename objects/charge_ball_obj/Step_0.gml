@@ -217,9 +217,7 @@ if(charging && !firing)
         {
             if(object_is_ancestor(my_guy.object_index, guy_obj) && has_level(my_guy, "shield", 1))
             {
-                if(my_color > g_black
-                && (charge > (max_charge+overcharge)*orb_exhaustion_ratio || charge >= threshold)
-                && my_guy.shield_ready)
+                if(my_color > g_black && charge >= threshold && my_guy.shield_ready)
                 {
                     var shield = my_guy.my_shield;
                     if(instance_exists(shield))
