@@ -52,21 +52,10 @@ with(my_guy)
     my_player.my_guy = id;
     my_spawner = other.id;
     my_player.my_spawner = other.id;
+    guy_spawn_point_create(my_spawner, my_player, true);
     
     // CHARGEBALL
     guy_provide_chargeball(my_guy);
-    /*
-    if(has_level(my_player, "chargeball", 1))
-    {
-        if(!instance_exists(my_guy.charge_ball))
-        {
-            ii = instance_create(x,y,charge_ball_obj);
-            ii.my_guy = my_guy.id;
-            ii.my_player = self.my_player;
-            my_guy.charge_ball = ii;
-        }
-    }
-    */
     
     // guide 3
     script_execute(topic, "init", noone);
