@@ -1265,6 +1265,7 @@
     {"id":{"name":"reset_status_effects","path":"scripts/reset_status_effects/reset_status_effects.yy",},"order":5,},
     {"id":{"name":"status_burn_step","path":"scripts/status_burn_step/status_burn_step.yy",},"order":0,},
     {"id":{"name":"status_frozen_step","path":"scripts/status_frozen_step/status_frozen_step.yy",},"order":1,},
+    {"id":{"name":"checkpoint_sound","path":"sounds/checkpoint_sound/checkpoint_sound.yy",},"order":4,},
     {"id":{"name":"status_slow_step","path":"scripts/status_slow_step/status_slow_step.yy",},"order":2,},
     {"id":{"name":"status_overcharge_start","path":"scripts/status_overcharge_start/status_overcharge_start.yy",},"order":3,},
     {"id":{"name":"status_overcharge_end","path":"scripts/status_overcharge_end/status_overcharge_end.yy",},"order":4,},
