@@ -39,27 +39,14 @@ self.border_color = c_green;
 
 // ELEMENTS
 
-var i, ii;
+var i;
 
 // HISTORY
-ii = gui_add_list_picker(x, y, "text", DB.console_history);
-ii.width = self.width;
-ii.height = self.height - panel_height;
-ii.centered = true;
-ii.auto_items = true;
-with(ii)
-{
-    alarm[0] = -1;
-    event_perform(ev_alarm, 0);
-}
-
-gui_hide_element(ii.up_arrow);
-gui_hide_element(ii.down_arrow);
-
-self.history_list_picker = ii;
-
-i = history_list_picker.scroll_list;
-
+i = gui_add_scroll_list(x, y);
+i.width = self.width;
+i.height = self.height - panel_height;
+i.centered = true;
+i.auto_items = true;
 i.align_items = "left";
 i.draw_bg_color = false;
 i.draw_border = false;
@@ -72,7 +59,9 @@ i.item_padding = 0;
 i.highlight_color = merge_colour(c_black, c_purple, 0.5);
 i.select_color = merge_colour(c_black, c_lime, 0.5);
 i.max_items = visible_line_count;
-i.item_count = ds_list_size(i.items);
+i.is_list_picker = true;
+
+gui_reset_scroll_items(i, "text", DB.console_history);
 
 self.history_list = i;
 

@@ -22,8 +22,7 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
     }
     
     self.height = (visible_line_count+1)*line_height + panel_height;
-    history_list_picker.height = self.height - panel_height;
-    history_list.height = history_list_picker.height;
+    history_list.height = self.height - panel_height;    
     
     gui_move_element(status_button, x, y+height-32);
     gui_move_element(command_input, x+32, y+height-32);
