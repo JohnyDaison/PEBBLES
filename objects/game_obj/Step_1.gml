@@ -65,6 +65,11 @@ if(holographic)
     }
 }
 
+if(!holographic && holo_alpha != -1)
+{
+    holo_alpha = 1;
+}
+
 // OBJECT CENTER OFFSET
 if(obj_center_offset && !obj_center_updated)
 {
