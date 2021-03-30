@@ -164,19 +164,6 @@ if(instance_exists(my_guy))
         label_height = string_height(abi_name) + 4;
         label_width = string_width(abi_name) + 4;
         
-        // SLOTS DISPLAY
-    
-        slots_y = abi_y2 + dial_dist + 8;
-
-        full_slot_number = my_guy.slots_absorbed;
-        slot_color = my_guy.my_color;
-
-        ready_slot_number = my_guy.slot_number;
-        max_slot_number = my_guy.slot_maxnumber;
-            
-        slot_offset = -slot_size*max_slot_number/2;
-        slot_tint = ds_map_find_value(DB.colormap,slot_color);
-        
         // ORB BELTS
         if(screen_side == -1)
         {
@@ -457,7 +444,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     // ORB STORAGE NUMBERS
     if(!hide_storage)
     {
-        number_y = slots_y + 24;
+        number_y = abi_y2 + dial_dist + 8 + slot_size;
         draw_set_alpha(1);
         my_draw_set_font(label_font);
         

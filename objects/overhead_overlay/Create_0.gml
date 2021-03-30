@@ -132,15 +132,6 @@ for(i=1; i<=group_count; i++)
 
 abi_panel_width += group_count * abi_group_space;
 
-// SLOTS 
-empty_slot_tint = c_ltgray;
-slot_size = 24;
-
-full_slot_number = 0;
-ready_slot_number = 0;
-max_slot_number = 0;
-slot_color = g_black;
-
 // ORB BELTS
 belt_size = 0;
 orb_belt_width = 46;
@@ -185,6 +176,9 @@ chborbit_blink_rate = 10;
 belt_blink_rate = 10;
 abilities_blink_rate = 10;
 
+// STORAGE 
+slot_size = 24;
+slot_offset = -slot_size * 1.5;
 
 // ORB COUNTS
 last_orbs = ds_map_create();
@@ -197,4 +191,3 @@ orb_light = ds_map_create();
 orb_light[? g_red] = 0;
 orb_light[? g_green] = 0;
 orb_light[? g_blue] = 0;
-
