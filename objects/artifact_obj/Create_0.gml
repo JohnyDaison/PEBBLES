@@ -14,6 +14,8 @@ self.damage_tint_ratio = 0.5;
 my_shield = noone;
 last_attacker_init();
 
+alarm[0] = irandom(180)+1;
+
 self.name = "Artifact";
 
 event_perform(ev_other,ev_user1);
