@@ -26,12 +26,12 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"a2f3f862-2a34-41e8-b796-878b2b969f11","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"25a87441-3cd3-499e-8f87-e7d5ccee3a90","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"5a053d83-f408-47fc-8217-6c75baa990af","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"b1aadd22-3b1e-41c9-b2d7-acef6b8da42a","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"05c42663-73f1-47fb-9a5a-e52ab50a480b","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"8e061a5a-1a19-47f0-b353-b65f0433812a","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"5a053d83-f408-47fc-8217-6c75baa990af","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"8fc82686-7eff-437c-bf52-6f2a3763a141","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"05c42663-73f1-47fb-9a5a-e52ab50a480b","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"b1aadd22-3b1e-41c9-b2d7-acef6b8da42a","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"LayerId":{"name":"25a87441-3cd3-499e-8f87-e7d5ccee3a90","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"abilities_mod_icon","path":"sprites/abilities_mod_icon/abilities_mod_icon.yy",},"resourceVersion":"1.0","name":"258322a2-0fab-41ba-aba7-3ce0c1df3444","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -81,6 +81,7 @@
         {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3 (2) (2)","resourceVersion":"1.0","name":"25a87441-3cd3-499e-8f87-e7d5ccee3a90","tags":[],"resourceType":"GMImageLayer",},
       ],"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"old","resourceVersion":"1.0","name":"791904eb-e5b4-41d8-a1f3-62ba2a0b9ffc","tags":[],"resourceType":"GMImageFolderLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

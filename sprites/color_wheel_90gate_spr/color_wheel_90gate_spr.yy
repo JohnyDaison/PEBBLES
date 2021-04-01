@@ -26,13 +26,13 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"bf47ba48-a071-4437-be4c-818bae75d1db","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"9e467b27-90b4-429a-95ef-06937dc4c5f0","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"1e8d54d1-c3fd-4ba8-ae77-0537d106d461","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"ef2e77d3-0b8b-4e96-bc57-ff3d5f2d6d1e","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"0317c798-8e5b-400a-a4b5-079364886417","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"30939bc4-9c40-4d0a-abc5-721f3e47ecf0","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"f9bc1875-5185-4d8e-9e40-5f1f9dea1873","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"c2d3a3ca-7833-4c6d-86c7-101c8cc65d4b","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"9e467b27-90b4-429a-95ef-06937dc4c5f0","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"0317c798-8e5b-400a-a4b5-079364886417","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"LayerId":{"name":"ef2e77d3-0b8b-4e96-bc57-ff3d5f2d6d1e","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"color_wheel_90gate_spr","path":"sprites/color_wheel_90gate_spr/color_wheel_90gate_spr.yy",},"resourceVersion":"1.0","name":"a9527b56-33c8-42c0-a2d5-c2c796b8bce1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -85,6 +85,7 @@
         {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Notches 1","resourceVersion":"1.0","name":"ef2e77d3-0b8b-4e96-bc57-ff3d5f2d6d1e","tags":[],"resourceType":"GMImageLayer",},
       ],"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Notches","resourceVersion":"1.0","name":"a5021e38-b788-4d20-a680-16b672ea2916","tags":[],"resourceType":"GMImageFolderLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "collections",
     "path": "folders/Sprites/collections.yy",
