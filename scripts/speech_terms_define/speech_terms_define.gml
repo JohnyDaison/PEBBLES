@@ -6,7 +6,7 @@ function speech_terms_define() {
     speech_add_term("jump_suit", "Jump Suit", def_color);
     speech_add_term("double_jump", "Double jump", def_color);
     speech_add_term("triple_jump", "Triple jump", def_color);
-    speech_add_term("dive_jump", "Charge jump", def_color);
+    speech_add_term("charge_jump", "Charge jump", def_color);
     speech_add_term("wall_jump", "Wall jump", def_color);
     speech_add_term("dive_jump", "Dive jump", def_color);
 
@@ -121,7 +121,4 @@ function speech_terms_define() {
     speech_add_term("yellow", "Yellow", def_color);
     speech_add_term("white", "White", def_color);
     speech_add_term("octarine", "Octarine", def_color);
-
-
-
 }

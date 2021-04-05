@@ -1,1 +1,0 @@
-zone_id = "wall_climb/start";

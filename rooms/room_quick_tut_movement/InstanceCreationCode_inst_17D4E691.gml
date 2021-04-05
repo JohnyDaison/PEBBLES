@@ -1,1 +1,0 @@
-zone_id = "charged_jump_up/start";

@@ -1,0 +1,1 @@
+waypoint_id = "double_jump_pickup/success";
