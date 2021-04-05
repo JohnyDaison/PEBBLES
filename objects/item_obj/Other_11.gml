@@ -13,6 +13,10 @@ if(level_upgrade || level_setter)
             var value = levels[? level];
             var old_val = my_guy.my_player.levels[? level];
             
+            if(level_upgrade && !level_upto) {
+                value *= stack_size;
+            }
+            
             var success = false;
             if(level_upgrade)
             {

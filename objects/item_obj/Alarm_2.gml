@@ -16,12 +16,13 @@ if(duplicate_me && !is_duplicate)
     {
         if(i != for_player)
         {
-            inst = instance_create(x,y, object_index);
+            var inst = instance_create(x,y, object_index);
             inst.for_player = i;
             inst.my_color = my_color;
             inst.immovable = immovable;
             inst.keep_on_death = keep_on_death;
             inst.level_upto = level_upto;
+            inst.stack_size = stack_size;
             if(i == 0)
             {
                 inst.holographic = true;
