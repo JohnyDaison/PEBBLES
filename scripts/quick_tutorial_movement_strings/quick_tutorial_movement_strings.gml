@@ -10,12 +10,12 @@ function quick_tutorial_movement_strings() {
 
     I18n[? "quick_tutorial_movement/climb/active"] = "Climb up.";
 
-    I18n[? "quick_tutorial_movement/charged_jump_pickup/active"] = "Boots let you jump higher.";
+    I18n[? "quick_tutorial_movement/charged_jump_pickup/success"] = "Boots let you Charge jump.";
 
     I18n[? "quick_tutorial_movement/charged_jump_up/active"] = "Straight up.";
     I18n[? "quick_tutorial_movement/charged_jump_up/success"] = "OK.";
     
-    I18n[? "quick_tutorial_movement/double_jump_pickup/active"] = "Jets let you jump in mid-air.";
+    I18n[? "quick_tutorial_movement/double_jump_pickup/success"] = "Jets let you jump in mid-air.";
     
     I18n[? "quick_tutorial_movement/double_jump/active"] = "Straight up, then Double jump.";
     I18n[? "quick_tutorial_movement/double_jump/success"] = "Good!";
@@ -23,7 +23,7 @@ function quick_tutorial_movement_strings() {
     I18n[? "quick_tutorial_movement/charged_jump_run/active"] = "You can Charge jump while running.";
     I18n[? "quick_tutorial_movement/charged_jump_run/success"] = "Nice.";
     
-    I18n[? "quick_tutorial_movement/wall_climb_pickup/active"] = "Gloves let you stick to walls.";
+    I18n[? "quick_tutorial_movement/wall_climb_pickup/success"] = "Gloves let you stick to walls.";
 
     I18n[? "quick_tutorial_movement/wall_climb/active"] = "Just hug the wall and jump repeatedly.";
     I18n[? "quick_tutorial_movement/wall_climb/success"] = "You can try to Wall jump or continue inside.";

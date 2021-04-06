@@ -10,8 +10,7 @@ levels[? "charged_jump"] = 1;
 pickup_sound = jump_sound;
 max_stack_size = 2;
 
-self.name = "Charged Jump";
+self.name = "Jump Boots";
 self.description = 
 @"HOLD JUMP to charge,
 then JUMP HIGH when you release it.";
-
