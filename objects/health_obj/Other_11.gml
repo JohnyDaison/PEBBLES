@@ -10,7 +10,7 @@ create_text_popup("Health", my_color, id, 0, -48, true);
 i = create_damage_popup(total_boost, my_color, id, "health_item");
 i.y += 16;
 
-var guy = other;
+var guy = other.id;
 
 with(healthbar_overlay)
 {
