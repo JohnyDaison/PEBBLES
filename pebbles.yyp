@@ -251,6 +251,7 @@
     {"id":{"name":"haste_icon_small","path":"sprites/haste_icon_small/haste_icon_small.yy",},"order":2,},
     {"id":{"name":"heal_icon_small","path":"sprites/heal_icon_small/heal_icon_small.yy",},"order":3,},
     {"id":{"name":"chaos_drive_icon_small","path":"sprites/chaos_drive_icon_small/chaos_drive_icon_small.yy",},"order":4,},
+    {"id":{"name":"auto_pickup_quest_item","path":"scripts/auto_pickup_quest_item/auto_pickup_quest_item.yy",},"order":5,},
     {"id":{"name":"invisibility_icon_small","path":"sprites/invisibility_icon_small/invisibility_icon_small.yy",},"order":5,},
     {"id":{"name":"teleport_icon_small","path":"sprites/teleport_icon_small/teleport_icon_small.yy",},"order":6,},
     {"id":{"name":"ubershield_icon_small","path":"sprites/ubershield_icon_small/ubershield_icon_small.yy",},"order":7,},
