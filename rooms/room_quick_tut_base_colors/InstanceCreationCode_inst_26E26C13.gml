@@ -1,1 +1,0 @@
-zone_id = "hp_bar/start";

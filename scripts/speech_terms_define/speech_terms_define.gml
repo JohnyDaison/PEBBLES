@@ -75,6 +75,7 @@ function speech_terms_define() {
     speech_add_term("terminal", "Terminal", def_color);
     speech_add_term("cannon", "Cannon", def_color);
     speech_add_term("turret", "Turret", def_color);
+    speech_add_term("device", "Device", def_color);
 
 
     speech_add_term("guide", "Guide", def_color);

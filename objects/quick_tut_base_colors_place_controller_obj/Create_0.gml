@@ -34,6 +34,12 @@ anim_sets[? "green_charged_jump"] = green_charged_jump_anim_set;
 anim_groups[? "orb_blue"] = noone;
 anim_sets[? "orb_blue"] = orb_blue_anim_set;
 
+anim_groups[? "blast_turret"] = noone;
+anim_sets[? "blast_turret"] = blast_turret_anim_set;
+
+anim_groups[? "pressure_plate"] = noone;
+anim_sets[? "pressure_plate"] = pressure_plate_anim_set;
+
 anim_groups[? "orb_red"] = noone;
 anim_sets[? "orb_red"] = orb_red_anim_set;
 

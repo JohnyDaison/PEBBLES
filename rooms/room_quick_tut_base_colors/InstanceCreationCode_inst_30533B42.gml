@@ -1,1 +1,2 @@
-waypoint_id = "push_button/success";
+waypoint_id = "push_button/active";
+autospeak = true;
