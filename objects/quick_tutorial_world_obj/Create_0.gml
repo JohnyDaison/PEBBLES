@@ -20,7 +20,7 @@ place.times[? "bronze"] = 58;
 place.times[? "normal"] = 82;
 */
 
-place = add_place_in_room(room_quick_tut_base_colors, "The Trinity", 0,0, 9600,3840, 192);
+place = add_place_in_room(room_quick_tut_base_colors, "The Trinity", 0,0, 9600,3840, 0);
 place.description = "Effects of Red, Green and Blue";
 place.controller = quick_tut_base_colors_place_controller_obj;
 ds_list_add(place.level_configs_list, "tutorial", "movement");

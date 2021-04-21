@@ -1,2 +1,2 @@
-waypoint_id = "green_floor/active";
+waypoint_id = "weak_effect/active";
 autospeak = true;

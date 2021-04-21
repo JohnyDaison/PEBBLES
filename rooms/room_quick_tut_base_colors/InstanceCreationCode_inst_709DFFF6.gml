@@ -1,0 +1,1 @@
+zone_id = "weak_effect/success";

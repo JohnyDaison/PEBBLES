@@ -3,10 +3,11 @@ function quick_tutorial_base_colors_strings() {
     I18n[? "quick_tutorial_base_colors/color_belts_pickup/active"] = "The Belts can hold Color Orbs.";
     I18n[? "quick_tutorial_base_colors/color_belts_pickup/success-taunt"] = "Let's find them.";
 
-    I18n[? "quick_tutorial_base_colors/green_floor/active"] = "Green is sticky and makes you Slow.";
-    //I18n[? "quick_tutorial_base_colors/green_floor/active"] = "More energy -> walls effect is stronger.";
-    I18n[? "quick_tutorial_base_colors/green_floor/success-taunt"] = "...";
-    I18n[? "quick_tutorial_base_colors/green_floor/success"] = "Now to deal with that...";
+    I18n[? "quick_tutorial_base_colors/weak_effect/active"] = "Green is sticky and makes you Slow.";
+    I18n[? "quick_tutorial_base_colors/weak_effect/success"] = "Green is sticky and makes you Slow.";
+    I18n[? "quick_tutorial_base_colors/strong_effect/active"] = "More Energy -> Effect is stronger.";
+    I18n[? "quick_tutorial_base_colors/strong_effect/success-taunt"] = "...";
+    I18n[? "quick_tutorial_base_colors/strong_effect/success"] = "Now to deal with that...";
 
     I18n[? "quick_tutorial_base_colors/green_orb/active"] = "Orbs hold Color and Energy.";
     //I18n[? "quick_tutorial_base_colors/green_orb/success-taunt"] = "Get your own today!";

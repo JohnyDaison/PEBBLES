@@ -1,2 +1,2 @@
-waypoint_id = "green_floor/success";
+waypoint_id = "strong_effect/success";
 connect_to = "green_orb/active";
