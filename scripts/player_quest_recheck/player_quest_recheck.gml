@@ -226,18 +226,33 @@ function player_quest_recheck() {
                     {
                         cond_states[? tr_cond_str] = subtask_reached;
                     }
+                    // CONDITION: zone_enter
+                    else if(condition[? "type"] == "zone" && condition[? "verb"] == "enter")
+                    {
+                        var group = get_group("zones");
+                        
+                        if (instance_exists(group) && instance_exists(player.my_guy)) {
+                            var zone = group_find_member(group, condition[? "zone_id"]);
+                            
+                            if (!is_undefined(zone) && instance_exists(zone)) {
+                                var inside = ds_list_find_index(zone.inside_list, player.my_guy.id) != -1;
+                        
+                                cond_states[? tr_cond_str] = inside;
+                            }
+                        }
+                    }
                     // CONDITION: channel_duration
                     else if(condition[? "type"] == "channel" && condition[? "verb"] == "duration")
                     {
-                        cond_states[? tr_cond_str] = my_guy.channel_duration >= condition[? "duration"];
+                        cond_states[? tr_cond_str] = player.my_guy.channel_duration >= condition[? "duration"];
                     }
                     // CONDITION: has_tried_to_move
                     else if(condition[? "type"] == "has_tried_to" && condition[? "verb"] == "move")
                     {
                         var state = false;
-                        if(instance_exists(my_guy))
+                        if(instance_exists(player.my_guy))
                         {
-                            state = my_guy.wanna_run;
+                            state = player.my_guy.wanna_run;
                         }
                 
                         cond_states[? tr_cond_str] = state;
@@ -259,7 +274,7 @@ function player_quest_recheck() {
                     // CONDITION: trigger_displays
                     else if(condition[? "type"] == "trigger" && condition[? "verb"] == "displays")
                     {
-                        if(instance_exists(my_guy) && subtask_reached)
+                        if(instance_exists(player.my_guy) && subtask_reached)
                         {
                             trigger(place_controller_obj, quest_node[? "display_group"], my_guy);   
                         }
@@ -269,7 +284,7 @@ function player_quest_recheck() {
                     // CONDITION: trigger_spawners
                     else if(condition[? "type"] == "trigger" && condition[? "verb"] == "spawners")
                     {
-                        if(instance_exists(my_guy) && subtask_reached)
+                        if(instance_exists(player.my_guy) && subtask_reached)
                         {
                             var group_id = quest_node[? "spawner_group"];
                             var spawners = get_group(group_id);
@@ -280,7 +295,7 @@ function player_quest_recheck() {
                             {
                                 spawner = spawners.members[| m_i];
                             
-                                with(my_guy)
+                                with(player.my_guy)
                                 {
                                     with(spawner)
                                     {
