@@ -1,6 +1,6 @@
 if(inv_size != -1)
 {
-    if(instance_exists(my_player) && instance_exists(my_guy) && view_enabled)
+    if(instance_exists(my_player) && instance_exists(my_guy) && view_enabled && draw_inventory)
     {
         my_camera = my_player.my_camera;
         if(instance_exists(my_camera))

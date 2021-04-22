@@ -29,4 +29,6 @@ bg_sprite = inventory_bg_spr;
 border_sprite = inventory_cursor_spr;
 full_inv_blink = false;
 
-
+draw_inventory = true;
+whole_inv_blink_time = 0;
+whole_inv_blink_rate = 10;

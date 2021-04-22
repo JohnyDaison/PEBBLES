@@ -38,6 +38,14 @@ else
             }
         }
     }
+    
+    // BLINK WHOLE INVENTORY
+    if(whole_inv_blink_time > 0)
+    {
+        draw_inventory = ((whole_inv_blink_time div whole_inv_blink_rate) + 1) mod 2;
+    
+        whole_inv_blink_time--;
+    }
 }
 
 if(instance_exists(my_guy))

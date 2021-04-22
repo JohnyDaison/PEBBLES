@@ -128,6 +128,18 @@ function guide_quick_catalyst2() {
                 desired_aim_dist = 1;
                 set_guy_facing(true);
             }
+            
+            if(selected_subtask == "use_terminal")
+	        {
+	            with(inventory_overlay)
+	            {
+	                if(my_guy == near_player_guy && whole_inv_blink_time == 0)
+	                {
+	                    whole_inv_blink_rate = 20;
+	                    whole_inv_blink_time = whole_inv_blink_rate*4;
+	                }
+	            }
+	        }
         
             break;
         
