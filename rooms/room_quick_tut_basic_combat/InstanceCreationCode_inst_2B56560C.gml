@@ -1,0 +1,1 @@
+damage = hp - 2;

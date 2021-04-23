@@ -1,0 +1,1 @@
+zone_id = "climb_tower/start";
