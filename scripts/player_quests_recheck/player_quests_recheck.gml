@@ -1,26 +1,18 @@
-/// @description player_quests_recheck(player)
-/// @function player_quests_recheck
-/// @param player
-function player_quests_recheck() {
-	var player = argument[0];
+function player_quests_recheck(player) {
+    var i, context_id;
+    var count = ds_list_size(player.root_quest_list);
+    var checks_done = 0;
 
-	var i, count = ds_list_size(player.root_quest_list);
+    with(player)
+    {
+        for(i = 0; i < count; i++)
+        {
+            context_id = root_quest_list[| i];
+            checks_done += player_quest_recheck(player, context_id);
+        }
 
-	var checks_done = 0;
+        last_quests_recheck = singleton_obj.step_count;
+    }
 
-	with(player)
-	{
-	    for(i = 0; i < count; i++)
-	    {
-	        other.context_id = root_quest_list[| i];
-	        checks_done += player_quest_recheck(player, other.context_id);
-	    }
-
-	    last_quests_recheck = singleton_obj.step_count;
-	}
-
-	return checks_done;
-
-
-
+    return checks_done;
 }
