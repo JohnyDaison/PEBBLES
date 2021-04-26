@@ -1,1 +1,1 @@
-my_player = gamemode_obj.players[? 1];
+cannon_assign_player_number(self, 1);

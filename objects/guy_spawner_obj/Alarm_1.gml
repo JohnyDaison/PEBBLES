@@ -31,18 +31,7 @@ if(player_start_point)
 // CANNON
 if(has_cannon)
 {
-    ii = instance_create(x,y-128,cannon_base_obj);
-    ii.my_player = self.my_player;
-    //ii.my_guy = ii.my_player.my_guy.id;
-    base_cannon = ii;
+    var cannon = instance_create(x,y-128,cannon_base_obj);
+    cannon_assign_player(cannon, my_player);
+    base_cannon = cannon;
 }
-
-/*
-// CANNON CHARGEBALL
-ii = instance_create(x,y-128,charge_ball_obj);
-ii.my_guy = base_cannon.id;
-ii.my_player = self.my_player;
-ii.bar_height = 12;
-base_cannon.charge_ball = ii;
-*/
-

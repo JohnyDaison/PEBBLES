@@ -51,4 +51,6 @@ else
 ds_map_destroy(orbs);
 ds_map_destroy(orb_light);
 
+cannon_unassign_player(self);
+
 event_inherited();

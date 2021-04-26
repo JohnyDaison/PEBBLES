@@ -99,3 +99,5 @@ if(instance_exists(place_controller_obj))
      
      regenerate_nav_graph();
 }
+
+cannon_assign_player(self, my_player);
