@@ -10,6 +10,7 @@ handicaps = ds_map_create();
 stats = ds_map_create();
 my_spawner = noone;
 my_base = noone;
+my_cannons = ds_list_create();
 my_camera = noone;
 my_player = id;
 my_guy = noone;
