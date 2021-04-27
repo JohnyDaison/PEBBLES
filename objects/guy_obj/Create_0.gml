@@ -306,7 +306,10 @@ self.step_count = 0;
 // DIRECTIONS
 self.hor_dir_held = false;
 self.wanna_run = false;
-self.wanna_wanna_look = false;
+look_toggled_on = false;
+look_hold_start = -1;
+look_hold_min_duration = 500;
+look_on = false;
 self.wanna_look = false;
 self.facing_right = true;
 facing=1;
