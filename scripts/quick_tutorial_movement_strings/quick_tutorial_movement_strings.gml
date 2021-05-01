@@ -8,17 +8,19 @@ function quick_tutorial_movement_strings() {
 
     I18n[? "quick_tutorial_movement/jump/active"] = "Go ahead."
 
-    I18n[? "quick_tutorial_movement/climb/active"] = "Climb up.";
+    I18n[? "quick_tutorial_movement/climb/active"] = "Climb the ledges.";
 
-    I18n[? "quick_tutorial_movement/charged_jump_pickup/success"] = "Boots let you Charge jump.";
+    I18n[? "quick_tutorial_movement/charged_jump_pickup/success"] = "Chargers let you jump higher.";
 
-    I18n[? "quick_tutorial_movement/charged_jump_up/active"] = "Straight up.";
+    I18n[? "quick_tutorial_movement/charged_jump_up/active"] = "Follow me!";
     I18n[? "quick_tutorial_movement/charged_jump_up/success"] = "OK.";
     
     I18n[? "quick_tutorial_movement/double_jump_pickup/success"] = "Jets let you jump in mid-air.";
     
     I18n[? "quick_tutorial_movement/double_jump/active"] = "Straight up, then Double jump.";
     I18n[? "quick_tutorial_movement/double_jump/success"] = "Good!";
+    
+    I18n[? "quick_tutorial_movement/triple_jump_pickup/success"] = "More Jets means more Jumps!";
 
     I18n[? "quick_tutorial_movement/charged_jump_run/active"] = "You can Charge jump while running.";
     I18n[? "quick_tutorial_movement/charged_jump_run/success"] = "Nice.";

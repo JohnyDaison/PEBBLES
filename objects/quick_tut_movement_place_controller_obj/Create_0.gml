@@ -16,10 +16,8 @@ anim_sets[? "press_jump"] = simple_jump_anim_set;
 anim_groups[? "press_jump_climb"] = noone;
 anim_sets[? "press_jump_climb"] = jump_climb_anim_set;
 
-/*
 anim_groups[? "grab_ledge"] = noone;
 anim_sets[? "grab_ledge"] = grab_ledge_anim_set;
-*/
 
 anim_groups[? "double_jump"] = noone;
 anim_sets[? "double_jump"] = double_jump2_anim_set;

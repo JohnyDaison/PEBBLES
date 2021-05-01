@@ -1,4 +1,4 @@
 object = infodisplay_obj;
-group_id = "press_jump_climb";
-index = 1;
+group_id = "grab_ledge";
+index = 0;
 member_id = "";

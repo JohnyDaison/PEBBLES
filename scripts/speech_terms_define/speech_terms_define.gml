@@ -8,7 +8,10 @@ function speech_terms_define() {
     speech_add_term("triple_jump", "Triple jump", def_color);
     speech_add_term("charge_jump", "Charge jump", def_color);
     speech_add_term("wall_jump", "Wall jump", def_color);
-    speech_add_term("dive_jump", "Dive jump", def_color);
+    speech_add_term("dive", "Dive", def_color);
+    speech_add_term("charger", "Charger", def_color);
+    speech_add_term("jet", "Jet", def_color);
+    speech_add_term("glove", "Glove", def_color);
 
 
     speech_add_term("belt", "Belt", def_color);

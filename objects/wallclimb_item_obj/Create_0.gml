@@ -7,14 +7,13 @@ image_alpha = 0.9;
 level_upgrade = true;
 consumed_on_pickup = true;
 pickup_sound = jump_sound;
-max_stack_size = 2;
 
 levels[? "wall_hold"] = 1;
-levels[? "wall_climb"] = 1;
-levels[? "wall_jump"] = 1;
+levels[? "wall_climb"] = 2;
+levels[? "wall_jump"] = 3;
 
-self.name = "Climbing Gloves";
+self.name = "Magnetic Gloves";
 
 self.description = 
-@"Now you can climb walls
-and do Wall jump.";
+@"Now you can Wall Climb
+and Wall Jump.";

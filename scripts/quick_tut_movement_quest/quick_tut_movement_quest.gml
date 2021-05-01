@@ -1,5 +1,5 @@
 function quick_tut_movement_quest() {
-    var transition, condition;
+    var transition, condition, effect;
 
     // LVL1 Mountain-side quest
     var quest_id = "quick_tutorial_movement";
@@ -34,14 +34,14 @@ function quick_tut_movement_quest() {
     condition = quest_add_condition(transition, "zone", "enter", "intro_exit/success");
 
     // Jump
-    quest_create_subtask(quest_id, "simple_nav", "jump", "Jump", "", i++, true);
+    node = quest_create_subtask(quest_id, "one_way_nav", "jump", "Jump", "", i++, true);
 
     // Climb
     node = quest_create_subtask(quest_id, "simple_nav_reached_start", "climb", "Climb", "", i++, true);
 
     // Pickup Charged Jump
     node = quest_create_subtask(quest_id, "item_pickup", "charged_jump_pickup", "Charged Jump pickup", "", i++, true);
-    node[? "target_item"] = charged_jump_item_obj;
+    node[? "target_item"] = charged_jump_lvl2_item_obj;
     node[? "display_group"] = "clear";
     
     transition = quest_transition_find(node, "", "start");
@@ -49,11 +49,8 @@ function quick_tut_movement_quest() {
     condition = quest_add_condition(transition, "trigger", "displays");
 
     // Charged jump up
-    node = quest_create_subtask(quest_id, "simple_nav", "charged_jump_up", "Charged jump: Up", "", i++, true);
+    node = quest_create_subtask(quest_id, "one_way_nav", "charged_jump_up", "Charged jump: Up", "", i++, true);
     node[? "display_group"] = "charged_jump_up";
-    
-    transition = quest_transition_find(node, "", "start");
-    condition = quest_add_condition(transition, "subtask", "reached");
     
     transition = quest_transition_find(node, "", "success");
     condition = quest_add_condition(transition, "trigger", "displays");
@@ -61,24 +58,27 @@ function quick_tut_movement_quest() {
     // Pickup Double Jump
     node = quest_create_subtask(quest_id, "item_pickup", "double_jump_pickup", "Double Jump pickup", "", i++, true);
     node[? "target_item"] = pulse_booster_item_obj;
-    node[? "display_group"] = "clear";
+    node[? "display_group"] = "double_jump";
     
     transition = quest_transition_find(node, "", "start");
     condition = quest_add_condition(transition, "subtask", "reached");
     condition = quest_add_condition(transition, "trigger", "displays");
     
     // Double jump
-    node = quest_create_subtask(quest_id, "simple_nav", "double_jump", "Double jump", "", i++, true);
-    node[? "display_group"] = "double_jump";
+    node = quest_create_subtask(quest_id, "one_way_nav", "double_jump", "Double jump", "", i++, true);
+    
+    transition = quest_transition_find(node, "", "success");
+    effect = quest_add_effect(transition, "displays", "trigger", "clear");
+    
+    // Pickup Triple Jump
+    node = quest_create_subtask(quest_id, "item_pickup", "triple_jump_pickup", "Triple Jump pickup", "", i++, true);
+    node[? "target_item"] = pulse_booster_item_obj;
     
     transition = quest_transition_find(node, "", "start");
     condition = quest_add_condition(transition, "subtask", "reached");
-    
-    transition = quest_transition_find(node, "", "success");
-    condition = quest_add_condition(transition, "trigger", "displays");
 
     // Charged jump run
-    quest_create_subtask(quest_id, "simple_nav", "charged_jump_run", "Running Charged jump", "", i++, true);
+    node = quest_create_subtask(quest_id, "one_way_nav", "charged_jump_run", "Running Charged jump", "", i++, true);
     
     // Pickup Wall climb
     node = quest_create_subtask(quest_id, "item_pickup", "wall_climb_pickup", "Wall Climb pickup", "", i++, true);
@@ -88,27 +88,24 @@ function quick_tut_movement_quest() {
     condition = quest_add_condition(transition, "subtask", "reached");
     
     // Wall climb
-    node = quest_create_subtask(quest_id, "simple_nav", "wall_climb", "Climb the wall", "", i++, true);
+    node = quest_create_subtask(quest_id, "one_way_nav", "wall_climb", "Climb the wall", "", i++, true);
     node[? "display_group"] = "wall_climb";
-    
-    transition = quest_transition_find(node, "", "start");
-    condition = quest_add_condition(transition, "subtask", "reached");
     
     transition = quest_transition_find(node, "", "success");
     condition = quest_add_condition(transition, "trigger", "displays");
 
     // Wall jump
-    quest_create_subtask(quest_id, "simple_nav", "wall_jump", "Wall Jump", "", i++, false);
+    node = quest_create_subtask(quest_id, "one_way_nav", "wall_jump", "Wall Jump", "", i++, false);
     
     // Impact mechanic
-    quest_create_subtask(quest_id, "simple_nav", "impact_mechanic", "Impact mechanic", "", i++, true);
+    quest_create_subtask(quest_id, "one_way_nav", "impact_mechanic", "Impact mechanic", "", i++, true);
     
-    // Get to Dive Jump
-    quest_create_subtask(quest_id, "simple_nav", "get_to_dive_jump", "Get to Dive Jump", "", i++, true);
+    // Get to Dive
+    quest_create_subtask(quest_id, "one_way_nav", "get_to_dive_jump", "Get to Dive", "", i++, true);
 
-    // Dive Jump
-    quest_create_subtask(quest_id, "simple_nav", "dive_jump", "Dive Jump", "", i++, true);
+    // Dive
+    quest_create_subtask(quest_id, "one_way_nav", "dive_jump", "Dive", "", i++, true);
 
     // Exit level
-    node = quest_create_subtask(quest_id, "simple_nav", "exit_level", "Exit level", "", i++, true);
+    node = quest_create_subtask(quest_id, "one_way_nav", "exit_level", "Exit level", "", i++, true);
 }

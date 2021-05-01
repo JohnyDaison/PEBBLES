@@ -6,7 +6,7 @@ var place;
 
 
 place = add_place_in_room(room_quick_tut_movement, "Jump, jump, jump!", 0,0, 4480,3520, 0);
-place.description = "Climbing, Charged jump, Triple jump, Wall hold, Wall jump, Impact, Dive jump";
+place.description = "Climbing, Charged jump, Triple jump, Wall hold, Wall jump, Impact, Dive";
 place.controller = quick_tut_movement_place_controller_obj;
 ds_list_add(place.level_configs_list, "tutorial");
 

@@ -55,10 +55,25 @@ function quest_create_subtask(argument0, argument1, argument2, argument3, argume
     {
         node = quest_node_create(subquest_id, name, description);
         node[? "subtask_type"] = "simple_nav_reached_start";
-        node[? "guide_failure_limit"] = 2;
     
         transition = quest_transition_create(subquest_id, "init", "start");
         condition = quest_add_condition(transition, "subtask", "reached");
+        
+        transition = quest_transition_create(subquest_id, "nonsuccess", "success");
+        condition = quest_add_condition(transition, "zone", "enter", context_id + "/success");
+    
+        quest_add_subtask(parent_quest_id, subquest_id, context_id, order_index, mandatory);
+    }
+    
+    if(subquest_type == "one_way_nav")
+    {
+        node = quest_node_create(subquest_id, name, description);
+        node[? "subtask_type"] = "one_way_nav";
+    
+        transition = quest_transition_create(subquest_id, "init", "start");
+        condition = quest_add_condition(transition, "subtask", "reached");
+        condition = quest_add_condition(transition, "zone", "enter", context_id + "/start");
+        
         transition = quest_transition_create(subquest_id, "nonsuccess", "success");
         condition = quest_add_condition(transition, "zone", "enter", context_id + "/success");
     
