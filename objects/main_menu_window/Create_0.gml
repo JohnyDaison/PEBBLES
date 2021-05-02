@@ -47,8 +47,7 @@ var dist = 48;
 var i=1, ii;
 
 ii = gui_add_button(0,y+dist*i++, "Play", goto_playmenu);
-ii.base_bg_color = merge_color(c_lime, c_black, 0.2);
-ii.base_text_color = c_white;
+ii.base_bg_color = select_color;
 
 gui_add_button(0,y+dist*i++, "Settings", goto_graphic_settings);
 

@@ -14,6 +14,9 @@ self.auto_height = false;
 self.auto_items = false;
 item_height = undefined
 item_padding = undefined;
+align_items = "center";
+text_color = c_black;
+select_text_color = c_black;
 
 scroll_list = noone;
 up_arrow = noone;

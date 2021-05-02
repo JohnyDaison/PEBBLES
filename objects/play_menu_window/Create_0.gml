@@ -170,6 +170,7 @@ with(gamemode_pane)
     ii.height = main_content_height;
     ii.auto_items = true;
     ii.centered = true;
+    ii.align_items = "left";
     ii.item_change_script = place_picker_script;
     place_picker = ii.id;
     
@@ -201,6 +202,9 @@ with(gamemode_pane)
     ii.height = main_content_height;
     ii.centered = true;
     ii.auto_items = true;
+    ii.align_items = "left";
+    ii.text_color = c_white;
+    ii.select_text_color = c_white;
     //ii.auto_height = true;
     //ii.max_items = max(1, floor( (main_content_height - 32) / 20 ) - 1);
     
@@ -212,12 +216,10 @@ with(gamemode_pane)
     
     i = ii.scroll_list;
     
-    i.align_items = "left";
     //i.draw_border = false;
     i.bg_color = c_black;
     i.bg_alpha = 0.5;
     i.item_bg_color = c_black;
-    i.text_color = c_white;
     i.item_height = 20;
     i.item_padding = 0;
     i.highlight_color = merge_colour(i.item_bg_color, c_purple, 0.1);
@@ -447,8 +449,7 @@ with(players_pane)
     ii = gui_add_button(0,0, "Start game", play_menu_window_start_game);
     ii.width = start_button_width;
     ii.centered = true;
-    ii.base_bg_color = merge_color(c_lime, c_black, 0.2);
-    ii.base_text_color = c_white;
+    ii.base_bg_color = select_color;
     start_button = ii.id;
     
     eloffset_x += start_button.width + hor_spacing;

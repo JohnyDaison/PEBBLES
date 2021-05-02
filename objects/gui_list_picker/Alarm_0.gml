@@ -6,10 +6,11 @@ scroll_list.max_items = self.max_items;
 scroll_list.auto_height = self.auto_height;
 scroll_list.auto_items = self.auto_items;
 scroll_list.centered = true;
+scroll_list.align_items = self.align_items;
 scroll_list.item_change_script = gui_list_picker_scroll_list_script;
 scroll_list.is_list_picker = true;
-scroll_list.text_color = c_black;
-scroll_list.select_text_color = c_white;
+scroll_list.text_color = self.text_color;
+scroll_list.select_text_color = self.select_text_color;
 scroll_list.alternate_lines = false;
 
 if(is_dropdown)

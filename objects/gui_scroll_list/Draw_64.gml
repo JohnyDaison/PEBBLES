@@ -148,22 +148,22 @@ if(cur_item != -1)
             draw_set_color(final_text_color);
             if(align_items == "center")
             {
-                my_draw_text(x+self.main_width/2, y + ends_height + (i+0.5)*item_height, items[| first_item+i]);
+                my_draw_text(x + self.main_width/2, y + ends_height + (i+0.5) * item_height, items[| first_item+i]);
             }
             else if(align_items == "left")
             {
-                my_draw_text(x+4, y + ends_height + (i+0.5)*item_height, items[| first_item+i]);   
+                my_draw_text(x + content_padding, y + ends_height + (i+0.5) * item_height, items[| first_item+i]);   
             }
         }
         else if(type == "icon")
         {
             if(align_items == "center")
             {
-                draw_sprite_ext(items[| first_item+i], 0, x+self.main_width/2, y + ends_height + (i+0.5)*item_height, 1, 1, 0, self.color, 1);
+                draw_sprite_ext(items[| first_item+i], 0, x + self.main_width/2, y + ends_height + (i+0.5) * item_height, 1, 1, 0, self.color, 1);
             }
             else if(align_items == "left")
             {
-                draw_sprite_ext(items[| first_item+i], 0, x+4, y + ends_height + (i+0.5)*item_height, 1, 1, 0, self.color, 1);   
+                draw_sprite_ext(items[| first_item+i], 0, x + content_padding, y + ends_height + (i+0.5) * item_height, 1, 1, 0, self.color, 1);   
             }   
         }
     }

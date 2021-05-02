@@ -14,6 +14,7 @@ self.item_padding = 0;
 self.item_bg_color = c_white;
 self.item_bg_alpha = 0.8;
 self.alternate_lines = true;
+self.content_padding = 6;
 self.bar_width = 8;
 self.bar_margin = 2; 
 self.bar_bg_color = c_white;

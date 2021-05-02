@@ -12,7 +12,7 @@ self.highlight_color = c_purple;
 self.highlight_text_color = merge_colour(c_silver, c_white, 0.5);
 self.highlighted_icon_color = merge_colour(c_silver, c_white, 0.5);
 
-self.select_color = c_lime;
+self.select_color = merge_color(c_lime, c_black, 0.2);
 self.select_text_color = c_white;
 self.depressed_color = c_yellow;
 self.depressed_text_color = c_black;
