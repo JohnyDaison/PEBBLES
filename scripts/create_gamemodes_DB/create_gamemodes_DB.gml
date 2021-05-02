@@ -80,7 +80,7 @@ function create_gamemodes_DB() {
 
     // Quick Training
     gm = gamemode_create("quick_tutorial", "Training", campaign_obj, quick_tutorial_world_obj);
-    gm[? "description"] = "Journey from Rookie to Cybermage. Optimized for one trainee. Two skilled mages can compete in a Race to the Exit.";
+    gm[? "description"] = "Journey from Rookie to Cybermage. Optimized for one trainee. Two skilled mages can compete in a Race to the Exit.\n (This is a Tutorial mode.)";
     gm[? "start_script"] = gm_quick_tutorial_start;
     gm[? "min_real_players"] = 2;
     gm[? "max_players"] = 2;
