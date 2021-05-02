@@ -278,6 +278,7 @@
     {"id":{"name":"lightning_bolt_spr","path":"sprites/lightning_bolt_spr/lightning_bolt_spr.yy",},"order":10,},
     {"id":{"name":"lightning_bolt_small_spr","path":"sprites/lightning_bolt_small_spr/lightning_bolt_small_spr.yy",},"order":11,},
     {"id":{"name":"broken_shield_spr","path":"sprites/broken_shield_spr/broken_shield_spr.yy",},"order":12,},
+    {"id":{"name":"dive_wave_obj","path":"objects/dive_wave_obj/dive_wave_obj.yy",},"order":14,},
     {"id":{"name":"broken_shield_small_spr","path":"sprites/broken_shield_small_spr/broken_shield_small_spr.yy",},"order":13,},
     {"id":{"name":"infinite_symbol_spr","path":"sprites/infinite_symbol_spr/infinite_symbol_spr.yy",},"order":14,},
     {"id":{"name":"boost_symbol_spr","path":"sprites/boost_symbol_spr/boost_symbol_spr.yy",},"order":15,},

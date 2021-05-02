@@ -1324,10 +1324,14 @@ if(!self.frozen_in_time)
                         vspeed = 0;
                     }
                 
-                    i = instance_create(x, y+24, jump_burst_obj);
+                    i = instance_create(x, y, jump_burst_obj);
                     i.min_dir = 45;
                     i.max_dir = 135;
                     i.particle_count = 30;
+                    
+                    i = instance_create(x, y, dive_wave_obj);
+                    i.active = true;
+                    i.my_guy = id;
                 
                     self.have_dived = true;
                     //doublejump_count++;
