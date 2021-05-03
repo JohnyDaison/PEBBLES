@@ -47,23 +47,13 @@ if(charge == threshold)
     
     if(fire && my_mount.my_block.my_next_color != g_octarine)
     {
-        //var inst = instance_create(x,y,big_projectile_obj);
         var inst = create_energy_ball(id, "big_bolt", my_color, 1);
         inst.direction = target_dir;
-        inst.speed = 12;
+        inst.speed = 10;
         inst.x += hspeed;
         inst.y += vspeed;
-        
         inst.my_guy = self.id;
-        /*
-        inst.force = 1;
-        inst.my_color = my_color;         
-        inst.my_player = self.my_player;
-        
-        inst.my_source = object_index;
-        
-        my_sound_play(shot1_sound);
-        */
+
         charge = 0;
         charging = true;
 
