@@ -1,1 +1,1 @@
-zone_id = "weak_effect/success";
+zone_id = "weak_effect/start";

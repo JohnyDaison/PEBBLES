@@ -1,1 +1,1 @@
-zone_id = "strong_effect/success";
+zone_id = "green_floor/success";
