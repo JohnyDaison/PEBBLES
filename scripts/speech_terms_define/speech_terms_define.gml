@@ -17,7 +17,8 @@ function speech_terms_define() {
     speech_add_term("belt", "Belt", def_color);
     speech_add_term("catalyst", "Catalyst", def_color);
     speech_add_term("channel", "Channel", def_color);
-    speech_add_term("slot", "Slot", def_color);
+    speech_add_term("one_orb", "One-Orb", def_color);
+    speech_add_term("level_1", "Level 1", def_color);
     speech_add_term("blast", "Blast", def_color);
     speech_add_term("barrage", "Barrage", def_color);
     speech_add_term("dash_wave", "Dash-Wave", def_color);
