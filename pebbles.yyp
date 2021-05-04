@@ -990,6 +990,7 @@
     {"id":{"name":"fullscreen_chb_change_script","path":"scripts/fullscreen_chb_change_script/fullscreen_chb_change_script.yy",},"order":0,},
     {"id":{"name":"gui_get_focus","path":"scripts/gui_get_focus/gui_get_focus.yy",},"order":0,},
     {"id":{"name":"gui_lose_focus","path":"scripts/gui_lose_focus/gui_lose_focus.yy",},"order":1,},
+    {"id":{"name":"impact_speed_wave_obj","path":"objects/impact_speed_wave_obj/impact_speed_wave_obj.yy",},"order":15,},
     {"id":{"name":"gui_focus_shift","path":"scripts/gui_focus_shift/gui_focus_shift.yy",},"order":2,},
     {"id":{"name":"gui_clear_focus","path":"scripts/gui_clear_focus/gui_clear_focus.yy",},"order":3,},
     {"id":{"name":"init_frames","path":"scripts/init_frames/init_frames.yy",},"order":0,},

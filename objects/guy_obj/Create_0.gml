@@ -581,3 +581,7 @@ self.place_holder = noone;
 
 // STATUS EFFECTS
 init_status_effects();
+
+// IMPACT SPEED PARTICLES
+self.impact_speed_particles = instance_create_depth(x, y, 0, impact_speed_wave_obj);
+impact_speed_particles.my_guy = id;

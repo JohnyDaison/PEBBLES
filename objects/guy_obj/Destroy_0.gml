@@ -13,6 +13,8 @@ if(instance_exists(my_shield))
 cleanup_status_effects();
 my_sound_stop(full_sound);
 
+instance_destroy(impact_speed_particles);
+
 if(!is_npc)
 {
     ds_map_destroy(self.keys);
