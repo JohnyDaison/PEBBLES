@@ -637,11 +637,12 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         }
     
         // CHOOSE PAINT COLOR
-        // NUMPAD
+        // NUMPAD OR ALPHANUMERIC NUMBERS
         var col;
+        var zeroKey = ord("0");
         for(col = g_black; col<= g_octarine; col++)
         {
-            if(keyboard_check_pressed(vk_numpad0+col))
+            if(keyboard_check_pressed(vk_numpad0+col) || keyboard_check_pressed(zeroKey+col))
             {
                 cursor_obj.my_color = col;
                 cursor_obj.tint_updated = false;
