@@ -362,6 +362,16 @@ function player_quest_recheck() {
                             }
                         }
                     }
+                    // EFFECT: complete_subtasks
+                    else if(effect[? "type"] == "subtasks" && effect[? "verb"] == "complete")
+                    {
+                        for(sub_i = 0; sub_i < subtask_count; sub_i++)
+                        {
+                            context_id = subtasks_list[| sub_i];
+                            
+                            player_quest_state_update(player, context + DB.quest_context_divider + context_id, "setstate", "success");
+                        }
+                    }
                 }
             
                 // QUEST STATE
