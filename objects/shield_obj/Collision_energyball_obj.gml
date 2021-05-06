@@ -1,7 +1,8 @@
 /// @description NORMAL mode
 if(instance_exists(my_guy) && my_guy != self.id)
 {
-    projectile = other.id;
+    var projectile = other.id;
+    var shield = id;
     
     if(projectile.my_player == my_player && is_undefined(projectile.has_left_inst[? id]))
     {
@@ -9,17 +10,16 @@ if(instance_exists(my_guy) && my_guy != self.id)
         {
             with(projectile)
             {
-                has_left_update(other.id, false);
+                has_left_update(shield, false);
             }
         }
-        /*
         else
         {
             with(projectile)
             {
-                has_left_update(other.id, true);
+                has_left_update(shield, true);
             }
-        }*/
+        }
     }
     
     if((projectile.my_player != my_player || has_left_me(projectile)) && self.holographic == projectile.holographic)
@@ -43,7 +43,7 @@ if(instance_exists(my_guy) && my_guy != self.id)
             {
                 if(!projectile.immovable)
                 {
-                    apply_force(other, true);
+                    apply_force(projectile, true);
                 }
             }
             
@@ -56,9 +56,9 @@ if(instance_exists(my_guy) && my_guy != self.id)
         {
             with(projectile)
             {
-                with(other.my_guy)
+                with(shield.my_guy)
                 {
-                    receive_damage(other.force);
+                    receive_damage(projectile.force);
                 }
             }
         }
