@@ -732,6 +732,7 @@
     {"id":{"name":"spitter_body_spr","path":"sprites/spitter_body_spr/spitter_body_spr.yy",},"order":1,},
     {"id":{"name":"spitter_gun_spr","path":"sprites/spitter_gun_spr/spitter_gun_spr.yy",},"order":2,},
     {"id":{"name":"small_truss_body_spr","path":"sprites/small_truss_body_spr/small_truss_body_spr.yy",},"order":3,},
+    {"id":{"name":"MyPlaceGraph","path":"scripts/MyPlaceGraph/MyPlaceGraph.yy",},"order":2,},
     {"id":{"name":"tiny_truss_body_spr","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"order":4,},
     {"id":{"name":"spark_spr","path":"sprites/spark_spr/spark_spr.yy",},"order":5,},
     {"id":{"name":"snake1_icon","path":"sprites/snake1_icon/snake1_icon.yy",},"order":6,},
