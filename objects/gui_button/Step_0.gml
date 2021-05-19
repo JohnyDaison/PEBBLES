@@ -149,9 +149,9 @@ else
 
 if(alarm[1] > 0)
 {
-    self.sub_text = string(floor(alarm[1]/60));
+    self.autoclick_text = string(floor(alarm[1]/60));
 }
 else
 {
-    self.sub_text = "";
+    self.autoclick_text = "";
 }

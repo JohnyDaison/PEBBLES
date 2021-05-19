@@ -141,9 +141,9 @@ else if(text_align == "lefttop")
 }
 
 var disp_text = self.text;
-if(self.sub_text != "")
+if(self.autoclick_text != "")
 {
-    disp_text += " (" + self.sub_text + ")";
+    disp_text = "(" + self.autoclick_text + ")" + disp_text;
 }
 if(show_prompt && self.text != self.prompt_str)
 {
@@ -151,7 +151,7 @@ if(show_prompt && self.text != self.prompt_str)
 }
 
 draw_set_color(self.text_color);
-if(icon == noone)
+if(icon == noone || !show_icon)
 {
     if(multiline)
     {
@@ -164,20 +164,17 @@ if(icon == noone)
 }
 else
 {
-    if(show_icon)
+    if(center_icon)
     {
-        if(center_icon)
-        {
-            str_width = string_width(disp_text);
-            draw_sprite_ext(icon, image_index,
-                            center_x - str_width/2 - sprite_get_width(icon)/2 + sprite_get_xoffset(icon) +1,
-                            center_y - sprite_get_height(icon)/2 + sprite_get_yoffset(icon) +1,
-                            1,1,0, icon_color,icon_alpha);
-        }
-        else
-        {
-            draw_sprite_ext(icon,image_index,x+depressed_offset+1,y+depressed_offset+1,1,1,0,icon_color,icon_alpha);
-        }
+        str_width = string_width(disp_text);
+        draw_sprite_ext(icon, image_index,
+                        center_x - str_width/2 - sprite_get_width(icon)/2 + sprite_get_xoffset(icon) +1,
+                        center_y - sprite_get_height(icon)/2 + sprite_get_yoffset(icon) +1,
+                        1,1,0, icon_color,icon_alpha);
+    }
+    else
+    {
+        draw_sprite_ext(icon,image_index,x+depressed_offset+1,y+depressed_offset+1,1,1,0,icon_color,icon_alpha);
     }
     
     if(multiline)
@@ -188,5 +185,4 @@ else
     {
         my_draw_text(text_x+16, text_y, disp_text);
     }
-}                                                    
-
+}
