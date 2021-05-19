@@ -40,6 +40,15 @@ function quick_tut_base_colors_quest() {
     
         transition = quest_transition_find(child_node, "", "active");
         effect = quest_add_effect(transition, "displays", "trigger", "strong_effect");
+        
+        transition = quest_transition_create(child_node[? "quest_id"], "active", "failure");
+        condition = quest_add_condition(transition, "zone", "enter", "strong_effect/failure2");
+        
+        // 2.3 Can't reach
+        child_node = quest_create_subtask(node[? "quest_id"], "simple_nav", "cant_reach", "Can't reach", "", 3, false);
+    
+        transition = quest_transition_find(child_node, "", "active");
+        effect = quest_add_effect(transition, "displays", "trigger", "cant_reach");
 
 
     // 3 Green orb

@@ -1919,6 +1919,7 @@
     {"id":{"name":"item_description_overlay","path":"objects/item_description_overlay/item_description_overlay.yy",},"order":15,},
     {"id":{"name":"charged_jump_lvl2_item_obj","path":"objects/charged_jump_lvl2_item_obj/charged_jump_lvl2_item_obj.yy",},"order":17,},
     {"id":{"name":"status_effect_overlay","path":"objects/status_effect_overlay/status_effect_overlay.yy",},"order":16,},
+    {"id":{"name":"cant_reach_anim_set","path":"scripts/cant_reach_anim_set/cant_reach_anim_set.yy",},"order":12,},
     {"id":{"name":"chunkgrid_overlay","path":"objects/chunkgrid_overlay/chunkgrid_overlay.yy",},"order":17,},
     {"id":{"name":"popup_obj","path":"objects/popup_obj/popup_obj.yy",},"order":4,},
     {"id":{"name":"damage_popup_obj","path":"objects/damage_popup_obj/damage_popup_obj.yy",},"order":0,},

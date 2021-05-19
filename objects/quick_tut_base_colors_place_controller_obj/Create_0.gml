@@ -16,6 +16,9 @@ anim_sets[? "weak_effect"] = weak_effect_anim_set;
 anim_groups[? "strong_effect"] = noone;
 anim_sets[? "strong_effect"] = strong_effect_anim_set;
 
+anim_groups[? "cant_reach"] = noone;
+anim_sets[? "cant_reach"] = cant_reach_anim_set;
+
 anim_groups[? "slime_pit"] = noone;
 anim_sets[? "slime_pit"] = slime_pit_anim_set;
 
