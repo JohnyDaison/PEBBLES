@@ -23,10 +23,10 @@ base_size = 32;
 radius = 64;
 corner_radius = 6;
 step_indicator_margin = 3;
-step_indicator_height = 5;
+step_indicator_height = 8;
 step_indicator_alpha = 0.8;
-step_light_color = c_white;
-step_dark_color = c_dkgray;
+step_light_color = c_yellow;
+step_dark_color = merge_color(c_yellow, c_black, 0.8);
 
 diagonal = point_distance(0,0, base_size*image_xscale, base_size*image_yscale);
 radius = max(radius, diagonal/2 + 64);
