@@ -1,1 +1,1 @@
-damage = 0.6*hp;
+damage = 0.6 * hp;
