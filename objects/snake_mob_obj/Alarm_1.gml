@@ -33,6 +33,8 @@ if(body_size >= head_size)
     my_sound_play(snake_sound);
     
     alarm[2] = travel_delay;
+    alarm[3] = turn_delay;
+    alarm[4] = recheck_delay - 1;
 }
 //FAIL
 else

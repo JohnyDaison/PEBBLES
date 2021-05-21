@@ -6,7 +6,8 @@ my_player = gamemode_obj.environment;
 
 travel_direction = -1;
 last_dir = travel_direction;
-travel_delay = 20;
+recheck_delay = 10;
+travel_delay = 40;
 turn_delay = 60;
 head_size = 3;
 body_size = 0;
@@ -35,6 +36,4 @@ self.transform_memory = ds_map_create();
 self.invisible = false;
 
 alarm[1] = 320;
-alarm[3] = alarm[1] + turn_delay;
-//alarm[4] = 680;
 alarm[0] = 1;

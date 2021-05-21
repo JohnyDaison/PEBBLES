@@ -1,4 +1,10 @@
 /// @description  MOVE
+if(done_for)
+{
+    instance_destroy();
+    exit;
+}
+
 var ter, structure, my_x, my_y, prev_x, prev_y, count, i;
 
 prev_x = x;
@@ -6,30 +12,12 @@ prev_y = y;
 
 if(travel_direction < 0)
 {
-    travel_direction += 360;   
+    travel_direction += 360;
 }
 travel_direction = travel_direction mod 360;
 
 x_step = round(lengthdir_x(32, travel_direction));
 y_step = round(lengthdir_y(32, travel_direction));
-
-
-// CUT TAIL FALLS OFF
-count = body_size;
-for(i = count -1; i >= 0; i--)
-{
-    ter = ter_group.members[| i];
-    if(is_undefined(ter) || !instance_exists(ter) || ter.damage >= ter.hp || ter.falling)
-    {
-        snake_mob_disassemble(i);
-    }
-}
-
-if(done_for)
-{
-    instance_destroy();
-    exit;
-}
 
 // EATING
 snake_mob_find_food();
@@ -172,4 +160,3 @@ else
     move_tries = 0;
     alarm[2] = travel_delay;
 }
-
