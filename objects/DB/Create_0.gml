@@ -86,8 +86,9 @@ terrain_config[? "outburst_threshold"] = 1.33;
 terrain_config[? "bounce_threshold"] = terrain_config[? "status_threshold"];
 terrain_config[? "max_energy"] = 2.5;
 
-
-
+// ORB THRESHOLDS
+orb_warning_threshold = 0.4;
+orb_exhaustion_threshold = 0.1;
 
 // GAMEMODES
 create_gamemodes_DB();

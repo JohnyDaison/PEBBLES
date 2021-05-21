@@ -123,13 +123,13 @@ if(my_guy != id && my_color > -1)
         {
             if(my_color != g_black)
             {
-                if(new_orb_exhaustion_ratio < 1 && new_orb_exhaustion_ratio > 0.5)
+                if(new_orb_exhaustion_ratio < 1 && new_orb_exhaustion_ratio > DB.orb_exhaustion_threshold)
                 {
                     new_orb_exhaustion_ratio = 1;
                 }
-                else if(new_orb_exhaustion_ratio <= 0.5)
+                else if(new_orb_exhaustion_ratio <= DB.orb_exhaustion_threshold)
                 {
-                    new_orb_exhaustion_ratio *= 2;
+                    new_orb_exhaustion_ratio = 0.01;
                 }
             }
             
