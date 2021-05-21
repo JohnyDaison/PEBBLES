@@ -270,20 +270,24 @@ if(instance_exists(self.my_player) && my_player.number > 0 && !is_npc)
     // LOOK/RUN TOGGLE
     var look_held = controlcheck(self.control_method, held, look);
     
-    if (look_hold_start == -1 && look_held) {
-        look_toggled_on = !look_on;
-        look_hold_start = current_time;
-        if (look_toggled_on) {
-            look_on = true;
+    if (singleton_obj.toggleable_aim_mode) {
+        if (look_hold_start == -1 && look_held) {
+            look_toggled_on = !look_on;
+            look_hold_start = current_time;
+            if (look_toggled_on) {
+                look_on = true;
+            }
         }
-    }
     
-    if (look_hold_start != -1 && !look_held) {
-        if (!look_toggled_on || (current_time - look_hold_start) >= look_hold_min_duration) {
-            look_on = false;
-            look_toggled_on = false;
+        if (look_hold_start != -1 && !look_held) {
+            if (!look_toggled_on || (current_time - look_hold_start) >= look_hold_min_duration) {
+                look_on = false;
+                look_toggled_on = false;
+            }
+            look_hold_start = -1;
         }
-        look_hold_start = -1;
+    } else {
+        look_on = look_held;
     }
     
     if(look_on || self.hold_mode)

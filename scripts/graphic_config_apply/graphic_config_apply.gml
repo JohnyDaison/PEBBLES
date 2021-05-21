@@ -1,11 +1,11 @@
 function graphic_config_apply() {
     var gswindow = graphic_settings_window.id;
-    var gui_list = gswindow.gui_content;
 
     singleton_obj.fullscreen = gswindow.fullscreen_checkbox.checked;
     singleton_obj.draw_object_labels = gswindow.labels_checkbox.checked;
     singleton_obj.scale_up_gui = gswindow.scale_gui_checkbox.checked;
     singleton_obj.force_feedback = gswindow.ff_checkbox.checked;
+    singleton_obj.toggleable_aim_mode = gswindow.aim_mode_checkbox.checked;
     singleton_obj.game_speed = gswindow.gamespeed_input.value; // clamp(gswindow.gamespeed_input.value,30,60);
     DB.npc_speech_tick = (DB.max_npc_speech_tick + 1) - gswindow.speechspeed_input.value;
     update_master_volume(gswindow.master_volume_input.value);
@@ -40,6 +40,4 @@ function graphic_config_apply() {
         x = view_wport[0]/2 - self.width/2;
         y = view_hport[0]/2 - self.height/2;   
     }
-
-
 }

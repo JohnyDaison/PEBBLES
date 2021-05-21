@@ -93,6 +93,16 @@ i.width += 64;
 eloffset_y += left_line_height;
 
 
+aim_mode_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.toggleable_aim_mode);
+
+i = gui_add_label(checkbox_label_x,-16, "Toggleable Aim mode");
+i.centered = true;
+i.width += 64;
+
+
+eloffset_y += left_line_height;
+
+
 labels_checkbox = gui_add_checkbox(checkbox_column_x, 0, singleton_obj.draw_object_labels);
 
 i = gui_add_label(checkbox_label_x,-16, "Show Labels");

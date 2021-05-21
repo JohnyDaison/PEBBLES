@@ -14,7 +14,7 @@ self.bullet_time_end_time = 0;
 self.game_speed_change_step = 5;
 self.current_game_speed = game_speed;
 self.master_volume = 50;
-
+self.toggleable_aim_mode = false;
 
 // INPUTS
 
