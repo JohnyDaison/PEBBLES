@@ -2,9 +2,6 @@ ds_list_clear(attack_waypoints);
 
 event_inherited();
 
-// RESET TELEPORT FLAG
-self.has_tped = false;
-
 if(!flashback_disabled && !flashback_inited)
 {
     ds_map_add(state,"x",x);

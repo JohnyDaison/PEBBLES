@@ -1726,6 +1726,9 @@ if(!self.frozen_in_time)
     
     // HANDLE ABILITIES
     
+    // RESET TELEPORT FLAG
+    self.has_tped = false;
+    
     // TELEPORT MULTI-USE TIME WINDOW END
     var teleport_level = get_level(id, "teleport"), teleport_color = g_blue;
     if(abi_cooldown_length[? teleport_color] == 1)
