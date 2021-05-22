@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"70138f88-611c-4ebd-aab7-7fde2717be11","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"70138f88-611c-4ebd-aab7-7fde2717be11","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"LayerId":{"name":"ae2bce25-ae4a-4d2d-af75-3b01effd9274","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"70138f88-611c-4ebd-aab7-7fde2717be11","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"LayerId":{"name":"9f0ddaca-150a-4425-85ac-20393bbe5151","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"70138f88-611c-4ebd-aab7-7fde2717be11","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"LayerId":{"name":"ae2bce25-ae4a-4d2d-af75-3b01effd9274","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"blue_square_checkered_spr","path":"sprites/blue_square_checkered_spr/blue_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"70138f88-611c-4ebd-aab7-7fde2717be11","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":50.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"9f0ddaca-150a-4425-85ac-20393bbe5151","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ae2bce25-ae4a-4d2d-af75-3b01effd9274","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "editor",
     "path": "folders/Sprites/misc/editor.yy",

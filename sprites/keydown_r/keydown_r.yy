@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b82f9b63-3aa8-4cbf-aa77-4876c50d88fc","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "keybinder",
     "path": "folders/Sprites/GUI/keybinder.yy",

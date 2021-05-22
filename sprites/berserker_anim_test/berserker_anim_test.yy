@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e65d3988-20fc-4aa8-9df2-6704cd9bf206","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "mats",
     "path": "folders/Sprites/GUI/abi icons/mats.yy",

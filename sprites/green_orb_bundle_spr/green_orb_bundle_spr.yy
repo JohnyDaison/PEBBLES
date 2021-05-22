@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Color","resourceVersion":"1.0","name":"e7b8c0b0-8370-4c06-a7fa-45decc4ab28f","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"orb9","resourceVersion":"1.0","name":"d2ecea98-ac02-49b7-a79f-5feb38d9f503","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "editor",
     "path": "folders/Sprites/misc/editor.yy",

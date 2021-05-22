@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"823b4b1d-5b4d-4ded-ac1d-c70730627e44","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "player_icons",
     "path": "folders/Sprites/GUI/player_icons.yy",

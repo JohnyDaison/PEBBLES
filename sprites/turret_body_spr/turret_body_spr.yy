@@ -95,6 +95,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b18b48d1-b6d2-454b-bd25-949c1936b672","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "turrets",
     "path": "folders/Sprites/structures/block mounted/turrets.yy",

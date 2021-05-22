@@ -25,9 +25,9 @@
   "gridY": 5,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":{"name":"306c4542-5e88-4cdd-b22c-7eac910f87ec","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":{"name":"ac595c9c-50bb-417c-92c8-71363f3a8595","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":{"name":"ed626460-a3d5-475d-b928-7f056331f0ea","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":{"name":"ac595c9c-50bb-417c-92c8-71363f3a8595","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"LayerId":{"name":"306c4542-5e88-4cdd-b22c-7eac910f87ec","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"status_shield_down_icon_new_spr","path":"sprites/status_shield_down_icon_new_spr/status_shield_down_icon_new_spr.yy",},"resourceVersion":"1.0","name":"9fab2ff5-1653-4b81-85a2-7d020f61b53f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":false,"isLocked":true,"blendMode":0,"opacity":100.0,"displayName":"Layer 2 (2)","resourceVersion":"1.0","name":"ac595c9c-50bb-417c-92c8-71363f3a8595","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"306c4542-5e88-4cdd-b22c-7eac910f87ec","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "status effects",
     "path": "folders/Sprites/GUI/status effects.yy",

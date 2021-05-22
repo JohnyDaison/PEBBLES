@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"18700ae0-91e4-4b3f-a22d-7dfb6a685d06","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18700ae0-91e4-4b3f-a22d-7dfb6a685d06","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"LayerId":{"name":"2983931e-e87f-4ffd-842f-a818baf65bfc","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"18700ae0-91e4-4b3f-a22d-7dfb6a685d06","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"LayerId":{"name":"8adafbb7-a08f-4367-bf0f-7758431c8f3e","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"18700ae0-91e4-4b3f-a22d-7dfb6a685d06","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"LayerId":{"name":"2983931e-e87f-4ffd-842f-a818baf65bfc","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"round_button_bg_spr","path":"sprites/round_button_bg_spr/round_button_bg_spr.yy",},"resourceVersion":"1.0","name":"18700ae0-91e4-4b3f-a22d-7dfb6a685d06","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":10.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"8adafbb7-a08f-4367-bf0f-7758431c8f3e","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2983931e-e87f-4ffd-842f-a818baf65bfc","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "buttons",
     "path": "folders/Sprites/GUI/controls_icons/XBox/buttons.yy",

@@ -25,12 +25,12 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"cf697cc8-9b06-44fc-a5c8-4d508ac3c734","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"dbcd0da3-6db5-401f-99f8-f12d9d60727c","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"3ead91a0-4b93-4e23-922d-82671103ddc5","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"5cce2e8b-a8f9-4421-9e24-7115c4d96ce8","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"8166e711-81ac-4646-963d-77c03951ec1e","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"a27e2074-f73b-4f3f-8e90-7fa4d301cc3d","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"dbcd0da3-6db5-401f-99f8-f12d9d60727c","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"5cce2e8b-a8f9-4421-9e24-7115c4d96ce8","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"3ead91a0-4b93-4e23-922d-82671103ddc5","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d5aad6bc-1811-4743-ad93-b11ab804c131","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"LayerId":{"name":"cf697cc8-9b06-44fc-a5c8-4d508ac3c734","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"holo_spawners_modX_icon","path":"sprites/holo_spawners_modX_icon/holo_spawners_modX_icon.yy",},"resourceVersion":"1.0","name":"d5aad6bc-1811-4743-ad93-b11ab804c131","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -77,6 +77,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"8166e711-81ac-4646-963d-77c03951ec1e","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Copied Layer 3","resourceVersion":"1.0","name":"a27e2074-f73b-4f3f-8e90-7fa4d301cc3d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

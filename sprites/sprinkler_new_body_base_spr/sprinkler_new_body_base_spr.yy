@@ -167,6 +167,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b8a7f39-c542-4b74-91e4-e91a143e7d9b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Sprinkler",
     "path": "folders/Sprites/mobs/Sprinkler.yy",

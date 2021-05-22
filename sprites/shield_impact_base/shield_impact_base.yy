@@ -139,6 +139,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d7729987-02aa-477e-a735-86012f2a74ba","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "shield",
     "path": "folders/Sprites/spells/shield.yy",

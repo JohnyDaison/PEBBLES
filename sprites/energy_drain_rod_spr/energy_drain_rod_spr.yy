@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a95c208a-13e0-4fd2-981d-a7cd39a3d246","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "energy",
     "path": "folders/Sprites/structures/block mounted/energy.yy",

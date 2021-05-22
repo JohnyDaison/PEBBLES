@@ -71,6 +71,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"adbd5a27-d9f9-4fd5-935a-1eb1c3657c21","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "final",
     "path": "folders/Sprites/GUI/indicators/final.yy",

@@ -231,6 +231,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b4890c25-b42a-4e68-91c9-43f65a612fba","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "arrows",
     "path": "folders/Sprites/GUI/arrows.yy",

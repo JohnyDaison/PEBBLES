@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"2574fb9a-2345-47de-b794-a747b5bdacc9","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2574fb9a-2345-47de-b794-a747b5bdacc9","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"LayerId":{"name":"b0457188-72d4-4364-9b2b-b48995ecded4","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2574fb9a-2345-47de-b794-a747b5bdacc9","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"LayerId":{"name":"bf05ef9a-d71b-44e6-bbce-d393a9ee09fe","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"2574fb9a-2345-47de-b794-a747b5bdacc9","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"LayerId":{"name":"b0457188-72d4-4364-9b2b-b48995ecded4","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"holo_indestr_color_wall_editor_spr","path":"sprites/holo_indestr_color_wall_editor_spr/holo_indestr_color_wall_editor_spr.yy",},"resourceVersion":"1.0","name":"2574fb9a-2345-47de-b794-a747b5bdacc9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"bf05ef9a-d71b-44e6-bbce-d393a9ee09fe","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b0457188-72d4-4364-9b2b-b48995ecded4","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "terrain",
     "path": "folders/Sprites/terrain.yy",

@@ -25,14 +25,14 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"06ef4e12-d04a-4fa6-a440-d24017e8cecf","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"8572d8c6-2afe-4986-a3f1-70fa932608f4","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"324ba366-2fec-4ad1-bdaf-991d669e452c","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"a832436a-56fc-4e94-82d5-14cb96b34403","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"e6d4ef9b-99c0-4fa4-8457-3be24b765428","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"faf1676b-4db6-4e3c-b573-ab0dae676eec","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"edcfe57b-d6c2-485b-bec3-092c1ea705d7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"e6d4ef9b-99c0-4fa4-8457-3be24b765428","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"a832436a-56fc-4e94-82d5-14cb96b34403","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"6f4cb09e-031f-4e9b-825f-ecbe524cbfcf","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"8572d8c6-2afe-4986-a3f1-70fa932608f4","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"06ef4e12-d04a-4fa6-a440-d24017e8cecf","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"49311ec4-11a0-4005-8da7-882507648cd7","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"LayerId":{"name":"324ba366-2fec-4ad1-bdaf-991d669e452c","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"ban_cannons_mod_icon","path":"sprites/ban_cannons_mod_icon/ban_cannons_mod_icon.yy",},"resourceVersion":"1.0","name":"49311ec4-11a0-4005-8da7-882507648cd7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -81,6 +81,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"06ef4e12-d04a-4fa6-a440-d24017e8cecf","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"324ba366-2fec-4ad1-bdaf-991d669e452c","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

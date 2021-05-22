@@ -25,15 +25,15 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"8c21248e-36eb-49cc-ba17-838458cb96fb","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"12023ca4-3c2d-4ace-a7e2-02d3bbdb4d45","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"500d0152-c6b7-4eb8-a741-932a14d7275e","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"323992ad-cd25-4699-9c61-be066a18f6a2","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"082c784b-c748-4fe4-851a-f7257538128d","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"be16e214-20fc-49bc-b524-f1c94d942cd7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"2907bc65-f02f-4b45-b0da-baee4a8fa72c","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"f639adf4-217f-4875-a225-9ac94ce26383","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"9e384685-ee60-4091-a519-34ae93b98845","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"f639adf4-217f-4875-a225-9ac94ce26383","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"2907bc65-f02f-4b45-b0da-baee4a8fa72c","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"be16e214-20fc-49bc-b524-f1c94d942cd7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"082c784b-c748-4fe4-851a-f7257538128d","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"323992ad-cd25-4699-9c61-be066a18f6a2","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"500d0152-c6b7-4eb8-a741-932a14d7275e","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"12023ca4-3c2d-4ace-a7e2-02d3bbdb4d45","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"LayerId":{"name":"8c21248e-36eb-49cc-ba17-838458cb96fb","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"orb_bundle_spr","path":"sprites/orb_bundle_spr/orb_bundle_spr.yy",},"resourceVersion":"1.0","name":"4e5c7ef8-9393-403a-b232-d6d3c01880c7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -83,6 +83,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"orb2","resourceVersion":"1.0","name":"12023ca4-3c2d-4ace-a7e2-02d3bbdb4d45","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"orb1","resourceVersion":"1.0","name":"8c21248e-36eb-49cc-ba17-838458cb96fb","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "pickup",
     "path": "folders/Sprites/items/pickup.yy",

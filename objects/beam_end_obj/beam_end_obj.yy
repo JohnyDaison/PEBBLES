@@ -27,7 +27,7 @@
     {"x":24.0,"y":24.0,},
   ],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"wall_obj","path":"objects/wall_obj/wall_obj.yy",},"parent":{"name":"beam_end_obj","path":"objects/beam_end_obj/beam_end_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"wall_obj","path":"objects/wall_obj/wall_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

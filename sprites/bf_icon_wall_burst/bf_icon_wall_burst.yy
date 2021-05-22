@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"3","resourceVersion":"1.0","name":"2afadc5c-5ee3-43e6-9f7d-29386b3fdd04","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"7","resourceVersion":"1.0","name":"6bf9a355-d8de-4fb6-80e6-b6a17bfd9ddd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "spells",
     "path": "folders/Sprites/GUI/battlefeed/spells.yy",

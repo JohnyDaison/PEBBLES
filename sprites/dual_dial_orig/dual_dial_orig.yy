@@ -87,6 +87,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3dbe5b8a-6b4f-4688-99fa-fbc7886b4ea8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "mats",
     "path": "folders/Sprites/GUI/indicators/mats.yy",

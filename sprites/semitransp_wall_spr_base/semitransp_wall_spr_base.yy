@@ -287,6 +287,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"889eba40-f620-47e6-b23c-1100f0ea876f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "pretty",
     "path": "folders/Sprites/terrain/pretty.yy",

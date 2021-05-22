@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":{"name":"6faef512-ed08-4ce1-8317-b66acf2b4301","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":{"name":"74c89722-2763-4bf3-8afa-b69cb293ab4a","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":{"name":"a66b17f2-e30b-4c27-b7b4-bbf41f7416e0","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":{"name":"74c89722-2763-4bf3-8afa-b69cb293ab4a","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"047934ef-dbef-4830-9b59-214916506bb6","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"LayerId":{"name":"6faef512-ed08-4ce1-8317-b66acf2b4301","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"weak_energy_pusher_spr","path":"sprites/weak_energy_pusher_spr/weak_energy_pusher_spr.yy",},"resourceVersion":"1.0","name":"047934ef-dbef-4830-9b59-214916506bb6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2)","resourceVersion":"1.0","name":"74c89722-2763-4bf3-8afa-b69cb293ab4a","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6faef512-ed08-4ce1-8317-b66acf2b4301","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "energy",
     "path": "folders/Sprites/structures/block mounted/energy.yy",

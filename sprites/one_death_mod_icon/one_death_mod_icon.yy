@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"LayerId":{"name":"22e29b4f-47ab-4812-b55c-e44e4c5fafc8","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"LayerId":{"name":"41c7e94b-862e-4d3d-8ac0-fae7a57205b5","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"LayerId":{"name":"fd4572a5-4423-400a-a198-f470c1f6d422","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"LayerId":{"name":"22e29b4f-47ab-4812-b55c-e44e4c5fafc8","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"one_death_mod_icon","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"resourceVersion":"1.0","name":"4f4ac7d9-bc5c-4fee-af44-18568f3dcf57","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"fd4572a5-4423-400a-a198-f470c1f6d422","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"22e29b4f-47ab-4812-b55c-e44e4c5fafc8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

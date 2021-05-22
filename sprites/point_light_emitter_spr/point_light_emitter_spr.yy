@@ -25,13 +25,13 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"760da622-0cd6-4fc1-89e5-57cec3109a04","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"cd39295d-524a-49ee-9a1e-28ffe8e5abb7","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"be445f49-8c44-4a14-9e7b-e98b330bfcc6","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"0ab73070-e6c7-4141-bdcf-c6d25ca08d68","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"3d78144e-835d-4e38-93aa-3b5b4152f904","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"cd39295d-524a-49ee-9a1e-28ffe8e5abb7","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"04d909ae-b29d-418a-8edc-2d2337384c26","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"a6f096cb-2a73-49a1-9884-7f8242538798","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"3d78144e-835d-4e38-93aa-3b5b4152f904","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"0ab73070-e6c7-4141-bdcf-c6d25ca08d68","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"LayerId":{"name":"760da622-0cd6-4fc1-89e5-57cec3109a04","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"point_light_emitter_spr","path":"sprites/point_light_emitter_spr/point_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"cce4fa7c-ea7e-4c1b-b5d9-7898f2914b96","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -79,6 +79,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"0ab73070-e6c7-4141-bdcf-c6d25ca08d68","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"760da622-0cd6-4fc1-89e5-57cec3109a04","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "structures",
     "path": "folders/Sprites/structures.yy",

@@ -151,6 +151,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a4aea319-84ea-4cea-946e-75f217b2105b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "upgrades",
     "path": "folders/Sprites/items/pickup/upgrades.yy",

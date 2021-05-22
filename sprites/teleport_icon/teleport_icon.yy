@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fea01ad8-794a-4a4e-8650-c5c730ee5cd7","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "abilities",
     "path": "folders/Sprites/GUI/abi icons/abilities.yy",

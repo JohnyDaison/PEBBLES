@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":{"name":"d46c4ac1-2a9c-497c-a2c1-850083807c94","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":{"name":"ee5f2cd8-170d-4aac-8a74-b323e43f801a","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":{"name":"a2617b68-180a-44ed-a3fa-44bb6f93c729","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":{"name":"ee5f2cd8-170d-4aac-8a74-b323e43f801a","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","path":"sprites/desktop_icon/desktop_icon.yy",},"LayerId":{"name":"d46c4ac1-2a9c-497c-a2c1-850083807c94","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"desktop_icon","path":"sprites/desktop_icon/desktop_icon.yy",},"resourceVersion":"1.0","name":"f0b261fa-5fbb-4881-adb1-2ca7b39c7b45","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer (2)","resourceVersion":"1.0","name":"ee5f2cd8-170d-4aac-8a74-b323e43f801a","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer","resourceVersion":"1.0","name":"d46c4ac1-2a9c-497c-a2c1-850083807c94","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "desktop",
     "path": "folders/Sprites/icons/desktop.yy",

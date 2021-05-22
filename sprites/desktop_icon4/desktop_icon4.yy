@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8a017b50-8943-4376-a5d9-11fcc078948b","path":"sprites/desktop_icon4/desktop_icon4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a017b50-8943-4376-a5d9-11fcc078948b","path":"sprites/desktop_icon4/desktop_icon4.yy",},"LayerId":{"name":"8532fca5-b92f-424b-8ab6-05f5033cf685","path":"sprites/desktop_icon4/desktop_icon4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8a017b50-8943-4376-a5d9-11fcc078948b","path":"sprites/desktop_icon4/desktop_icon4.yy",},"LayerId":{"name":"bd05b9c3-8c47-43bc-a124-0c0e6bc2a37b","path":"sprites/desktop_icon4/desktop_icon4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8a017b50-8943-4376-a5d9-11fcc078948b","path":"sprites/desktop_icon4/desktop_icon4.yy",},"LayerId":{"name":"8532fca5-b92f-424b-8ab6-05f5033cf685","path":"sprites/desktop_icon4/desktop_icon4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"desktop_icon4","path":"sprites/desktop_icon4/desktop_icon4.yy",},"resourceVersion":"1.0","name":"8a017b50-8943-4376-a5d9-11fcc078948b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"bd05b9c3-8c47-43bc-a124-0c0e6bc2a37b","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"8532fca5-b92f-424b-8ab6-05f5033cf685","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "desktop",
     "path": "folders/Sprites/icons/desktop.yy",

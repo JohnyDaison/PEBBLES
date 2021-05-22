@@ -26,7 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"LayerId":{"name":"bb7da72d-582d-451e-8a74-3d61065ae713","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"LayerId":{"name":"bb7da72d-582d-451e-8a74-3d61065ae713","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"status_ubershield_icon","path":"sprites/status_ubershield_icon/status_ubershield_icon.yy",},"resourceVersion":"1.0","name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -68,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bb7da72d-582d-451e-8a74-3d61065ae713","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "status effects",
     "path": "folders/Sprites/GUI/status effects.yy",

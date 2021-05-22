@@ -319,6 +319,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e5bf2bbc-4801-4187-8226-13c9a99438bd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "flags",
     "path": "folders/Sprites/GUI/player_icons/flags.yy",

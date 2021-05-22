@@ -183,6 +183,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4e2e736e-87dc-40d7-8f8e-3f45d5986300","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "battlefeed",
     "path": "folders/Sprites/GUI/battlefeed.yy",

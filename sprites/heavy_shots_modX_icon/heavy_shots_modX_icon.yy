@@ -25,11 +25,11 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"7fe40a87-2508-493e-842e-4762a82efbc1","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"1a572a0f-a65f-4456-932c-2b6d0875b938","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"f4f95c43-c160-471b-ac30-1504d153764d","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"1317bcbe-2e1d-4af9-8c80-c1f4593961b9","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"e63d42ac-fe32-4ffe-b36a-2c2390092464","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"1317bcbe-2e1d-4af9-8c80-c1f4593961b9","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"f4f95c43-c160-471b-ac30-1504d153764d","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"1a572a0f-a65f-4456-932c-2b6d0875b938","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"LayerId":{"name":"7fe40a87-2508-493e-842e-4762a82efbc1","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"heavy_shots_modX_icon","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"resourceVersion":"1.0","name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -75,6 +75,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2) (2)","resourceVersion":"1.0","name":"1a572a0f-a65f-4456-932c-2b6d0875b938","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7fe40a87-2508-493e-842e-4762a82efbc1","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

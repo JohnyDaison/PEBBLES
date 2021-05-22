@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"LayerId":{"name":"24b604cc-486e-4891-b260-b6e40ad37904","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"LayerId":{"name":"cd1aa63d-dcb8-4ff4-8399-ae0daa6baf08","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"LayerId":{"name":"24b604cc-486e-4891-b260-b6e40ad37904","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"LayerId":{"name":"d1819ca1-9cb8-4c9d-8781-a72bc2714aad","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"tiny_truss_body_spr","path":"sprites/tiny_truss_body_spr/tiny_truss_body_spr.yy",},"resourceVersion":"1.0","name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2 (2) (2)","resourceVersion":"1.0","name":"24b604cc-486e-4891-b260-b6e40ad37904","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"d1819ca1-9cb8-4c9d-8781-a72bc2714aad","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "mobs",
     "path": "folders/Sprites/mobs.yy",

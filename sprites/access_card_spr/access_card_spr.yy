@@ -26,11 +26,11 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"4527b163-8a69-4949-b18b-18acb1e23a24","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"f052c81e-a095-4c90-ab9d-43def4ec0ff0","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"db541c94-6d8b-4647-8f71-5d7ba52ce2d3","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"9e28cfb5-d77f-4ba6-b538-698cc6700e67","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"db68560c-7738-4959-b1d6-43dc7d79279b","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"763a8f7e-409f-46bd-ad72-dd501ff0b95a","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"f052c81e-a095-4c90-ab9d-43def4ec0ff0","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"9e28cfb5-d77f-4ba6-b538-698cc6700e67","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"db541c94-6d8b-4647-8f71-5d7ba52ce2d3","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"access_card_spr","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"f3d5be67-62ad-45c0-b91a-ef2d515efdfe","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"0ad6b7d1-f85d-4f26-9c47-98a4898c40c5","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"0ad6b7d1-f85d-4f26-9c47-98a4898c40c5","path":"sprites/access_card_spr/access_card_spr.yy",},"LayerId":{"name":"4527b163-8a69-4949-b18b-18acb1e23a24","path":"sprites/access_card_spr/access_card_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -95,6 +95,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2)","resourceVersion":"1.0","name":"9e28cfb5-d77f-4ba6-b538-698cc6700e67","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2)","resourceVersion":"1.0","name":"db541c94-6d8b-4647-8f71-5d7ba52ce2d3","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "pickup",
     "path": "folders/Sprites/items/pickup.yy",

@@ -27,11 +27,11 @@
     {"compositeImage":{"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"41ca10b4-0d44-4f3c-be0f-1f1324648c3a","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"3aa7f015-6234-4cb9-bc35-6c1e82836e8d","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"920322d7-e1c4-422a-9cad-ba80a70524b8","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"2bb875d5-cd35-4157-99a2-182efa18c7da","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"830146dd-47bc-4833-919b-ece6a98d491b","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"4249acca-595b-43a2-a114-ea02546f9236","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"450ad777-85fd-4643-85b3-c25f426ebe4f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"2bb875d5-cd35-4157-99a2-182efa18c7da","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"920322d7-e1c4-422a-9cad-ba80a70524b8","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"LayerId":{"name":"830146dd-47bc-4833-919b-ece6a98d491b","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"bolt_rain_mod_icon","path":"sprites/bolt_rain_mod_icon/bolt_rain_mod_icon.yy",},"resourceVersion":"1.0","name":"6fb02fc2-35e5-4086-b280-bfc5fa6be87f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -79,6 +79,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"4249acca-595b-43a2-a114-ea02546f9236","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Copied Layer 1","resourceVersion":"1.0","name":"450ad777-85fd-4643-85b3-c25f426ebe4f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

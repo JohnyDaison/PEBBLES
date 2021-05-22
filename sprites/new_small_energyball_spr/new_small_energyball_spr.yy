@@ -171,6 +171,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e25a1bdf-afe7-4804-8484-c4f7035f6ed9","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "energyballs",
     "path": "folders/Sprites/spells/energyballs.yy",

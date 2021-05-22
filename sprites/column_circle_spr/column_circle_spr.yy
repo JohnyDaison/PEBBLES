@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"174d1281-47a6-411a-9d4e-90c9916b5689","path":"sprites/column_circle_spr/column_circle_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"174d1281-47a6-411a-9d4e-90c9916b5689","path":"sprites/column_circle_spr/column_circle_spr.yy",},"LayerId":{"name":"9e37dec0-1a10-4a85-8a3c-b9726e0987af","path":"sprites/column_circle_spr/column_circle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"174d1281-47a6-411a-9d4e-90c9916b5689","path":"sprites/column_circle_spr/column_circle_spr.yy",},"LayerId":{"name":"28d79b0e-c104-4231-8193-2604e109fa86","path":"sprites/column_circle_spr/column_circle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"174d1281-47a6-411a-9d4e-90c9916b5689","path":"sprites/column_circle_spr/column_circle_spr.yy",},"LayerId":{"name":"5227af7a-1768-43c2-a91b-ecbd3ace9422","path":"sprites/column_circle_spr/column_circle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"174d1281-47a6-411a-9d4e-90c9916b5689","path":"sprites/column_circle_spr/column_circle_spr.yy",},"LayerId":{"name":"9e37dec0-1a10-4a85-8a3c-b9726e0987af","path":"sprites/column_circle_spr/column_circle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"column_circle_spr","path":"sprites/column_circle_spr/column_circle_spr.yy",},"resourceVersion":"1.0","name":"174d1281-47a6-411a-9d4e-90c9916b5689","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"Layer 2 (2) (2) (2) (2) (2)","resourceVersion":"1.0","name":"5227af7a-1768-43c2-a91b-ecbd3ace9422","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9e37dec0-1a10-4a85-8a3c-b9726e0987af","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "color_power_pane",
     "path": "folders/Sprites/GUI/color_power_pane.yy",

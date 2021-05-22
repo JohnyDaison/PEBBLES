@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"LayerId":{"name":"d7a18804-97df-4ac1-9b72-12cb3e534c97","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"LayerId":{"name":"e66d23aa-d0ea-4fe6-97c1-d4bf38a29b93","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"LayerId":{"name":"280a15b6-92bc-4ee7-9a81-bccf6ad97ba9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"LayerId":{"name":"d7a18804-97df-4ac1-9b72-12cb3e534c97","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"lightning_strikes_mod2_icon","path":"sprites/lightning_strikes_mod2_icon/lightning_strikes_mod2_icon.yy",},"resourceVersion":"1.0","name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 5 (2)","resourceVersion":"1.0","name":"280a15b6-92bc-4ee7-9a81-bccf6ad97ba9","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 5","resourceVersion":"1.0","name":"d7a18804-97df-4ac1-9b72-12cb3e534c97","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

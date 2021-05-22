@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0c7feab1-3475-40ce-b6f1-820484e80146","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0c7feab1-3475-40ce-b6f1-820484e80146","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"LayerId":{"name":"5c84522a-7189-474a-a90f-89fafb0a23ed","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0c7feab1-3475-40ce-b6f1-820484e80146","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"LayerId":{"name":"bfe5a9d6-3495-49cc-8771-2ee4d565809c","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0c7feab1-3475-40ce-b6f1-820484e80146","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"LayerId":{"name":"5c84522a-7189-474a-a90f-89fafb0a23ed","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"DPad_Up_button_highlight_spr","path":"sprites/DPad_Up_button_highlight_spr/DPad_Up_button_highlight_spr.yy",},"resourceVersion":"1.0","name":"0c7feab1-3475-40ce-b6f1-820484e80146","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":80.0,"displayName":"default (2)","resourceVersion":"1.0","name":"bfe5a9d6-3495-49cc-8771-2ee4d565809c","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5c84522a-7189-474a-a90f-89fafb0a23ed","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "dpad",
     "path": "folders/Sprites/GUI/controls_icons/XBox/dpad.yy",

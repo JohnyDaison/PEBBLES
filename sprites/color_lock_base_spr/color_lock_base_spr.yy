@@ -183,6 +183,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"137e7748-f34f-47df-a7e2-7d8f6a73e1c1","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "block mounted",
     "path": "folders/Sprites/structures/block mounted.yy",

@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cfedf053-19b6-4df9-9d04-2cb7141ae8af","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "ter_placer",
     "path": "folders/Sprites/GUI/editor/ter_placer.yy",

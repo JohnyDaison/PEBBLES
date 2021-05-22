@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"f73abdd4-8bb8-4f62-a797-aa520d4e7d9b","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f73abdd4-8bb8-4f62-a797-aa520d4e7d9b","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"LayerId":{"name":"eb96ed4b-0194-45ff-956b-ec6e0c7b8716","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f73abdd4-8bb8-4f62-a797-aa520d4e7d9b","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"LayerId":{"name":"d831b6a3-b7e9-418e-abec-4163ad76e42c","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f73abdd4-8bb8-4f62-a797-aa520d4e7d9b","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"LayerId":{"name":"eb96ed4b-0194-45ff-956b-ec6e0c7b8716","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"bg_rectangle_light_emitter_spr","path":"sprites/bg_rectangle_light_emitter_spr/bg_rectangle_light_emitter_spr.yy",},"resourceVersion":"1.0","name":"f73abdd4-8bb8-4f62-a797-aa520d4e7d9b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":70.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"d831b6a3-b7e9-418e-abec-4163ad76e42c","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eb96ed4b-0194-45ff-956b-ec6e0c7b8716","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "structures",
     "path": "folders/Sprites/structures.yy",

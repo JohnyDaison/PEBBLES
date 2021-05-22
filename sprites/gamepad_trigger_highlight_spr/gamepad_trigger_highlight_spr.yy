@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d36c1058-6ad8-4d8c-a0cc-2102c5450372","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "triggers",
     "path": "folders/Sprites/GUI/controls_icons/XBox/triggers.yy",

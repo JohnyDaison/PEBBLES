@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":{"name":"bea4d3bb-1461-465e-9399-6aeb0d7f7d9e","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":{"name":"92a29817-772a-4b11-9153-92ad7f18d48e","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":{"name":"23364770-078b-49a3-aa8c-98982415b790","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":{"name":"d1c6cec3-adbc-4f02-91d5-3faf969169e4","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"LayerId":{"name":"bea4d3bb-1461-465e-9399-6aeb0d7f7d9e","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"centered_arrow_spr","path":"sprites/centered_arrow_spr/centered_arrow_spr.yy",},"resourceVersion":"1.0","name":"1e54a91e-d2ea-4ed3-b4dd-edae5fc17545","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1 (2) (2)","resourceVersion":"1.0","name":"d1c6cec3-adbc-4f02-91d5-3faf969169e4","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1 (2)","resourceVersion":"1.0","name":"bea4d3bb-1461-465e-9399-6aeb0d7f7d9e","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "arrows",
     "path": "folders/Sprites/GUI/arrows.yy",

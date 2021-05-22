@@ -28,8 +28,8 @@
         {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"ce451bd8-2bf4-4719-a9c0-83008084b772","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"6660fe65-0856-4f07-83de-9add00a7e07f","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"92f45d6d-620d-4007-90a3-08a272ac982f","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"954efe38-e767-4b91-b024-146c260ad48d","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"0e80645a-20f0-47d7-9d43-452989747f96","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"LayerId":{"name":"954efe38-e767-4b91-b024-146c260ad48d","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"dark_color_mod_icon","path":"sprites/dark_color_mod_icon/dark_color_mod_icon.yy",},"resourceVersion":"1.0","name":"f202b67c-d1d8-46ad-8a8e-c1e26a6eaad5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -75,6 +75,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2 (2)","resourceVersion":"1.0","name":"0e80645a-20f0-47d7-9d43-452989747f96","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"954efe38-e767-4b91-b024-146c260ad48d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

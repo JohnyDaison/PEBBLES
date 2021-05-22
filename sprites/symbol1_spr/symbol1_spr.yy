@@ -77,6 +77,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 3 (2) (2) (2) (2) (2) (2)","resourceVersion":"1.0","name":"ae62383d-aec3-41fb-a32a-4063b2937570","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2f47d7c3-ff26-4006-ab99-96436b17b0da","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "collections",
     "path": "folders/Sprites/collections.yy",

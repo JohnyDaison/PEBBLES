@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":80.0,"displayName":"default","resourceVersion":"1.0","name":"d952f63e-6e15-43b7-aa5f-e9795b82ade1","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "buttons",
     "path": "folders/Sprites/GUI/controls_icons/XBox/buttons.yy",

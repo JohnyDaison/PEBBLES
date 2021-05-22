@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":80.0,"displayName":"default (2)","resourceVersion":"1.0","name":"bb142b0b-ac91-4afb-a008-c1fc82b1bb92","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"02bf65ff-4202-4305-b04b-c433f7d255f3","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "dpad",
     "path": "folders/Sprites/GUI/controls_icons/XBox/dpad.yy",

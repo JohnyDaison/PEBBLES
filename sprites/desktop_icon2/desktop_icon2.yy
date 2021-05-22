@@ -25,14 +25,14 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"e430b9d0-603e-4e1b-94ad-cd80facd24ae","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"c653becc-fe24-4044-ab87-1c851639f5a7","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"727ce5e9-6a8c-4de6-8301-54a60ed5c180","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"a2eb77b4-021d-4eba-a4a0-d4c228ad9e43","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"a75d0f2d-c0a1-4703-a23b-e6f7555a3d7c","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"d96c9edf-137b-4b24-a4e7-4a922c65b37b","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"9b1d1497-09ff-433e-8064-143da7b6d39f","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"cb47ef36-f2ec-4350-9c0e-0d3fb759faa2","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"9b1d1497-09ff-433e-8064-143da7b6d39f","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"d96c9edf-137b-4b24-a4e7-4a922c65b37b","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"a75d0f2d-c0a1-4703-a23b-e6f7555a3d7c","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"a2eb77b4-021d-4eba-a4a0-d4c228ad9e43","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"e430b9d0-603e-4e1b-94ad-cd80facd24ae","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"727ce5e9-6a8c-4de6-8301-54a60ed5c180","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","path":"sprites/desktop_icon2/desktop_icon2.yy",},"LayerId":{"name":"c653becc-fe24-4044-ab87-1c851639f5a7","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"desktop_icon2","path":"sprites/desktop_icon2/desktop_icon2.yy",},"resourceVersion":"1.0","name":"1b731f5e-d07f-40e0-b067-d0ce56b93f49","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -81,6 +81,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"727ce5e9-6a8c-4de6-8301-54a60ed5c180","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"c653becc-fe24-4044-ab87-1c851639f5a7","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "desktop",
     "path": "folders/Sprites/icons/desktop.yy",

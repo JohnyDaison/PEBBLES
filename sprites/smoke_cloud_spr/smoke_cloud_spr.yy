@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":{"name":"bf509240-1f14-4d11-804a-d5dccde510b8","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":{"name":"e893422e-e47b-4ef7-b7ce-cafbc44513b3","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":{"name":"bf509240-1f14-4d11-804a-d5dccde510b8","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"smoke_cloud_spr","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"resourceVersion":"1.0","name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"LayerId":{"name":"e893422e-e47b-4ef7-b7ce-cafbc44513b3","path":"sprites/smoke_cloud_spr/smoke_cloud_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -74,6 +74,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1 (2)","resourceVersion":"1.0","name":"e893422e-e47b-4ef7-b7ce-cafbc44513b3","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bf509240-1f14-4d11-804a-d5dccde510b8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "spells",
     "path": "folders/Sprites/spells.yy",

@@ -152,6 +152,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37d881fe-7932-424a-baf8-3fb08f0b8573","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"f6eaeb4f-b6c6-4521-b889-12f33b15f2ab","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "medals",
     "path": "folders/Sprites/GUI/medals.yy",

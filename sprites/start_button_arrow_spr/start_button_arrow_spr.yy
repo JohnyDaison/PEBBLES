@@ -26,7 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"aa96e164-aaa9-41c7-a897-7bace8a86eb5","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"aa96e164-aaa9-41c7-a897-7bace8a86eb5","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"LayerId":{"name":"42aa4854-06e8-48c6-9003-84e887e13828","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"aa96e164-aaa9-41c7-a897-7bace8a86eb5","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"LayerId":{"name":"42aa4854-06e8-48c6-9003-84e887e13828","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"start_button_arrow_spr","path":"sprites/start_button_arrow_spr/start_button_arrow_spr.yy",},"resourceVersion":"1.0","name":"aa96e164-aaa9-41c7-a897-7bace8a86eb5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -68,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"42aa4854-06e8-48c6-9003-84e887e13828","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "buttons",
     "path": "folders/Sprites/GUI/controls_icons/XBox/buttons.yy",

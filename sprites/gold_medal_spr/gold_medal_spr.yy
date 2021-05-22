@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":{"name":"6f1d7296-660b-4ea3-9462-ce87e78602fb","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":{"name":"6db13e52-ecb9-4ffa-90bb-d270ca0663a8","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":{"name":"b6b3dbbd-429a-484a-944d-9b8752500427","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":{"name":"b8c9606b-f176-4546-b49b-0a9b20e568f3","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"529e26cd-89df-42e0-9030-aaa7780302d2","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"LayerId":{"name":"6f1d7296-660b-4ea3-9462-ce87e78602fb","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"gold_medal_spr","path":"sprites/gold_medal_spr/gold_medal_spr.yy",},"resourceVersion":"1.0","name":"529e26cd-89df-42e0-9030-aaa7780302d2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b6b3dbbd-429a-484a-944d-9b8752500427","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"b8c9606b-f176-4546-b49b-0a9b20e568f3","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "medals",
     "path": "folders/Sprites/GUI/medals.yy",

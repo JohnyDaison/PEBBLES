@@ -25,12 +25,12 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4402e1b1-488c-4e2d-82d5-229cc9d52e01","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4402e1b1-488c-4e2d-82d5-229cc9d52e01","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"c1fe02da-3fa1-40ff-b0c5-9d0f931d14d2","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4402e1b1-488c-4e2d-82d5-229cc9d52e01","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"db50cceb-d6f1-41f1-9ca9-a08748119f77","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4402e1b1-488c-4e2d-82d5-229cc9d52e01","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"c1fe02da-3fa1-40ff-b0c5-9d0f931d14d2","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"holo_spawners_mod_icon_base","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"4402e1b1-488c-4e2d-82d5-229cc9d52e01","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"97e5c6f8-82d6-4891-bfce-eea1d44002d8","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"97e5c6f8-82d6-4891-bfce-eea1d44002d8","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"c1fe02da-3fa1-40ff-b0c5-9d0f931d14d2","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"97e5c6f8-82d6-4891-bfce-eea1d44002d8","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"db50cceb-d6f1-41f1-9ca9-a08748119f77","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"97e5c6f8-82d6-4891-bfce-eea1d44002d8","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"LayerId":{"name":"c1fe02da-3fa1-40ff-b0c5-9d0f931d14d2","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"holo_spawners_mod_icon_base","path":"sprites/holo_spawners_mod_icon_base/holo_spawners_mod_icon_base.yy",},"resourceVersion":"1.0","name":"97e5c6f8-82d6-4891-bfce-eea1d44002d8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -74,6 +74,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"db50cceb-d6f1-41f1-9ca9-a08748119f77","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c1fe02da-3fa1-40ff-b0c5-9d0f931d14d2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "modifier_icons",
     "path": "folders/Sprites/GUI/modifier_icons.yy",

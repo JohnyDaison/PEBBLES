@@ -25,13 +25,13 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"a7cebe9d-4a78-4e31-a535-de86278c9ed2","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"9426968a-f3a9-4925-873a-a42d81fe5e1a","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"9bdd78c3-11a1-4a09-b008-f86eddd2faea","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"3bc79054-c6c1-4ebd-997c-e32326e440fb","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"a67cc60b-8579-461a-b5c1-58033c3cf96a","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"262e8b6c-af67-46ea-83e9-afb5ecd2c105","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"3bc79054-c6c1-4ebd-997c-e32326e440fb","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"9426968a-f3a9-4925-873a-a42d81fe5e1a","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"8a0ad09c-9077-474a-991b-c7a5d114e379","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"180defc2-d770-4001-a348-2949f9147cf8","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"LayerId":{"name":"a7cebe9d-4a78-4e31-a535-de86278c9ed2","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"status_suppressed_icon3","path":"sprites/status_suppressed_icon3/status_suppressed_icon3.yy",},"resourceVersion":"1.0","name":"180defc2-d770-4001-a348-2949f9147cf8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -79,6 +79,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":80.0,"displayName":"Layer 1 (2) (2)","resourceVersion":"1.0","name":"8a0ad09c-9077-474a-991b-c7a5d114e379","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3","resourceVersion":"1.0","name":"a7cebe9d-4a78-4e31-a535-de86278c9ed2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "status effects",
     "path": "folders/Sprites/GUI/status effects.yy",

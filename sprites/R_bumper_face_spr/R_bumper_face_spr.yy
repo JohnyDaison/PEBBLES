@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":{"name":"6ab13cb4-b828-4fdc-8194-e07d7d5fb61d","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":{"name":"ddbc5a23-e75b-4cd6-8f95-1fc642cda386","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":{"name":"16efdd66-0d86-431c-867b-ed6e88e4d9c3","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":{"name":"ddbc5a23-e75b-4cd6-8f95-1fc642cda386","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"75ce3ecb-d83a-406c-b467-5c86b483e251","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"LayerId":{"name":"6ab13cb4-b828-4fdc-8194-e07d7d5fb61d","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"R_bumper_face_spr","path":"sprites/R_bumper_face_spr/R_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"75ce3ecb-d83a-406c-b467-5c86b483e251","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2 (2) (2) (2)","resourceVersion":"1.0","name":"ddbc5a23-e75b-4cd6-8f95-1fc642cda386","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"6ab13cb4-b828-4fdc-8194-e07d7d5fb61d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "buttons",
     "path": "folders/Sprites/GUI/controls_icons/XBox/buttons.yy",

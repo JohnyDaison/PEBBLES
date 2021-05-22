@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f6a37f4c-dd7e-41b8-a6ba-2c3ff92bf635","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "chargeball",
     "path": "folders/Sprites/spells/chargeball.yy",

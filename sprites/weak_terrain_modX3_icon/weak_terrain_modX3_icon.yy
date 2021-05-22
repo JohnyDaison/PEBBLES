@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"LayerId":{"name":"9d494e84-75c0-4564-9bc0-aa70e7c7509e","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"LayerId":{"name":"1738de4f-8ddd-4bec-89d9-45733fd8e358","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"LayerId":{"name":"cf8daf37-1c71-42d9-a452-b298dc141e67","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"LayerId":{"name":"9d494e84-75c0-4564-9bc0-aa70e7c7509e","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"weak_terrain_modX3_icon","path":"sprites/weak_terrain_modX3_icon/weak_terrain_modX3_icon.yy",},"resourceVersion":"1.0","name":"29a31bd4-7e4a-431d-a932-31a21a1b9571","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1738de4f-8ddd-4bec-89d9-45733fd8e358","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"cf8daf37-1c71-42d9-a452-b298dc141e67","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

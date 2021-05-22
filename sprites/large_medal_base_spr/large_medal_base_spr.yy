@@ -25,15 +25,15 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"b69af1c7-2fbb-423f-9e4a-36be25f4c3ea","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"88d2d083-30a9-461b-b6f4-fcf9c3297f95","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"a603b485-206b-4cdd-8d8e-cf9e87cfc54f","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"bdcd0696-9feb-43ab-9837-db3ed808622a","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"1f8a29af-1c87-485e-9230-84ebc84502cf","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"0e95b3b6-48c2-4d10-8ddb-b39368f6197b","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"d55d1a79-abf5-404b-85b2-c4612cf033f0","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"69af6436-40d7-46a7-8911-f5b0339b2c97","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"ca252c83-83e8-46b2-9f72-0924e9b5de2e","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"d55d1a79-abf5-404b-85b2-c4612cf033f0","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"1f8a29af-1c87-485e-9230-84ebc84502cf","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"bdcd0696-9feb-43ab-9837-db3ed808622a","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"b69af1c7-2fbb-423f-9e4a-36be25f4c3ea","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8d772deb-94e7-4638-b39b-549b2fd47804","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"LayerId":{"name":"a603b485-206b-4cdd-8d8e-cf9e87cfc54f","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"large_medal_base_spr","path":"sprites/large_medal_base_spr/large_medal_base_spr.yy",},"resourceVersion":"1.0","name":"8d772deb-94e7-4638-b39b-549b2fd47804","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -83,6 +83,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"69af6436-40d7-46a7-8911-f5b0339b2c97","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"ca252c83-83e8-46b2-9f72-0924e9b5de2e","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "medals",
     "path": "folders/Sprites/GUI/medals.yy",

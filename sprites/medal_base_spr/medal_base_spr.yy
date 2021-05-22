@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"db81c1a3-0be7-4809-977d-4e94043e6caf","path":"sprites/medal_base_spr/medal_base_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db81c1a3-0be7-4809-977d-4e94043e6caf","path":"sprites/medal_base_spr/medal_base_spr.yy",},"LayerId":{"name":"dcd24069-4834-4c40-b3a6-08b550b28463","path":"sprites/medal_base_spr/medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"db81c1a3-0be7-4809-977d-4e94043e6caf","path":"sprites/medal_base_spr/medal_base_spr.yy",},"LayerId":{"name":"481c290a-221c-4ee6-926f-d29741e03728","path":"sprites/medal_base_spr/medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"db81c1a3-0be7-4809-977d-4e94043e6caf","path":"sprites/medal_base_spr/medal_base_spr.yy",},"LayerId":{"name":"dcd24069-4834-4c40-b3a6-08b550b28463","path":"sprites/medal_base_spr/medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"db81c1a3-0be7-4809-977d-4e94043e6caf","path":"sprites/medal_base_spr/medal_base_spr.yy",},"LayerId":{"name":"c13e52cc-c7a9-43d4-846c-c5fdfc389c2a","path":"sprites/medal_base_spr/medal_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"medal_base_spr","path":"sprites/medal_base_spr/medal_base_spr.yy",},"resourceVersion":"1.0","name":"db81c1a3-0be7-4809-977d-4e94043e6caf","tags":[],"resourceType":"GMSpriteFrame",},
   ],
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dcd24069-4834-4c40-b3a6-08b550b28463","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"c13e52cc-c7a9-43d4-846c-c5fdfc389c2a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "medals",
     "path": "folders/Sprites/GUI/medals.yy",

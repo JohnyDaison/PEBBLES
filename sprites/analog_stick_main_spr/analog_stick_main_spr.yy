@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baba918d-b127-4be4-8032-aa7e0cb4d59b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "XBox",
     "path": "folders/Sprites/GUI/controls_icons/XBox.yy",

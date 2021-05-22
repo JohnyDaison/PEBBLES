@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"f2b7c664-ed9a-42fc-bfc3-b6672d5909c2","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"d0a94ce1-1cf6-4382-897c-a3f763e446a9","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"ad9d2ecf-a278-4929-8ebd-706256710f05","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"d0a94ce1-1cf6-4382-897c-a3f763e446a9","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"b1d05f06-bab5-4600-8313-1d2fbcd8a4b3","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"LayerId":{"name":"f2b7c664-ed9a-42fc-bfc3-b6672d5909c2","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"ban_mob_portals_mod_icon","path":"sprites/ban_mob_portals_mod_icon/ban_mob_portals_mod_icon.yy",},"resourceVersion":"1.0","name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2)","resourceVersion":"1.0","name":"b1d05f06-bab5-4600-8313-1d2fbcd8a4b3","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f2b7c664-ed9a-42fc-bfc3-b6672d5909c2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

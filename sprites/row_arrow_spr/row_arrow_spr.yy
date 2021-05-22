@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"42aa4854-06e8-48c6-9003-84e887e13828","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "color_power_pane",
     "path": "folders/Sprites/GUI/color_power_pane.yy",

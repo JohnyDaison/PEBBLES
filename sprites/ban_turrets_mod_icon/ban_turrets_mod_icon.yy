@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"e4fe274f-9792-4adc-885f-c69a4a0d030a","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"c0e4b2c3-14d7-4565-bd7a-06a5b3aad8a7","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"598ec664-8cee-4786-ac7c-32dd0fd29eab","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"c0e4b2c3-14d7-4565-bd7a-06a5b3aad8a7","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"99795a74-42c0-4039-be53-8e17cd35fab3","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"LayerId":{"name":"e4fe274f-9792-4adc-885f-c69a4a0d030a","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"ban_turrets_mod_icon","path":"sprites/ban_turrets_mod_icon/ban_turrets_mod_icon.yy",},"resourceVersion":"1.0","name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"99795a74-42c0-4039-be53-8e17cd35fab3","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e4fe274f-9792-4adc-885f-c69a4a0d030a","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

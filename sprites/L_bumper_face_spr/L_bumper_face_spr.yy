@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"51b37c42-f05f-4d4d-ac79-21ebd2d2941f","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"51b37c42-f05f-4d4d-ac79-21ebd2d2941f","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"LayerId":{"name":"8e0717d9-43ff-43fa-801f-a479de12b346","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"51b37c42-f05f-4d4d-ac79-21ebd2d2941f","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"LayerId":{"name":"94ccdd2c-87aa-4795-b693-ca8bacc1c797","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"51b37c42-f05f-4d4d-ac79-21ebd2d2941f","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"LayerId":{"name":"8e0717d9-43ff-43fa-801f-a479de12b346","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"L_bumper_face_spr","path":"sprites/L_bumper_face_spr/L_bumper_face_spr.yy",},"resourceVersion":"1.0","name":"51b37c42-f05f-4d4d-ac79-21ebd2d2941f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3","resourceVersion":"1.0","name":"94ccdd2c-87aa-4795-b693-ca8bacc1c797","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"8e0717d9-43ff-43fa-801f-a479de12b346","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "buttons",
     "path": "folders/Sprites/GUI/controls_icons/XBox/buttons.yy",

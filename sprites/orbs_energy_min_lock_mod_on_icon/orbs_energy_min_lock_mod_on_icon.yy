@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"7b7bbe83-69cc-4af5-bebb-f8503cfac968","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "modifier_icons",
     "path": "folders/Sprites/GUI/modifier_icons.yy",

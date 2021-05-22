@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"e50823d7-c2c6-4fc9-91fc-efae06cf1e01","path":"sprites/order_structure_spr/order_structure_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e50823d7-c2c6-4fc9-91fc-efae06cf1e01","path":"sprites/order_structure_spr/order_structure_spr.yy",},"LayerId":{"name":"12c5877c-dd0e-4bd7-9490-e4ea475e6bad","path":"sprites/order_structure_spr/order_structure_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e50823d7-c2c6-4fc9-91fc-efae06cf1e01","path":"sprites/order_structure_spr/order_structure_spr.yy",},"LayerId":{"name":"4088f2d2-f081-485e-a947-fe9873bc4f8c","path":"sprites/order_structure_spr/order_structure_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e50823d7-c2c6-4fc9-91fc-efae06cf1e01","path":"sprites/order_structure_spr/order_structure_spr.yy",},"LayerId":{"name":"12c5877c-dd0e-4bd7-9490-e4ea475e6bad","path":"sprites/order_structure_spr/order_structure_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"order_structure_spr","path":"sprites/order_structure_spr/order_structure_spr.yy",},"resourceVersion":"1.0","name":"e50823d7-c2c6-4fc9-91fc-efae06cf1e01","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2)","resourceVersion":"1.0","name":"4088f2d2-f081-485e-a947-fe9873bc4f8c","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2)","resourceVersion":"1.0","name":"12c5877c-dd0e-4bd7-9490-e4ea475e6bad","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "energy",
     "path": "folders/Sprites/structures/block mounted/energy.yy",

@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"61c6db0c-b42b-4196-96c7-aeb6d5a1f448","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "small",
     "path": "folders/Sprites/GUI/abi icons/small.yy",

@@ -25,20 +25,20 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"05c3b8b9-a4a4-49d4-acba-8e94ebcebbd8","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"snakes_mod_icon_base","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"dcddae50-651f-4529-8da8-1a71ac14779c","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dcddae50-651f-4529-8da8-1a71ac14779c","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"dcddae50-651f-4529-8da8-1a71ac14779c","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"05c3b8b9-a4a4-49d4-acba-8e94ebcebbd8","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"dcddae50-651f-4529-8da8-1a71ac14779c","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"snakes_mod_icon_base","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"dcddae50-651f-4529-8da8-1a71ac14779c","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"09c3b297-f282-47d8-8504-10b4b53cf361","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"09c3b297-f282-47d8-8504-10b4b53cf361","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"09c3b297-f282-47d8-8504-10b4b53cf361","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"05c3b8b9-a4a4-49d4-acba-8e94ebcebbd8","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"09c3b297-f282-47d8-8504-10b4b53cf361","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"snakes_mod_icon_base","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"09c3b297-f282-47d8-8504-10b4b53cf361","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"ab682e80-c36b-4297-8163-f9573183ead7","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ab682e80-c36b-4297-8163-f9573183ead7","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ab682e80-c36b-4297-8163-f9573183ead7","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"05c3b8b9-a4a4-49d4-acba-8e94ebcebbd8","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"ab682e80-c36b-4297-8163-f9573183ead7","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"LayerId":{"name":"f700122d-8566-4ef5-ae45-22da060a359f","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"snakes_mod_icon_base","path":"sprites/snakes_mod_icon_base/snakes_mod_icon_base.yy",},"resourceVersion":"1.0","name":"ab682e80-c36b-4297-8163-f9573183ead7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -84,6 +84,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"05c3b8b9-a4a4-49d4-acba-8e94ebcebbd8","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f700122d-8566-4ef5-ae45-22da060a359f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "modifier_icons",
     "path": "folders/Sprites/GUI/modifier_icons.yy",

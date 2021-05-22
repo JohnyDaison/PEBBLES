@@ -106,8 +106,8 @@
     {"compositeImage":{"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":{"name":"b77422a5-7099-4df7-903e-e9b1a91472fa","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":{"name":"c1829abd-12aa-4c24-ac20-b2dfccbd0231","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":{"name":"d3fc4cc8-dd78-493c-a985-58cba20afacb","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":{"name":"5c8a8e35-1dcd-493d-a65b-0955b3c1c4e1","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"LayerId":{"name":"d3fc4cc8-dd78-493c-a985-58cba20afacb","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"tutorials_mod_icon","path":"sprites/tutorials_mod_icon/tutorials_mod_icon.yy",},"resourceVersion":"1.0","name":"ec263429-f0b8-46e3-9a2b-2b6f3e9766b3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -152,6 +152,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":82.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"5c8a8e35-1dcd-493d-a65b-0955b3c1c4e1","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d3fc4cc8-dd78-493c-a985-58cba20afacb","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

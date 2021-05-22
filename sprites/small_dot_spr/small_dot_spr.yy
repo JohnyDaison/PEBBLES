@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"73bab096-94e1-4e95-bf8a-2b869effe89f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "controls_icons",
     "path": "folders/Sprites/GUI/controls_icons.yy",

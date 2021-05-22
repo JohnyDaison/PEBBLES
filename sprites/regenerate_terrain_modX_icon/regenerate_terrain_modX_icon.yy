@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"b223a898-a324-474d-a79f-7529c763e665","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"763dd072-dfa7-42ec-ac2e-6e5aecc8f243","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"bc69e01c-1403-4ae6-ba4e-f69237c8278a","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"763dd072-dfa7-42ec-ac2e-6e5aecc8f243","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"cbdc0270-8ec1-4eb3-b9e3-33bd7ead7dfd","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"72c2739e-adac-4ece-91a6-9bfa1d530104","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"LayerId":{"name":"b223a898-a324-474d-a79f-7529c763e665","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"regenerate_terrain_modX_icon","path":"sprites/regenerate_terrain_modX_icon/regenerate_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"72c2739e-adac-4ece-91a6-9bfa1d530104","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3 (2) (2)","resourceVersion":"1.0","name":"cbdc0270-8ec1-4eb3-b9e3-33bd7ead7dfd","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"b223a898-a324-474d-a79f-7529c763e665","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

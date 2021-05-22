@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"LayerId":{"name":"ea59aca9-f6e9-4c98-9041-dd0d3a14cac2","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"LayerId":{"name":"b1f2556d-eef0-4a29-b9c9-d665b909e231","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"LayerId":{"name":"ea59aca9-f6e9-4c98-9041-dd0d3a14cac2","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"indestr_terrain_modX_icon","path":"sprites/indestr_terrain_modX_icon/indestr_terrain_modX_icon.yy",},"resourceVersion":"1.0","name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"b1f2556d-eef0-4a29-b9c9-d665b909e231","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"ea59aca9-f6e9-4c98-9041-dd0d3a14cac2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

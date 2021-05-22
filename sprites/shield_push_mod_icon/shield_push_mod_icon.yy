@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4e2d894b-91a4-47b6-b032-5faaea11182a","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e2d894b-91a4-47b6-b032-5faaea11182a","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"LayerId":{"name":"629c5103-c675-48ad-a061-2d0d89516475","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4e2d894b-91a4-47b6-b032-5faaea11182a","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"LayerId":{"name":"161df490-542d-41a6-bd9e-dd66bf14ef97","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4e2d894b-91a4-47b6-b032-5faaea11182a","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"LayerId":{"name":"629c5103-c675-48ad-a061-2d0d89516475","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"shield_push_mod_icon","path":"sprites/shield_push_mod_icon/shield_push_mod_icon.yy",},"resourceVersion":"1.0","name":"4e2d894b-91a4-47b6-b032-5faaea11182a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"161df490-542d-41a6-bd9e-dd66bf14ef97","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"629c5103-c675-48ad-a061-2d0d89516475","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

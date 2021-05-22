@@ -77,6 +77,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2) (2)","resourceVersion":"1.0","name":"bcabff55-6eb1-4435-979e-bc55e0c4f422","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2) (2) (2) (2) (2)","resourceVersion":"1.0","name":"d4d68f1f-4e70-40e5-a644-09ac804c7331","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "triggers",
     "path": "folders/Sprites/GUI/controls_icons/XBox/triggers.yy",

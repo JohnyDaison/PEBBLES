@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"9bd5fdb4-72ef-4e7f-ad42-555621a2eb5f","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"dbc0a0cc-f91e-486f-9548-50c2d0b5f4cc","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"ee018c20-52f8-42f4-897d-ac49a6f99c2b","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"dbc0a0cc-f91e-486f-9548-50c2d0b5f4cc","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"85f48409-9710-4755-8920-78a1c446cc50","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7c54cf3e-878f-4f65-b198-19e1ee065268","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"LayerId":{"name":"9bd5fdb4-72ef-4e7f-ad42-555621a2eb5f","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"walls_tiles_bg","path":"sprites/walls_tiles_bg/walls_tiles_bg.yy",},"resourceVersion":"1.0","name":"7c54cf3e-878f-4f65-b198-19e1ee065268","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -73,6 +73,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2)","resourceVersion":"1.0","name":"85f48409-9710-4755-8920-78a1c446cc50","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9bd5fdb4-72ef-4e7f-ad42-555621a2eb5f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "tilesets",
     "path": "folders/Sprites/tilesets.yy",

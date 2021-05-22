@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":{"name":"74b0f221-2838-4c24-a3bc-f2a604468562","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":{"name":"52b8ee57-d3bc-4b0c-90c6-bf317707cb78","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":{"name":"610a051c-cf00-4fab-8bce-f46e4fb3d4f3","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":{"name":"52b8ee57-d3bc-4b0c-90c6-bf317707cb78","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"LayerId":{"name":"74b0f221-2838-4c24-a3bc-f2a604468562","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"typed_ceramic_tiles_base_spr","path":"sprites/typed_ceramic_tiles_base_spr/typed_ceramic_tiles_base_spr.yy",},"resourceVersion":"1.0","name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"52b8ee57-d3bc-4b0c-90c6-bf317707cb78","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"74b0f221-2838-4c24-a3bc-f2a604468562","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "typed_tiles_base",
     "path": "folders/Sprites/tilesets/typed_tiles_base.yy",

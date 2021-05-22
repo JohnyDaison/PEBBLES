@@ -75,6 +75,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":80.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"7c3d5ec3-e755-498a-96ff-4bed710cddbb","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Copied Layer 3","resourceVersion":"1.0","name":"def01d45-c031-4d4e-bf00-1181bcf5b930","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "new",
     "path": "folders/Sprites/GUI/modifier_icons/new.yy",

@@ -25,9 +25,9 @@
   "gridY": 4,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"ad558c19-28ea-43de-9402-db629d317ca6","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ad558c19-28ea-43de-9402-db629d317ca6","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"LayerId":{"name":"7a05964f-2cc4-453e-857d-54ff530e93a9","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ad558c19-28ea-43de-9402-db629d317ca6","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"LayerId":{"name":"fb7a0157-99d0-4d65-91f7-8a2ba29c03e5","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ad558c19-28ea-43de-9402-db629d317ca6","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"LayerId":{"name":"ddf7bea3-01b1-46db-8fc3-7413ec9fe569","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ad558c19-28ea-43de-9402-db629d317ca6","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"LayerId":{"name":"7a05964f-2cc4-453e-857d-54ff530e93a9","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"DPad_outline_spr","path":"sprites/DPad_outline_spr/DPad_outline_spr.yy",},"resourceVersion":"1.0","name":"ad558c19-28ea-43de-9402-db629d317ca6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -71,6 +71,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"default (2) (2) (2)","resourceVersion":"1.0","name":"fb7a0157-99d0-4d65-91f7-8a2ba29c03e5","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default (2) (2) (2) (2) (2)","resourceVersion":"1.0","name":"ddf7bea3-01b1-46db-8fc3-7413ec9fe569","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "dpad",
     "path": "folders/Sprites/GUI/controls_icons/XBox/dpad.yy",

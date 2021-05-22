@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"66b4df6f-447b-4e62-a348-7756ba425a67","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"66b4df6f-447b-4e62-a348-7756ba425a67","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"LayerId":{"name":"7d8dfbde-82d1-4529-beb9-000e8cd05238","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"66b4df6f-447b-4e62-a348-7756ba425a67","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"LayerId":{"name":"bee343cb-9e87-44e4-9d61-4618f84bc028","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"66b4df6f-447b-4e62-a348-7756ba425a67","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"LayerId":{"name":"7d8dfbde-82d1-4529-beb9-000e8cd05238","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"white_square_checkered_spr","path":"sprites/white_square_checkered_spr/white_square_checkered_spr.yy",},"resourceVersion":"1.0","name":"66b4df6f-447b-4e62-a348-7756ba425a67","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -69,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":50.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"bee343cb-9e87-44e4-9d61-4618f84bc028","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7d8dfbde-82d1-4529-beb9-000e8cd05238","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "editor",
     "path": "folders/Sprites/misc/editor.yy",

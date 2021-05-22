@@ -25,6 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"9f6177f0-b256-4de3-94c4-42de8e3419e5","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"31676866-e830-4fe8-8da3-ddd6b4b9cfb7","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"01e1876a-d015-4797-8906-7abff11025d5","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"9cf06896-f389-465c-bc61-002f37043fac","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"cf683f63-c4e1-4592-8932-9c1a33132a97","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"7ba3b40b-2261-4575-a485-d7fb12e50115","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -33,9 +36,6 @@
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"5b7f568d-1928-4f32-b9c4-7b8e9d6bbe3f","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"c8a74e7f-2ceb-42d7-ae05-c0132cf2936f","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"cf3d3012-89c2-49a9-bf20-f8446b7d9842","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"01e1876a-d015-4797-8906-7abff11025d5","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"31676866-e830-4fe8-8da3-ddd6b4b9cfb7","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7c160362-335e-48f2-9b78-03c78e28aacc","path":"sprites/desktop_icon3/desktop_icon3.yy",},"LayerId":{"name":"9f6177f0-b256-4de3-94c4-42de8e3419e5","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"desktop_icon3","path":"sprites/desktop_icon3/desktop_icon3.yy",},"resourceVersion":"1.0","name":"7c160362-335e-48f2-9b78-03c78e28aacc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -87,6 +87,7 @@
     {"visible":true,"isLocked":false,"blendMode":3,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"c8a74e7f-2ceb-42d7-ae05-c0132cf2936f","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"cf3d3012-89c2-49a9-bf20-f8446b7d9842","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "desktop",
     "path": "folders/Sprites/icons/desktop.yy",

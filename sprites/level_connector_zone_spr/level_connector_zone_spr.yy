@@ -25,9 +25,7 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"22c58550-b66a-4713-a9af-d1ed2d685434","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22c58550-b66a-4713-a9af-d1ed2d685434","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"LayerId":{"name":"level_connector_zone_spr","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"22c58550-b66a-4713-a9af-d1ed2d685434","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"LayerId":{"name":"60a4bb85-0c02-4693-82ca-9d1e44e84182","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"22c58550-b66a-4713-a9af-d1ed2d685434","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"LayerId":{"name":"level_connector_zone_spr","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"22c58550-b66a-4713-a9af-d1ed2d685434","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"LayerId":{"name":"943546be-706c-480c-8f02-0506421ebb45","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"level_connector_zone_spr","path":"sprites/level_connector_zone_spr/level_connector_zone_spr.yy",},"resourceVersion":"1.0","name":"22c58550-b66a-4713-a9af-d1ed2d685434","tags":[],"resourceType":"GMSpriteFrame",},
   ],
@@ -71,6 +69,7 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"60a4bb85-0c02-4693-82ca-9d1e44e84182","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"Layer 2 (2)","resourceVersion":"1.0","name":"943546be-706c-480c-8f02-0506421ebb45","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "zones",
     "path": "folders/Sprites/zones.yy",
