@@ -39,3 +39,9 @@ if (history_list.cur_item == history_list.item_count - 1) {
     DB.console_history_cur_item = history_list.cur_item;
     DB.console_history_selection_pos = history_list.selection_pos;
 }
+
+if (DB.console_popup_on_log) {
+    status_button.icon = green_dot_spr;
+} else {
+    status_button.icon = black_dot_spr;
+}

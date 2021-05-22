@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5b92cb70-8444-4fd1-a57f-c4569879fd8a","path":"sprites/green_dot_spr/green_dot_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b92cb70-8444-4fd1-a57f-c4569879fd8a","path":"sprites/green_dot_spr/green_dot_spr.yy",},"LayerId":{"name":"c7cbf749-2904-4247-968f-caa841dd0d2d","path":"sprites/green_dot_spr/green_dot_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"green_dot_spr","path":"sprites/green_dot_spr/green_dot_spr.yy",},"resourceVersion":"1.0","name":"5b92cb70-8444-4fd1-a57f-c4569879fd8a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ff09842c-456d-45e9-bab6-e3d8e33b7d4f","path":"sprites/black_dot_spr/black_dot_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ff09842c-456d-45e9-bab6-e3d8e33b7d4f","path":"sprites/black_dot_spr/black_dot_spr.yy",},"LayerId":{"name":"6ce9fc67-e095-459f-9567-5b705111394d","path":"sprites/black_dot_spr/black_dot_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"black_dot_spr","path":"sprites/black_dot_spr/black_dot_spr.yy",},"resourceVersion":"1.0","name":"ff09842c-456d-45e9-bab6-e3d8e33b7d4f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"green_dot_spr","path":"sprites/green_dot_spr/green_dot_spr.yy",},
+    "spriteId": {"name":"black_dot_spr","path":"sprites/black_dot_spr/black_dot_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9b452644-db7b-412e-bbe7-8d4b99f22227","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b92cb70-8444-4fd1-a57f-c4569879fd8a","path":"sprites/green_dot_spr/green_dot_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fbbc9916-aeaa-4a48-8ade-54e768c5260c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ff09842c-456d-45e9-bab6-e3d8e33b7d4f","path":"sprites/black_dot_spr/black_dot_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"green_dot_spr","path":"sprites/green_dot_spr/green_dot_spr.yy",},
+    "parent": {"name":"black_dot_spr","path":"sprites/black_dot_spr/black_dot_spr.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "black_dot_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7cbf749-2904-4247-968f-caa841dd0d2d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6ce9fc67-e095-459f-9567-5b705111394d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/GUI/misc.yy",
   },
   "resourceVersion": "1.0",
-  "name": "green_dot_spr",
+  "name": "black_dot_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }

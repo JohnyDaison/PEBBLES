@@ -66,8 +66,8 @@ gui_reset_scroll_items(i, "text", DB.console_history);
 self.history_list = i;
 
 
-// STATUS
-i = gui_add_button(x, y+height-32, "", empty_script);
+// POPUP TOGGLE
+i = gui_add_button(x, y+height-32, "", console_toggle_popup_on_log);
 i.icon = green_dot_spr;
 i.show_icon = true;
 i.center_icon = true;

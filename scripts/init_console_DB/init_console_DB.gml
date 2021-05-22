@@ -12,6 +12,7 @@ function init_console_DB() {
     console_commands_saved = ds_list_create();
     console_divider_max_steps = 10;
     console_divider_step_length = 12;
+    console_popup_on_log = false;
     
     var ccs = console_commands_saved;
 
