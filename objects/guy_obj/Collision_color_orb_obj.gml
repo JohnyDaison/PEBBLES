@@ -35,7 +35,7 @@ with(orb)
         var in_use_list = guy.orbs_in_use[? my_color];
         var can_add_to_belt = in_use_list != undefined && ds_list_size(in_use_list) < guy.belt_size[? my_color];
         var has_cannon = ds_list_size(guy.my_player.my_cannons) > 0;
-        var can_be_stored = my_color > g_black && my_color < g_octarine && guy.orb_reserve[? my_color] < guy.my_player.levels[? "orb_storage_size"];
+        var can_be_stored = my_color > g_dark && my_color < g_octarine && guy.orb_reserve[? my_color] < guy.my_player.levels[? "orb_storage_size"];
         var orb_collected = false, orb_converted = false;
 
         if(can_add_to_belt) {
@@ -81,4 +81,3 @@ with(orb)
         }
     }
 }
-

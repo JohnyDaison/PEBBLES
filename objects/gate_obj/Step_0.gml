@@ -35,7 +35,7 @@ if(instance_exists(my_block))
                         my_block.energy -= transfer_packet_size;
                         other_gate.my_block.direct_input_buffer += transfer_packet_size;
                     
-                        if(other_gate.my_block.my_color == g_black)
+                        if(other_gate.my_block.my_color == g_dark)
                         {
                             other_gate.my_block.my_next_color = my_block.my_next_color;
                         }
@@ -47,9 +47,9 @@ if(instance_exists(my_block))
     }
     
     // WHEN COLOR CHANGE FINISHES
-    if(tint_updated && my_color > g_black && my_color < g_white)
+    if(tint_updated && my_color > g_dark && my_color < g_white)
     {
-        if(my_last_color > g_black && my_last_color < g_white)
+        if(my_last_color > g_dark && my_last_color < g_white)
         {
             // EXECUTE COMMAND
             var old_dir = DB.colordirs[? my_last_color];
@@ -59,7 +59,7 @@ if(instance_exists(my_block))
         
         // DISCARD COLOR
         my_last_color = my_color;
-        my_color = g_black;
+        my_color = g_dark;
         tint_updated = false;
     }
     
@@ -211,14 +211,14 @@ if(instance_exists(my_block))
         }
     }
     
-    if(my_color == g_black && has_field)
+    if(my_color == g_dark && has_field)
     {
         my_color = g_white;
         tint_updated = false;
     }
     else if(my_color == g_white && !has_field)
     {
-        my_color = g_black;
+        my_color = g_dark;
         tint_updated = false;
     }
  
@@ -238,9 +238,9 @@ if(instance_exists(my_block))
                 {
                     ds_list_add(list, DB.colormap[? g_white]);
                 }
-                else if(my_last_color <= g_black || my_last_color >= g_white)
+                else if(my_last_color <= g_dark || my_last_color >= g_white)
                 {
-                    ds_list_add(list, DB.colormap[? g_black]);
+                    ds_list_add(list, DB.colormap[? g_dark]);
                 }
                 else
                 {
@@ -248,7 +248,7 @@ if(instance_exists(my_block))
                     {
                         if(active[? ii])
                         {
-                            for(col = g_red; col <= g_azure; col++)
+                            for(col = g_red; col <= g_cyan; col++)
                             {
                                 if(col == my_last_color)
                                     continue;
@@ -270,4 +270,3 @@ if(instance_exists(my_block))
         has_rotated = false;
     }
 }
-

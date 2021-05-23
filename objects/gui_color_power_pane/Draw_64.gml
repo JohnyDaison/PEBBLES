@@ -62,7 +62,7 @@ for(var row = 0; row < color_count; row += 1)
         draw_rectangle(col_x - column_width/2, row_y - half_row,
                         col_x + column_width/2 - 1, row_y + half_row - 1, false);
         
-        if(rcolor != g_black) {
+        if(rcolor != g_dark) {
             if(ratio > 0) {
                 draw_set_color(rcolor_value);
                 draw_set_alpha(0.5);
@@ -88,4 +88,4 @@ for(var row = 0; row < color_count; row += 1)
     if(ds_list_find_index(gaps_after, rcolor) != -1) {
         row_shift += gap_size;
     }
-}    
+}

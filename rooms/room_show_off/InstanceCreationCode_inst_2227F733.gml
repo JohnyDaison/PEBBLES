@@ -1,1 +1,1 @@
-burn_to_black = true;
+burn_to_dark = true;

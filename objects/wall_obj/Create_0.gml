@@ -5,7 +5,7 @@ my_next_color = my_color;
 my_old_color = my_color;
 color_locked = false;
 is_burner = false;
-burn_to_black = false;
+burn_to_dark = false;
 lock_alpha = 1;
 sound_played = false;
 aoe_met = false;
@@ -83,4 +83,3 @@ name = "Wall Block";
 
 alarm[0]=1;
 alarm[4]=2;
-

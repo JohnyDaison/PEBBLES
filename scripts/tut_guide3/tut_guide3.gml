@@ -190,7 +190,7 @@ function tut_guide3(argument0) {
                 }
                 wanna_cast = true;
             }
-            else if(status_left[? "suppressed"] > 0 && my_color != g_purple)
+            else if(status_left[? "suppressed"] > 0 && my_color != g_magenta)
             {
                 if(current_slot == 0 && !slots_triggered)
                 {

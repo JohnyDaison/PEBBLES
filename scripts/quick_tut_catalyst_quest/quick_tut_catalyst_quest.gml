@@ -24,7 +24,7 @@ function quick_tut_catalyst_quest() {
     transition = quest_transition_find(node, "", "success");
     condition = quest_add_condition(transition, "trigger", "displays");
     condition = quest_add_condition(transition, "my_body_color", "change");
-    condition[? "body_color"] = "non_black";
+    condition[? "body_color"] = "non_dark";
 
 
     // Quick Shot
@@ -137,8 +137,4 @@ function quick_tut_catalyst_quest() {
 
     // Exit level
     node = quest_create_subtask(quest_id, "simple_nav", "exit_level", "Exit level", "", i++, true);
-
-
-
-
 }

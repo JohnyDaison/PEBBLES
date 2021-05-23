@@ -27,7 +27,7 @@ done_for = false;
 kill_awarded = false;
 trophy_created = false;
 
-body_col = irandom_range(g_red, g_azure);
+body_col = irandom_range(g_red, g_cyan);
 my_color = body_col;
 tint = DB.colormap[? my_color];
 name = "Snake";

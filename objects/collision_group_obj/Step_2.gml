@@ -140,7 +140,7 @@ if(!self.resolved)
             }
             */
             
-            if(base_color == g_black)
+            if(base_color == g_dark)
             {
                 for(i=g_red; i<g_white; i++)
                 {

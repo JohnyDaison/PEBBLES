@@ -33,7 +33,7 @@ if(instance_exists(my_guy.attack_target))
                 inst.speed = 4;
                 inst.guided = true;
 
-                my_color = irandom_range(g_red, g_azure);
+                my_color = irandom_range(g_red, g_cyan);
                 tint_updated = false;
             
                 self.ready_to_fire = false;

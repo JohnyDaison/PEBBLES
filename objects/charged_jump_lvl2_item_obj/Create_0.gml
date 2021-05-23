@@ -1,6 +1,6 @@
 event_inherited();
 
-my_color = g_azure;
+my_color = g_cyan;
 tint_updated = false;
 multicolor = true;
 image_alpha = 0.9;

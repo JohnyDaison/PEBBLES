@@ -14,5 +14,5 @@ if(holographic == other.holographic)
         other.falling = true;
     }
 
-    create_damage_popup(dmg, g_black, other.id, "impact");
+    create_damage_popup(dmg, g_dark, other.id, "impact");
 }

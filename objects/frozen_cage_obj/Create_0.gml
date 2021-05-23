@@ -9,7 +9,7 @@ pt = part_type_create();
 part_type_alpha2(pt,0.2,1);
 part_type_blend (pt,0);
 
-part_type_color1(pt,DB.colormap[? g_purple]);
+part_type_color1(pt,DB.colormap[? g_magenta]);
 part_type_shape (pt,pt_shape_line);
 part_type_size(pt,0.8,0.8,0,0);
 part_type_life(pt,12,12);

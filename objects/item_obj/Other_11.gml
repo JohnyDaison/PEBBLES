@@ -125,7 +125,7 @@ if(level_upgrade || level_setter)
                             }
                         }
                         break;
-                    case "black_belt_size":
+                    case "dark_belt_size":
                         with(my_guy)
                         {
                             with(overhead_overlay)
@@ -136,7 +136,7 @@ if(level_upgrade || level_setter)
                                 }
                             }
                             
-                            belt_size[? g_black] = level_val;
+                            belt_size[? g_dark] = level_val;
                         }
                         break;
                     case "inventory":
@@ -177,4 +177,3 @@ if(level_upgrade || level_setter)
         }
     }
 }
-

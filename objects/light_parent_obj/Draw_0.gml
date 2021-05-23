@@ -17,7 +17,7 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
         
         with(game_obj)
         {
-            if(gives_light && visible && my_color > g_black && ambient_light > 0)
+            if(gives_light && visible && my_color > g_dark && ambient_light > 0)
             {
                 var light_shape = shape;
                 if(self.light_shape != shape_inherit)
@@ -70,7 +70,7 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
         
         with(game_obj)
         {
-            if(gives_light && visible && my_color > g_black && direct_light > 0)
+            if(gives_light && visible && my_color > g_dark && direct_light > 0)
             {
                 high_tint = merge_color(tint,c_white,0.5);
                 var light_shape = shape;
@@ -105,4 +105,3 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
     draw_set_blend_mode(bm_normal); 
     draw_set_alpha(1);
 }
-

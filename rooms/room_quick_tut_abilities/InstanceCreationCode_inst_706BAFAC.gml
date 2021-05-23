@@ -4,8 +4,8 @@ active = true;
 sprite = round_button_bg_spr;
 fg_sprite = round_button_highlight_spr;
 
-main_tint = DB.colormap[? g_azure];
-fg_tint = DB.colormap[? g_azure];;
+main_tint = DB.colormap[? g_cyan];
+fg_tint = DB.colormap[? g_cyan];
 
 //main_label = "Cyan";
 sub_label = "INVISIBILITY";

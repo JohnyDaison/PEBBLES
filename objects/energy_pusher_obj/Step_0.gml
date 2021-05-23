@@ -16,13 +16,13 @@ if(instance_exists(my_block))
                 prev_block_min_energy, my_block_max_energy);
         }
         
-        if(my_block.my_color > g_black || my_block.my_next_color > g_black)
+        if(my_block.my_color > g_dark || my_block.my_next_color > g_dark)
         {
             my_color = g_white;
         }
         else
         {
-            my_color = g_black;
+            my_color = g_dark;
         }
         tint_updated = false;
     }    
@@ -35,4 +35,3 @@ else
         instance_destroy();
     }
 }
-

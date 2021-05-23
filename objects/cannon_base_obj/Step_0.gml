@@ -136,7 +136,7 @@ if(!destroyed && instance_exists(my_guy))
                 my_player.stats[? "total_orbs"] += 1;
                 
                 // RECOVER FROM NO AMMO
-                if(shot_color == g_black)
+                if(shot_color == g_dark)
                 {
                     shot_color = i;
                     slots_absorbed = 4;
@@ -194,7 +194,7 @@ if(!destroyed && instance_exists(my_guy))
     }
     
     // CHARGING START
-    if(!draw_label && charge_ball.charge == 0 && shot_color != g_black)
+    if(!draw_label && charge_ball.charge == 0 && shot_color != g_dark)
     {
         charging = true;
     }
@@ -202,7 +202,7 @@ if(!destroyed && instance_exists(my_guy))
     // FIRING   
     if(my_guy.fire_cannon)
     {
-        if(shot_color == g_black)
+        if(shot_color == g_dark)
         {
             i = instance_create(x, y, text_popup_obj);
             i.str = "OUT OF AMMO!";
@@ -243,7 +243,7 @@ else
 }
 
 // BARREL ANIM
-if(shot_color > g_black && charging)
+if(shot_color > g_dark && charging)
 {
     barrel_anim_index = (barrel_anim_index+barrel_anim_speed) mod barrel_anim_length;
 }

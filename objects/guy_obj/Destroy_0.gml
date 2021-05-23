@@ -35,7 +35,7 @@ ds_list_destroy(color_slots);
 ds_map_destroy(orb_reserve);
 
 var i,ii,list,orb;
-for(i=g_black; i<=g_blue; i++)
+for(i=g_dark; i<=g_blue; i++)
 {
     if(i == g_yellow) continue;
     

@@ -1,6 +1,6 @@
 event_inherited();
 
-my_color = irandom_range(g_red, g_azure);
+my_color = irandom_range(g_red, g_cyan);
 multicolor = true;
 connected_base = true;
 hp = 1;

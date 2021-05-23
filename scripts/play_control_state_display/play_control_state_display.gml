@@ -85,7 +85,7 @@ function play_control_state_display(display, control, control_type, state, time)
         display.bg_sprite = bumper_button_bg_spr;
         display.fg_tint = DB.colormap[? g_white];
         display.main_tint = DB.colormap[? g_white];
-        display.bg_tint = DB.colormap[? g_black];
+        display.bg_tint = DB.colormap[? g_dark];
     
         if(control = "R_bumper")
         {
@@ -117,7 +117,7 @@ function play_control_state_display(display, control, control_type, state, time)
         display.bg_sprite = gamepad_trigger_bg_spr;
         display.fg_tint = DB.colormap[? g_white];
         display.main_tint = DB.colormap[? g_white];
-        display.bg_tint = DB.colormap[? g_black];
+        display.bg_tint = DB.colormap[? g_dark];
     
         if(control = "R_trigger")
         {
@@ -203,7 +203,7 @@ function play_control_state_display(display, control, control_type, state, time)
         display.fg_sprite = noone;
         display.sprite = DPad_outline_spr;
         display.bg_sprite = DPad_bg_spr;
-        display.bg_tint = c_gray; //DB.colormap[? g_black];
+        display.bg_tint = c_gray; //DB.colormap[? g_dark];
         display.main_tint = DB.colormap[? g_white];
         display.fg_tint = DB.colormap[? g_white];
         display.sprite_xx = 0;

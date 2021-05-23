@@ -319,7 +319,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + E
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("E")))
         {
-            if(cursor_obj.my_color == g_black)
+            if(cursor_obj.my_color == g_dark)
             {
                 i = instance_create(cursor_obj.room_x, cursor_obj.room_y, black_aoe_obj);
                 i.force = 1;
@@ -475,7 +475,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             i = instance_create(cursor_obj.room_x, cursor_obj.room_y, slime_mob_obj);
             i.my_color = irandom_range(g_red, g_white);
             i.tint_updated = false;
-            if(cursor_obj.my_color == g_black)
+            if(cursor_obj.my_color == g_dark)
             {
                 i.energy = 0.0001;   
             }
@@ -508,7 +508,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         {
             i = instance_create(cursor_obj.room_x,cursor_obj.room_y,star_core_obj);
             i.my_guy = i.id;
-            if(cursor_obj.my_color > g_black)
+            if(cursor_obj.my_color > g_dark)
             {
                 i.my_color = cursor_obj.my_color;
             }
@@ -640,7 +640,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // NUMPAD OR ALPHANUMERIC NUMBERS
         var col;
         var zeroKey = ord("0");
-        for(col = g_black; col<= g_octarine; col++)
+        for(col = g_dark; col<= g_octarine; col++)
         {
             if(keyboard_check_pressed(vk_numpad0+col) || keyboard_check_pressed(zeroKey+col))
             {
@@ -669,7 +669,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             var ter = instance_position(xx,yy, wall_obj);
             if(instance_exists(ter))
             {
-                if(cursor_obj.my_color != g_black)
+                if(cursor_obj.my_color != g_dark)
                 {
                     ter.my_next_color = cursor_obj.my_color;
                 }
@@ -682,7 +682,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             
                 if(ter.energy == 0)
                 {
-                    ter.my_next_color = g_black;
+                    ter.my_next_color = g_dark;
                 }
             
                 create_damage_popup(energy_incr, cursor_obj.my_color, ter.id, "paint_tool");
@@ -739,7 +739,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 // SLIME MOB
                 else if(inst.object_index == slime_mob_obj)
                 {
-                    if(cursor_obj.my_color != g_black)
+                    if(cursor_obj.my_color != g_dark)
                     {
                         change_color = true;
                     }
@@ -763,11 +763,8 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 if(energy_added)
                 {
                     create_damage_popup(energy_incr, cursor_obj.my_color, inst.id, "paint_tool");
-                }   
+                }
             }
-        
-        
-        
         }
 
         // SWITCH VIEWS
@@ -861,7 +858,7 @@ if(keyboard_check(vk_up) || keyboard_check(ord("W")))
 if(joystick1_obj.states[# joy_up,held] || joystick2_obj.states[# joy_up,held])
 {
     gui_dirs[up] = true;
-    last_gui_device = joystick;    
+    last_gui_device = joystick;
 }
 */
 
@@ -869,13 +866,13 @@ if(joystick1_obj.states[# joy_up,held] || joystick2_obj.states[# joy_up,held])
 if(keyboard_check(vk_down)  || keyboard_check(ord("S")))
 {
     gui_dirs[down] = true;
-    last_gui_device = keyboard; 
+    last_gui_device = keyboard;
 }
 /*
 if(joystick1_obj.states[# joy_down,held] || joystick2_obj.states[# joy_down,held])
 {
     gui_dirs[down] = true;
-    last_gui_device = joystick;    
+    last_gui_device = joystick;
 }
 */
 
@@ -889,26 +886,26 @@ if( keyboard_check(vk_left) || keyboard_check(ord("A")))
 if( joystick1_obj.states[# joy_left,held] || joystick2_obj.states[# joy_left,held])
 {
     gui_dirs[left] = true;
-    last_gui_device = joystick;    
+    last_gui_device = joystick;
 }
 */
 
-// RIGHT                        
+// RIGHT
 if( keyboard_check(vk_right) || keyboard_check(ord("D")))
 {
     gui_dirs[right] = true;
-    last_gui_device = keyboard; 
+    last_gui_device = keyboard;
 }
 /*
 if( joystick1_obj.states[# joy_right,held] || joystick2_obj.states[# joy_right,held])
 {
     gui_dirs[right] = true;
-    last_gui_device = joystick;    
+    last_gui_device = joystick;
 } 
 */
 
 for(i=right; i<=down; i+=1)
-{                
+{
     DB.gui_controls[# i,pressed] = false;
     DB.gui_controls[# i,released] = false;
     
@@ -916,7 +913,7 @@ for(i=right; i<=down; i+=1)
     {
         DB.gui_controls[# i,held] = true;
         if(DB.gui_controls[# i,free])
-        {                                    
+        {
             DB.gui_controls[# i,pressed] = true;
         }
         DB.gui_controls[# i,free] = false;
@@ -925,16 +922,16 @@ for(i=right; i<=down; i+=1)
     {
         DB.gui_controls[# i,free] = true;
         if(DB.gui_controls[# i,held])
-        {                                    
+        {
             DB.gui_controls[# i,released] = true;
         }
         DB.gui_controls[# i,held] = false;
-    }    
+    }
 }
 
 /// COMMANDS
 gui_commands[confirm]  = false;
-gui_commands[cancel]   = false;                       
+gui_commands[cancel]   = false;
 gui_commands[stepmode] = false;
 
 if(keyboard_check(vk_enter))
@@ -975,7 +972,7 @@ if(joystick1_obj.states[# joy_look,held] || joystick2_obj.states[# joy_look,held
 */
 
 for(i=confirm; i<=stepmode; i+=1)
-{                
+{
     DB.gui_controls[# i,pressed] = false;
     DB.gui_controls[# i,released] = false;
     
@@ -983,7 +980,7 @@ for(i=confirm; i<=stepmode; i+=1)
     {
         DB.gui_controls[# i,held] = true;
         if(DB.gui_controls[# i,free])
-        {                                    
+        {
             DB.gui_controls[# i,pressed] = true;
         }
         DB.gui_controls[# i,free] = false;
@@ -992,9 +989,9 @@ for(i=confirm; i<=stepmode; i+=1)
     {
         DB.gui_controls[# i,free] = true;
         if(DB.gui_controls[# i,held])
-        {                                    
+        {
             DB.gui_controls[# i,released] = true;
         }
         DB.gui_controls[# i,held] = false;
-    }    
+    }
 }

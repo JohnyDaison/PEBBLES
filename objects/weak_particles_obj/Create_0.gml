@@ -8,7 +8,7 @@ part_system_draw_order(system, true);
 pt = part_type_create();
 part_type_alpha2(pt,1,0.8);
 
-part_type_color1(pt, DB.colormap[? g_purple]);
+part_type_color1(pt, DB.colormap[? g_magenta]);
 part_type_shape(pt,pt_shape_ring);
 part_type_size(pt,0.5,0.5,0,0);
 part_type_life(pt,40,40);

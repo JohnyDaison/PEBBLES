@@ -1,7 +1,7 @@
 event_inherited();
 
 name = "Invisibility";
-color = g_azure;
+color = g_cyan;
 icon = status_invisibility_icon;
 //particle_system = ;
 buff = 1; //{-1;0;1}

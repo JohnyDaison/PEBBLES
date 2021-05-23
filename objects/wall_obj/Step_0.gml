@@ -113,10 +113,10 @@ if(active)
     var energy_tick = min(energy, burst_rate);
     
     var over_burner_threshold = energy > behaviour_threshold;
-    var over_burn_to_black_start_treshold = energy > 0;
-    var burner_start_burn = over_burner_threshold || (burn_to_black && over_burn_to_black_start_treshold);
-    var burner_stop_burn = ( !burn_to_black && !over_burner_threshold )
-                        || ( burn_to_black && !over_burn_to_black_start_treshold );
+    var over_burn_to_dark_start_treshold = energy > 0;
+    var burner_start_burn = over_burner_threshold || (burn_to_dark && over_burn_to_dark_start_treshold);
+    var burner_stop_burn = ( !burn_to_dark && !over_burner_threshold )
+                        || ( burn_to_dark && !over_burn_to_dark_start_treshold );
     
     var above_start_bursting_threshold = energy > outburst_threshold;
     var below_burst_stop_threshold = energy < active_threshold;
@@ -131,11 +131,11 @@ if(active)
         
     
     // OUT OF ENERGY
-    if(my_next_color != g_black && energy <= 0)
+    if(my_next_color != g_dark && energy <= 0)
     {
         if(!color_locked)
         {
-            my_next_color = g_black;
+            my_next_color = g_dark;
         }
         energy = 0;
         

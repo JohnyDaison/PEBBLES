@@ -9,14 +9,14 @@ for(i=0; i<4; i++)
             cur_tint, list, count;
             
         if(i==1)
-            ycor = 1;   
+            ycor = 1;
         if(i==2)
             xcor = 1;
         if(i>1)
             xx = -1;
-                   
+            
         var sprite = gate_enabled_spr,
-            cur_tint = DB.colormap[? g_black];
+            cur_tint = DB.colormap[? g_dark];
             
         if(active[? i])
         {
@@ -28,8 +28,8 @@ for(i=0; i<4; i++)
         {
             sprite = gate_changing_spr;
         }
-            
-        cover_tint = DB.colormap[? g_black];
+        
+        cover_tint = DB.colormap[? g_dark];
         if(instance_exists(my_block))
         {
             cover_tint = my_block.tint;

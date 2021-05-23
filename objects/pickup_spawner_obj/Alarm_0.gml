@@ -83,7 +83,7 @@ else
             {
                 /*
                 new_color = 3;
-                while(new_color == 3 || (!mod_get_state("black_color") && new_color == 0))
+                while(new_color == 3 || (!mod_get_state("dark_color") && new_color == 0))
                 {
                     new_color = irandom(4);
                 }
@@ -108,7 +108,7 @@ else
                     
                 alarm[0] = spawn_delay;
                 
-                rand_color = ds_map_find_value(DB.colormap, irandom_range(g_black, g_white));
+                rand_color = ds_map_find_value(DB.colormap, irandom_range(g_dark, g_white));
                 singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.01);
                 singleton_obj.bgcolor_updated = false;
             }

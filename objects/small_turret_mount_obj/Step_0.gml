@@ -51,7 +51,7 @@ if(charge_ball.charge >= charge_ball.threshold && !charging)
 
 if(instance_exists(my_block) && charge_ball.charge == 0)
 {
-    if(my_block.my_color > g_black && my_block.my_color < g_white)
+    if(my_block.my_color > g_dark && my_block.my_color < g_white)
     {
         charging = true;
         turret.my_color = g_white - my_block.my_color;
@@ -63,4 +63,3 @@ if(instance_exists(my_block) && charge_ball.charge == 0)
         turret.tint_updated = false;
     }
 }
-

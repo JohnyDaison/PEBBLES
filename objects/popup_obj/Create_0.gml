@@ -2,7 +2,7 @@ depth = -1000;
 source = noone;
 
 bg_color = c_white;
-self.my_color = g_black;
+self.my_color = g_dark;
 self.tint_updated = false;
 self.tint = c_dkgray;
 
@@ -29,6 +29,3 @@ with(camera_obj)
     other.cam_xcoord_map[? self.view] = other.x-x;
     other.cam_ycoord_map[? self.view] = other.y-y;
 }
-
-
-

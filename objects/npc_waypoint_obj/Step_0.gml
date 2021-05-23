@@ -10,10 +10,10 @@ if(!in_group && !moving)
         }
         var jump_pad = instance_place(x,y, universal_pad_obj);
         if(place_meeting(x,y, jump_pad_obj)
-        || (instance_exists(jump_pad) && jump_pad.pad_color == g_azure))
+        || (instance_exists(jump_pad) && jump_pad.pad_color == g_cyan))
         {
             jump_pad_point = true;
-            // this doesn't work for universal_pad_obj, because they aren't g_azure in the first step
+            // this doesn't work for universal_pad_obj, because they aren't g_cyan in the first step
         }
     }
     

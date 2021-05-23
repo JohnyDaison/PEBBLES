@@ -8,7 +8,7 @@ var place;
 place = add_place_in_room(room_all_items_test, "Items", 0,0, 4800,4800, 0);
 ds_list_add(place.level_configs_list, "tutorial");
 
-place.forced_modifiers[? "black_color"] = true;
+place.forced_modifiers[? "dark_color"] = true;
 place.forced_modifiers[? "abilities"] = true;
 
 
@@ -29,7 +29,7 @@ ds_list_add(place.level_configs_list, "inventory");
 place = add_place_in_room(room_bigbang_test, "The Big Bang", 0,0, 3200,3200, 384);
 ds_list_add(place.level_configs_list, "match");
 
-place.forced_modifiers[? "black_color"] = true;
+place.forced_modifiers[? "dark_color"] = true;
 place.forced_modifiers[? "abilities"] = true;
 
 
@@ -54,7 +54,7 @@ place.description = "Quick jumps";
 ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "color_orbs_energy_lock"] = true;
-place.forced_modifiers[? "black_color"] = false;
+place.forced_modifiers[? "dark_color"] = false;
 place.forced_modifiers[? "abilities"] = false;
 place.forced_modifiers[? "random_item_spawner"] = false;
 place.forced_modifiers[? "snakes_on_a_plane"] = false;
@@ -68,7 +68,7 @@ place = add_place_in_room(room_displays_test, "Displays", 0,0, 4800,4800, 384);
 place.controller = display_test_place_controller_obj;
 ds_list_add(place.level_configs_list, "match");
 
-place.default_modifiers[? "black_color"] = true;
+place.default_modifiers[? "dark_color"] = true;
 place.default_modifiers[? "abilities"] = true;
 
 
@@ -77,7 +77,7 @@ place.controller = autogenerate_place_controller_obj;
 ds_list_add(place.level_configs_list, "match");
 
 place.default_modifiers[? "base_crystals"] = true;
-place.default_modifiers[? "black_color"] = true;
+place.default_modifiers[? "dark_color"] = true;
 place.default_modifiers[? "abilities"] = true;
 place.default_modifiers[? "turrets"] = true;
 place.default_modifiers[? "cannons"] = true;
@@ -95,7 +95,7 @@ ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "snakes_on_a_plane"] = true;
 place.forced_modifiers[? "base_crystals"] = true;
-place.default_modifiers[? "black_color"] = true;
+place.default_modifiers[? "dark_color"] = true;
 place.default_modifiers[? "abilities"] = true;
 
 

@@ -1,3 +1,3 @@
 event_inherited();
 
-my_color = g_azure;
+my_color = g_cyan;

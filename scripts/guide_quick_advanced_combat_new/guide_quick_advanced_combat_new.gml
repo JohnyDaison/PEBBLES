@@ -2,235 +2,232 @@
 ///@param [near_guy]
 ///@param [selected_subtask]
 function guide_quick_advanced_combat_new() {
-	var pseudo_method = argument[0];
-	var near_player_guy = noone;
-	var selected_subtask = "";
+    var pseudo_method = argument[0];
+    var near_player_guy = noone;
+    var selected_subtask = "";
 
-	if(argument_count > 1)
-	{
-	    near_player_guy = argument[1];   
-	}
-	if(argument_count > 2)
-	{
-	    selected_subtask = argument[2];   
-	}
+    if(argument_count > 1)
+    {
+        near_player_guy = argument[1];   
+    }
+    if(argument_count > 2)
+    {
+        selected_subtask = argument[2];   
+    }
 
-	switch(pseudo_method)
-	{
-	    case "init":
-	        main_quest_id = "quick_tutorial_advanced_combat_new";
-	        main_context = "quick_tut_level5_new";
+    switch(pseudo_method)
+    {
+        case "init":
+            main_quest_id = "quick_tutorial_advanced_combat_new";
+            main_context = "quick_tut_level5_new";
         
-	        npc_auto_demonstrate = true;
+            npc_auto_demonstrate = true;
         
-	        break;
+            break;
         
         
-	    case "demo_after_speech":
-	        if(selected_subtask == "pass_red_filter")
-	        {
-	            if(my_color != g_red)
-	            {
-	                if(current_slot == 0)
-	                {
-	                    ds_list_add(new_colors, g_red);
-	                    self.auto_chosen_orbs = true;
-	                }
-	                wanna_cast = true;
-	            }
-	        }
+        case "demo_after_speech":
+            if(selected_subtask == "pass_red_filter")
+            {
+                if(my_color != g_red)
+                {
+                    if(current_slot == 0)
+                    {
+                        ds_list_add(new_colors, g_red);
+                        self.auto_chosen_orbs = true;
+                    }
+                    wanna_cast = true;
+                }
+            }
     
-	        if(selected_subtask == "dark_color_body")
-	        {
-	            if(my_color == g_black)
-	            {
-	                ds_list_add(new_colors, choose(g_red, g_green, g_blue));
-	                self.auto_chosen_orbs = true;
+            if(selected_subtask == "dark_color_body")
+            {
+                if(my_color == g_dark)
+                {
+                    ds_list_add(new_colors, choose(g_red, g_green, g_blue));
+                    self.auto_chosen_orbs = true;
             
-	                wanna_cast = true;
-	            }   
+                    wanna_cast = true;
+                }   
             
             
-	            if(my_color != g_black)
-	            {
-	                wanna_channel = true;
-	            }
-	        }
+                if(my_color != g_dark)
+                {
+                    wanna_channel = true;
+                }
+            }
             
-	        if(selected_subtask == "card1_pickup")
-	        {
-	            if(my_color != g_black && tint_updated)
-	            {
-	                wanna_channel = true;
-	            }
+            if(selected_subtask == "card1_pickup")
+            {
+                if(my_color != g_dark && tint_updated)
+                {
+                    wanna_channel = true;
+                }
             
-	            if(my_color == g_black)
-	            {
-	                var target = instance_nearest(x,y, access_card_obj);
+                if(my_color == g_dark)
+                {
+                    var target = instance_nearest(x,y, access_card_obj);
                     
-	                if(instance_exists(target))
-	                {
-	                    desired_aim_dir = point_direction(x,y, target.x, target.y);
-	                    desired_aim_dist = 1;
+                    if(instance_exists(target))
+                    {
+                        desired_aim_dir = point_direction(x,y, target.x, target.y);
+                        desired_aim_dist = 1;
                     
-	                    if(!casting && charge_ball.energy < 0.8 && !instance_exists(black_projectile_obj))
-	                    {
-	                        wanna_cast = true;
-	                    }
-	                }
-	            }
-	        }
+                        if(!casting && charge_ball.energy < 0.8 && !instance_exists(black_projectile_obj))
+                        {
+                            wanna_cast = true;
+                        }
+                    }
+                }
+            }
         
-	        if(selected_subtask == "dummy_vortex_knockdown")
-	        {
-	            if(my_color != g_black && tint_updated)
-	            {
-	                wanna_channel = true;
-	            }
+            if(selected_subtask == "dummy_vortex_knockdown")
+            {
+                if(my_color != g_dark && tint_updated)
+                {
+                    wanna_channel = true;
+                }
             
-	            if(my_color == g_black)
-	            {
-	                var group = get_group("marked_objects");
-	                var target = group_find_member(group, "cyan_dummy");
+                if(my_color == g_dark)
+                {
+                    var group = get_group("marked_objects");
+                    var target = group_find_member(group, "cyan_dummy");
                     
-	                if(instance_exists(target))
-	                {
-	                    desired_aim_dir = point_direction(x,y, target.x, target.y);
-	                    desired_aim_dist = 1;
+                    if(instance_exists(target))
+                    {
+                        desired_aim_dir = point_direction(x,y, target.x, target.y);
+                        desired_aim_dist = 1;
                     
-	                    if(!casting && charge_ball.energy < 0.8 && !instance_exists(black_projectile_obj))
-	                    {
-	                        wanna_cast = true;
-	                    }
-	                }
-	            }
-	        }
+                        if(!casting && charge_ball.energy < 0.8 && !instance_exists(black_projectile_obj))
+                        {
+                            wanna_cast = true;
+                        }
+                    }
+                }
+            }
         
-	        if(selected_subtask == "get_past_guards")
-	        {
-	            if(my_color == g_black || (!charging && !casting))
-	            {
-	                ds_list_add(new_colors, choose(g_red, g_green, g_blue));
-	                self.auto_chosen_orbs = true;
-	            }
+            if(selected_subtask == "get_past_guards")
+            {
+                if(my_color == g_dark || (!charging && !casting))
+                {
+                    ds_list_add(new_colors, choose(g_red, g_green, g_blue));
+                    self.auto_chosen_orbs = true;
+                }
             
-	            wanna_cast = true;
-	        }
+                wanna_cast = true;
+            }
         
-	        if(selected_subtask == "use_invis")
-	        {
-	            if(my_color != g_azure)
-	            {
-	                ds_list_add(new_colors, g_green, g_blue);
-	                self.auto_chosen_orbs = true;
+            if(selected_subtask == "use_invis")
+            {
+                if(my_color != g_cyan)
+                {
+                    ds_list_add(new_colors, g_green, g_blue);
+                    self.auto_chosen_orbs = true;
                 
-	                wanna_cast = true;
-	            }
-	            /*
-	            if(speaking && nearest_waypoint.waypoint_id == "use_invis/active" && !invisible)
-	            {
-	                abi_cooldown[? g_azure] = 0;
-	            }
-	            */
-	            if(my_color == g_azure && tint_updated && !speaking && !invisible && nearest_waypoint.waypoint_id == "use_invis/active") //  && abi_cooldown[? g_azure] == 0
-	            {
-	                abi_cooldown[? g_azure] = 0;
+                    wanna_cast = true;
+                }
+                /*
+                if(speaking && nearest_waypoint.waypoint_id == "use_invis/active" && !invisible)
+                {
+                    abi_cooldown[? g_cyan] = 0;
+                }
+                */
+                if(my_color == g_cyan && tint_updated && !speaking && !invisible && nearest_waypoint.waypoint_id == "use_invis/active") //  && abi_cooldown[? g_cyan] == 0
+                {
+                    abi_cooldown[? g_cyan] = 0;
             
-	                wanna_abi = true;
-	            }
-	        }   
+                    wanna_abi = true;
+                }
+            }   
         
-	        if(selected_subtask == "use_teleport")
-	        {
-	            if(my_color != g_blue)
-	            {
-	                if(current_slot == 0)
-	                {
-	                    ds_list_add(new_colors, g_blue);
-	                    self.auto_chosen_orbs = true;
-	                }
+            if(selected_subtask == "use_teleport")
+            {
+                if(my_color != g_blue)
+                {
+                    if(current_slot == 0)
+                    {
+                        ds_list_add(new_colors, g_blue);
+                        self.auto_chosen_orbs = true;
+                    }
                 
-	                wanna_cast = true;
-	            }
+                    wanna_cast = true;
+                }
             
-	            if(my_color == g_blue && tint_updated && npc_waypoint == "use_teleport/active")
-	            {
-	                desired_aim_dir = 0;
-	                desired_aim_dist = 1;
-	            }
+                if(my_color == g_blue && tint_updated && npc_waypoint == "use_teleport/active")
+                {
+                    desired_aim_dir = 0;
+                    desired_aim_dist = 1;
+                }
             
-	        }
+            }
         
         
-	        break;
+            break;
         
-	    case "non_demo":
+        case "non_demo":
     
-	        // KEEP ORBS ON AT LEAST BASE ENERGY
-	        var col, list, orb, i;
-	        for (col = g_black; col <= g_blue; col++)
-	        {
-	            if(col == g_yellow)
-	            {
-	                continue;
-	            }
+            // KEEP ORBS ON AT LEAST BASE ENERGY
+            var col, list, orb, i;
+            for (col = g_dark; col <= g_blue; col++)
+            {
+                if(col == g_yellow)
+                {
+                    continue;
+                }
                 
-	            list = orbs_in_use[? col];
-	            if(!is_undefined(list) && ds_exists(list, ds_type_list))
-	            {
-	                var count = ds_list_size(list);
-	                for(i=0; i < count; i++)
-	                {
-	                    orb = list[| i];
+                list = orbs_in_use[? col];
+                if(!is_undefined(list) && ds_exists(list, ds_type_list))
+                {
+                    var count = ds_list_size(list);
+                    for(i=0; i < count; i++)
+                    {
+                        orb = list[| i];
                     
-	                    if(orb.energy < orb.base_energy)
-	                    {
-	                        orb.energy = orb.base_energy;
-	                    }
-	                }
-	            }
-	        }
+                        if(orb.energy < orb.base_energy)
+                        {
+                            orb.energy = orb.base_energy;
+                        }
+                    }
+                }
+            }
     
-	        if(selected_subtask == "dark_color_body")
-	        {
-	            if(my_color == g_black && npc_waypoint == "dark_color_body/success" && npc_destination_reached)
-	            {
-	                if(current_slot == 0)
-	                {
-	                    ds_list_add(new_colors, choose(g_red, g_green, g_blue));
-	                    self.auto_chosen_orbs = true;
-	                }
+            if(selected_subtask == "dark_color_body")
+            {
+                if(my_color == g_dark && npc_waypoint == "dark_color_body/success" && npc_destination_reached)
+                {
+                    if(current_slot == 0)
+                    {
+                        ds_list_add(new_colors, choose(g_red, g_green, g_blue));
+                        self.auto_chosen_orbs = true;
+                    }
                 
-	                wanna_cast = true;
-	            }  
+                    wanna_cast = true;
+                }  
             
-	            if(my_color != g_black && current_slot > 0)
-	            {
-	                wanna_cast = true;   
-	            }
-	        }
+                if(my_color != g_dark && current_slot > 0)
+                {
+                    wanna_cast = true;   
+                }
+            }
         
-	        if(selected_subtask == "card1_pickup")
-	        {
-	            if(my_color != g_black && tint_updated)
-	            {
-	                wanna_channel = true;
-	            }
-	        }
+            if(selected_subtask == "card1_pickup")
+            {
+                if(my_color != g_dark && tint_updated)
+                {
+                    wanna_channel = true;
+                }
+            }
     
-	        if(selected_subtask == "use_invis")
-	        {
-	            /*
-	            if(!speaking && npc_waypoint == "use_invis/active") //  && npc_destination_reached
-	            {
-	                abi_cooldown[? g_azure] = 0;
-	            }
-	            */
-	        }
+            if(selected_subtask == "use_invis")
+            {
+                /*
+                if(!speaking && npc_waypoint == "use_invis/active") //  && npc_destination_reached
+                {
+                    abi_cooldown[? g_cyan] = 0;
+                }
+                */
+            }
     
-	        break;
-	}
-
-
-
+            break;
+    }
 }

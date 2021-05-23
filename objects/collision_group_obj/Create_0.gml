@@ -10,7 +10,7 @@ for(i=g_red; i<g_white; i++)
     force[? i] = 0;   
 }
 ratio_updated = false;
-base_color = g_black;
+base_color = g_dark;
 ratio = 0;
 balance_margin = 0.1;
 

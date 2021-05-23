@@ -46,21 +46,21 @@ function quick_tut_abilities_quest() {
     // Pickup Invisibility
     node = quest_create_subtask(quest_id, "item_pickup", "pickup_invis", "Get Invisibility", "", i++, false);
     node[? "target_item"] = ability_pickup_obj;
-    node[? "target_color"] = g_azure;
+    node[? "target_color"] = g_cyan;
 
 
     // Use Invisibility
     node = quest_create_subtask(quest_id, "use_ability", "use_invis", "Use Invisibility", "", i++, false);
-    node[? "target_color"] = g_azure;
+    node[? "target_color"] = g_cyan;
 
 
     i = quest_create_ability_subtasks(quest_id, "berserk", "Berserk", g_red, i);
 
     i = quest_create_ability_subtasks(quest_id, "haste", "Haste", g_yellow, i);
 
-    i = quest_create_ability_subtasks(quest_id, "ubershield", "Ubershield", g_purple, i);
+    i = quest_create_ability_subtasks(quest_id, "ubershield", "Ubershield", g_magenta, i);
 
-    i = quest_create_ability_subtasks(quest_id, "rewind", "Rewind", g_black, i);
+    i = quest_create_ability_subtasks(quest_id, "rewind", "Rewind", g_dark, i);
 
     i = quest_create_ability_subtasks(quest_id, "teleport", "Blink", g_blue, i);
 
@@ -124,7 +124,4 @@ function quick_tut_abilities_quest() {
 
     transition = quest_transition_find(node, "", "success");
     condition = quest_add_condition(transition, "zone", "enter", "exit_level/success");
-
-
-
 }

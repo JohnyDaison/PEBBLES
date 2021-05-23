@@ -97,7 +97,7 @@ if(instance_exists(my_player) && view_enabled)
         }
         else
         {
-            shield_color = g_black;
+            shield_color = g_dark;
         }
         shield_tint = ds_map_find_value(DB.colormap,shield_color);
         draw_sprite_ext(shield_sprite,image_index,offset_x,offset_y+32,shield_size,shield_size,0,shield_tint,0.6);
@@ -109,7 +109,7 @@ if(instance_exists(my_player) && view_enabled)
         slot_color = my_guy.my_color;
         if(instance_exists(slot))
         {
-            if(slot.color_held && slot.my_color == g_black)
+            if(slot.color_held && slot.my_color == g_dark)
             {
                 slot_color = slot.my_color;
             }
@@ -117,7 +117,7 @@ if(instance_exists(my_player) && view_enabled)
 
         slot_tint = ds_map_find_value(DB.colormap,slot_color);
         
-        if(slot_color == g_black)
+        if(slot_color == g_dark)
         {   
             draw_sprite_ext(color_slot,image_index*2,offset_x-1,offset_y+31,2,2,0,slot_tint,0.8);
         }
@@ -192,10 +192,10 @@ if(instance_exists(my_player) && view_enabled)
                     case g_yellow:
                          val = conf_left/max_conf_time;
                          break;
-                    case g_purple:
+                    case g_magenta:
                          val = weak_left/max_weak_time;
                          break;
-                    case g_azure:
+                    case g_cyan:
                          val = bounce_left/max_bounce_time;
                          break;
                 }

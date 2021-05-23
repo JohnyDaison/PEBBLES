@@ -9,7 +9,7 @@ var xx = x+32;
 var yy = y+32;
 
 // column headings
-for(col = g_black; col <= g_octarine; col += 1)
+for(col = g_dark; col <= g_octarine; col += 1)
 {
     color = col;
     if(col == 3) color = g_blue;
@@ -31,7 +31,7 @@ for(col = g_black; col <= g_octarine; col += 1)
 }
 
 // row labels and values
-for(row = g_black; row <= g_octarine; row += 1)
+for(row = g_dark; row <= g_octarine; row += 1)
 {
     rcolor = row;
     if(row == 3) rcolor = g_blue;
@@ -42,7 +42,7 @@ for(row = g_black; row <= g_octarine; row += 1)
     draw_set_color(c_ltgray - rcolor_value);
     
     my_draw_text(xx+1, yy+(row+1)*32+1, row_str);
-    for(col=g_black; col<=g_octarine; col+=1)
+    for(col=g_dark; col<=g_octarine; col+=1)
     {
         color = col;
         if(col == 3) color = g_blue;
@@ -53,12 +53,11 @@ for(row = g_black; row <= g_octarine; row += 1)
     draw_set_color(rcolor_value);
     
     my_draw_text(xx, yy+(row+1)*32, row_str);
-    for(col=g_black; col<=g_octarine; col+=1)
+    for(col=g_dark; col<=g_octarine; col+=1)
     {
         color = col;
         if(col == 3) color = g_blue;
         if(col == 4) color = g_yellow;
         my_draw_text(xx+(col+1)*48, yy+(row+1)*32, string(round(get_power_ratio(rcolor,color)*100)));
-    }    
-}    
-
+    }
+}

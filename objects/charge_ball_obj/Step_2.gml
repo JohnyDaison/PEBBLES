@@ -16,7 +16,7 @@ if(charge > threshold)
         }
 
         // IMPLOSION
-        if(my_color == g_black)
+        if(my_color == g_dark)
         {
             i = instance_create(x,y,black_aoe_obj);
             i.my_player = my_guy.my_player;

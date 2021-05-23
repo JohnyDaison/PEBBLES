@@ -653,7 +653,7 @@ function receive_damage() {
                     // COOLDOWN DAMAGE
                     if (object_is_ancestor(object_index,guy_obj) && !berserk)
                     {
-                        if(other.my_color >= g_black && other.my_color <= g_white)
+                        if(other.my_color >= g_dark && other.my_color <= g_white)
                         {
                             abi_cooldown[? other.my_color] = clamp(abi_cooldown[? other.my_color] + round(cooldown_damage_coef*final_damage), 0, abi_cooldown_length[? other.my_color]);
                         }

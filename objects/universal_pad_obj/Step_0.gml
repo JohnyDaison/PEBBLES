@@ -84,7 +84,7 @@ if(pad_color == g_octarine)
 }
 tint = merge_colour(dark_tint, bright_tint, cur_power/max_power);
 
-if(pad_color <= g_black)
+if(pad_color <= g_dark)
 {
     self.ready = false;
     self.active = false;
@@ -188,7 +188,7 @@ if(self.ready || self.active)
                             var total_energy = 0;
                             var i,ii, diff;
                                         
-                            for(i = g_black; i <= g_blue; i++)
+                            for(i = g_dark; i <= g_blue; i++)
                             {
                                 if(i == g_yellow) continue;
                                             
@@ -241,7 +241,7 @@ if(self.ready || self.active)
                             var total_regen = 0;
                             var col, diff;
                                         
-                            for(col=g_black; col<= g_white; col++)
+                            for(col=g_dark; col<= g_white; col++)
                             {
                                 diff = clamp(that_guy.abi_cooldown[? col]/that_guy.abi_cooldown_length[? col], 0, cooldown_regen);
                                 that_guy.abi_cooldown[? col] -= diff*that_guy.abi_cooldown_length[? col];
@@ -256,7 +256,7 @@ if(self.ready || self.active)
                                     
                             break;
                                         
-                        case g_purple:
+                        case g_magenta:
                             // SHIELD
                             var shield_boost = shield_boost_coef*(cur_power/max_power);
                             var diff = 0;
@@ -277,7 +277,7 @@ if(self.ready || self.active)
                                     
                             break;
 
-                        case g_azure:
+                        case g_cyan:
                             // JUMP
                             var jump_power = (cur_power/max_power) * jump_power_coef;
                                         
@@ -354,7 +354,7 @@ if(self.ready || self.active)
                         }
                     }
                                 
-                    if(pad_color > g_black)
+                    if(pad_color > g_dark)
                     {
                         if(burst_anim_sprite == noone)
                         {
@@ -381,13 +381,13 @@ if(self.ready || self.active)
                         case g_red:
                         case g_green:
                         case g_blue:
-                        case g_purple:
+                        case g_magenta:
                         case g_white:
                             self.active = true;
                                     
                             break;    
                                 
-                        case g_azure:
+                        case g_cyan:
                             // JUMP
                             that_guy.x = x;
                             that_guy.y = y+vspeed -that_guy.sprite_height +that_guy.sprite_yoffset +1;

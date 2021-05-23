@@ -14,7 +14,7 @@ if(instance_exists(my_guy) && my_guy != id)
     {
         var xx, yy, i;
         
-        if(charge > 0 && my_color > g_black && my_color <= g_white)
+        if(charge > 0 && my_color > g_dark && my_color <= g_white)
         {
             for(i=0; i<charge; i+=2)
             {
@@ -27,14 +27,14 @@ if(instance_exists(my_guy) && my_guy != id)
                 i.holographic = holographic;
             }
             
-            my_color = g_black;        
+            my_color = g_dark;        
             with(old_guy) 
             {
                 receive_damage(other.charge-other.threshold);
             }
         }
         
-        if(charge <= 0 && my_color > g_black)
+        if(charge <= 0 && my_color > g_dark)
         {          
             i = instance_create(x,y,shield_obj);
             i.my_player = old_guy.my_player;

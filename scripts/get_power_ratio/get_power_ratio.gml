@@ -1,5 +1,5 @@
 function get_power_ratio(attacker, defender) {
-    if (attacker >= g_black && attacker <= g_octarine && defender >= g_black && defender <= g_octarine)
+    if (attacker >= g_dark && attacker <= g_octarine && defender >= g_dark && defender <= g_octarine)
     {
         var result = ds_grid_get(DB.colormatrix, round(attacker), round(defender));
 

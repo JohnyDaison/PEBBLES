@@ -41,7 +41,7 @@ for(yy=place_obj.y; yy<place_obj.y+place_obj.height; yy+=32)
     {
         block = instance_nearest(xx,yy,editor_terrain_obj);
         block_index = 31;
-        block_color = g_black;
+        block_color = g_dark;
         block_damage = 0;
         block_energy = 0;
         

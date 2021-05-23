@@ -17,7 +17,7 @@ if(on)
             draw_line(view_x + width, view_y, view_x + width, view_y + height);
             draw_line(view_x, view_y + height, view_x + width, view_y + height);
             
-            body_color = ds_map_find_value(DB.colormap, g_black);
+            body_color = ds_map_find_value(DB.colormap, g_dark);
             
             /*
             body_color = ds_map_find_value(DB.colormap,my_guy.my_color);
@@ -37,7 +37,7 @@ if(on)
             }
             else
             {
-                shield_col = ds_map_find_value(DB.colormap,g_black);
+                shield_col = ds_map_find_value(DB.colormap,g_dark);
             }
             */
             if(object_is_ancestor(my_guy.object_index,guy_obj))
@@ -47,8 +47,8 @@ if(on)
                 
                 if(my_guy.channeling)
                 {
-                    potential_color = DB.colormap[? g_black];
-                    body_color = DB.colormap[? g_black];
+                    potential_color = DB.colormap[? g_dark];
+                    body_color = DB.colormap[? g_dark];
                 }
                                 
                 /*

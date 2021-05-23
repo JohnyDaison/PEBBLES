@@ -251,7 +251,7 @@ if(instance_exists(drained_object))
                 {
                     energy += drain_efficiency*drained_object.energy;
                     drained_object.energy = 0;
-                    drained_object.my_next_color = g_black;
+                    drained_object.my_next_color = g_dark;
                 
                     stop_drain = true;
                 }

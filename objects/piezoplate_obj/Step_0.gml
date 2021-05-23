@@ -62,7 +62,7 @@ if(instance_exists(my_block))
                                 my_block.my_next_color = my_color;
                                 last_color = my_color;
                                 last_tint = tint;
-                                my_color = g_black;
+                                my_color = g_dark;
                                 tint_updated = false;
                                 my_block.energy += energy;
                                 last_energy = energy;
@@ -114,4 +114,3 @@ else if(my_block != noone)
 {
     instance_destroy();
 }
-

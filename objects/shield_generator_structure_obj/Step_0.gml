@@ -13,17 +13,17 @@ if(instance_exists(my_holder))
     var stabilised = tint_updated && block_color != g_octarine;
     
     // COPY BLOCK COLOR IF STABILISED
-    if((my_color > g_black || stabilised) 
-        && my_color != block_color && my_holder.tint_updated && block_color > g_black && block_color < g_octarine)
+    if((my_color > g_dark || stabilised) 
+        && my_color != block_color && my_holder.tint_updated && block_color > g_dark && block_color < g_octarine)
     {
         my_color = block_color;
         stabilised = false;
     }
     
-    if(my_color == g_black && stabilised)
+    if(my_color == g_dark && stabilised)
     {    
         // BLINK WITH STORED COLOR
-        if(energy > 0 && my_last_color > g_black)
+        if(energy > 0 && my_last_color > g_dark)
         {
             my_color = my_last_color;
             stabilised = false;
@@ -31,7 +31,7 @@ if(instance_exists(my_holder))
     }
     
     // DRAIN HOLDER
-    if(my_color > g_black && stabilised)
+    if(my_color > g_dark && stabilised)
     {
         if(my_holder.energy > 0 && block_color < g_octarine)
         {
@@ -57,13 +57,13 @@ if(instance_exists(my_holder))
     }
         
     // READY
-    if(my_color > g_black && stabilised)
+    if(my_color > g_dark && stabilised)
     {
         // BLINK OFF IF LOW ENERGY
         if (energy < activation_threshold)
         {
             my_last_color = my_color;
-            my_color = g_black;
+            my_color = g_dark;
             stabilised = false;
         }
         else
@@ -123,4 +123,3 @@ else
         instance_destroy();
     }
 }
-

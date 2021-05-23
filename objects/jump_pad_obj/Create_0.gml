@@ -1,8 +1,8 @@
 event_inherited();
 
-my_color = g_black;
-black_tint = DB.colormap[? g_black];
-white_tint = DB.colormap[? g_azure];
+my_color = g_dark;
+black_tint = DB.colormap[? g_dark];
+white_tint = DB.colormap[? g_cyan];
 min_power = 7;
 max_power = DB.max_jump_pad_power;
 jump_power = max_power;
@@ -16,4 +16,3 @@ airborne = true;
 max_speed = 40;
 
 name = "Jump Pad";
-

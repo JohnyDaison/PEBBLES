@@ -18,7 +18,7 @@ energy = 0;
 activation_threshold = 0.1;
 radius = range*grid_size;
 
-lightning_color = g_black;
+lightning_color = g_dark;
 lightning_tint = c_black;
 lightning_steps = 2;
 lightning_thickness = 4;

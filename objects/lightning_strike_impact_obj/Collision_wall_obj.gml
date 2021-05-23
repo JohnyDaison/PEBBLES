@@ -16,7 +16,7 @@ if(my_strike.image_alpha == 1)
     if(dmg != 0)
     {
         other.damage += dmg;
-        if(!(other.color_locked && other.my_color == g_black))
+        if(!(other.color_locked && other.my_color == g_dark))
         {
             other.energy += abs(dmg);
         }
@@ -36,6 +36,6 @@ if(my_strike.image_alpha == 1)
             other.falling = true;
         }
 
-        create_damage_popup(dmg, g_black, other.id, "lightning_strike");
+        create_damage_popup(dmg, g_dark, other.id, "lightning_strike");
     }
 }

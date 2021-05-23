@@ -10,7 +10,7 @@ if(self.core_updated == false)
         case core_none:
         {
             sprite_index = empty_wall_spr;
-            my_color = g_black;
+            my_color = g_dark;
             break;  
         }
         case core_insulator:
@@ -64,7 +64,7 @@ if(self.cover_updated == false)
         case cover_indestr:
         {
             cover_spr = indestr_cover2_spr;
-            cover_color = g_black;
+            cover_color = g_dark;
             cover_multicolor = false; 
             break;  
         }
@@ -188,5 +188,3 @@ if(falling && singleton_obj.step_count mod 5 == 0)
         falling_force = 0;
     }
 }
-
-

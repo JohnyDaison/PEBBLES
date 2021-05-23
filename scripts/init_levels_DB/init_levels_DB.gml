@@ -3,7 +3,7 @@
 function init_levels_DB() {
     // comments are classic start values
     // the types should be done differently - e.g. movement, defence, offence, capacity
-    var black_max = 1;
+    var dark_max = 1;
     var color_max = 3;
     var col;
 
@@ -18,11 +18,11 @@ function init_levels_DB() {
     // Storage
     define_level_DB("inventory", "capacity",                "Inventory size", 0, 4); //4
     define_level_DB("colors_belt_size", "capacity",         "Color belt size", 0, color_max); //3
-    define_level_DB("black_belt_size", "capacity",          "Dark belt size", 0, black_max); //1
+    define_level_DB("dark_belt_size", "capacity",           "Dark belt size", 0, dark_max); //1
     define_level_DB("orb_storage_size", "capacity",         "Orb storage size", 0, 99); //99
 
     // Orbs
-    define_level_DB("orbs0", "orbs",                        "Orbs 0", 0, black_max); //1
+    define_level_DB("orbs0", "orbs",                        "Orbs 0", 0, dark_max); //1
 
     for(col = g_red; col<=g_blue; col++)
     {

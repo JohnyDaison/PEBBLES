@@ -13,7 +13,7 @@ for(i=1; i<=group_count; i++)
 ds_map_destroy(abi_groups);
 
 ds_map_destroy(show_belt);
-for(col=g_black; col<=g_blue; col++)
+for(col=g_dark; col<=g_blue; col++)
 {
     if(col != g_yellow)
     {

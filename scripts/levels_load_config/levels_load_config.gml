@@ -18,20 +18,20 @@ function levels_load_config(config) {
         
         config_level_gamemode("inventory",          "", "", 4);
         config_level_gamemode("colors_belt_size",   "", "", 3);
-        config_level_gamemode("black_belt_size",    "", "", 1);
+        config_level_gamemode("dark_belt_size",     "", "", 1);
         config_level_gamemode("orb_storage_size",   "", "", 99);
     
-        for(var col = g_black; col<=g_blue; col++)
+        for(var col = g_dark; col<=g_blue; col++)
         {
             var this_min, this_max;
             if(col == g_yellow)
             {
                 continue;
             }
-            if(col == g_black)
+            if(col == g_dark)
             {
-                this_min = level_minstart[? "black_belt_size"];
-                this_max = level_maxstart[? "black_belt_size"];
+                this_min = level_minstart[? "dark_belt_size"];
+                this_max = level_maxstart[? "dark_belt_size"];
             }
             else
             {
@@ -113,13 +113,13 @@ function levels_load_config(config) {
     {
         config_level_gamemode("inventory",          "", "", 4);
     }
-    else if(config == "black_belt")
+    else if(config == "dark_belt")
     {
-        config_level_gamemode("black_belt_size",    "", "", 1);
+        config_level_gamemode("dark_belt_size",     "", "", 1);
     }
-    else if(config == "black_orb")
+    else if(config == "dark_orb")
     {
-        config_level_gamemode("black_belt_size",    "", "", 1);
+        config_level_gamemode("dark_belt_size",     "", "", 1);
         config_level_gamemode("orbs0",              "", "", 1);
     }
     else if(config == "no_dashwave")
@@ -145,7 +145,7 @@ function levels_load_config(config) {
     else if(config == "vortex")
     {
         config_level_gamemode("dark_mode",          "", "", 1);
-        config_level_gamemode("black_belt_size",    "", "", 1);
+        config_level_gamemode("dark_belt_size",     "", "", 1);
         config_level_gamemode("orbs0",              "", "", 1);
         config_level_gamemode("channeling",         "", "", 1);
         config_level_gamemode("chargeball",         "", "", 1);

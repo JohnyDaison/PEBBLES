@@ -2,7 +2,7 @@ event_inherited();
 
 my_color = c_black;
 my_last_color = my_color;
-black_tint = DB.colormap[? g_black];
+black_tint = DB.colormap[? g_dark];
 final_tint = c_black;
 last_tint = tint;
 energy = 0;

@@ -158,9 +158,8 @@ if(instant)
 
 // BG
 /*
-if(my_color == g_black || my_color == g_blue)
+if(my_color == g_dark || my_color == g_blue)
 {
     bg_color = c_ltgray; 
 }
 */
-    

@@ -15,7 +15,7 @@ if(!fired && singleton_obj.step_count-start_step > delay)
         xx = lengthdir_x(dist,dir);
         yy = lengthdir_y(dist,dir);
         
-        inst = create_energy_ball(id, "small_bolt", irandom_range(g_red,g_azure), quantum_size);
+        inst = create_energy_ball(id, "small_bolt", irandom_range(g_red,g_cyan), quantum_size);
         inst.x += xx;
         inst.y += yy;
         
@@ -32,4 +32,3 @@ if(fired && singleton_obj.step_count-start_step > life)
 {
     instance_destroy();
 }
-

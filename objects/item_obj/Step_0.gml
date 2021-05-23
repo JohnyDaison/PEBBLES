@@ -27,7 +27,7 @@ if(instance_exists(my_guy))
         }
     }
     
-    // DRAGGED BY BLACK PROJECTILE
+    // DRAGGED BY DARK PROJECTILE
     if(my_guy.object_index == black_aoe_obj || my_guy.object_index == black_projectile_obj)
     {
         invisible = false;

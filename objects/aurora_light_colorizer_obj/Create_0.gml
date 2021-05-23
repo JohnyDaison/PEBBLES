@@ -6,7 +6,6 @@ var i=0;
 aurora_list[| i++] = g_red;
 aurora_list[| i++] = g_yellow;
 aurora_list[| i++] = g_green;
-aurora_list[| i++] = g_azure;
+aurora_list[| i++] = g_cyan;
 aurora_list[| i++] = g_blue;
-aurora_list[| i++] = g_purple;
-
+aurora_list[| i++] = g_magenta;

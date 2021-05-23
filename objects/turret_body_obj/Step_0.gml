@@ -14,7 +14,7 @@ charge = min(charge, threshold);
 size = charge/threshold;
 
 if(instance_exists(my_mount.my_block) && my_color != my_mount.my_block.my_color
-&& my_mount.my_block.color_locked && my_mount.my_block.my_color > g_black)
+&& my_mount.my_block.color_locked && my_mount.my_block.my_color > g_dark)
 {
     my_color = my_mount.my_block.my_color;
     tint_updated = false;
@@ -75,4 +75,3 @@ if(charge == threshold)
         }
     }
 }
-

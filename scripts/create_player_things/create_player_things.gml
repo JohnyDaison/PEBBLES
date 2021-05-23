@@ -106,7 +106,7 @@ function create_player_things(player) {
     new_guy.control_index = player.control_index;
     player.my_guy = new_guy;
 
-    if(!mod_get_state("black_color"))
+    if(!mod_get_state("dark_color"))
     {
         new_guy.my_color = g_red;
         new_guy.potential_color = new_guy.my_color;

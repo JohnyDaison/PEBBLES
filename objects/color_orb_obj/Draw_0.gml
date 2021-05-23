@@ -6,7 +6,7 @@ if(instance_exists(my_guy))
                         x, cur_y, size, size,
                         0, self.tint, fade_counter*image_alpha*0.5*holo_alpha);
         
-        if(my_color > g_black)
+        if(my_color > g_dark)
         {
             core_tint = c_white;
             

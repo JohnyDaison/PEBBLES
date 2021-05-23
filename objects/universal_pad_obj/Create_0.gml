@@ -1,9 +1,9 @@
 event_inherited();
 
 my_color = g_white;
-pad_color = g_black;
-last_pad_color = g_black;
-dark_tint = DB.colormap[? g_black];
+pad_color = g_dark;
+last_pad_color = g_dark;
+dark_tint = DB.colormap[? g_dark];
 bright_tint = DB.colormap[? pad_color];
 tint_updated = true;
 ready_power = ds_map_create();
@@ -34,33 +34,33 @@ ready = false;
 active = false;
 walkable = true;
 
-ready_power[? g_black]    = 0;
+ready_power[? g_dark]    = 0;
 ready_power[? g_red]      = 0.9;
 ready_power[? g_green]    = 0.95;
 ready_power[? g_blue]     = 0.9;
 ready_power[? g_yellow]   = 0.9;
-ready_power[? g_purple]   = 0.9;
-ready_power[? g_azure]    = 0.2;
+ready_power[? g_magenta]   = 0.9;
+ready_power[? g_cyan]    = 0.2;
 ready_power[? g_white]    = 0.9;
 ready_power[? g_octarine] = 0.9;
 
-deactivate_power[? g_black]  = 0;
+deactivate_power[? g_dark]  = 0;
 deactivate_power[? g_red] = 0.5;
 deactivate_power[? g_green] = 0.6;
 deactivate_power[? g_blue] = 0.5;
 deactivate_power[? g_yellow] = 0.5;
-deactivate_power[? g_purple] = 0.5;
-deactivate_power[? g_azure]  = 0;
+deactivate_power[? g_magenta] = 0.5;
+deactivate_power[? g_cyan]  = 0;
 deactivate_power[? g_white] = 0.5;
 deactivate_power[? g_octarine] = 0.5;
 
-recharge_speed[? g_black] = 0;
+recharge_speed[? g_dark] = 0;
 recharge_speed[? g_red] = 0.01;
 recharge_speed[? g_green] = 0.075;
 recharge_speed[? g_blue] = 0.01;
 recharge_speed[? g_yellow] = 0.01;
-recharge_speed[? g_purple] = 0.01;
-recharge_speed[? g_azure] = 0.003;
+recharge_speed[? g_magenta] = 0.01;
+recharge_speed[? g_cyan] = 0.003;
 recharge_speed[? g_white] = 0.01;
 recharge_speed[? g_octarine] = 0.01;
 
@@ -82,4 +82,3 @@ airborne = true;
 max_speed = 40;
 
 name = "Power Pad";
-

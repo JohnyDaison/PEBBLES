@@ -3,7 +3,7 @@ if(!singleton_obj.paused)
 {
     if(core == core_energy && cover == cover_none)
     {
-        if(my_color == g_black && damage == 0 && energy == 0)
+        if(my_color == g_dark && damage == 0 && energy == 0)
         {
             gamemode_obj.stats[? "terrain_untouched_total"] += 1;
             //if(my_player != gamemode_obj.environment)
@@ -13,4 +13,3 @@ if(!singleton_obj.paused)
         }
     }
 }
-

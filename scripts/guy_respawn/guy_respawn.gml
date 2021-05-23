@@ -50,7 +50,7 @@ function guy_respawn() {
         potential_charge[? g_blue] = 0;
     
         /*
-        energy_left[g_black] = energy_max[g_black];
+        energy_left[g_dark] = energy_max[g_dark];
         energy_left[g_red] = energy_max[g_red];
         energy_left[g_green] = energy_max[g_green];
         energy_left[g_blue] = energy_max[g_blue];
@@ -59,9 +59,9 @@ function guy_respawn() {
     
         ds_list_clear(flashback_queue);
     
-        if(mod_get_state("black_color"))
+        if(mod_get_state("dark_color"))
         {
-            set_my_color(g_black);
+            set_my_color(g_dark);
             tint_updated = false;
             slots_absorbed = 0;
         
@@ -70,7 +70,7 @@ function guy_respawn() {
                 //chargeball_orbs_return(charge_ball);
                 charge_ball.alarm[2] = 1;
             
-                charge_ball.my_color = g_black;
+                charge_ball.my_color = g_dark;
                 charge_ball.tint_updated = false;
             }
         }

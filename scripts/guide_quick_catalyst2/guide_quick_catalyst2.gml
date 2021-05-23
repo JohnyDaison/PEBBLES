@@ -33,7 +33,7 @@ function guide_quick_catalyst2() {
             if(selected_subtask == "color_body" || selected_subtask == "quick_shot") {
                 var delay_ended = last_color_change < singleton_obj.step_count - color_change_delay;
                 
-                if(my_color == g_black || delay_ended) {
+                if(my_color == g_dark || delay_ended) {
                     var first_orb = color_slots[|0];
                     var ready_for_new_color = tint_updated && !slots_triggered && !charging && !casting;
                     
@@ -58,7 +58,7 @@ function guide_quick_catalyst2() {
             
             if(selected_subtask == "quick_shot")
             {
-                if(my_color != g_black && instance_exists(charge_ball))
+                if(my_color != g_dark && instance_exists(charge_ball))
                 {
                     var target = instance_nearest(x,y, SECRET_obj);
                     
@@ -87,7 +87,7 @@ function guide_quick_catalyst2() {
         
             if(selected_subtask == "be_out_of_range")
             {
-                if(my_color == g_black || (!charging && !casting))
+                if(my_color == g_dark || (!charging && !casting))
                 {
                     ds_list_add(new_colors, choose(g_red, g_green, g_blue));
                     self.auto_chosen_orbs = true;
@@ -104,9 +104,9 @@ function guide_quick_catalyst2() {
             {
                 var delay_ended = last_color_change < singleton_obj.step_count - color_change_delay;
                 
-                if(my_color == g_black || delay_ended)
+                if(my_color == g_dark || delay_ended)
                 {
-                    if(my_color == g_black || (!charging && !casting))
+                    if(my_color == g_dark || (!charging && !casting))
                     {
                         ds_list_add(new_colors, choose(g_red, g_green, g_blue));
                         self.auto_chosen_orbs = true;
@@ -130,16 +130,16 @@ function guide_quick_catalyst2() {
             }
             
             if(selected_subtask == "use_terminal")
-	        {
-	            with(inventory_overlay)
-	            {
-	                if(my_guy == near_player_guy && whole_inv_blink_time == 0)
-	                {
-	                    whole_inv_blink_rate = 20;
-	                    whole_inv_blink_time = whole_inv_blink_rate*4;
-	                }
-	            }
-	        }
+            {
+                with(inventory_overlay)
+                {
+                    if(my_guy == near_player_guy && whole_inv_blink_time == 0)
+                    {
+                        whole_inv_blink_rate = 20;
+                        whole_inv_blink_time = whole_inv_blink_rate*4;
+                    }
+                }
+            }
         
             break;
         

@@ -35,16 +35,16 @@ if(!self.levels_inited)
 if(!self.orbs_ready)
 {
     var col,ii,list, orb;
-    for(col = g_black; col <= g_blue; col++)
+    for(col = g_dark; col <= g_blue; col++)
     {
         if(col == g_yellow)
         {
             continue;
         }
         
-        if(col == g_black)
+        if(col == g_dark)
         {
-            belt_size[? col] = my_player.levels[? "black_belt_size"];
+            belt_size[? col] = my_player.levels[? "dark_belt_size"];
         }
         else
         {
@@ -56,7 +56,7 @@ if(!self.orbs_ready)
         orbs_in_use[? col] = ds_list_create();
         var in_use_list = orbs_in_use[? col];
         
-        if((col == g_black && !mod_get_state("black_color")) || gamemode_obj.no_orbs_start)
+        if((col == g_dark && !mod_get_state("dark_color")) || gamemode_obj.no_orbs_start)
         {
             ii = 0;
         }
@@ -129,11 +129,11 @@ if(self.slots_absorbed > charge_ball.orb_count && charge_ball.orb_count > 0)
 }
 */
 
-// GO BLACK IF YOU HAVE NO SLOTS
+// GO DARK IF YOU HAVE NO SLOTS
 /*
-if(my_color != g_black && slot_number == 0 && mod_get_state("black_color"))
+if(my_color != g_dark && slot_number == 0 && mod_get_state("dark_color"))
 {
-    my_color = g_black;
+    my_color = g_dark;
     self.slots_absorbed = 0;
     self.slots_triggered = false;
     self.current_slot = 0;
@@ -452,11 +452,11 @@ if(!self.frozen_in_time || self.flashing_back)
     var max_color = g_white;
     if(self.flashing_back)
     {
-        max_color = g_black;   
+        max_color = g_dark;   
     }
     
     // tick cooldowns, process scripts
-    for(var i = g_black; i <= max_color; i++)
+    for(var i = g_dark; i <= max_color; i++)
     {  
         abi_cooldown[?i] = max(0,abi_cooldown[?i]-1);
         
@@ -521,29 +521,29 @@ if(self.channeling)
         // RESET   
         if(channel_orig_color != -1)
         {
-            if(!mod_get_state("black_color")) //  || ds_list_size(orbs_in_use[? g_black]) == 0
+            if(!mod_get_state("dark_color")) //  || ds_list_size(orbs_in_use[? g_dark]) == 0
             {
                 set_my_color(channel_orig_color);
                 guy_orbs_return(id);
             }
             else
             {
-                set_my_color(g_black);
+                set_my_color(g_dark);
                 slots_absorbed = 0;
                 
                 guy_orbs_return(id);
                 chargeball_orbs_return(charge_ball);
 
                 ds_list_clear(new_colors);
-                //ds_list_add(new_colors, g_black);
+                //ds_list_add(new_colors, g_dark);
                 
                 // CLEAR CHARGE BALL
                 
             }
             
-            if(instance_exists(charge_ball) && mod_get_state("black_color") && ds_list_size(orbs_in_use[? g_black]) > 0)
+            if(instance_exists(charge_ball) && mod_get_state("dark_color") && ds_list_size(orbs_in_use[? g_dark]) > 0)
             {
-                ds_list_add(new_colors, g_black);
+                ds_list_add(new_colors, g_dark);
                 auto_chosen_orbs = true;
                 // color_updated = false; - this bad
                 charge_ball.my_color = my_color;
@@ -562,10 +562,10 @@ if(self.channeling)
     self.interrupt_channel = false;
 }
 
-// BLACK COLOR CHANGE IN LOST_CONTROL
-if(self.wanna_channel && lost_control && my_color != g_black && mod_get_state("black_color"))
+// DARK COLOR CHANGE IN LOST_CONTROL
+if(self.wanna_channel && lost_control && my_color != g_dark && mod_get_state("dark_color"))
 {
-    set_my_color(g_black);
+    set_my_color(g_dark);
     slots_absorbed = 0;
 }
 
@@ -754,7 +754,7 @@ if(!self.frozen_in_time)
             var bounce_coef = 0;
             
             var status_bounce = self.status_left[? "bounce"] > 0;
-            var wall_bounce = my_color != g_azure && instance_exists(touching_terrain) && touching_terrain.my_color == g_azure;
+            var wall_bounce = my_color != g_cyan && instance_exists(touching_terrain) && touching_terrain.my_color == g_cyan;
             
             self.holding_wall = false;
             
@@ -1540,15 +1540,15 @@ if(!self.frozen_in_time)
                     first_color = first_orb.my_color;
                 }
             
-                if(first_color != g_black && self.current_slot < self.slot_maxnumber)
+                if(first_color != g_dark && self.current_slot < self.slot_maxnumber)
                 {            
                     if(self.current_slot == 0)
                     {
-                        self.color_charge[? g_black] = 0;
+                        self.color_charge[? g_dark] = 0;
                         self.color_charge[? g_red] = 0;
                         self.color_charge[? g_green] = 0;
                         self.color_charge[? g_blue] = 0;
-                        self.potential_charge[? g_black] = 0;
+                        self.potential_charge[? g_dark] = 0;
                         self.potential_charge[? g_red] = 0;
                         self.potential_charge[? g_green] = 0;
                         self.potential_charge[? g_blue] = 0;
@@ -1586,7 +1586,7 @@ if(!self.frozen_in_time)
                     
                     if(filled)
                     {
-                        if(new_color == g_black)
+                        if(new_color == g_dark)
                         {
                             auto_cast = true;
                             if(DB.console_mode == "debug") // DB.console_mode == "test" ||
@@ -1624,15 +1624,15 @@ if(!self.frozen_in_time)
     // HANDLE COLOR ABSORBING
     //show_debug_message("slots_triggered: " + string(slots_triggered));
     
-    if((self.current_slot > 0 || (self.current_slot == 0 && my_color == g_black)) && !self.color_updated)
+    if((self.current_slot > 0 || (self.current_slot == 0 && my_color == g_dark)) && !self.color_updated)
     //if(!self.slots_triggered && !self.color_updated)
     {
         var next_color;
         //INIT
         var color_found = false;
-        if(color_charge[? g_black] > 0)
+        if(color_charge[? g_dark] > 0)
         {
-            next_color = g_black;
+            next_color = g_dark;
         }
         else
         {
@@ -1643,7 +1643,7 @@ if(!self.frozen_in_time)
         
         // ABILITY
         if(self.abi_triggered && ((self.abi_slots_absorbed == self.current_slot) 
-            || (self.abi_slots_absorbed > 0 && next_color == g_black)))
+            || (self.abi_slots_absorbed > 0 && next_color == g_dark)))
         {
             self.my_abi_color = next_color;
             //show_debug_message("absorbed abi color");
@@ -1653,11 +1653,11 @@ if(!self.frozen_in_time)
         
         // ABSORB
         if(!self.abi_triggered && ((self.slots_absorbed == self.current_slot) 
-            || (self.slots_absorbed > 0 && next_color == g_black))) // 
+            || (self.slots_absorbed > 0 && next_color == g_dark))) // 
         {
             set_my_color(next_color);
             
-            if(next_color == g_black)
+            if(next_color == g_dark)
             {
                 self.slots_absorbed = 0;
             }
@@ -1743,9 +1743,9 @@ if(!self.frozen_in_time)
     }
     
     // PERFORM ABILITY
-    if(self.my_abi_color >= g_black)
+    if(self.my_abi_color >= g_dark)
     {
-        if(self.status_left[? "frozen"] == 0 && (!self.lost_control || self.my_abi_color == g_black))
+        if(self.status_left[? "frozen"] == 0 && (!self.lost_control || self.my_abi_color == g_dark))
         {
             self.my_abi_tint = ds_map_find_value(DB.colormap,my_abi_color);
             
@@ -1779,7 +1779,7 @@ if(!self.frozen_in_time)
                 }
                 else
                 {
-                     //if(self.my_abi_color != g_black)
+                     //if(self.my_abi_color != g_dark)
                         my_sound_play(failed_sound);
                 }
             }
@@ -1900,7 +1900,7 @@ if(!self.frozen_in_time)
                 {
                     self.abi_triggered = false;
                     /*
-                    if(my_color == g_black)
+                    if(my_color == g_dark)
                     {
                         self.ball_chargerate = 1;
                         self.ball_overcharge = 0;  
@@ -1938,7 +1938,7 @@ if(!self.frozen_in_time)
         }
         
         // FLASHBACK(REWIND) EXCEPTION
-        if(self.wanna_abi && self.my_color == g_black && self.my_abi_color == -1 && !dead)
+        if(self.wanna_abi && self.my_color == g_dark && self.my_abi_color == -1 && !dead)
         {
             self.my_abi_color = self.my_color;
         }
@@ -2635,7 +2635,7 @@ if(!self.frozen_in_time)
             sprite_chosen = true;
         }
         
-        // CASTING BLACK AOE
+        // CASTING DARK AOE
         
         if(self.casting && self.casting_ring && !sprite_chosen)
         {

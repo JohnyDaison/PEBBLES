@@ -13,14 +13,14 @@ if(instance_exists(my_holder))
     var stabilised = tint_updated || my_color == g_octarine;
     
     // COPY BLOCK COLOR IF STABILISED
-    if((my_color > g_black || stabilised) 
-        && my_color != block_color && my_holder.tint_updated && block_color > g_black)
+    if((my_color > g_dark || stabilised) 
+        && my_color != block_color && my_holder.tint_updated && block_color > g_dark)
     {
         my_color = block_color;
         stabilised = false;
     }
     
-    if(my_color == g_black && stabilised)
+    if(my_color == g_dark && stabilised)
     {    
         if(!lightning_reset)
         {
@@ -32,7 +32,7 @@ if(instance_exists(my_holder))
         }
         
         // BLINK WITH STORED COLOR
-        if(energy > 0 && my_last_color > g_black)
+        if(energy > 0 && my_last_color > g_dark)
         {
             my_color = my_last_color;
             stabilised = false;
@@ -40,7 +40,7 @@ if(instance_exists(my_holder))
     }
     
     // DRAIN HOLDER
-    if(my_color > g_black && stabilised)
+    if(my_color > g_dark && stabilised)
     {
         if(my_holder.energy > 0)
         {
@@ -53,13 +53,13 @@ if(instance_exists(my_holder))
             
             if(instance_exists(my_block))
             {
-                my_block.my_next_color = g_black;
+                my_block.my_next_color = g_dark;
                 my_block.energy = 0;
             }
             
             if(instance_exists(my_struct))
             {
-                my_struct.my_color = g_black;
+                my_struct.my_color = g_dark;
                 my_struct.tint_updated = false;
                 my_struct.energy = 0;
             }
@@ -67,13 +67,13 @@ if(instance_exists(my_holder))
     }
         
     // READY
-    if(my_color > g_black && stabilised)
+    if(my_color > g_dark && stabilised)
     {
         // BLINK OFF IF LOW ENERGY
         if (energy < activation_threshold)
         {
             my_last_color = my_color;
-            my_color = g_black;
+            my_color = g_dark;
             stabilised = false;
         }
         else
@@ -171,7 +171,7 @@ if(instance_exists(my_holder))
             
             // DISCARD COLOR
             my_last_color = my_color;
-            my_color = g_black;
+            my_color = g_dark;
             stabilised = false;
             energy = 0;
       
@@ -191,4 +191,3 @@ else
         instance_destroy();
     }
 }
-

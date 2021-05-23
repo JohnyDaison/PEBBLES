@@ -134,7 +134,7 @@ if(collided && holographic == other.holographic)
         other.scale_buffer += body_dmg;
         other.my_next_color = self.my_color;
         other.damage += body_dmg;
-        if(!(other.color_locked && other.my_color == g_black))
+        if(!(other.color_locked && other.my_color == g_dark))
         {
             other.energy += abs(body_dmg);
         }

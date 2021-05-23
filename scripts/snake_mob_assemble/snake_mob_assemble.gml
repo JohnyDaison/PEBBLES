@@ -23,7 +23,7 @@ function snake_mob_assemble() {
     group_add_member(ter_group, cur_ter);
     cur_ter.moving = true;
     cur_ter.energy = max(0.25, cur_ter.energy);
-    if(cur_ter.my_color == g_black)
+    if(cur_ter.my_color == g_dark)
         cur_ter.my_next_color = body_col;
     x = cur_ter.x;
     y = cur_ter.y;

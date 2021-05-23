@@ -47,7 +47,7 @@ switch(shape)
             with(other)
             { 
                 proj = collision_circle(x,y,radius,other.id,false,true);
-                if(instance_exists(proj) && proj.my_color != g_black)
+                if(instance_exists(proj) && proj.my_color != g_dark)
                 {
                     apply_force(proj,repels);
                 }
@@ -71,7 +71,7 @@ switch(shape)
                     with(other)
                     { 
                         item = collision_circle(x,y,radius,other.id,false,true);
-                        if(instance_exists(item) && item.my_color != g_black)
+                        if(instance_exists(item) && item.my_color != g_dark)
                         {
                             apply_force(item,repels);
                         }
@@ -101,7 +101,7 @@ switch(shape)
     }
     */
     
-    // BLACK PROJECTILES
+    // DARK PROJECTILES
     /*
     with(black_projectile_obj)
     {
@@ -171,7 +171,7 @@ switch(shape)
             with(other)
             { 
                 proj = collision_rectangle(left_x,top_y,right_x,bottom_y,other.id,false,true);
-                if(instance_exists(proj) && proj.my_color != g_black)
+                if(instance_exists(proj) && proj.my_color != g_dark)
                 {
                     apply_force(proj,repels);
                 }
@@ -199,7 +199,7 @@ switch(shape)
     }
     */
     
-    // BLACK PROJECTILE
+    // DARK PROJECTILE
     /*
     with(black_projectile_obj)
     {

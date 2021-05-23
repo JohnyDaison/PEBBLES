@@ -19,7 +19,7 @@ if(stuck_to != noone && energy > 0)
             terminal.energy += energy;
                         
             energy = 0;
-            my_color = g_black;
+            my_color = g_dark;
             tint_updated = false;
             
             my_sound_play(gate_on_sound);

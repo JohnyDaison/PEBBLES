@@ -5,7 +5,7 @@ with(wall_obj)
         if(other.go_dark)
         {
             energy = 0;
-            my_next_color = g_black;
+            my_next_color = g_dark;
         }
         else
         {
@@ -15,4 +15,3 @@ with(wall_obj)
 }
 
 instance_destroy();
-

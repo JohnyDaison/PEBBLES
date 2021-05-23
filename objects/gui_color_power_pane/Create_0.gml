@@ -8,11 +8,11 @@ column_bg_alpha = 0.2;
 column_white_ratio = 0.6;
 
 color_order = ds_list_create();
-ds_list_add(color_order, g_red, g_green, g_blue, g_yellow, g_purple, g_azure, g_black, g_white);
+ds_list_add(color_order, g_red, g_green, g_blue, g_yellow, g_magenta, g_cyan, g_dark, g_white);
 color_count = ds_list_size(color_order);
 
 gaps_after = ds_list_create();
-ds_list_add(gaps_after, g_blue, g_azure);
+ds_list_add(gaps_after, g_blue, g_cyan);
 
 base_halfsize = 8;
 column_width = 26;

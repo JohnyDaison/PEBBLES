@@ -1,7 +1,7 @@
 event_inherited();
 
 multicolor = true;
-my_color = g_black;
+my_color = g_dark;
 tint_updated = false;
 image_alpha = 0.8;
 max_stack_size = 4;
@@ -14,4 +14,3 @@ self.pickup_show_name = false;
 self.inventory_spr = orb_bundle_spr;
 
 self.name = "Orb Bundle";
-

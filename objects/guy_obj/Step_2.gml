@@ -29,7 +29,7 @@ if(instance_exists(chunkgrid_obj))
     
     // ORBS
     var col, ii, list, orb, orb_count;
-    for(col=g_black; col<=g_blue; col++)
+    for(col=g_dark; col<=g_blue; col++)
     {
         if(col == g_yellow)
         {
@@ -160,7 +160,7 @@ if(!self.climbing_up)
                                     wall_dmg = this_guy.speed/this_guy.max_speed
                                     damage += wall_dmg;
 
-                                    create_damage_popup(wall_dmg, g_black, id);
+                                    create_damage_popup(wall_dmg, g_dark, id);
                                     
                                     with(this_guy)
                                     {
@@ -568,11 +568,11 @@ for(ii=0; ii<ter_list_length; ii+=1)
                                     }
                                 }
                                 break;
-                            case g_azure:
+                            case g_cyan:
                                 // No footsteps and bouncy(in Step event)
                                 this_guy.quiet_run = true;
                                 break;
-                            case g_purple:
+                            case g_magenta:
                                 // ??
                                 /*
                                 if(this_guy.step_count mod 20 == 0)

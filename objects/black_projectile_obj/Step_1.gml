@@ -23,7 +23,7 @@ with(guy_obj)
                     my_sound_play(wall_hum_sound);
                     //my_sound_play_colored(wall_hum_sound, my_shield.my_color);
                 }    
-                else if(other.force != 0 && my_color != g_black)
+                else if(other.force != 0 && my_color != g_dark)
                 {        
                     // SLOT THEFT
                     /*

@@ -52,7 +52,7 @@ hpbar_width = 34;
 hpbar_xx = 0;
 hpbar_tint = DB.colormap[? g_green];
 
-shot_color = g_black;
+shot_color = g_dark;
 
 // ORBS
 orbs = ds_map_create();

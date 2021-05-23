@@ -49,7 +49,7 @@ function create_gamemodes_DB() {
 
     gamemode_mod_create("base_crystals", "Base Crystals", "bool", true, base_crystals_mod_icon, "Base Crystals provide a large Shield, which can Heal you using Shards.");
 
-    gamemode_mod_create("black_color", "Dark Color", "bool", true, dark_color_mod_icon, "Dark attacks and Abilities mess with space and time.");
+    gamemode_mod_create("dark_color", "Dark Color", "bool", true, dark_color_mod_icon, "Dark attacks and Abilities mess with space and time.");
     
     gamemode_mod_create("bad_status_effects", "Status Effects", "bool", true, bad_status_effects_mod_icon, "Every Color except Dark has a Status Effect, e.g. Slow(Green), Frozen(Blue)...");
 
@@ -106,7 +106,7 @@ function create_gamemodes_DB() {
     forced_mods[? "indestr_terrain"] = false;
     forced_mods[? "regenerate_terrain"] = false;
     forced_mods[? "always_sliding"] = false;
-    forced_mods[? "black_color"] = true;
+    forced_mods[? "dark_color"] = true;
     forced_mods[? "bolt_rain"] = false;
     forced_mods[? "bad_status_effects"] = true;
     forced_mods[? "abilities"] = false;
@@ -136,7 +136,7 @@ function create_gamemodes_DB() {
     forced_mods[? "shield_push"] = true;
 
     default_mods = gm[? "default_modifiers"];
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
 
@@ -165,7 +165,7 @@ function create_gamemodes_DB() {
 
     default_mods[? "hp_death"] = true;
     default_mods[? "base_crystals"] = true;
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
 
@@ -201,7 +201,7 @@ function create_gamemodes_DB() {
     default_mods[? "base_crystals"] = true;
     default_mods[? "weak_terrain"] = true;
     default_mods[? "dark_orb_energy_lock"] = true;
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
     default_mods[? "artifacts"] = true;
@@ -252,7 +252,7 @@ function create_gamemodes_DB() {
     default_mods[? "cannons"] = true;
     default_mods[? "snakes_on_a_plane"] = false;
     default_mods[? "hp_death"] = true;
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
 
@@ -284,7 +284,7 @@ function create_gamemodes_DB() {
     forced_mods[? "cannons"] = false;
     forced_mods[? "turrets"] = false;
     forced_mods[? "mob_portals"] = false;
-    forced_mods[? "black_color"] = false;
+    forced_mods[? "dark_color"] = false;
     forced_mods[? "bad_status_effects"] = false;
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
@@ -317,7 +317,7 @@ function create_gamemodes_DB() {
     forced_mods[? "random_item_spawner"] = false;
     forced_mods[? "snakes_on_a_plane"] = false;
     forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "black_color"] = false;
+    forced_mods[? "dark_color"] = false;
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
@@ -357,7 +357,7 @@ function create_gamemodes_DB() {
     default_mods[? "hp_death"] = true;
     default_mods[? "turrets"] = true;
     default_mods[? "cannons"] = true;
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
     */
@@ -391,7 +391,7 @@ function create_gamemodes_DB() {
     forced_mods[? "indestr_terrain"] = false;
     forced_mods[? "regenerate_terrain"] = false;
     forced_mods[? "always_sliding"] = false;
-    forced_mods[? "black_color"] = true;
+    forced_mods[? "dark_color"] = true;
     forced_mods[? "bolt_rain"] = false;
     forced_mods[? "bad_status_effects"] = true;
     forced_mods[? "abilities"] = true;
@@ -433,7 +433,7 @@ function create_gamemodes_DB() {
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "shield_push"] = true;
-    default_mods[? "black_color"] = true;
+    default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
 

@@ -283,7 +283,7 @@ with(match_pane)
     eloffset_y = y + heading + 16;
     */
     
-    // BLACK MAGIC
+    // DARK MAGIC
     ii = gui_add_label(-100,0,"Ban Dark Color");
     ii.width = col_wide;
     

@@ -94,7 +94,7 @@ self.auto_chosen_orbs = false;
 
 //ENERGY
 /*
-energy_max[g_black] = 40;
+energy_max[g_dark] = 40;
 energy_max[g_red] = 20;
 energy_max[g_green] = 20;
 energy_max[g_blue] = 20;
@@ -451,7 +451,7 @@ self.controls_updated = false;
 
 // COLORS
 
-self.my_color = g_black;
+self.my_color = g_dark;
 self.new_colors = ds_list_create();
 self.my_last_color = my_color;
 self.my_abi_color = -1;
@@ -479,7 +479,7 @@ orb_reserve[? g_green] = 0;
 orb_reserve[? g_blue] = 0;
 
 belt_size = ds_map_create();
-for(col=g_black; col<=g_blue; col++)
+for(col=g_dark; col<=g_blue; col++)
 {
     if(col != g_yellow)
     {
@@ -493,16 +493,16 @@ self.orbs_ready = false;
 
 // ABILITY HINTS
 self.potential_charge = ds_map_create();
-self.potential_charge[? g_black] = 0;
+self.potential_charge[? g_dark] = 0;
 self.potential_charge[? g_red] = 0;
 self.potential_charge[? g_green] = 0;
 self.potential_charge[? g_blue] = 0;
-self.potential_color = g_black; //g_black
+self.potential_color = g_dark; //g_dark
 self.potential_abi_name = "";
 
 // CHARGING AND SPELLS
 self.color_charge = ds_map_create();
-self.color_charge[? g_black] = 0;
+self.color_charge[? g_dark] = 0;
 self.color_charge[? g_red] = 0;
 self.color_charge[? g_green] = 0;
 self.color_charge[? g_blue] = 0;
@@ -532,13 +532,13 @@ flashback_max_steps = 120;
 
 // NEW ABIS
 self.abilities = ds_map_create();
-abilities[? g_black] = abi_flashback;
+abilities[? g_dark] = abi_flashback;
 abilities[? g_red] = abi_berserk;
 abilities[? g_green] = abi_heal;
 abilities[? g_blue] = abi_teleport;
 abilities[? g_yellow] = abi_haste;
-abilities[? g_purple] = abi_ubershield;
-abilities[? g_azure] = abi_invisibility;
+abilities[? g_magenta] = abi_ubershield;
+abilities[? g_cyan] = abi_invisibility;
 abilities[? g_white] = abi_base_teleport;
 
 self.abi_last_used = ds_map_create();
@@ -548,7 +548,7 @@ self.abi_script = ds_map_create();
 self.abi_script_delay = ds_map_create();
 self.abi_last_script = ds_map_create();
 
-for(var i = g_black; i <= g_octarine; i++)
+for(var i = g_dark; i <= g_octarine; i++)
 {
     abi_last_used[?i] = 0;
     abi_cooldown[?i] = 0;
@@ -565,7 +565,7 @@ self.has_tp_rush = false;
 self.last_terrain = noone;
 
 var color;
-for(color = g_black; color <= g_white; color++)
+for(color = g_dark; color <= g_white; color++)
 {
     self.abi_cooldown_length[? color] = DB.abi_cooldowns[? color];
 }

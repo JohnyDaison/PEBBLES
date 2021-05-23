@@ -5,12 +5,12 @@ if(instance_exists(my_beam))
 else if(instance_exists(my_turret))
 {
     my_turret.my_block.energy = my_turret.my_block.outburst_threshold*1.1;   
-    if(my_turret.my_block.my_color == g_black)
+    if(my_turret.my_block.my_color == g_dark)
         my_turret.my_block.my_color = g_octarine;
 }
 else if(instance_exists(my_block))
 {
-    if(my_block.my_color == g_black)
+    if(my_block.my_color == g_dark)
     {
         my_block.my_next_color = g_octarine;
     }
@@ -82,4 +82,3 @@ else
         }
     }
 }
-

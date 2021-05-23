@@ -55,7 +55,7 @@ with(wall_obj)
             energy = max(0, energy - 0.01);
             if(energy == 0)
             {
-                my_next_color = g_black;   
+                my_next_color = g_dark;   
             }
         }
     }

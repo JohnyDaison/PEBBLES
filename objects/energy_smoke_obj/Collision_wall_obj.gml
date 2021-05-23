@@ -89,7 +89,7 @@ if(!bounced)
     }
 }
 
-//other.my_next_color = irandom_range(g_red, g_azure);
+//other.my_next_color = irandom_range(g_red, g_cyan);
 
 /*
 if(collided)

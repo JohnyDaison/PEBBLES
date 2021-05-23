@@ -45,7 +45,7 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
         // COLOR
         var bg_color, border_color;
         
-        if(my_color == g_black)
+        if(my_color == g_dark)
         {
             bg_color = light_bg_color;
             border_color = light_bg_color;

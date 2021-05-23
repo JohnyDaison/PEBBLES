@@ -66,7 +66,7 @@ with(guy_obj)
                 if(inverted)
                 {
                     sprite_index = one_way_down_spr;
-                    my_color = g_black;
+                    my_color = g_dark;
                     tint_updated = false;
                 }
             }
@@ -76,7 +76,7 @@ with(guy_obj)
                 if(!inverted)
                 {
                     sprite_index = one_way_up_spr;
-                    my_color = g_black;
+                    my_color = g_dark;
                     tint_updated = false;
                 }
                 
@@ -88,4 +88,3 @@ with(guy_obj)
         }
     }
 }
-

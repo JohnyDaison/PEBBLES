@@ -1,10 +1,10 @@
 if(instance_exists(my_block) && singleton_obj.step_count > 5 && singleton_obj.step_count % 10 == 0) {
-    if (my_block.my_color > g_black && my_block.my_color < g_octarine) {
+    if (my_block.my_color > g_dark && my_block.my_color < g_octarine) {
         my_color = my_block.my_color;
         tint_updated = false;
     }
     
-    if(my_color == g_black) {
+    if(my_color == g_dark) {
         exit;
     }
     
@@ -13,7 +13,7 @@ if(instance_exists(my_block) && singleton_obj.step_count > 5 && singleton_obj.st
     for(var dir = right; dir <= down; dir++) {
         var wall = my_block.near_walls[? dir];
         
-        if(!instance_exists(wall) || (!spread_to_dark && wall.my_color == g_black)) {
+        if(!instance_exists(wall) || (!spread_to_dark && wall.my_color == g_dark)) {
             continue;
         }
         

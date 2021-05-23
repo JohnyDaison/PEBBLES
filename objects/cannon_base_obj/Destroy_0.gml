@@ -10,7 +10,7 @@ with(my_waypoint)
 
 if(!cancelled)
 {
-    if(shot_color > g_black)
+    if(shot_color > g_dark)
     {
         ii = instance_create(x, y, slot_explosion_obj);
         ii.my_guy = id;

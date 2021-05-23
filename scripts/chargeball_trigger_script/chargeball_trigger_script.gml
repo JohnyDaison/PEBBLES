@@ -1,7 +1,7 @@
 function chargeball_trigger_script() {
     var ret = false;
     //show_debug_message("TRIGGER chargeball");
-    if(instance_exists(my_guy) && my_color >= g_black && !firing && charge > 0)
+    if(instance_exists(my_guy) && my_color >= g_dark && !firing && charge > 0)
     {
         var aim_direction = point_direction(0, 0, rel_x, rel_y);
     
@@ -29,12 +29,12 @@ function chargeball_trigger_script() {
             orb_count = my_guy.slots_absorbed;
         }
     
-        if(my_color == g_black) {
+        if(my_color == g_dark) {
             if(orb_count > 0 && (!is_guy || has_level(my_guy, "dark_mode", 1)))
             {
                 if(desired_dist == 0 && cur_dist < 8)
                 {
-                    // BLACK AOE
+                    // DARK AOE
                     inst = instance_create(x, y, black_aoe_obj);
                     inst.my_player = self.my_player;
                     inst.force = self.charge;
@@ -315,7 +315,7 @@ function chargeball_trigger_script() {
             {
                 with(my_guy)
                 {
-                    if(shot_color > g_black)
+                    if(shot_color > g_dark)
                     {
                         orbs[? shot_color] -= 1;
                     }
@@ -342,7 +342,7 @@ function chargeball_trigger_script() {
                 
                     if(!orb_found)
                     {
-                        shot_color = g_black;
+                        shot_color = g_dark;
                         slots_absorbed = 0;
                     }
                 }

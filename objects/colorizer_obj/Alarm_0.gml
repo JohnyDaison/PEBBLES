@@ -39,7 +39,7 @@ with(spark_obj)
     {
         if(my_color >= g_octarine)
         {
-            my_color = g_black;
+            my_color = g_dark;
         }
         while(abs(hspeed) < 1)
         {
@@ -51,4 +51,3 @@ with(spark_obj)
 }
 
 instance_destroy();
-

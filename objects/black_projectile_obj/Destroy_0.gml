@@ -28,7 +28,7 @@ for(i=0; i<slot_count; i+=1)
     {
         if(slot.my_guy == self.id)
         {
-            if(slot.my_color == g_black)
+            if(slot.my_color == g_dark)
             {
                 i = instance_create(x,y,black_aoe_obj);
                 //i.my_player = my_guy.my_player;

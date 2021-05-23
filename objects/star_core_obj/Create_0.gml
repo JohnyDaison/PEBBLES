@@ -11,7 +11,7 @@ self.small_bolt_ratio = 0.33;
 
 my_sound_play(starfall_sound);
 
-my_color = irandom_range(g_red,g_azure);
+my_color = irandom_range(g_red,g_cyan);
 multicolor = true;
 tint_updated = false;
 
@@ -37,4 +37,3 @@ part_type_orientation(part_type,0,0,0,0,0);
 
 name = "Star Core";
 draw_label = true;
-

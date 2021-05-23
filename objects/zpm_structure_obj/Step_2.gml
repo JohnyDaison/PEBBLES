@@ -13,15 +13,15 @@ if(!instance_exists(my_block))
 }
 
 // PRESERVE COLOR
-if(my_block.my_color > g_black)
+if(my_block.my_color > g_dark)
 {
     last_block_color = my_block.my_color;
-    if(my_block.my_next_color == g_black)
+    if(my_block.my_next_color == g_dark)
     {
         my_block.my_next_color = my_block.my_color;
     }
 }
-else if(last_block_color > g_black)
+else if(last_block_color > g_dark)
 {
     my_block.my_color = last_block_color;
     my_block.my_next_color = last_block_color;

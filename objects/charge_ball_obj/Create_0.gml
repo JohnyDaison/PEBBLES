@@ -71,14 +71,14 @@ base_radius = 24;
 radius = base_radius;
 glow_tint = tint;
 
-comp[g_black] = 0;
+comp[g_dark] = 0;
 comp[g_red] = 0;
 comp[g_green] = 0;
 comp[g_blue] = 0;
 num_colors_used = 0;
     
 charge_cost = 0;
-energy_cost[g_black] = 0;
+energy_cost[g_dark] = 0;
 energy_cost[g_red] = 0;
 energy_cost[g_green] = 0;
 energy_cost[g_blue] = 0;

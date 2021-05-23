@@ -428,6 +428,6 @@ if(energy < 0)
     energy = 0;
 }
 
-final_tint = merge_colour(DB.colormap[? g_black], tint, min(1, energy/base_energy));
+final_tint = merge_colour(DB.colormap[? g_dark], tint, min(1, energy/base_energy));
 ambient_light = ambient_light_coef*energy/base_energy;
 direct_light = direct_light_coef*energy/base_energy;

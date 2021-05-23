@@ -3,7 +3,7 @@ event_inherited();
 energy = 0;
 spawn_cost = 1;
 drain_speed = 0.002;
-black_tint = DB.colormap[? g_black];
+black_tint = DB.colormap[? g_dark];
 immovable = true;
 radius = 32;
 spawn_height = 32;
@@ -37,4 +37,3 @@ standby = false;
 spawned_item = noone;
 spawn_effect = noone;
 duplicate_items = false;
-

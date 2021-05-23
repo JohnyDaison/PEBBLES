@@ -59,12 +59,12 @@ status_last_active = ds_map_create();
 
 i=1;
 
-//status_order[? i++] = g_black;
+//status_order[? i++] = g_dark;
 status_order[? i++] = g_blue;
 status_order[? i++] = g_green;
 status_order[? i++] = g_red;
-status_order[? i++] = g_azure;
-status_order[? i++] = g_purple;
+status_order[? i++] = g_cyan;
+status_order[? i++] = g_magenta;
 status_order[? i++] = g_yellow;
 status_order[? i++] = g_white;
 status_order[? i++] = g_octarine;
@@ -103,7 +103,7 @@ for(i=1; i<=group_count; i++)
 i=1;
 ii=1;
 group = abi_groups[? i++];
-group[? ii++] = g_black;
+group[? ii++] = g_dark;
 
 ii=1;
 group = abi_groups[? i++];
@@ -113,8 +113,8 @@ group[? ii++] = g_red;
 
 ii=1;
 group = abi_groups[? i++];
-group[? ii++] = g_azure;
-group[? ii++] = g_purple;
+group[? ii++] = g_cyan;
+group[? ii++] = g_magenta;
 group[? ii++] = g_yellow
 
 ii=1;
@@ -146,7 +146,7 @@ belt_list = ds_map_create();
 left_side_belt_order = ds_list_create();
 right_side_belt_order = ds_list_create();
 
-for(col=g_black; col<=g_blue; col++)
+for(col=g_dark; col<=g_blue; col++)
 {
     if(col != g_yellow)
     {
@@ -159,10 +159,10 @@ i=0;
 left_side_belt_order[|i++] = g_blue;
 left_side_belt_order[|i++] = g_green;
 left_side_belt_order[|i++] = g_red;
-left_side_belt_order[|i++] = g_black;
+left_side_belt_order[|i++] = g_dark;
 
 i=0;
-right_side_belt_order[|i++] = g_black;
+right_side_belt_order[|i++] = g_dark;
 right_side_belt_order[|i++] = g_blue;
 right_side_belt_order[|i++] = g_green;
 right_side_belt_order[|i++] = g_red;

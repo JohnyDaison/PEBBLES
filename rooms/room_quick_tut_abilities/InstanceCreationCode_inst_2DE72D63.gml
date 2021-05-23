@@ -1,2 +1,2 @@
-my_color = g_black;
+my_color = g_dark;
 duplicate_me = true;

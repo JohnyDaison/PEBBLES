@@ -39,7 +39,7 @@ obj_center_angle = 0;
 
 self.my_player = gamemode_obj.environment;
 
-self.my_color = g_black;
+self.my_color = g_dark;
 self.multicolor = true;
 self.tint_updated = false;
 self.tint = c_dkgray;

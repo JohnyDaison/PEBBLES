@@ -60,13 +60,13 @@ function macros() {
 #macro gamepad_down 4
 #macro gamepad_stick 5
 #macro g_nothing -1
-#macro g_black 0
+#macro g_dark 0
 #macro g_red 1
 #macro g_green 2
 #macro g_blue 4
 #macro g_yellow 3
-#macro g_purple 5
-#macro g_azure 6
+#macro g_magenta 5
+#macro g_cyan 6
 #macro g_white 7
 #macro g_octarine 8
 #macro shape_inherit -1
@@ -94,7 +94,4 @@ function macros() {
 #macro spd_instant 6
 #macro coltypes_max -10
 #macro coltype_blocking -10
-
-
-
 }

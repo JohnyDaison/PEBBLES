@@ -81,7 +81,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
         {
             if(bolt_rain_started)
             {
-                inst = create_energy_ball(id, "small_bolt_rain", irandom_range(g_red,g_azure), 0.3);
+                inst = create_energy_ball(id, "small_bolt_rain", irandom_range(g_red,g_cyan), 0.3);
                 inst.y += -room_height-32;
                 
                 //inst = instance_create(x,y-room_height-32,small_projectile_obj); //
@@ -90,7 +90,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
                 //inst.force = 0.3;
                 inst.vspeed = 2;
                 inst.was_stopped = true;
-                //inst.my_color = irandom_range(g_red,g_azure);
+                //inst.my_color = irandom_range(g_red,g_cyan);
                 //inst.tint_updated = false;
                 have_spawned = true;
             }
@@ -139,7 +139,7 @@ if(slots_enabled && !have_spawned)
 {
     /*
     new_color = 3;
-    while(new_color == 3 || (!mod_get_state("black_color") && new_color == 0))
+    while(new_color == 3 || (!mod_get_state("dark_color") && new_color == 0))
     {
         new_color = irandom(4);
     }
@@ -164,7 +164,7 @@ if(inst != noone)
     if(do_effect)
         instance_create(inst.x,inst.y,spawn_effect_obj);
         
-    rand_color = ds_map_find_value(DB.colormap, irandom_range(g_black, g_white));
+    rand_color = ds_map_find_value(DB.colormap, irandom_range(g_dark, g_white));
     singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.02);
     singleton_obj.bgcolor_updated = false;
 }

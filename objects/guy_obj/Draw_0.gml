@@ -7,7 +7,7 @@ if(!blink_off)
     //glow_alpha = 0.2 + 0.4*dmg_ratio;
     //alpha = 0.2 + 0.7*dmg_ratio;
     /*
-    if(my_color != g_black)
+    if(my_color != g_dark)
     {
         draw_sprite_ext(sprite_index,image_index,x,y-size_pulse*24-2,facing*(1+size_pulse)*1.3,(1+size_pulse)*1.025,0,merge_color(c_white,self.tint,0.25),glow_alpha);
     }
@@ -59,7 +59,7 @@ if(self.has_haste)
                 
                 step_alpha_ratio = 1 - i/max_step;
                     
-                if(old_tint != ds_map_find_value(DB.colormap,g_black))
+                if(old_tint != ds_map_find_value(DB.colormap,g_dark))
                 {
                     //draw_sprite_ext(old_spri,old_imgi, old_x,old_y-2,old_facing*1.3,(1+size_pulse)*1.025,0,merge_color(c_white,old_tint,0.25),step_alpha_ratio*glow_alpha);
                 }

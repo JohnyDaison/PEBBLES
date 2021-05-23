@@ -33,7 +33,7 @@ if(energy < spawn_cost && !spawning && !standby && my_block.my_color != g_octari
     
     if(my_block.energy == 0)
     {
-        my_block.my_next_color = g_black;
+        my_block.my_next_color = g_dark;
     }
 }
 
@@ -79,7 +79,7 @@ if(energy >= spawn_cost && !spawning)
         
         energy = 0;
         spawn_tint = tint;
-        my_color = g_black;
+        my_color = g_dark;
         tint_updated = false;
         
         

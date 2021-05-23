@@ -8,7 +8,7 @@ part_system_draw_order(system, true);
 pt = part_type_create();
 part_type_alpha2(pt,0.2,0.8);
 
-part_type_color1(pt, DB.colormap[? g_azure]);
+part_type_color1(pt, DB.colormap[? g_cyan]);
 part_type_shape (pt,pt_shape_ring);
 part_type_size(pt,0.50,0.50,0.05,0);
 part_type_life(pt,8,8);
@@ -19,7 +19,7 @@ em = part_emitter_create(system);
 */
 
 my_guy=noone;
-tint = DB.colormap[? g_azure];
+tint = DB.colormap[? g_cyan];
 image_speed = 0.03;
 
 /* */

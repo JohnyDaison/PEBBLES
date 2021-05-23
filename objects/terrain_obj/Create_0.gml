@@ -47,7 +47,7 @@ bounce_speedchange_ratio = 2;
 bounce_speedenergy_ratio = 0.1;
 // ^
 
-black_tint = DB.colormap[? g_black];
+black_tint = DB.colormap[? g_dark];
 
 radius = 15;
 scale_amount = 0;

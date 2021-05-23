@@ -21,7 +21,7 @@ ambient_light = alpha/4;
 
 // COLOR UPDATE
 new_col = my_projectors[? 1].my_color & my_projectors[? 2].my_color;
-if(new_col <= g_black || new_col >= g_octarine)
+if(new_col <= g_dark || new_col >= g_octarine)
 {
     instance_destroy();   
     exit;

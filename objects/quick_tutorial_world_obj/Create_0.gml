@@ -42,14 +42,14 @@ ds_list_add(place.level_configs_list, "movement", "full_colors", "blast_only", "
 place = add_place_in_room(room_quick_tut_advanced_combat, "Space ship old", 0,0, 6784,3840, 384);
 place.description = "Vortex attack, Shield, Combat trial, Abilities - Invisibility, Blink";
 place.controller = quick_tut_advanced_combat_place_controller_obj;
-ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "inventory", "black_orb");
+ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "inventory", "dark_orb");
 place.forced_modifiers[? "cannons"] = false;
 */
 
 place = add_place_in_room(room_quick_tut_advanced_combat_new, "5 Space ship", 0,0, 9600,4800, 384);
 place.description = "Vortex attack, Shield, Crystal, Shards, Plasma Cannon, PvP Combat";
 place.controller = quick_tut_advanced_combat_new_place_controller_obj;
-ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "inventory", "black_orb");
+ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "inventory", "dark_orb");
 place.forced_modifiers[? "base_crystals"] = true;
 place.forced_modifiers[? "cannons"] = true;
 
@@ -58,7 +58,7 @@ place = add_place_in_room(room_quick_tut_abilities, "6 Arcane library", 0,0, 537
 place.description = "Heal, Invisiblity, Berserk, Haste, Ubershield, Rewind, Blink, Teleport";
 place.controller = quick_tut_abilities_place_controller_obj;
 ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "shield", 
-                                      "inventory", "black_orb", "just_2orbs_start", "no_abilities");
+                                      "inventory", "dark_orb", "just_2orbs_start", "no_abilities");
 place.forced_modifiers[? "color_orbs_energy_lock" ] = true;
 place.forced_modifiers[? "base_crystals"] = true;
 place.forced_modifiers[? "abilities"] = true;

@@ -98,7 +98,7 @@ if(instance_exists(my_block))
             dir = potential_drain_rods[| i];   
             is_nearest = false; 
             
-            if(dir != -1 && (target.my_color & block_color || block_color == g_black))
+            if(dir != -1 && (target.my_color & block_color || block_color == g_dark))
             {   
                 xx = 0;
                 yy = 0;
@@ -141,8 +141,8 @@ if(instance_exists(my_block))
         
         if(has_target)
         {
-            // DECIDE ON NEW COLOR IF BLACK
-            if(block_color == g_black)
+            // DECIDE ON NEW COLOR IF DARK
+            if(block_color == g_dark)
             {
                 nearest = noone;
                 
@@ -166,15 +166,15 @@ if(instance_exists(my_block))
                     }
                 }
                 
-                // IF THAT FAILED JUST TAKE THE FIRST NON-BLACK COLOR
-                if(block_color == g_black)
+                // IF THAT FAILED JUST TAKE THE FIRST NON-DARK COLOR
+                if(block_color == g_dark)
                 {
                     for(i = 0; i < count; i++)
                     {
                         target = potential_targets[| i];
                         dir = potential_drain_rods[| i];   
                         
-                        if(dir != -1 && target.my_color > g_black)
+                        if(dir != -1 && target.my_color > g_dark)
                         {
                             block_color = target.my_color;
                             break;
@@ -256,4 +256,3 @@ else
         instance_destroy();
     }
 }
-

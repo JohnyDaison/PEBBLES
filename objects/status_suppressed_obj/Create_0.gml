@@ -2,7 +2,7 @@ event_inherited();
 
 name = "Suppressed";
 codename = "suppressed";
-color = g_purple;
+color = g_magenta;
 
 icon = status_suppressed_icon;
 particle_system = suppressed_vices_obj;
@@ -12,4 +12,3 @@ max_charge = 300;
 max_duration = 0;
 signal_ratio = 700;
 damage_ratio = 700;
-

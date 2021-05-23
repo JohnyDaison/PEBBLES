@@ -1,6 +1,6 @@
 event_inherited();
 
-my_color = g_black;
+my_color = g_dark;
 
 hp = 0.25;
 base_energy = 0.7;
@@ -66,4 +66,3 @@ self.direct_light = self.direct_light_coef;
 self.light_yoffset = -1.5;
 
 name = "Slime";
-

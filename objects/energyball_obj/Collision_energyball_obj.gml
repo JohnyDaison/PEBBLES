@@ -26,7 +26,7 @@ if(holographic == other.holographic)
         
     if(object_index != slime_ball_obj)
     {
-        if(my_color > g_black && my_color < g_white && (other.my_color + my_color) == g_white)
+        if(my_color > g_dark && my_color < g_white && (other.my_color + my_color) == g_white)
         {
             if(instance_exists(inv_col_group))
             {
@@ -61,4 +61,3 @@ if(holographic == other.holographic)
         }
     }
 }
-

@@ -6,7 +6,7 @@ function speech_init() {
     speech_interrupted = false;
     speech_popup = noone;
     speech_tick = DB.npc_speech_tick;
-    speech_color = g_azure; //g_white;
+    speech_color = g_cyan; //g_white;
     speech_volume = 0.5;
     //speech_pitch = 1;
     label_speaking_alpha = 0.2 * label_alpha;

@@ -7,7 +7,7 @@ if(instance_exists(slot))
     }
 }
 
-if(!fired && my_color != g_black)
+if(!fired && my_color != g_dark)
 {
     var dir, dir_step = 360/self.shrapnel_count, xx, yy, inst;
     
@@ -69,4 +69,3 @@ if(fired)
 {
     instance_destroy();
 }
-

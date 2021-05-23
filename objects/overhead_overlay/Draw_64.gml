@@ -94,7 +94,7 @@ if(instance_exists(my_guy))
         {
             if(my_guy.channeling)
             {
-                abi_color = g_black;    
+                abi_color = g_dark;    
             }
             else
             {
@@ -123,7 +123,7 @@ if(instance_exists(my_guy))
         
             // COOLDOWN
             
-            if(abi_color < g_black || my_guy.abi_cooldown_length[? abi_color] <= 0)
+            if(abi_color < g_dark || my_guy.abi_cooldown_length[? abi_color] <= 0)
             {
                 abi_left = 0;
             }
@@ -253,7 +253,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     {
         status_color = status_order[? i];
         status_tint = DB.colormap[? status_color];
-        if(status_color == g_black)
+        if(status_color == g_dark)
         {
             status_tint = DB.colormap[? g_white];
         }
@@ -339,7 +339,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
                 bar_color = group[? ii];
                 abi_level = get_level(my_guy, DB.abimap[? bar_color]);
             
-                if(!mod_get_state("black_color") && bar_color == g_black)
+                if(!mod_get_state("dark_color") && bar_color == g_dark)
                     continue;
                     
                 // HAS ABI COLOR? 
@@ -359,7 +359,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
                     else if(my_guy.abi_cooldown[? bar_color] > 0)
                     {
                         bar_tint = DB.colormap[? bar_color];  
-                        //bar_tint = merge_color(g_black, DB.colormap[? bar_color], 0.5);
+                        //bar_tint = merge_color(g_dark, DB.colormap[? bar_color], 0.5);
                         bar_height = (1-(my_guy.abi_cooldown[? bar_color] / my_guy.abi_cooldown_length[? bar_color]))*abi_panel_height;
                         //bar_height = sqr(1-(my_guy.abi_cooldown[? bar_color] / my_guy.abi_cooldown_length[? bar_color]))*abi_panel_height;
                         outline_alpha = 0.25;
@@ -510,7 +510,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
                     var tint = DB.colormap[? col];
                     var list = belt_list[? col];
                     var y_offset = belt_size*orb_belt_width;
-                    if (col == g_black) 
+                    if (col == g_dark) 
                     {
                         y_offset = orb_belt_width;
                     }

@@ -1,5 +1,5 @@
 function abi_flashback_step() {
-    var abi_color = g_black;
+    var abi_color = g_dark;
     for(i=0;i<self.time_rate && ds_list_size(self.flashback_queue) > 1;i+=1)
     {
         ds_list_delete(self.flashback_queue,ds_list_size(self.flashback_queue)-1);

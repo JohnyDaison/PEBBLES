@@ -1,7 +1,7 @@
 event_inherited();
 
 name = "Ubershield";
-color = g_purple;
+color = g_magenta;
 icon = status_ubershield_icon;
 //particle_system = ;
 buff = 1; //{-1;0;1}

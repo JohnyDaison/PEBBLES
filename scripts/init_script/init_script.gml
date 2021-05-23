@@ -42,14 +42,14 @@ function init_script() {
     // COLOR TO EFFECT MAP
     DB.color_effects = ds_map_create();
 
-    //DB.color_effects[? g_black] = noone;
+    //DB.color_effects[? g_dark] = noone;
     DB.color_effects[? g_red] = DB.status_effects[? "burn"];
     DB.color_effects[? g_green] = DB.status_effects[? "slow"];
     DB.color_effects[? g_blue] = DB.status_effects[? "frozen"];
     DB.color_effects[? g_yellow] = DB.status_effects[? "confusion"];
-    DB.color_effects[? g_azure] = DB.status_effects[? "bounce"];
-    //DB.color_effects[? g_purple] = DB.status_effects[? "weakness"];
-    DB.color_effects[? g_purple] = DB.status_effects[? "suppressed"];
+    DB.color_effects[? g_cyan] = DB.status_effects[? "bounce"];
+    //DB.color_effects[? g_magenta] = DB.status_effects[? "weakness"];
+    DB.color_effects[? g_magenta] = DB.status_effects[? "suppressed"];
     DB.color_effects[? g_white] = DB.status_effects[? "heavy_shots"];
     DB.color_effects[? g_octarine] = DB.status_effects[? "shield_down"];
 

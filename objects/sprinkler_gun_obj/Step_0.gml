@@ -17,7 +17,7 @@ if(ready_to_fire && instance_exists(my_guy.attack_target))
         
         if(!instance_exists(blocker) || blocker.my_player != my_player)
         {
-            var inst = create_energy_ball(id, "small_bolt", irandom_range(g_red,g_azure), 0.34);
+            var inst = create_energy_ball(id, "small_bolt", irandom_range(g_red,g_cyan), 0.34);
             inst.x += shot_x;
             inst.y += shot_y;
             

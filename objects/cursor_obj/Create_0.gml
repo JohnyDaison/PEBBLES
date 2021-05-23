@@ -6,7 +6,7 @@ log = "";
 show_log = false;
 showed_logs = 0;
 
-self.my_color = g_black;
+self.my_color = g_dark;
 self.tint_updated = false;
 self.tint = c_dkgray;
 self.new_tint = self.tint;
@@ -31,4 +31,3 @@ image_speed = 0;
 tooltip = "";
 tooltip_color = DB.colormap[? g_yellow];
 tooltip_bg_color = make_color_rgb(16, 16, 16);
-

@@ -7,7 +7,7 @@ if(enabled)
         if(instance_exists(paired_projector))
         {
             var new_col = my_color & paired_projector.my_color;
-            if(new_col > g_black && new_col < g_octarine)
+            if(new_col > g_dark && new_col < g_octarine)
             {
                 my_field = instance_create(mean(x, paired_projector.x), mean(y, paired_projector.y), filter_field_obj);
                 paired_projector.my_field = my_field;
@@ -33,4 +33,3 @@ if(enabled)
         alarm[2] = 1;
     }
 }
-

@@ -38,7 +38,7 @@ if(instance_exists(my_guy))
     
     // ORB BELTS
     orb_panel_width = 0;
-    for(col=g_black; col<=g_blue; col++)
+    for(col=g_dark; col<=g_blue; col++)
     {
         if(col == g_yellow) continue;
 
@@ -111,5 +111,3 @@ if(abilities_blink_time > 0)
     
     abilities_blink_time--;
 }
-
-

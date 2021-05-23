@@ -1,3 +1,3 @@
 event_inherited();
 
-my_color = g_purple;
+my_color = g_magenta;

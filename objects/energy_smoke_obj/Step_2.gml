@@ -28,7 +28,7 @@ if(speed < 0.5)
         /*
         if(ter.object_index == wall_obj && singleton_obj.step_count mod 5 == 0)
         {        
-            other.my_next_color = irandom_range(g_red, g_azure);
+            other.my_next_color = irandom_range(g_red, g_cyan);
         }
         */
     }

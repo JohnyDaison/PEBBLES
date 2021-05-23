@@ -6,8 +6,8 @@ function guy_drop_reserve_orbs() {
         var xx = lengthdir_x(radius+32, dir);
         var yy = lengthdir_y(radius+32, dir);
             
-        var orb_color = g_black;
-        while(orb_color == g_black)
+        var orb_color = g_dark;
+        while(orb_color == g_dark)
         {
             orb_color = irandom_range(g_red, g_blue);
             if(orb_color == g_yellow)
@@ -16,7 +16,7 @@ function guy_drop_reserve_orbs() {
             if(orb_reserve[? orb_color] >= 1)
                 orb_reserve[? orb_color]--;
             else
-                orb_color = g_black;
+                orb_color = g_dark;
         }
         i = instance_create(x+xx, y+yy, color_orb_obj);
         i.direction = dir;

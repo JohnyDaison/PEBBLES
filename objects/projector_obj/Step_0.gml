@@ -4,17 +4,17 @@ if(instance_exists(my_block))
     var stabilised = tint_updated || my_color == g_octarine;
     
     // COPY BLOCK COLOR IF STABILISED
-    if((my_color > g_black || stabilised) 
-        && my_color != block_color && my_block.tint_updated && block_color > g_black)
+    if((my_color > g_dark || stabilised) 
+        && my_color != block_color && my_block.tint_updated && block_color > g_dark)
     {
         my_color = block_color;
         stabilised = false;
     }
     
-    if(my_color == g_black && stabilised)
+    if(my_color == g_dark && stabilised)
     {    
         // BLINK WITH STORED COLOR
-        if(energy > 0 && my_last_color > g_black)
+        if(energy > 0 && my_last_color > g_dark)
         {
             my_color = my_last_color;
             stabilised = false;
@@ -22,7 +22,7 @@ if(instance_exists(my_block))
     }
     
     // DRAIN BLOCK
-    if(my_color > g_black)
+    if(my_color > g_dark)
     {
         if(my_block.energy >= energy_drain_step && energy <= max_energy+energy_drain_step)
         {
@@ -35,19 +35,19 @@ if(instance_exists(my_block))
             }
             if(my_block.energy < energy_drain_step)
             {
-                my_block.my_next_color = g_black;
+                my_block.my_next_color = g_dark;
             }
         }
     }
         
     // READY
-    if(my_color > g_black && stabilised)
+    if(my_color > g_dark && stabilised)
     {
         // BLINK OFF IF LOW ENERGY
-        if (!powered && energy < activation_threshold && block_color == g_black)
+        if (!powered && energy < activation_threshold && block_color == g_dark)
         {
             my_last_color = my_color;
-            my_color = g_black;
+            my_color = g_dark;
             stabilised = false;
         }
         
@@ -66,7 +66,7 @@ if(instance_exists(my_block))
             {
                 powered = false;
                 my_last_color = my_color;
-                my_color = g_black;
+                my_color = g_dark;
                 stabilised = false;
             }
         }   
@@ -84,4 +84,3 @@ else
         instance_destroy();
     }
 }
-

@@ -115,7 +115,7 @@ else
                 {
                     if(!object_is_child(id, guy_obj))
                     {
-                        if(my_color != g_black)
+                        if(my_color != g_dark)
                         {
                             if(object_is_child(id, wall_obj))
                             {
@@ -159,7 +159,7 @@ with(wall_obj)
             energy = max(0, energy - 0.01);
             if(energy == 0)
             {
-                my_next_color = g_black;   
+                my_next_color = g_dark;   
             }
         }
     }

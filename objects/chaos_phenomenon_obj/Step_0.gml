@@ -2,7 +2,7 @@ if(singleton_obj.step_count > 5 && singleton_obj.step_count % 10 == 5) {
     ds_list_clear(block_list);
 
     with(wall_obj) {
-        if(my_color > g_black && my_color < g_octarine) {
+        if(my_color > g_dark && my_color < g_octarine) {
             ds_list_add(other.block_list, id);
         }
     }
