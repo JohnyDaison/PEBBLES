@@ -149,7 +149,7 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_battle_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
-    gm[? "start_place_room"] = classic_arena;         //testroom;
+    gm[? "start_place_room"] = classic_arena;
 
     limits = gm[? "limits"];
     limits[? "score"] = 400;

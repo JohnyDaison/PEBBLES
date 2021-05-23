@@ -91,7 +91,7 @@ if(read_terrain)
     }
     
     // GRID POSITION
-    //if(room == alpinus_sandbox || room == tutorial || room == tutorial_backup || room == face_arena || room == testroom)
+    //if(room == alpinus_sandbox || room == tutorial || room == tutorial_backup || room == face_arena || room == mayhemburger_arena)
     if(room != chase)
     {
         cur_grid_x = floor((x - singleton_obj.grid_margin)/singleton_obj.grid_cell_size);

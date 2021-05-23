@@ -41,7 +41,7 @@ place.forced_modifiers[? "slime_mob_rain"] = false;
 place.forced_modifiers[? "lightning_strikes"] = false;
 
 
-place = add_place_in_room(testroom, "Mayhemburger", 0,0, 4896,2848, 0);
+place = add_place_in_room(mayhemburger_arena, "Mayhemburger", 0,0, 4896,2848, 0);
 place.description = "Medium size complex arena with a lot of Turrets, Spawners and other elements.";
 place.controller = autogenerate_place_controller_obj;
 
