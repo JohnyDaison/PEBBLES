@@ -19,11 +19,11 @@ draw_own_hp = true;
 own_hp_blink_time = 0;
 own_hp_blink_rate = 10;
 
-bg_color = c_black; //merge_colour(DB.colormap[? g_red], DB.colormap[? g_magenta], 0.5);;
+bg_color = c_black; //merge_colour(DB.colormap[? g_red], DB.colormap[? g_magenta], 0.5);
 bar_bg_color = c_gray;
 hp_bar_color = DB.colormap[? g_green]; //merge_colour(DB.colormap[? g_green], DB.colormap[? g_cyan], 0.5);
 handicap_color = DB.colormap[? g_magenta];
-basehp_bar_color = merge_colour(DB.colormap[? g_blue], DB.colormap[? g_cyan], 0.5);;
+basehp_bar_color = merge_colour(DB.colormap[? g_blue], DB.colormap[? g_cyan], 0.5);
 border_width = 3;
 label_color = c_yellow;
 score_value = 0;

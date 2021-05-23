@@ -5,7 +5,7 @@ sprite = round_button_bg_spr;
 fg_sprite = round_button_highlight_spr;
 
 main_tint = DB.colormap[? g_dark];
-fg_tint = DB.colormap[? g_dark];;
+fg_tint = DB.colormap[? g_dark];
 
 //main_label = "Cyan";
 sub_label = "REWIND";
