@@ -587,29 +587,31 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             var item = noone; 
             switch(cursor_obj.my_color)
             {
-                case 0: 
+                case g_dark: 
                     item = choose(health_obj, emp_grenade_obj, spraycan_item_obj,
-                                crystal_obj, orb_battery_obj, tp_rush_obj);
+                                crystal_obj, orb_battery_obj, tp_rush_obj, overcharge_obj);
                     break;
-                case 1:
+                case g_red:
+                    item = overcharge_obj;
+                    break;
+                case g_green:
                     item = health_obj;
                     break;
-                case 2:
-                    item = emp_grenade_obj;
-                    break;
-                case 3:
+                case g_yellow:
                     item = orb_battery_obj;
                     break;
-                case 4:
-                    item = crystal_obj;
-                    break;
-                case 5:
+                case g_blue:
                     item = tp_rush_obj;
                     break;
-                case 6:
+                case g_magenta:
+                    item = emp_grenade_obj;
+                    break;
+                case g_cyan:
                     item = spraycan_item_obj;
                     break;
-                
+                case g_white:
+                    item = crystal_obj;
+                    break;
             }
             if(item != noone)
             {
