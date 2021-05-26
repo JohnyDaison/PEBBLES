@@ -124,7 +124,7 @@ function init_console_DB() {
 
     ds_list_add(test, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 
-    ds_list_add(test, "killall", "spawn", "test", "getvalue");
+    ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph");
     console_modes[? "test"] = test;
 
 
@@ -132,9 +132,9 @@ function init_console_DB() {
     var debug = ds_list_create();
     ds_list_copy(debug, test);
 
-    ds_list_add(debug, "replace", "transform", "chunks", "chunksoff", "findholders", "listevents", "navgraph");
+    ds_list_add(debug, "replace", "transform", "chunks", "chunksoff", "findholders", "listevents");
 
-    ds_list_add(debug, "count", "grouplist", "instlist", "instinfo", "listds", "setnumber", "objname", "spritename");
+    ds_list_add(debug, "grouplist", "instlist", "instinfo", "listds", "setnumber", "objname", "spritename");
     ds_list_add(debug, "dumpinst", "dumplist", "dumpmap");
 
     ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
