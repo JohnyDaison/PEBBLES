@@ -149,11 +149,11 @@ if(overcharge > 0 && charge > max_charge && is_shielded(my_guy, "uber"))
             last_attacker_update(shield.id, "body", "push");
             with(shield)
             {
-                apply_force(shield,true);    
+                apply_force(shield,true);
             }
             speed *= 0.9;
             
-            if(object_is_ancestor(id, guy_obj))
+            if(object_is_child(id, guy_obj))
             {
                 spec_effect_to_guy(0.1, "signal");
                 locked = true;

@@ -1,7 +1,7 @@
 /// @description is_shielded(who, [modifier])
 /// @function is_shielded
 /// @param who
-/// @param  [modifier]
+/// @param [modifier]
 function is_shielded() {
     var who = argument[0];
     var modifier = "";
@@ -16,14 +16,9 @@ function is_shielded() {
     {
         if(modifier == "uber")
         {
-            //TODO: This should be decided from status effect, not abi script
             if(object_is_ancestor(who.object_index, guy_obj))
             {
-                ret = (who.abi_script[? g_magenta] != empty_script);
-            }
-            else
-            {
-                ret = (who.my_shield.charge > who.my_shield.max_charge);
+                ret = (who.status_left[? "ubershield"] > 0);
             }
         }
         else
