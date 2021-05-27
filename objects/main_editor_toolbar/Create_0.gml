@@ -5,8 +5,8 @@ self.text = "";
 
 self.font = label_font;
 
-joypad1_checkbox = noone;
-joypad2_checkbox = noone;
+gamepad1_checkbox = noone;
+gamepad2_checkbox = noone;
 placename_input = noone;
 placesize_label = noone;
 

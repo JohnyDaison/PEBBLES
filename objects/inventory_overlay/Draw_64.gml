@@ -26,7 +26,7 @@ if(inv_size != -1)
             
             draw_set_alpha(bg_alpha);
             
-            if(my_guy.control_method == keyboard || my_guy.control_method == joystick || my_guy.control_method == gamepad)
+            if(my_guy.control_method == keyboard || my_guy.control_method == gamepad)
             {
                 // OVERLAY POSITION
                 if(my_guy.control_method == keyboard)
@@ -37,7 +37,7 @@ if(inv_size != -1)
                     x = my_camera.border_width + slot_dist + self.view_x_offset;
                     y = my_camera.border_width + self.view_y_offset + 32; // +32 because of time window
                 }
-                if(my_guy.control_method == joystick || my_guy.control_method == gamepad)
+                if(my_guy.control_method == gamepad)
                 {
                     width = slot_size + 2*slot_range;
                     height = slot_size + 2*slot_range;
@@ -68,7 +68,7 @@ if(inv_size != -1)
                         yy = name_height + slot_size / 2;
                         name_adjust = 1;
                     }
-                    if(my_guy.control_method == joystick || my_guy.control_method == gamepad)
+                    if(my_guy.control_method == gamepad)
                     {
                         xx = lengthdir_x(slot_range, i*90);
                         yy = lengthdir_y(slot_range, i*90);
@@ -159,7 +159,7 @@ if(inv_size != -1)
                         {
                             var label_y = final_y + (slot_size+label_height/2) * ((i mod 2) -0.5);
                         }
-                        if(my_guy.control_method == joystick || my_guy.control_method == gamepad)
+                        if(my_guy.control_method == gamepad)
                         {
                             name_adjust = 0;
                             if(i==1)

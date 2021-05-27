@@ -98,17 +98,6 @@ if(visible)
     else
     {
         self.bg_color = self.disabled_color;
-        /*
-        if(joystick_id == 1)
-        {   
-            self.text = get_const_name(joystick,self.joy)+" | "+string(joystick1_obj.states[# self.joy,held]);
-        }
-    
-        if(joystick_id == 2)
-        {
-            self.text = get_const_name(joystick,self.joy)+" | "+string(joystick2_obj.states[# self.joy,held]);
-        }
-        */
         self.text = get_const_name(gamepad,self.control_id);
         self.depressed = false;
         self.active = false;

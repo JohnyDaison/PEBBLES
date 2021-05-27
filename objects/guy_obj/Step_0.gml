@@ -178,22 +178,6 @@ if(!self.controls_updated && !is_npc)
             ds_map_copy(self.keys,keyboard2_obj.binds);
             break;              
         }
-        /*
-        case joypad1:
-        {
-            self.control_method = joystick;
-            control_obj = joystick1_obj.id;
-            ds_map_copy(self.joys,joystick1_obj.binds);
-            break;
-        }
-        case joypad2:
-        {
-            self.control_method = joystick;
-            control_obj = joystick2_obj.id;
-            ds_map_copy(self.joys,joystick2_obj.binds);
-            break;
-        }
-        */
         case gamepad:
         {
             self.control_method = gamepad;

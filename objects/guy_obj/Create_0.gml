@@ -437,11 +437,10 @@ self.quiet_run = false;
 // END INITIALIZATION
 // STATE VARIABLES
 
-        
+
 // CONTROLS
 
 self.keys = ds_map_create();
-//self.joys = ds_map_create();
 self.control_method = cpu_control_set;
 self.control_set = no_control;       
 

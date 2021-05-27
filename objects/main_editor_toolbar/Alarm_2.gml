@@ -210,30 +210,9 @@ ii.tooltip = "Minimap";
 
 eloffset_x += 32 + spacing;
 
-/*
-eloffset_x += 3*32 + 3*spacing + 20;
-
-ii = gui_add_checkbox(0,0);
-ii.visible = true;
-joypad1_checkbox = ii;
-
-eloffset_x += 54 + spacing;
-
-ii = gui_add_label(0,0,"Joypads");
-ii.width = 80;
-ii.height = 32;
-ii.visible = true;
-
-eloffset_x += 54 + spacing;
-
-ii = gui_add_checkbox(0,0);
-ii.visible = true;
-joypad2_checkbox = ii;
-*/
-
 eloffset_x += 4*(32 + spacing) + 24;
 
-ii = gui_add_label(0,0,"Joypads");
+ii = gui_add_label(0,0,"Gamepads");
 ii.width = 128 + 3*spacing;
 ii.height = 32;
 ii.visible = true;
@@ -243,24 +222,18 @@ eloffset_x -= 32 + spacing + 20;
 ii = gui_add_checkbox(0,0);
 ii.visible = true;
 ii.depth -= 2;
-joypad1_checkbox = ii;
+gamepad1_checkbox = ii;
 
 eloffset_x += 3*(32 + spacing);
 
 ii = gui_add_checkbox(0,0);
 ii.visible = true;
 ii.depth -= 2;
-joypad2_checkbox = ii;
+gamepad2_checkbox = ii;
 
 height = eloffset_y + 16 + spacing;
-/*
-if(place_obj.name != "")
-{*/
-    placename_input.text = place_obj.name;    
-    placename_input.was_active = true;
-//}
+
+placename_input.text = place_obj.name;    
+placename_input.was_active = true;
 
 placesize_label.text = string(place_obj.width/32)+"x"+string(place_obj.height/32);
-
-/* */
-/*  */

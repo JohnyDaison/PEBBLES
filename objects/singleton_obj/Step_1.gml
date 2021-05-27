@@ -169,13 +169,6 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         }
     }
 
-
-    // CTRL + J
-    if(keyboard_check(vk_control) && keyboard_check_pressed(ord("J")))
-    {
-        self.show_joystick_state = !self.show_joystick_state; 
-    }
-
     // CTRL + M
     if(keyboard_check(vk_control) && keyboard_check_pressed(ord("M")))
     {
@@ -823,7 +816,6 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
 
 toggle_frame(fps_overlay, self.show_fps);
 //toggle_frame(key_overlay, self.show_keyboard_state);
-toggle_frame(joy_overlay, self.show_joystick_state);
 toggle_frame(cmatrix_overlay, self.show_colorimatrix);
 toggle_frame(terrain_overlay, self.show_terrain);
 toggle_frame(chunkgrid_overlay, self.show_chunkgrid);
@@ -834,12 +826,10 @@ if(self.show_console != "hide")
 }
 
 
-//show_debug_message("JOY 2 time: "+ string(round((date_current_datetime()-measure_start)*24*360000000)));
-
 // GUI CONTROLS
 // TODO: MAKE THIS WORK AND WORK WITH GAMEPADS
 
-if(last_gui_device == keyboard) //  || last_gui_device == joystick
+if(last_gui_device == keyboard)
 {
     last_gui_device = -1;
 }
@@ -856,13 +846,6 @@ if(keyboard_check(vk_up) || keyboard_check(ord("W")))
     gui_dirs[up] = true;
     last_gui_device = keyboard; 
 }
-/*
-if(joystick1_obj.states[# joy_up,held] || joystick2_obj.states[# joy_up,held])
-{
-    gui_dirs[up] = true;
-    last_gui_device = joystick;
-}
-*/
 
 // DOWN
 if(keyboard_check(vk_down)  || keyboard_check(ord("S")))
@@ -870,13 +853,6 @@ if(keyboard_check(vk_down)  || keyboard_check(ord("S")))
     gui_dirs[down] = true;
     last_gui_device = keyboard;
 }
-/*
-if(joystick1_obj.states[# joy_down,held] || joystick2_obj.states[# joy_down,held])
-{
-    gui_dirs[down] = true;
-    last_gui_device = joystick;
-}
-*/
 
 // LEFT 
 if( keyboard_check(vk_left) || keyboard_check(ord("A")))
@@ -884,13 +860,6 @@ if( keyboard_check(vk_left) || keyboard_check(ord("A")))
     gui_dirs[left] = true;
     last_gui_device = keyboard; 
 }
-/*
-if( joystick1_obj.states[# joy_left,held] || joystick2_obj.states[# joy_left,held])
-{
-    gui_dirs[left] = true;
-    last_gui_device = joystick;
-}
-*/
 
 // RIGHT
 if( keyboard_check(vk_right) || keyboard_check(ord("D")))
@@ -898,13 +867,7 @@ if( keyboard_check(vk_right) || keyboard_check(ord("D")))
     gui_dirs[right] = true;
     last_gui_device = keyboard;
 }
-/*
-if( joystick1_obj.states[# joy_right,held] || joystick2_obj.states[# joy_right,held])
-{
-    gui_dirs[right] = true;
-    last_gui_device = joystick;
-} 
-*/
+
 
 for(i=right; i<=down; i+=1)
 {
@@ -941,37 +904,19 @@ if(keyboard_check(vk_enter))
     gui_commands[confirm] = true;
     last_gui_device = keyboard;
 }
-/*
-if(joystick1_obj.states[# 1,held] || joystick2_obj.states[# 1,held])
-{
-    gui_commands[confirm] = true;
-    last_gui_device = joystick;
-}
-*/
+
 if(keyboard_check(vk_escape))
 {
     gui_commands[cancel] = true;
     last_gui_device = keyboard;
 }
-/*
-if(joystick1_obj.states[# 2,held] || joystick2_obj.states[# 2,held])
-{
-    gui_commands[cancel] = true;
-    last_gui_device = joystick;
-}
-*/
+
 if(keyboard_check(vk_alt))
 {
     gui_commands[stepmode] = true;
     last_gui_device = keyboard;
 }
-/*
-if(joystick1_obj.states[# joy_look,held] || joystick2_obj.states[# joy_look,held])
-{
-    gui_commands[stepmode] = true;
-    last_gui_device = joystick;
-}
-*/
+
 
 for(i=confirm; i<=stepmode; i+=1)
 {

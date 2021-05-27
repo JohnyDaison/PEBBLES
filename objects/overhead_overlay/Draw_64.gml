@@ -56,7 +56,7 @@ if(instance_exists(my_guy))
                 abi_x += 16;
             }
         }
-        if(my_guy.control_method == joystick || my_guy.control_method == gamepad)
+        if(my_guy.control_method == gamepad)
         {
             abi_y2 = my_camera.border_width + 112 + __view_get( e__VW.YPort, my_camera.view );
             abi_x = __view_get( e__VW.XPort, my_camera.view ) + 280;

@@ -24,8 +24,6 @@ if(false) // enable_focus_shift
     show_debug_message("--------------------");
     
     show_debug_message("GUI UP: "+string(DB.gui_controls[# up,held]));
-    show_debug_message("JOY1 UP: "+string(DB.joystick1[joy_up,held]));
-    show_debug_message("JOY1 BUTTON 1: "+string(DB.joystick1[1,held]));
     */
     
     for(cur_dir=0;cur_dir<4;cur_dir+=1)

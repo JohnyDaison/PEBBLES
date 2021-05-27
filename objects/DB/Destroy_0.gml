@@ -2,7 +2,6 @@
 speech_terms_destroy();
 
 ds_map_destroy(keynames);
-ds_map_destroy(joynames);
 ds_map_destroy(padnames);
 ds_list_destroy(control_set_names);
 ds_list_destroy(control_set_order);

@@ -1,7 +1,6 @@
 // OVERLAYS
 self.show_fps = false;
 self.show_keyboard_state = false;
-self.show_joystick_state = false;
 self.show_colorimatrix = false;
 self.show_terrain = false;
 self.show_chunkgrid = false;
@@ -20,8 +19,6 @@ self.toggleable_aim_mode = false;
 
 instance_create(0,0, keyboard1_obj);
 instance_create(0,0, keyboard2_obj);
-instance_create(0,0, joystick1_obj);
-instance_create(0,0, joystick2_obj);
 
 for(i=0;i<4;i++)
 {
@@ -45,11 +42,6 @@ terrain_checked = false;
 
 step_count = 0;
 
-/*
-joystick1_on = false;
-joystick2_on = false;
-alarm[1] = 1;
-*/
 last_gui_device = -1;
 
 

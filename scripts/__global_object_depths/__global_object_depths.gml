@@ -226,7 +226,6 @@ function __global_object_depths() {
     global.__objectDepths[218] = 0; // gui_button
     global.__objectDepths[219] = 0; // gui_checkbox
     global.__objectDepths[220] = 0; // gui_int_dial
-    global.__objectDepths[221] = 0; // gui_joybinder
     global.__objectDepths[222] = 0; // gui_keybinder
     global.__objectDepths[223] = 0; // gui_text_input
     global.__objectDepths[224] = 0; // gui_int_input
@@ -246,7 +245,6 @@ function __global_object_depths() {
     global.__objectDepths[238] = -1000; // cmatrix_overlay
     global.__objectDepths[239] = -1500; // fps_overlay
     global.__objectDepths[240] = -950; // battlefeed_overlay
-    global.__objectDepths[241] = -100; // joy_overlay
     global.__objectDepths[242] = -90; // key_overlay
     global.__objectDepths[243] = -10; // score_overlay
     global.__objectDepths[244] = -100; // terrain_overlay
@@ -283,12 +281,9 @@ function __global_object_depths() {
     global.__objectDepths[276] = 0; // popup_obj
     global.__objectDepths[277] = 0; // input_device_obj
     global.__objectDepths[278] = 0; // keyboard_input_obj
-    global.__objectDepths[279] = 0; // joystick_input_obj
     global.__objectDepths[280] = 0; // gamepad_input_obj
     global.__objectDepths[281] = 0; // keyboard1_obj
     global.__objectDepths[282] = 0; // keyboard2_obj
-    global.__objectDepths[283] = 0; // joystick1_obj
-    global.__objectDepths[284] = 0; // joystick2_obj
     global.__objectDepths[285] = 0; // gui_controls_obj
     global.__objectDepths[286] = -800; // main_light_obj
     global.__objectDepths[287] = 800; // background_light_obj
@@ -530,7 +525,6 @@ function __global_object_depths() {
     global.__objectNames[218] = "gui_button";
     global.__objectNames[219] = "gui_checkbox";
     global.__objectNames[220] = "gui_int_dial";
-    global.__objectNames[221] = "gui_joybinder";
     global.__objectNames[222] = "gui_keybinder";
     global.__objectNames[223] = "gui_text_input";
     global.__objectNames[224] = "gui_int_input";
@@ -550,7 +544,6 @@ function __global_object_depths() {
     global.__objectNames[238] = "cmatrix_overlay";
     global.__objectNames[239] = "fps_overlay";
     global.__objectNames[240] = "battlefeed_overlay";
-    global.__objectNames[241] = "joy_overlay";
     global.__objectNames[242] = "key_overlay";
     global.__objectNames[243] = "score_overlay";
     global.__objectNames[244] = "terrain_overlay";
@@ -587,12 +580,9 @@ function __global_object_depths() {
     global.__objectNames[276] = "popup_obj";
     global.__objectNames[277] = "input_device_obj";
     global.__objectNames[278] = "keyboard_input_obj";
-    global.__objectNames[279] = "joystick_input_obj";
     global.__objectNames[280] = "gamepad_input_obj";
     global.__objectNames[281] = "keyboard1_obj";
     global.__objectNames[282] = "keyboard2_obj";
-    global.__objectNames[283] = "joystick1_obj";
-    global.__objectNames[284] = "joystick2_obj";
     global.__objectNames[285] = "gui_controls_obj";
     global.__objectNames[286] = "main_light_obj";
     global.__objectNames[287] = "background_light_obj";

@@ -3,7 +3,6 @@ function create_debug_keys_list() {
     
     // anywhere
     ds_list_add(list, {input: "Ctrl + F", label: "Show FPS"});
-    ds_list_add(list, {input: "Ctrl + J", label: "Show Joystick state (old, ugly)"});
     ds_list_add(list, {input: "Ctrl + M", label: "Show Color matrix"});
     ds_list_add(list, {input: "Alt + M", label: "Show Minimap (disabled)"});
     ds_list_add(list, {input: "Ctrl + C", label: "Show Chunk grid"});
