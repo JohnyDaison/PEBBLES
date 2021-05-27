@@ -35,56 +35,11 @@ ii.depth -= 1;
 ii.rel_position = "absolute";
 ds_list_add(self.gui_content,ii);
 
-eloffset_x = window_axis;
-
 eloffset_y = y + menu_start;
-
-
-/*
-eloffset_x += 80;
-var i=1;
-
-but = gui_add_button(0,y+dist*i++, "Training", goto_tutorial);
-but.tooltip = "Learn how to play, incomplete";
-
-but = gui_add_button(0,y+dist*i++, "Sparring", goto_sparring);
-but.tooltip = "Fight a simple bot";
-
-but = gui_add_button(0,y+dist*i++, "Base defense Survival", goto_survival);
-but.tooltip = "Infinite waves of enemies";
-
-but = gui_add_button(0,y+dist*i++, "Rougelike", goto_roguelike);
-but.tooltip = "Experimental";
-
-but = gui_add_button(0,y+dist*i++, "1v1 Classic match (gamepads)", classic_match_joysticks);
-but.tooltip = "Old school arena, old school rules";
-
-but = gui_add_button(0,y+dist*i++, "1v1 Simple match (gamepads)", closed_quarters_joysticks);
-but.tooltip = "Small arena with constant supply of powerups";
-
-but = gui_add_button(0,y+dist*i++, "1v1 Tower Climb (gamepads)", goto_towerclimb);
-but.tooltip = "Race to the top, needs work";
-
-but = gui_add_button(0,y+dist*i++, "1v1 Battle (keyboard)", fast_match_start_keyboard);
-but.tooltip = "Full battle using keyboard";
-
-but = gui_add_button(0,y+dist*i++, "1v1 Battle (gamepads)", fast_match_start_joysticks);
-but.tooltip = "Full battle using controllers";
-
-but = gui_add_button(0,y+dist*i++, "4-P Battle (gamepads)", fast_4match_start);
-but.tooltip = "Experimental";
-
-but = gui_add_button(0,y+dist*i++, "Custom Match", goto_match_setup);
-
-gui_add_button(0,y+dist*i++, "Back", goto_mainmenu);
-
-eloffset_x -= 80;
-*/
 
 eloffset_x = x + 16;
 
 gamemode_pane = gui_add_pane(0,0, "Game mode");
-//gamemode_pane = gui_add_pane(-width-144, y + 32, "Game mode");
 
 with(gamemode_pane)
 {
@@ -327,33 +282,6 @@ with(gamemode_pane)
         eloffset_x = mods_content_x;
         eloffset_y += mod_dist;
     }
-    
-    /*
-    for(i=0; i<count; i++)
-    {
-        gmmod_id = DB.gamemode_mod_list[| i];
-        gmmod = DB.gamemode_mods[? gmmod_id];
-    
-        if(gmmod[? "public"])
-        {
-            ii = gui_add_mod_checkbox(0, 0, gmmod_id, modifier_chb_size);
-
-            ii.user_clicked_script = mod_chb_user_click_script;
-            ii.onchange_script = play_summary_update;
-
-            gmmod_controls[? gmmod_id] = ii;
-
-
-            eloffset_x += mod_dist;
-
-            if(eloffset_x > (x + mods_width - mod_dist + hor_spacing))
-            {
-                eloffset_x = mods_content_x;
-                eloffset_y += mod_dist;
-            }
-        }
-    }
-    */
     
     // destroy gmmod_controls_types
     count = ds_list_size(DB.gamemode_mod_type_list);

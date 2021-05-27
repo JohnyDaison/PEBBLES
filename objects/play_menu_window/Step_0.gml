@@ -39,27 +39,6 @@ for(pl_num = 1; pl_num <= players_pane.player_pane_count; pl_num++)
     }
 }
 
-/*
-if(instance_exists(player_pane1.flag_input) && instance_exists(player_pane2.flag_input)
-&& instance_exists(player_pane2.flag_input.list_picker.scroll_list)
-&& player_pane1.flag_input.value != -1 && player_pane1.flag_input.list_picker.scroll_list.item_count > 1)
-{
-    var tries_left = 2;
-    while(player_pane1.flag_input.value == player_pane2.flag_input.value && tries_left > 0)
-    {
-        if(!player_pane1.flag_input.list_picker.visible && !player_pane2.flag_input.list_picker.visible)
-        {
-            player_pane2.flag_input.list_picker.scroll_list.cur_item = 
-                irandom(player_pane2.flag_input.list_picker.scroll_list.item_count - 1);
-                
-            gui_list_picker_update_script(player_pane2.flag_input.list_picker);
-        }
-        
-        tries_left--;
-    }
-}
-*/
-
 var but1 = players_pane.team1_button;
 var but2 = players_pane.team2_button;
 
@@ -146,44 +125,3 @@ for(pl_num = 1; pl_num <= players_pane.player_pane_count; pl_num++)
         }
     }
 }
-
-/*
-with(players_pane)
-{
-    // QUICK FLAGS
-    if(instance_exists(flag1_input))
-    {
-        if(flag1_input.value == flag2_input.value)
-        {
-            if(!flag1_input.list_picker.visible && !flag2_input.list_picker.visible)
-            {
-                flag2_input.list_picker.scroll_list.cur_item = 
-                    irandom(flag2_input.list_picker.scroll_list.item_count - 1);
-            }
-        }
-    }
-    
-    if(instance_exists(flag1_input))
-    {
-        if(flag1_input.value == flag2_input.value)
-        {
-            if(!flag1_input.list_picker.visible && !flag2_input.list_picker.visible)
-            {
-                flag2_input.list_picker.scroll_list.cur_item = 
-                    irandom(flag2_input.list_picker.scroll_list.item_count - 1);
-            }
-        }
-    }
-
-    // CONTROLS
-    if(instance_exists(p1cpudiff_input))
-    {
-        p1cpudiff_input.enabled = (p1control_dropdown.value == cpu_control_set);
-    }
-
-    if(instance_exists(p2cpudiff_input))
-    {
-        p2cpudiff_input.enabled = (p2control_dropdown.value == cpu_control_set);
-    }
-}
-*/

@@ -1,1 +1,0 @@
-add_frame(match_setup_window);
