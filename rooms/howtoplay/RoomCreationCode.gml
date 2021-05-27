@@ -1,1 +1,0 @@
-add_frame(howtoplay_window);
