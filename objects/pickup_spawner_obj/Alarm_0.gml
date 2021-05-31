@@ -9,21 +9,6 @@ else
     y = random(room_height - 2*singleton_obj.grid_margin) + singleton_obj.grid_margin;
 }
 
-/*
-slots_needed = 0;
-guy_count = 0;
-with(guy_obj)
-{
-    if(my_player.number > 0)
-    {
-        other.slots_needed += 3-slot_number;
-        other.guy_count += 1;
-    }
-}
-
-slots_needed = round(slots_needed/guy_count);
-*/
-
 var have_spawned;
 var num;
     
@@ -31,7 +16,7 @@ var offset;
 var rand_value;
 var inst;
 
-var floor_below, xx, yy, i, key, value, wall, other_key, rand_color;
+var floor_below, yy, i, key, value, rand_color;
 
 if(spawned_item_count >= spawned_item_limit)
 {

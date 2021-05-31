@@ -11,7 +11,6 @@ self.last_gravity = 0;
 self.gravity_direction = 270;
 self.friction = 0;
 self.rotation_speed = 0;
-self.rotation_delta = 0;
 self.x_offset = 0;
 self.y_offset = 0;
 self.light_xoffset = 0;
@@ -73,25 +72,3 @@ self.label_distance = 24;
 self.my_groups = ds_list_create();
 self.my_keys = ds_map_create();
 self.transform_memory = ds_map_create();
-
-/*
-blocked_by_terrain = false;
-blocked_by_solid_terrain = false;
-blocked_by_perma_structure = false;
-blocked_by_gate_field = false;
-
-
-var blocking_coll_params = get_collision_params(coltype_blocking, object_index);
-
-if(!is_undefined(blocking_coll_params))
-{
-    if(object_index == slime_mob_obj)
-    {
-        var a = 5;
-    }
-    blocked_by_terrain = ds_list_find_index(blocking_coll_params, terrain_obj) != -1;
-    blocked_by_solid_terrain = ds_list_find_index(blocking_coll_params, solid_terrain_obj) != -1;
-    //blocked_by_perma_structure = ds_list_find_index(blocking_coll_params, perma_wall_structure_obj) != -1;
-    blocked_by_gate_field = ds_list_find_index(blocking_coll_params, gate_field_obj) != -1;
-}
-*/

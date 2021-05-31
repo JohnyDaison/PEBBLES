@@ -6,8 +6,9 @@ if(instance_exists(center_overlay))
     {
         var pl = players[? 1];
         
+        // time attack medals
         var times = world.current_place.times;
-        var best_award_value = -1, best_time_award = "", best_time_award_str = "";
+        var best_award_value = -1, best_time_award_str = "";
         var time_key = ds_map_find_first(times), time_value;
         
         while(!is_undefined(time_key))
@@ -22,6 +23,7 @@ if(instance_exists(center_overlay))
             time_key = ds_map_find_next(times, time_key);
         }
         
+        // the message
         center_overlay.message =
                //"Score: " + string(pl.stats[? "score"]) + "\n" + 
            "Time: " + stats[? "match_length"] + best_time_award_str + "\n" + 
@@ -40,9 +42,7 @@ if(instance_exists(center_overlay))
             {
                 center_overlay.message = "Team " + string(winner.team_number) + " WINS!"
             }
-        }  
-        
-        
+        }
     }
     
     center_overlay.adjusted = false;
@@ -77,7 +77,3 @@ if(reached_limit_name == "user_terminated")
 {
     alarm[4] = 30;
 }
-    
-    
-
-

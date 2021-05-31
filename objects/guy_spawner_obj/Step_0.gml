@@ -208,41 +208,8 @@ if(self.enabled)
     {
         self.activated = true;
         alarm[0] = round(first_spawn_time);
-        /*
-        var player_camera = my_player.my_camera;
-        if(instance_exists(player_camera))
-        {
-            player_camera.follow_guy = false;
-            player_camera.follow_spawner = true;
-        }
-        */
     }
    
-    // AFTERSPAWN PROTECTION
-    /*
-    if(self.activated && instance_exists(my_guy) && alarm[0] <= -1 && alarm[1] <= -1)
-    {
-        my_guy.locked = true;
-        my_guy.protected = true;
-        my_guy.gravity = 0;
-        my_guy.x = x;
-        my_guy.y = y;
-        my_guy.speed = 0;
-        with(my_guy)
-        {
-            alarm[2] = other.protection_time;
-        }
-        
-        if(my_guy.wanna_run || my_guy.wanna_jump)
-        {
-            self.activated = false;
-            
-        }
-    }
-    */
-    
-    
-    
     // SHIELD RECHARGE
     if(!instance_exists(my_shield) && !self.holographic && self.shield_ready && gamemode_obj.spawner_shield_power > 0)
     {

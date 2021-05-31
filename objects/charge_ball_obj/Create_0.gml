@@ -76,8 +76,7 @@ comp[g_red] = 0;
 comp[g_green] = 0;
 comp[g_blue] = 0;
 num_colors_used = 0;
-    
-charge_cost = 0;
+
 energy_cost[g_dark] = 0;
 energy_cost[g_red] = 0;
 energy_cost[g_green] = 0;
@@ -127,5 +126,5 @@ lightning_steps = 5;
 lightning_thickness = 4;
 lightning_width = 10;
 lightning_alpha = 1;
-lgt_r1 = -0.5*lightning_width; 
+lgt_r1 = -0.5*lightning_width;
 lgt_r2 = 0.5*lightning_width;

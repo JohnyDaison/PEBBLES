@@ -22,14 +22,15 @@ if(instance_exists(my_block))
     
     // TOUCHED
     touched = false;
+    var plate = self;
         
     with(guy_obj)
     {
         // TODO: IF PLATE DIRECTION CHANGES, THIS HAS TO CHANGE TOO
         if(vspeed >= 0)
         {
-            var full_speed_meeting = place_meeting(x+hspeed,y+vspeed+1,other);
-            var half_speed_meeting = place_meeting(x+hspeed/2,y+vspeed/2+1,other);
+            var full_speed_meeting = place_meeting(x + hspeed, y + vspeed + 1, plate);
+            var half_speed_meeting = place_meeting(x + hspeed / 2,y + vspeed / 2 + 1, plate);
             var speed_coef = 0;
             if(full_speed_meeting)
             {
@@ -39,24 +40,23 @@ if(instance_exists(my_block))
             {
                 speed_coef = 0.5;
             }
-                
+            
             if(full_speed_meeting || half_speed_meeting)
             {
-                with(other)
+                var guy = self;
+                
+                with(plate)
                 {
-                    var that_guy = other.id;
-                        
-                    var y_diff = that_guy.bbox_bottom - bbox_top;
-                    var x_diff = that_guy.x + that_guy.hspeed*speed_coef - x;
-    
-                    if(abs(x_diff) < sprite_width/2)
+                    var x_diff = guy.x + guy.hspeed * speed_coef - x;
+
+                    if(abs(x_diff) < sprite_width / 2)
                     {
                         if(!compressed)
                         {
                             if(ready)
                             {
                                 var params = create_params_map();
-                                params[? "who"] = that_guy;
+                                params[? "who"] = guy.id;
                                 params[? "color"] = my_color;
             
                                 my_block.my_next_color = my_color;
@@ -80,7 +80,7 @@ if(instance_exists(my_block))
             }
         }
     }
-        
+    
     if(!touched)
     {
         compressed = false;
@@ -108,7 +108,6 @@ if(instance_exists(my_block))
         ambient_light = ambient_light_coef * energy/max_energy;
         direct_light = direct_light_coef * energy/max_energy;
     }
-    
 }
 else if(my_block != noone)
 {

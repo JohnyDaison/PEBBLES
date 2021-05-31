@@ -22,9 +22,6 @@ if(!bounced && !collided)
     x_return = xprevious - orig_x;
     y_return = yprevious - orig_y;
     
-    var h_diff = xprevious - (other.x);
-    var v_diff = yprevious - (other.y);
-    
     if(other.horizontal)
     {
         vspeed *= -1;

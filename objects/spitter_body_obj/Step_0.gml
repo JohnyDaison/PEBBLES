@@ -1,6 +1,6 @@
 event_inherited();
 
-var ter, structure, mob, field, ball, target, dist, dir, avoiding = false, old_speed, old_dir, dir_diff;
+var ter, mob, field, ball, target, dist, dir, avoiding = false, old_speed, old_dir, dir_diff;
 
 // COPY GUN COLOR
 if(instance_exists(gun))
@@ -329,7 +329,7 @@ if(speed < min_flight_speed)
 */
 
 
-if(my_move_bounce(coltype_var) || my_move_bounce(gate_field_obj))
+if(my_move_bounce(blocking_object) || my_move_bounce(gate_field_obj))
 {
     dir_diff = angle_difference(direction, old_dir);
 

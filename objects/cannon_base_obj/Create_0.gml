@@ -36,7 +36,6 @@ shield_color = g_white;
 base_angle = 90;
 angle_range = 235;
 aim_dir = base_angle;
-hp_y_offset = 8;
 guy_y_offset = 16;
 gui_x = 0;
 gui_y = 0;
@@ -66,7 +65,6 @@ orb_light[? g_red] = 0;
 orb_light[? g_green] = 0;
 orb_light[? g_blue] = 0;
 
-hp_font = text_popup_font;
 aim_speed = 0.2;
 aim_dist = 80;
 barrel_dist = 78;

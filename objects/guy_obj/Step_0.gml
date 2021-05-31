@@ -54,7 +54,6 @@ if(!self.orbs_ready)
         
         orb_belts[? col] = ds_list_create();
         orbs_in_use[? col] = ds_list_create();
-        var in_use_list = orbs_in_use[? col];
         
         if((col == g_dark && !mod_get_state("dark_color")) || gamemode_obj.no_orbs_start)
         {
@@ -453,22 +452,6 @@ if(!self.frozen_in_time || self.flashing_back)
     }
 }
 
-
-// HANDLE OVERRIDES AND CLEANUP
-// (Are you sure the overrides are a good idea?)
-
-// ACTION
-/*
-if(self.wanna_act)
-{
-    //self.wanna_run = false;
-    self.wanna_cast = false;
-    self.wanna_abi = false;
-    self.wanna_channel = false;
-    //self.wanna_look = false;
-}
-*/
-
 // FORCED CHANNELING
 if(self.forced_channel)
 {
@@ -519,10 +502,6 @@ if(self.channeling)
                 chargeball_orbs_return(charge_ball);
 
                 ds_list_clear(new_colors);
-                //ds_list_add(new_colors, g_dark);
-                
-                // CLEAR CHARGE BALL
-                
             }
             
             if(instance_exists(charge_ball) && mod_get_state("dark_color") && ds_list_size(orbs_in_use[? g_dark]) > 0)
@@ -1118,7 +1097,6 @@ if(!self.frozen_in_time)
         && self.wanna_jump && !self.airborne && !self.have_jumped && !self.have_dived)
         {
             self.jumping_down = true;
-            self.last_jumped_off = touching_entity.id;
             vspeed = self.jumping_burstpower/2;
             self.have_jumped = true;
             //self.have_dived = true;
@@ -1909,7 +1887,6 @@ if(!self.frozen_in_time)
                     if(!charge_ball.firing && charge_ball.orb_count > 0)
                     {
                         self.charging = true;
-                        self.charge_start = self.step_count;
                     }
                 }
             }
@@ -2092,11 +2069,10 @@ if(!self.frozen_in_time)
             channeling_last_full_count = slot_number;
         }
         
-      
+        
         // FULL ORBS EXPLOSION
         if(channeling_full)
         {
-            //self.damage += self.channel_hp_cost*total_e_boost;
             channeling = false;
             my_sound_stop(my_channel_sound);
             

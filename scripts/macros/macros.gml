@@ -76,6 +76,4 @@ function macros() {
 #macro spd_fast 4
 #macro spd_veryfast 5
 #macro spd_instant 6
-#macro coltypes_max -10
-#macro coltype_blocking -10
 }

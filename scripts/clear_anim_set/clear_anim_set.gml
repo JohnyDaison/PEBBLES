@@ -5,11 +5,11 @@ function clear_anim_set(clear_displays) {
         map = self.steps[| i];
         ds_map_destroy(map);
     }
-    ds_list_clear(steps);
+    ds_list_clear(self.steps);
 
     if(clear_displays)
     {
-        var count = ds_list_size(self.members), disp;
+        var count = ds_list_size(self.members);
         for(i=count-1; i>=0; i--)
         {
             display = self.members[| i];

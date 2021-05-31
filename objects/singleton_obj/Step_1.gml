@@ -198,18 +198,11 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         }
     }
 
-    // ALT + M
-    if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("M")))
-    {
-        self.show_minimap = !self.show_minimap;
-    }
-
     // CTRL + C
     if(keyboard_check(vk_control) && keyboard_check_pressed(ord("C")))
     {
         self.show_chunkgrid = !self.show_chunkgrid;
     }
-
 
     // ALT + L
     if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("L")))
@@ -819,7 +812,6 @@ toggle_frame(fps_overlay, self.show_fps);
 toggle_frame(cmatrix_overlay, self.show_colorimatrix);
 toggle_frame(terrain_overlay, self.show_terrain);
 toggle_frame(chunkgrid_overlay, self.show_chunkgrid);
-//toggle_frame(minimap_overlay, self.show_minimap);
 if(self.show_console != "hide")
 {
     toggle_frame(console_window, true);

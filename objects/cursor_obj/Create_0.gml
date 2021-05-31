@@ -1,11 +1,6 @@
 room_x = 0;
 room_y = 0;
 
-log = "";
-
-show_log = false;
-showed_logs = 0;
-
 self.my_color = g_dark;
 self.tint_updated = false;
 self.tint = c_dkgray;

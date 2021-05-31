@@ -7,7 +7,7 @@ if((falling || moving || burst_recheck) && singleton_obj.step_count mod 5 == 0)
     burst_recheck = false;
     if(bursting)
     {
-        var dir, burst_x, burst_y, ter, i;
+        var dir, burst_x, burst_y, i;
         
         burst_count = 0;
         
@@ -39,4 +39,3 @@ if((falling || moving || burst_recheck) && singleton_obj.step_count mod 5 == 0)
         }
     }
 }
-

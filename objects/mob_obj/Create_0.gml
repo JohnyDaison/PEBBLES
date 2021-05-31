@@ -1,14 +1,7 @@
 event_inherited();
 
-active = false;
-following = false;
-evading = false;
-moving = false;
 follow_target = noone;
 attack_target = noone;
-evade_target = noone;
-move_target_x = x;
-move_target_y = y;
 ammo_drop_count = 0;
 crystal_drop_count = 0;
 my_score_value = 0;

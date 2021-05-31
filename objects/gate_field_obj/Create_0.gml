@@ -7,7 +7,6 @@ image_speed = 0;
 horizontal = false;
 vertical = false;
 check_dist = 33;
-slow_dist = 22;
 stop_dist = 12;
 height = 24;
 width = 24;

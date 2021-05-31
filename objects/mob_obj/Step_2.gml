@@ -6,7 +6,6 @@ image_angle = image_angle mod 360;
 if(done_for)
 {
     var la_player = last_attacker_map[? "player"];
-    var la_time = last_attacker_map[? "step"];
     var what = last_attacker_map[? "source"];
     
     var xx, yy, i, dir;

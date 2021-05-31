@@ -10,7 +10,6 @@ ready_to_fire = true;
 eq_type = hp_weapon;
 unhittable = true;
 base_tint = c_gray;
-rel_rotation_acc = 0.02;
 max_rotation_speed = 5;
 base_rotation_angle = 180;
 min_rotation_angle = -90;

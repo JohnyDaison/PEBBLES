@@ -44,7 +44,6 @@ if(!view_drag)
                 view_x = x - __view_get( e__VW.XPort, view );
                 view_y = y - __view_get( e__VW.YPort, view );
 
-                inside = false;
                 if(view_x >= 0 && view_x < __view_get( e__VW.WPort, view ) && view_y >= 0 && view_y < __view_get( e__VW.WPort, view ))          
                 {
                     var cam;
@@ -186,7 +185,7 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
     if(!focus_found && new_frame != noone) {
         with(new_frame) {
             gui_get_focus();
-            cursor_obj.focus_found = true; 
+            focus_found = true;
         }
     }
     

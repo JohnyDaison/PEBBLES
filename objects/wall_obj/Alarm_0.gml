@@ -1,5 +1,5 @@
 /// @description  FIND NEAR WALLS
-for(i=0;i<4;i+=1)
+for(var i=0; i<4; i++)
 {
     near_walls[? i] = noone;
 
@@ -19,4 +19,3 @@ for(i=0;i<4;i+=1)
 
 burst_recheck = true;
 is_new = false;
-

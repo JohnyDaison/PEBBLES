@@ -2,7 +2,7 @@ if(!singleton_obj.paused && room != match_summary)
 {
     game_set_speed(singleton_obj.game_speed, gamespeed_fps);
     
-    if(!instance_exists(battlefeed))    
+    if(!instance_exists(battlefeed))
         battlefeed = add_frame(battlefeed_overlay);
     if(!shown_welcome)
     {
@@ -47,8 +47,10 @@ if(!singleton_obj.paused && room != match_summary)
         shown_welcome = true;
         
         prespawn_delay = 90;
+        /*
         pixelating_left = 0;
         pixelate_steps = 1;
+        */
         alarm[0] = prespawn_delay;
         alarm[1] = -1;
         alarm[2] = -1;
@@ -77,12 +79,6 @@ if(!singleton_obj.paused && room != match_summary)
         pixels_y = pixelate_base;
         pixels_x = pixelate_base*display_get_gui_width()/display_get_gui_height();
         pixelate_steps = ceil(log2(display_get_gui_height()/pixelate_base));
-        */    
-        /*
-        if(!instance_exists(minimap_overlay))
-        {
-            singleton_obj.show_minimap = true;
-        }
         */
     }
 }

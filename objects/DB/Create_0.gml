@@ -22,7 +22,7 @@ orb_regen_speeds[? spd_instant] = 10;
 
 
 npc_waypoint_connect_dist = 640;
-npc_waypoint_disconnect_dist = 1280;
+//npc_waypoint_disconnect_dist = 1280;
 npc_waypoint_oneway_vert_dist = 352;
 npc_waypoint_edge_length_coef = 64;
 

@@ -116,13 +116,13 @@ if(other_ok)
     x_dist = sign(x_dist)*push_hstrength;
     y_dist = sign(y_dist)*push_vstrength;
     
-    phys_body_obj_push_other(coltype_var);
- 
+    phys_body_obj_push_other(blocking_object);
+    
     with(other)
     {
         x_dist = -other.x_dist;
         y_dist = -other.y_dist;
         
-        phys_body_obj_push_other(coltype_var);
+        phys_body_obj_push_other(blocking_object);
     }
 }

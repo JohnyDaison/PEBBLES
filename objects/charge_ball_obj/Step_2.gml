@@ -52,7 +52,6 @@ if(charge > threshold)
 
 // PARTICLES, POSITION, SIZE
 sprite_size = size_coef*(0.25 + 0.50 * charge/max_charge);
-particles_alpha = min(1, 0.1 + 0.9 * (charge / max(max_charge, max_charge+overcharge)));
 
 if(instance_exists(my_guy) && sprite_index != noone && my_color != -1)
 {

@@ -77,8 +77,7 @@ if((my_guy == id || self.placed) && !instance_exists(stuck_to))
                 min_dists[? dir] = max_dist;
             }
         
-            var xx = 0, yy = 0;
-            var xx_plus = 0, xx_minus = 0, yy_minus = 0;
+            var xx = 0, yy = 0;            
             
             while(cur_dist <= max_dist)
             {

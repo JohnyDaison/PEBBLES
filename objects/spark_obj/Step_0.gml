@@ -8,18 +8,18 @@ if(!done_for)
     
     if(speed > 1)
     {
-        has_bounced = my_move_bounce(coltype_var);
+        has_bounced = my_move_bounce(blocking_object);
         if(has_bounced)
             speed *= 0.5;
     }
     
-    var ter = instance_place(x, y + 1, coltype_var);
+    var ter = instance_place(x, y + 1, blocking_object);
     
     if(instance_exists(ter) && !has_bounced)
     {
         if(airborne && speed <= 1)
         {
-            if(place_meeting(x, y + 1, coltype_var))
+            if(place_meeting(x, y + 1, blocking_object))
             {
                 speed = 0;
                 gravity = 0;
@@ -58,7 +58,7 @@ if(!done_for)
             if(aoe.my_color != my_color)
             {
                 done_for = true;
-            }   
+            }
         }
     }
     */
@@ -80,7 +80,7 @@ if(!done_for)
                 done_for = true;
                 my_sound_play(slot_absorbed_sound);
                 increase_stat(guy.my_player, "sparks_absorbed", 1, false);
-            }   
+            }
         }
     }
     
@@ -103,7 +103,7 @@ if(!done_for)
             hspeed = hor_dir;
             vspeed = -1;
             speed = jump_power;
-            if(place_meeting(x+2*hspeed, y+2*vspeed, coltype_var))
+            if(place_meeting(x+2*hspeed, y+2*vspeed, blocking_object))
             {
                 hspeed *= -1;
             }

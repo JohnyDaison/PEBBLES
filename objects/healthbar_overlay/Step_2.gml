@@ -230,12 +230,6 @@ if(ready && instance_exists(my_guy))
     hp_x0 = x + border_width; 
     hp_x1 = hp_x0 + hp_bar_width -1;
     
-    if(min_damage > 0)
-    {
-        handicap_x1 = hp_x0 + handicapped_width -1;
-        handicap_x2 = hp_x0 + width -1;
-    }
-    
     if(base_exists)
     {
         basehp_x0 = x + border_width; 

@@ -24,7 +24,7 @@ var rand_value = random(total_value);
 var inst = noone;
 var do_effect = false;
 
-var i, ii, key, value, wall, other_key, rand_color;
+var i, key, value, wall, rand_color;
    
 for(i = 0; i < num && !have_spawned; i+=1)
 {
@@ -83,15 +83,10 @@ for(i = 0; i < num && !have_spawned; i+=1)
             {
                 inst = create_energy_ball(id, "small_bolt_rain", irandom_range(g_red,g_cyan), 0.3);
                 inst.y += -room_height-32;
-                
-                //inst = instance_create(x,y-room_height-32,small_projectile_obj); //
-                //inst.my_guy = inst.id;
                 inst.my_source = noone;
-                //inst.force = 0.3;
                 inst.vspeed = 2;
                 inst.was_stopped = true;
-                //inst.my_color = irandom_range(g_red,g_cyan);
-                //inst.tint_updated = false;
+                
                 have_spawned = true;
             }
         }

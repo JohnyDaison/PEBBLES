@@ -14,7 +14,6 @@ ball_respawn_wait = 60;
 ball_y_offset = 192;
 has_ball_number = 0;
 allowed_touches = 2;
-max_touches = 5;
 current_color = g_white;
 
 player_colors = ds_map_create();
@@ -40,4 +39,3 @@ with(player_obj)
 
 alarm[1] = 2;
 alarm[2] = 4;
-

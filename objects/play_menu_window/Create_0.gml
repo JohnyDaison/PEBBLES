@@ -385,7 +385,7 @@ with(players_pane)
     ii = gui_add_button(0,0, "Back", goto_mainmenu);
     ii.width = back_button_width;
     ii.centered = true;
-    back_button = ii.id;
+    //back_button = ii.id;
     
     eloffset_y += start_button.height + vert_spacing;
 }
@@ -398,4 +398,3 @@ if(instance_exists(menu_elephant_obj))
 {
     instance_destroy(menu_elephant_obj.id);
 }
-

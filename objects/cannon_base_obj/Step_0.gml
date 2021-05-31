@@ -97,7 +97,6 @@ if(!destroyed && instance_exists(my_guy))
      && !(my_guy.looking_down && !my_guy.wanna_cast)
      && !my_guy.jumping_down)
     {
-        ball = my_guy.charge_ball;
         draw_label = false;
         
         // LOADING ORBS

@@ -3,8 +3,6 @@ event_inherited();
 
 // TODO: optimize this using read_terrain
 
-downspeed = max(0, vspeed);
-orig_hspeed = hspeed;
 blocking_entity = noone;
 near_edge = false;
 inside_terrain = false;
@@ -14,12 +12,12 @@ if(energy <= 0 || energy > max_energy)
     damage = max(damage, hp);
 }
 
-var collision_terrain, coll_count, coll_i, coll_inst;
+var collision_terrain;
 
-if(instance_exists(coltype_var))
+if(instance_exists(blocking_object))
 {
-    collision_terrain = instance_place(x, floor(y), coltype_var);
-    blocking_terrain = instance_place(x + facing + hspeed, floor(y)-4, coltype_var);
+    collision_terrain = instance_place(x, floor(y), blocking_object);
+    blocking_terrain = instance_place(x + facing + hspeed, floor(y)-4, blocking_object);
     inside_terrain = instance_exists(collision_terrain);
 }
 else
@@ -28,7 +26,7 @@ else
     touching_terrain = false;
 }
 
-    
+
 if(inside_terrain)
 {
     speed = 0;
@@ -62,7 +60,7 @@ if(inside_terrain)
         }
         
         //show_debug_message("SLIME DMG:" + string(damage) + " HP: " + string(hp) + " " + "x_diff: " +string(round(x_diff)) + " y_diff: " +string(round(y_diff)));
-        collision_terrain = instance_place(x, floor(y), coltype_var);       
+        collision_terrain = instance_place(x, floor(y), blocking_object);       
         
         if(!instance_exists(collision_terrain))
         {
@@ -70,25 +68,25 @@ if(inside_terrain)
         }
         iter++;
     }
-    blocking_terrain = instance_place(x + 2*facing, floor(y), coltype_var);
+    blocking_terrain = instance_place(x + 2*facing, floor(y), blocking_object);
 }
 else
 {
     my_head_grid_x = ((x + facing*radius) div 32) *32;
-    my_back_grid_x = ((x - facing*radius) div 32) *32;
+    //my_back_grid_x = ((x - facing*radius) div 32) *32;
     my_head_grid_y = (y div 32) *32;
     
     // TODO: this is not very optimal
-    if(instance_exists(coltype_var))
+    if(instance_exists(blocking_object))
     {
-        body_terrain = instance_place(x, floor(y)+1, coltype_var);
-        next_body_terrain = instance_place(((x+facing*32) div 32) *32 +15, floor(y)+1, coltype_var);
-        jump_body_terrain = instance_place(((x+facing*64) div 32) *32 +15, floor(y)+1, coltype_var);
-        jump_block_terrain = instance_place(((x+facing*64) div 32) *32 +15, floor(y)-16, coltype_var);
+        body_terrain = instance_place(x, floor(y)+1, blocking_object);
+        next_body_terrain = instance_place(((x+facing*32) div 32) *32 +15, floor(y)+1, blocking_object);
+        jump_body_terrain = instance_place(((x+facing*64) div 32) *32 +15, floor(y)+1, blocking_object);
+        jump_block_terrain = instance_place(((x+facing*64) div 32) *32 +15, floor(y)-16, blocking_object);
         
-        back_terrain = instance_nearest(my_back_grid_x, my_head_grid_y+32, coltype_var);
-        head_terrain = instance_nearest(my_head_grid_x, my_head_grid_y+32, coltype_var);
-        next_terrain = instance_nearest(my_head_grid_x + facing*47, my_head_grid_y +32, coltype_var);
+        //back_terrain = instance_nearest(my_back_grid_x, my_head_grid_y+32, blocking_object);
+        head_terrain = instance_nearest(my_head_grid_x, my_head_grid_y+32, blocking_object);
+        next_terrain = instance_nearest(my_head_grid_x + facing*47, my_head_grid_y +32, blocking_object);
         
         touching_terrain = instance_exists(body_terrain);
                     /*
@@ -125,7 +123,7 @@ else
         
         if(!jumping)
         {
-            falling = true;    
+            falling = true;
             image_index = fall_sprite;
         }
         
@@ -204,8 +202,8 @@ else
                         var jumpable = false;
                         var x2_diff = (next_terrain.x + 15) - (x + facing*radius);
                         
-                        if((!instance_exists(jump_block_terrain)) 
-                            && ( instance_exists(jump_body_terrain) 
+                        if((!instance_exists(jump_block_terrain))
+                            && ( instance_exists(jump_body_terrain)
                                 && (jump_body_terrain == next_terrain)
                                 )
                             )
@@ -245,10 +243,10 @@ else
                 else
                 {
                     // FREE ROAM
-                    crawling = true;  
+                    crawling = true;
                 }
                 
-                                        
+                
                 // JUMP
                 if(jumping)
                 {
@@ -312,7 +310,7 @@ else
         }
     }
     
-    // TURN AROUND           
+    // TURN AROUND
     if(turning)
     {
         if(prepped)
@@ -369,7 +367,7 @@ if(prepping)
 
 if(prepped)
 {
-    prepping = false;    
+    prepping = false;
     prepped = false;
 }
 if(prepping && rested)

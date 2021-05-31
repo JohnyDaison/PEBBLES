@@ -135,12 +135,11 @@ function create_player_things(player) {
         }
 
         // OVERLAYS
-        //add_player_overlay(score_overlay);
         if(gamemode_obj.mode != "volleyball" || player.number <= 2)
         {
             add_player_overlay(healthbar_overlay, player);
         }
-        //player.minimap = add_player_overlay(player_minimap_overlay);
+        
         if(!gamemode_obj.no_inventory)
             add_player_overlay(inventory_overlay, player);
         add_player_overlay(overhead_overlay, player);

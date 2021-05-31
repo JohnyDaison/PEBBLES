@@ -15,8 +15,7 @@ view_y = 0;
 view_surface = noone;
 width = 0;
 height = 0;
-    
-damage_cover_alpha = 0;
+
 death_cover_show = false;
 
 // background and camera movement coefs
@@ -25,9 +24,6 @@ bg_shift_ratio[1] = 0.1;
 bg_speed_ratio[0] = 1;
 bg_speed_ratio[1] = 0;
 move_speed_coef = 0.07; //0.06 //0.05 //0.1 //0.15
-move_delta = 0.5;
-delta_coef = 0.1;
-reverse_coef = 2;
 bg_zoom_ratio[0] = 0;
 bg_zoom_ratio[1] = 1;
 
@@ -49,8 +45,6 @@ followed_x = x;
 followed_y = y;
 move_speed_x = 0;
 move_speed_y = 0;
-desired_move_speed_x = 0;
-desired_move_speed_y = 0;
 on = false;
 only_cam = false;
 
@@ -58,7 +52,7 @@ only_cam = false;
 draw_frame = true;
 potential_color = c_orange;
 body_color = c_orange;
-shield_col = c_orange;
+//shield_col = c_orange;
 
 inner_color = c_orange;
 outer_color = c_orange;
@@ -85,7 +79,6 @@ min_zoom = 0.66;
 base_normal_zoom = 1;
 small_normal_zoom = 0.8;
 normal_zoom = base_normal_zoom;
-max_zoom = 2;
 look_zoom = 0.8;
 zoom_speed = 0.0025;
 stop_zoom = false;

@@ -19,7 +19,6 @@ self.shield_overcharge = 0;
 self.shield_threshold = 6;
 self.shield_repair_time = 360;
 
-self.size_pulse = 0;
 hover_offset = 8;
 
 self.protected = false;
@@ -32,6 +31,3 @@ i.my_color = irandom_range(1,7);
 my_shield = i;
 
 self.name = "Shard";
-
-
-

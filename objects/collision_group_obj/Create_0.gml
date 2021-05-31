@@ -12,6 +12,6 @@ for(i=g_red; i<g_white; i++)
 ratio_updated = false;
 base_color = g_dark;
 ratio = 0;
-balance_margin = 0.1;
+//balance_margin = 0.1;
 
 // This is not general, it's made for energyballs

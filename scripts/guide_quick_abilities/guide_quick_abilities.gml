@@ -291,9 +291,7 @@ function guide_quick_abilities() {
                 if(self.has_tp_rush && !npc_destination_reached)
                 {
                     desired_aim_dir = point_direction(x,y, npc_waypoint_x, npc_waypoint_y);
-                    var dist = point_distance(x,y, npc_waypoint_x, npc_waypoint_y);
                     desired_aim_dist = 1;
-                    var dist_phase = dist mod 256;
                 
                     if(singleton_obj.step_count mod 30 == 0)
                     {

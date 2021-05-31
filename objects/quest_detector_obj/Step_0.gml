@@ -24,7 +24,6 @@ for(pl_index = 1; pl_index <= pl_count; pl_index++)
     
     var subtask_state = player_quest_state_find(player, quest_id + "_" + subtask_id, "", "");
     var subtask_current_state = subtask_state[? "current_state"];
-    var subtask_last_state = subtask_state[? "last_state"];
     
     if(subtask_current_state == "success")
     {

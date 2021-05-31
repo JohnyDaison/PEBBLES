@@ -1,262 +1,264 @@
 function volleyball_bot2(near_player) {
-	if(npc_active || next_phase != 0)
-	{
-	    // NEAR PLAYER
-	    var go_to_spawner = false;
+    if(npc_active || next_phase != 0)
+    {
+        // NEAR PLAYER
+        var go_to_spawner = false;
 
-	    if(instance_exists(place_controller_obj.da_ball))
-	    {
-	        var da_ball = place_controller_obj.da_ball;
+        if(instance_exists(place_controller_obj.da_ball))
+        {
+            var da_ball = place_controller_obj.da_ball;
         
-	        var hspd = da_ball.hspeed;
+            var hspd = da_ball.hspeed;
 
-	        var vspd = da_ball.vspeed;
-	        //var y_diff = da_ball.y - my_spawner.y;
-	        //var steps_ahead = round(abs(y_diff)/abs(vspd));
+            var vspd = da_ball.vspeed;
+            //var y_diff = da_ball.y - my_spawner.y;
+            //var steps_ahead = round(abs(y_diff)/abs(vspd));
         
-	        var zones = get_group("zones");
-	        var pl1field = group_find_member(zones, "p1_field");
-	        var pl2field = group_find_member(zones, "p2_field");
-	        var net = shield_generator_structure_obj.id;
+            var zones = get_group("zones");
+            var pl1field = group_find_member(zones, "p1_field");
+            var pl2field = group_find_member(zones, "p2_field");
+            var net = shield_generator_structure_obj.id;
         
-	        var left_edge = pl1field.bbox_left;
-	        var right_edge = pl2field.bbox_right;
+            var left_edge = pl1field.bbox_left;
+            var right_edge = pl2field.bbox_right;
 
-	        var target_x = da_ball.x;
-	        var target_y = da_ball.y;
-	        var steps_left = 0;
-	        var bottom_y = my_spawner.y - 16 - da_ball.radius;
-	        var net_y = net.y - 96;
+            var target_x = da_ball.x;
+            var target_y = da_ball.y;
+            var steps_left = 0;
+            var bottom_y = my_spawner.y - 16 - da_ball.radius;
+            //var net_y = net.y - 96;
         
-	        var net_diff = da_ball.y - net.y;
-	        var net_ratio = clamp(net_diff/160, -2, 1);
-        
-	        var ball_dir = point_direction(x,y, da_ball.x, da_ball.y);
-	        var horizontal_flyover = (net_diff < 1 && net_diff > -2)
-	                              && (abs(da_ball.vspeed) < abs(da_ball.hspeed) && abs(da_ball.hspeed) >= 8);
+            var net_diff = da_ball.y - net.y;
+            var net_ratio = clamp(net_diff/160, -2, 1);
+            
+            /*
+            var ball_dir = point_direction(x,y, da_ball.x, da_ball.y);
+            var horizontal_flyover = (net_diff < 1 && net_diff > -2)
+                                  && (abs(da_ball.vspeed) < abs(da_ball.hspeed) && abs(da_ball.hspeed) >= 8);
                               
-	        var min_ball_dir = 30;
-	        var max_ball_dir = 150;
+            var min_ball_dir = 30;
+            var max_ball_dir = 150;
+            */
         
-	        /*
-	        if((net_diff < -32 + da_ball.radius && da_ball.vspeed < 12) && !horizontal_flyover) // && (!horizontal_flyover || (abs(da_ball.hspeed) < 6 && ball_dir > min_ball_dir && ball_dir < max_ball_dir))
-	        {
-	            bottom_y = net.y;
-	        }
-	        */
+            /*
+            if((net_diff < -32 + da_ball.radius && da_ball.vspeed < 12) && !horizontal_flyover) // && (!horizontal_flyover || (abs(da_ball.hspeed) < 6 && ball_dir > min_ball_dir && ball_dir < max_ball_dir))
+            {
+                bottom_y = net.y;
+            }
+            */
                 
-	        ds_list_of_map_destroy(predicted_ball_path);
-	        predicted_ball_path = ds_list_create();
+            ds_list_of_map_destroy(predicted_ball_path);
+            predicted_ball_path = ds_list_create();
         
-	        var done = false;
+            var done = false;
         
-	        while(target_y < bottom_y && !done)
-	        {
-	            if((target_x + hspd) < (left_edge + da_ball.radius) || (target_x + hspd) > (right_edge - da_ball.radius))
-	            {
-	                hspd *= -1;
-	            }
+            while(target_y < bottom_y && !done)
+            {
+                if((target_x + hspd) < (left_edge + da_ball.radius) || (target_x + hspd) > (right_edge - da_ball.radius))
+                {
+                    hspd *= -1;
+                }
             
-	            /*
-	                && (
-	                (sign(target_x - (net.x - 32 - da_ball.radius)) != sign(target_x + hspd - (net.x - 32 - da_ball.radius)))
-	             || (sign(target_x - (net.x + 32 + da_ball.radius)) != sign(target_x + hspd - (net.x + 32 + da_ball.radius)))
-	            )
-	            */
-	            if(target_y + vspd > net.y - 32 && target_x + hspd > net.x - 32 && target_x + hspd < net.x + 32)
-	            {
-	                hspd *= -1;   
-	            }
+                /*
+                    && (
+                    (sign(target_x - (net.x - 32 - da_ball.radius)) != sign(target_x + hspd - (net.x - 32 - da_ball.radius)))
+                 || (sign(target_x - (net.x + 32 + da_ball.radius)) != sign(target_x + hspd - (net.x + 32 + da_ball.radius)))
+                )
+                */
+                if(target_y + vspd > net.y - 32 && target_x + hspd > net.x - 32 && target_x + hspd < net.x + 32)
+                {
+                    hspd *= -1;   
+                }
             
-	            if(target_x + hspd > net.x - 32 && target_x + hspd < net.x + 32
-	            && target_y < net.y - 32 && target_y + vspd > net.y - 32)
-	            {
-	                var ratio = (target_x - net.x)/32;
-	                hspd += ratio * abs(vspd)/2;
-	                vspd += -(1-ratio) * abs(vspd);
-	            }
+                if(target_x + hspd > net.x - 32 && target_x + hspd < net.x + 32
+                && target_y < net.y - 32 && target_y + vspd > net.y - 32)
+                {
+                    var ratio = (target_x - net.x)/32;
+                    hspd += ratio * abs(vspd)/2;
+                    vspd += -(1-ratio) * abs(vspd);
+                }
             
-	            var spd = point_distance(0,0, hspd, vspd);
-	            var friction_ratio = max(0, (spd - da_ball.friction))/spd;
-	            hspd *= friction_ratio;
-	            vspd *= friction_ratio;
+                var spd = point_distance(0,0, hspd, vspd);
+                var friction_ratio = max(0, (spd - da_ball.friction))/spd;
+                hspd *= friction_ratio;
+                vspd *= friction_ratio;
             
-	            vspd += da_ball.gravity_coef;
+                vspd += da_ball.gravity_coef;
             
-	            target_x += hspd;
-	            target_y += vspd;
+                target_x += hspd;
+                target_y += vspd;
             
-	            var point = ds_map_create();
-	            point[? "x"] = target_x;
-	            point[? "y"] = target_y;
+                var point = ds_map_create();
+                point[? "x"] = target_x;
+                point[? "y"] = target_y;
             
-	            ds_list_add(predicted_ball_path, point);
+                ds_list_add(predicted_ball_path, point);
             
-	            steps_left++;
+                steps_left++;
             
-	            /*
-	            if(horizontal_flyover)
-	            {
-	                if(abs(target_x-x) < 32 && y > target_y && target_y > net.y - 96)
-	                {
-	                    done = true;
-	                }
-	            }
-	            */
-	        }
+                /*
+                if(horizontal_flyover)
+                {
+                    if(abs(target_x-x) < 32 && y > target_y && target_y > net.y - 96)
+                    {
+                        done = true;
+                    }
+                }
+                */
+            }
         
-	        if(sign(target_x - net.x) != sign(x - net.x))
-	        {
-	            if(sign(da_ball.x - net.x) != sign(x - net.x))
-	            {
-	                npc_destination_reached = false;
-	                npc_destination_x = net.x;
-	                npc_destination_y = net.y - 48;
-	                npc_destination = net;
+            if(sign(target_x - net.x) != sign(x - net.x))
+            {
+                if(sign(da_ball.x - net.x) != sign(x - net.x))
+                {
+                    npc_destination_reached = false;
+                    npc_destination_x = net.x;
+                    npc_destination_y = net.y - 48;
+                    npc_destination = net;
                 
-	                npc_waypoint_x = npc_destination_x;
-	                npc_waypoint_y = npc_destination_y;
-	            }
-	            else
-	            {
-	                go_to_spawner = true;
-	            }
-	        }
-	        else
-	        {
-	            npc_destination_reached = false;
-	            npc_destination_x = target_x;
-	            npc_destination_y = my_spawner.y;
-	            npc_destination = da_ball;
+                    npc_waypoint_x = npc_destination_x;
+                    npc_waypoint_y = npc_destination_y;
+                }
+                else
+                {
+                    go_to_spawner = true;
+                }
+            }
+            else
+            {
+                npc_destination_reached = false;
+                npc_destination_x = target_x;
+                npc_destination_y = my_spawner.y;
+                npc_destination = da_ball;
         
-	            // JUMPING
-	            /*
-	            if(y > da_ball.y + 32 && (steps_left < 30 || horizontal_flyover))
-	            {
-	                if((da_ball.vspeed < 12 && sign(target_x - net.x) == sign(x - target_x))
-	                || (horizontal_flyover && ball_dir > min_ball_dir && ball_dir < max_ball_dir)) 
-	                {
-	                    npc_destination_y = target_y + 16 * net_ratio;
-	                }
+                // JUMPING
+                /*
+                if(y > da_ball.y + 32 && (steps_left < 30 || horizontal_flyover))
+                {
+                    if((da_ball.vspeed < 12 && sign(target_x - net.x) == sign(x - target_x))
+                    || (horizontal_flyover && ball_dir > min_ball_dir && ball_dir < max_ball_dir)) 
+                    {
+                        npc_destination_y = target_y + 16 * net_ratio;
+                    }
             
-	                var x_diff = da_ball.x - x;
-	                var y_diff = da_ball.y - y;
+                    var x_diff = da_ball.x - x;
+                    var y_diff = da_ball.y - y;
             
-	                if(!airborne && (abs(da_ball.hspeed) < 4 && y_diff < -16 && y_diff > -256) && ball_dir > min_ball_dir && ball_dir < max_ball_dir)
-	                {
-	                    npc_destination_y = da_ball.y - 32;
-	                }
-	            }
-	            */
+                    if(!airborne && (abs(da_ball.hspeed) < 4 && y_diff < -16 && y_diff > -256) && ball_dir > min_ball_dir && ball_dir < max_ball_dir)
+                    {
+                        npc_destination_y = da_ball.y - 32;
+                    }
+                }
+                */
             
-	            if((steps_left < 30 && abs(da_ball.vspeed) > abs(da_ball.hspeed))
-	            && abs(x - npc_destination_x) < 16)
-	            {
-	                //npc_destination_x = da_ball.x + steps_left * da_ball.hspeed;
-	                if(da_ball.y < y - 16)
-	                {
-	                    npc_destination_y = da_ball.y;
-	                }
-	            }
+                if((steps_left < 30 && abs(da_ball.vspeed) > abs(da_ball.hspeed))
+                && abs(x - npc_destination_x) < 16)
+                {
+                    //npc_destination_x = da_ball.x + steps_left * da_ball.hspeed;
+                    if(da_ball.y < y - 16)
+                    {
+                        npc_destination_y = da_ball.y;
+                    }
+                }
             
         
-	            if(npc_destination_y > my_spawner.y)
-	            {
-	                npc_destination_y = my_spawner.y;
-	            }
+                if(npc_destination_y > my_spawner.y)
+                {
+                    npc_destination_y = my_spawner.y;
+                }
         
-	            // HORIZONTAL
-	            var hor_ratio = 1 - clamp(net_ratio, 0, 0.8);
-	            var hor_offset_max = 8;
+                // HORIZONTAL
+                var hor_ratio = 1 - clamp(net_ratio, 0, 0.8);
+                var hor_offset_max = 8;
         
-	            if(my_player.number == 1)
-	            {
-	                npc_destination_x -= hor_offset_max * hor_ratio;
-	            }
-	            else
-	            {
-	                npc_destination_x += hor_offset_max * hor_ratio;
-	            }
+                if(my_player.number == 1)
+                {
+                    npc_destination_x -= hor_offset_max * hor_ratio;
+                }
+                else
+                {
+                    npc_destination_x += hor_offset_max * hor_ratio;
+                }
         
-	            npc_waypoint_x = npc_destination_x;
-	            npc_waypoint_y = npc_destination_y;
+                npc_waypoint_x = npc_destination_x;
+                npc_waypoint_y = npc_destination_y;
         
-	            /*
-	            if(da_ball.y > y - 256 || steps_left < 20)
-	            {
-	                if(airborne)
-	                {
-	                    npc_destination_y = y - 96;
-	                    npc_waypoint_y = y - 96;
-	                }
-	                else
-	                {
-	                    if(da_ball.vspeed < 0) //!(!my_player.touching_ball && my_player.was_touching_ball)
-	                    {
-	                        npc_destination_y = y - 96;
-	                        npc_waypoint_y = y - 96;
-	                    }
-	                }
-	            }
-	            */
+                /*
+                if(da_ball.y > y - 256 || steps_left < 20)
+                {
+                    if(airborne)
+                    {
+                        npc_destination_y = y - 96;
+                        npc_waypoint_y = y - 96;
+                    }
+                    else
+                    {
+                        if(da_ball.vspeed < 0) //!(!my_player.touching_ball && my_player.was_touching_ball)
+                        {
+                            npc_destination_y = y - 96;
+                            npc_waypoint_y = y - 96;
+                        }
+                    }
+                }
+                */
         
-	            npc_last_stuck_check = singleton_obj.step_count;
-	            npc_stuck = false;
-	        }
+                npc_last_stuck_check = singleton_obj.step_count;
+                npc_stuck = false;
+            }
         
-	    }
-	    else
-	    {
-	        go_to_spawner = true;
-	    }
+        }
+        else
+        {
+            go_to_spawner = true;
+        }
     
-	    if(go_to_spawner)
-	    {
-	        npc_destination_reached = false;
-	        npc_destination_x = my_spawner.x;
-	        npc_destination_y = my_spawner.y;
-	        npc_destination = my_spawner;
+        if(go_to_spawner)
+        {
+            npc_destination_reached = false;
+            npc_destination_x = my_spawner.x;
+            npc_destination_y = my_spawner.y;
+            npc_destination = my_spawner;
         
-	        npc_waypoint_x = npc_destination_x;
-	        npc_waypoint_y = npc_destination_y;
-	    }
+            npc_waypoint_x = npc_destination_x;
+            npc_waypoint_y = npc_destination_y;
+        }
     
-	    // AVOID DESTINATION WITH HOLES
-	    if((npc_destination_y >= my_spawner.y - 32) && !place_meeting(npc_destination_x, my_spawner.y + 32, terrain_obj))
-	    {
-	        var x_offset = 80, offset_dest_x;
-	        var x_diff = sign(x - npc_destination_x);
-	        if(x_diff == 0)
-	        {
-	            x_diff = 1;   
-	        }
+        // AVOID DESTINATION WITH HOLES
+        if((npc_destination_y >= my_spawner.y - 32) && !place_meeting(npc_destination_x, my_spawner.y + 32, terrain_obj))
+        {
+            var x_offset = 80, offset_dest_x;
+            var x_diff = sign(x - npc_destination_x);
+            if(x_diff == 0)
+            {
+                x_diff = 1;   
+            }
         
-	        repeat(2)
-	        {
-	            offset_dest_x = npc_destination_x + x_diff * x_offset;
-	            if(place_meeting(offset_dest_x, my_spawner.y + 32, terrain_obj))
-	            {
-	                npc_destination_x = offset_dest_x;
-	                break;
-	            }
+            repeat(2)
+            {
+                offset_dest_x = npc_destination_x + x_diff * x_offset;
+                if(place_meeting(offset_dest_x, my_spawner.y + 32, terrain_obj))
+                {
+                    npc_destination_x = offset_dest_x;
+                    break;
+                }
             
-	            x_diff *= -1;
-	        }
+                x_diff *= -1;
+            }
         
-	        npc_waypoint_x = npc_destination_x;
-	    }
+            npc_waypoint_x = npc_destination_x;
+        }
     
 
-	    npc_guy2_step();
+        npc_guy2_step();
     
-	    if(vspeed >= impact_speed)
-	    {
-	        vspeed = impact_speed - gravity_coef * 1.1; 
-	    }
+        if(vspeed >= impact_speed)
+        {
+            vspeed = impact_speed - gravity_coef * 1.1; 
+        }
     
-	    if(!instance_exists(speech_popup) && y > my_spawner.y + 16)
-	    {
-	        speech_start("bark/oops");
-	    }
-	}
+        if(!instance_exists(speech_popup) && y > my_spawner.y + 16)
+        {
+            speech_start("bark/oops");
+        }
+    }
 }

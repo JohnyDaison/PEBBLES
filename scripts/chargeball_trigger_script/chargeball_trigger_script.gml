@@ -192,9 +192,6 @@ function chargeball_trigger_script() {
 
                 if(orb_count == 3 && (!is_guy || has_level(my_guy, "dashwave_mode", 1)))
                 {
-                    var xx = lengthdir_x(dash_dist, aim_direction);
-                    var yy = lengthdir_y(dash_dist, aim_direction);
-                
                     if(!my_guy.airborne)
                     {
                         my_guy.y -= 1;

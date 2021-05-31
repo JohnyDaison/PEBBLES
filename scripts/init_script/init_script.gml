@@ -53,9 +53,6 @@ function init_script() {
     DB.color_effects[? g_white] = DB.status_effects[? "heavy_shots"];
     DB.color_effects[? g_octarine] = DB.status_effects[? "shield_down"];
 
-    // COLLISION MAP FOR UNUSED COLLISION SYSTEM (was laggy)
-    create_collision_map(DB);
-
     // LIMITS MAP
     DB.limit_ids = ds_list_create();
     DB.limit_values = ds_map_create();
@@ -96,7 +93,6 @@ function init_script() {
     // CREATE SINGLETONS
     instance_create(0, 0, event_manager);
     instance_create(0, 0, singleton_obj);
-    //instance_create(0, 0, tester_obj);
 
 
     // LOAD SETTINGS

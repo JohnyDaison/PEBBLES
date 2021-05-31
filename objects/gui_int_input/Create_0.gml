@@ -1,6 +1,5 @@
 event_inherited();
 
-self.can_switch_sign = false;
 self.cur_sign = 1;
 self.max_digits = 3;
 self.value = 0;
@@ -15,4 +14,3 @@ self.up_arrow = noone;
 self.down_arrow = noone;
 
 alarm[0] = 1;
-

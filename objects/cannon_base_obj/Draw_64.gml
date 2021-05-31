@@ -24,17 +24,7 @@ if(!gamemode_obj.limit_reached)
     // HP
     if(damage < hp)
     {
-        //hp_str = string(ceil((hp-damage)*100));
         hp_ratio = (hp-damage)/hp;
-        //draw_sprite(cannon_ammo_spr, 0, gui_x, gui_y+hp_y_offset);
-        /*
-        my_draw_set_font(hp_font);
-        draw_set_color(c_black);
-        my_draw_text(gui_x+2, gui_y+hp_y_offset+2, hp_str);
-        draw_set_color(c_yellow);
-        my_draw_text(gui_x, gui_y+hp_y_offset, hp_str);
-        */
-        
         hpbar_xx = hpbar_x1 + hp_ratio*hpbar_width;
         
         // BG

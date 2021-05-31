@@ -71,7 +71,7 @@ recover_time = 120;
 hurt_duration = 60;
 spell_cooldown = 10;
 step_frequency = 150;
-deathwish_warmup_time = 360;
+//deathwish_warmup_time = 360;
 walljump_grace = 30;
 walljump_wait = 90;
 protection_time = 10;
@@ -114,10 +114,6 @@ self.max_walking_speed = 1.5;
 self.jumping_burstpower = 9;
 self.jumping_divepower = 4;
 self.jumping_glidepower = 0.1;
-self.jumping_origin = 0;
-self.jumping_max_height = 0;
-self.jumping_normal_height = 320;
-self.jumping_wall_height = 96;
 
 //self.jumping_normal_flippower = 5;
 
@@ -137,7 +133,6 @@ self.jumping_haste_mod = 1.5;
 self.dive_threshold = 10;
 self.impact_speed = 16;
 self.max_speed = 40;
-self.action_rate = 6;
 self.max_doublejumps = 0;
 self.skid_speed = 2;
 self.max_walkup_step = 10;
@@ -169,12 +164,11 @@ self.climbing_anim_speed = 0.33;
 self.lc_anim_speed = 0.07;
 self.crouch_anim_speed = 0.12;
 self.flip_anim_speed = 0.2;
-self.backflip_anim_speed = 0.2;
+//self.backflip_anim_speed = 0.2;
 self.running_anim_speed = 0.08;
 self.walking_anim_speed = 0.088;
 self.idle_anim_speed = 0.14;
 self.idle_anim_start = 0;
-self.victory_anim_end = 4;
 self.damage_tint_ratio = 0.66;
 self.status_tint_ratio = 0.33;
 self.alpha = 0.96;
@@ -247,24 +241,6 @@ self.qubits = 0;
 self.att_forget_delay = 360;
 
 // EFFECTS
-self.burn_rate = 0.0015;
-self.frozen_rate = 0.0025;
-self.slow_rate = 0.002;
-self.conf_rate = 0.0015;
-self.weak_rate = 0.001;
-self.bounce_rate = 0.001;
-self.blind_rate = 0.003;
-
-self.max_burn_time = 0.5;
-self.max_frozen_time = 0.5;
-self.max_slow_time = 0.5;
-self.max_conf_time = 0.5;
-self.max_weak_time = 0.5;
-self.max_bounce_time = 0.8;
-self.max_blind_time = 0.5;
-
-self.max_frozen_total_time = 0.8;
-
 self.sear_tick_damage = 0.0003;
 self.was_frozen = true;
 self.prefrost_image_speed = 0;
@@ -280,7 +256,6 @@ self.channel_maxboost = 0.003;
 self.channel_coef = channel_maxboost/channel_duration_threshold;
 self.channel_range = 196;
 self.channel_force = 1;
-self.channel_hp_cost = 5;
 self.channel_effect = noone;
 self.max_channeled_energy = 3;
 self.safe_channeling = false;
@@ -316,9 +291,6 @@ facing=1;
 self.looking_up = false;
 self.looking_down = false;
 self.look_start = -1;
-self.recent_hor_dir = false;
-self.recent_up = false;
-self.recent_down = false;
 self.desired_aim_dir = 0;
 self.desired_aim_dist = 0;
 
@@ -379,10 +351,6 @@ self.have_casted = false;
 self.air_dashing = false;
 
 // ALT FIRE
-self.wanna_act = false;
-self.was_acting = false;
-self.has_acted = false;
-self.action_cooldown = 0;
 self.fire_cannon = false;
 
 // ABILITIES
@@ -392,7 +360,6 @@ self.has_tped = false;
 
 self.last_shield_color = -1;
 self.last_shield_break_color = -1;
-self.item_switch_dir = 0;
 
 // LOST CONTROL
 self.lost_control = false;
@@ -421,13 +388,14 @@ self.score_multiplier = 1;
 current_respawn_time = 0;
 
 // GLITCHING
+/*
 self.is_glitching = false;
 self.glitch_phase = 0;
 self.glitch_dir = 0;
+*/
 
 // STATS
 self.crystals = 0;
-self.has_won = false;
 
 // guy's footsteps, not game steps
 last_step = 0;
@@ -519,7 +487,6 @@ self.flashback_queue = ds_list_create();
 self.state = ds_map_create();
 self.old_state = ds_map_create();
 self.has_haste = false;
-self.bullettime = false;
 self.flashing_back = false;
 self.frozen_in_time = false;
 self.berserk = false;
@@ -561,7 +528,6 @@ self.cooldown_damage_coef = 5*singleton_obj.game_speed;
 blocked_tp_cooldown = singleton_obj.game_speed;
 
 self.has_tp_rush = false;
-self.last_terrain = noone;
 
 var color;
 for(color = g_dark; color <= g_white; color++)

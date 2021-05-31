@@ -20,8 +20,7 @@ slime_ball_count = 7;
 incoming_lockon_range = 192;
 supported_terrain = solid_terrain_obj;
 
-coltype_var = solid_terrain_obj;
-//coltype_var = coltype_blocking;
+blocking_object = solid_terrain_obj;
 
 blocking_terrain = noone;
 head_terrain = noone;

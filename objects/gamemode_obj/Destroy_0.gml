@@ -28,10 +28,7 @@ ds_list_destroy(losers);
 ds_map_destroy(mods_state);
 ds_map_destroy(custom_mods);
 
-singleton_obj.show_minimap = false;
-
 if(instance_exists(world))
 {
-    instance_destroy(world);   
+    instance_destroy(world);
 }
-

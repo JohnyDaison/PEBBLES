@@ -299,7 +299,7 @@ function nav_graph_generate() {
                 {
                     var from_wp = wp1;
                     var to_wp = wp2;
-                    var y_diff;
+                    //var y_diff;
                 
                     // from -> to and to -> from
                     repeat(2)

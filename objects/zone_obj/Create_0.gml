@@ -2,7 +2,6 @@ event_inherited();
 
 triggerable = true;
 trigger_script = empty_script;
-triggered = false;
 triggerables = ds_list_create();
 trigger_targets = ds_list_create();
 

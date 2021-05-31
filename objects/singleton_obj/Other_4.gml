@@ -1,4 +1,3 @@
-last_fps = game_get_speed(gamespeed_fps);
 if(paused) {
     alarm[1] = 1;
 }

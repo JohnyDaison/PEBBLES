@@ -17,10 +17,6 @@ line_height = 24;
 x = -1000;
 y = -1000;
 
-window_x_center = x + self.width / 2;
-window_y_center = y + self.height / 2;
-
-
 eloffset_x = x + margin;
 eloffset_y = y + margin;
 
@@ -46,7 +42,7 @@ ii.show_icon = true;
 ii.center_icon = true;
 ii.centered = true;
 
-attack_icon = ii;
+//attack_icon = ii;
 
 
 ii = gui_add_label(label_column_offset, 0, "ATTACK");
@@ -54,7 +50,7 @@ ii.centered = true;
 ii.width = label_column_width;
 ii.height = 24;
 
-attack_label = ii;
+//attack_label = ii;
 
 
 eloffset_y += line_height + margin;
@@ -68,7 +64,7 @@ ii.show_icon = true;
 ii.center_icon = true;
 ii.centered = true;
 
-defense_icon = ii;
+//defense_icon = ii;
 
 
 ii = gui_add_label(label_column_offset, 0, "DEFENSE");
@@ -76,7 +72,7 @@ ii.centered = true;
 ii.width = label_column_width;
 ii.height = 24;
 
-defense_label = ii;
+//defense_label = ii;
 
 
 eloffset_y += line_height + margin;
@@ -90,7 +86,7 @@ ii.show_icon = true;
 ii.center_icon = true;
 ii.centered = true;
 
-healing_icon = ii;
+//healing_icon = ii;
 
 
 ii = gui_add_label(label_column_offset, 0, "HEAL");
@@ -98,7 +94,7 @@ ii.centered = true;
 ii.width = label_column_width;
 ii.height = 24;
 
-healing_label = ii;
+//healing_label = ii;
 
 
 eloffset_y += line_height + margin;

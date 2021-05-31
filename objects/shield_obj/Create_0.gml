@@ -44,7 +44,6 @@ alpha = 0;
 done_for = false;
 dead = false; // hack, should be solved in basic_bot or arena_bot
 collapsed = false;
-auto_recharge = false;
 damage_tint_ratio = 0.66;
 bar_dist = 46;
 bar_height = 6;

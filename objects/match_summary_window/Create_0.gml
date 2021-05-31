@@ -17,7 +17,6 @@ spacing = 12;
 col_thin = 32;
 col_number = 80;
 col_label = 128;
-col_normal = 192;
 col_wide = 256;
 match_col_wide = 296;
 
@@ -53,8 +52,6 @@ with(score_pane)
     eloffset_y = y + heading;
     
     // rows
-
-    tab_start = eloffset_y;
     frame_manager.window_log_str += "\n";
     
     for(i=0; i<=player_num; i+=1)

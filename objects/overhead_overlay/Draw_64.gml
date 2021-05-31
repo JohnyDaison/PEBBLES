@@ -43,8 +43,6 @@ if(instance_exists(my_guy))
         //y = name_offset - dial_dist;
         y = __view_get( e__VW.HPort, my_camera.view )*0.25;
        
-        status_x = __view_get( e__VW.XPort, my_camera.view );
-        
         // ABI HINT POSITION 
         if(my_guy.control_method == cpu_control || my_guy.control_method == keyboard)
         {
@@ -107,7 +105,7 @@ if(instance_exists(my_guy))
             abi_color = -1;
         }
         
-        var abi_name = DB.abi_name_map[? abi_color];
+        abi_name = DB.abi_name_map[? abi_color];
         var abi_key = DB.abimap[? abi_color];
         if(is_undefined(abi_key) || !mod_get_state("abilities") || !has_level(my_guy, abi_key, 1))
         {
@@ -135,17 +133,12 @@ if(instance_exists(my_guy))
             if(abi_left > 0)
             {
                 abi_status = -12*abi_left;
+                
                 abi_dial_ratio = 1 - 2*abi_left;
                 abi_dial_ratio = clamp(abi_dial_ratio,-1,1);
+                
                 abi_dial_color = make_color_rgb((max(abi_dial_ratio,0)-1)*-255,(min(abi_dial_ratio,0)+1)*255,0);
                 abi_dial_color = merge_color(abi_dial_color,c_white,0.5);
-                //abi_dial_color = make_color_rgb(clamp(abi_dial_ratio,-1,0)*-255,clamp(abi_dial_ratio,0,1)*255,0);
-                //abi_dial_color = merge_color(green_color,red_color,my_guy.abi_cooldown/my_guy.abi_cooldown_length);
-                
-                if(abs(round(abi_status)) > 0)
-                {
-                    abi_name_fade = abi_name_maxfade;
-                }
             }
             else
             {
@@ -153,11 +146,6 @@ if(instance_exists(my_guy))
             }
         }
 
-        
-        if(abi_name != last_abi_name)
-        {
-            abi_name_fade = abi_name_maxfade;
-        }
         last_abi_name = abi_name;
         
         my_draw_set_font(abi_font);
@@ -207,17 +195,17 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
         // ABILITY NAME
         var abi_half_width = floor(label_width/2) +4;
         var abi_half_height = floor(label_height/2) +2;
-        draw_set_color(abi_tint);   
-        draw_set_alpha(0.5 * min(1,abi_name_fade));   
+        draw_set_color(abi_tint);
+        draw_set_alpha(0.5);
         draw_roundrect(abi_x - abi_half_width, abi_y1 - abi_half_height,
                         abi_x + abi_half_width, abi_y1 + abi_half_height, false);
         
         draw_set_color(abi_label_tint);
-        draw_set_alpha(1 * min(1,abi_name_fade));
+        draw_set_alpha(1);
         my_draw_text(abi_x, abi_y1, abi_name);
         
         // BG    
-        draw_sprite_ext(bg_sprite,0,abi_x,abi_y2,1,1,0,c_white,0.9*min(1,abi_name_fade));
+        draw_sprite_ext(bg_sprite,0,abi_x,abi_y2,1,1,0,c_white,0.9);
         
         // COOLDOWN
         if(abi_status < 0)
@@ -227,7 +215,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
         }
         
         // ICON
-        draw_sprite_ext(abi_icon,0,abi_x,abi_y2,1,1,0,c_white,0.9*min(1,abi_name_fade*2)); // +((my_guy.facing-1)/-2)
+        draw_sprite_ext(abi_icon,0,abi_x,abi_y2,1,1,0,c_white,0.9); // +((my_guy.facing-1)/-2)
     }
     
     // STATUS EFFECTS PANEL
@@ -507,7 +495,6 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
             {
                 if(show_belt[? col])
                 {
-                    var tint = DB.colormap[? col];
                     var list = belt_list[? col];
                     var y_offset = belt_size*orb_belt_width;
                     if (col == g_dark) 

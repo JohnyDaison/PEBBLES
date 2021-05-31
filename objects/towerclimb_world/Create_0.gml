@@ -2,7 +2,7 @@ event_inherited();
 
 name = "Tower Climb world";
 
-var i=0, place;
+var place;
 //place = add_place_in_room(room_weapons_test, "Weapons", 0,0, 9600,4800, 0);
 
 /*
@@ -17,4 +17,3 @@ place.forced_modifiers[? "holographic_spawners"] = false;
 
 place_count = ds_list_size(places);
 current_place = places[|0];
-

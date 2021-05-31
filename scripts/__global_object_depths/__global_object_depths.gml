@@ -218,7 +218,6 @@ function __global_object_depths() {
     global.__objectDepths[210] = 0; // player_obj
     global.__objectDepths[211] = -100; // singleton_obj
     global.__objectDepths[212] = 0; // DB
-    global.__objectDepths[213] = 0; // tester_obj
     global.__objectDepths[214] = 0; // phenomena_obj
     global.__objectDepths[215] = 0; // event_manager
     global.__objectDepths[216] = -10000; // screen_fade_obj
@@ -246,14 +245,11 @@ function __global_object_depths() {
     global.__objectDepths[239] = -1500; // fps_overlay
     global.__objectDepths[240] = -950; // battlefeed_overlay
     global.__objectDepths[242] = -90; // key_overlay
-    global.__objectDepths[243] = -10; // score_overlay
     global.__objectDepths[244] = -100; // terrain_overlay
     global.__objectDepths[245] = -950; // center_overlay
     global.__objectDepths[246] = -1100; // inventory_overlay
     global.__objectDepths[247] = -1100; // healthbar_overlay
     global.__objectDepths[248] = -1400; // radial_overlay
-    global.__objectDepths[249] = -950; // minimap_overlay
-    global.__objectDepths[250] = -1200; // player_minimap_overlay
     global.__objectDepths[251] = -950; // tutorial_overlay
     global.__objectDepths[252] = -950; // item_description_overlay
     global.__objectDepths[253] = -50; // damage_popup_obj
@@ -517,7 +513,6 @@ function __global_object_depths() {
     global.__objectNames[210] = "player_obj";
     global.__objectNames[211] = "singleton_obj";
     global.__objectNames[212] = "DB";
-    global.__objectNames[213] = "tester_obj";
     global.__objectNames[214] = "phenomena_obj";
     global.__objectNames[215] = "event_manager";
     global.__objectNames[216] = "screen_fade_obj";
@@ -545,14 +540,11 @@ function __global_object_depths() {
     global.__objectNames[239] = "fps_overlay";
     global.__objectNames[240] = "battlefeed_overlay";
     global.__objectNames[242] = "key_overlay";
-    global.__objectNames[243] = "score_overlay";
     global.__objectNames[244] = "terrain_overlay";
     global.__objectNames[245] = "center_overlay";
     global.__objectNames[246] = "inventory_overlay";
     global.__objectNames[247] = "healthbar_overlay";
     global.__objectNames[248] = "radial_overlay";
-    global.__objectNames[249] = "minimap_overlay";
-    global.__objectNames[250] = "player_minimap_overlay";
     global.__objectNames[251] = "tutorial_overlay";
     global.__objectNames[252] = "item_description_overlay";
     global.__objectNames[253] = "damage_popup_obj";

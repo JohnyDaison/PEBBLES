@@ -14,8 +14,7 @@ can_jump = false;
 done_for = false;
 energy = 0.1;
 
-coltype_var = solid_terrain_obj;
-//coltype_var = coltype_blocking;
+blocking_object = solid_terrain_obj;
 
 self.holo_alpha = 1;
 self.holo_alpha_step = 0.005;

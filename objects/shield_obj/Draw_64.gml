@@ -30,7 +30,6 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                         
                         var base_bar_width = floor(base_charge * 60 * camera.zoom_level);
                         var feed_bar_width = floor(collapse_threshold * 60 * camera.zoom_level);
-                        var total_bar_width = base_bar_width + feed_bar_width;
 
                         bar_dist = (base_radius - 8) * max_charge * size_coef * camera.zoom_level;
                         

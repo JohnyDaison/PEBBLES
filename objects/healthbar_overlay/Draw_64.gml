@@ -1,7 +1,6 @@
 if(ready && instance_exists(my_guy))
 { 
     // DRAW FIRST BACKGROUNDS (which serve as borders for health bars)
-
     if(draw_own_hp)
     {
         draw_set_alpha(hide_hp_alpha);
@@ -29,7 +28,8 @@ if(ready && instance_exists(my_guy))
         draw_set_alpha(hide_basehp_alpha);
         draw_rectangle( basehp_x0, bar_y2, basehp_x0+width-1, bar_y3, false);
     }
-        
+    
+    
     if(draw_own_hp)
     {
         // DRAW HEALTH
@@ -62,23 +62,7 @@ if(ready && instance_exists(my_guy))
         
             draw_rectangle( gain_x0, bar_y0, gain_x1, bar_y1, false);
         }
-    
-        // DRAW HP HANDICAP MARK
-        /*
-        if(min_damage > 0)
-        {
-            draw_set_alpha(hide_hp_alpha);
-        
-            draw_set_color( handicap_color);
-            draw_rectangle( handicap_x1, bar_y0, handicap_x2, bar_y1, false);
-        
-            draw_set_color( bg_color);
-            draw_rectangle( handicap_x1, bar_y0, handicap_x1+7, bar_y1, false);
-        
-        }
-        */
     }
-    
     
     if(base_exists)
     {

@@ -18,8 +18,6 @@ function player_quest_skip_to_command(player_number, skip_to_quest) {
     var quest_id = quest_state[? "quest_id"];
     var context = quest_state[? "context"];
     var quest_node = DB.quest_nodes[? quest_id];
-    var root_context = quest_state[? "root_context"];
-    var cond_states = quest_state[? "transition_condition_states"];
 
     var subtasks_list, subtask_count, subtasks, subtask_state, subtask, subtask_node, context_id, sub_i;
     var subtask_state, mandatory_subtask_chosen, subtask_chosen, subtasks_progress, mandatory_subtasks_progress;

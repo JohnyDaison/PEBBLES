@@ -1,5 +1,4 @@
 function init_animation() {
-    animation = noone;
     start_step = -1;
     anim_set_steps_total = 0;
     anim_set_current_step = 0;
@@ -12,7 +11,6 @@ function init_animation() {
     sprite_xx = 0;
     sprite_yy = 0;
     main_tint = c_white;
-    //tint_updated = true;
     bg_tint = c_white;
     fg_tint = c_white;
     anim_angle = 0;

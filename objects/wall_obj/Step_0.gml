@@ -172,7 +172,7 @@ if(active)
                 my_color = my_next_color;
             }
             
-            var dir, burst_x, burst_y, ter, i;
+            var dir, burst_x, burst_y, i;
             
             burst_count = 0;
             

@@ -31,8 +31,6 @@ last_attacker_init();
 
 att_forget_delay = 60;
 last_dmg = 0;
-spread_cost = 0.15;
-spread_ratio = 0.66;
 spread_count = 0;
 
 orig_energy = energy;
@@ -53,7 +51,6 @@ spreading = false;
 bursting = false;
 burst_rate = 0.04;
 burst_count = 0;
-color_change_coef = 0.2;
 burst_recheck = false;
 
 light_shape = shape_circle;

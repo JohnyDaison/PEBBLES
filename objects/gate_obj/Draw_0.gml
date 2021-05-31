@@ -1,12 +1,12 @@
 draw_sprite_ext(gate_spr, 0, x,y, 1,1, 0, tint, 1);
 
-for(i=0; i<4; i++)
+for(var i=0; i<4; i++)
 {
-    if(enabled[?i])
+    if(enabled[? i])
     {
         var xx = 1, xcor = 0,
             yy = 1, ycor = 0,
-            cur_tint, list, count;
+            cur_tint, cover_tint;
             
         if(i==1)
             ycor = 1;
@@ -34,17 +34,6 @@ for(i=0; i<4; i++)
         {
             cover_tint = my_block.tint;
         }
-        
-        /*
-        list = tints[? i];
-        count = ds_list_size(list);
-        
-        if(count > 0)
-        {
-            cur_tint = list[| (floor(singleton_obj.step_count/tint_change_time) mod count)];
-        }
-        */
-        
         
         draw_sprite_ext(sprite, 0, x+xcor,y+ycor, xx,yy, i mod 2*90, cover_tint, 1);
         draw_sprite_ext(sprite, 1, x+xcor,y+ycor, xx,yy, i mod 2*90, cur_tint, 1);

@@ -94,17 +94,8 @@ else
                     teammate.ball_touches++;
                 }
                 
-                /*
-                if(ball_touches >= place_controller_obj.max_touches)
-                {
-                    place_controller_obj.da_ball.vspeed = 0;
-                }
-                */
-                
                 var new_color;
-                
-                do
-                {
+                do {
                     new_color = irandom_range(g_red, g_white);   
                 }
                 until(place_controller_obj.current_color != new_color)

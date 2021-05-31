@@ -24,7 +24,7 @@ if(singleton_obj.show_console != show_state && singleton_obj.show_console != "hi
     self.height = (visible_line_count+1)*line_height + panel_height;
     history_list.height = self.height - panel_height;    
     
-    gui_move_element(status_button, x, y+height-32);
+    gui_move_element(log_popup_button, x, y+height-32);
     gui_move_element(command_input, x+32, y+height-32);
     gui_move_element(menu_button, x+width-32, y+height-32);
     gui_move_element(menu_pane, x+width/2 -32, y+height - (menu_height+panel_height));
@@ -41,7 +41,7 @@ if (history_list.cur_item == history_list.item_count - 1) {
 }
 
 if (DB.console_popup_on_log) {
-    status_button.icon = green_dot_spr;
+    log_popup_button.icon = green_dot_spr;
 } else {
-    status_button.icon = black_dot_spr;
+    log_popup_button.icon = black_dot_spr;
 }

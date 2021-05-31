@@ -2,12 +2,10 @@ event_inherited();
 
 name = "Arena World";
 
-var i=0, place;
-
+var place;
 
 place = add_place_in_room(classic_arena, "Classic Arena", 0,0, 2912,1472, 0);
 place.description = "Small arena from the dawn of the age.";
-//place.controller = classic_arena_place_controller_obj;
 place.controller = autogenerate_place_controller_obj;
 place.forced_modifiers[? "turrets"] = false;
 
@@ -64,7 +62,6 @@ place.forced_modifiers[? "lightning_strikes"] = false;
 
 place = add_place_in_room(face_arena, "Face Arena", 0,0, 3104,2016, 0);
 place.description = "Small arena with rounder geometry with a few Turrets and two gravity anomalies.";
-// TODO: this is shared, but shouldn't be the same
 place.controller = autogenerate_place_controller_obj;
 
 /*

@@ -53,7 +53,7 @@ function message_fire_cannon(argument0) {
                     var found = false;
                     with(big_projectile_obj)
                     {
-                        if(my_guy == other.base.base_cannon)
+                        if(my_guy == base.base_cannon)
                             found = true;
                     }
                     return found;

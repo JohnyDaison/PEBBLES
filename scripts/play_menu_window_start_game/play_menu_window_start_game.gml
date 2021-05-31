@@ -1,6 +1,4 @@
-/// @function play_menu_window_start_game
 function play_menu_window_start_game() {
-
     var gm_pane = play_menu_window.gamemode_pane;
     var players_pane = play_menu_window.players_pane;
     var player_panes_map = play_menu_window.player_panes_map;
@@ -138,72 +136,11 @@ function play_menu_window_start_game() {
         gamemode.players[? pl_num] = player;
     }
 
-    /*
-    var player1 = instance_create(0,0,player_obj);
-    player1.number = 1;
-
-    player1.name = players_pane.name1_input.text;
-    player1.flag = DB.player_flags[| players_pane.flag1_input.value];
-    player1.icon = DB.bf_icon_map[? player1.flag];
-    player1.handicaps[? "min_damage"] = players_pane.handicap1_input.value;
-    player1.control_set = players_pane.p1control_dropdown.value;
-    if(player1.control_set == gamepad)
-    {
-        player1.control_index = gamepad_index++;
-    }
-    player1.is_cpu = (players_pane.p1control_dropdown.value == cpu_control_set);
-    player1.cpu_difficulty = players_pane.p1cpudiff_input.value/10;
-
-    ds_map_add(gamemode.players, 1, player1.id);
-
-
-    // HACK, FIX
-    if(gamemode.player_count >= 2)
-    {
-        var player2 = instance_create(0,0,player_obj);
-        player2.number = 2;
-
-        player2.name = players_pane.name2_input.text;
-        player2.flag = DB.player_flags[| players_pane.flag2_input.value];
-        player2.icon = DB.bf_icon_map[? player2.flag];
-        player2.handicaps[? "min_damage"] = players_pane.handicap2_input.value;
-        player2.control_set = players_pane.p2control_dropdown.value;
-        if(player2.control_set == gamepad)
-        {
-            player2.control_index = gamepad_index++;
-        }
-        player2.is_cpu = (players_pane.p2control_dropdown.value == cpu_control_set);
-        player2.cpu_difficulty = players_pane.p2cpudiff_input.value/10;
-
-        ds_map_add(gamemode.players, 2, player2.id);
-    }
-    */
-
 
     // MODS
     ds_map_copy(gamemode.custom_mods, gm_pane.gmmod_customs);
-    var update_succesful = mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
-    //var mod_controls = gm_pane.gmmod_controls;
+    mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
 
-    // test
-    /*
-    show_debug_message("MODS UPDATE: " + string(update_succesful));
-    var count, mod_id, test_passed, mod_string, all_tests_string = "TESTS PASSED";
-    count = ds_list_size(DB.gamemode_mod_list);
-    
-    for(i=0; i<count; i++)
-    {
-        mod_id = DB.gamemode_mod_list[| i];
-        test_passed = gamemode.mods_state[? mod_id] == mod_controls[? mod_id].checked;
-        //mod_string = mod_id + " " + string(test_passed);
-        //show_debug_message(mod_string);
-        if(!test_passed)
-        {
-            all_tests_string = "TESTS FAILED";
-        }
-    }
-    show_debug_message(all_tests_string);
-    */
 
     // LIMITS
     var i, limit_id, gm_limits = gm[? "limits"];

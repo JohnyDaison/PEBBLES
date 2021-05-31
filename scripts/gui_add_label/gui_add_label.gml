@@ -1,22 +1,11 @@
-/// @description gui_add_label(xx,yy,new_text);
-/// @function gui_add_label
-/// @param xx
-/// @param yy
-/// @param new_text
-function gui_add_label(argument0, argument1, argument2) {
-	var xx,yy,new_text,ii;
+/// @param x
+/// @param y
+/// @param text
+function gui_add_label(xx, yy, text) {
+    var label = gui_child_init(xx + self.eloffset_x, yy + self.eloffset_y, gui_label);
+    label.text = text;
+    
+    frame_manager.window_log_str += text + "\t";
 
-	xx = argument0;
-	yy = argument1;
-	new_text = argument2;
-
-	ii = gui_child_init(xx+self.eloffset_x,yy+self.eloffset_y,gui_label);
-	ii.text = new_text;
-	ii.orig_text = new_text;
-	frame_manager.window_log_str += new_text + "\t";
-
-	return ii;
-
-
-
+    return label;
 }

@@ -75,7 +75,7 @@ i.width = 31;
 i.height = 31;
 i.centered = true;
 
-self.status_button = i;
+self.log_popup_button = i;
 
 // INPUT
 i = gui_add_command_input(x+32, y+height-32, ">");

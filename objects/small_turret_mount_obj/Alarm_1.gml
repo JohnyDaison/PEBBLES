@@ -18,13 +18,3 @@ if(dist <= 48)
 
 /// ASSIGN PLAYER
 turret_assign_player(id);
-/*
-var closest_spawner = get_closest_spawner(x,y, true);
-
-if(instance_exists(closest_spawner))
-{
-    my_player = closest_spawner.my_player;
-    turret.my_player = my_player;
-}
-*/
-

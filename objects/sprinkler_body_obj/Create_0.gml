@@ -34,8 +34,7 @@ friction = 0.01;
 image_speed = 0;
 image_index = 1;
 
-coltype_var = terrain_obj;
-//coltype_var = coltype_blocking;
+blocking_object = terrain_obj;
 
 // TERRAIN OPTIMIZATION
 read_terrain = true;
@@ -51,4 +50,3 @@ self.ambient_light = 0.6;
 self.direct_light = 0.1;
 
 name = "Sprinkler";
-

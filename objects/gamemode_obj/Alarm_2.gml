@@ -13,7 +13,7 @@ if(!created_gui)
     time_window.y = 56;
     time_window.visible = false;
 
-    created_gui = true;  
+    created_gui = true;
 }
 
 if(!match_started)
@@ -28,7 +28,7 @@ if(!match_started)
         instance_create(0,0,phenomena_obj);
     }
     
-    match_started = true;   
+    match_started = true;
 }
 
 
@@ -41,7 +41,7 @@ var player_defeat_count = 0, team_defeat_count = 0;
 if(player_count > 0)
 {
     var team_number = 0;
-    var team_member_count, team_member_defeat_count, team_defeated;
+    var team_member_count, team_member_defeat_count;
         
     for(i=1; i<=player_count; i++)
     {
@@ -187,10 +187,6 @@ else
             main_camera_obj.on = true;
         }
         
-        with(score_overlay)
-        {
-            stage = 0;
-        }
         with(overhead_overlay)
         {
             instance_destroy();
@@ -248,7 +244,7 @@ else
             
             if(stats[? "received_hits"] > 0)
             {
-                new_ratio = round((stats[? "attack_color_ratio_total"] * 100) / stats[? "received_hits"]);
+                new_ratio = round((stats[? "defense_color_ratio_total"] * 100) / stats[? "received_hits"]);
                 set_stat(id, "defense_color_efficiency", new_ratio, false);
             }
             
@@ -280,7 +276,7 @@ else
                 if(isPlayerStat(player, "score", "highest", true))
                 {
                     winner = player;
-                    player.winner = true;        
+                    player.winner = true;
                 }
                 
                 if(mode == "volleyball")
@@ -288,7 +284,7 @@ else
                     if(team_defeat_count == team_count - 1)
                     {
                         winner = player;
-                        player.winner = true;      
+                        player.winner = true;
                     }
                     else
                     {
@@ -298,7 +294,7 @@ else
                             && player.stats[? "score"] > self.stats[? "score"])
                             {
                                 other.winner = player;
-                                player.winner = true;        
+                                player.winner = true;
                             }
                         }
                     }
@@ -308,7 +304,7 @@ else
         
         if(winner == noone)
         {
-            winner = marked_winner;   
+            winner = marked_winner;
         }
         
         // match end reason
@@ -404,9 +400,9 @@ else
         }
         else
         {
-            alarm[3] = 180;   
+            alarm[3] = 180;
         }
         
         match_finished = true;
-    }    
+    }
 }

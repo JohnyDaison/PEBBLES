@@ -1,7 +1,7 @@
 if(!self.resolved)
 {
     var count = ds_list_size(members);
-    var dig_orig, speed_orig;
+    var dir_orig, speed_orig;
     dir_orig[count] = 0;
     speed_orig[count] = 0;
     var cur_item = noone;

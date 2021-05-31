@@ -12,7 +12,5 @@ self.modal = true;
 self.message = "";
 self.tip = "";
 self.adjusted = false;
-self.display_score = false;
 
 alarm[1] = 1;
-

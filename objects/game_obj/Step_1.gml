@@ -83,7 +83,7 @@ if(obj_center_offset && !obj_center_updated)
 
 if(read_terrain)
 {
-    var ter_block, hor_min, hor_max, ver_min, ver_max, xx, yy, list, size;
+    var hor_min, hor_max, ver_min, ver_max, xx, yy, list, size;
     
     if(ter_list == noone)
     {
@@ -148,4 +148,3 @@ if(read_terrain)
 
     }
 }
-

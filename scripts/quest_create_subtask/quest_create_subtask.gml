@@ -82,7 +82,7 @@ function quest_create_subtask(argument0, argument1, argument2, argument3, argume
 
     if(subquest_type == "item_pickup")
     {
-        node = quest_item_pickup_create(subquest_id, name, description, context_id);
+        node = quest_item_pickup_create(subquest_id, name, description);
      
         quest_add_subtask(parent_quest_id, subquest_id, context_id, order_index, mandatory);
     }
@@ -106,10 +106,8 @@ function quest_create_subtask(argument0, argument1, argument2, argument3, argume
         node = quest_node_create(subquest_id, name, description);
         node[? "subtask_type"] = "use_ability";
         node[? "target_color"] = -1;
-        //node[? "target_amount"] = 1;
 
         transition = quest_transition_create(subquest_id, "init", "start");
-        //condition = quest_add_condition(transition, "subtask", "order");
 
         transition = quest_transition_create(subquest_id, "nonsuccess", "success");
         quest_add_condition(transition, "ability", "use");

@@ -38,8 +38,6 @@ init_levels_player();
 
 init_stats(id, stats);
 
-stat_count = ds_map_size(stats);
-
 achievs = ds_map_create();
 i=1;
 ds_map_add(achievs, i++ , achiev_first_blood);

@@ -14,7 +14,7 @@ function play_anim_set(current_step) {
                 step = self.steps[| i];
                 duration = step[? "duration"];
                 var step_type = step[? "step_type"];
-                var disp_obj = undefined, target_disp = undefined, done = false;
+                var disp_obj = undefined, target_disp = undefined;
             
                 if(step_type == "display")
                 {
@@ -48,17 +48,15 @@ function play_anim_set(current_step) {
                     {
                         visible_index = 0;
                     }
-                
+                    
                     var time = (current_step-temp_dur)/duration;
-  
+                    
                     if(instance_exists(disp_obj))
                     {
                         var puppet = "";
                         var control = "";
                         var control_type = "";
                         var state = "";
-                        var text = "";
-                        var style = "";
                     
                         disp_obj.main_label = "";
                         disp_obj.single_text_mode = false;

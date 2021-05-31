@@ -8,7 +8,6 @@ hover_rate = 10;
 gravity_coef = 0.06;
 friction_coef = 0.02;
 alarm[0] = hover_rate;
-center_gravity = 0.1;
 collectable = true;
 collected = false;
 reserved = false;
@@ -28,8 +27,6 @@ armed_blink_dir = 1;
 last_attacker_init();
 
 despawning = false;
-//alarm[1] = 0;
-despawn_time = 5400;
 fade_counter = 1;
 fade_rate = 0.01;
 

@@ -30,7 +30,7 @@ my_draw_set_font(font);
 word_spacing = string_width(" ");
 short_word_width = 4*word_spacing;
 word_list = ds_list_create();
-wprd_count = 0;
+word_count = 0;
 display_word_list = ds_list_create();
 display_word_progress_map = ds_map_create();
 line_count = 0;

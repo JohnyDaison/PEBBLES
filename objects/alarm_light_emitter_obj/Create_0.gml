@@ -6,7 +6,7 @@ immovable = true;
 
 self.name = "Alarm Light";
 
-angle_offset = 0;
+//angle_offset = 0;
 active = false;
 
 // LIGHT

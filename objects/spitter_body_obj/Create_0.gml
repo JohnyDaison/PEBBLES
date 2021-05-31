@@ -39,7 +39,7 @@ speed = 0.2;
 
 rotation_speed = 0;
 max_rotation_speed = 3;
-rotation_acc = 0.2;
+//rotation_acc = 0.2;
 //avoid_acc = 0.1;
 tracking_acc = 0.1;
 gravity = 0.01;
@@ -47,10 +47,9 @@ friction = 0.01;
 image_speed = 0;
 //image_index = 1;
 
-debug_str = "";
+//debug_str = "";
 
-coltype_var = terrain_obj;
-//coltype_var = coltype_blocking;
+blocking_object = terrain_obj;
 
 // LIGHT
 self.gives_light = true;
@@ -59,4 +58,3 @@ self.ambient_light = 0.2;
 self.direct_light = 0.1;
 
 name = "Spitter";
-

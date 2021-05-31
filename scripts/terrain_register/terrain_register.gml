@@ -1,37 +1,29 @@
-/// @description terrain_register(grid_obj, terrain_obj)
-/// @function terrain_register
-/// @param grid_obj
-/// @param  terrain_obj
-function terrain_register(argument0, argument1) {
-    var obj = argument0;
-    var ter = argument1;
-    var ret = false;
+function terrain_register(grid, terrain) {
+    var result = false;
 
-    var xx, yy, wall, i, count, grid_ter;
-    /*
-    if(!instance_exists(obj) || !instance_exists(ter))
-        return false;
-    */    
-    if(!ds_exists(obj.terrain_grid, ds_type_grid) || !instance_exists(ter))
+    if(!ds_exists(grid.terrain_grid, ds_type_grid) || !instance_exists(terrain))
     {
         return false;
     }
     
-    xx = floor((ter.x - obj.grid_margin) / obj.grid_cell_size);
-    yy = floor((ter.y - obj.grid_margin) / obj.grid_cell_size);
+    var run_debug_code = DB.console_mode == "test" || DB.console_mode == "debug";
+    
+    var xx, yy, i, count, other_terrain;
+    xx = floor((terrain.x - grid.grid_margin) / grid.grid_cell_size);
+    yy = floor((terrain.y - grid.grid_margin) / grid.grid_cell_size);
 
-    if(xx >= 0 && xx < obj.grid_width && yy >= 0 && yy < obj.grid_height)
+    if(xx >= 0 && xx < grid.grid_width && yy >= 0 && yy < grid.grid_height)
     {
-        ter.my_list = ds_grid_get(obj.terrain_grid, xx, yy);
-        ter.grid_x = xx;
-        ter.grid_y = yy;
+        terrain.my_list = ds_grid_get(grid.terrain_grid, xx, yy);
+        terrain.grid_x = xx;
+        terrain.grid_y = yy;
     
-        ter.aligned_x = floor(ter.x / 32)*32;
-        ter.aligned_y = floor(ter.y / 32)*32;
+        terrain.aligned_x = floor(terrain.x / 32)*32;
+        terrain.aligned_y = floor(terrain.y / 32)*32;
     
-        if(DB.console_mode == "test" || DB.console_mode == "debug")
+        if(run_debug_code)
         {
-            with(ter)
+            with(terrain)
             {
                 if(aligned_x != x || aligned_y != y)
                 {
@@ -40,51 +32,51 @@ function terrain_register(argument0, argument1) {
                         color = g_white;   
                     }
                 
-                    create_text_popup("REG NONALIGN", color, id);
+                    create_text_popup("NON-ALIGNED TERRAIN REGISTERED", color, id);
                 }
             }
         }
     
-        if(!is_undefined(ter.my_list) && ds_exists(ter.my_list, ds_type_list))
+        if(!is_undefined(terrain.my_list) && ds_exists(terrain.my_list, ds_type_list))
         {
-            if(DB.console_mode == "test" || DB.console_mode == "debug")
+            if(run_debug_code)
             {
-                count = ds_list_size(ter.my_list);
+                count = ds_list_size(terrain.my_list);
         
                 for(i=0; i<count; i++)
                 {
-                    grid_ter = ter.my_list[| i];
+                    other_terrain = terrain.my_list[| i];
             
-                    if(grid_ter.aligned_x == ter.aligned_x && grid_ter.aligned_y == ter.aligned_y)
+                    if(other_terrain.aligned_x == terrain.aligned_x && other_terrain.aligned_y == terrain.aligned_y)
                     {
-                        ter.error_placement = true;
-                        grid_ter.error_placement = true;
-                        show_debug_message("TERRAIN OVERLAP at ["+ string(ter.aligned_x)+","+string(ter.aligned_y)+"]");
+                        terrain.error_placement = true;
+                        other_terrain.error_placement = true;
+                        my_console_log("TERRAIN OVERLAP at ["+ string(terrain.aligned_x)+","+string(terrain.aligned_y)+"]");
                     }
                 }
             }
         
-            ds_list_add(ter.my_list, ter.id); 
+            ds_list_add(terrain.my_list, terrain.id); 
         
-            if(ter.object_index == wall_obj)    
+            if(terrain.object_index == wall_obj)    
             {
-                ter.alarm[0] = 1;
-                ter.is_new = true;
+                terrain.alarm[0] = 1;
+                terrain.is_new = true;
             }
-            ret = true;
+            result = true;
         }
         else
         {
-            ter.my_list = noone;
-            ter.grid_x = -1;
-            ter.grid_y = -1;
+            terrain.my_list = noone;
+            terrain.grid_x = -1;
+            terrain.grid_y = -1;
         
-            ter.aligned_x = x;
-            ter.aligned_y = y;
+            terrain.aligned_x = x;
+            terrain.aligned_y = y;
         }
     }
 
-    chunk_register(chunkgrid_obj, ter);
+    chunk_register(chunkgrid_obj, terrain);
 
-    return ret;
+    return result;
 }

@@ -1,10 +1,9 @@
 // OVERLAYS
 self.show_fps = false;
-self.show_keyboard_state = false;
+//self.show_keyboard_state = false;
 self.show_colorimatrix = false;
 self.show_terrain = false;
 self.show_chunkgrid = false;
-self.show_minimap = false;
 self.show_console = "hide";
 
 self.game_speed = 60;
@@ -103,7 +102,6 @@ force_feedback = true;
 paused_room = noone;
 paused = false;
 paused_surface = noone;
-pause_surface_str = "";
 has_unpaused = false;
 were_persistent = ds_list_create();
 

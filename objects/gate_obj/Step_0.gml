@@ -24,20 +24,19 @@ if(instance_exists(my_block))
             {
                 other_gate = field[? i].my_gates[? i];
                 
-                var my_energy = my_block.energy;
                 if(instance_exists(other_gate) && other_gate.my_block.object_index == wall_obj)
                 {
-                    var other_energy = other_gate.my_block.energy;
+                    var other_block = other_gate.my_block;
                 
-                    if(my_block.energy > other_gate.my_block.energy
+                    if(my_block.energy > other_block.energy
                     && my_block.energy >= (DB.terrain_config[? "active_threshold"] + transfer_packet_size))
                     {
                         my_block.energy -= transfer_packet_size;
-                        other_gate.my_block.direct_input_buffer += transfer_packet_size;
+                        other_block.direct_input_buffer += transfer_packet_size;
                     
-                        if(other_gate.my_block.my_color == g_dark)
+                        if(other_block.my_color == g_dark)
                         {
-                            other_gate.my_block.my_next_color = my_block.my_next_color;
+                            other_block.my_next_color = my_block.my_next_color;
                         }
                     
                     }

@@ -21,7 +21,6 @@ grid_sight_distance = 10;
 eat_target = noone;
 
 move_tries = 0;
-has_turned = false;
 alive = false;
 done_for = false;
 kill_awarded = false;

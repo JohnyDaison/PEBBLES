@@ -1,9 +1,11 @@
-if(!lost_control && !other.collected && holographic == other.holographic
-&& (other.for_player == -1 || other.for_player == my_player.number))
+var guy = self;
+var item = other;
+
+if(!lost_control && !item.collected && holographic == item.holographic
+&& (item.for_player == -1 || item.for_player == my_player.number))
 {
     var picked_count = 0;
-    var item_index = other.object_index;
-    var item = other.id;
+    var item_index = item.object_index;
 
     if(item.consumed_on_pickup)
     {
@@ -48,8 +50,8 @@ if(!lost_control && !other.collected && holographic == other.holographic
             gamemode_obj.object_index == campaign_obj
             && !(gamemode_obj.mode == "quick_tutorial" && mod_get_state("tut_guide"))
             && instance_exists(my_player.my_camera)
-            && item.object_index != SECRET_obj
-            && item.object_index != qubit_obj
+            && item_index != SECRET_obj
+            && item_index != qubit_obj
             && new_tech;
             
         // currently only the level_upgrade items use this event
@@ -80,12 +82,11 @@ if(!lost_control && !other.collected && holographic == other.holographic
             
             picked_count = stack_size;
             
-            var params = ds_map_create();
-            params[? "who"] = other.id;
+            var params = create_params_map();
+            params[? "who"] = guy.id;
             params[? "picked_count"] = picked_count;
-            register_ds("params", ds_type_map, params, id);
             
-            broadcast_event("item_pickup", id, params);   
+            broadcast_event("item_pickup", id, params);
             
             event_perform(ev_other, ev_user1);
             
@@ -100,16 +101,14 @@ if(!lost_control && !other.collected && holographic == other.holographic
         {
             with(item)
             {
-                var params = ds_map_create();
-                params[? "who"] = other.id;
+                var params = create_params_map();
+                params[? "who"] = guy.id;
                 params[? "picked_count"] = picked_count;
-                register_ds("params", ds_type_map, params, id);
             
-                broadcast_event("item_pickup", id, params);    
+                broadcast_event("item_pickup", id, params);
             }
             
             add_to_inventory(item);
         }
     }
 }
-

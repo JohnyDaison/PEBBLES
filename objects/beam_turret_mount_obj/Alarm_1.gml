@@ -23,8 +23,6 @@ while(tries > 0 && !instance_exists(my_block))
         image_angle = dir;
         x = tc_x;
         y = tc_y;
-        //turret.x = x + lengthdir_x(aim_dist,direction);
-        //turret.y = y + lengthdir_y(aim_dist,direction);
         my_block = ter;
     }
     tries--;
@@ -32,12 +30,3 @@ while(tries > 0 && !instance_exists(my_block))
 
 // ASSING PLAYER
 turret_assign_player(id);
-/*
-var closest_spawner = get_closest_spawner(x,y, true);
-
-if(instance_exists(closest_spawner) && instance_exists(closest_spawner.my_player))
-{
-    my_player = closest_spawner.my_player;
-    turret.my_player = my_player;
-}
-*/

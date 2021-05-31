@@ -1,5 +1,3 @@
-var i, ii, key, other_key;
-
 spawn_active[? "snake"] = mod_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period;
 spawn_active[? "artifact"] = mod_get_state("artifacts");
 spawn_active[? "star_core"] = gamemode_obj.star_fall && singleton_obj.step_count > starfall_grace_period;

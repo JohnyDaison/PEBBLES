@@ -4,7 +4,6 @@ function create_debug_keys_list() {
     // anywhere
     ds_list_add(list, {input: "Ctrl + F", label: "Show FPS"});
     ds_list_add(list, {input: "Ctrl + M", label: "Show Color matrix"});
-    ds_list_add(list, {input: "Alt + M", label: "Show Minimap (disabled)"});
     ds_list_add(list, {input: "Ctrl + C", label: "Show Chunk grid"});
     ds_list_add(list, {input: "Alt + L", label: "Show Object labels"});
     ds_list_add(list, {input: "Ctrl + L", label: "Draw lights"});

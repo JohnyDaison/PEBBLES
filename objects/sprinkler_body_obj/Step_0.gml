@@ -28,18 +28,18 @@ if(instance_exists(guy))
             var h_boost = lengthdir_x(tracking_acc, dir);
             var v_boost = lengthdir_y(tracking_acc, dir);
             
-            if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, coltype_var) 
+            if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, blocking_object) 
             && !place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, gate_field_obj))
             {
                 hspeed += h_boost;
                 vspeed += v_boost;
             }
-            else if(!place_meeting(x+hspeed+h_boost, y+vspeed, coltype_var) 
+            else if(!place_meeting(x+hspeed+h_boost, y+vspeed, blocking_object) 
                  && !place_meeting(x+hspeed+h_boost, y+vspeed, gate_field_obj))
             {
                 hspeed += h_boost;
             }
-            else if(!place_meeting(x+hspeed, y+vspeed+v_boost, coltype_var)
+            else if(!place_meeting(x+hspeed, y+vspeed+v_boost, blocking_object)
                  && !place_meeting(x+hspeed, y+vspeed+v_boost, gate_field_obj))
             {
                 vspeed += v_boost;
@@ -52,13 +52,13 @@ if(instance_exists(guy))
 
 // AVOID TERRAIN
 
-var nearest_blocker = instance_nearest(x, y, coltype_var);
+var nearest_blocker = instance_nearest(x, y, blocking_object);
 
 if(instance_exists(nearest_blocker))
 {
     var nearest_blocker_x = nearest_blocker.x;
     var nearest_blocker_y = nearest_blocker.y;
-        
+    
     if(nearest_blocker.obj_center_offset)
     {
         nearest_blocker_x += nearest_blocker.obj_center_xoff;
@@ -85,17 +85,17 @@ if(instance_exists(nearest_blocker))
         
         var h_boost = lengthdir_x(avoiding_acc, dir);
         var v_boost = lengthdir_y(avoiding_acc, dir);
-    
-        if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, coltype_var))
+        
+        if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, blocking_object))
         {
             hspeed += h_boost;
             vspeed += v_boost;
         }
-        else if(!place_meeting(x+hspeed+h_boost, y+vspeed, coltype_var))
+        else if(!place_meeting(x+hspeed+h_boost, y+vspeed, blocking_object))
         {
             hspeed += h_boost;
         }
-        else if(!place_meeting(x+hspeed, y+vspeed+v_boost, coltype_var))
+        else if(!place_meeting(x+hspeed, y+vspeed+v_boost, blocking_object))
         {
             vspeed += v_boost;
         }
@@ -117,16 +117,16 @@ if(instance_exists(burst))
         var h_boost = lengthdir_x(avoiding_acc, dir);
         var v_boost = lengthdir_y(avoiding_acc, dir);
     
-        if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, coltype_var))
+        if(!place_meeting(x+hspeed+h_boost, y+vspeed+v_boost, blocking_object))
         {
             hspeed += h_boost;
             vspeed += v_boost;
         }
-        else if(!place_meeting(x+hspeed+h_boost, y+vspeed, coltype_var))
+        else if(!place_meeting(x+hspeed+h_boost, y+vspeed, blocking_object))
         {
             hspeed += h_boost;
         }
-        else if(!place_meeting(x+hspeed, y+vspeed+v_boost, coltype_var))
+        else if(!place_meeting(x+hspeed, y+vspeed+v_boost, blocking_object))
         {
             vspeed += v_boost;
         }
@@ -137,7 +137,7 @@ if(instance_exists(burst))
 
 
 // BOUNCE OFF TERRAIN AND GATE FIELDS
-if(my_move_bounce(coltype_var))
+if(my_move_bounce(blocking_object))
 {
     speed *= 0.8;
 }
@@ -147,7 +147,7 @@ if(my_move_bounce(gate_field_obj))
     speed *= 0.8;
 }
 
-    
+
 if(speed > max_speed)
 {
     speed = max_speed;
@@ -175,4 +175,3 @@ if(damage >= hp)
     done_for = true;
     dead = true;
 }
-

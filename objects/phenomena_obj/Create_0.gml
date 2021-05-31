@@ -2,7 +2,6 @@
 base_spawn_delay = 1200; //1800 //600;
 spawn_delay = base_spawn_delay; 
 spawn_delay_ratio = 1;
-orig_spawn_delay = spawn_delay;
 hor_margin = 160;
 ver_margin = 160;
 slots_enabled = false;
@@ -22,7 +21,6 @@ bolt_rain_duration = 40*60; // 40s
 bolt_rain_pause = 30*60; // 30s
 bolt_rain_start_step = -bolt_rain_duration -bolt_rain_pause;
 bolt_rain_delay_ratio = 1/60; // every 20 steps
-bolt_rain_prob_ratio = 0.2;
 
 // LIGHTNING STRIKES
 lightning_strikes_started = false;

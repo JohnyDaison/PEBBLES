@@ -6,7 +6,6 @@ human_player_count = 0;
 players = ds_map_create();
 limits = ds_map_create();
 stats = ds_map_create();
-//starting_slots = 0;
 arena = noone;
 arena_name = "";
 mode = "";
@@ -39,8 +38,10 @@ winner = noone;
 loser = noone;
 losers = ds_list_create();
 
+/*
 pixelating_left = 0;
 pixelate_time = 1;
+*/
 
 time_window = noone;
 battlefeed = noone;
@@ -124,9 +125,3 @@ player.battlefeed = battlefeed;
 players[? 0] = player;
 
 environment = player;
-/*
-player = instance_create(0,0,player_obj);
-player.number = -1;
-player.name = "NPC";
-ds_map_add(players,-1,player);
-*/

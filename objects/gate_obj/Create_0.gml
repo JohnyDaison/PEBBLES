@@ -2,9 +2,6 @@ event_inherited();
 
 var i;
 
-tint_change_time = 90;
-
-outer_tint = c_white;
 enabled = ds_map_create();
 active = ds_map_create();
 field = ds_map_create();

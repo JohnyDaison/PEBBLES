@@ -26,7 +26,6 @@ blink_length = 180;
 red_tint = c_red;
 get_tint = c_green;
 bg_sprite = inventory_bg_spr;
-border_sprite = inventory_cursor_spr;
 full_inv_blink = false;
 
 draw_inventory = true;

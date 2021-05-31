@@ -1,9 +1,6 @@
 event_inherited();
 
-closest_spawner = noone;
-closest_dist = -1;
 my_guy = noone;
-
 my_range = 416;
 charge = 0;
 charging = true;
@@ -17,4 +14,3 @@ my_color = g_red;
 self.tint_updated = false;
 
 name = "Medium Turret";
-

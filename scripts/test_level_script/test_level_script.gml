@@ -41,7 +41,6 @@ function test_level_script() {
     
         instance_create(0,0,match_obj);
     
-        match_obj.starting_slots = 3;
         match_obj.arena_name = place_obj.name;
         for(i=0;i<DB.limit_count;i+=1)
         {
@@ -57,7 +56,7 @@ function test_level_script() {
             show_debug_message("plnum: "+string(player_number));
             if(player_number == 1)
             {
-                if(other.req_gamepad1)
+                if(req_gamepad1)
                 {
                     player.control_set = gamepad;
                     player.control_index = 1;
@@ -69,14 +68,14 @@ function test_level_script() {
             }
             if(player_number == 2)
             {
-                if(other.req_gamepad2)
+                if(req_gamepad2)
                 {
                     player.control_set = gamepad;
                     player.control_index = 2;
                 }
                 else
                 {
-                    if(other.req_gamepad1)
+                    if(req_gamepad1)
                     {
                         player.control_set = keyboard1;    
                     }
@@ -155,7 +154,4 @@ function test_level_script() {
             event_perform(ev_other,ev_room_start);
         }
     }
-
-
-
 }

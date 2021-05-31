@@ -228,8 +228,6 @@ if(!self.climbing_up)
             stuck_x = x;
             stuck_y = y;
             
-            first_stuck_step = step_count;
-            
             walking_up = false;
             unstuck_solved = false;
             

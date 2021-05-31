@@ -30,7 +30,6 @@ if(gamemode_obj.inited_player_count == gamemode_obj.player_count)
 // INIT
 self.my_guy = noone;
 self.my_field = noone;
-self.player_camera = noone;
 self.place_holder = noone;
 base_cannon = noone;
 my_shield = noone;
