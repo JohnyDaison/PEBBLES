@@ -50,4 +50,3 @@ else
     read_terrain = false;
     alarm[6] = -1;
 }
-

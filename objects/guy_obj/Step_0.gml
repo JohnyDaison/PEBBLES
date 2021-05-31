@@ -1999,18 +1999,9 @@ if(!self.frozen_in_time)
             soundtime++;
         }
         
-        // ENERGY BOOST
-        var total_e_boost = min(channel_maxboost, channel_duration*channel_coef);
-        var e_boost = 0, col, list, count;
-        var full_orbs_count = 0;
-        
-        if(slot_number > 0)
-        {
-            e_boost = total_e_boost / slot_number;
-        }
-        
         // TOTAL EXTRA ENERGY
         total_orb_extra_energy = 0;
+        var col, list, count;
         for (col = g_red; col <= g_blue; col++)
         {
             if(col == g_yellow)
@@ -2032,7 +2023,17 @@ if(!self.frozen_in_time)
             }
         }
         
+        // ENERGY BOOST
+        var total_e_boost = min(channel_maxboost, channel_duration*channel_coef);
+        
+        var e_boost = 0; 
+        if(slot_number > 0)
+        {
+            e_boost = total_e_boost / slot_number;
+        }
+        
         // COUNT FULL ORBS
+        var full_orbs_count = 0;
         if(total_orb_extra_energy >= self.max_channeled_energy)
         {
             full_orbs_count = slot_number;

@@ -48,7 +48,7 @@ drain_update_delay = 30;
 drain_quick_update_delay = 10;
 drain_energy_step = 0.003;
 min_drain_efficiency = 0.5;
-max_drain_efficiency = 0.8;
+max_drain_efficiency = 1.6;
 //for read_terrain
 self.ter_right = 2;
 self.ter_left = 2;
