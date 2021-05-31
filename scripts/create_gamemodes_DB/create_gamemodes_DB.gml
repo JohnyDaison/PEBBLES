@@ -201,6 +201,7 @@ function create_gamemodes_DB() {
     default_mods[? "base_crystals"] = true;
     default_mods[? "weak_terrain"] = true;
     default_mods[? "dark_orb_energy_lock"] = true;
+    default_mods[? "equal_colors"] = true;
     default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
