@@ -10,7 +10,7 @@ function guy_die_from_falling() {
         //if(la_player.object_index == player_obj)
         //{
             // KILLED BY ANOTHER
-            if(la_player != my_player)
+            if(la_player.team_number != my_player.team_number)
             {
                 if(la_player != gamemode_obj.environment)
                 {
@@ -77,25 +77,25 @@ function guy_die_from_falling() {
             stat_str = stat_label("score", score_value, "+");
         }
     }
-        
-        
+    
+    
     battlefeed_post_destruction(id, id.last_attacker_map, stat_str);
-        
+    
     increase_stat(my_player,"deaths",1,false);
     increase_stat(my_player,"deathstreak",1,false);
-
+    
     set_stat(my_player,"killstreak",0,false);
     set_stat(my_player,"spellstreak",0,false);
     set_stat(my_player,"abilitystreak",0,false);
-        
-        
+    
+    
     var params = create_params_map();
     params[? "who"] = last_attacker_map[? "source_id"];
     params[? "who_player"] = la_player;
-            
+    
     broadcast_event("object_destroy", id, params);
-        
-
+    
+    
     lost_control = true;
     front_hit = true;
     dead = true;
@@ -105,7 +105,7 @@ function guy_die_from_falling() {
     {
         my_player.my_camera.death_cover_show = true;
     }
-        
+    
     if(instance_exists(my_shield))
     {
         with(my_shield)
@@ -116,13 +116,13 @@ function guy_die_from_falling() {
         shield_ready = true;
         alarm[4] = -1;
     }
-        
+    
     // DROP ITEMS
     drop_all_items();
-        
+    
     // DROP ALL EQUIPMENT
     body_unequip_all(id);
-        
+    
     // PLAYER GUY
     if(my_player.my_guy == id)
     {
@@ -159,9 +159,9 @@ function guy_die_from_falling() {
                     break;
                 }
             }
-                
+            
             instance_destroy(last_standing_position);
-                
+            
             if(instance_exists(my_spawner))
             {
                 // START RESPAWN
@@ -211,7 +211,7 @@ function guy_die_from_falling() {
                 }
             }
         }
-            
+        
         if(!instance_exists(my_player))
         {
             my_console_log("WTF 01");
@@ -230,7 +230,7 @@ function guy_die_from_falling() {
                 place_holder = instance_create(x,y,place_holder_obj);
                 place_holder.my_player = my_player;
                 my_player.my_camera.my_guy = place_holder;
-            } 
+            }
         }
     }
         
