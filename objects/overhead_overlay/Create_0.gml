@@ -8,7 +8,6 @@ name_dist = 88;
 //icon_dist = 24;
 fade_speed = 0.004;
 hide_speed = 0.008;
-rgb_color_order = false;
 bg_sprite = dial_big_bg_spr;
 rotating_arrow_image = 0;
 rotating_arrow_speed = 0.5;

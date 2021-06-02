@@ -16,7 +16,6 @@ my_player = id;
 my_guy = noone;
 winner = false;
 loser = false;
-rgb_color_order = false;
 achiev_delay = 2;
 last_room = noone;
 is_cpu = false;
