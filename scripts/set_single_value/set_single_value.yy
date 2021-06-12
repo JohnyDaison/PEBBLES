@@ -6,7 +6,7 @@
     "path": "folders/Scripts/console/commands/game_objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "set_number",
+  "name": "set_single_value",
   "tags": [],
   "resourceType": "GMScript",
 }

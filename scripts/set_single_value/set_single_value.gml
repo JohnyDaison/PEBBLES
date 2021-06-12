@@ -1,7 +1,7 @@
-function set_number(object, variable, value) {
+function set_single_value(object, variable, value) {
     var count = 0;
 
-	with(object) {
+    with(object) {
         if (variable_instance_exists(id, variable)) {
            variable_instance_set(id, variable, value);
            count++;

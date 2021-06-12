@@ -68,7 +68,8 @@ function init_console_DB() {
     add_console_script("spawn", spawn_command, "object [, number]", "Spawn object(1) at mouse cursor, number(2) times");
     add_console_script("listds", list_ds, "", "List dynamic structures in ds_registry");
     add_console_script("getvalue", get_value_command, "[object, string]", "For all instances(1) print the value of variable(2)");
-    add_console_script("setnumber", set_number, "object, string, number", "For all instances(1) set variable(2) to number(3)");
+    add_console_script("setnumber", set_single_value, "object, string, number", "For all instances(1) set variable(2) to number(3)");
+    add_console_script("setstring", set_single_value, "object, string, string", "For all instances(1) set variable(2) to string(3)");
     add_console_script("objname", obj_getname, "number", "Return name of the object with given ID(1)");
     add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given ID(1)");
     add_console_script("dumpinst", command_dump_instance, "number", "List all variables and values of instance(1)");
@@ -134,7 +135,7 @@ function init_console_DB() {
 
     ds_list_add(debug, "replace", "transform", "chunks", "chunksoff", "findholders", "listevents");
 
-    ds_list_add(debug, "grouplist", "instlist", "instinfo", "listds", "setnumber", "objname", "spritename");
+    ds_list_add(debug, "grouplist", "instlist", "instinfo", "listds", "setnumber", "setstring", "objname", "spritename");
     ds_list_add(debug, "dumpinst", "dumplist", "dumpmap");
 
     ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
