@@ -76,7 +76,7 @@ function snake_mob_find_food() {
                             sur_ter = instance_nearest(ter.x + DB.terrain_xx[? ii], ter.y + DB.terrain_yy[? ii], terrain_obj);
                             if(sur_ter.x == ter.x + DB.terrain_xx[? ii] && sur_ter.y == ter.y + DB.terrain_yy[? ii])
                             {
-                                if(sur_ter.object_index == wall_obj && sur_ter.cover != cover_indestr)
+                                if(sur_ter.object_index == wall_obj && sur_ter.cover != cover_indestr && sur_ter.cover != cover_grate)
                                 {
                                      if(sur_ter.moving)
                                      {

@@ -14,7 +14,7 @@ if(instance_exists(near_guy))
 // ASSEMBLE
 cur_ter = instance_nearest(x,y, wall_obj);
 
-if(instance_exists(cur_ter) && cur_ter.x == x && cur_ter.y == y && cur_ter.cover != cover_indestr && !cur_ter.moving && !cur_ter.falling)
+if(instance_exists(cur_ter) && cur_ter.x == x && cur_ter.y == y && cur_ter.cover != cover_indestr && cur_ter.cover != cover_grate && !cur_ter.moving && !cur_ter.falling)
 {
     snake_mob_assemble(head_size);
 }

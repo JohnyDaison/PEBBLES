@@ -34,7 +34,7 @@ function snake_mob_assemble() {
     {
         wall = cur_ter.near_walls[? i];
 
-        if(instance_exists(wall) && wall.cover != cover_indestr
+        if(instance_exists(wall) && wall.cover != cover_indestr && wall.cover != cover_grate
         && !wall.moving && !wall.falling
         && ds_list_find_index(ter_group.members, wall) == -1)
         {

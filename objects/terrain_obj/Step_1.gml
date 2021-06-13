@@ -77,9 +77,7 @@ if(self.cover_updated == false)
         case cover_grate:
         {
             cover_spr = grate_cover_spr;
-            cover_multicolor = false;  
-            
-            name = "Grates";
+            cover_multicolor = false;
             break;
         }
         default:

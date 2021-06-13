@@ -67,7 +67,7 @@ if(light_shape == shape_rect)
     light_yoffset = 15.5;
 }
 */
-
+grate = noone;
 
 self.holo_alpha = 1;
 self.holo_alpha_step = 0.005;

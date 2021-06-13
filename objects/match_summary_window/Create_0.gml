@@ -389,7 +389,7 @@ frame_manager.window_log_str += "\n";
 eloffset_x = x + score_pane.width + 32;
 eloffset_y = y + heading + plstats_pane.height + 16;
 
-awards_pane = gui_add_pane(0,0,"PLAYER ACHIVEMENTS AND AWARDS");
+awards_pane = gui_add_pane(0,0,"PLAYER ACHIEVEMENTS AND AWARDS");
 awards_pane.width = 752;
 awards_pane.height = 160;
 

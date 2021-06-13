@@ -26,7 +26,11 @@ if(cover != cover_indestr)
             sound_played = true;
             depth -= 1;
         }
-        mask_index = big_empty_mask;
+        
+        if(cover != cover_grate) {
+            mask_index = big_empty_mask;
+        }
+        
         damage = hp;
         image_index = 3;
         bursting = false;
@@ -70,12 +74,11 @@ if(cover != cover_indestr)
     {
         lock_alpha = max(0,1-(image_index-2)/6);
     }
-
     
     // END OF ANIM DESTROY
     if(image_index+image_speed >= image_number)
     {
-        if(mod_get_state("regenerate_terrain"))
+        if(mod_get_state("regenerate_terrain") && cover != cover_grate)
         {
             var regen_obj = instance_create(xstart, ystart, wall_regenerator_obj);
             regen_obj.energy = orig_energy;

@@ -481,7 +481,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             var snake = instance_position(xx,yy, snake_mob_obj);
             if(!instance_exists(snake))
             {
-                if(instance_exists(ter) && ter.object_index == wall_obj && ter.cover != cover_indestr)
+                if(instance_exists(ter) && ter.object_index == wall_obj && ter.cover != cover_indestr && ter.cover != cover_grate)
                 {
                     instance_create(xx,yy, snake_mob_obj);
                 }
