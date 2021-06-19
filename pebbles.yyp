@@ -1704,6 +1704,7 @@
     {"id":{"name":"universal_pad_obj","path":"objects/universal_pad_obj/universal_pad_obj.yy",},"order":1,},
     {"id":{"name":"universal_pad_foreground_obj","path":"objects/universal_pad_foreground_obj/universal_pad_foreground_obj.yy",},"order":2,},
     {"id":{"name":"monolith_obj","path":"objects/monolith_obj/monolith_obj.yy",},"order":3,},
+    {"id":{"name":"ball_torch_flame_obj","path":"objects/ball_torch_flame_obj/ball_torch_flame_obj.yy",},"order":18,},
     {"id":{"name":"smoke_vent_obj","path":"objects/smoke_vent_obj/smoke_vent_obj.yy",},"order":4,},
     {"id":{"name":"infodisplay_obj","path":"objects/infodisplay_obj/infodisplay_obj.yy",},"order":5,},
     {"id":{"name":"projector_obj","path":"objects/projector_obj/projector_obj.yy",},"order":6,},
