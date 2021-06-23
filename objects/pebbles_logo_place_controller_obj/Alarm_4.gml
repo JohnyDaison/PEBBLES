@@ -1,1 +1,1 @@
-torch_sequence_started = true;
+lightup_sequence_started = true;

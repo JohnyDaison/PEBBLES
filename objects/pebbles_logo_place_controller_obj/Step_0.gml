@@ -1,32 +1,41 @@
-if (instance_exists(guy_obj) && alarm[4] == -1 && !torch_sequence_started) {
-    alarm[4] = torch_sequence_wait_time * singleton_obj.game_speed;
+if (instance_exists(guy_obj) && alarm[4] == -1 && !lightup_sequence_started) {
+    alarm[4] = lightup_sequence_wait_time * singleton_obj.game_speed;
 }
 
-if (torch_sequence_started && !torch_sequence_finished) {
-    var controller = self;
-    
-    if (!instance_exists(torch_obj)) {
-        var color = torch_sequence[| torch_color_index];
+var controller = self;
+
+if (lightup_sequence_started && !lightup_sequence_finished) {
+    if (goto_next) {
+        lightup_sequence_index++;
+        var zone_id = lightup_sequence[| lightup_sequence_index];
         
-        if (is_undefined(color)) {
-            torch_sequence_finished = true;
+        if (is_undefined(zone_id)) {
+            lightup_sequence_finished = true;
         } else {
-            with(crystal_ball_torch_obj) {
-                if (my_color == color) {
-                    controller.torch_obj = self;
+            var zone = group_find_member(get_group("zones"), zone_id);
+            
+            with(zone) {
+                var colorizer = instance_create(x,y, colorizer_obj);
+                
+                colorizer.my_color = my_color;
+                colorizer.sprite_index = sprite_index;
+                colorizer.image_xscale = image_xscale;
+                colorizer.image_yscale = image_yscale;
+                
+                var torch = instance_place(x,y, crystal_ball_torch_obj);
+                
+                if (torch != noone) {
+                    controller.torch_obj = torch;
                 }
             }
         }
+        
+        goto_next = false;
     }
     
-    with(torch_obj) {
-        energy += controller.torch_energy_tick;
-        
-        if (energy >= max_energy) {
-            with(controller) {
-                torch_color_index++;
-                torch_obj = noone;
-            }
-        }
+    torch_obj.energy += torch_energy_tick;
+    
+    if (torch_obj.energy >= torch_obj.max_energy) {
+        goto_next = true;
     }
 }

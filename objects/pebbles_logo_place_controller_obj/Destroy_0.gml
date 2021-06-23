@@ -1,3 +1,3 @@
-ds_list_destroy(torch_sequence);
+ds_list_destroy(lightup_sequence);
 
 event_inherited();
