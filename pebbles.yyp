@@ -908,6 +908,7 @@
     {"id":{"name":"graphic_config_apply","path":"scripts/graphic_config_apply/graphic_config_apply.yy",},"order":1,},
     {"id":{"name":"graphic_config_OK","path":"scripts/graphic_config_OK/graphic_config_OK.yy",},"order":2,},
     {"id":{"name":"play_menu_window_start_game","path":"scripts/play_menu_window_start_game/play_menu_window_start_game.yy",},"order":2,},
+    {"id":{"name":"pebbles_logo_place_controller_obj","path":"objects/pebbles_logo_place_controller_obj/pebbles_logo_place_controller_obj.yy",},"order":3,},
     {"id":{"name":"goto_control_settings","path":"scripts/goto_control_settings/goto_control_settings.yy",},"order":0,},
     {"id":{"name":"goto_graphic_settings","path":"scripts/goto_graphic_settings/goto_graphic_settings.yy",},"order":1,},
     {"id":{"name":"goto_level_editor","path":"scripts/goto_level_editor/goto_level_editor.yy",},"order":2,},

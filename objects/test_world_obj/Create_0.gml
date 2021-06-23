@@ -102,6 +102,7 @@ place.default_modifiers[? "abilities"] = true;
 //place = add_place_in_room(room_escape1, "Escape!", 0,0, 4800,4800, 384);
 
 place = add_place_in_room(room_pebbles_logo, "PEBBLES", 0,0, 4800,4800, 384);
+place.controller = pebbles_logo_place_controller_obj;
 
 
 //place = add_place_in_room(room_slingshot_range, "Slingshot range", 0,0, 4800,4800, 384);

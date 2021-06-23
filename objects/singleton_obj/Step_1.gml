@@ -702,7 +702,6 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                     inst.charge += energy_incr;
                 
                     energy_added = true;
-                
                 }
                 // ORB
                 else if(inst.object_index == color_orb_obj)
@@ -740,6 +739,15 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 else if(inst.object_index == universal_pad_obj)
                 {
                     inst.pad_color = cursor_obj.my_color;
+                }
+                // BALL TORCH
+                else if(inst.object_index == crystal_ball_torch_obj)
+                {
+                    change_color = true;
+                
+                    inst.energy += energy_incr;
+                
+                    energy_added = true;
                 }
             
                 if(change_color)
