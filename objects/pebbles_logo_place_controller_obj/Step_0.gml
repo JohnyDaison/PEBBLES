@@ -22,6 +22,13 @@ if (lightup_sequence_started && !lightup_sequence_finished) {
                 colorizer.image_xscale = image_xscale;
                 colorizer.image_yscale = image_yscale;
                 
+                var invisibilizer = instance_create(x,y, invisibilizer_obj);
+                
+                invisibilizer.invisible = false;
+                invisibilizer.sprite_index = sprite_index;
+                invisibilizer.image_xscale = image_xscale;
+                invisibilizer.image_yscale = image_yscale;
+                
                 var torch = instance_place(x,y, crystal_ball_torch_obj);
                 
                 if (torch != noone) {
