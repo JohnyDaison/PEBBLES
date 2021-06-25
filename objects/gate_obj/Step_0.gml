@@ -45,21 +45,65 @@ if(instance_exists(my_block))
         }
     }
     
-    // WHEN COLOR CHANGE FINISHES
-    if(tint_updated && my_color > g_dark && my_color < g_white)
-    {
-        if(my_last_color > g_dark && my_last_color < g_white)
+    if(my_last_color != my_color) {
+        // AT COLOR CHANGE START
+        if(desired_disc_angle == 0
+            && my_color > g_dark && my_color < g_white 
+            && my_last_color > g_dark && my_last_color < g_white)
         {
-            // EXECUTE COMMAND
             var old_dir = DB.colordirs[? my_last_color];
             var new_dir = DB.colordirs[? my_color];
-            rotate_by += ((round(new_dir-old_dir+2) mod 4)+4) mod 4 -2;
-        }   
+            var rotation = ((round(new_dir-old_dir+2) mod 4)+4) mod 4 -2;
         
-        // DISCARD COLOR
-        my_last_color = my_color;
-        my_color = g_dark;
-        tint_updated = false;
+            desired_disc_angle = rotation * 90; 
+            rotation_acc = rotation_acc_coef * sqr(rotation);
+        }
+    
+        // WHEN COLOR CHANGE FINISHES
+        if(tint_updated && my_color > g_dark && my_color < g_white)
+        {
+            if(my_last_color > g_dark && my_last_color < g_white)
+            {
+                // EXECUTE COMMAND
+                var old_dir = DB.colordirs[? my_last_color];
+                var new_dir = DB.colordirs[? my_color];
+                rotate_by += ((round(new_dir-old_dir+2) mod 4)+4) mod 4 -2;
+            }   
+        
+            // DISCARD COLOR
+            my_last_color = my_color;
+            my_color = g_dark;
+            tint_updated = false;
+        }
+    }
+    
+    // DISC ROTATION
+    var angle_diff = angle_difference(desired_disc_angle, disc_angle);
+    var too_fast = false, wrong_direction = false;
+    var reverse_coef = 1;
+    
+    if(abs(rotation_speed) > 0) {
+        too_fast = abs(2*angle_diff/rotation_speed) <= abs(rotation_speed/rotation_acc);
+        wrong_direction = sign(angle_diff) != sign(rotation_speed);
+        
+        if (too_fast && !wrong_direction) {
+            reverse_coef = -0.25;
+        }
+        
+        if (wrong_direction) {
+            reverse_coef = 1.5;
+        }
+    }
+    
+    var current_acc = reverse_coef * rotation_acc;
+    var stop_limit = abs(current_acc);
+    
+    if(abs(angle_diff) <= stop_limit && abs(rotation_speed) <= stop_limit) {
+        rotation_speed = 0;
+        disc_angle = desired_disc_angle;
+    } else {
+        rotation_speed += current_acc * sign(angle_diff);
+        disc_angle += rotation_speed;   
     }
     
     // RESET FIELDS
@@ -122,9 +166,15 @@ if(instance_exists(my_block))
         if(rotate_failed)
         {
             rotate_by = -orig_rotate_by;
+            desired_disc_angle = 0;
         }
         else
         {
+            if(desired_disc_angle != 0) {
+                disc_angle -= orig_rotate_by * 90;
+                desired_disc_angle = 0;
+            }
+            
             done = true;
         }
     }
