@@ -26,6 +26,34 @@ place.forced_modifiers[? "artifacts"] = false;
 place.forced_modifiers[? "lightning_strikes"] = false;
 
 
+place = add_place_in_room(two_towers_arena, "Two Towers", 0,0, 2048,2048, 0);
+place.description = "You can't run, but you can't hide either.";
+place.controller = autogenerate_place_controller_obj;
+place.single_cam = true;
+place.forced_modifiers[? "turrets"] = false;
+place.forced_modifiers[? "cannons"] = false;
+place.forced_modifiers[? "mob_portals"] = false;
+
+place.forced_modifiers[? "holographic_spawners"] = true;
+place.forced_modifiers[? "hp_death"] = true;
+place.forced_modifiers[? "one_death"] = true;
+place.forced_modifiers[? "dark_color"] = false;
+place.forced_modifiers[? "dark_orb_energy_lock"] = false;
+place.forced_modifiers[? "color_orbs_energy_lock"] = true;
+place.forced_modifiers[? "orbs_energy_min_lock"] = true;
+place.forced_modifiers[? "random_item_spawner"] = false;
+place.forced_modifiers[? "weak_terrain"] = false;
+place.forced_modifiers[? "indestr_terrain"] = false;
+place.forced_modifiers[? "regenerate_terrain"] = false;
+place.forced_modifiers[? "random_item_spawner"] = false;
+place.forced_modifiers[? "snakes_on_a_plane"] = false;
+place.forced_modifiers[? "bolt_rain"] = false;
+place.forced_modifiers[? "slime_mob_rain"] = false;
+place.forced_modifiers[? "artifacts"] = false;
+place.forced_modifiers[? "lightning_strikes"] = false;
+place.forced_modifiers[? "abilities"] = false;
+
+
 place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,2048, 0);
 place.description = "Very few places to stand on and almost no cover.";
 place.controller = autogenerate_place_controller_obj;
