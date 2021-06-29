@@ -145,6 +145,12 @@ if(!dragged && auto_adjust && singleton_obj.step_count mod 5 == 3)
             if(instance_exists(ter))
             {
                 side_terrain = ter;
+                
+                if (wallclimb_point || walljump_point) {
+                    if (x mod 32 == 0) {
+                         x += 2 * sign(x - (side_terrain.x+15));
+                    }
+                }
             }
         
             tries--;
