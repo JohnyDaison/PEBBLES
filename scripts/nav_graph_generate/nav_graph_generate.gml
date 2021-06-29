@@ -188,7 +188,7 @@ function nav_graph_generate() {
                 // indirect
                 // TODO: maybe I should only count the indirect connection going through the higher of the 2 alternative points,
                 // or connect the lower point only as downward edge, not upwards.
-                if(!direct && wp1.auto_adjust && wp2.auto_adjust && !wp1.airborne && !wp2.airborne)
+                if(!direct && wp1.auto_adjust && wp2.auto_adjust && !wp1.airborne && !wp2.airborne && !wp1wall && !wp2wall)
                 {
                     // indirect 1
                     blocker = false;
@@ -248,11 +248,52 @@ function nav_graph_generate() {
                         }
                     }
                 }
+                
+                if(!direct && wp1.auto_adjust && wp2.auto_adjust && (wp1wall || wp2wall) && !(wp1wall && wp2wall))
+                {
+                    // indirect - wall point
+                    blocker = false;
+                    var wall_point, other_point;
+                    
+                    if (wp1wall) {
+                        wall_point = wp1;
+                        other_point = wp2;
+                    } else {
+                        wall_point = wp2;
+                        other_point = wp1;
+                    }
+                    
+                    if(other_point.y >= wall_point.y || abs(other_point.x - wall_point.x) > 96) {
+                        blocker = true;   
+                    } else {
+                        blocker = blocker || collision_line(wall_point.x, wall_point.y, wall_point.x, other_point.y, terrain_obj, false, false);
+                        blocker = blocker || collision_line(wall_point.x, other_point.y, other_point.x, other_point.y, terrain_obj, false, false);
+                    }
+                    
+                    if(!blocker)
+                    {
+                        indirect += 1;
+                        
+                        // one_way
+                        if(wp1wall)
+                        {
+                            one_way_forward = true;
+                        } else {
+                            one_way_backward = true;
+                        }
+                    
+                        if(remove_redundancy)
+                        {
+                            result_number += collision_line_list(wall_point.x, wall_point.y, wall_point.x, other_point.y, npc_waypoint_obj, false, false, results, false);
+                            result_number += collision_line_list(wall_point.x, other_point.y, other_point.x, other_point.y, npc_waypoint_obj, false, false, results, false);
+                        }
+                    }
+                }
             
                 for(result_i = 0; result_i < result_number; result_i++)
                 {
                     result = results[| result_i];
-                    if(result != wp1 && result != wp2 && !result.airborne)
+                    if(result != wp1 && result != wp2 && (!result.airborne || result.wallclimb_point || result.walljump_point))
                     {
                         redundant = true;
                         break;
