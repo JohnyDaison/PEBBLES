@@ -30,6 +30,7 @@ place = add_place_in_room(two_towers_arena, "Two Towers", 0,0, 2048,2048, 0);
 place.description = "You can't run, but you can't hide either.";
 place.controller = autogenerate_place_controller_obj;
 place.single_cam = true;
+ds_list_add(place.level_configs_list, "just_2orbs_start");
 place.forced_modifiers[? "turrets"] = false;
 place.forced_modifiers[? "cannons"] = false;
 place.forced_modifiers[? "mob_portals"] = false;
