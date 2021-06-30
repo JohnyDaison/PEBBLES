@@ -3,12 +3,12 @@ event_inherited();
 walkable = true;
 
 //depth = 20;
-radius = 29;
+radius = 26;
 gives_light = true;
 shape = shape_circle;
 ambient_light = 0;
 direct_light = 0;
-max_ambient_light = 1.1;
+max_ambient_light = 0.8;
 max_direct_light = 0.7;
 image_alpha = 0.1;
 energy = 0;

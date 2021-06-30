@@ -1,6 +1,6 @@
 event_inherited();
 
-radius = 24;
+radius = 20;
 
 system = part_system_create();
 part_system_automatic_draw(system, true);
