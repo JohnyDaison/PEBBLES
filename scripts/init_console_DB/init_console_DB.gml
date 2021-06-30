@@ -93,6 +93,7 @@ function init_console_DB() {
     add_console_script("consolebg", console_background_toggle, "[number]", "Show/Hide console background");
     add_console_script("mode", console_mode_command, "[string]", "Set and/or display console mode (play|test|debug)");
     add_console_script("debugkeylist", command_debug_key_list, "[string]", "List key combos usable in test/debug mode[, filtered by string(1)]");
+    add_console_script("infocursor", command_infocursor_toggle, "[number]", "Show/Hide instance info cursor tool");
 
     add_console_script("circle_precision", circle_precision_command, "number", "Set number of triangles per circle (must be 4*k)");
 
@@ -125,7 +126,7 @@ function init_console_DB() {
 
     ds_list_add(test, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 
-    ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph");
+    ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph", "infocursor");
     console_modes[? "test"] = test;
 
 
