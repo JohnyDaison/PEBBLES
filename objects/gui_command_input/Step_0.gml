@@ -80,7 +80,9 @@ if(visible)
     
         if(!had_focus && focused)
             my_sound_play(blip_sound);
- 
+            
+        var was_tab_mode = tab_mode;
+        
         if(depressed)
         {
             if(string_length(keyboard_string) > self.max_chars)
@@ -93,7 +95,8 @@ if(visible)
             var tab_key = keyboard_check_pressed(vk_tab);
             var up_key = keyboard_check_pressed(vk_up);
             var down_key = keyboard_check_pressed(vk_down);
-        
+            var console_key = keyboard_check_pressed(192);
+            
             if(!history_mode && tab_key) 
             {
                 if(space_index == 0)
@@ -147,7 +150,7 @@ if(visible)
                 }
             
             }
-            else if(keyboard_check_pressed(vk_anykey))
+            else if(keyboard_check_pressed(vk_anykey) && !console_key)
             {
                 if(tab_mode || history_mode)
                 {
@@ -164,7 +167,7 @@ if(visible)
                 tab_mode = false;
                 history_mode = false;
             }
-        
+            
             if(!tab_mode && !history_mode)
             {
                 self.text = keyboard_string;
@@ -182,10 +185,64 @@ if(visible)
             {
                 self.tab_text = string_copy(keyboard_string, 1, space_index);
             }
-        
-        
         }
-    
+        
+        if (!depressed) {
+            tab_mode = false;
+            history_mode = false;
+        }
+        
+        var reset_list_picker = false;
+        
+        // tab_mode start
+        if (!was_tab_mode && tab_mode) {
+            ds_list_clear(items);
+            gui_show_element(list_picker);
+            
+            var list = DB.console_modes[? DB.console_mode];
+            var count = ds_list_size(list);
+            
+            for(var i=0; i < count; i++)
+            {
+                command = list[| i];
+                if(string_pos(tab_text, command) == 1 && ds_list_find_index(DB.console_secrets, command) == -1)
+                {
+                    ds_list_add(items, command);
+                }
+            }
+        
+            reset_list_picker = true;
+        }
+        
+        // tab_mode update
+        if (tab_mode) {
+            var scroll_list = list_picker.scroll_list;
+            var index = ds_list_find_index(scroll_list.items, text);
+            if (index != -1) {
+                 scroll_list.cur_item = index;
+                 scroll_list.selection_pos = index;
+            }
+        }
+
+        // tab_mode end
+        if (was_tab_mode && !tab_mode) {
+            //ds_list_clear(items);
+            gui_hide_element(list_picker);
+                
+            //reset_list_picker = true;
+        }
+        
+        // list_picker reset
+        if (reset_list_picker) {
+            list_picker.scroll_list.max_items = ds_list_size(items);
+            gui_list_picker_items_reset(list_picker, "text", items);
+        }
+        
+        gui_move_element(list_picker, list_picker.x, y + height);
+        if (singleton_obj.show_console == "full") {
+            gui_move_element(list_picker, list_picker.x, y - list_picker.height);
+        }
+        
         if(was_active && !active)
         {
             if(string_length(text) > 0)
@@ -203,7 +260,7 @@ if(visible)
             if(string_length(text) == 0)
             {
                 text = prompt_str;
-            }  
+            }
         }
     
         had_focus = focused;

@@ -1,14 +1,6 @@
 event_inherited();
 
-if(self.auto_height)
-{
-    height = ends_height*2 + max_items*item_height;
-}
-
-if(self.auto_items)
-{
-    max_items = floor((height - ends_height*2) / item_height);
-}
+do_auto_updates();
 
 main_width = width - bar_width - bar_margin;
 
@@ -50,20 +42,7 @@ if(cur_item != -1 && cursor_obj.focus == id)
 }
 
 // CLAMP cur_item AND selection_pos
-if(item_count > 0)
-{
-    if(cur_item < 0)
-    {
-        cur_item = 0;
-        selection_pos = 0;
-    }
-
-    if(item_count-1 < cur_item)
-    {
-        cur_item = item_count-1;
-        selection_pos = min(item_count-1, max_items-1);
-    }
-}
+clamp_current_position();
 
 // MAIN UPDATE
 if(cur_item != -1)

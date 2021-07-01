@@ -1334,6 +1334,7 @@
     {"id":{"name":"octarine_disable_anim_set","path":"scripts/octarine_disable_anim_set/octarine_disable_anim_set.yy",},"order":9,},
     {"id":{"name":"color_wheel_90gate_anim_set","path":"scripts/color_wheel_90gate_anim_set/color_wheel_90gate_anim_set.yy",},"order":10,},
     {"id":{"name":"gui_color_power_pane","path":"objects/gui_color_power_pane/gui_color_power_pane.yy",},"order":6,},
+    {"id":{"name":"gui_command_whisper_script","path":"scripts/gui_command_whisper_script/gui_command_whisper_script.yy",},"order":9,},
     {"id":{"name":"aim_shot_anim_set","path":"scripts/aim_shot_anim_set/aim_shot_anim_set.yy",},"order":11,},
     {"id":{"name":"use_item1_anim_set","path":"scripts/use_item1_anim_set/use_item1_anim_set.yy",},"order":12,},
     {"id":{"name":"charge_pad_anim_set","path":"scripts/charge_pad_anim_set/charge_pad_anim_set.yy",},"order":0,},

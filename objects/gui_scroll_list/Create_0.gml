@@ -45,3 +45,32 @@ self.item_change_script = empty_script;
 self.item_click_script = empty_script;
 self.mouse_scroll_speed = 1;
 self.is_list_picker = false;
+
+function do_auto_updates() {
+    if(auto_height)
+    {
+        height = ends_height*2 + max_items*item_height;
+    }
+
+    if(auto_items)
+    {
+        max_items = floor((height - ends_height*2) / item_height);
+    }
+}
+
+function clamp_current_position() {
+    if(item_count > 0)
+    {
+        if(cur_item < 0)
+        {
+            cur_item = 0;
+            selection_pos = 0;
+        }
+
+        if(item_count-1 < cur_item)
+        {
+            cur_item = item_count-1;
+            selection_pos = min(item_count-1, max_items-1);
+        }
+    }
+}
