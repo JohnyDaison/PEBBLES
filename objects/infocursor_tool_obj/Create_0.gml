@@ -79,6 +79,7 @@ function categories_to_string() {
 function generate_result_line(result) {
     var new_line = string(result.id) + " (" + object_get_name(result.object_index) + ")";
     new_line += " [" + string(result.x) + "," + string(result.y) + "]";
+    new_line += " D:" + string(result.depth);
     
     if (variable_instance_exists(result, "my_color")) {
         new_line += " " + DB.colornames[? result.my_color];
