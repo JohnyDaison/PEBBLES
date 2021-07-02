@@ -460,6 +460,7 @@ with(awards_pane)
 
 
 // DUMP FILE
+var folder = "Summary logs";
 var filename = "";
 var curTime = date_current_datetime();
 filename += my_string_format(date_get_year(curTime),4,0) + "-";
@@ -483,10 +484,9 @@ filename += " on " + gamemode_obj.arena_name;
 filename += "(" + gamemode_obj.name + ")";
 filename += ".txt";
 
-var file = file_text_open_write(filename);
+var file = file_text_open_write(folder + "/" + filename);
 file_text_write_string(file, frame_manager.window_log_str);
 file_text_close(file);
 
 
 alarm[1] = 60;
-
