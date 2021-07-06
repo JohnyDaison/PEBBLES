@@ -15,9 +15,14 @@ if(hold_mode)
 
 if(armed && !done_for)
 {
+    if (placed) {
+        fuse_left -= fuse_tick;
+    }
+    
     if(!active && attached)
     {
         active = true;
+        fuse_left = min(fuse_left, attached_fuse_length);
         
         if(!object_is_ancestor(stuck_to.object_index, phys_body_obj))
         {
@@ -36,51 +41,55 @@ if(armed && !done_for)
     
     if(active)
     {
-        fuse_left -= fuse_tick;
-        
         if(instance_exists(my_shield))
         {
             my_shield.x = x;
             my_shield.y = y;
         }
+    }
+    
+    if(fuse_left <= 0)
+    {
+        speed = 0;
+        gravity = 0;
         
-        if(fuse_left <= 0)
+        if(!gamemode_obj.limit_reached)
         {
-            if(armed && !gamemode_obj.limit_reached)
-            {
-                var i = instance_create(x,y,slot_explosion_obj);
-                i.my_color = my_color;
-                i.my_guy = my_guy;
-                i.my_source = emp_grenade_obj;
-                i.my_player = my_player;
-                i.holographic = holographic;
-            }
-            if(instance_exists(my_shield))
-            {
-                my_shield.my_guy = my_shield.id;
-                my_shield.done_for = true;
-            }
-            
-            with(emp_grenade_obj)
-            {
-                if(armed && point_distance(x,y, other.x,other.y) < chain_explosion_range)
-                {
-                    active = true;
-                    fuse_left = min(fuse_left, 3*fuse_tick);   
-                }
-            }
-            
-            done_for = true;
-            fuse_left = 0;
-            armed = false;
-            active = false;
+            var i = instance_create(x,y,slot_explosion_obj);
+            i.my_color = my_color;
+            i.my_guy = my_guy;
+            i.my_source = emp_grenade_obj;
+            i.my_player = my_player;
+            i.holographic = holographic;
         }
+        
+        if(instance_exists(my_shield))
+        {
+            my_shield.my_guy = my_shield.id;
+            my_shield.done_for = true;
+        }
+        
+        with(emp_grenade_obj)
+        {
+            if(self.id != other.id && armed && point_distance(x,y, other.x,other.y) < chain_explosion_range)
+            {
+                fuse_left = min(fuse_left, 3*fuse_tick);
+            }
+        }
+        
+        done_for = true;
+        fuse_left = 0;
+        armed = false;
+        active = false;
     }
 }
 
 if(done_for)
 {
-    image_index = 1 + fuse_left*(image_number-2);
+    speed = 0;
+    gravity = 0;
+    
+    image_index = 1 + fuse_left * (image_number - 2);
     image_alpha = 1 - fuse_left;
     fuse_left += explode_anim_speed;
     
