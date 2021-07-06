@@ -191,14 +191,7 @@ with(gamemode_pane)
     ii.width = 64;
     ii.centered = true;
     mods_label = ii.id;
-    
-    /*
-    ii = gui_add_label(0,mod_dist+4, "Bans:");
-    ii.width = 64;
-    ii.centered = true;
-    bans_label = ii.id;
-    */
-    
+
     var mods_content_x = mods_x + mods_label.width + hor_spacing;
     eloffset_x = mods_content_x;
 
@@ -258,7 +251,7 @@ with(gamemode_pane)
             {
                 ii = noone;
         
-                if(gmmod_type == "bool" || gmmod_type == "ban")
+                if(gmmod_type == "bool")
                 {
                     ii = gui_add_mod_checkbox(0, 0, gmmod_id, modifier_chb_size);
 
@@ -356,7 +349,7 @@ with(players_pane)
     {
         if(i == 2)
         {
-            bottom_player_pane_y = eloffset_y;   
+            bottom_player_pane_y = eloffset_y;
         }
         
         pp_map[? i] = gui_add_player_setup_pane(0, 0, i);

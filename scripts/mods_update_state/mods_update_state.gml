@@ -18,9 +18,9 @@ function mods_update_state() {
 
     var gm = DB.gamemodes[? gamemode_id];
 
-    if(!ds_exists(target_map, ds_type_map)) 
+    if(!ds_exists(target_map, ds_type_map))
     {
-        return false;       
+        return false;
     }
 
     if(!is_undefined(gm))
@@ -47,7 +47,7 @@ function mods_update_state() {
             // type default
             if (reset)
             {
-                if(gmmod[? "type"] == "bool" || gmmod[? "type"] == "ban")
+                if(gmmod[? "type"] == "bool")
                 {
                     mod_value = false;
                 }
@@ -56,37 +56,37 @@ function mods_update_state() {
             // game mode default
             if(!is_undefined(default_mods_gm[? mod_id]))
             {
-                mod_value = default_mods_gm[? mod_id];   
+                mod_value = default_mods_gm[? mod_id];
             }
             
             // place default
             if(place_exists && !is_undefined(default_mods_place[? mod_id]))
             {
-                mod_value = default_mods_place[? mod_id];   
+                mod_value = default_mods_place[? mod_id];
             }
         
             // custom
             if(!is_undefined(custom_mods[? mod_id]))
             {
-                mod_value = custom_mods[? mod_id];   
+                mod_value = custom_mods[? mod_id];
             }
         
             // game mode forced
             if(!is_undefined(forced_mods_gm[? mod_id]))
             {
-                mod_value = forced_mods_gm[? mod_id];   
+                mod_value = forced_mods_gm[? mod_id];
             }
          
             // place forced
             if(place_exists && !is_undefined(forced_mods_place[? mod_id]))
             {
-                mod_value = forced_mods_place[? mod_id];   
+                mod_value = forced_mods_place[? mod_id];
             }
         
             // write the value
             if(!is_undefined(mod_value)) 
             {
-                target_map[? mod_id] = mod_value;   
+                target_map[? mod_id] = mod_value;
             }
         }
     

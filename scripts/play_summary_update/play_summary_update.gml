@@ -115,11 +115,11 @@ function play_summary_update() {
             
                 if(is_undefined(mod_but))
                 {
-                    continue;   
+                    continue;
                 }
             
             
-                if(gmmod[? "type"] == "bool" || gmmod[? "type"] == "ban")
+                if(gmmod[? "type"] == "bool")
                 {
                     default_value = false;
                 }
@@ -127,26 +127,26 @@ function play_summary_update() {
             
                 if(!is_undefined(default_mods_gm[? mod_id]))
                 {
-                    default_value = default_mods_gm[? mod_id];   
+                    default_value = default_mods_gm[? mod_id];
                 }
             
                 if(!is_undefined(place) && !is_undefined(default_mods_place[? mod_id]))
                 {
-                    default_value = default_mods_place[? mod_id];   
+                    default_value = default_mods_place[? mod_id];
                 }
             
                 if(!is_undefined(forced_mods_gm[? mod_id]))
                 {
-                    default_value = forced_mods_gm[? mod_id];   
+                    default_value = forced_mods_gm[? mod_id];
                 }
             
                 if(!is_undefined(place) && !is_undefined(forced_mods_place[? mod_id]))
                 {
-                    default_value = forced_mods_place[? mod_id];   
+                    default_value = forced_mods_place[? mod_id];
                 }
             
             
-                if(gmmod[? "type"] == "bool" || gmmod[? "type"] == "ban")
+                if(gmmod[? "type"] == "bool")
                 {
                     if(default_value != mod_but.checked)
                     {
@@ -168,7 +168,7 @@ function play_summary_update() {
                     if(custom_mods_text != "")
                             custom_mods_text += ", ";
                         
-                    custom_mods_text += gmmod[? "name"] + state_string;   
+                    custom_mods_text += gmmod[? "name"] + state_string;
                 }
             }
         
@@ -228,7 +228,7 @@ function play_summary_update() {
     
         if(count < summary_list_picker.max_items)
         {
-            repeat(summary_list_picker.max_items - count)   
+            repeat(summary_list_picker.max_items - count)
             {
                 ds_list_add(summary_list, "");
             }
