@@ -62,7 +62,6 @@ DB.mob_spawner_start_offset = 0;
 single_cam = false;
 visible_checkpoints = false;
 no_inventory = false;
-do_phenomena = true;
 no_orbs_start = false;
 star_fall = false;
 

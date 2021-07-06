@@ -19,14 +19,11 @@ if(!created_gui)
 if(!match_started)
 {
     reached_limit_name = "";
-            
+    
     match_start_time = current_time;
     last_minute = current_minute;
     
-    if(do_phenomena)
-    {
-        instance_create(0,0,phenomena_obj);
-    }
+    instance_create(0,0,phenomena_obj);
     
     match_started = true;
 }
