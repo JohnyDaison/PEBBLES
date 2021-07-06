@@ -17,10 +17,6 @@ ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "turrets"] = true;
 
-/*
-place = add_place_in_room(tutorial, "Old Tut", 0,0, 3168,1632, 0);
-ds_list_add(place.level_configs_list, "match");
-*/
 
 place = add_place_in_room(room_smoke_test, "Smoke", 0,0, 3200,3200, 0);
 ds_list_add(place.level_configs_list, "inventory");

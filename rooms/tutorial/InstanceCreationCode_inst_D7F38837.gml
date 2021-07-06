@@ -1,1 +1,0 @@
-npc_script = tut_jump;
