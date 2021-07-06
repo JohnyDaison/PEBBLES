@@ -12,10 +12,11 @@ function quick_tutorial_catalyst_strings() {
     //I18n[? quest_id + "/data_cube_pickup/active"] = "The Cube's content will go into your Collection.";
     //I18n[? quest_id + "/data_cube_pickup/success"] = "Shooting drains Energy from Orbs.";
 
-    I18n[? quest_id + "/jump_to_slimes/active"] = "Gate opens when it changes Color.";
+    I18n[? quest_id + "/jump_to_ricochet/active"] = "Gate opens when it changes Color.";
 
-    I18n[? quest_id + "/open_gate_red/active"] = "Ricochet your Blast through the grates to hit the target.|Hold longer for stronger Blast.";
-    //I18n[? quest_id + "/open_gate_red/success-taunt"] = "You can shoot through Grates.";
+    I18n[? quest_id + "/ricochet/active"] = "Ricochet your Blast through the grates to hit the target.|Hold longer for stronger Blast.";
+    I18n[? quest_id + "/ricochet/failure"] = "Wrong Color.";
+    //I18n[? quest_id + "/ricochet/success-taunt"] = "You can shoot through Grates.";
 
     I18n[? quest_id + "/get_back_up/active"] = "Batteries replenish your Orb Energy.";
 

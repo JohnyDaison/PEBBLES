@@ -1,1 +1,1 @@
-waypoint_id = "jump_to_slimes/success";
+waypoint_id = "jump_to_ricochet/success";

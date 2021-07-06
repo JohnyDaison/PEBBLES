@@ -58,17 +58,17 @@ function quick_tut_catalyst_quest() {
     condition = quest_add_condition(transition, "zone", "enter", "ignore_data_cube");
 
 
-    // Jump down to Slimes
-    node = quest_create_subtask(quest_id, "simple_nav", "jump_to_slimes", "Jump to Slimes", "", i++, false);
+    // Jump down to Ricochet
+    node = quest_create_subtask(quest_id, "simple_nav", "jump_to_ricochet", "Jump to Ricochet", "", i++, false);
 
 
-    // Open the Gate (Red)
-    node = quest_create_subtask(quest_id, "simple_condition", "open_gate_red", "Open the Gate (Red)", "", i++, false);
+    // Ricochet
+    node = quest_create_subtask(quest_id, "simple_condition", "ricochet", "Ricochet", "", i++, false);
 
     transition = quest_transition_find(node, "", "start");
-    condition = quest_add_condition(transition, "zone", "enter", "jump_to_slimes/success");
+    condition = quest_add_condition(transition, "zone", "enter", "jump_to_ricochet/success");
     transition = quest_transition_find(node, "", "success");
-    condition = quest_add_condition(transition, "gatezone", "open", "open_gate_red");
+    condition = quest_add_condition(transition, "gatezone", "open", "open_gate_cyan");
 
 
     // Get back up

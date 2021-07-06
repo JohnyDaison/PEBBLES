@@ -1,1 +1,1 @@
-zone_id = "jump_to_slimes/success";
+zone_id = "jump_to_ricochet/success";

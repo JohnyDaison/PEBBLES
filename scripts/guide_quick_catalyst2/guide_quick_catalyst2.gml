@@ -75,7 +75,7 @@ function guide_quick_catalyst2() {
                 }
             }
             
-            if(selected_subtask == "jump_to_slimes")
+            if(selected_subtask == "jump_to_ricochet")
             {
                 if(my_color != g_red)
                 {
@@ -144,7 +144,14 @@ function guide_quick_catalyst2() {
             break;
         
         case "non_demo":
-    
+            if (selected_subtask == "ricochet") {
+                if (instance_exists(energy_burst_obj)) {
+                    if (energy_burst_obj.my_color != g_green && !instance_exists(speech_popup_obj)) {
+                        speech_start(main_quest_id + DB.quest_context_divider + "ricochet/failure", true, near_player_guy);
+                    }
+                }
+            }
+        
             break;
     }
 }

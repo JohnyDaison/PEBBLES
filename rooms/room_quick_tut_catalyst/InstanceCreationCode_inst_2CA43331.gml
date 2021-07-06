@@ -1,2 +1,2 @@
-waypoint_id = "jump_to_slimes/active";
+waypoint_id = "jump_to_ricochet/active";
 autospeak = true;
