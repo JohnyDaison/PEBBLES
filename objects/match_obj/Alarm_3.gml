@@ -1,17 +1,10 @@
 /// @description  WIN MESSAGE
 
-if(room != tutorial)
+center_overlay.message = "It's a draw!";
+
+if(winner != noone)
 {
-    center_overlay.message = "It's a draw!";
-    
-    if(winner != noone)
-    {
-        center_overlay.message = winner.name + " WINS!"
-    }
-}
-else
-{
-    center_overlay.message = "Leaving..."
+    center_overlay.message = winner.name + " WINS!";
 }
 
 center_overlay.adjusted = false;
