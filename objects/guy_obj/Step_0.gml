@@ -456,15 +456,6 @@ if(!self.frozen_in_time || self.flashing_back)
 if(self.forced_channel)
 {
     self.wanna_channel = true;
-    self.wanna_abi = false;
-    self.wanna_cast = false;
-}
-
-// ABILITY
-if(self.wanna_abi)
-{
-    self.wanna_cast = false;
-    self.wanna_channel = false;
 }
 
 // CHANNELING
@@ -473,6 +464,7 @@ if(self.wanna_channel)
     self.wanna_cast = false;
     self.wanna_run = false;
     self.wanna_jump = false;
+    self.wanna_abi = false;
 }
 
 // CHANNELING CLEANUP
@@ -1485,7 +1477,7 @@ if(!self.frozen_in_time)
     show_debug_message("slots_triggered: "+string(slots_triggered));
     */
     
-    if(!self.slots_triggered && !self.casting && !charge_ball_firing && !self.lost_control)
+    if(!self.slots_triggered && (!self.lost_control || self.getting_up))
     {
         var i, chbi, count = ds_list_size(new_colors);
         
