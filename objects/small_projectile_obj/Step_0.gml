@@ -8,7 +8,7 @@ if(guided && !instance_exists(target))
     // TRACK GUYS
     with(guy_obj)
     {
-        if(id != other.my_guy && my_player != other.my_player
+        if(id != other.my_guy && my_player.team_number != other.my_player.team_number
         && point_distance(x,y,other.x,other.y) <= other.guy_lockon_range && !invisible
         && (other.holographic == self.holographic))
         {

@@ -73,6 +73,7 @@ if(instance_exists(my_guy))
                 if(bbox_top > room_height)
                 {
                     instance_destroy();
+                    exit;
                 }
                 
                 // STICKY
@@ -89,7 +90,7 @@ if(instance_exists(my_guy))
                             speed *= 0.8;
                             speed = max(1, speed);
                         }
-                        else if(body.my_player != my_player)
+                        else if(body.my_player.team_number != my_player.team_number)
                         {
                             stuck_to = body.id;
                             stuck_x = x + hspeed - body.x;
