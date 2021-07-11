@@ -1,14 +1,18 @@
-if(!protected && holographic == other.holographic)
+var projectile = other;
+
+if(!protected && holographic == projectile.holographic)
 {
     //show_debug_message("projectile collision");
-    if(is_shielded(id) && my_shield.my_color == other.my_color && other.my_color != g_octarine)
+    var matching_color = instance_exists(my_shield) 
+                            && my_shield.my_color == projectile.my_color && projectile.my_color != g_octarine;
+    var catalyst_fired_it = projectile.my_source == charge_ball_obj;    
+    
+    if(is_shielded(id) && (matching_color || catalyst_fired_it))
     {
         // LET SHIELD HANDLE IT
     }
     else
     {
-        receive_damage(other.force);
+        receive_damage(projectile.force);
     }
-    
 }
-

@@ -3,8 +3,9 @@ if(instance_exists(my_guy) && my_guy != self.id)
 {
     var projectile = other.id;
     var shield = id;
+    var catalyst_fired_it = projectile.my_source == charge_ball_obj;
     
-    if(projectile.my_player.team_number == my_player.team_number && is_undefined(projectile.has_left_inst[? id]))
+    if(catalyst_fired_it && projectile.my_player.team_number == my_player.team_number && is_undefined(projectile.has_left_inst[? id]))
     {
         if(was_meeting_me(projectile))
         {
