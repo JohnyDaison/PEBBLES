@@ -103,7 +103,7 @@ if(my_guy != id && my_color > -1)
             if(!collided)
             {
                 body = collision_line(next_guy_x + rel_x, next_guy_y + rel_y, my_next_x, my_next_y, phys_body_obj, false, true);
-                if(body != noone && body != my_guy && (holographic || !body.holographic))
+                if(body != noone && body.my_player.team_number != my_player.team_number && (holographic || !body.holographic))
                 {
                     collided = true;
                 }
