@@ -27,7 +27,7 @@ place.forced_modifiers[? "lightning_strikes"] = false;
 
 
 place = add_place_in_room(two_towers_arena, "Two Towers", 0,0, 2048,2048, 0);
-place.description = "You can't run, but you can't hide either.";
+place.description = "Two wizards built their towers next to each other. Only one can remain.";
 place.controller = autogenerate_place_controller_obj;
 place.single_cam = true;
 ds_list_add(place.level_configs_list, "just_2orbs_start");

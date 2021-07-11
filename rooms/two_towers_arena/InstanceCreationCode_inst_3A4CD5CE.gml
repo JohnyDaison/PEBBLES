@@ -1,2 +1,2 @@
-waypoint_id = "tower1";
-connect_to = "tower2";
+waypoint_id = "tower1_bottom";
+connect_to = "tower2_bottom";

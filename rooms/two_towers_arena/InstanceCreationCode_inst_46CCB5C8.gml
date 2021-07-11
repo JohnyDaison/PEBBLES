@@ -1,1 +1,1 @@
-waypoint_id = "tower2";
+waypoint_id = "tower2_bottom";
