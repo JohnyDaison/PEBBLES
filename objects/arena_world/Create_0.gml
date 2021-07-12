@@ -99,8 +99,9 @@ place.description = "For Tech war mode";
 place.controller = autogenerate_place_controller_obj;
 */
 
-place = add_place_in_room(crumble_arena, "4-Player Crumble", 0,0, 4608,3968, 0);
-
+place = add_place_in_room(crumble_arena, "Four-Player Crumble", 0,0, 4608,3968, 0);
+place.description = "Four Bases. Destructible terrain. Total chaos.";
+place.controller = autogenerate_place_controller_obj;
 
 //place = add_place_in_room(domination1, "Domination", 0,0, 4608,3968, 0);
 
