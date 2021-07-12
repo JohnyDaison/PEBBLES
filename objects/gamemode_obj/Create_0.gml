@@ -3,6 +3,7 @@ player_count = 0;
 team_count = 0;
 inited_player_count = 0;
 human_player_count = 0;
+last_human_player = 0;
 players = ds_map_create();
 limits = ds_map_create();
 stats = ds_map_create();

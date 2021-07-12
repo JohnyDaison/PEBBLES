@@ -127,7 +127,7 @@ function camera_before_view() {
             {
                 other.previous_cam = self.id;
             }
-            if(other.view == 1 && view == main_camera_obj.count)
+            if(other.view == 1 && view == main_camera_obj.last_view)
             {
                 other.previous_cam = self.id;
             }

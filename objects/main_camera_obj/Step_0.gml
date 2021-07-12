@@ -1,6 +1,5 @@
 event_inherited();
 
-count = ds_map_size(self.cameras);
 total_x = 0;
 total_y = 0;
 var i,ii;
@@ -13,9 +12,10 @@ if(count>0 && !on) //&& view_visible[0]
     {
         observer_remove(my_chunkgrid, id);
     }
-    for(i=1;i<=count;i+=1)
+    for(i=0; i<count; i++)
     {
-        cam = cameras[? i];
+        var player_view = player_view_list[| i];
+        cam = cameras[? player_view];
         cam.on = true;
         if(cam.my_chunkgrid == noone)
         {
@@ -55,13 +55,15 @@ if(count>0 && !on) //&& view_visible[0]
 if(on || count == 0) // !view_visible[0] &&
 {
     //view_visible[0]=true;
-    for(i=1;i<=count;i+=1)
+    for(i=0; i<count; i++)
     {
-        cam = cameras[? i];
-        cam.on = false;
+        var player_view = player_view_list[| i];
+        var cam = cameras[? player_view];
 
         with(cam)
         {
+            on = false;
+            
             if(ter_list_length > 0)
             {
                 for(ii = ter_list_length-1; ii>=0; ii-=1)
@@ -75,11 +77,11 @@ if(on || count == 0) // !view_visible[0] &&
                 ds_list_clear(ter_list);
                 ter_list_length = 0;
             }
-        }
-        
-        if(cam.my_chunkgrid != noone)
-        {
-            observer_remove(chunkgrid_obj, cam.id);
+            
+            if(my_chunkgrid != noone)
+            {
+                observer_remove(chunkgrid_obj, id);
+            }
         }
     }
     
@@ -91,4 +93,3 @@ if(on || count == 0) // !view_visible[0] &&
 
 bg_xoffset += bg_hspeed;
 bg_yoffset += bg_vspeed;
-

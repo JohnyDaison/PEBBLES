@@ -3,8 +3,21 @@ function create_player_things(player) {
 
     // CREATE SPAWN POINT
     guy_spawn_point_create(id, player, true);
-
-    var has_view = (gamemode_obj.human_player_count < 2 && player.number <= 2) || !player.is_cpu;
+    
+    var last_human = gamemode_obj.last_human_player;
+    var has_view = !player.is_cpu; // human
+    
+    // less than 2 humans, first 2 players
+    if (!has_view) {
+         has_view = gamemode_obj.human_player_count < 2 && player.number <= 2
+                    && (last_human == 0 || player.team_number != gamemode_obj.players[? last_human].team_number);
+    }
+    
+    // more than 2 humans
+    if (!has_view) {
+         has_view = gamemode_obj.human_player_count > 2;
+    }
+    
     var player_camera = noone;
 
     if(has_view)
@@ -14,8 +27,14 @@ function create_player_things(player) {
 
         ii.on = true;
         player_camera = ii;
-        player_camera.view = player.number;
+        player_camera.view = ds_list_size(main_camera_obj.player_view_list)+1; // first unused view
+        if (gamemode_obj.human_player_count > 2) {
+            player_camera.view = player.number;
+        }
+        
         player_camera.depth -= player_camera.view; // is this needed?
+        
+        main_camera_obj.add_player_camera(player_camera);
 
         if(gamemode_obj.player_count == 1)
         {
@@ -129,10 +148,6 @@ function create_player_things(player) {
         player_camera.my_guy = new_guy.id;
         player_camera.follow_guy = true;
         player_camera.follow_spawner = false;
-        if(player_camera.id != main_camera_obj.id)
-        {
-            main_camera_obj.cameras[? player.number] = player_camera.id;
-        }
 
         // OVERLAYS
         if(gamemode_obj.mode != "volleyball" || player.number <= 2)

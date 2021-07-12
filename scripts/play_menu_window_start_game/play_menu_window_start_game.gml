@@ -131,6 +131,7 @@ function play_menu_window_start_game() {
         else
         {
             gamemode.human_player_count++;
+            gamemode.last_human_player = player.number;
         }
 
         gamemode.players[? pl_num] = player;
