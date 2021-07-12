@@ -1048,7 +1048,8 @@ if(!self.frozen_in_time)
     }
     
     // STEPS
-    if(!airborne && abs(hspeed) > 0 && !self.skidding && !self.charging  && !self.lost_control && !self.stuck && !self.quiet_run && !self.holographic)
+    if(!airborne && abs(hspeed) > 0 && !self.skidding && !self.charging && self.status_left[? "frozen"] == 0
+        && !self.locked && !self.lost_control && !self.stuck && !self.quiet_run && !self.holographic)
     {   
         temp = step_frequency/(2+abs(1.5*hspeed));
         if(step_count-last_step >= temp/2)
