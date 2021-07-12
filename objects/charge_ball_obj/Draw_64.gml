@@ -4,7 +4,7 @@ if(!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noo
     {
         var xx, yy, scale = 1;
         var camera = my_guy.my_player.my_camera;
-        if(!instance_exists(camera) && main_camera_obj.on)
+        if(main_camera_obj.on)
         {
             camera = main_camera_obj.id;
         }
