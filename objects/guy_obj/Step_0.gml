@@ -456,6 +456,14 @@ if(!self.frozen_in_time || self.flashing_back)
 if(self.forced_channel)
 {
     self.wanna_channel = true;
+    self.wanna_abi = false;
+    self.wanna_cast = false;
+}
+
+// ABILITY
+if(self.wanna_abi)
+{
+    self.wanna_channel = false;
 }
 
 // CHANNELING
@@ -464,7 +472,6 @@ if(self.wanna_channel)
     self.wanna_cast = false;
     self.wanna_run = false;
     self.wanna_jump = false;
-    self.wanna_abi = false;
 }
 
 // CHANNELING CLEANUP
