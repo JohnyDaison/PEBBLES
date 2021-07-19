@@ -14,7 +14,7 @@ levels[? "charged_jump"] = 2;
 levels[? "wall_hold"] = 1;
 levels[? "wall_climb"] = 2;
 levels[? "wall_jump"] = 3;
-levels[? "dive_jump"] = 2;
+levels[? "dive_move"] = 2;
 
 self.name = "Jump Suit";
 

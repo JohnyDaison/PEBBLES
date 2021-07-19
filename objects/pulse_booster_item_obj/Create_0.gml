@@ -8,7 +8,7 @@ level_upgrade = true;
 consumed_on_pickup = true;
 pickup_sound = jump_sound;
 levels[? "air_jump"] = 1;
-levels[? "dive_jump"] = 1;
+levels[? "dive_move"] = 1;
 
 self.name = "Jump Jet";
 self.description =

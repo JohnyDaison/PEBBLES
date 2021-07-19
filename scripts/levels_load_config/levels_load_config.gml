@@ -6,7 +6,7 @@ function levels_load_config(config) {
         config_level_gamemode("wall_hold",          "", "", 1);
         config_level_gamemode("wall_climb",         "", "", 2);
         config_level_gamemode("wall_jump",          "", "", 3);
-        config_level_gamemode("dive_jump",          "", "", 2);
+        config_level_gamemode("dive_move",          "", "", 2);
     
         config_level_gamemode("guy_orbit",          "", "", 3);
         config_level_gamemode("chargeball",         "", "", 3);
@@ -69,7 +69,7 @@ function levels_load_config(config) {
         config_level_gamemode("wall_hold",          "", "", 1);
         config_level_gamemode("wall_climb",         "", "", 2);
         config_level_gamemode("wall_jump",          "", "", 3);
-        config_level_gamemode("dive_jump",          "", "", 2);
+        config_level_gamemode("dive_move",          "", "", 2);
     }
     else if(config == "base_colors")
     {

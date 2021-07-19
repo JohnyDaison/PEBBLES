@@ -13,7 +13,7 @@ function init_levels_DB() {
     define_level_DB("wall_hold", "movement",                "Wall Hold", 0, 1); //1
     define_level_DB("wall_climb", "movement",               "Wall Climb", 0, 2); //2
     define_level_DB("wall_jump", "movement",                "Wall Jump", 0, 3); //3
-    define_level_DB("dive_jump", "movement",                "Dive", 0, 3); //2
+    define_level_DB("dive_move", "movement",                "Dive", 0, 3); //2
 
     // Storage
     define_level_DB("inventory", "capacity",                "Inventory size", 0, 4); //4

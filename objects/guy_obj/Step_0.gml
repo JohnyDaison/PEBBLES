@@ -1271,7 +1271,7 @@ if(!self.frozen_in_time)
         if(self.wanna_jump)
         {   
             // DIVE JUMP
-            if(has_level(id, "dive_jump", 1))
+            if(has_level(id, "dive_move", 1))
             {
                 if(self.airborne && self.looking_down && !self.have_jumped && !self.have_dived
                 && doublejump_count < max_doublejumps && abs(vspeed) < dive_threshold)
