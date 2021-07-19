@@ -25,9 +25,8 @@ for(i = count -1; i >= 0; i--)
                     trigger(id, other.id);
                 }
             
-                params = ds_map_create();
+                var params = create_params_map();
                 params[? "who"] = other.id;
-                register_ds("params", ds_type_map, params, id);
             
                 broadcast_event("ballzone_enter", id, params);
             

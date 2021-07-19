@@ -69,9 +69,8 @@ with(orb)
             effect_create_above(ef_firework, x,y, 1, tint);
             my_sound_play(slot_absorbed_sound);
             
-            var params = ds_map_create();
+            var params = create_params_map();
             params[? "who"] = guy.id;
-            register_ds("params", ds_type_map, params, id);
             
             broadcast_event("item_pickup", id, params);
         }

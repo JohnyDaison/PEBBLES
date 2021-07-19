@@ -21,9 +21,8 @@ for(i = count -1; i >= 0; i--)
             
                 ds_list_add(zone.inside_list, instance);
             
-                var params = ds_map_create();
+                var params = create_params_map();
                 params[? "who"] = instance;
-                register_ds("params", ds_type_map, params, id);
             
                 broadcast_event("connector_enter", id, params);
                 
