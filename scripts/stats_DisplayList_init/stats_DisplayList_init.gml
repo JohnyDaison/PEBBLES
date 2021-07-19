@@ -18,8 +18,8 @@ function stats_DisplayList_init(labels, stats) {
     stats[| i++] = "damage_received";
     labels[| i]  = "Received hits";
     stats[| i++] = "received_hits";
-    labels[| i]  = "Defense Color effic.(%)";
-    stats[| i++] = "defense_color_efficiency";
+    labels[| i]  = "Received Color effic.(%)";
+    stats[| i++] = "received_color_efficiency";
     labels[| i]  = "Damage healed";
     stats[| i++] = "damage_healed";
     labels[| i]  = "Damage rewound";

@@ -241,8 +241,8 @@ else
             
             if(stats[? "received_hits"] > 0)
             {
-                new_ratio = round((stats[? "defense_color_ratio_total"] * 100) / stats[? "received_hits"]);
-                set_stat(id, "defense_color_efficiency", new_ratio, false);
+                new_ratio = round((stats[? "received_color_ratio_total"] * 100) / stats[? "received_hits"]);
+                set_stat(id, "received_color_efficiency", new_ratio, false);
             }
             
             set_stat(id, "channeling_time", floor(stats[? "channeling_time"]/singleton_obj.game_speed), false);

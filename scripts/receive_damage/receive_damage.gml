@@ -153,7 +153,7 @@ function receive_damage() {
                     }
                     if(id == my_player.my_guy) {
                         increase_stat(my_player, "received_hits", 1);
-                        increase_stat(my_player, "defense_color_ratio_total", shield_ratio);
+                        increase_stat(my_player, "received_color_ratio_total", shield_ratio);
                     }
                 }
             
@@ -680,7 +680,7 @@ function receive_damage() {
                     }
                     if(id == my_player.my_guy) {
                         increase_stat(my_player, "received_hits", 1);
-                        increase_stat(my_player, "defense_color_ratio_total", power_ratio);
+                        increase_stat(my_player, "received_color_ratio_total", power_ratio);
                     }
                 }
             
