@@ -74,6 +74,7 @@ i.center_icon = true;
 i.width = 31;
 i.height = 31;
 i.centered = true;
+i.tooltip = "Show Console when a new log message is added (toggle)";
 
 self.log_popup_button = i;
 
