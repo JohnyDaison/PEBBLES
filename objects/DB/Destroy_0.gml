@@ -72,7 +72,7 @@ ds_list_destroy(ds_registry);
 ds_map_destroy(ds_registry_index);
 
 // BF ICON MAP
-ds_map_destroy(bf_icon_map);
+ds_map_destroy(battlefeed_icon_map);
 
 // PLAYER FLAGS
 ds_list_destroy(player_flags);

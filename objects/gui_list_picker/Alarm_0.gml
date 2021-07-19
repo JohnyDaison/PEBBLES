@@ -63,7 +63,7 @@ if(ds_exists(source_list, ds_type_list))
 
         for(i=0; i < count; i++)
         {
-            scroll_list.items[| i] = DB.bf_icon_map[? (source_list[| i])];
+            scroll_list.items[| i] = DB.battlefeed_icon_map[? (source_list[| i])];
         }
         
         scroll_list.type = "icon";

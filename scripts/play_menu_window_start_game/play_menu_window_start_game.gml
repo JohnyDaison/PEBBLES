@@ -86,7 +86,7 @@ function play_menu_window_start_game() {
         {
             player.name = player_pane.name_input.text;
             player.flag = DB.player_flags[| player_pane.flag_input.value];
-            player.icon = DB.bf_icon_map[? player.flag];
+            player.icon = DB.battlefeed_icon_map[? player.flag];
             player.handicaps[? "min_damage"] = player_pane.handicap_input.value/10;
             player.control_set = player_pane.control_dropdown.value_id;
             if(player.control_set == gamepad)
@@ -98,12 +98,12 @@ function play_menu_window_start_game() {
         }
         else
         {
-            var teammate = noone; 
+            var teammate = noone;
             with(player_obj)
             {
-                if(id != player.id && team_number == player.team_number)   
+                if(id != player.id && team_number == player.team_number)
                 {
-                    teammate = id;   
+                    teammate = id;
                 }
             }
         
@@ -111,7 +111,7 @@ function play_menu_window_start_game() {
             {
                 player.name = "Player " + string(player.number);
                 player.flag = teammate.flag;
-                player.icon = DB.bf_icon_map[? player.flag];
+                player.icon = DB.battlefeed_icon_map[? player.flag];
                 player.handicaps[? "min_damage"] = teammate.handicaps[? "min_damage"];
                 //player.control_set = teammate.control_set;
                 player.control_set = cpu_control_set;
@@ -120,7 +120,7 @@ function play_menu_window_start_game() {
                     player.control_index = gamepad_index++;
                 }
                 player.is_cpu = (player.control_set == cpu_control_set);
-                player.cpu_difficulty = teammate.cpu_difficulty;   
+                player.cpu_difficulty = teammate.cpu_difficulty;
             }
         }
     

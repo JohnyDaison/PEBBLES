@@ -105,9 +105,9 @@ ds_registry = ds_list_create();
 ds_registry_index = ds_map_create();
 
 // BF ICON MAP
-bf_icon_map = ds_map_create();
+battlefeed_icon_map = ds_map_create();
 
-init_bf_icons_DB();
+init_battlefeed_icons_DB();
 
 // PLAYER FLAGS
 player_flags = ds_list_create();

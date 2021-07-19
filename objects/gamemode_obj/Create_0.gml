@@ -120,7 +120,7 @@ player = instance_create(0,0,player_obj);
 player.number = 0;
 player.name = "The World";
 player.flag = "world_flag";
-player.icon = DB.bf_icon_map[? player.flag];
+player.icon = DB.battlefeed_icon_map[? player.flag];
 player.battlefeed = battlefeed;
 players[? 0] = player;
 

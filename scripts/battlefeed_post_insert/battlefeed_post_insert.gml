@@ -19,11 +19,11 @@ function battlefeed_post_insert(item, index, type, content, color) {
         item.type[? index] = type;
         if(type == "text")
         {
-            item.content[? index] = content;    
+            item.content[? index] = content;
         }
         else if(type == "icon")
         {
-            sprite = DB.bf_icon_map[? content];
+            sprite = DB.battlefeed_icon_map[? content];
             //var icon_str = "";
         
             if(!is_undefined(sprite) && sprite_exists(sprite))
