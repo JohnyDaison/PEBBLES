@@ -7,7 +7,7 @@ if((falling || moving || burst_recheck) && singleton_obj.step_count mod 5 == 0)
     burst_recheck = false;
     if(bursting)
     {
-        var dir, burst_x, burst_y, i;
+        var dir, burst_x, burst_y, i, burst;
         
         burst_count = 0;
         
@@ -17,7 +17,7 @@ if((falling || moving || burst_recheck) && singleton_obj.step_count mod 5 == 0)
             burst_x = x+16+lengthdir_x(32,dir);
             burst_y = y+16+lengthdir_y(32,dir);
     
-            if (!place_meeting(burst_x -(burst_x mod 32), burst_y - (burst_y mod 32), solid_terrain_obj)) 
+            if (burst_position_free(dir, burst_x, burst_y)) 
             {
                 burst = instance_position(burst_x, burst_y, energy_burst_obj);
                 if(instance_exists(burst) && burst.my_guy == id)

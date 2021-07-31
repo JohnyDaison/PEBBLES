@@ -80,3 +80,24 @@ name = "Wall Block";
 
 alarm[0]=1;
 alarm[4]=2;
+
+burst_position_free = function(dir, burst_x, burst_y) {
+    var meeting_terrain = place_meeting(burst_x -(burst_x mod 32), burst_y - (burst_y mod 32), solid_terrain_obj);
+    
+    if (meeting_terrain) {
+        return false;
+    }
+    
+    var meeting_item_spawner = false;
+    
+    if (dir == 90) {
+        var spawner = instance_place(x, y, item_spawner_obj);
+        meeting_item_spawner = instance_exists(spawner) && spawner.my_block == id;
+        
+        if (meeting_item_spawner) {
+            return false;
+        }
+    }
+    
+    return true;
+}
