@@ -14,6 +14,7 @@ width = 2*radius;
 height = 2*radius;
 field_focus = radius/2;
 var force_field = self;
+var guy, proj, item;
 
 switch(shape)
 {
@@ -22,17 +23,17 @@ switch(shape)
     // GUY
     with(guy_obj)
     {
-        if(holographic == other.holographic && (id == force_field.my_guy || my_color != force_field.my_color))
+        if(holographic == other.holographic && my_color != force_field.my_color)
         {
             with(force_field)
-            { 
+            {
                 guy = collision_circle(x,y, radius, other.id, false, true);
                 if(instance_exists(guy))
                 {
-                    if(guy.id != my_guy && !guy.stuck)
+                    if(!guy.stuck)
                     {
                         apply_force(guy,repels);
-                    }    
+                    }
                 }
                 guy = noone;
             }
