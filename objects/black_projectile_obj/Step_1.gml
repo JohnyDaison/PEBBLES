@@ -1,21 +1,22 @@
 event_inherited();
+var vortex = id;
 
 var dist, dir, is_energyball, coef, max_force, max_dist, attr_force;
 with(guy_obj)
 {
-    if(holographic == other.holographic)
+    if(holographic == vortex.holographic)
     {
-        dist = point_distance(x,y,other.x,other.y);
+        dist = point_distance(x, y, vortex.x, vortex.y);
         if(old_coef == 0)
         {
-            old_coef = self.gravity_coef;
+            old_coef = gravity_coef;
         }
         
         ubershielded = is_shielded(id, "uber");
         
-        if(dist < other.radius)
+        if(dist < vortex.radius)
         {
-            if(my_player.id != other.my_player.id && !protected)
+            if(my_player.id != vortex.my_player.id && !protected)
             {
                 if(ubershielded)
                 {             
@@ -23,24 +24,23 @@ with(guy_obj)
                     my_sound_play(wall_hum_sound);
                     //my_sound_play_colored(wall_hum_sound, my_shield.my_color);
                 }    
-                else if(other.force != 0 && my_color != g_dark)
+                else if(vortex.force != 0 && my_color != g_dark)
                 {        
                     // SLOT THEFT
                     /*
                     if(current_slot > 0 && !lost_control && !slots_triggered)
                     {
-                        other.slot = ds_list_find_value(self.color_slots,0);
-                        if(instance_exists(other.slot))
+                        vortex.slot = ds_list_find_value(self.color_slots,0);
+                        if(instance_exists(vortex.slot))
                         {
-                            if(other.slot.color_added || other.slot.color_held)
+                            if(vortex.slot.color_added || vortex.slot.color_held)
                             {
-                                black_bolt_id = other.id;
-                                with(other.slot)
+                                with(vortex.slot)
                                 {
                                     color_consumed = false;
                                     color_held = true;
                                     old_guy = my_guy.id;
-                                    my_guy = other.black_bolt_id;
+                                    my_guy = vortex.id;
                                     speed = my_guy.speed;
                                     direction = my_guy.direction;
                                 }
@@ -64,8 +64,8 @@ with(guy_obj)
                                 alarm[3] = 1;
                                 show_debug_message("Loser!");
                                 
-                                ds_list_add(other.stolen_slots,other.slot.id);
-                                other.slot_count = ds_list_size(other.stolen_slots);
+                                ds_list_add(vortex.stolen_slots,vortex.slot.id);
+                                vortex.slot_count = ds_list_size(vortex.stolen_slots);
                             }
                         }
                     }
@@ -73,22 +73,22 @@ with(guy_obj)
                     
                     // THROWING AROUND
         
-                    dir = point_direction(x,y,other.x,other.y);
+                    dir = point_direction(x,y,vortex.x,vortex.y);
                     /*
-                    if(dist < other.radius/6)
+                    if(dist < vortex.radius/6)
                     {
-                        dist = other.radius/6;
+                        dist = vortex.radius/6;
                     }
                     */
-                    coef = (1 - dist/other.radius)*8*other.force;
+                    coef = (1 - dist/vortex.radius)*8*vortex.force;
                     
                     /*
                     if(vspeed == 0)
-                        vspeed = sign(other.y-y);
+                        vspeed = sign(vortex.y-y);
                     */
                     motion_add(dir,coef);
                     
-                    if(dist<(other.radius/3) || lost_control)
+                    if(dist<(vortex.radius/3) || lost_control)
                     {
                         lost_control = true;
                         hit_handled = false;
@@ -106,12 +106,12 @@ with(guy_obj)
                         }
                         
                         var params = create_params_map();
-                        params[? "who"] = other.my_guy;
+                        params[? "who"] = vortex.my_guy;
                         
                         broadcast_event("vortex_knockdown", id, params);
                     }
                     
-                    last_attacker_update(other.id, "body", "push");
+                    last_attacker_update(vortex.id, "body", "push");
                 }
             }
         }
@@ -131,21 +131,21 @@ with(guy_obj)
 // ATTRACT ORBS
 with(color_orb_obj)
 {
-    if(holographic == other.holographic)
+    if(holographic == vortex.holographic)
     {
         if(instance_exists(my_guy))
         {
-            if(my_guy.id == self.id)
+            if(my_guy.id == id)
             {
-                dist = point_distance(x,y,other.x,other.y);
+                dist = point_distance(x,y,vortex.x,vortex.y);
                 
-                if(dist < other.radius)
+                if(dist < vortex.radius)
                 {
-                    my_guy = other.id;
-                    ds_list_add(other.stolen_slots,self.id);
-                    other.slot_count = ds_list_size(other.stolen_slots);
-                    speed = other.speed;
-                    direction = other.direction;
+                    my_guy = vortex.id;
+                    ds_list_add(vortex.stolen_slots, id);
+                    vortex.slot_count = ds_list_size(vortex.stolen_slots);
+                    speed = vortex.speed;
+                    direction = vortex.direction;
                 }
             }
         }
@@ -155,24 +155,24 @@ with(color_orb_obj)
 // ATTRACT ITEMS
 with(item_obj)
 {
-    if(holographic == other.holographic)
+    if(holographic == vortex.holographic)
     {
         if(instance_exists(my_guy))
         {
             if(!is_shielded(id) && (
-                (my_guy.id == self.id && collectable && !collected)
+                (my_guy.id == id && collectable && !collected)
                 || (!collected && placed && stuck_to == noone) 
             ))
             {
-                dist = point_distance(x,y,other.x,other.y);
+                dist = point_distance(x,y,vortex.x,vortex.y);
                 
-                if(dist < other.radius)
+                if(dist < vortex.radius)
                 {
-                    my_guy = other.id;
-                    ds_list_add(other.picked_pickups,self.id);
-                    other.pickup_count = ds_list_size(other.picked_pickups);
-                    speed = other.speed;
-                    direction = other.direction;
+                    my_guy = vortex.id;
+                    ds_list_add(vortex.picked_pickups, id);
+                    vortex.pickup_count = ds_list_size(vortex.picked_pickups);
+                    speed = vortex.speed;
+                    direction = vortex.direction;
                 }
             }
         }
@@ -183,11 +183,11 @@ with(item_obj)
 
 with(projectile_obj)
 {
-    if(holographic == other.holographic)
+    if(holographic == vortex.holographic)
     {
-        if(id != other.id)
+        if(id != vortex.id)
         {
-            dist = point_distance(x,y,other.x,other.y);  
+            dist = point_distance(x,y,vortex.x,vortex.y);  
             is_energyball = object_is_ancestor(object_index,energyball_obj);
             
             if(is_energyball)
@@ -202,8 +202,8 @@ with(projectile_obj)
             }
             if(dist > 0 && dist < max_dist)
             {
-                dir = point_direction(x,y,other.x,other.y);
-                attr_force = max_force*(1 - max(dist-other.radius,0)/max(max_dist-other.radius,1));
+                dir = point_direction(x,y,vortex.x,vortex.y);
+                attr_force = max_force*(1 - max(dist-vortex.radius,0)/max(max_dist-vortex.radius,1));
                 motion_add(dir,attr_force);
             }
         }
@@ -213,19 +213,19 @@ with(projectile_obj)
 // MOB ATTRACTION
 with(mob_obj)
 {
-    if(holographic == other.holographic && other.my_color != my_color)
+    if(holographic == vortex.holographic && vortex.my_color != my_color)
     {
-        dist = point_distance(x,y,other.x,other.y);  
+        dist = point_distance(x,y,vortex.x,vortex.y);  
         max_force = 5;
         max_dist = 192;
     
         if(dist > 0 && dist < max_dist)
         {
-            dir = point_direction(x,y,other.x,other.y);
-            attr_force = max_force*(1 - max(dist-other.radius,0)/max(max_dist-other.radius,1));
+            dir = point_direction(x,y,vortex.x,vortex.y);
+            attr_force = max_force*(1 - max(dist-vortex.radius,0)/max(max_dist-vortex.radius,1));
             motion_add(dir,attr_force);
             
-            // last_attacker_update(other.id, "body", "push");
+            // last_attacker_update(vortex.id, "body", "push");
         }
     }
 }
