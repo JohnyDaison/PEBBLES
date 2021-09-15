@@ -70,47 +70,12 @@ if(my_guy != id && my_color > -1)
     rel_x += lengthdir_x(cur_speed, cur_dir);
     rel_y += lengthdir_y(cur_speed, cur_dir);
         
-    next_guy_x = my_guy.x+my_guy.hspeed + center_offset_x;
-    next_guy_y = my_guy.y+my_guy.vspeed + center_offset_y;
-
-    my_next_x = next_guy_x + rel_x + lengthdir_x(cur_speed, cur_dir);
-    my_next_y = next_guy_y + rel_y + lengthdir_y(cur_speed, cur_dir);
-        
-        
-        
     if(object_is_ancestor(my_guy.object_index, guy_obj))
     {
         // TERRAIN COL
         if(desired_dist > 0)
         {
-            var collided = false, ter, field, body;
-                
-            ter = collision_line(next_guy_x + rel_x, next_guy_y + rel_y, my_next_x, my_next_y, solid_terrain_obj, false, true);
-            if(ter != noone && ter.object_index != grate_block_obj)
-            {
-                collided = true;
-            }
-                
-            if(!collided)
-            {
-                field = collision_line(next_guy_x + rel_x, next_guy_y + rel_y, my_next_x, my_next_y, gate_field_obj, false, true);
-                if(field != noone && (holographic || !field.holographic))
-                {
-                    collided = true;
-                }
-            }
-                
-            if(!collided)
-            {
-                body = collision_line(next_guy_x + rel_x, next_guy_y + rel_y, my_next_x, my_next_y, phys_body_obj, false, true);
-                if(body != noone && body.my_player.team_number != my_player.team_number && (holographic || !body.holographic))
-                {
-                    collided = true;
-                }
-            }
-                
-            if(collided)
-            {
+            while(is_my_guy_los_blocked(rel_x, rel_y) && abs(angle_difference(desired_angle, point_direction(0, 0, rel_x, rel_y))) < 90) {
                 rel_x -= lengthdir_x(5, desired_angle);
                 rel_y -= lengthdir_y(5, desired_angle);
             }

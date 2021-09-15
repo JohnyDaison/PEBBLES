@@ -31,7 +31,10 @@ self.holo_alpha_step = 0.005;
 self.holo_minalpha = 0.4;
 self.holo_maxalpha = 0.6;
 
+centered_dist = 8;
 base_speed = 1.5;
+rest_x_offset = 16;
+rest_ratio = 1/6;
 desired_angle = 0;
 desired_dist = 0;
 cur_dist = 0;
@@ -41,7 +44,8 @@ rel_x = 0;
 rel_y = 0;
 center_offset_x = 0;
 center_offset_y = 0;
- 
+visual_rel_x = 0;
+
 charge_step = 0.025;
 charge = 0;
 energy = charge;
@@ -128,3 +132,39 @@ lightning_width = 10;
 lightning_alpha = 1;
 lgt_r1 = -0.5*lightning_width;
 lgt_r2 = 0.5*lightning_width;
+
+is_my_guy_los_blocked = function(rel_x, rel_y) {
+    var blocked = false, ter, field, body;
+    
+    var next_guy_x = my_guy.x + my_guy.hspeed + center_offset_x;
+    var next_guy_y = my_guy.y + my_guy.vspeed + center_offset_y;
+    
+    var current_x = next_guy_x + rel_x;
+    var current_y = next_guy_y + rel_y;
+    
+    ter = collision_line(next_guy_x, next_guy_y, current_x, current_y, solid_terrain_obj, false, true);
+    if(ter != noone)
+    {
+        blocked = true;
+    }
+    
+    if(!blocked)
+    {
+        field = collision_line(next_guy_x, next_guy_y, current_x, current_y, gate_field_obj, false, true);
+        if(field != noone && (holographic || !field.holographic))
+        {
+            blocked = true;
+        }
+    }
+    
+    if(!blocked)
+    {
+        body = collision_line(next_guy_x, next_guy_y, current_x, current_y, phys_body_obj, false, true);
+        if(body != noone && body.my_player.team_number != my_player.team_number && (holographic || !body.holographic))
+        {
+            blocked = true;
+        }
+    }
+    
+    return blocked;
+}

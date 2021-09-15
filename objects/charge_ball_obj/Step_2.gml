@@ -55,7 +55,26 @@ sprite_size = size_coef*(0.25 + 0.50 * charge/max_charge);
 
 if(instance_exists(my_guy) && sprite_index != noone && my_color != -1)
 {
-    self.x = my_guy.x + center_offset_x + rel_x;
+    if (desired_dist > 0) {
+        desired_rel_x = rel_x;
+        
+        visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
+    } else if(cur_dist < centered_dist) {
+        var rest_rel_x = my_guy.facing * rest_x_offset;
+        desired_rel_x = rest_rel_x;
+        
+        if(is_my_guy_los_blocked(visual_rel_x, rel_y)) {
+            visual_rel_x -= lengthdir_x(5, point_direction(0, 0, visual_rel_x, rel_y));
+        } else {
+            var next_visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
+            
+            if(!is_my_guy_los_blocked(next_visual_rel_x, rel_y)) {
+                visual_rel_x = next_visual_rel_x;
+            }
+        }
+    }
+    
+    self.x = my_guy.x + center_offset_x + visual_rel_x;
     self.y = my_guy.y + center_offset_y + rel_y;
 }
 
