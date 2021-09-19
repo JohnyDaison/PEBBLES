@@ -1,3 +1,12 @@
+// FALL OUT OF ARENA
+var place = gamemode_obj.world.current_place;
+var place_bottom = place.y + place.height;
+var fell_out = y > place_bottom && !moving;
+
+if(fell_out) {
+    done_for = true;
+}
+
 if(done_for && !destroyed)
 {
     // STATS
@@ -36,3 +45,6 @@ if(done_for && !destroyed)
     destroyed = true;
 }
 
+if (fell_out) {
+    instance_destroy();
+}

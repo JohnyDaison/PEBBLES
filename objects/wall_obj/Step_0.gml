@@ -78,15 +78,6 @@ if(cover != cover_indestr)
     // END OF ANIM DESTROY
     if(image_index+image_speed >= image_number)
     {
-        if(mod_get_state("regenerate_terrain") && cover != cover_grate)
-        {
-            var regen_obj = instance_create(xstart, ystart, wall_regenerator_obj);
-            regen_obj.energy = orig_energy;
-            regen_obj.my_color = orig_color;
-            regen_obj.damage = orig_damage;
-            regen_obj.color_locked = orig_locked;
-        }
-        
         instance_destroy();
         exit;
     }
