@@ -2709,12 +2709,17 @@ if(!self.frozen_in_time)
             x = orig_climb_x + facing*climb_sequence[# floor(image_index), 0];
             y = orig_climb_y + climb_sequence[# floor(image_index), 1];
             
+            sprite_chosen = true;
+            
             if(image_index + image_speed >= 5)
             {
+                x = orig_climb_x + facing*climb_sequence[# 5, 0];
+                y = orig_climb_y + climb_sequence[# 5, 1];
+                
                 self.climbing_up = false;
+                airborne = false;
+                sprite_chosen = false;
             }
-            
-            sprite_chosen = true;
         }
         
         // FLIPPING / DOUBLE JUMP

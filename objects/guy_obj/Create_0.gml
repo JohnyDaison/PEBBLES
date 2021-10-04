@@ -160,7 +160,7 @@ self.hold_mode = false;
 // ANIMATION
 self.channeling_anim_speed = 0.25
 self.casting_anim_speed = 0.2;
-self.climbing_anim_speed = 0.33;
+self.climbing_anim_speed = 0.2;
 self.lc_anim_speed = 0.07;
 self.crouch_anim_speed = 0.12;
 self.flip_anim_speed = 0.2;
@@ -188,21 +188,23 @@ self.ambient_light = 1;
 self.direct_light = 0;
 
 // CLIMB SEQUENCE
-climb_sequence = ds_grid_create(5, 2);
+climb_sequence = ds_grid_create(6, 2);
 
 // x
-climb_sequence[# 0,0] = 0;
-climb_sequence[# 1,0] = 0;
+climb_sequence[# 0,0] = 2;
+climb_sequence[# 1,0] = 2;
 climb_sequence[# 2,0] = 6;
-climb_sequence[# 3,0] = 6;
-climb_sequence[# 4,0] = 12;
+climb_sequence[# 3,0] = 8;
+climb_sequence[# 4,0] = 11;
+climb_sequence[# 5,0] = 16;
 
 // y
 climb_sequence[# 0,1] = 0;
-climb_sequence[# 1,1] = -13;
-climb_sequence[# 2,1] = -30;
-climb_sequence[# 3,1] = -39;
-climb_sequence[# 4,1] = -48;
+climb_sequence[# 1,1] = -12;
+climb_sequence[# 2,1] = -31;
+climb_sequence[# 3,1] = -40;
+climb_sequence[# 4,1] = -45;
+climb_sequence[# 5,1] = -48;
 
 // SLOTS
 self.slot_maxnumber = 0;
