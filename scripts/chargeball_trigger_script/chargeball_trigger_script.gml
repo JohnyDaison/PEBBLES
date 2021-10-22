@@ -9,6 +9,9 @@ function chargeball_trigger_script() {
     
         my_guy.casting = false;
         my_guy.casting_hor = false;
+        my_guy.casting_shield = false;
+        my_guy.casting_up = false;
+        my_guy.casting_down = false;
     
         var orb_count = 0;
         var is_guy = false;
@@ -128,6 +131,7 @@ function chargeball_trigger_script() {
                             {
                                 my_sound_play(shield_sound);
                             }
+                            my_guy.casting_shield = true;
                         }
                     }
                     else
@@ -280,23 +284,13 @@ function chargeball_trigger_script() {
     
         if(ret)
         {
-            my_guy.casting = true;  
-            if(rel_x != 0)
-                my_guy.casting_hor = true; 
-            else {    
-                if(rel_y < 0)
-                    my_guy.casting_up = true;
-                else
-                    my_guy.casting_up = false;
-                
-                if(rel_y > 0)
-                    my_guy.casting_down = true;
-                else
-                    my_guy.casting_down = false;
-                
-                if(rel_y == 0) 
-                {
-                    my_guy.casting_shield = true;
+            my_guy.casting = true;
+            if (!my_guy.casting_shield) {
+                if (abs(rel_x) > abs(rel_y)) {
+                    my_guy.casting_hor = true; 
+                } else {
+                    my_guy.casting_up = rel_y < 0;
+                    my_guy.casting_down = rel_y > 0;
                 }
             }
         
