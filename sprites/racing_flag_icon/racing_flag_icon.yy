@@ -21,11 +21,11 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 8,
+  "gridY": 8,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"39faeaac-d41a-465c-9f0d-123dc178d924","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39faeaac-d41a-465c-9f0d-123dc178d924","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"LayerId":{"name":"f827f3eb-afe0-4390-98db-91bddeb454f5","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"39faeaac-d41a-465c-9f0d-123dc178d924","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"LayerId":{"name":"47684a6e-f12c-4e82-8b2a-5f8fd4ede82b","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"racing_flag_icon","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"resourceVersion":"1.0","name":"39faeaac-d41a-465c-9f0d-123dc178d924","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -42,9 +42,9 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2c15e9e0-027c-43e3-a3d9-f8c4c6478a34","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39faeaac-d41a-465c-9f0d-123dc178d924","path":"sprites/racing_flag_icon/racing_flag_icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f827f3eb-afe0-4390-98db-91bddeb454f5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47684a6e-f12c-4e82-8b2a-5f8fd4ede82b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

@@ -119,6 +119,11 @@ function create_player_things(player) {
     new_guy.my_player = player;
     new_guy.my_spawner = self.id;
     new_guy.my_base = self.id;
+    
+    // select skin based on flag for now
+    if (new_guy.my_player.flag == "racing_flag") {
+        new_guy.my_skin = DB.guy_skins[? "biker"];
+    }
 
     new_guy.name = player.name;
     new_guy.control_set = player.control_set;
