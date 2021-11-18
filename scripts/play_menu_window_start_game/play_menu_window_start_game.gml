@@ -15,6 +15,8 @@ function play_menu_window_start_game() {
     gamemode.mode = gm_id;
     gamemode.name = gm[? "name"];
     gamemode.is_coop = gm[? "is_coop"];
+    gamemode.is_deathmatch = gm[? "is_deathmatch"];
+    gamemode.team_based = gm[? "team_based"];
 
     with(gamemode)
     {

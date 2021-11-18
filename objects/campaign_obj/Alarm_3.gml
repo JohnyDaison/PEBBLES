@@ -38,7 +38,7 @@ if(instance_exists(center_overlay))
         {
             center_overlay.message = winner.name + " WINS!"
             
-            if(mode == "volleyball" && player_count > 2)
+            if(team_based && player_count > 2)
             {
                 center_overlay.message = "Team " + string(winner.team_number) + " WINS!"
             }

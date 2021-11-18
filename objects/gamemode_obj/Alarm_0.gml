@@ -12,6 +12,7 @@ with(turret_obj)
 
 var pl = 1;
 var start_found = false;
+var ordered_starts = ds_map_create();
 
 with(level_start_obj)
 {
@@ -33,11 +34,19 @@ with(level_start_obj)
     
     activated = true;
     
-    create_player_things(my_player);
+    ordered_starts[? my_player.number] = id;
     
     start_found = true;
 }
 
+for (var i=1; i <= player_count; i++) {
+    var level_start = ordered_starts[? i];
+    with(level_start) {
+        create_player_things(my_player);
+    }
+}
+
+ds_map_destroy(ordered_starts);
 
 alarm[1] = 20;
 

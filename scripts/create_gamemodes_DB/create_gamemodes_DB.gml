@@ -85,6 +85,7 @@ function create_gamemodes_DB() {
     gm[? "min_real_players"] = 2;
     gm[? "max_players"] = 2;
     gm[? "is_coop"] = true;
+    gm[? "is_deathmatch"] = false;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "turrets"] = true;
@@ -265,6 +266,8 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_volleyball_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "is_deathmatch"] = false;
+    gm[? "team_based"] = true;
 
     limits = gm[? "limits"];
     limits[? "score"] = 10;
@@ -306,6 +309,8 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_hoopball_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "is_deathmatch"] = false;
+    gm[? "team_based"] = true;
 
     limits = gm[? "limits"];
     limits[? "score"] = 10;
@@ -372,6 +377,7 @@ function create_gamemodes_DB() {
     gm[? "min_real_players"] = 2;
     gm[? "max_players"] = 2;
     gm[? "is_coop"] = true;
+    gm[? "is_deathmatch"] = false;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "turrets"] = true;

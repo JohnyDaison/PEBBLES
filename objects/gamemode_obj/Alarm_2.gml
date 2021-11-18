@@ -276,7 +276,7 @@ else
                     player.winner = true;
                 }
                 
-                if(mode == "volleyball")
+                if(team_based)
                 {
                     if(team_defeat_count == team_count - 1)
                     {
@@ -328,7 +328,7 @@ else
                 {   
                     center_overlay.message = winner.name;
                     
-                    if(mode == "volleyball" && player_count > 2)
+                    if(team_based && player_count > 2)
                     {
                         center_overlay.message = "Team " + string(winner.team_number);
                     }
