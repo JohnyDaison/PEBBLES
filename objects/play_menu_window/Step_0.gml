@@ -30,6 +30,7 @@ for(pl_num = 1; pl_num <= players_pane.player_pane_count; pl_num++)
                 if(player_pane.flag_input.list_picker.scroll_list.cur_item != cur_value)
                 {
                     player_pane.flag_input.list_picker.scroll_list.cur_item = cur_value;
+                    player_pane.flag_input.list_picker.scroll_list.selection_pos = cur_value;
                     gui_list_picker_update_script(player_pane.flag_input.list_picker);
                 }
             }

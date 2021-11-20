@@ -41,7 +41,7 @@ function gui_list_picker_update_script() {
                 cur_item_id = id_list[| cur_item];
             }
         
-            if(force_change_script || last_cur_item != cur_item || last_cur_item_id = cur_item_id)
+            if(force_change_script || last_cur_item != cur_item || last_cur_item_id == cur_item_id)
             {
                 script_execute(item_change_script);
             }
