@@ -2,6 +2,8 @@ function speech_terms_define() {
     default_highlight_color = g_yellow;
     var def_color = default_highlight_color;
 
+    speech_add_term("subject_name", "SUBJECT_NAME", g_white);
+    
     speech_add_term("jump", "Jump", def_color);
     speech_add_term("jump_suit", "Jump Suit", def_color);
     speech_add_term("double_jump", "Double jump", def_color);

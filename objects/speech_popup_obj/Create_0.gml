@@ -48,6 +48,7 @@ apply_my_text_fix = false;
 //speech_terms_create();
 term_index_map = ds_map_create();
 
+subject_name = "";
+
 alarm[0] = -1;
 alarm[2] = 2;
-
