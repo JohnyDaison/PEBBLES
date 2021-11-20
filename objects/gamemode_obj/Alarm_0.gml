@@ -41,8 +41,10 @@ with(level_start_obj)
 
 for (var i=1; i <= player_count; i++) {
     var level_start = ordered_starts[? i];
-    with(level_start) {
-        create_player_things(my_player);
+    if (!is_undefined(level_start)) {
+        with(level_start) {
+            create_player_things(my_player);
+        }
     }
 }
 

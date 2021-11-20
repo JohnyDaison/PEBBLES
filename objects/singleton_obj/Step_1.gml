@@ -174,6 +174,16 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
     {
         self.show_colorimatrix = !self.show_colorimatrix; 
     }
+    
+    // ALT + M
+    if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("M")))
+    {
+        if (DB.console_mode == "test") {
+            DB.console_mode = "debug";
+        } else if(DB.console_mode == "debug") {
+            DB.console_mode = "test";
+        }
+    }
 
     // CTRL + T
     if(keyboard_check(vk_control) && keyboard_check_pressed(ord("T")))
