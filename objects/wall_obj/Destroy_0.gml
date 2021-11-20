@@ -20,6 +20,7 @@ if (cover == cover_grate) {
         grate = instance_create(x, y, grate_block_obj);
         with(grate) {
             event_perform(ev_step, ev_step_begin);
+            visible = true;
         }
     }
 }
