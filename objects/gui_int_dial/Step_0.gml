@@ -49,12 +49,12 @@ if(visible)
         
             if(self.active)
             {
-                if(DB.gui_controls[# up,pressed])
+                if(DB.gui_controls[# up,pressed] || mouse_wheel_up())
                 {
                     self.value = min(self.max_value, self.value + self.value_step);
                     keyboard_string = string(self.value);
                 }
-                if(DB.gui_controls[# down,pressed])
+                if(DB.gui_controls[# down,pressed] || mouse_wheel_down())
                 {
                     self.value = max(self.min_value, self.value - self.value_step);
                     keyboard_string = string(self.value);

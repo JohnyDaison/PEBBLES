@@ -10,7 +10,5 @@ self.value_step = 1;
 
 self.dial = noone;
 self.minus_box = noone;
-self.up_arrow = noone;
-self.down_arrow = noone;
 
 alarm[0] = 1;
