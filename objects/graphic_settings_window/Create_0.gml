@@ -12,7 +12,7 @@ self.text = "Settings";
 self.modal = true;
 
 var top_line = 80;
-var left_line_height = 64;
+var left_line_height = 48;
 var center_line_height = 48;
 var checkbox_column_x = 40;
 var checkbox_label_x = 64;
