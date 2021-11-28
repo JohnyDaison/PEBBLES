@@ -1,7 +1,7 @@
 function update_display() {
     with(singleton_obj)
     {   
-        var is_menu = !instance_exists(gamemode_obj) || room == pausemenu || room == match_summary;
+        var is_menu = !instance_exists(gamemode_obj) || room == mainmenu || room == pausemenu || room == match_summary;
         
         if(aa_level != aa_level_set || vsync != vsync_set)
         {

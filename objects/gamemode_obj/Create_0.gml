@@ -30,6 +30,7 @@ matches_remaining = 0;
 random_place_order = false;
 regenerate_terrain_delay = 8 * 60; //300
 cpu_player_exists = false;
+game_started = false;
 
 sudden_death = false;
 

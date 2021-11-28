@@ -74,3 +74,15 @@ function clamp_current_position() {
         }
     }
 }
+
+select_item = function(index) {
+    if (is_undefined(items[| index])) {
+        return false;
+    }
+    
+    var diff = index - cur_item;
+    selection_pos += diff;
+    cur_item += diff;
+    
+    return true;
+}

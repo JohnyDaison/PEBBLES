@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "play_menu_window",
-    "path": "folders/Scripts/GUI/behavior/play_menu_window.yy",
+    "name": "actions",
+    "path": "folders/Scripts/actions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "team2_click_script",
+  "name": "player_setup_window_start_game",
   "tags": [],
   "resourceType": "GMScript",
 }

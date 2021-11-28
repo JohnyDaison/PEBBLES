@@ -6,7 +6,7 @@
     "path": "folders/Scripts/actions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "play_menu_window_start_game",
+  "name": "play_menu_window_next_step",
   "tags": [],
   "resourceType": "GMScript",
 }

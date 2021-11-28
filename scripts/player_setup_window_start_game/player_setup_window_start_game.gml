@@ -1,51 +1,9 @@
-function play_menu_window_start_game() {
-    var gm_pane = play_menu_window.gamemode_pane;
-    var players_pane = play_menu_window.players_pane;
-    var player_panes_map = play_menu_window.player_panes_map;
-    var world = play_menu_window.world;
-
-
-    // GAMEMODE AND WORLD
-    var gm_id = gm_pane.gamemode_picker.cur_item_id;
-    var gm = DB.gamemodes[? gm_id];
-
-    // GAMEMODE
-    var gamemode = instance_create(0,0, gm[? "type"]);
-
-    gamemode.mode = gm_id;
-    gamemode.name = gm[? "name"];
-    gamemode.is_coop = gm[? "is_coop"];
-    gamemode.is_deathmatch = gm[? "is_deathmatch"];
-    gamemode.team_based = gm[? "team_based"];
-
-    with(gamemode)
-    {
-        levels_load_config(gm[? "base_level_config"]);
-    }
-
-    if(gamemode.object_index == campaign_obj)
-    {
-        DB.player_num = 0;
-    }
-
-    // WORLD
-    world.current_place = world.places[| gm_pane.place_picker.cur_item];
-    gamemode.world = world;
-
-    gamemode.arena_name = world.current_place.name;
-    gamemode.single_cam = world.current_place.single_cam;
-
-    gamemode.tournament_length = 1;
-
-    if(gamemode.object_index == campaign_obj)
-    {
-        gamemode.tournament_length = ds_list_size(world.places) - gm_pane.place_picker.cur_item;
-    }
-
-    gamemode.matches_remaining = gamemode.tournament_length;
-    gamemode.random_place_order = false;
-
-
+function player_setup_window_start_game() {
+    var gamemode = gamemode_obj.id;
+    var gm = DB.gamemodes[? gamemode_obj.mode];
+    var players_pane = player_setup_window.players_pane;
+    var player_panes_map = player_setup_window.player_panes_map;
+    
     // PLAYERS
     gamemode.player_count = players_pane.playernum_input.value;
     gamemode.human_player_count = 0;
@@ -138,35 +96,11 @@ function play_menu_window_start_game() {
 
         gamemode.players[? pl_num] = player;
     }
-
-
-    // MODS
-    ds_map_copy(gamemode.custom_mods, gm_pane.gmmod_customs);
-    mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
-
-
-    // LIMITS
-    var i, limit_id, gm_limits = gm[? "limits"];
-
-    for(i=0; i<DB.limit_count; i++)
-    {
-        limit_id = DB.limit_ids[| i];
-        
-        if(!is_undefined(gm_limits[? limit_id]))
-        {
-            gamemode.limit_active[? limit_id] = true;
-            gamemode.limits[? limit_id] = gm_limits[? limit_id];
-        }
-        else
-        {
-            gamemode.limit_active[? limit_id] = false;
-        }
-    }
-
-
+    
     script_execute(gm[? "start_script"]);
+    gamemode.game_started = true;
 
-    close_frame(play_menu_window);
+    close_frame(player_setup_window);
 
-    room_goto(world.current_place.room_id);
+    room_goto(gamemode.world.current_place.room_id);
 }

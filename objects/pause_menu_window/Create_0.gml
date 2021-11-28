@@ -51,7 +51,7 @@ if(gamemode_obj.object_index == match_obj)
 if(gamemode_obj.object_index == campaign_obj)
 {
     restart_str = "Restart level"
-    finish_str = "Return to Main menu";
+    finish_str = "Return to Play menu";
 }
 
 gui_add_button(0,y+dist*i++, "Resume game", resume_game);

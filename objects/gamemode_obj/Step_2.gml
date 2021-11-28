@@ -1,6 +1,6 @@
 /// @description MODS, APM, RESTART
 
-if(!singleton_obj.paused)
+if(!singleton_obj.paused && game_started)
 {
     // MODS
     if(!mod_get_state("base_crystals"))

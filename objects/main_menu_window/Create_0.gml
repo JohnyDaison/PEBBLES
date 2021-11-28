@@ -5,14 +5,14 @@ update_display();
 self.width = 480;
 self.height = 704;
 
-x = view_wport[0]/2 - width/2;
-y = view_hport[0]/2 - height/2;
+window_axis = display_get_gui_width()/2;
+x = window_axis - width/2;
+y = display_get_gui_height()/2 - height/2;
 /*
 x = room_width/2 - width/2;
 y = room_height/2 - height/2;
 */
 
-window_axis = x+self.width/2;
 self.text = "Main Menu";
 self.draw_heading = false;
 self.draw_bg_color = false;

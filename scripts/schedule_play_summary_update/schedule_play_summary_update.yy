@@ -6,7 +6,7 @@
     "path": "folders/Scripts/GUI/behavior/play_menu_window.yy",
   },
   "resourceVersion": "1.0",
-  "name": "team1_click_script",
+  "name": "schedule_play_summary_update",
   "tags": [],
   "resourceType": "GMScript",
 }

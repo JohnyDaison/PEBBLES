@@ -4,7 +4,7 @@ update_display();
 
 y = 48;
 self.height = 656;
-window_axis = view_wport[0]/2;
+window_axis = display_get_gui_width()/2;
 
 self.text = "Play Menu";
 self.draw_heading = false;
@@ -12,32 +12,11 @@ self.draw_bg_color = false;
 self.draw_border = false;
 self.world = noone;
 
-menu_start = 112;
-
 self.modal = true;
-
-ii = instance_create(0,0,gui_label);
-ii.text = DB.version_string;
-ii.gui_parent = id;
-ii.align = "left"
-ii.draw_bg_color = false;
-ii.rel_position = "absolute";
-ds_list_add(self.gui_content,ii);
-
-
-ii = instance_create(window_axis,y + 40,gui_big_text);
-ii.text = "·P·E·B·B·L·E·S·";
-ii.width = 2000;
-ii.bg_color = c_black;
-ii.bg_alpha = 0.9;
-ii.gui_parent = id;
-ii.depth -= 1;
-ii.rel_position = "absolute";
-ds_list_add(self.gui_content,ii);
-
-eloffset_y = y + menu_start;
+self.update_summary = false;
 
 eloffset_x = x + 16;
+eloffset_y = y + 16;
 
 gamemode_pane = gui_add_pane(0,0, "Game mode");
 
@@ -256,7 +235,7 @@ with(gamemode_pane)
                     ii = gui_add_mod_checkbox(0, 0, gmmod_id, modifier_chb_size);
 
                     ii.user_clicked_script = mod_chb_user_click_script;
-                    ii.onchange_script = play_summary_update;
+                    ii.onchange_script = schedule_play_summary_update;
                     ii.draw_unlocked_border = true;
                 }
             
@@ -294,100 +273,47 @@ add_frame(mod_tooltip_window);
 
 eloffset_x += gamemode_pane.width + 16;
 
-players_pane = gui_add_pane(0, 0, "Players");
-player_panes_map = ds_map_create();
-var pp_map = player_panes_map;
+eloffset_y += gamemode_pane.height - (2 * 32 + 2 * vert_spacing);
 
-with(players_pane)
-{
-    icon = player_small_spr;
-    draw_bg_color = true;
-    show_icon = true;
-    draw_heading = false;
-    centered = true;
-    width = 304;
-    height = max(536, other.gamemode_pane.height);
-    player_pane_count = 4;
-    var hor_spacing = 16;
-    var vert_spacing = 8;
-    
-    eloffset_x = x + 48;
-    eloffset_y = y + vert_spacing;
-    top_player_pane_y = 0;
-    bottom_player_pane_y = 0;
-    show_team = 1;
-    hidden_team_button_color = merge_color(base_bg_color, c_dkgray, 0.75);
-    used_flag_list = ds_list_create();
-    
-    
-    ii = gui_add_label(64, 16, "Number of players:");
-    
-    playernum_input = gui_add_int_input(204, 16, 0, 1, 1);
+ii = gui_add_button(0,0, "Next step", play_menu_window_next_step);
+ii.centered = true;
+ii.base_bg_color = select_color;
+next_step_button = ii.id;
 
-    
-    var team_button_width = 96;
-    
-    eloffset_y += 32 + vert_spacing;
-    
-    ii = gui_add_button(0,0, "Team 1", team1_click_script);
-    ii.width = team_button_width;
-    ii.centered = true;
-    team1_button = ii;
-    
-    eloffset_x += team1_button.width + hor_spacing;
-    
-    ii = gui_add_button(0,0, "Team 2", team2_click_script);
-    ii.width = team_button_width;
-    ii.centered = true;
-    team2_button = ii;
-    
-    eloffset_x = x;
-    eloffset_y += 32 + 2*vert_spacing;
-    top_player_pane_y = eloffset_y;
-    
-    for(i = 1; i <= player_pane_count; i++)
-    {
-        if(i == 2)
-        {
-            bottom_player_pane_y = eloffset_y;
-        }
-        
-        pp_map[? i] = gui_add_player_setup_pane(0, 0, i);
-        
-        if(i == 1 || i == player_pane_count)
-        {
-            eloffset_y += pp_map[? i].height + vert_spacing;
-        }
-    }
+eloffset_y += 32 + vert_spacing;
 
+ii = gui_add_button(0,0, "Back", goto_mainmenu);
+ii.width = 96;
+ii.centered = true;
+    
+eloffset_x += next_step_button.width + hor_spacing;
 
-    var start_button_width = 160;
-    var back_button_width = 96;
-    
-    eloffset_x = x + width - (start_button_width + back_button_width + 2*hor_spacing);
-    eloffset_y = y + height - 32 - vert_spacing;
-    
-    ii = gui_add_button(0,0, "Start game", play_menu_window_start_game);
-    ii.width = start_button_width;
-    ii.centered = true;
-    ii.base_bg_color = select_color;
-    start_button = ii.id;
-    
-    eloffset_x += start_button.width + hor_spacing;
-    
-    ii = gui_add_button(0,0, "Back", goto_mainmenu);
-    ii.width = back_button_width;
-    ii.centered = true;
-    //back_button = ii.id;
-    
-    eloffset_y += start_button.height + vert_spacing;
-}
+self.width = 3*hor_spacing + gamemode_pane.width + next_step_button.width;
+x = window_axis - width/2;
 
-self.width = 3*hor_spacing + gamemode_pane.width + players_pane.width;
-x = view_wport[0]/2 - width/2;
-
-// ELEPHANT
+// DESTROY ELEPHANT
 if(instance_exists(menu_elephant_obj))
 {
     instance_destroy(menu_elephant_obj.id);
+}
+
+alarm[0] = 2;
+
+
+load_from_gamemode = function () {
+    if (instance_exists(gamemode_obj)) {
+        var gm_picker = gamemode_pane.gamemode_picker;
+        gm_picker.select_item_by_id(gamemode_obj.mode);
+        
+        var place_picker = gamemode_pane.place_picker;
+        place_picker.select_item_by_id(gamemode_obj.world.current_place.room_id);
+        
+        ds_map_copy(gamemode_pane.gmmod_customs, gamemode_obj.custom_mods);
+        mods_controls_update();
+    }
+    
+    with(gamemode_obj)
+    {
+        instance_destroy();
+    }
 }
