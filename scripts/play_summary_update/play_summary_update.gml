@@ -5,7 +5,7 @@ function play_summary_update() {
     {
         var new_text = "";
 
-        var gm = DB.gamemodes[? gamemode_picker.cur_item_id], i, count, place, mod_id, mod_but, gmmod;
+        var gm = DB.gamemodes[? gamemode_picker.cur_item_id], i, count, place, mod_id, mod_control, gmmod;
     
         if(!is_undefined(gm))
         {
@@ -18,7 +18,7 @@ function play_summary_update() {
         
             // GAMEMODE DESCRIPTION
             new_text += "\n";
-            new_text += "  " + gm[? "description"] + "\n";
+            new_text += " " + gm[? "description"] + "\n";
         
             // PLAYERS
             new_text += "\n";
@@ -75,7 +75,7 @@ function play_summary_update() {
                 
                     // DESCRIPTION
                     new_text += "\n";
-                    new_text += "  " + place.description + "\n";
+                    new_text += " " + place.description + "\n";
                     new_text += "\n";
                         
                     // BRONZE TIME
@@ -108,12 +108,12 @@ function play_summary_update() {
             {
                 mod_id = DB.gamemode_mod_list[| i];
                 gmmod = DB.gamemode_mods[? mod_id];
-                mod_but = gmmod_controls[? mod_id];
+                mod_control = gmmod_controls[? mod_id];
             
                 customized = false;
                 state_string = "";
             
-                if(is_undefined(mod_but))
+                if(is_undefined(mod_control))
                 {
                     continue;
                 }
@@ -122,6 +122,10 @@ function play_summary_update() {
                 if(gmmod[? "type"] == "bool")
                 {
                     default_value = false;
+                }
+                else if(gmmod[? "type"] == "number")
+                {
+                    default_value = undefined;
                 }
             
             
@@ -145,15 +149,32 @@ function play_summary_update() {
                     default_value = forced_mods_place[? mod_id];
                 }
             
+                var value = mod_control.get_value();
             
                 if(gmmod[? "type"] == "bool")
                 {
-                    if(default_value != mod_but.checked)
+                    if(default_value != value)
                     {
                         customized = true;
-                        if(mod_but.checked)
+                        if(mod_control.checked)
                         {
                             state_string = "";
+                        }
+                        else
+                        {
+                            state_string = "(Off)";
+                        }
+                    }
+                }
+                else if(gmmod[? "type"] == "number")
+                {
+                    var number_customized = (is_undefined(value) && (!is_undefined(default_value) && default_value != false))
+                                        || (!is_undefined(value) && (is_undefined(default_value) || default_value != value));
+                    if (number_customized) {
+                        customized = true;
+                        if(mod_control.checkbox.checked)
+                        {
+                            state_string = "(" + string(mod_control.get_value()) + ")";
                         }
                         else
                         {
@@ -236,6 +257,8 @@ function play_summary_update() {
     
         gui_list_picker_items_reset(summary_list_picker, "text", summary_list);
     
-        //summary_label.text = new_text;
+        if (custom_mods_text != "") {
+            summary_list_picker.select_item_by_index(-1);
+        }
     }
 }

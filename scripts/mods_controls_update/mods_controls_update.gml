@@ -11,7 +11,7 @@ function mods_controls_update() {
             var custom_mods = gm_pane.gmmod_customs;
             var default_map, forced_map, place, default_mods_place, forced_mods_place;
             var mod_controls = gmmod_controls;
-            var mod_id, mod_but, dmod, fmod, gmmod;
+            var mod_id, mod_control, dmod, fmod, gmmod;
         
         
             place = play_menu_window.world.places[| place_picker.cur_item];
@@ -30,16 +30,30 @@ function mods_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
+                    mod_control = mod_controls[? mod_id];
+                    
                     if(gmmod[? "type"] == "bool")
                     {
-                        mod_but = mod_controls[? mod_id];
-                    
-                        with(mod_but)
+                        with(mod_control)
                         {
                             locked = false;
                             gui_checkbox_script(false);
                         }
+                    } 
+                    else if(gmmod[? "type"] == "number")
+                    {
+                        with(mod_control)
+                        {
+                            with(checkbox) {
+                                locked = false;
+                                gui_checkbox_script(false);
+                            }
+                            
+                            number_input.locked = true;
+                            number_input.set_value(gmmod[? "default_value"], true);
+                        }
                     }
+                    
                 }
             
                 mod_id = ds_map_find_next(mod_controls, mod_id);
@@ -72,13 +86,25 @@ function mods_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
+                    mod_control = mod_controls[? dmod];
+                    
                     if(gmmod[? "type"] == "bool")
                     {
-                        mod_but = mod_controls[? dmod];
-                    
-                        with(mod_but)
+                        with(mod_control)
                         {
                             gui_checkbox_script(default_map[? dmod]);
+                        }
+                    }
+                    else if(gmmod[? "type"] == "number")
+                    {
+                        with(mod_control)
+                        {
+                            with(checkbox) {
+                                gui_checkbox_script(true);
+                            }
+                            
+                            number_input.set_value(default_map[? dmod], true);
+                            number_input.locked = false;
                         }
                     }
                 }
@@ -98,12 +124,25 @@ function mods_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
+                    mod_control = mod_controls[? mod_id];
+                    
                     if(gmmod[? "type"] == "bool")
                     {
-                        mod_but = mod_controls[? mod_id];
-                        with(mod_but)
+                        with(mod_control)
                         {
                             gui_checkbox_script(custom_mods[? mod_id]);
+                        }
+                    }
+                    else if(gmmod[? "type"] == "number")
+                    {
+                        with(mod_control)
+                        {
+                            with(checkbox) {
+                                gui_checkbox_script(true);
+                            }
+                            
+                            number_input.set_value(custom_mods[? mod_id], true);
+                            number_input.locked = false;
                         }
                     }
                 }
@@ -137,14 +176,38 @@ function mods_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
+                    mod_control = mod_controls[? fmod];
+                    
                     if(gmmod[? "type"] == "bool")
                     {
-                        mod_but = mod_controls[? fmod];
-                    
-                        with(mod_but)
+                        with(mod_control)
                         {
                             locked = true;
                             gui_checkbox_script(forced_map[? fmod]);
+                        }
+                    }
+                    else if(gmmod[? "type"] == "number")
+                    {
+                        with(mod_control)
+                        {
+                            var forced_value = forced_map[? fmod];
+                            var is_number = is_numeric(forced_value) && !is_bool(forced_value);
+                            
+                            with(checkbox) {
+                                locked = true;
+                                if (is_bool(forced_value)) {
+                                    gui_checkbox_script(forced_value);
+                                } else {
+                                    gui_checkbox_script(true);
+                                }
+                            }
+                            
+                            if (is_number) {
+                                number_input.set_value(forced_value, true);
+                            }
+                            if (is_number || forced_value == false) {
+                                number_input.locked = true;
+                            }
                         }
                     }
                 }

@@ -211,12 +211,12 @@ if(self.enabled)
     }
    
     // SHIELD RECHARGE
-    if(!instance_exists(my_shield) && !self.holographic && self.shield_ready && gamemode_obj.spawner_shield_power > 0)
+    if(!instance_exists(my_shield) && !self.holographic && self.shield_ready && shield_power > 0)
     {
         self.my_shield = instance_create(x,y,shield_obj);
         my_shield.my_guy = id;
-        my_shield.max_charge = gamemode_obj.spawner_shield_power - shield_overcharge;
-        my_shield.charge = gamemode_obj.spawner_shield_power;
+        my_shield.max_charge = shield_power - shield_overcharge;
+        my_shield.charge = shield_power;
         my_shield.size_coef = 0.75;
         my_shield.low_charge_ratio = 0.5;
         my_shield.field_power = 2;

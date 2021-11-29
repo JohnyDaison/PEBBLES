@@ -2,7 +2,7 @@ event_inherited();
 
 update_display();
 
-y = 48;
+y = 8;
 self.height = 656;
 window_axis = display_get_gui_width()/2;
 
@@ -15,8 +15,8 @@ self.world = noone;
 self.modal = true;
 self.update_summary = false;
 
-eloffset_x = x + 16;
-eloffset_y = y + 16;
+eloffset_x = x;
+eloffset_y = y;
 
 gamemode_pane = gui_add_pane(0,0, "Game mode");
 
@@ -220,7 +220,16 @@ with(gamemode_pane)
         gmmod_type = DB.gamemode_mod_type_list[| type_i];
         list = gmmod_controls_types[? gmmod_type];
         count = ds_list_size(list);
-        mods_width = 80 + min(15, ceil(count/2)) * mod_dist;
+        
+        if(gmmod_type == "bool") {
+            mods_width = 80 + min(15, ceil(count/2)) * mod_dist;
+        }
+        
+        if(gmmod_type == "number") {
+            eloffset_x -= 8;
+            eloffset_y -= 8;
+            mod_dist = 2 * 56;
+        }
     
         for(i=0; i<count; i++)
         {
@@ -238,6 +247,16 @@ with(gamemode_pane)
                     ii.onchange_script = schedule_play_summary_update;
                     ii.draw_unlocked_border = true;
                 }
+                else if(gmmod_type == "number")
+                {
+                    ii = gui_add_mod_numberbox(0, 0, gmmod_id, modifier_chb_size);
+
+                    ii.checkbox.user_clicked_script = mod_chb_user_click_script;
+                    ii.checkbox.onchange_script = number_mod_change_state_script;
+                    ii.checkbox.draw_unlocked_border = true;
+                    
+                    ii.number_input.onchange_script = number_mod_change_value_script;
+                }
             
                 gmmod_controls[? gmmod_id] = ii;
             }
@@ -252,7 +271,7 @@ with(gamemode_pane)
         }
     
         eloffset_x = mods_content_x;
-        eloffset_y += mod_dist;
+        eloffset_y += vert_spacing;
     }
     
     // destroy gmmod_controls_types

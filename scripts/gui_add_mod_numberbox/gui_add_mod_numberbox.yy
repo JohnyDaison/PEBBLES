@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "start scripts",
-    "path": "folders/Scripts/gamemodes/start scripts.yy",
+    "name": "combo",
+    "path": "folders/Scripts/GUI/add/input/combo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "gm_simple_start",
+  "name": "gui_add_mod_numberbox",
   "tags": [],
   "resourceType": "GMScript",
 }

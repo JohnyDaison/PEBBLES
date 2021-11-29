@@ -26,7 +26,11 @@ if(instance_exists(dial))
             dial.value = abs(self.min_value);
             cur_sign = sign(self.min_value);
         }
-        self.value = cur_sign*dial.value;
+        self.value = cur_sign * dial.value;
+        if (self.value != last_value) {
+            script_execute(self.onchange_script);
+        }
+        last_value = self.value;
     }
     if(value == 0)
     {

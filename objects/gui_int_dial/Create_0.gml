@@ -12,3 +12,15 @@ self.min_value = -self.max_value;
 self.is_int_input = false;
 self.is_percent = false;
 self.value_step = 1;
+
+set_value = function(new_value) {
+    if(is_undefined(new_value)) {
+        return false;
+    }
+    
+    self.value = clamp(self.value, min_value, max_value);
+    self.value = min_value + round((new_value - min_value) / value_step) * value_step;
+    self.text = string(self.value);
+    
+    return true;
+}

@@ -76,6 +76,14 @@ function create_gamemodes_DB() {
     gamemode_mod_create("tut_guide", "Tutorial Guide", "bool", true, tut_guide_mod_icon, "NPC Guide will show and explain the game to you.");
 
 
+    // number mods
+    gamemode_mod_create("base_crystal_hp", "Base Crystal HP", "number", true, base_crystal_hp_mod_icon, "Starting Health of your Base");
+    gamemode_number_mod_values("base_crystal_hp", 10, 1, 10, 1);
+    
+    gamemode_mod_create("base_crystal_shield_power", "Base Crystal Shield HP", "number", true, base_crystal_sp_mod_icon, "Strength of Base Crystal Shield");
+    gamemode_number_mod_values("base_crystal_shield_power", 6, 0, 6, 1);
+
+
     // GAMEMODES
 
     // Quick Training
@@ -116,6 +124,9 @@ function create_gamemodes_DB() {
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -135,6 +146,9 @@ function create_gamemodes_DB() {
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
     forced_mods[? "shield_push"] = true;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "dark_color"] = true;
@@ -147,7 +161,6 @@ function create_gamemodes_DB() {
     //gm[? "description"] = "Dive into all-out warfare in this semi-tactical-action Battle mode.";
     gm[? "description"] = "Play a canonical duel match. Dive into all-out warfare in this semi-tactical battle mode.";
 
-    gm[? "start_script"] = gm_battle_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
     gm[? "start_place_room"] = classic_arena;
@@ -173,12 +186,14 @@ function create_gamemodes_DB() {
     default_mods[? "snakes_on_a_plane"] = true;
     default_mods[? "slime_mob_rain"] = true;
     default_mods[? "artifacts"] = true;
+    
+    default_mods[? "base_crystal_hp"] = 10;
+    default_mods[? "base_crystal_shield_power"] = 6;
 
 
     // Arcade match
     gm = gamemode_create("arcade", "Arcade Match", match_obj, arena_world);
     gm[? "description"] = "Play a Versus match with Arcade rules for some simple, high-powered action.";
-    gm[? "start_script"] = gm_classic_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
     gm[? "start_place_room"] = classic_arena;
@@ -196,7 +211,8 @@ function create_gamemodes_DB() {
     forced_mods[? "orbs_energy_min_lock"] = true;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "shield_push"] = true;
-
+    forced_mods[? "base_crystal_shield_power"] = false;
+    
     default_mods = gm[? "default_modifiers"];
     default_mods[? "random_item_spawner"] = true;
     default_mods[? "base_crystals"] = true;
@@ -207,13 +223,14 @@ function create_gamemodes_DB() {
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
     default_mods[? "artifacts"] = true;
+    
+    default_mods[? "base_crystal_hp"] = 7;
 
 
     /*
     // Simple match
     gm = gamemode_create("simple", "Modern Match", match_obj, arena_world);
     gm[? "description"] = "Play a Versus match with Modern rules, without new elements.";
-    gm[? "start_script"] = gm_simple_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 2;
     gm[? "start_place_room"] = closed_quarters_arena;
@@ -232,6 +249,9 @@ function create_gamemodes_DB() {
     default_mods[? "base_crystals"] = true;
     default_mods[? "hp_death"] = true;
     default_mods[? "artifacts"] = true;
+    
+    default_mods[? "base_crystal_hp"] = 5;
+    default_mods[? "base_crystal_shield_power"] = 2;
     */
 
 
@@ -248,6 +268,9 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "shield_push"] = true;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "turrets"] = true;
@@ -296,6 +319,9 @@ function create_gamemodes_DB() {
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -339,6 +365,9 @@ function create_gamemodes_DB() {
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
     forced_mods[? "shield_push"] = false;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -358,7 +387,7 @@ function create_gamemodes_DB() {
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "base_crystals"] = true;
     forced_mods[? "tut_guide"] = false;
-
+    
     default_mods = gm[? "default_modifiers"];
     default_mods[? "hp_death"] = true;
     default_mods[? "turrets"] = true;
@@ -407,6 +436,9 @@ function create_gamemodes_DB() {
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
+    
+    forced_mods[? "base_crystal_hp"] = false;
+    forced_mods[? "base_crystal_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -430,7 +462,6 @@ function create_gamemodes_DB() {
     // Test mode
     gm = gamemode_create("test_mode", "Extras", campaign_obj, test_world_obj);
     gm[? "description"] = "Testing worlds, sandbox levels and other crazy stuff. If X collides with Y, how much does it break?";
-    gm[? "start_script"] = gm_test_mode_start;
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 2;
     gm[? "is_coop"] = false;

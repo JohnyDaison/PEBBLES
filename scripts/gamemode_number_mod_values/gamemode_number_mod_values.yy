@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "start scripts",
-    "path": "folders/Scripts/gamemodes/start scripts.yy",
+    "name": "gamemodes",
+    "path": "folders/Scripts/gamemodes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "gm_battle_start",
+  "name": "gamemode_number_mod_values",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -76,6 +76,10 @@ function clamp_current_position() {
 }
 
 select_item = function(index) {
+    if (index < 0) {
+        index = item_count + index;
+    }
+    
     if (is_undefined(items[| index])) {
         return false;
     }

@@ -4,6 +4,7 @@ if(self.is_int_input)
 {
     self.min_value = gui_parent.min_value;
     self.max_value = gui_parent.max_value;
+    self.enabled = !gui_parent.locked;
 }
 
 if(visible)
@@ -109,6 +110,7 @@ if(visible)
         }
         else
         {
+            self.value = clamp(self.value, min_value, max_value);
             self.value = min_value + round((self.value - min_value) / value_step) * value_step;
             self.text = string(self.value);
         }

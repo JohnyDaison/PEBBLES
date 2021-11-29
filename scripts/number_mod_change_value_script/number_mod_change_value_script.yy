@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "start scripts",
-    "path": "folders/Scripts/gamemodes/start scripts.yy",
+    "name": "play_menu_window",
+    "path": "folders/Scripts/GUI/behavior/play_menu_window.yy",
   },
   "resourceVersion": "1.0",
-  "name": "gm_classic_start",
+  "name": "number_mod_change_value_script",
   "tags": [],
   "resourceType": "GMScript",
 }

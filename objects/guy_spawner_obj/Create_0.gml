@@ -16,9 +16,19 @@ alarm[1] = 1;
 
 // SHIELD
 shield_threshold = 12;
-shield_repair_time = max(1, gamemode_obj.spawner_shield_power) * 300;
+shield_power = 6;
 
-damage = gamemode_obj.spawner_starting_damage;
+var mod_sp = mod_get_state("base_crystal_shield_power");
+if (!is_undefined(mod_sp) && !is_bool(mod_sp) ) {
+    shield_power = mod_sp;
+}
+
+shield_repair_time = max(1, shield_power) * 300;
+
+var mod_hp = mod_get_state("base_crystal_hp");
+if (!is_undefined(mod_hp) && mod_hp != false) {
+    damage = hp - mod_hp;
+}
 
 holographic = mod_get_state("holographic_spawners");
 
