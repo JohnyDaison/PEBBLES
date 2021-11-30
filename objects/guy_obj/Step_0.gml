@@ -1963,6 +1963,7 @@ if(!self.frozen_in_time)
             channeling = true;
             channel_duration = 0;
             channeling_full = false;
+            interrupt_channel = false;
             holding_wall = false;
             climbing_up = false;
             hspeed *= 0.5;
