@@ -1,1 +1,1 @@
-add_frame(main_menu_window);
+add_frame(frame_manager.menu_window);

@@ -1,4 +1,4 @@
-if(!singleton_obj.paused && room != match_summary)
+if(!singleton_obj.paused && room != mainmenu && room != match_summary)
 {
     game_set_speed(singleton_obj.game_speed, gamespeed_fps);
     
@@ -86,7 +86,7 @@ else
 {
     game_set_speed(60, gamespeed_fps);
 }
-if(room == match_summary)
+if(room == mainmenu || room == match_summary)
 {
     frame_manager.enable_focus_shift = true;
 }

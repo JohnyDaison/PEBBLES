@@ -2,7 +2,6 @@ event_inherited();
 
 update_display();
 
-y = 8;
 self.height = 656;
 window_axis = display_get_gui_width()/2;
 
@@ -309,6 +308,7 @@ eloffset_x += next_step_button.width + hor_spacing;
 
 self.width = 3*hor_spacing + gamemode_pane.width + next_step_button.width;
 x = window_axis - width/2;
+y = 8;
 
 // DESTROY ELEPHANT
 if(instance_exists(menu_elephant_obj))
@@ -336,3 +336,5 @@ load_from_gamemode = function () {
         instance_destroy();
     }
 }
+
+event_perform(ev_step, ev_step_end);

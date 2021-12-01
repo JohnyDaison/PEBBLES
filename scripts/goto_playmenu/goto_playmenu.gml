@@ -3,6 +3,15 @@ function goto_playmenu() {
     {
         close_frame(empty_frame);
     }
-
-    add_frame(play_menu_window)
+    
+    frame_manager.menu_window = play_menu_window;
+    
+    if(room != mainmenu)
+    {
+        room_goto(mainmenu);
+    }
+    else
+    {
+        add_frame(play_menu_window)
+    }
 }

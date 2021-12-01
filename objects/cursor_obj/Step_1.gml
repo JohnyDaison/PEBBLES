@@ -104,7 +104,7 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
     var focus_found = false;
     if(instance_exists(focused_frame)) {
         focused_is_modal = focused_frame.modal;
-        focused_name = object_get_name(object_index);
+        focused_name = object_get_name(focused_frame.object_index);
     }
     show_debug_message("focused frame: " + focused_name);
     

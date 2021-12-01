@@ -27,6 +27,8 @@ function goto_mainmenu() {
         instance_destroy();
     }
     
+    frame_manager.menu_window = main_menu_window;
+    
     if(room != mainmenu)
     {
         room_goto(mainmenu);
