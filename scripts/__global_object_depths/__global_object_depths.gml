@@ -185,8 +185,6 @@ function __global_object_depths() {
     global.__objectDepths[177] = 0; // zone_obj
     global.__objectDepths[178] = 0; // non_game_obj
     global.__objectDepths[179] = 0; // gamemode_obj
-    global.__objectDepths[180] = 0; // match_obj
-    global.__objectDepths[181] = 0; // campaign_obj
     global.__objectDepths[182] = 0; // chase_obj
     global.__objectDepths[183] = 0; // colorizer_obj
     global.__objectDepths[184] = -48; // green_colorizer_obj
@@ -480,8 +478,6 @@ function __global_object_depths() {
     global.__objectNames[177] = "zone_obj";
     global.__objectNames[178] = "non_game_obj";
     global.__objectNames[179] = "gamemode_obj";
-    global.__objectNames[180] = "match_obj";
-    global.__objectNames[181] = "campaign_obj";
     global.__objectNames[182] = "chase_obj";
     global.__objectNames[183] = "colorizer_obj";
     global.__objectNames[184] = "green_colorizer_obj";

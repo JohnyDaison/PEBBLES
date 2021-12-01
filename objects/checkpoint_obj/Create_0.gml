@@ -25,7 +25,7 @@ name = "Checkpoint";
 
 spawn_points = ds_map_create();
 
-if(gamemode_obj.object_index == campaign_obj)
+if(gamemode_obj.is_campaign)
 {
     alarm[3] = 3;
 }

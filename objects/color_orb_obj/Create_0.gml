@@ -24,7 +24,7 @@ gravity_coef = 0.04;
 friction_coef = 0.01;
 custom_sprite = true;
 draw_label = false;
-if(gamemode_obj.object_index == campaign_obj) // TODO: change condition
+if(gamemode_obj.is_campaign) // TODO: change condition
 {
     draw_label = true;
 }

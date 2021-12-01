@@ -71,7 +71,7 @@ function guy_die_from_falling() {
         score_value = gamemode_obj.score_values[? "guy_suicide"];
             
         increase_stat(my_player,"suicides", 1, false);
-        if(gamemode_obj.object_index == match_obj && gamemode_obj.is_deathmatch)
+        if(!gamemode_obj.is_campaign && gamemode_obj.is_deathmatch)
         {
             increase_stat(my_player, "score", score_value, false);
             stat_str = stat_label("score", score_value, "+");

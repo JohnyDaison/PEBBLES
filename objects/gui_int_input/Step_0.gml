@@ -8,7 +8,7 @@ if(instance_exists(dial))
     dial.tooltip = self.tooltip;
     if(dial.value == self.min_value && self.min_value == self.max_value)
     {
-        dial.enabled = false;
+        locked = true;
         dial.had_focus = false;
     }
     minus_box.enabled = (self.enabled && visible && min_value < 0);

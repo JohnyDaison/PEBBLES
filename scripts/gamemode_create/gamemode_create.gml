@@ -1,4 +1,4 @@
-function gamemode_create(str_id, name, type, world) {
+function gamemode_create(str_id, name, is_campaign, world) {
 
     if(ds_list_find_index(gamemode_list, str_id) != -1)
     {
@@ -14,16 +14,16 @@ function gamemode_create(str_id, name, type, world) {
 
     gm[? "name"] = name;
     gm[? "description"] = "";
-    gm[? "type"] = type;
+    gm[? "is_campaign"] = is_campaign;
     gm[? "world"] = world;
     gm[? "start_place_room"] = noone;
     gm[? "base_level_config"] = "";
 
-    if(type == match_obj)
+    if(!is_campaign)
     {
         gm[? "base_level_config"] = "match";
     }
-    else if(type == campaign_obj)
+    else
     {
         gm[? "base_level_config"] = "tutorial";
     }

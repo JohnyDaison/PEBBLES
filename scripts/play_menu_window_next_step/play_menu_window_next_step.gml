@@ -7,10 +7,11 @@ function play_menu_window_next_step() {
     var gm = DB.gamemodes[? gm_id];
 
     // GAMEMODE
-    var gamemode = instance_create(0,0, gm[? "type"]);
+    var gamemode = instance_create(0,0, gamemode_obj);
 
     gamemode.mode = gm_id;
     gamemode.name = gm[? "name"];
+    gamemode.is_campaign = gm[? "is_campaign"];
     gamemode.is_coop = gm[? "is_coop"];
     gamemode.is_deathmatch = gm[? "is_deathmatch"];
     gamemode.team_based = gm[? "team_based"];
@@ -20,7 +21,7 @@ function play_menu_window_next_step() {
         levels_load_config(gm[? "base_level_config"]);
     }
 
-    if(gamemode.object_index == campaign_obj)
+    if(gamemode.is_campaign)
     {
         DB.player_num = 0;
     }
@@ -34,7 +35,7 @@ function play_menu_window_next_step() {
 
     gamemode.tournament_length = 1;
 
-    if(gamemode.object_index == campaign_obj)
+    if(gamemode.is_campaign)
     {
         gamemode.tournament_length = ds_list_size(world.places) - gm_pane.place_picker.cur_item;
     }

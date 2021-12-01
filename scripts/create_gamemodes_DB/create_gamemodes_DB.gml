@@ -87,7 +87,7 @@ function create_gamemodes_DB() {
     // GAMEMODES
 
     // Quick Training
-    gm = gamemode_create("quick_tutorial", "Training", campaign_obj, quick_tutorial_world_obj);
+    gm = gamemode_create("quick_tutorial", "Training", true, quick_tutorial_world_obj);
     gm[? "description"] = "Journey from Rookie to Cybermage. Optimized for one trainee. Two skilled mages can compete in a Race to the Exit.\n (This is a Tutorial mode.)";
     gm[? "start_script"] = gm_quick_tutorial_start;
     gm[? "min_real_players"] = 2;
@@ -133,7 +133,7 @@ function create_gamemodes_DB() {
 
 
     // Pit Fight
-    gm = gamemode_create("sparring", "Pit Fight", campaign_obj, sparring_world);
+    gm = gamemode_create("sparring", "Pit Fight", true, sparring_world);
     gm[? "description"] = "Face a series of fighters of increasing difficulty. How many can you defeat before you fall?";
     gm[? "start_script"] = gm_sparring_start;
 
@@ -157,7 +157,7 @@ function create_gamemodes_DB() {
 
 
     // Standard match  a.k.a. Full battle
-    gm = gamemode_create("battle", "Standard Match", match_obj, arena_world);
+    gm = gamemode_create("battle", "Standard Match", false, arena_world);
     //gm[? "description"] = "Dive into all-out warfare in this semi-tactical-action Battle mode.";
     gm[? "description"] = "Play a canonical duel match. Dive into all-out warfare in this semi-tactical battle mode.";
 
@@ -192,7 +192,7 @@ function create_gamemodes_DB() {
 
 
     // Arcade match
-    gm = gamemode_create("arcade", "Arcade Match", match_obj, arena_world);
+    gm = gamemode_create("arcade", "Arcade Match", false, arena_world);
     gm[? "description"] = "Play a Versus match with Arcade rules for some simple, high-powered action.";
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
@@ -229,7 +229,7 @@ function create_gamemodes_DB() {
 
     /*
     // Simple match
-    gm = gamemode_create("simple", "Modern Match", match_obj, arena_world);
+    gm = gamemode_create("simple", "Modern Match", false, arena_world);
     gm[? "description"] = "Play a Versus match with Modern rules, without new elements.";
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 2;
@@ -256,7 +256,7 @@ function create_gamemodes_DB() {
 
 
     // Tower climb
-    gm = gamemode_create("towerclimb", "Tower Climbing", campaign_obj, towerclimb_world);
+    gm = gamemode_create("towerclimb", "Tower Climbing", true, towerclimb_world);
     gm[? "description"] = "Race to the top, trickery allowed.";
     gm[? "start_script"] = gm_towerclimb_start;
     gm[? "min_players"] = 2;
@@ -283,7 +283,7 @@ function create_gamemodes_DB() {
 
 
     // Volleyball
-    gm = gamemode_create("volleyball", "Volleyball", match_obj, volleyball_world);
+    gm = gamemode_create("volleyball", "Volleyball", false, volleyball_world);
     gm[? "description"] = "Try a popular mini-game. Mind the holes in the court, though.";
     gm[? "base_level_config"] = "tutorial";
     gm[? "start_script"] = gm_volleyball_start;
@@ -329,7 +329,7 @@ function create_gamemodes_DB() {
     
     
     // Hoopball
-    gm = gamemode_create("hoopball", "Hoopball", match_obj, hoopball_world);
+    gm = gamemode_create("hoopball", "Hoopball", false, hoopball_world);
     gm[? "description"] = "Another ball sport.";
     gm[? "base_level_config"] = "";
     gm[? "start_script"] = gm_hoopball_start;
@@ -376,7 +376,7 @@ function create_gamemodes_DB() {
 
     /*
     // Base survival
-    gm = gamemode_create("survival", "Base Survival", campaign_obj, survival_world);
+    gm = gamemode_create("survival", "Base Survival", true, survival_world);
     gm[? "description"] = "Defend against infinite waves of enemies.";
     gm[? "start_script"] = gm_survival_start;
     gm[? "min_real_players"] = 0;
@@ -399,7 +399,7 @@ function create_gamemodes_DB() {
 
 
     // Old Training
-    gm = gamemode_create("training", "Challenge", campaign_obj, world_1_obj);
+    gm = gamemode_create("training", "Challenge", true, world_1_obj);
     //gm[? "description"] = "This was originally supposed to be the tutorial-as-campaign, but it's way too hard for tutorial. Does have some art.";
     gm[? "description"] = "Experimental levels for experienced players! These were originally supposed to be a part of the tutorial. They're way too hard, but have some art.";
     gm[? "start_script"] = gm_tutorial_start;
@@ -445,7 +445,7 @@ function create_gamemodes_DB() {
 
 
     // Loop world
-    gm = gamemode_create("loop_world", "Loop world", campaign_obj, loop_world_obj);
+    gm = gamemode_create("loop_world", "Loop world", true, loop_world_obj);
     gm[? "description"] = "Not linear!";
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 1;
@@ -460,7 +460,7 @@ function create_gamemodes_DB() {
 
 
     // Test mode
-    gm = gamemode_create("test_mode", "Extras", campaign_obj, test_world_obj);
+    gm = gamemode_create("test_mode", "Extras", true, test_world_obj);
     gm[? "description"] = "Testing worlds, sandbox levels and other crazy stuff. If X collides with Y, how much does it break?";
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 2;
@@ -477,7 +477,7 @@ function create_gamemodes_DB() {
 
     /*
     // Roguelike
-    gm = gamemode_create("roguelike", "Roguelike", campaign_obj, roguelike_world);
+    gm = gamemode_create("roguelike", "Roguelike", true, roguelike_world);
     gm[? "description"] = "Randomly generated world, Extremely experimental";
     gm[? "start_script"] = gm_roguelike_start;
     gm[? "min_real_players"] = 0;

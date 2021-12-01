@@ -39,13 +39,13 @@ function test_level_script() {
         DB.player_num = 0;
         total_players = 0;
     
-        instance_create(0,0,match_obj);
+        instance_create(0,0,gamemode_obj);
     
-        match_obj.arena_name = place_obj.name;
+        gamemode_obj.arena_name = place_obj.name;
         for(i=0;i<DB.limit_count;i+=1)
         {
             var limit_name = DB.limit_ids[| i];
-            match_obj.limit_active[? limit_name] = false;
+            gamemode_obj.limit_active[? limit_name] = false;
         }
     
         with(editor_guy_spawner_obj)
@@ -87,17 +87,17 @@ function test_level_script() {
             }
         
             //player.control_set = player_number;
-            ds_map_add(match_obj.players,player_number,player);
+            ds_map_add(gamemode_obj.players,player_number,player);
             visible = false;
             other.total_players += 1;
         }
-        match_obj.player_count = total_players;
+        gamemode_obj.player_count = total_players;
     
-        show_debug_message("Environment exists? "+string(ds_map_exists(match_obj.players,0)));
+        show_debug_message("Environment exists? "+string(ds_map_exists(gamemode_obj.players,0)));
     
-        //total_players = ds_map_size(match_obj.players);
-        //match_obj.player_count = total_players;
-        show_debug_message("player_count: "+string(match_obj.player_count));
+        //total_players = ds_map_size(gamemode_obj.players);
+        //gamemode_obj.player_count = total_players;
+        show_debug_message("player_count: "+string(gamemode_obj.player_count));
         instance_create(round(place_obj.x + place_obj.width/2), round(place_obj.y + place_obj.height/2), main_camera_obj);
     
         with(editor_terrain_obj)
@@ -149,7 +149,7 @@ function test_level_script() {
     
         cursor_obj.tooltip = "";
     
-        with(match_obj)
+        with(gamemode_obj)
         {
             event_perform(ev_other,ev_room_start);
         }

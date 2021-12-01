@@ -36,7 +36,7 @@ if(!singleton_obj.paused && room != mainmenu && room != match_summary)
             center_overlay.message = "WELCOME to "+arena_name+"!";
         }
         
-        if(object_index == match_obj)
+        if(!is_campaign)
         {
             center_overlay.tip = DB.tips[|(irandom(ds_list_size(DB.tips)-1))];
             if(is_undefined(center_overlay.tip))

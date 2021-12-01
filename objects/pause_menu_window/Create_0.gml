@@ -42,13 +42,12 @@ dist = 48;
 
 var i=1, restart_str, finish_str;
 
-if(gamemode_obj.object_index == match_obj)
+if(!gamemode_obj.is_campaign)
 {
     restart_str = "Restart match"
     finish_str = "End match";
-}
-
-if(gamemode_obj.object_index == campaign_obj)
+} 
+else
 {
     restart_str = "Restart level"
     finish_str = "Return to Play menu";
