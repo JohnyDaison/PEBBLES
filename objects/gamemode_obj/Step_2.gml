@@ -1,6 +1,6 @@
 /// @description MODS, APM, RESTART
 
-if(!singleton_obj.paused && game_started)
+if(!singleton_obj.paused && game_started && !game_ended)
 {
     // MODS
     if(!mod_get_state("base_crystals"))
@@ -27,7 +27,7 @@ if(!singleton_obj.paused && game_started)
             }
         }
     }
- 
+
     if(!mod_get_state("turrets"))
     {
         with(turret_obj)

@@ -24,6 +24,7 @@ match_finished = false;
 restart_match = false;
 is_coop = false;
 is_deathmatch = false;
+is_campaign = false;
 team_based = false;
 tournament_length = 0;
 matches_remaining = 0;
@@ -31,6 +32,7 @@ random_place_order = false;
 regenerate_terrain_delay = 8 * 60; //300
 cpu_player_exists = false;
 game_started = false;
+game_ended = false;
 
 sudden_death = false;
 
