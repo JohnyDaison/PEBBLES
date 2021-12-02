@@ -28,13 +28,13 @@ if(!cancelled)
     
     if(instance_exists(la_player))
     {
-        if(la_player != my_player)
+        if(la_player.team_number != my_player.team_number)
         {
             score_value = gamemode_obj.score_values[? "cannon_killed"];
             
             increase_stat(la_player, "score", score_value, false);
             stat_str = stat_label("score", score_value, "+");
-        }    
+        }
     }
     
     battlefeed_post_destruction(id, id.last_attacker_map, stat_str);

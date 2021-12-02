@@ -190,7 +190,21 @@ if(self.enabled)
         alarm[1] = -1;
         self.activated = false;
         
-        battlefeed_post_destruction(id, id.last_attacker_map, "");
+        var stat_str = "";
+        var la_player = last_attacker_map[? "player"];
+        
+        if(instance_exists(la_player))
+        {
+            if(la_player.team_number != my_player.team_number)
+            {
+                var score_value = gamemode_obj.score_values[? "base_crystal_killed"];
+            
+                increase_stat(la_player, "score", score_value, false);
+                stat_str = stat_label("score", score_value, "+");
+            }
+        }
+        
+        battlefeed_post_destruction(id, id.last_attacker_map, stat_str);
         
         var i;
         for(i=0; i<crystal_number; i++)
