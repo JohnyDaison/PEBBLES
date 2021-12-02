@@ -1714,8 +1714,6 @@ if(!self.frozen_in_time)
             // this string_lower call is bad for performance
             if(mod_get_state("abilities") && has_level(id, DB.abimap[? my_abi_color], 1))
             {
-                effect_create_above(ef_firework,x,y,32,self.my_abi_tint);
-                
                 if(abi_cooldown[? my_abi_color] == 0)
                 {
                     show_debug_message("abi color: "+string(my_abi_color));
@@ -1741,8 +1739,8 @@ if(!self.frozen_in_time)
                 }
                 else
                 {
-                     //if(self.my_abi_color != g_dark)
-                        my_sound_play(failed_sound);
+                     effect_create_above(ef_firework,x,y,32,self.my_abi_tint);
+                     my_sound_play(failed_sound);
                 }
             }
         }
@@ -2983,7 +2981,7 @@ else
 
 // HANDLE FLASHBACK QUEUE
 
-if(!self.flashing_back && !self.stuck && !flashback_disabled)
+if(!self.flashing_back && !self.stuck)
 {
     ds_map_replace(state,"x",x);
     ds_map_replace(state,"y",y);

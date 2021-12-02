@@ -2,7 +2,7 @@ ds_list_clear(attack_waypoints);
 
 event_inherited();
 
-if(!flashback_disabled && !flashback_inited)
+if(!flashback_inited)
 {
     ds_map_add(state,"x",x);
     ds_map_add(state,"y",y);

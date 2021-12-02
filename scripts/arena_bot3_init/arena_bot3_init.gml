@@ -11,7 +11,6 @@ function arena_bot3_init() {
     bot_speed = 1;
     bot_complexity = 1;
     bot_aggressiveness = 1;
-    flashback_disabled = false;
     flashback_margin = 384;
     attack_mode = false;
     color_chosen = false;

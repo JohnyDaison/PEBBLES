@@ -22,7 +22,6 @@ function guide_quick_abilities() {
             main_context = "quick_tut_level6";
         
             npc_auto_demonstrate = true;
-            flashback_disabled = false;
         
             break;
         

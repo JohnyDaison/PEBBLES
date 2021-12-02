@@ -3,7 +3,6 @@ event_inherited();
 show_debug_message("init bot at "+string(x)+","+string(y));
 
 is_npc = true;
-//flashback_disabled = true;
 is_general_npc = false;
 
 bot_type = "";

@@ -17,15 +17,12 @@ self.ter_down = 1;
 
 // NPCs
 is_npc = false;
-flashback_disabled = false;
 flashback_inited = false;
 phase = 0;
 last_phase = phase;
 npc_active = false;
 npc_script = empty_script;
 npc_destroy_script = empty_script;
-last_damage = 0;
-steps_waited = 0;
 
 //debug
 attack_waypoints = ds_list_create();
