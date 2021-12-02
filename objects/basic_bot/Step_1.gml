@@ -45,7 +45,7 @@ else
                     nearest = true;
                 }
                 
-                if(nearest && !invisible && (other.bot_type == "tut_guide" || holographic == other.holographic))
+                if(nearest && !invisible && (!protected || (is_npc && bot_type == "arena_bot")) && (other.bot_type == "tut_guide" || holographic == other.holographic))
                 {
                     near_guy = id;
                     nearest_distance = point_distance(x,y, other.x, other.y);
