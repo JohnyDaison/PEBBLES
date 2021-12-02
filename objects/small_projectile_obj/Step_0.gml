@@ -10,7 +10,7 @@ if(guided && !instance_exists(target))
     {
         if(id != other.my_guy && my_player.team_number != other.my_player.team_number
         && point_distance(x,y,other.x,other.y) <= other.guy_lockon_range && !invisible
-        && (other.holographic == self.holographic))
+        && !protected && (other.holographic == self.holographic))
         {
             other.target = id;
         }
@@ -40,10 +40,10 @@ if(guided && !instance_exists(target))
     
 }
 
-// STOP TRACKING WHEN TARGET GOES INVISIBLE
+// STOP TRACKING WHEN TARGET GOES INVISIBLE OR PROTECTED
 if(instance_exists(target))
 {
-    if(target.invisible || (target.holographic != self.holographic))
+    if(target.invisible || target.protected || (target.holographic != self.holographic))
     {
         target = noone;
     }
