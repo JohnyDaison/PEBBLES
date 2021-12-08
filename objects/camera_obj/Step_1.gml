@@ -124,6 +124,11 @@ if(on && view != -1)
     {
         followed_x = my_override.x;
         followed_y = my_override.y;
+        if (my_override.object_index == cursor_obj) {
+            followed_x = my_override.room_x;
+            followed_y = my_override.room_y;
+        }
+        
         box_xoffset = 0;
         box_yoffset = 0;
         
