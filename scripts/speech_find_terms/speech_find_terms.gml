@@ -51,6 +51,9 @@ function speech_find_terms() {
 
 function speech_term_found(word_index, term_id) {
     var term_name = DB.term_name_map[? term_id];
+    if (term_id == "subject_name") {
+        term_name = subject_name;
+    }
     var term_length = string_length(term_name);
     var term_word_count = 0;
     var term_words_length = 0;
