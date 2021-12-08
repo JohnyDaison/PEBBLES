@@ -10,7 +10,7 @@ with(guy_obj)
             tint_updated = false;
         }
         
-        if(!instance_exists(my_shield))
+        if(!dead && !instance_exists(my_shield))
         {
             var inst = instance_create(x, y, shield_obj);
             inst.my_guy = id;
