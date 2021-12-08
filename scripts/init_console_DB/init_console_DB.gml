@@ -26,6 +26,7 @@ function init_console_DB() {
     ds_list_add(ccs, "questdebug");
     */
 
+    ds_list_add(ccs, "setnumber main_camera_obj on 1");
     ds_list_add(ccs, "camfollow 1 basic_bot");
     ds_list_add(ccs, "goto_quest 1000");
 

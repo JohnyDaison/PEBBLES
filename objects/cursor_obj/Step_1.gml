@@ -27,7 +27,7 @@ if(!view_drag)
         
         if(instance_exists(main_camera_obj))
         {
-            zoom = main_camera_obj.normal_zoom;
+            zoom = main_camera_obj.zoom_level;
         }
         
         if(__view_get( e__VW.Visible, 0 ))
@@ -40,11 +40,11 @@ if(!view_drag)
             view_found = false;
             view = 1;
             while(!view_found && __view_get( e__VW.Visible, view ))
-            {                
+            {
                 view_x = x - __view_get( e__VW.XPort, view );
                 view_y = y - __view_get( e__VW.YPort, view );
 
-                if(view_x >= 0 && view_x < __view_get( e__VW.WPort, view ) && view_y >= 0 && view_y < __view_get( e__VW.WPort, view ))          
+                if(view_x >= 0 && view_x < __view_get( e__VW.WPort, view ) && view_y >= 0 && view_y < __view_get( e__VW.HPort, view ))
                 {
                     var cam;
                     with(camera_obj)
@@ -56,10 +56,10 @@ if(!view_drag)
                     room_y = __view_get( e__VW.YView, view ) + view_y/cam.zoom_level;
                     view_found = true;
                 }
-                else 
+                else
                 {
                     view++;
-                } 
+                }
             }
         }
     }
