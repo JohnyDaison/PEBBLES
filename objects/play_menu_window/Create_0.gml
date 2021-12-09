@@ -161,11 +161,11 @@ with(gamemode_pane)
     summary_list_picker = ii.id;
     
 
-    // Mods SECTION
+    // Rules SECTION
     eloffset_x = mods_x;
     eloffset_y = mods_start;
     
-    ii = gui_add_label(0,4, "Mods:");
+    ii = gui_add_label(0,4, "Rules:");
     ii.width = 64;
     ii.centered = true;
     mods_label = ii.id;

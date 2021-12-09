@@ -195,7 +195,7 @@ function play_summary_update() {
         
             if(custom_mods_text != "")
             {
-                new_text += "Custom Mods:\n";
+                new_text += "Custom Rules:\n";
                 new_text += " " + custom_mods_text;
                 new_text += "\n";
             }
