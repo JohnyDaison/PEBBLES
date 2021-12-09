@@ -17,6 +17,7 @@ stack_font = text_popup_font;
 stack_radius = 12;
 
 bg_alpha = 1;
+empty_bg_alpha_coef = 0.2;
 bg_tint = ds_map_create();
 blink_tint = ds_map_create();
 blink_start = ds_map_create();

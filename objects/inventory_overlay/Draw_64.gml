@@ -104,7 +104,7 @@ if(inv_size != -1)
                         
                         
                         // DRAW BG
-                        draw_sprite_ext(bg_sprite, 0, final_x, final_y, 1, 1, 0, bg_tint[? i], 1);
+                        draw_sprite_ext(bg_sprite, 0, final_x, final_y, 1, 1, 0, bg_tint[? i], bg_alpha);
 
                         
                         // DRAW ICON
@@ -200,7 +200,7 @@ if(inv_size != -1)
                             bg_tint[? i] = red_tint;
                         }
                         
-                        draw_sprite_ext(bg_sprite, 0, x + xx, y + yy, 1, 1, 0, bg_tint[? i], 0.5);
+                        draw_sprite_ext(bg_sprite, 0, x + xx, y + yy, 1, 1, 0, bg_tint[? i], bg_alpha * empty_bg_alpha_coef);
                         
                         last_stacksize[? i] = 0;
                     }
