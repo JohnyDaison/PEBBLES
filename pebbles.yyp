@@ -1817,6 +1817,7 @@
     {"id":{"name":"green_orb_obj","path":"objects/green_orb_obj/green_orb_obj.yy",},"order":3,},
     {"id":{"name":"blue_orb_obj","path":"objects/blue_orb_obj/blue_orb_obj.yy",},"order":4,},
     {"id":{"name":"gate_enabled_obj","path":"objects/gate_enabled_obj/gate_enabled_obj.yy",},"order":0,},
+    {"id":{"name":"the_low_ceiling_court","path":"rooms/the_low_ceiling_court/the_low_ceiling_court.yy",},"order":22,},
     {"id":{"name":"init_controls_DB","path":"scripts/init_controls_DB/init_controls_DB.yy",},"order":2,},
     {"id":{"name":"gate_active_obj","path":"objects/gate_active_obj/gate_active_obj.yy",},"order":1,},
     {"id":{"name":"editor_antenna_obj","path":"objects/editor_antenna_obj/editor_antenna_obj.yy",},"order":2,},
@@ -2098,6 +2099,7 @@
     {"roomId":{"name":"small_football_field","path":"rooms/small_football_field/small_football_field.yy",},},
     {"roomId":{"name":"vertigo_arena","path":"rooms/vertigo_arena/vertigo_arena.yy",},},
     {"roomId":{"name":"two_towers_arena","path":"rooms/two_towers_arena/two_towers_arena.yy",},},
+    {"roomId":{"name":"the_low_ceiling_court","path":"rooms/the_low_ceiling_court/the_low_ceiling_court.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
