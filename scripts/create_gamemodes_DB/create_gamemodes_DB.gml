@@ -130,6 +130,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "guy_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -152,6 +153,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "guy_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "dark_color"] = true;
@@ -326,6 +328,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "guy_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -373,6 +376,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "guy_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -444,6 +448,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "guy_shield_power"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
