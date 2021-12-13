@@ -316,6 +316,7 @@ function create_gamemodes_DB() {
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
     forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "equal_colors"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
@@ -361,6 +362,7 @@ function create_gamemodes_DB() {
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
     forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "equal_colors"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
