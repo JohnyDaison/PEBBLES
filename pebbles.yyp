@@ -1157,6 +1157,7 @@
     {"id":{"name":"guide_movement2","path":"scripts/guide_movement2/guide_movement2.yy",},"order":1,},
     {"id":{"name":"guide_quick_movement2","path":"scripts/guide_quick_movement2/guide_quick_movement2.yy",},"order":3,},
     {"id":{"name":"guide_quick_base_colors2","path":"scripts/guide_quick_base_colors2/guide_quick_base_colors2.yy",},"order":4,},
+    {"id":{"name":"guy_sp_mod_icon","path":"sprites/guy_sp_mod_icon/guy_sp_mod_icon.yy",},"order":59,},
     {"id":{"name":"guide_quick_catalyst2","path":"scripts/guide_quick_catalyst2/guide_quick_catalyst2.yy",},"order":5,},
     {"id":{"name":"guide_quick_basic_combat","path":"scripts/guide_quick_basic_combat/guide_quick_basic_combat.yy",},"order":6,},
     {"id":{"name":"guide_quick_advanced_combat","path":"scripts/guide_quick_advanced_combat/guide_quick_advanced_combat.yy",},"order":7,},

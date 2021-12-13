@@ -81,6 +81,12 @@ self.shield_overcharge = 0;
 self.shield_channel_maxboost = 0.5;
 self.shield_threshold = 3;
 self.shield_repair_time = 180;
+
+var mod_sp = mod_get_state("guy_shield_power");
+if (!is_undefined(mod_sp) && !is_bool(mod_sp) ) {
+    shield_max_charge = mod_sp/100;
+}
+
 self.ball_chargerate = 1;
 self.base_ball_chargerate = 1;
 self.ball_overcharge = 0;

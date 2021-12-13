@@ -82,6 +82,9 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("base_crystal_shield_power", "Base Crystal Shield HP", "number", true, base_crystal_sp_mod_icon, "Strength of Base Crystal Shield");
     gamemode_number_mod_values("base_crystal_shield_power", 6, 0, 6, 1);
+    
+    gamemode_mod_create("guy_shield_power", "Personal Shield HP", "number", true, guy_sp_mod_icon, "Strength of Player's Shield");
+    gamemode_number_mod_values("guy_shield_power", 100, 0, 150, 50);
 
 
     // GAMEMODES

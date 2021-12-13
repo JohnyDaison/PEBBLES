@@ -11,7 +11,9 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
         checkbox = gui_add_mod_checkbox(0, 0, gmmod_id, size);
         checkbox.gmmod_id = gmmod_id;
         number_input = gui_add_int_input(checkbox.width + 30, checkbox.height / 2, gmmod[? "default_value"], gmmod[? "min_value"], gmmod[? "max_value"]);
+        number_input.value_step = gmmod[? "value_step"];
         number_input.gmmod_id = gmmod_id;
+        
         with (number_input) {
             event_perform(ev_alarm, 0);
             alarm[0] = -1;
