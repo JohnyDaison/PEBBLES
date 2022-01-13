@@ -64,13 +64,14 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
     
         eloffset_y += control_dropdown.height + 2*vert_spacing;
     
-        ii = gui_add_int_input(24, 16, 0, 0, 90);
-        ii.tooltip = "MaxHP reduction";
-        ii.value_step = 10;
-        ii.is_percent = true;
+        ii = gui_add_slider(0, 0, 10, 1, 10);
+        ii.tooltip = "Max HP";
+        ii.centered = true;
+        ii.bar_min_value = 0;
         handicap_input = ii;
 
-        ii = gui_add_label(40 + hor_spacing, 0, "Handicap");
+        ii = gui_add_label(handicap_input.width + hor_spacing, 0, "Max HP");
+        ii.width = 96;
         ii.centered = true;
     
         eloffset_y += 32 + vert_spacing;

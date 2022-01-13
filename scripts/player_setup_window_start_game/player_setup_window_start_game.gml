@@ -47,7 +47,7 @@ function player_setup_window_start_game() {
             player.name = player_pane.name_input.text;
             player.flag = DB.player_flags[| player_pane.flag_input.value];
             player.icon = DB.battlefeed_icon_map[? player.flag];
-            player.handicaps[? "min_damage"] = player_pane.handicap_input.value/10;
+            player.handicaps[? "min_damage"] = player_pane.handicap_input.max_value - player_pane.handicap_input.value;
             player.control_set = player_pane.control_dropdown.value_id;
             if(player.control_set == gamepad)
             {

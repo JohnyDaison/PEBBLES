@@ -18,8 +18,8 @@ set_value = function(new_value) {
         return false;
     }
     
-    self.value = clamp(self.value, min_value, max_value);
     self.value = min_value + round((new_value - min_value) / value_step) * value_step;
+    self.value = clamp(self.value, min_value, max_value);
     self.text = string(self.value);
     
     return true;
