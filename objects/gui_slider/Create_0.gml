@@ -11,6 +11,8 @@ bar_max_value = 10;
 bar_min_value = 0;
 value_step = 1;
 want_focus = true;
+round_corners = true;
+draw_border = true;
 
 set_value = function(new_value) {
     if(is_undefined(new_value)) {
