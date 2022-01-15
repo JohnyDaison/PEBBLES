@@ -1,17 +1,6 @@
-/// @description gui_add_player_setup_pane(x, y, player_number);
-/// @function gui_add_player_setup_pane
-/// @param x
-/// @param y
-/// @param player_number
-function gui_add_player_setup_pane(argument0, argument1, argument2) {
-
-    var xx,yy,player_num,ii;
-
-    xx = argument0;
-    yy = argument1;
-    player_num = argument2;
-
+function gui_add_player_setup_pane(xx, yy, player_num) {
     var player_pane = gui_add_pane(xx, yy, "Player " + string(player_num));
+    var team_number = calculate_team_number(player_num);
 
     with(player_pane)
     {
@@ -23,6 +12,7 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         var hor_spacing = 16
         var vert_spacing = 8;
         var name = "";
+        var ii;
     
         controls_names = ds_list_create();
         controls_ids = ds_list_create();
@@ -50,7 +40,7 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         name_input = ii;
     
         eloffset_x = x + hor_spacing;
-        eloffset_y += 32 + vert_spacing;
+        eloffset_y += name_input.height + vert_spacing;
     
         ii = gui_add_dropdown(0, 0, "text", DB.control_set_names, 0);
         ii.width = 192;
@@ -63,7 +53,15 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         flag_input = ii;
         
         eloffset_x = x + hor_spacing;
-        eloffset_y += control_dropdown.height + 2*vert_spacing;
+        eloffset_y += control_dropdown.height + vert_spacing;
+        
+        ii = gui_add_dropdown(0, 0, "text", DB.team_names, team_number - 1);
+        ii.width = 160;
+        ii.enabled = false;
+        team_dropdown = ii;
+        
+        eloffset_x = x + hor_spacing;
+        eloffset_y += team_dropdown.height + 2*vert_spacing;
     
         ii = gui_add_slider(0, 0, 10, 1, 10);
         ii.tooltip = "Max HP";

@@ -4,7 +4,7 @@ if(instance_exists(list_picker) && instance_exists(list_picker.scroll_list))
     {
         if(self.value != -1)
         {
-            list_picker.scroll_list.cur_item = self.value;
+            list_picker.select_item_by_index(self.value);
         }
         inited = true;
     }

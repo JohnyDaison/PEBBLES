@@ -1418,6 +1418,7 @@
     {"id":{"name":"chunks_content","path":"scripts/chunks_content/chunks_content.yy",},"order":7,},
     {"id":{"name":"chunk_generate","path":"scripts/chunk_generate/chunk_generate.yy",},"order":8,},
     {"id":{"name":"speech_init","path":"scripts/speech_init/speech_init.yy",},"order":0,},
+    {"id":{"name":"calculate_team_number","path":"scripts/calculate_team_number/calculate_team_number.yy",},"order":8,},
     {"id":{"name":"speech_start","path":"scripts/speech_start/speech_start.yy",},"order":1,},
     {"id":{"name":"speech_stop","path":"scripts/speech_stop/speech_stop.yy",},"order":2,},
     {"id":{"name":"speech_instant","path":"scripts/speech_instant/speech_instant.yy",},"order":3,},

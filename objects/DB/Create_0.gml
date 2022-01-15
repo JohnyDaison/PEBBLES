@@ -120,6 +120,11 @@ ds_list_add(player_flags,
 //"stairs_flag",
 "yinyang_flag");
 
+// TEAM NAMES
+team_names = ds_list_create();
+
+ds_list_add(team_names, "Team 1", "Team 2");
+
 // QUESTS
 quests_create();
 

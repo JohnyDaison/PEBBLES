@@ -77,6 +77,9 @@ ds_map_destroy(battlefeed_icon_map);
 // PLAYER FLAGS
 ds_list_destroy(player_flags);
 
+// TEAM NAMES
+ds_list_destroy(team_names);
+
 quests_destroy();
 
 ds_map_destroy(bot_names);

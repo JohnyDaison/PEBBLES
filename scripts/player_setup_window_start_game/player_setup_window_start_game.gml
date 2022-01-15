@@ -14,26 +14,7 @@ function player_setup_window_start_game() {
         var player = instance_create(0,0,player_obj);
         player.number = pl_num;
     
-        if(gamemode.is_coop)
-        {
-            player.team_number = 1;
-        } 
-        else if(gamemode.mode == "volleyball")
-        {
-            player.team_number = player.number mod 2;
-            if(player.team_number == 0)
-            {
-                player.team_number = 2;
-            }
-        } 
-        else
-        {
-            player.team_number = player.number mod 2;
-            if(player.team_number == 0)
-            {
-                player.team_number = 2;
-            }
-        }
+        player.team_number = calculate_team_number(pl_num);
     
         if(player.team_number > gamemode.team_count)
         {
