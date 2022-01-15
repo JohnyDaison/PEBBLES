@@ -49,19 +49,20 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         ii.width = 192;
         name_input = ii;
     
-        eloffset_x += name_input.width + hor_spacing;
-    
-        ii = gui_add_dropdown(0, 0, "flag", DB.player_flags, 0);
-        ii.width = 58;
-        flag_input = ii;
-    
         eloffset_x = x + hor_spacing;
         eloffset_y += 32 + vert_spacing;
     
         ii = gui_add_dropdown(0, 0, "text", DB.control_set_names, 0);
         ii.width = 192;
         control_dropdown = ii;
+        
+        eloffset_x += control_dropdown.width + hor_spacing;
     
+        ii = gui_add_dropdown(0, 0, "flag", DB.player_flags, 0);
+        ii.width = 58;
+        flag_input = ii;
+        
+        eloffset_x = x + hor_spacing;
         eloffset_y += control_dropdown.height + 2*vert_spacing;
     
         ii = gui_add_slider(0, 0, 10, 1, 10);
@@ -74,7 +75,7 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         ii.width = 96;
         ii.centered = true;
     
-        eloffset_y += 32 + vert_spacing;
+        eloffset_y += 32 + 2*vert_spacing;
     
         ii = gui_add_int_input(24, 16, 100, 10, 150);
         ii.value_step = 10;
@@ -86,7 +87,7 @@ function gui_add_player_setup_pane(argument0, argument1, argument2) {
         //ii.width = 200;
         cpudiff_label = ii;
     
-        eloffset_y += 32 + vert_spacing;
+        eloffset_y += 32 + 2*vert_spacing;
     
         height = eloffset_y - y;
     }

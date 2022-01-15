@@ -2,7 +2,7 @@ event_inherited();
 
 update_display();
 
-y = 48;
+y = 32;
 self.height = 656;
 window_axis = display_get_gui_width()/2;
 
@@ -14,8 +14,8 @@ self.world = noone;
 
 self.modal = true;
 
-eloffset_x = x + 16;
-eloffset_y = y + 16;
+eloffset_x = x;
+eloffset_y = y;
 
 players_pane = gui_add_pane(0, 0, "Players");
 player_panes_map = ds_map_create();
@@ -29,7 +29,7 @@ with(players_pane)
     draw_heading = false;
     centered = true;
     player_pane_width = 304;
-    height = 536;
+    height = other.height;
     player_pane_count = 4;
     var hor_spacing = 16;
     var vert_spacing = 8;
@@ -46,7 +46,7 @@ with(players_pane)
     playernum_input = gui_add_int_input(204, 16, 0, 1, 1);
     
     eloffset_x = x + hor_spacing;
-    eloffset_y += 32 + 2 * vert_spacing;
+    eloffset_y += 32 + 3 * vert_spacing;
     
     pp_map[? 1] = gui_add_player_setup_pane(0, 0, 1);
     
@@ -92,7 +92,7 @@ with(players_pane)
     playernum_input.max_value = gm[? "max_players"];
 }
 
-self.width = players_pane.width + 32;
+self.width = players_pane.width;
 x = window_axis - width/2;
 
 alarm[0] = 2;
