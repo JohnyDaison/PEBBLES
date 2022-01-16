@@ -16,6 +16,7 @@ function gui_add_player_setup_pane(xx, yy, player_num) {
     
         controls_names = ds_list_create();
         controls_ids = ds_list_create();
+        team_names = ds_list_create();
     
         eloffset_x = x + hor_spacing;
         eloffset_y = y + vert_spacing;
@@ -56,8 +57,7 @@ function gui_add_player_setup_pane(xx, yy, player_num) {
         eloffset_y += control_dropdown.height + vert_spacing;
         
         ii = gui_add_dropdown(0, 0, "text", DB.team_names, team_number - 1);
-        ii.width = 160;
-        ii.enabled = false;
+        ii.width = 128;
         team_dropdown = ii;
         
         eloffset_x = x + hor_spacing;

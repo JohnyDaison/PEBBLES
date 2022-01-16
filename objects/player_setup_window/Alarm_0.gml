@@ -1,4 +1,5 @@
 var gm = DB.gamemodes[? gamemode_obj.mode];
+var players_pane = self.players_pane;
 // PLAYER PANES
 for(var pl_num = 1; pl_num <= players_pane.player_pane_count; pl_num++)
 {
@@ -30,7 +31,28 @@ for(var pl_num = 1; pl_num <= players_pane.player_pane_count; pl_num++)
             }
             
             gui_list_picker_items_reset(control_dropdown.list_picker, "text", controls_names, controls_ids);
+        }
+        
+        // UPDATE TEAM DROPDOWN LISTS
+        if(instance_exists(team_dropdown.list_picker))
+        {
+            ds_list_clear(team_names);
             
+            var count = ds_list_size(DB.team_names), team_i, name;
+            
+            for(team_i = 0; team_i < count; team_i++)
+            {
+                if(team_i >= players_pane.max_teams)
+                {
+                    continue;
+                }
+                
+                name = DB.team_names[| team_i];
+                
+                ds_list_add(team_names, name);
+            }
+            
+            gui_list_picker_items_reset(team_dropdown.list_picker, "text", team_names);
         }
     }
 }

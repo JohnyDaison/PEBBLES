@@ -39,6 +39,7 @@ with(players_pane)
     eloffset_y = y + vert_spacing;
     
     used_flag_list = ds_list_create();
+    used_teams_map = ds_map_create();
     
     
     ii = gui_add_label(64, 16, "Number of players:");
@@ -86,10 +87,15 @@ with(players_pane)
     
     eloffset_y += start_button.height + vert_spacing;
     
-    // UPDATE PLAYER NUMBER
+    // UPDATE PLAYER AND TEAM COUNT
     var gm = DB.gamemodes[? gamemode_obj.mode];
+    var place = gamemode_obj.world.current_place;
+    
     playernum_input.min_value = gm[? "min_players"];
     playernum_input.max_value = gm[? "max_players"];
+    
+    min_teams = gm[? "min_teams"];
+    max_teams = min(gm[? "max_teams"], place.max_team_count);
 }
 
 self.width = players_pane.width;

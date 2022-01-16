@@ -13,15 +13,14 @@ function player_setup_window_start_game() {
     {
         var player = instance_create(0,0,player_obj);
         player.number = pl_num;
+        player_pane = player_panes_map[? pl_num];
     
-        player.team_number = calculate_team_number(pl_num);
+        player.team_number = player_pane.team_dropdown.value + 1;
     
         if(player.team_number > gamemode.team_count)
         {
             gamemode.team_count = player.team_number;
         }
-    
-        player_pane = player_panes_map[? pl_num];
     
         if(!is_undefined(player_pane))
         {
@@ -39,6 +38,7 @@ function player_setup_window_start_game() {
         }
         else
         {
+            // This else branch shoudn't happen anymore
             var teammate = noone;
             with(player_obj)
             {
