@@ -58,7 +58,7 @@ place.forced_modifiers[? "lightning_strikes"] = false;
 place.forced_modifiers[? "abilities"] = false;
 
 
-place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,2048, 0);
+place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,3072, 0);
 place.description = "Very few places to stand on and almost no cover.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
