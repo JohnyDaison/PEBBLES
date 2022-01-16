@@ -127,3 +127,15 @@ player.battlefeed = battlefeed;
 players[? 0] = player;
 
 environment = player;
+
+find_player_by_view = function(view_number) {
+    for(var player_i = 0; player_i <= player_count; player_i++) {
+        var player = players[? player_i];
+        
+        if (instance_exists(player.my_camera) && player.my_camera.view == view_number) {
+            return player;
+        }
+    }
+    
+    return noone;
+}

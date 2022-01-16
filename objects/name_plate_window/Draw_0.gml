@@ -146,15 +146,18 @@ if(dodraw && instance_exists(my_guy))
     
     // FLAG
     var flag_tint = c_white;
+    var view_player = gamemode_obj.find_player_by_view(view_current);
     
-    if(iff_check("allied", gamemode_obj.players[? view_current], my_guy))
-    {
-        flag_tint = allied_flag_tint;
-    }
-    if(iff_check("enemy", gamemode_obj.players[? view_current], my_guy))
-    {
-        flag_tint = enemy_flag_tint;
+    if (view_player != noone) {
+        if(iff_check("allied", view_player, my_guy))
+        {
+            flag_tint = allied_flag_tint;
+        }
+        if(iff_check("enemy", view_player, my_guy))
+        {
+            flag_tint = enemy_flag_tint;
+        }
     }
     
-    draw_sprite_ext(flag_icon, 0, window_axis, y+16,1,1,0,flag_tint,flag_alpha);
+    draw_sprite_ext(flag_icon, 0, window_axis, y + 16, 1, 1, 0, flag_tint, flag_alpha);
 }
