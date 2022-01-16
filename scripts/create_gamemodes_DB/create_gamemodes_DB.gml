@@ -168,6 +168,8 @@ function create_gamemodes_DB() {
 
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "min_teams"] = 2;
+    gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
 
     limits = gm[? "limits"];
@@ -201,6 +203,8 @@ function create_gamemodes_DB() {
     gm[? "description"] = "Play a Versus match with Arcade rules for some simple, high-powered action.";
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "min_teams"] = 2;
+    gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
 
     limits = gm[? "limits"];
@@ -267,6 +271,8 @@ function create_gamemodes_DB() {
     gm[? "min_players"] = 2;
     gm[? "min_real_players"] = 2;
     gm[? "max_players"] = 2;
+    gm[? "min_teams"] = 2;
+    gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
 
     forced_mods = gm[? "forced_modifiers"];
@@ -294,6 +300,8 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_volleyball_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "min_teams"] = 2;
+    gm[? "max_teams"] = 2;
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
 
@@ -342,6 +350,8 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_hoopball_start;
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
+    gm[? "min_teams"] = 2;
+    gm[? "max_teams"] = 2;
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
 
@@ -474,6 +484,7 @@ function create_gamemodes_DB() {
     gm[? "description"] = "Testing worlds, sandbox levels and other crazy stuff. If X collides with Y, how much does it break?";
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 2;
+    gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
     
     forced_mods = gm[? "forced_modifiers"];

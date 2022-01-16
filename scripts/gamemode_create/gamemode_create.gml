@@ -34,6 +34,8 @@ function gamemode_create(str_id, name, is_campaign, world) {
     gm[? "min_players"] = 1;
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 1;
+    gm[? "min_teams"] = 1;
+    gm[? "max_teams"] = 1;
 
     gm[? "start_script"] = empty_script;
 

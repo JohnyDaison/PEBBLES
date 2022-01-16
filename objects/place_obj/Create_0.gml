@@ -4,6 +4,7 @@ height = 0;
 margin = 0;
 description = "";
 single_cam = false;
+max_team_count = 1;
 
 room_id = noone;
 my_world = noone;

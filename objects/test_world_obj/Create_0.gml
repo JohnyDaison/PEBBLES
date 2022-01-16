@@ -87,6 +87,7 @@ ds_list_add(place.level_configs_list, "match");
 
 place = add_place_in_room(room_snake_test, "Snakes", 0,0, 4800,4800, 0);
 place.description = "Room for testing snakes... it's a mess, what did you expect?";
+place.max_team_count = 2;
 ds_list_add(place.level_configs_list, "match");
 
 place.forced_modifiers[? "snakes_on_a_plane"] = true;
