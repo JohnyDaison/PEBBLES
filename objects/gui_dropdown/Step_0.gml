@@ -24,7 +24,7 @@ if(instance_exists(list_picker) && instance_exists(list_picker.scroll_list))
     }
     else
     {
-        self.button.enabled = self.enabled;
+        self.button.enabled = self.enabled && ds_list_size(list_picker.scroll_list.items) > 1;
         if(type == "text")
         {
             self.button.text = item;
