@@ -42,7 +42,10 @@ if (lose_flag || collect_flags) {
                 
             } else if (has_flag) {
                 increase_stat(my_player, "score", flag_score, false);
-                increase_stat(my_player, "flags_captured", 1, true);
+                increase_stat(my_player, "flags_captured", 1, false);
+                
+                var score_str = stat_label("score", flag_score, "+");
+                battlefeed_post_flag_capture(item, guy, score_str);
                 
                 with(guy) {
                     take_from_inventory(item);

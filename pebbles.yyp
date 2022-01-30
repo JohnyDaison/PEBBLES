@@ -345,6 +345,7 @@
     {"id":{"name":"killdeath_slash_spr","path":"sprites/killdeath_slash_spr/killdeath_slash_spr.yy",},"order":12,},
     {"id":{"name":"restartX_icon","path":"sprites/restartX_icon/restartX_icon.yy",},"order":16,},
     {"id":{"name":"pressure_plate_anim_set","path":"scripts/pressure_plate_anim_set/pressure_plate_anim_set.yy",},"order":10,},
+    {"id":{"name":"battlefeed_post_flag_capture","path":"scripts/battlefeed_post_flag_capture/battlefeed_post_flag_capture.yy",},"order":5,},
     {"id":{"name":"row_arrow_spr","path":"sprites/row_arrow_spr/row_arrow_spr.yy",},"order":0,},
     {"id":{"name":"restart_icon","path":"sprites/restart_icon/restart_icon.yy",},"order":17,},
     {"id":{"name":"text_input_icon_spr","path":"sprites/text_input_icon_spr/text_input_icon_spr.yy",},"order":18,},
