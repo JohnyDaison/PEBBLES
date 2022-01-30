@@ -71,6 +71,19 @@ place.forced_modifiers[? "snakes_on_a_plane"] = false;
 place.forced_modifiers[? "slime_mob_rain"] = false;
 place.forced_modifiers[? "lightning_strikes"] = false;
 
+place = add_place_in_room(less_vertigo_arena, "Less Vertigo", 0,0, 3072,3072, 0);
+place.description = "Not much terrain and basically no cover.";
+place.controller = autogenerate_place_controller_obj;
+place.max_team_count = 2;
+place.forced_modifiers[? "turrets"] = false;
+place.forced_modifiers[? "cannons"] = false;
+place.forced_modifiers[? "mob_portals"] = false;
+
+place.forced_modifiers[? "random_item_spawner"] = false;
+place.forced_modifiers[? "snakes_on_a_plane"] = false;
+place.forced_modifiers[? "slime_mob_rain"] = false;
+place.forced_modifiers[? "lightning_strikes"] = false;
+
 
 place = add_place_in_room(mayhemburger_arena, "Mayhemburger", 0,0, 4896,2848, 0);
 place.description = "Medium size complex arena with a lot of Turrets, Spawners and other elements.";
