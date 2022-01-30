@@ -28,6 +28,7 @@ if (lose_flag || collect_flags) {
             }
             
             has_flag = false;
+            my_sound_play(flag_spawner_lose_flag_sound);
             alarm[2] = 120;
             
             done = true;
@@ -46,6 +47,8 @@ if (lose_flag || collect_flags) {
                 
                 var score_str = stat_label("score", flag_score, "+");
                 battlefeed_post_flag_capture(item, guy, score_str);
+                
+                my_sound_play(flag_captured_sound);
                 
                 with(guy) {
                     take_from_inventory(item);
