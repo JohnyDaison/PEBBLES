@@ -48,6 +48,10 @@ if (lose_flag || collect_flags) {
                 var score_str = stat_label("score", flag_score, "+");
                 battlefeed_post_flag_capture(item, guy, score_str);
                 
+                captured_flag_icon = item.flag_icon;
+                captured_flag_player = item.my_flag_spawner.my_player;
+                captured_anim_phase = 0;
+                
                 my_sound_play(flag_captured_sound);
                 
                 with(guy) {
