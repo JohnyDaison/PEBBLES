@@ -1891,6 +1891,7 @@
     {"id":{"name":"cant_reach_anim_set","path":"scripts/cant_reach_anim_set/cant_reach_anim_set.yy",},"order":12,},
     {"id":{"name":"chunkgrid_overlay","path":"objects/chunkgrid_overlay/chunkgrid_overlay.yy",},"order":17,},
     {"id":{"name":"popup_obj","path":"objects/popup_obj/popup_obj.yy",},"order":4,},
+    {"id":{"name":"less_vertigo_arena","path":"rooms/less_vertigo_arena/less_vertigo_arena.yy",},"order":23,},
     {"id":{"name":"damage_popup_obj","path":"objects/damage_popup_obj/damage_popup_obj.yy",},"order":0,},
     {"id":{"name":"text_popup_obj","path":"objects/text_popup_obj/text_popup_obj.yy",},"order":3,},
     {"id":{"name":"speech_popup_obj","path":"objects/speech_popup_obj/speech_popup_obj.yy",},"order":4,},
@@ -2111,6 +2112,7 @@
     {"roomId":{"name":"vertigo_arena","path":"rooms/vertigo_arena/vertigo_arena.yy",},},
     {"roomId":{"name":"two_towers_arena","path":"rooms/two_towers_arena/two_towers_arena.yy",},},
     {"roomId":{"name":"the_low_ceiling_court","path":"rooms/the_low_ceiling_court/the_low_ceiling_court.yy",},},
+    {"roomId":{"name":"less_vertigo_arena","path":"rooms/less_vertigo_arena/less_vertigo_arena.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
