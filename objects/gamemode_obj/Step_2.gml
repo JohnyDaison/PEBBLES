@@ -61,6 +61,15 @@ if(!singleton_obj.paused && game_started && !game_ended)
             instance_create(0,0, pickup_spawner_obj);
         }
     }
+    
+    if(!mod_get_state("flag_capture"))
+    {
+        with(flag_spawner_obj)
+        {
+            cancelled = true;
+            instance_destroy();
+        }
+    }
 
     // APM
     if(instance_exists(time_window) && instance_exists(time_window.time))

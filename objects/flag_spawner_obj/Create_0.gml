@@ -2,7 +2,7 @@ event_inherited();
 
 my_team_number = 0;
 flag_icon = noone;
-flag_score = 60;
+flag_score = mod_get_state("flag_capture");
 flag_alpha = 0.9;
 
 has_flag = true;
@@ -65,3 +65,5 @@ set_lights_state = function(state) {
 }
 
 set_lights_state(false);
+
+name = "Flag Holder";

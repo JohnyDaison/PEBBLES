@@ -1629,6 +1629,7 @@
     {"id":{"name":"white_force_field_obj","path":"objects/white_force_field_obj/white_force_field_obj.yy",},"order":0,},
     {"id":{"name":"black_force_field_obj","path":"objects/black_force_field_obj/black_force_field_obj.yy",},"order":1,},
     {"id":{"name":"colorized_zone_obj","path":"objects/colorized_zone_obj/colorized_zone_obj.yy",},"order":4,},
+    {"id":{"name":"flag_capture_mod_icon","path":"sprites/flag_capture_mod_icon/flag_capture_mod_icon.yy",},"order":60,},
     {"id":{"name":"artifact_obj","path":"objects/artifact_obj/artifact_obj.yy",},"order":0,},
     {"id":{"name":"shield_obj","path":"objects/shield_obj/shield_obj.yy",},"order":0,},
     {"id":{"name":"dash_wave_obj","path":"objects/dash_wave_obj/dash_wave_obj.yy",},"order":5,},
