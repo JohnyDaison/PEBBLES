@@ -85,6 +85,9 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("guy_shield_power", "Personal Shield HP", "number", true, guy_sp_mod_icon, "Strength of Player's Shield");
     gamemode_number_mod_values("guy_shield_power", 100, 0, 150, 50);
+    
+    gamemode_mod_create("flag_capture", "Capture the Flag", "number", true, flag_capture_mod_icon, "Toggle Flag Holders and set score for capturing a Flag.");
+    gamemode_number_mod_values("flag_capture", 60, 10, 120, 10);
 
 
     // GAMEMODES
@@ -131,6 +134,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -154,6 +158,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "dark_color"] = true;
@@ -282,6 +287,7 @@ function create_gamemodes_DB() {
     
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "turrets"] = true;
@@ -337,6 +343,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -387,6 +394,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -459,6 +467,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
