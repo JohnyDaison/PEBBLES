@@ -35,6 +35,8 @@ function init_stats() {
     stats[? "received_color_efficiency"] = 0;
     stats[? "hit_count"] = 0;
     stats[? "received_hits"] = 0;
+    stats[? "flags_captured"] = 0;
+    stats[? "flags_returned"] = 0;
 
     stats[? "kills"] = 0;
     stats[? "personal_kills"] = 0;

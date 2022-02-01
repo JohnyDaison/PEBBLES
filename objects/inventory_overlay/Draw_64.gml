@@ -140,7 +140,13 @@ if(inv_size != -1)
                         }
                         
                         draw_sprite_ext(pickup.inventory_spr, 0, sprite_x, sprite_y, 1+size_boost, 1+size_boost, 0, icon_tint, min(1, alpha_ratio)); //pickup.image_alpha*
-                                                
+                        
+                        if (pickup.object_index == flag_obj) {
+                            var flag_tint = decide_flag_tint(pickup.my_flag_spawner, my_guy);
+                            
+                            draw_sprite_ext(pickup.flag_icon, 0, sprite_x, sprite_y, 0.5 * (1+size_boost), 0.5 * (1+size_boost), 0, flag_tint, min(1, alpha_ratio) * pickup.flag_alpha);
+                        }
+                        
                         if(pickup.use_cooldown_left > 0)
                         {
                             //draw_sprite(move_lock_icon, 0, final_x-1, final_y-1);

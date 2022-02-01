@@ -724,6 +724,8 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"guy_spawner_obj","path":"objects/guy_spawner_obj/guy_spawner_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":864.0,"resourceVersion":"1.0","name":"inst_4C950210","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"guy_spawner_obj","path":"objects/guy_spawner_obj/guy_spawner_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2752.0,"y":864.0,"resourceVersion":"1.0","name":"inst_510501F1","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"flag_spawner_obj","path":"objects/flag_spawner_obj/flag_spawner_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":960.0,"resourceVersion":"1.0","name":"inst_2ABE171D","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"flag_spawner_obj","path":"objects/flag_spawner_obj/flag_spawner_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2816.0,"y":960.0,"resourceVersion":"1.0","name":"inst_179600BA","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":90,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"BG_Structures","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"perma_wall_obj","path":"objects/perma_wall_obj/perma_wall_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":992.0,"resourceVersion":"1.0","name":"inst_11171458","tags":[],"resourceType":"GMRInstance",},
@@ -1878,6 +1880,8 @@
     {"name":"inst_2B2ECC0F","path":"rooms/vertigo_arena/vertigo_arena.yy",},
     {"name":"inst_36E2B93F","path":"rooms/vertigo_arena/vertigo_arena.yy",},
     {"name":"inst_67DEF465","path":"rooms/vertigo_arena/vertigo_arena.yy",},
+    {"name":"inst_2ABE171D","path":"rooms/vertigo_arena/vertigo_arena.yy",},
+    {"name":"inst_179600BA","path":"rooms/vertigo_arena/vertigo_arena.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
