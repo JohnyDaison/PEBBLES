@@ -36,6 +36,10 @@ function stats_DisplayList_init(labels, stats) {
     stats[| i++] = "jumps";
     labels[| i]  = "on Enemy side(%)";
     stats[| i++] = "percent_on_opponents_half"; // display as *100/singleton_obj.step_count + '%'
+    labels[| i]  = "Flags captured";
+    stats[| i++] = "flags_captured";
+    labels[| i]  = "Flags returned";
+    stats[| i++] = "flags_returned";
 
     labels[| i]  = "";
     stats[| i++] = "";

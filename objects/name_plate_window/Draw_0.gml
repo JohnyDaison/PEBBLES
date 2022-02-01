@@ -96,68 +96,23 @@ if(dodraw && instance_exists(my_guy))
 
     window_axis = x+self.width/2;
     
-    /*
-    if(draw_swapped && bg_color == c_gray)
-    {
-        bg_color = c_ltgray;
-    }
-    
-    if(!draw_swapped && bg_color == c_ltgray)
-    {
-        bg_color = c_gray;
-    }
-    */
-    /*
-    draw_set_alpha(self.bg_alpha);
-    if(self.draw_bg_color)
-    {
-        if(draw_swapped)
-        {
-            draw_set_colour(self.color);
-        }
-        else
-        {
-            draw_set_colour(self.bg_color);
-        }
-        draw_roundrect(x,y,x+self.width,y+self.height,false)
-    }
-    draw_set_alpha(self.border_alpha);
-    if(self.draw_border)
-    {
-        draw_set_colour(c_black);
-        draw_roundrect(x,y,x+self.width,y+self.height,true)
-    }
-    draw_set_alpha(1);
-    if(draw_swapped)
-    {
-        draw_set_colour(self.bg_color);
-    }
-    else
-    {
-        draw_set_colour(self.color);
-    }
-    */
-    /*
-    my_draw_set_font(self.font);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    my_draw_text(window_axis,y+16,self.text);
-    */
-    
-    // FLAG
-    var flag_tint = c_white;
     var view_player = gamemode_obj.find_player_by_view(view_current);
     
-    if (view_player != noone) {
-        if(iff_check("allied", view_player, my_guy))
-        {
-            flag_tint = allied_flag_tint;
-        }
-        if(iff_check("enemy", view_player, my_guy))
-        {
-            flag_tint = enemy_flag_tint;
-        }
-    }
+    // MY FLAG
+    var flag_tint = decide_flag_tint(my_guy, view_player);
     
     draw_sprite_ext(flag_icon, 0, window_axis, y + 16, 1, 1, 0, flag_tint, flag_alpha);
+    
+    // ENEMY FLAG
+    var enemy_flag = noone;
+    
+    with(my_guy) {
+        enemy_flag = find_in_inventory(flag_obj);
+    }
+    
+    if (instance_exists(enemy_flag)) {
+        var flag_tint = decide_flag_tint(enemy_flag.my_flag_spawner, view_player);
+    
+        draw_sprite_ext(enemy_flag.flag_icon, 0, window_axis, y + 48, 1, 1, 0, flag_tint, flag_alpha);
+    }
 }
