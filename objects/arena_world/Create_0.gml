@@ -93,7 +93,6 @@ place.description = "Medium size complex arena with a lot of Turrets, Spawners a
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
 
-place.forced_modifiers[? "flag_capture"] = false;
 
 place = add_place_in_room(room_small_face_arena, "Small Face Arena", 0,0, 2048,2048, 0);
 place.description = "Very small arena.";
