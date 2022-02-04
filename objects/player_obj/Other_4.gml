@@ -20,7 +20,7 @@ if(!singleton_obj.paused)
     
     
         // UPDATE LEVELS
-        if(last_room != room)
+        if(room != last_room && room != match_summary)
         {
             ds_map_copy(levels_roomstart, levels);
         }
