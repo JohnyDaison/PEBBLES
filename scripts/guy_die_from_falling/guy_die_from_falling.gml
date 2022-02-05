@@ -123,9 +123,7 @@ function guy_die_from_falling() {
     // PLAYER GUY
     if(my_player.my_guy == id)
     {
-        var respawn_possible = !(mod_get_state("one_death") || gamemode_obj.sudden_death);
-
-        if(!respawn_possible)
+        if(!respawn_allowed())
         {
             // LOSE THE GAME
             my_player.loser = true;

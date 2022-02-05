@@ -270,7 +270,7 @@ with(gamemode_pane)
         }
     
         eloffset_x = mods_content_x;
-        eloffset_y += vert_spacing;
+        eloffset_y += mod_dist + vert_spacing;
     }
     
     // destroy gmmod_controls_types

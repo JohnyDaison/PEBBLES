@@ -43,7 +43,6 @@ place.forced_modifiers[? "flag_capture"] = false;
 
 place.forced_modifiers[? "holographic_spawners"] = true;
 place.forced_modifiers[? "hp_death"] = true;
-place.forced_modifiers[? "one_death"] = true;
 place.forced_modifiers[? "dark_color"] = false;
 place.forced_modifiers[? "dark_orb_energy_lock"] = false;
 place.forced_modifiers[? "color_orbs_energy_lock"] = true;
@@ -59,6 +58,7 @@ place.forced_modifiers[? "slime_mob_rain"] = false;
 place.forced_modifiers[? "artifacts"] = false;
 place.forced_modifiers[? "lightning_strikes"] = false;
 place.forced_modifiers[? "abilities"] = false;
+place.forced_modifiers[? "death_limit"] = true;
 
 
 place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,3072, 0);

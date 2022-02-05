@@ -1,13 +1,11 @@
 function guy_respawn() {
-    var respawn_possible = !mod_get_state("one_death") && !gamemode_obj.sudden_death;
-
-    if(dead && !respawn_possible)
+    if(dead && !respawn_allowed())
     {
         my_player.loser = true;
         ds_list_add(gamemode_obj.losers, my_player.id);
     }
 
-    if(instance_exists(my_spawner) && my_spawner.enabled && respawn_possible)
+    if(instance_exists(my_spawner) && my_spawner.enabled && respawn_allowed())
     {   
         var point = my_spawner.spawn_points[? my_player.number];
     

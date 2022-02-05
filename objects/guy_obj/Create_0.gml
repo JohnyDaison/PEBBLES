@@ -555,3 +555,16 @@ init_status_effects();
 // IMPACT SPEED PARTICLES
 self.impact_speed_particles = instance_create_depth(x, y, 0, impact_speed_wave_obj);
 impact_speed_particles.my_guy = id;
+
+respawn_allowed = function() {
+    var allowed = !gamemode_obj.sudden_death;
+    
+    if (allowed) {
+        var mod_death_limit = mod_get_state("death_limit");
+        
+        if (!is_undefined(mod_death_limit) && !is_bool(mod_death_limit) ) {
+            allowed = my_player.stats[? "deaths"] < mod_death_limit;
+        }
+    }
+    return allowed;
+}

@@ -14,8 +14,6 @@ function create_gamemodes_DB() {
     // rules
     gamemode_mod_create("hp_death", "HP Death", "bool", true, hp_death_mod2_icon, "Losing all HP will result in instant death. (Otherwise you die only by falling off the arena.)");
 
-    gamemode_mod_create("one_death", "One Death", "bool", true, one_death_mod2_icon, "Death is final.");
-
     gamemode_mod_create("holographic_spawners", "Holographic Spawners", "bool", true, holo_spawners_mod2_icon, "Base Crystals can't be damaged by attacks. Respawning the Player will still damage them.");
 
     gamemode_mod_create("weak_terrain", "Weak Terrain", "bool", true, weak_terrain_mod3_icon, "Destructible terrain has 1/3 of normal HP.");
@@ -88,6 +86,9 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("flag_capture", "Capture the Flag", "number", true, flag_capture_mod_icon, "Toggle Flag Holders and set score for capturing a Flag.");
     gamemode_number_mod_values("flag_capture", 60, 10, 120, 10);
+    
+    gamemode_mod_create("death_limit", "Death Limit", "number", true, death_limit_mod_icon, "Players won't respawn after dying X times.");
+    gamemode_number_mod_values("death_limit", 3, 1, 20, 1);
 
 
     // GAMEMODES
@@ -115,7 +116,6 @@ function create_gamemodes_DB() {
     forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "one_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "weak_terrain"] = false;
     forced_mods[? "indestr_terrain"] = false;
@@ -135,6 +135,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
+    forced_mods[? "death_limit"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -147,7 +148,6 @@ function create_gamemodes_DB() {
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "hp_death"] = true;
-    forced_mods[? "one_death"] = true;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "slime_mob_rain"] = false;
@@ -159,6 +159,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
+    forced_mods[? "death_limit"] = 1;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "dark_color"] = true;
@@ -316,7 +317,6 @@ function create_gamemodes_DB() {
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "hp_death"] = false;
-    forced_mods[? "one_death"] = true;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "holographic_spawners"] = false;
     forced_mods[? "random_item_spawner"] = false;
@@ -348,6 +348,7 @@ function create_gamemodes_DB() {
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
+    default_mods[? "death_limit"] = true;
     
     
     // Hoopball
@@ -367,7 +368,6 @@ function create_gamemodes_DB() {
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "hp_death"] = false;
-    forced_mods[? "one_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "holographic_spawners"] = false;
     forced_mods[? "random_item_spawner"] = false;
@@ -395,6 +395,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
+    forced_mods[? "death_limit"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
@@ -448,7 +449,6 @@ function create_gamemodes_DB() {
     forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "one_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "weak_terrain"] = false;
     forced_mods[? "indestr_terrain"] = false;
@@ -468,6 +468,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
+    forced_mods[? "death_limit"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;

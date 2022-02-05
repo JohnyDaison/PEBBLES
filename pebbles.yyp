@@ -518,7 +518,7 @@
     {"id":{"name":"snakes2_mod_icon","path":"sprites/snakes2_mod_icon/snakes2_mod_icon.yy",},"order":41,},
     {"id":{"name":"one_life_mod_icon","path":"sprites/one_life_mod_icon/one_life_mod_icon.yy",},"order":42,},
     {"id":{"name":"one_death_mod_icon","path":"sprites/one_death_mod_icon/one_death_mod_icon.yy",},"order":43,},
-    {"id":{"name":"one_death_mod2_icon","path":"sprites/one_death_mod2_icon/one_death_mod2_icon.yy",},"order":44,},
+    {"id":{"name":"death_limit_mod_icon","path":"sprites/death_limit_mod_icon/death_limit_mod_icon.yy",},"order":44,},
     {"id":{"name":"heavy_shots_modX_icon","path":"sprites/heavy_shots_modX_icon/heavy_shots_modX_icon.yy",},"order":45,},
     {"id":{"name":"heavy_shots_mod_icon","path":"sprites/heavy_shots_mod_icon/heavy_shots_mod_icon.yy",},"order":46,},
     {"id":{"name":"slime_mob_rain_mod_icon","path":"sprites/slime_mob_rain_mod_icon/slime_mob_rain_mod_icon.yy",},"order":47,},
