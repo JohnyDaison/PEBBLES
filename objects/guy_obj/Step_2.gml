@@ -602,7 +602,7 @@ for(ii=0; ii<ter_list_length; ii+=1)
 //show_debug_message("final unstuck h: "+string(self.unstuck_h));
 //show_debug_message("final unstuck v: "+string(self.unstuck_v));
 status_left[? "bounce"] = max(0, status_left[? "bounce"]);
-var bounce_coef = sqrt(status_left[? "bounce"] / DB.status_effects[? "bounce"].max_charge);
+var bounce_coef = 1;
 
 if(self.unstuck_h != 0)
 {

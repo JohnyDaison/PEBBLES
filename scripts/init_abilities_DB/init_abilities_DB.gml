@@ -1,7 +1,7 @@
 function init_abilities_DB() {
     // BASE ABILITY COOLDOWNS
     abi_cooldowns = ds_map_create();
-    abi_cooldowns[? g_dark] = 7200;
+    abi_cooldowns[? g_dark] = 18000;
     abi_cooldowns[? g_red] = 2220;
     abi_cooldowns[? g_green] = 2700;
     abi_cooldowns[? g_blue] = 900;
