@@ -127,27 +127,22 @@ function play_summary_update() {
                 {
                     default_value = undefined;
                 }
+                
+                
+                default_value = mod_default_value_update(gmmod, default_value, default_mods_gm[? mod_id]);
             
-            
-                if(!is_undefined(default_mods_gm[? mod_id]))
+                if(!is_undefined(place))
                 {
-                    default_value = default_mods_gm[? mod_id];
+                    default_value = mod_default_value_update(gmmod, default_value, default_mods_place[? mod_id]);
                 }
             
-                if(!is_undefined(place) && !is_undefined(default_mods_place[? mod_id]))
-                {
-                    default_value = default_mods_place[? mod_id];
-                }
+                default_value = mod_default_value_update(gmmod, default_value, forced_mods_gm[? mod_id]);
             
-                if(!is_undefined(forced_mods_gm[? mod_id]))
+                if(!is_undefined(place))
                 {
-                    default_value = forced_mods_gm[? mod_id];
+                    default_value = mod_default_value_update(gmmod, default_value, forced_mods_place[? mod_id]);
                 }
-            
-                if(!is_undefined(place) && !is_undefined(forced_mods_place[? mod_id]))
-                {
-                    default_value = forced_mods_place[? mod_id];
-                }
+                
             
                 var value = mod_control.get_value();
             

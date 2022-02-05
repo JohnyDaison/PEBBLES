@@ -14,6 +14,8 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
         number_input.value_step = gmmod[? "value_step"];
         number_input.gmmod_id = gmmod_id;
         
+        default_value = false;
+        
         with (number_input) {
             event_perform(ev_alarm, 0);
             alarm[0] = -1;

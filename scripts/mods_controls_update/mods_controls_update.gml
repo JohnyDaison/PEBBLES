@@ -99,11 +99,20 @@ function mods_controls_update() {
                     {
                         with(mod_control)
                         {
+                            var default_value = default_map[? dmod];
+                            var value_is_number = is_number(default_value);
+                            
                             with(checkbox) {
-                                gui_checkbox_script(true);
+                                if (is_bool(default_value)) {
+                                    gui_checkbox_script(default_value);
+                                } else {
+                                    gui_checkbox_script(true);
+                                }
                             }
                             
-                            number_input.set_value(default_map[? dmod], true);
+                            if (value_is_number) {
+                                number_input.set_value(default_value, true);
+                            }
                             number_input.locked = false;
                         }
                     }
@@ -113,6 +122,24 @@ function mods_controls_update() {
             }
         
             ds_map_destroy(default_map);
+        
+            // set default value on number mod controls
+            mod_id = ds_map_find_first(mod_controls);
+            while(!is_undefined(mod_id))
+            {   
+                gmmod = DB.gamemode_mods[? mod_id];
+            
+                if(!is_undefined(gmmod) && gmmod[? "public"] && gmmod[? "type"] == "number")
+                {
+                    mod_control = mod_controls[? mod_id];
+                    
+                    with(mod_control) {
+                        self.default_value = self.get_value();
+                    }
+                }
+                
+                mod_id = ds_map_find_next(mod_controls, mod_id);
+            }
         
         
             // CUSTOM
@@ -137,11 +164,20 @@ function mods_controls_update() {
                     {
                         with(mod_control)
                         {
+                            var custom_value = custom_mods[? mod_id];
+                            var value_is_number = is_number(custom_value);
+                            
                             with(checkbox) {
-                                gui_checkbox_script(true);
+                                if (is_bool(custom_value)) {
+                                    gui_checkbox_script(custom_value);
+                                } else {
+                                    gui_checkbox_script(true);
+                                }
                             }
                             
-                            number_input.set_value(custom_mods[? mod_id], true);
+                            if (value_is_number) {
+                                number_input.set_value(custom_value, true);
+                            }
                             number_input.locked = false;
                         }
                     }
@@ -191,7 +227,7 @@ function mods_controls_update() {
                         with(mod_control)
                         {
                             var forced_value = forced_map[? fmod];
-                            var is_number = is_numeric(forced_value) && !is_bool(forced_value);
+                            var value_is_number = is_number(forced_value);
                             
                             with(checkbox) {
                                 locked = true;
@@ -202,10 +238,10 @@ function mods_controls_update() {
                                 }
                             }
                             
-                            if (is_number) {
+                            if (value_is_number) {
                                 number_input.set_value(forced_value, true);
                             }
-                            if (is_number || forced_value == false) {
+                            if (value_is_number || forced_value == false) {
                                 number_input.locked = true;
                             }
                         }

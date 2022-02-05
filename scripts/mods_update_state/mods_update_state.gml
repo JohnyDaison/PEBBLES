@@ -37,8 +37,12 @@ function mods_update_state() {
         }
     
         count = ds_list_size(DB.gamemode_mod_list);
+        
+        if (reset) {
+            ds_map_clear(target_map);
+        }
     
-        for(i=0; i<count; i++)
+        for(var i=0; i<count; i++)
         {
             mod_id = DB.gamemode_mod_list[| i];
             gmmod = DB.gamemode_mods[? mod_id];
@@ -54,15 +58,12 @@ function mods_update_state() {
             }
         
             // game mode default
-            if(!is_undefined(default_mods_gm[? mod_id]))
-            {
-                mod_value = default_mods_gm[? mod_id];
-            }
+            mod_value = mod_default_value_update(gmmod, mod_value, default_mods_gm[? mod_id]);
             
             // place default
-            if(place_exists && !is_undefined(default_mods_place[? mod_id]))
+            if(place_exists)
             {
-                mod_value = default_mods_place[? mod_id];
+                mod_value = mod_default_value_update(gmmod, mod_value, default_mods_place[? mod_id]);
             }
         
             // custom
@@ -72,19 +73,16 @@ function mods_update_state() {
             }
         
             // game mode forced
-            if(!is_undefined(forced_mods_gm[? mod_id]))
-            {
-                mod_value = forced_mods_gm[? mod_id];
-            }
+            mod_value = mod_default_value_update(gmmod, mod_value, forced_mods_gm[? mod_id]);
          
             // place forced
-            if(place_exists && !is_undefined(forced_mods_place[? mod_id]))
+            if(place_exists)
             {
-                mod_value = forced_mods_place[? mod_id];
+                mod_value = mod_default_value_update(gmmod, mod_value, forced_mods_place[? mod_id]);
             }
         
             // write the value
-            if(!is_undefined(mod_value)) 
+            if(!is_undefined(mod_value))
             {
                 target_map[? mod_id] = mod_value;
             }
