@@ -568,3 +568,15 @@ respawn_allowed = function() {
     }
     return allowed;
 }
+
+drop_enemy_flags = function() {
+    for (var index = 1; index <= inventory_size; index++) {
+        var item = inventory[? index];
+            
+        if (instance_exists(item) && item.object_index == flag_obj) {
+            if (item.my_flag_spawner.my_player.team_number != my_player.team_number) {
+                drop_inv_item(index);
+            }
+        }
+    }
+}
