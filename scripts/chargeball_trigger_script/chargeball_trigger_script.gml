@@ -35,7 +35,7 @@ function chargeball_trigger_script() {
         if(my_color == g_dark) {
             if(orb_count > 0 && (!is_guy || has_level(my_guy, "dark_mode", 1)))
             {
-                if(desired_dist == 0 && cur_dist < centered_dist)
+                if(desired_dist == 0)
                 {
                     // DARK AOE
                     inst = instance_create(x, y, black_aoe_obj);
@@ -83,7 +83,7 @@ function chargeball_trigger_script() {
         }
         else
         {
-            if(desired_dist == 0 && cur_dist < centered_dist)
+            if(desired_dist == 0)
             {
                 // SHIELD
                 if(object_is_ancestor(my_guy.object_index, guy_obj))

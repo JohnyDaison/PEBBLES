@@ -173,7 +173,7 @@ if(charging && !firing)
         }
     }
     
-    if(desired_dist == 0 && cur_dist < 8)
+    if(desired_dist == 0 && cur_dist < centered_dist)
     {
         // SHIELD CHANNELING
         
