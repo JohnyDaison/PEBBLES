@@ -50,6 +50,8 @@ function stats_DisplayList_init(labels, stats) {
     stats[| i++] = "kills";
     labels[| i]  = "Personal kills";
     stats[| i++] = "personal_kills";
+    labels[| i]  = "Underdog kills";
+    stats[| i++] = "underdog_kills";
     labels[| i]  = "Deaths";
     stats[| i++] = "deaths";
     labels[| i]  = "Suicides";

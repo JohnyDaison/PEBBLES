@@ -32,7 +32,7 @@ function guy_die_from_falling() {
                 && isPlayerStat(la_player, "score", "lowest", true))
                 {
                     score_value += gamemode_obj.score_values[? "underdog_kill_bonus"];
-                    
+                    increase_stat(la_player, "underdog_kills", 1, false);
                     battlefeed_post_string(la_player, "Underdog Kill");
                 }
                 

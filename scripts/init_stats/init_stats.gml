@@ -40,6 +40,7 @@ function init_stats() {
 
     stats[? "kills"] = 0;
     stats[? "personal_kills"] = 0;
+    stats[? "underdog_kills"] = 0;
     stats[? "deaths"] = 0;
     stats[? "suicides"] = 0;
 
