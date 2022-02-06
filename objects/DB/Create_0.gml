@@ -113,10 +113,10 @@ init_battlefeed_icons_DB();
 player_flags = ds_list_create();
 
 ds_list_add(player_flags,
-"pacman_flag",
 //"pirate_flag",
 "venn_flag",
 "racing_flag",
+"pacman_flag",
 //"stairs_flag",
 "yinyang_flag");
 

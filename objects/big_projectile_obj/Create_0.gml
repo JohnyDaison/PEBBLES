@@ -1,6 +1,6 @@
 event_inherited();
 
-orig_friction = 0.02;
+orig_friction = 0.01;
 gravity_coef = orig_friction + 0.005;
 radius = 12;
 core_radius = 12;
