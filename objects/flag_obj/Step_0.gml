@@ -1,5 +1,7 @@
 event_inherited();
 
+// auto return to base
+/*
 if (collected && my_player.team_number == my_team_number) {
     var flag = id;
     with(my_guy) {
@@ -8,3 +10,4 @@ if (collected && my_player.team_number == my_team_number) {
     instance_destroy();
     increase_stat(my_player, "flags_returned", 1, false);
 }
+*/
