@@ -454,7 +454,9 @@ if(!self.frozen_in_time || self.flashing_back)
 
 // HANDLE BEING ON FIRE
 if (status_left[? "burn"] > 0) {
-    self.wanna_channel = false;
+    if (self.channeling || my_color == g_dark) {
+        self.wanna_channel = false;
+    }
     self.wanna_run = true;
     self.hor_dir_held = true;
 }
