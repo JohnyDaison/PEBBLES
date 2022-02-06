@@ -452,6 +452,13 @@ if(!self.frozen_in_time || self.flashing_back)
     }
 }
 
+// HANDLE BEING ON FIRE
+if (status_left[? "burn"] > 0) {
+    self.wanna_channel = false;
+    self.wanna_run = true;
+    self.hor_dir_held = true;
+}
+
 // FORCED CHANNELING
 if(self.forced_channel)
 {
@@ -893,6 +900,10 @@ if(!self.frozen_in_time)
         }    
     }
     
+    if (airborne && status_left[? "slow"] > 0) {
+        friction *= 1.5;
+    }
+    
     // LAST STANDING POSITION
     if(!airborne && !lost_control)
     {
@@ -1111,7 +1122,7 @@ if(!self.frozen_in_time)
             jumping_charge_speed = jumping_normal_charge_speed;
             
             var charged_jump_level = get_level(id, "charged_jump");
-            if(charged_jump_level >= 1)
+            if(charged_jump_level >= 1 && status_left[? "slow"] == 0)
             {
                 var jump_ratio = sqrt(charged_jump_level / 2);
                 jumping_max_charge *= jump_ratio;
@@ -1135,7 +1146,7 @@ if(!self.frozen_in_time)
 
             if(self.jumping_charge == 0)
             {
-                if(has_level(id, "charged_jump", 1))
+                if(has_level(id, "charged_jump", 1) && status_left[? "slow"] == 0)
                 {
                     self.jumping_charge = jumping_charged_base_charge; 
                     my_sound_play(jump_charge_sound);
@@ -1205,7 +1216,7 @@ if(!self.frozen_in_time)
             }
             else
             {
-                hboost = 0;   
+                hboost = 0;
             }
             
             // debug jump impulse
@@ -1213,19 +1224,19 @@ if(!self.frozen_in_time)
             //create_text_popup(debug_str, g_white, id);
             
             my_sound_stop(jump_charge_sound);
-            if(has_level(id, "charged_jump", 1))
+            if(has_level(id, "charged_jump", 1) && status_left[? "slow"] == 0)
             {
                 my_sound_play(jump_sound);
             }
             else
             {
-                my_sound_play(guy_bounce_sound);   
+                my_sound_play(guy_bounce_sound);
             }
             
             self.is_jumping = true;
             self.have_jumped = true;
-            self.jumping_charge = 0;    
-            increase_stat(my_player, "jumps", 1, false); 
+            self.jumping_charge = 0;
+            increase_stat(my_player, "jumps", 1, false);
         }
         
         // GLIDE/AIRBREAK
@@ -1341,7 +1352,7 @@ if(!self.frozen_in_time)
             
             // AIR FLIP/DOUBLE JUMP
             if(airborne && !have_jumped && !is_doublejumping && doublejump_count < max_doublejumps
-            /*&& !have_dived*/ && !looking_down && !holding_wall && vspeed > -jumping_burstpower)
+                && status_left[? "slow"] == 0 && !looking_down && !holding_wall && vspeed > -jumping_burstpower)
             {
                 vboost = jumping_burstpower;
                 
@@ -1402,7 +1413,7 @@ if(!self.frozen_in_time)
         // AWAY FROM WALL
         if(!place_meeting(x+facing,y,terrain_obj) && self.wanna_run)
         {
-            if(has_level(id, "wall_jump", 1))
+            if(has_level(id, "wall_jump", 1) && status_left[? "slow"] == 0)
             {
                 if(status_left[? "slow"] > 0)
                 {
