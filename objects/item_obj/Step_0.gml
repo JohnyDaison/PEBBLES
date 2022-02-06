@@ -274,4 +274,10 @@ if(newly_got_steps > 0)
     newly_got_steps--;
 }
 
+if(newly_dropped_steps > 0) {
+    newly_dropped_steps--;
+} else {
+    newly_dropped_guy = noone;
+}
+
 label_distance = base_label_distance + step;

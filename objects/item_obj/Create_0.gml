@@ -36,6 +36,10 @@ newly_got_anim_sizecoef = 3;
 newly_got_anim_duration = 40;
 newly_got_anim_peak = 20;
 
+newly_dropped_steps = 0;
+newly_dropped_guy = noone;
+newly_dropped_duration = 120;
+
 is_duplicate = false;
 duplicate_me = false;
 not_for_guide = false;
