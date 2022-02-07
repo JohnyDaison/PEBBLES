@@ -156,4 +156,6 @@ function init_console_DB() {
     }
 
     debug_keys_list = create_debug_keys_list();
+    
+    read_command_history_file();
 }

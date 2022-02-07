@@ -2,6 +2,12 @@
 /// @function parse_user_command
 function parse_user_command() {
     var command = console_window.command_input.text, result = "";
+    
+    command = string_trim(command);
+    
+    if (command == "") {
+        return;
+    }
 
     console_divider_level("=", 1);
     my_console_write("command: " + command, true);
@@ -19,4 +25,6 @@ function parse_user_command() {
         console_window.command_input.text = "";
         console_jump_to_end();
     }
+    
+    write_command_history_file();
 }
