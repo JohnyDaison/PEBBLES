@@ -91,6 +91,10 @@ function add_to_inventory() {
                                 
                                     item.stack_size += stack_part;
                                     pickup.stack_size -= stack_part;
+                                    if(pickup.fresh && instance_exists(pickup_spawner_obj))
+                                    {
+                                        pickup_spawner_obj.spawned_item_count -= stack_part;
+                                    }
                                 }
                             
                                 stack_left -= stack_part;
@@ -145,11 +149,11 @@ function add_to_inventory() {
                             pickup.light_yoffset = 0;
                             pickup.hover_offset = 0;
                             pickup.my_player = my_player;
-                            pickup.fresh = false;
-                            if(instance_exists(pickup_spawner_obj))
+                            if(pickup.fresh && instance_exists(pickup_spawner_obj))
                             {
                                 pickup_spawner_obj.spawned_item_count -= pickup.stack_size;
                             }
+                            pickup.fresh = false;
                         }
                         
                         added = pickup.stack_size;
