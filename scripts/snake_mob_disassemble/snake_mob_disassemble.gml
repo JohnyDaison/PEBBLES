@@ -32,7 +32,7 @@ function snake_mob_disassemble(index) {
                 var score_str = "";
                 if(la_player != gamemode_obj.environment && destroyed_by_guy)
                 {
-                    var score_value = gamemode_obj.score_values[? "snake_kill"];
+                    var score_value = gamemode_obj.score_values[? "snake_killed"];
             
                     increase_stat(la_player, "score", score_value, false);
                     score_str = stat_label("score", score_value, "+");

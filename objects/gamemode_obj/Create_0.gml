@@ -93,7 +93,7 @@ score_values[? "npc_kills_npc"] = 10;
 score_values[? "npc_kills_turret"] = 10;
 score_values[? "guy_suicide"] = -20;
 score_values[? "cannon_killed"] = 30;
-score_values[? "snake_kill"] = 30;
+score_values[? "snake_killed"] = 30;
 score_values[? "base_crystal_killed"] = 40;
 
 // quests
