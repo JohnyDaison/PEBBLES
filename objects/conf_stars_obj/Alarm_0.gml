@@ -1,3 +1,2 @@
 active = false;
-alarm[1]=round(30);
-
+alarm[1] = round(30);
