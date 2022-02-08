@@ -32,6 +32,8 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("equal_colors", "Equal Colors", "bool", true, equal_colors_mod_icon, "All Colors are equal in damage.");
     
+    gamemode_mod_create("base_colors_only", "Base Colors Only", "bool", true, base_colors_only_mod_icon, "No multi-Color combos.");
+    
     gamemode_mod_create("shield_push", "Shield Push", "bool", true, shield_push_mod_icon, "Shield pushes away mobs and characters.");
 
 
@@ -113,6 +115,7 @@ function create_gamemodes_DB() {
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "heavy_shots"] = false;
     forced_mods[? "equal_colors"] = false;
+    forced_mods[? "base_colors_only"] = false;
     forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;
@@ -335,6 +338,7 @@ function create_gamemodes_DB() {
     forced_mods[? "tutorials"] = false;
     forced_mods[? "heavy_shots"] = false;
     forced_mods[? "equal_colors"] = false;
+    forced_mods[? "base_colors_only"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
@@ -385,6 +389,7 @@ function create_gamemodes_DB() {
     forced_mods[? "tutorials"] = false;
     forced_mods[? "heavy_shots"] = false;
     forced_mods[? "equal_colors"] = false;
+    forced_mods[? "base_colors_only"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
     forced_mods[? "lightning_strikes"] = false;
@@ -445,6 +450,7 @@ function create_gamemodes_DB() {
     forced_mods[? "orbs_energy_min_lock"] = false;
     forced_mods[? "heavy_shots"] = false;
     forced_mods[? "equal_colors"] = false;
+    forced_mods[? "base_colors_only"] = false;
     forced_mods[? "shield_push"] = true;
     forced_mods[? "hp_death"] = true;
     forced_mods[? "holographic_spawners"] = false;

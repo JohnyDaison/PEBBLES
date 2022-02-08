@@ -309,6 +309,7 @@
     {"id":{"name":"inventory_cursor_spr","path":"sprites/inventory_cursor_spr/inventory_cursor_spr.yy",},"order":27,},
     {"id":{"name":"move_lock_icon","path":"sprites/move_lock_icon/move_lock_icon.yy",},"order":28,},
     {"id":{"name":"dial_12part_orig","path":"sprites/dial_12part_orig/dial_12part_orig.yy",},"order":0,},
+    {"id":{"name":"base_colors_only_mod_icon","path":"sprites/base_colors_only_mod_icon/base_colors_only_mod_icon.yy",},"order":61,},
     {"id":{"name":"dial_12part_mid","path":"sprites/dial_12part_mid/dial_12part_mid.yy",},"order":1,},
     {"id":{"name":"dual_dial_orig","path":"sprites/dual_dial_orig/dual_dial_orig.yy",},"order":2,},
     {"id":{"name":"dual_dial_separated","path":"sprites/dual_dial_separated/dual_dial_separated.yy",},"order":3,},

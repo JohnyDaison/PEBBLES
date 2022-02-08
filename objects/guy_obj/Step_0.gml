@@ -1515,8 +1515,9 @@ if(!self.frozen_in_time)
                     first_color = first_orb.my_color;
                 }
             
-                if(first_color != g_dark && self.current_slot < self.slot_maxnumber)
-                {            
+                if(first_color != g_dark && self.current_slot < self.slot_maxnumber
+                && (!mod_get_state("base_colors_only") || first_color == -1 || new_color == first_color))
+                {
                     if(self.current_slot == 0)
                     {
                         self.color_charge[? g_dark] = 0;
