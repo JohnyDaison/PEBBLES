@@ -28,9 +28,6 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("color_orbs_energy_lock", "Color Orb Energy lock", "bool", true, orbs_energy_lock_mod_icon, "Color Orb energy will always be at 100%.");
 
-    gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "bool", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below 50%.");
-    orbs_energy_min_lock_coef = 0.5;
-
     gamemode_mod_create("heavy_shots", "Heavy Bolts", "bool", true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
     gamemode_mod_create("equal_colors", "Equal Colors", "bool", true, equal_colors_mod_icon, "All Colors are equal in damage.");
@@ -89,6 +86,9 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("death_limit", "Death Limit", "number", true, death_limit_mod_icon, "Players won't respawn after dying X times.");
     gamemode_number_mod_values("death_limit", 3, 1, 20, 1);
+    
+    gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "number", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below X %.");
+    gamemode_number_mod_values("orbs_energy_min_lock", 100, 10, 100, 10);
 
 
     // GAMEMODES
@@ -222,11 +222,10 @@ function create_gamemodes_DB() {
     forced_mods[? "mob_portals"] = false;
     forced_mods[? "holographic_spawners"] = true;
     forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "color_orbs_energy_lock"] = true;
-    forced_mods[? "orbs_energy_min_lock"] = true;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "shield_push"] = true;
     forced_mods[? "base_crystal_shield_power"] = false;
+    forced_mods[? "orbs_energy_min_lock"] = true;
     
     default_mods = gm[? "default_modifiers"];
     default_mods[? "random_item_spawner"] = true;

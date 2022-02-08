@@ -94,9 +94,14 @@ energy_regen_step = min(DB.orb_regen_speeds[? cur_regen_speed], max(0, base_ener
 energy += energy_regen_step;
 
 // ENERGY MODS
-if(mod_get_state("orbs_energy_min_lock") && my_color != g_dark && energy < DB.orbs_energy_min_lock_coef*base_energy)
-{
-    energy = DB.orbs_energy_min_lock_coef*base_energy;  
+var min_lock = mod_get_state("orbs_energy_min_lock");
+if (is_number(min_lock)) {
+    min_lock = min_lock / 100;
+
+    if (my_color != g_dark && energy < min_lock * base_energy)
+    {
+        energy = min_lock * base_energy;
+    }
 }
 
 if(mod_get_state("color_orbs_energy_lock") && my_color != g_dark && energy != base_energy)
