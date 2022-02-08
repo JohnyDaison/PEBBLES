@@ -90,9 +90,9 @@ if(!self.inventory_ready)
             var item = instance_create(x,y, inv_reserved[?i]);
             item.stack_size = 0;
             item.reserved = true;
+            item.holographic = holographic;
             
             add_to_inventory(item);
-            
         }
     }
     
