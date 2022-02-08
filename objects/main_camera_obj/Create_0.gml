@@ -15,7 +15,7 @@ last_view = 0;
 
 bg_xoffset = 0;
 bg_yoffset = 0;
-bg_hspeed = -0.4;
+bg_hspeed = -0.2;
 bg_vspeed = 0;
 
 function add_player_camera(player_camera) {
