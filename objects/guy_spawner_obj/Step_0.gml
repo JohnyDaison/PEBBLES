@@ -116,17 +116,19 @@ if(self.enabled)
     }
     
     // CONSUME CRYSTALS FOR BASE HEALTH
-    if(crystal_number > 0 && crystal_number > ceil((1-damage/hp)*max_crystals) && damage >= crystal_heal)
+    if (shard_to_consume == noone && crystal_number > 0 
+    && crystal_number > floor((1-damage/hp)*max_crystals) && damage >= crystal_heal)
     {
-        var crystal = crystals[| crystal_number-1];
-        ds_list_delete(crystals, crystal_number-1);
-        effect_create_above(ef_firework,crystal.x,crystal.y,2,crystal.tint);
-        with(crystal)
-        {
-            instance_destroy();
+        shard_to_consume = crystals[| crystal_number-1];
+    }
+    
+    if (shard_to_consume != noone) {
+        shard_to_consume.fade_counter -= consume_anim_speed;
+        
+        if (shard_to_consume.fade_counter <= 0) {
+            consume_shard(shard_to_consume);
+            shard_to_consume = noone;
         }
-        damage -= crystal_heal;
-        crystal_number--;
     }
     
     // SHIELD REGEN BONUS

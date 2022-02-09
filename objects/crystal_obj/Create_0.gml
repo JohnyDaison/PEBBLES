@@ -10,6 +10,7 @@ energy = 3;
 
 my_angle = 0;
 my_distance = 48;
+orbiting_lerp_ratio = 0.05;
 
 self.pickup_sound = crystal_sound;
 self.inventory_spr = sprite_index;

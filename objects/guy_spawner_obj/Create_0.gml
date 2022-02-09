@@ -83,6 +83,9 @@ crystal_boost = 0.2;
 crystal_heal = 1;
 crystal_guy_regen = 0.00075;
 
+shard_to_consume = noone;
+consume_anim_speed = 0.01;
+
 alarm[5] = 2;
 
 // HOLO
@@ -97,3 +100,20 @@ gives_light = true;
 shape = shape_circle;
 ambient_light = 0.6;
 direct_light = 0.1;
+
+// LIGHTNING
+lightning_steps = 8;
+lightning_thickness = 2;
+lightning_width = 10;
+lightning_alpha = 0.8;
+
+consume_shard = function(shard) {
+    ds_list_delete(crystals, ds_list_find_index(crystals, shard));
+    
+    with(shard)
+    {
+        instance_destroy();
+    }
+    damage -= crystal_heal;
+    crystal_number--;
+}

@@ -10,6 +10,8 @@ function create_objectmap() {
     objectmap[? "dataholder"] = data_holder_obj;
 
     objectmap[? "guy"] = guy_obj;
+    objectmap[? "crystal"] = guy_spawner_obj;
+    objectmap[? "shard"] = crystal_obj;
     objectmap[? "eball"] = energyball_obj;
     objectmap[? "item"] = item_obj;
     objectmap[? "orb"] = color_orb_obj;
