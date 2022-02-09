@@ -21,7 +21,15 @@ if(instance_exists(my_guy))
             {
                 state = 1;
                 battlefeed_post_string(gamemode_obj.environment, my_player.name + " " + script_execute(achiev_script,"verb"));
-                battlefeed_post_string(my_player, my_player.name + " " + script_execute(achiev_script,"verb"));
+                
+                var reward_score = script_execute(achiev_script, "reward_score");
+                var score_str = "";
+                if (is_number(reward_score) && reward_score != 0) {
+                    score_str = stat_label("score", reward_score, "+");
+                    increase_achievement_score(my_player, reward_score, false);
+                }
+                
+                battlefeed_post_achievement(achiev_script, my_player, score_str);
                 script_execute(achiev_script,"reward");
             }
 

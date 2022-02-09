@@ -1790,6 +1790,7 @@
     {"id":{"name":"status_overcharge_obj","path":"objects/status_overcharge_obj/status_overcharge_obj.yy",},"order":0,},
     {"id":{"name":"status_tp_rush_obj","path":"objects/status_tp_rush_obj/status_tp_rush_obj.yy",},"order":1,},
     {"id":{"name":"status_berserk_obj","path":"objects/status_berserk_obj/status_berserk_obj.yy",},"order":2,},
+    {"id":{"name":"battlefeed_post_achievement","path":"scripts/battlefeed_post_achievement/battlefeed_post_achievement.yy",},"order":6,},
     {"id":{"name":"status_heal_obj","path":"objects/status_heal_obj/status_heal_obj.yy",},"order":3,},
     {"id":{"name":"status_haste_obj","path":"objects/status_haste_obj/status_haste_obj.yy",},"order":4,},
     {"id":{"name":"red_orb_bundle_obj","path":"objects/red_orb_bundle_obj/red_orb_bundle_obj.yy",},"order":5,},

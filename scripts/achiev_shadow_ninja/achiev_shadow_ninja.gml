@@ -39,16 +39,14 @@ function achiev_shadow_ninja(argument0) {
         }
         break;
     
+        case "reward_score":
+        {
+            return gamemode_obj.score_values[? "achiev_shadow_ninja"];
+        }
+        break;
+    
         case "reward":
         {
-            /*
-            var score_value = gamemode_obj.score_values[? "achiev_shadow_ninja"];
-        
-            increase_stat(my_player, "score", score_value, true);
-            increase_stat(my_player, "achievements_score", score_value, false);
-            */
-            increase_achievement_score(my_player, gamemode_obj.score_values[? "achiev_shadow_ninja"], true);
-        
             return true;
         }
         break;

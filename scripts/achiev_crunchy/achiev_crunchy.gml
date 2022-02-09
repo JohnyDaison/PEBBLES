@@ -35,8 +35,6 @@ function achiev_crunchy(argument0) {
     
         case "reward":
         {
-            display_stat(my_player, "score");
-        
             return true;
         }
         break;
