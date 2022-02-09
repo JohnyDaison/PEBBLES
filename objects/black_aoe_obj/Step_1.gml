@@ -96,7 +96,7 @@ with(guy_obj)
                         lost_control = true;
                     }
                     
-                    last_attacker_update(other.id, "body", "push");
+                    last_attacker_update(other.id, "body", "dark");
                 }
                 
                 

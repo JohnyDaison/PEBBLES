@@ -82,6 +82,8 @@ mob_spawners_respawn_delay = 6 * 60;
 
 score_values = ds_map_create();
 
+// TODO: only some the score_values are actually used in code, needs more design
+
 // deaths
 score_values[? "guy_kills_guy"] = 40;
 score_values[? "guy_kills_mob"] = 40;

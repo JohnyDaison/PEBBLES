@@ -123,4 +123,10 @@ if(done_for)
     exit;
 }
 
+// RESET ATTACKER AFTER TIME
+if(last_attacker_map[? "player"] != noone && (singleton_obj.step_count - last_attacker_map[? "step"]) > att_forget_delay)
+{
+    last_attacker_reset();
+}
+
 event_inherited();

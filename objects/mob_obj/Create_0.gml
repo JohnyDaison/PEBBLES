@@ -9,6 +9,7 @@ my_score_value = 0;
 incoming_lockon_range = 160;
 smoke_resistant = false;
 drop_item = noone;
+att_forget_delay = 300;
 
 /*
 hardpoint_count = 0;

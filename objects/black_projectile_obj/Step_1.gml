@@ -111,7 +111,7 @@ with(guy_obj)
                         broadcast_event("vortex_knockdown", id, params);
                     }
                     
-                    last_attacker_update(vortex.id, "body", "push");
+                    last_attacker_update(vortex.id, "body", "dark");
                 }
             }
         }
@@ -225,7 +225,7 @@ with(mob_obj)
             attr_force = max_force*(1 - max(dist-vortex.radius,0)/max(max_dist-vortex.radius,1));
             motion_add(dir,attr_force);
             
-            // last_attacker_update(vortex.id, "body", "push");
+            last_attacker_update(vortex.id, "body", "dark");
         }
     }
 }

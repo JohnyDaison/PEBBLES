@@ -1,6 +1,6 @@
 function last_attacker_update(source, target, type) {
     // target = "body"|"shield"
-    // type = "push"|"damage"|"status"
+    // type = "push"|"fall"|"damage"|"dark"
 
     // TODO: make get_last_attacker_source(source) script
     
@@ -44,7 +44,7 @@ function last_attacker_update(source, target, type) {
             last_attacker_map[? "carrier"] = type;
             last_attacker_map[? "carrier_color"] = g_white;
         }
-        else if(type == "damage")
+        else if(type == "damage" || type == "dark")
         {
             if(instance_exists(source.my_guy))
             {
