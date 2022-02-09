@@ -41,7 +41,7 @@ stopped_threshold = 0.5;
 wall_bounce_damping = 0;
 make_particles = true;
 particle_count = 1;
-
+sound_volume = 1;
 
 self.holo_alpha = 1;
 self.holo_alpha_step = 0.005;
@@ -54,4 +54,3 @@ y_return = 0;
 gate_bounce_limit = 3;
 gate_bounce_count = 0;
 gate_bounced = false;
-

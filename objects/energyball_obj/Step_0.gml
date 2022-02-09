@@ -58,7 +58,7 @@ if(corner_bounced)
                 vspeed = 0;
                 gravity = 0;
             }
-            my_sound_play_colored(shot_bounce_sound, my_color);
+            my_sound_play_colored(shot_bounce_sound, my_color, false, sound_volume);
             //show_debug_message("corner bounce applied");
         }
         else

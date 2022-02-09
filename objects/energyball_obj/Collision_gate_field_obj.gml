@@ -42,7 +42,7 @@ if(!bounced && !collided)
     
     if(bounced)
     {
-        my_sound_play_colored(shot_bounce_sound, my_color);
+        my_sound_play_colored(shot_bounce_sound, my_color, false, sound_volume);
     }
 }
 

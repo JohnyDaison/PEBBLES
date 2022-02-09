@@ -4,7 +4,7 @@ if(xstart == x && ystart == y)
     if(!wallhit_played)
     {
         //my_sound_play_colored(shot_wallhit_sound, my_color);
-        my_sound_play(shot_wallhit_sound);
+        my_sound_play(shot_wallhit_sound, false, sound_volume);
         wallhit_played = true;
     }
 }
@@ -51,7 +51,7 @@ if(!bounced && !collided)
     {
         speed -= 0.2;
         //my_sound_play_colored(shot_bounce_sound, my_color);
-        my_sound_play(shot_bounce_sound);
+        my_sound_play(shot_bounce_sound, false, sound_volume);
     }
     else
     {
@@ -59,7 +59,7 @@ if(!bounced && !collided)
         if(!wallhit_played)
         {
             //my_sound_play_colored(shot_wallhit_sound, my_color);
-            my_sound_play(shot_wallhit_sound);
+            my_sound_play(shot_wallhit_sound, false, sound_volume);
             wallhit_played = true;
         } 
     }

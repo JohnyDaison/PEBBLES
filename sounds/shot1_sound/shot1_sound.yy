@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.77,
   "preload": true,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "shot1_sound",
-  "duration": 2.038061,
+  "duration": 2.033061,
   "parent": {
     "name": "spells",
     "path": "folders/Sounds/spells.yy",

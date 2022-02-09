@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.21,
   "preload": true,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "shot_wallhit_sound",
-  "duration": 0.805249,
+  "duration": 0.800249,
   "parent": {
     "name": "spells",
     "path": "folders/Sounds/spells.yy",
