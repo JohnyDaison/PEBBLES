@@ -18,7 +18,7 @@ draw_set_alpha(bg_alpha);
 if(self.draw_bg_color)
 {
     draw_set_color(self.bg_color);
-    draw_roundrect(x,y,x+self.width,y+self.height,false);
+    draw_roundrect_ext(x,y, x+self.width,y+self.height, corner_radius, corner_radius, false);
 }
 
 // ALIGN
@@ -50,17 +50,25 @@ else
 // ITEMS
 if(cur_item != -1)
 { 
+    var items_start_x = x + side_margin;
+    var items_center_x = items_start_x + self.main_width/2;
+    var items_start_y = y + ends_height;
+    
     if(!is_list_picker)
     {
         if(first_item > 0)
         {
             draw_sprite_ext(centered_arrow_spr, 0,
-                            x+self.main_width/2, y + ends_height/2 + 3, 1,-1, 0, c_white, 1);
+                            items_center_x,
+                            y + ends_height/2 + 3, 
+                            1, -1, 0, c_white, 1);
         }
         if(last_item < item_count-1)
         {
             draw_sprite_ext(centered_arrow_spr, 0,
-                            x+self.main_width/2, y + 1.5*ends_height - 2 + max_items*item_height, 1,1, 0, c_white, 1);
+                            items_center_x,
+                            y + 1.5*ends_height - 2 + max_items*item_height,
+                            1, 1, 0, c_white, 1);
         }
     }
     
@@ -133,8 +141,9 @@ if(cur_item != -1)
                         draw_set_colour(over_color);
                     }
                 
-                    draw_roundrect(x, y + ends_height + i*item_height + item_padding/2,
-                               x+self.main_width, y + ends_height + (i+1)*item_height - item_padding/2,false);
+                    draw_roundrect_ext(items_start_x, items_start_y + i*item_height + item_padding/2,
+                                       items_start_x + self.main_width, items_start_y + (i+1)*item_height - item_padding/2,
+                                       corner_radius, corner_radius, false);
                 }
             }
         }
@@ -148,23 +157,23 @@ if(cur_item != -1)
             draw_set_color(final_text_color);
             if(align_items == "center")
             {
-                my_draw_text(x + self.main_width/2, y + ends_height + (i+0.5) * item_height, items[| first_item+i]);
+                my_draw_text(items_center_x, items_start_y + (i+0.5) * item_height, items[| first_item+i]);
             }
             else if(align_items == "left")
             {
-                my_draw_text(x + content_padding, y + ends_height + (i+0.5) * item_height, items[| first_item+i]);   
+                my_draw_text(items_start_x + content_padding, items_start_y + (i+0.5) * item_height, items[| first_item+i]);
             }
         }
         else if(type == "icon")
         {
             if(align_items == "center")
             {
-                draw_sprite_ext(items[| first_item+i], 0, x + self.main_width/2, y + ends_height + (i+0.5) * item_height, 1, 1, 0, self.color, 1);
+                draw_sprite_ext(items[| first_item+i], 0, items_center_x, items_start_y + (i+0.5) * item_height, 1, 1, 0, self.color, 1);
             }
             else if(align_items == "left")
             {
-                draw_sprite_ext(items[| first_item+i], 0, x + content_padding, y + ends_height + (i+0.5) * item_height, 1, 1, 0, self.color, 1);   
-            }   
+                draw_sprite_ext(items[| first_item+i], 0, items_start_x + content_padding, items_start_y + (i+0.5) * item_height, 1, 1, 0, self.color, 1);
+            }
         }
     }
 }
@@ -175,13 +184,16 @@ if(self.bar_width > 0)
     draw_set_alpha(bg_alpha);
     draw_set_colour(bar_bg_color);
     
-    draw_roundrect(x + bar_start, y, x + bar_start + bar_width, y + self.height, false);
+    draw_roundrect_ext(x + bar_start, y, 
+                       x + bar_start + bar_width, y + self.height,
+                       bar_corner_radius, bar_corner_radius, false);
     
     draw_set_alpha(bar_knob_alpha);
     draw_set_colour(bar_knob_color);
     
-    draw_roundrect(x + bar_start + bar_knob_margin, y + knob_offset + bar_knob_margin,
-                   x + bar_start + bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin, false);
+    draw_roundrect_ext(x + bar_start + bar_knob_margin, y + knob_offset + bar_knob_margin,
+                       x + bar_start + bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin,
+                       bar_corner_radius - bar_knob_margin, bar_corner_radius - bar_knob_margin, false);
 }
 
 // BORDER
@@ -189,6 +201,5 @@ if(self.draw_border)
 {
     draw_set_color(self.border_color);
     draw_set_alpha(self.border_alpha);
-    draw_roundrect(x,y, x + self.width, y + self.height, true)
-}                                                    
-
+    draw_roundrect_ext(x,y, x + self.width, y + self.height, corner_radius, corner_radius, true);
+}

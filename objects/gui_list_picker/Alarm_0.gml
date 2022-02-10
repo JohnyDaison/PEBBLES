@@ -22,7 +22,8 @@ if(is_dropdown)
         item_click_script = gui_dropdown_script;
         item_height = 36;
         item_padding = 4;
-        bar_knob_color = c_dkgray;
+        width += bar_width;
+        bar_bg_color = merge_color(c_gray, c_ltgray, 0.5);
     
         height = ends_height*2 + max_items*item_height;
     }
@@ -46,6 +47,8 @@ if(!is_undefined(item_padding))
 {
     scroll_list.item_padding = item_padding;
 }
+
+scroll_list.update_main_width();
 
 gui_reset_scroll_items(scroll_list, type, label_list);
 
@@ -76,11 +79,11 @@ eloffset_x = x; //  + scroll_list.width + 8
 eloffset_y = y;
 
 
-self.up_arrow = gui_add_button(0,0, "",gui_list_picker_script,true);
+self.up_arrow = gui_add_button(scroll_list.side_margin, 0, "", gui_list_picker_script, true);
 up_arrow.icon = small_nice_up_arrow_spr;
 up_arrow.button_function = "up";
 
-up_arrow.width = scroll_list.width - scroll_list.bar_margin - scroll_list.bar_width;
+up_arrow.width = scroll_list.main_width;
 up_arrow.height = scroll_list.ends_height;
 up_arrow.show_icon = true; 
 up_arrow.center_icon = true;
@@ -91,11 +94,12 @@ up_arrow.enabled_icon_color = up_arrow.base_bg_color;
 up_arrow.base_bg_color = merge_color(select_color, c_white, 0.5);
 
 
-self.down_arrow = gui_add_button(0,scroll_list.height-scroll_list.ends_height, "",gui_list_picker_script,true);
+self.down_arrow = gui_add_button(scroll_list.side_margin, scroll_list.height - scroll_list.ends_height,
+                                 "",gui_list_picker_script,true);
 down_arrow.icon = small_nice_down_arrow_spr;
 down_arrow.button_function = "down";
 
-down_arrow.width = scroll_list.width - scroll_list.bar_margin - scroll_list.bar_width;
+down_arrow.width = scroll_list.main_width;
 down_arrow.height = scroll_list.ends_height;
 down_arrow.show_icon = true;
 down_arrow.center_icon = true;

@@ -28,5 +28,3 @@ list_picker.width = width;
 list_picker.visible = false;
 list_picker.hidden = true;
 list_picker.is_dropdown = true;
-
-

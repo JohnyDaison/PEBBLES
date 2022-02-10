@@ -7,7 +7,9 @@ var bar_ratio = (value - bar_min_value) / (bar_max_value - bar_min_value);
 
 if(round_corners)
 {
-    draw_roundrect(x + 1, y + 1, x + width * bar_ratio - 1, y + height - 1, false);
+    draw_roundrect_ext(x + 1, y + 1,
+                       x + width * bar_ratio - 1, y + height - 1,
+                       corner_radius, corner_radius, false);
 }
 else
 {

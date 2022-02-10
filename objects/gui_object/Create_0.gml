@@ -21,6 +21,7 @@ self.disabled_color = c_dkgray;
 self.disabled_icon_color = c_gray;
 
 
+self.corner_radius = 12;
 self.draw_border = false;
 self.round_corners = false;
 self.draw_bg_color = false;

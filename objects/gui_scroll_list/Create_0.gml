@@ -15,11 +15,12 @@ self.item_bg_color = c_white;
 self.item_bg_alpha = 0.8;
 self.alternate_lines = true;
 self.content_padding = 6;
-self.bar_width = 8;
-self.bar_margin = 2; 
+self.side_margin = 4;
+self.bar_width = 16;
+self.bar_corner_radius = corner_radius;
 self.bar_bg_color = c_white;
 self.bar_knob_color = merge_color(c_ltgray, c_white, 0.5);
-self.bar_knob_margin = 1;
+self.bar_knob_margin = 0;
 self.bar_knob_alpha = 0.9;
 self.auto_height = false;
 self.auto_items = false;
@@ -89,4 +90,8 @@ select_item = function(index) {
     cur_item += diff;
     
     return true;
+}
+
+update_main_width = function() {
+    main_width = width - 2 * side_margin - bar_width;
 }

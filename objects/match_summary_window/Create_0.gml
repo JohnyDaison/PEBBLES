@@ -119,7 +119,6 @@ with(plstats_pane)
     col_label = other.col_label;
     col_number = other.col_number;
     col_wide = other.col_wide + 48;
-    var scroll_bar_width = 8;
     
     table_height = 384;
     max_items = floor((table_height-32)/32);
@@ -131,16 +130,16 @@ with(plstats_pane)
     
     // HEADINGS
     ii = gui_add_label(0,0,"Stats");
-    ii.width = col_wide - scroll_bar_width;
+    ii.width = col_wide;
     ii.draw_border = true;
     ii.centered = true;
     
     for(i=0;i<=player_num;i+=1)
     {
-        eloffset_x += ii.width + scroll_bar_width + spacing;
+        eloffset_x += ii.width + spacing;
         
         ii = gui_add_label(0,0,string(i));
-        ii.width = col_number - scroll_bar_width;
+        ii.width = col_number;
         ii.draw_border = true;
         ii.centered = true;
     }
@@ -155,6 +154,7 @@ with(plstats_pane)
     ii.height = table_height;
     ii.max_items = max_items;
     ii.centered = true;
+    ii.bar_width = 0;
     
     self.scroll_list = ii;
 
@@ -171,6 +171,11 @@ with(plstats_pane)
         ii.height = table_height;
         ii.max_items = max_items;
         ii.centered = true;
+        if (i < player_num) {
+            ii.bar_width = 0;
+        } else {
+            ii.width += ii.bar_width;
+        }
         
         self.scroll_lists[i] = ii;
         ds_list_add(scroll_group.scroll_lists,ii);
@@ -272,12 +277,13 @@ with(match_pane)
     ii.height = table_height;
     ii.max_items = max_items;
     ii.centered = true;
+    ii.bar_width = 0;
     
     self.scroll_list = ii;
-    ds_list_add(scroll_group.scroll_lists,ii);    
+    ds_list_add(scroll_group.scroll_lists,ii);
     eloffset_x += ii.width+spacing;
      
-    //VALUES   
+    //VALUES
     ii = gui_add_scroll_list(0,0);
     ii.width = col_number;
     ii.height = table_height;
@@ -285,7 +291,7 @@ with(match_pane)
     ii.centered = true;
     
     self.scroll_list_values = ii;
-    ds_list_add(scroll_group.scroll_lists,ii);   
+    ds_list_add(scroll_group.scroll_lists,ii);
     eloffset_x += ii.width+spacing;
     
     // FILL MATCH LIST WITH DATA

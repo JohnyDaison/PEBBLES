@@ -43,8 +43,9 @@ if(self.draw_thick_border)
     draw_set_color(self.border_color);
     if(round_corners)
     {
-        draw_roundrect(x - thick_border_size, y - thick_border_size,
-                       x + self.width + thick_border_size, y + self.height + thick_border_size, false);
+        draw_roundrect_ext(x - thick_border_size, y - thick_border_size,
+                           x + self.width + thick_border_size, y + self.height + thick_border_size,
+                           corner_radius, corner_radius, false);
     }
     else
     {
@@ -59,11 +60,11 @@ if(self.draw_bg_color)
     draw_set_color(self.bg_color);
     if(round_corners)
     {
-        draw_roundrect(x,y,x+self.width,y+self.height,false);
+        draw_roundrect_ext(x, y, x+self.width, y+self.height, corner_radius, corner_radius, false);
     }
     else
     {
-        draw_rectangle(x,y,x+self.width,y+self.height,false);
+        draw_rectangle(x, y, x+self.width, y+self.height, false);
     }
 }
 draw_set_alpha(self.border_alpha);
@@ -72,11 +73,11 @@ if(self.draw_border)
     draw_set_color(self.border_color);
     if(round_corners)
     {
-        draw_roundrect(x,y,x+self.width,y+self.height,true);
+        draw_roundrect_ext(x, y, x+self.width, y+self.height, corner_radius, corner_radius, true);
     }
     else
     {
-        draw_rectangle(x,y,x+self.width,y+self.height,true);
+        draw_rectangle(x, y, x+self.width, y+self.height, true);
     }
 }
 draw_set_alpha(1);

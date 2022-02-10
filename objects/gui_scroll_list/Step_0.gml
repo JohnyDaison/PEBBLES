@@ -2,12 +2,12 @@ event_inherited();
 
 do_auto_updates();
 
-main_width = width - bar_width - bar_margin;
+update_main_width();
 
 // SCROLL BAR
 if(self.bar_width > 0)
 {
-    bar_start = main_width + bar_margin;
+    bar_start = width - bar_width;
     
     var item_range = max(0, item_count - max_items);
     knob_height = height/(1 + item_range);

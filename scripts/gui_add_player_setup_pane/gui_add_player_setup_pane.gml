@@ -50,7 +50,7 @@ function gui_add_player_setup_pane(xx, yy, player_num) {
         eloffset_x += control_dropdown.width + hor_spacing;
     
         ii = gui_add_dropdown(0, 0, "flag", DB.player_flags, 0);
-        ii.width = 58;
+        ii.width = 64;
         flag_input = ii;
         
         eloffset_x = x + hor_spacing;
