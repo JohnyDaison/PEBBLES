@@ -3,40 +3,32 @@ function play_summary_update() {
 
     with(pane)
     {
-        var new_text = "";
+        var gamemode_text = "", place_text = "";
 
         var gm = DB.gamemodes[? gamemode_picker.cur_item_id], i, count, place, mod_id, mod_control, gmmod;
     
         if(!is_undefined(gm))
         {
             var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"], default_mods_place, forced_mods_place;
-            var min_players = gm[? "min_players"], max_players = gm[? "max_players"], max_bots = max_players - gm[? "min_real_players"];
+            var min_players = gm[? "min_players"], max_players = gm[? "max_players"], max_bots = max_players - gm[? "min_real_players"], min_teams = gm[? "min_teams"];
             var world = noone, place = noone;
-
-            // GAMEMODE NAME
-            new_text += "= " + gm[? "name"] + " =\n";
-        
-            // GAMEMODE DESCRIPTION
-            new_text += "\n";
-            new_text += " " + gm[? "description"] + "\n";
-        
+            
             // PLAYERS
-            new_text += "\n";
             if(min_players != max_players) {
-                new_text += string(min_players) + "-";
+                gamemode_text += string(min_players) + "-";
             }
             
-            new_text += string(max_players) + " player";
+            gamemode_text += string(max_players) + " player";
             if(max_players > 1) {
-                new_text += "s";
+                gamemode_text += "s";
             }
         
             if(max_bots > 0) {
-                new_text += ", up to " + string(max_bots) + " CPU";
+                gamemode_text += ", up to " + string(max_bots) + " CPU";
             }
-            new_text += "\n";
-        
-        
+            gamemode_text += "\n";
+            
+            
             // LIMITS
             var limits_text = "", gm_limits = gm[? "limits"], limit_id, limit_index;
         
@@ -55,11 +47,13 @@ function play_summary_update() {
         
             if(limits_text != "")
             {
-                //new_text += "Game ends if" + "\n";
-                new_text += limits_text;
+                //gamemode_text += "Game ends if" + "\n";
+                gamemode_text += limits_text;
             }
-
-            new_text += "\n";
+        
+            // GAMEMODE DESCRIPTION
+            gamemode_text += "\n";
+            gamemode_text += " " + gm[? "description"] + "\n";
         
         
             // PLACE
@@ -69,29 +63,34 @@ function play_summary_update() {
                 place = world.places[| place_picker.cur_item];
                 if(!is_undefined(place))
                 {
-                    // NAME
-                    new_text += "= " + place.name + " =\n"; // "" + world.name + " - " + 
-                
-                
-                    // DESCRIPTION
-                    new_text += "\n";
-                    new_text += " " + place.description + "\n";
-                    new_text += "\n";
-                        
+                    var max_teams = min(gm[? "max_teams"], place.max_team_count);
+                    
                     // BRONZE TIME
                     if(!is_undefined(place.times[? "bronze"]))
                     {
-                        new_text += "Bronze time: " + seconds_to_time_str(place.times[? "bronze"]);
-                        new_text += "\n";
+                        place_text += "Bronze time: " + seconds_to_time_str(place.times[? "bronze"]);
+                        place_text += "\n";
                     }
+                    
+                    // TEAMS
+                    if(min_teams != max_teams) {
+                        place_text += string(min_teams) + "-";
+                    }
+            
+                    place_text += string(max_teams) + " team";
+                    if(max_teams > 1) {
+                        place_text += "s";
+                    }
+                    place_text += "\n";
                                 
                     // GRID SIZE
-                    new_text += "Grid size: ";
-                    new_text += string(floor( (place.width - 2*place.margin) / 32 )) + "x" + string(floor( (place.height - 2*place.margin) / 32 ));
-                    new_text += "\n";
+                    place_text += "Grid size: ";
+                    place_text += string(floor( (place.width - 2*place.margin) / 32 )) + "x" + string(floor( (place.height - 2*place.margin) / 32 ));
+                    place_text += "\n";
                 
-                    new_text += "\n";
-
+                    // DESCRIPTION
+                    place_text += "\n";
+                    place_text += " " + place.description + "\n";
                 
                     default_mods_place = place.default_modifiers;
                     forced_mods_place = place.forced_modifiers;
@@ -151,7 +150,7 @@ function play_summary_update() {
                     if(default_value != value)
                     {
                         customized = true;
-                        if(mod_control.checked)
+                        if(mod_control.checkbox.checked)
                         {
                             state_string = "";
                         }
@@ -190,70 +189,17 @@ function play_summary_update() {
         
             if(custom_mods_text != "")
             {
-                new_text += "Custom Rules:\n";
-                new_text += " " + custom_mods_text;
-                new_text += "\n";
+                place_text += "\nCustom Rules:\n";
+                place_text += " " + custom_mods_text;
+                place_text += "\n";
             }
         }
     
-        var max_line_length = 36, line, line_length, new_line, chi, line_break_delay = 0, do_delay;
-    
-        string_explode(new_text,"\n",summary_list);
-    
-        count = ds_list_size(summary_list);
-    
-        for(i=0; i<count; i++)
-        {
-            line = summary_list[| i];
-            line_length = string_length(line);
-            new_line = "";
-        
-            while(line_length > max_line_length)
-            {
-                line_break_delay = 0;
-                for(chi = line_length; chi >= 1; chi--)
-                {
-                    if(string_char_at(line, chi) == " ")
-                    {
-                        do_delay = (string_char_at(line, chi-2) == " " || string_char_at(line, chi-3) == " " || string_char_at(line, chi-4) == " ");
-                        if(do_delay)
-                        {
-                            line_break_delay++;
-                        }
-                    
-                        if(!do_delay || line_break_delay > 3)
-                        {
-                            new_line = string_copy(line, chi, line_length-chi+1) + new_line;
-                            line = string_copy(line, 1, chi-1);
-                            break;
-                        }
-                    }
-                }
-            
-                line_length = string_length(line);
-            }
-        
-            if(new_line != "")
-            {
-                //new_line = string_delete(new_line, 1, 1);
-                summary_list[| i] = line;
-                ds_list_insert(summary_list, i+1, new_line);
-                count++;
-            }
-        }
-    
-        if(count < summary_list_picker.max_items)
-        {
-            repeat(summary_list_picker.max_items - count)
-            {
-                ds_list_add(summary_list, "");
-            }
-        }
-    
-        gui_list_picker_items_reset(summary_list_picker, "text", summary_list);
+        gamemode_description_scroll_list.load_long_text(gamemode_text, gamemode_description_list);
+        level_description_scroll_list.load_long_text(place_text, place_description_list);
     
         if (custom_mods_text != "") {
-            summary_list_picker.select_item_by_index(-1);
+            level_description_scroll_list.select_item(-1);
         }
     }
 }

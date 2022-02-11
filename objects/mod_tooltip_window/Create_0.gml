@@ -11,7 +11,9 @@ nonfocusable = true;
 mod_button = noone;
 
 var ii;
+text_padding = 4;
 spacing = 16;
+mod_button_margin = 8;
 
 eloffset_x = x + spacing;
 eloffset_y = y + spacing;

@@ -1,6 +1,7 @@
 event_inherited();
 
 self.font = label_font;
+self.character_width = 10;
 self.draw_border = true;
 self.draw_bg_color = true;
 self.draw_lines_bg = true;
@@ -94,4 +95,62 @@ select_item = function(index) {
 
 update_main_width = function() {
     main_width = width - 2 * side_margin - bar_width;
+}
+
+load_long_text = function(new_text, list) {
+    var max_line_length = (main_width - 2 * content_padding) / character_width;
+    var line, line_length, new_line, chi, line_break_delay = 0, do_delay;
+    
+    string_explode(new_text,"\n",list);
+    
+    var count = ds_list_size(list);
+    
+    for(var i=0; i<count; i++)
+    {
+        line = list[| i];
+        line_length = string_length(line);
+        new_line = "";
+        
+        while(line_length > max_line_length)
+        {
+            line_break_delay = 0;
+            for(chi = line_length; chi >= 1; chi--)
+            {
+                if(string_char_at(line, chi) == " ")
+                {
+                    do_delay = (string_char_at(line, chi-2) == " " || string_char_at(line, chi-3) == " " || string_char_at(line, chi-4) == " ");
+                    if(do_delay)
+                    {
+                        line_break_delay++;
+                    }
+                    
+                    if(!do_delay || line_break_delay > 3)
+                    {
+                        new_line = string_copy(line, chi, line_length-chi+1) + new_line;
+                        line = string_copy(line, 1, chi-1);
+                        break;
+                    }
+                }
+            }
+            
+            line_length = string_length(line);
+        }
+        
+        if(new_line != "")
+        {
+            list[| i] = line;
+            ds_list_insert(list, i+1, new_line);
+            count++;
+        }
+    }
+    
+    if(count < max_items)
+    {
+        repeat(max_items - count)
+        {
+            ds_list_add(list, "");
+        }
+    }
+    
+    gui_reset_scroll_items(id, "text", list);
 }

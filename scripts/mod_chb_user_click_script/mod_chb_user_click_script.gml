@@ -7,8 +7,7 @@ function mod_chb_user_click_script() {
         
     if (gmmod[? "type"] == "bool") {
         if (is_undefined(custom_value)) {
-            var mod_control = play_menu_window.gamemode_pane.gmmod_controls[? gmmod_id];
-            gmmod_customs[? gmmod_id] = mod_control.get_value();
+            gmmod_customs[? gmmod_id] = control_value;
         } else {
             ds_map_delete(gmmod_customs, gmmod_id);
         }

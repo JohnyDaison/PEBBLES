@@ -373,6 +373,9 @@ function create_gamemodes_DB() {
     forced_mods[? "hp_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "holographic_spawners"] = false;
+    forced_mods[? "weak_terrain"] = false;
+    forced_mods[? "indestr_terrain"] = false;
+    forced_mods[? "regenerate_terrain"] = false;
     forced_mods[? "random_item_spawner"] = false;
     forced_mods[? "snakes_on_a_plane"] = false;
     forced_mods[? "bolt_rain"] = false;
