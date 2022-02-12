@@ -48,7 +48,7 @@ self.item_click_script = empty_script;
 self.mouse_scroll_speed = 1;
 self.is_list_picker = false;
 
-function do_auto_updates() {
+do_auto_updates = function() {
     if(auto_height)
     {
         height = ends_height*2 + max_items*item_height;
@@ -60,7 +60,7 @@ function do_auto_updates() {
     }
 }
 
-function clamp_current_position() {
+clamp_current_position = function() {
     if(item_count > 0)
     {
         if(cur_item < 0)
