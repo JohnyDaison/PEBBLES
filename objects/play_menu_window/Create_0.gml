@@ -253,14 +253,15 @@ with(gamemode_pane)
 
 add_frame(mod_tooltip_window);
 
-eloffset_x += gamemode_pane.width - 288;
+eloffset_x += gamemode_pane.width - 224;
 eloffset_y += gamemode_pane.height;
 
 ii = gui_add_button(0, vert_spacing, "Back", goto_mainmenu);
 ii.width = 96;
 ii.centered = true;
 
-ii = gui_add_button(112, vert_spacing, "Next step", play_menu_window_next_step);
+ii = gui_add_button(112, vert_spacing, "Next", play_menu_window_next_step);
+ii.width = 96;
 ii.centered = true;
 ii.base_bg_color = select_color;
 

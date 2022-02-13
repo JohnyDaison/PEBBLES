@@ -224,8 +224,6 @@ function mods_controls_update() {
                 {
                     mod_control = mod_controls[? fmod];
                     
-                    mod_control.bg_color = mod_control.default_bg_color;
-                    
                     if(gmmod[? "type"] == "bool")
                     {
                         with(mod_control.checkbox)
@@ -233,6 +231,8 @@ function mods_controls_update() {
                             locked = true;
                             gui_checkbox_script(forced_map[? fmod]);
                         }
+                        
+                        mod_control.bg_color = mod_control.default_bg_color;
                     }
                     else if(gmmod[? "type"] == "number")
                     {
@@ -250,8 +250,15 @@ function mods_controls_update() {
                                 }
                             }
                             
+                            if (is_bool(forced_value)) {
+                                if (!forced_value || (forced_value && get_value() == gmmod[? "default_value"])) {
+                                    bg_color = default_bg_color;
+                                }
+                            }
+                            
                             if (value_is_number) {
                                 number_input.set_value(forced_value, true);
+                                bg_color = default_bg_color;
                             }
                             if (value_is_number || forced_value == false) {
                                 number_input.locked = true;

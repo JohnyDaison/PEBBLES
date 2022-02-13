@@ -27,7 +27,7 @@ if(self.bar_width > 0)
 var last_cur_item = cur_item;
 
 // MOUSE WHEEL SCROLL
-if(cur_item != -1 && focused)
+if(cur_item != -1 && cursor_obj.focus == id)
 {
     if(cur_item > 0 && mouse_wheel_up())
     {
