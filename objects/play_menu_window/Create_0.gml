@@ -49,15 +49,14 @@ with(gamemode_pane)
     var description_line_count = 10;
     var description_height = description_line_count * 20 + 32;
     var description_start = content_start + main_content_height + vert_spacing;
-    var modifier_chb_size = 40;
-    var mod_grid_unit = 56;
-    var mod_dist = mod_grid_unit;
-    var mod_column_count = 9;
-    //var mods_width = 720;
-    var mods_width = mod_column_count * mod_grid_unit;
-    
+    var rules_grid_unit = 56;
+    var rules_column_count = 9;
+    var margins = 40;
+    var rules_width = rules_column_count * rules_grid_unit + margins;
     
     height = description_start + description_height + vert_spacing - y;
+    
+    var rules_height = height - content_start - vert_spacing;
 
     // POPULATE gamemode_names
     var i, count = ds_list_size(DB.gamemode_list), gm, ii;
@@ -133,122 +132,27 @@ with(gamemode_pane)
     // Rules COLUMN
     eloffset_y = heading_start;
     
-    ii = gui_add_label(mods_width/2, 16, "Rules");
-    ii.width = mods_width;
+    ii = gui_add_label(rules_width/2, 16, "Rules");
+    ii.width = rules_width;
     //ii.width = 64;
     
     eloffset_y = content_start;
     
-    var mods_content_x = eloffset_x;
-    var gmmod_id, gmmod, gmmod_type, ii, list;
+    ii = gui_add_scroll_list2(0,0);
+    ii.width = rules_width;
+    ii.height = rules_height;
+    ii.centered = true;
     
-    // create lists for types
-    var gmmod_controls_types = ds_map_create();
-    count = ds_list_size(DB.gamemode_mod_type_list);
+    rules_scroll_list = ii.id;
     
-    for(i=0; i<count; i++)
-    {
-        gmmod_type = DB.gamemode_mod_type_list[| i];
-        gmmod_controls_types[? gmmod_type] = ds_list_create();
-    }
+    var count = DB.rule_categories.count;
+    var list = DB.rule_categories.list;
     
-    // split mods into lists
-    count = ds_list_size(DB.gamemode_mod_list);
-    
-    for(i=0; i<count; i++)
-    {
-        gmmod_id = DB.gamemode_mod_list[| i];
-        gmmod = DB.gamemode_mods[? gmmod_id];
-        gmmod_type = gmmod[? "type"];
-    
-        if(gmmod[? "public"])
-        {
-            if(is_undefined(gmmod_controls_types[? gmmod_type]))
-            {
-                gmmod_controls_types[? gmmod_type] = ds_list_create();
-            }
-            
-            ds_list_add(gmmod_controls_types[? gmmod_type], gmmod_id);
-            /*
-            if()
-            {
-                ds_list_add(gmmod_controls_types[? gmmod_type], "blank_space");
-            }
-            */
-        }
-    }
-    
-    // create controls
-    var type_count = ds_list_size(DB.gamemode_mod_type_list), type_i;
-    
-    for(type_i=0; type_i<type_count; type_i++)
-    {
-        gmmod_type = DB.gamemode_mod_type_list[| type_i];
-        list = gmmod_controls_types[? gmmod_type];
-        count = ds_list_size(list);
+    for (var index = 0; index < count; index++) {
+        var category = list[| index];
         
-        if(gmmod_type == "bool") {
-            mods_width = min(mod_column_count, ceil(count/2)) * mod_grid_unit;
-        }
-        
-        if(gmmod_type == "number") {
-            mod_dist = 2 * 56;
-        }
-    
-        for(i=0; i<count; i++)
-        {
-            gmmod_id = list[| i];
-            
-            if(gmmod_id != "blank_space")
-            {
-                ii = noone;
-        
-                if(gmmod_type == "bool")
-                {
-                    ii = gui_add_mod_boolbox(0, 0, gmmod_id, modifier_chb_size);
-
-                    ii.checkbox.user_clicked_script = mod_chb_user_click_script;
-                    ii.checkbox.onchange_script = schedule_play_summary_update;
-                    ii.checkbox.draw_unlocked_border = true;
-                }
-                else if(gmmod_type == "number")
-                {
-                    ii = gui_add_mod_numberbox(0, 0, gmmod_id, modifier_chb_size);
-
-                    ii.checkbox.user_clicked_script = mod_chb_user_click_script;
-                    ii.checkbox.onchange_script = number_mod_change_state_script;
-                    ii.checkbox.draw_unlocked_border = true;
-                    
-                    ii.number_input.onchange_script = number_mod_change_value_script;
-                }
-            
-                gmmod_controls[? gmmod_id] = ii;
-            }
-            
-            eloffset_x += mod_dist;
-            
-            if(eloffset_x > (mods_content_x + mods_width - mod_dist + hor_spacing))
-            {
-                eloffset_x = mods_content_x;
-                eloffset_y += mod_grid_unit + vert_spacing;
-            }
-        }
-    
-        eloffset_x = mods_content_x;
-        eloffset_y += mod_grid_unit + vert_spacing;
+        gui_add_rules_category_pane(category, gmmod_controls);
     }
-    
-    // destroy gmmod_controls_types
-    count = ds_list_size(DB.gamemode_mod_type_list);
-    
-    for(i=0; i<count; i++)
-    {
-        gmmod_type = DB.gamemode_mod_type_list[| i];
-        list = gmmod_controls_types[? gmmod_type];
-        ds_list_destroy(list);
-    }
-    
-    ds_map_destroy(gmmod_controls_types);
 }
 
 add_frame(mod_tooltip_window);
