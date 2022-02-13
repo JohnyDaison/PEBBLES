@@ -1,14 +1,14 @@
 function mods_controls_update() {
     // UPDATE MODS CONTROLS
-    var gm_pane = play_menu_window.gamemode_pane;
-    var gm = DB.gamemodes[? gm_pane.gamemode_picker.cur_item_id];
+    var play_window = play_menu_window;
+    var gm = DB.gamemodes[? play_window.gamemode_picker.cur_item_id];
     
     if(!is_undefined(gm))
     {
-        with(gm_pane)
+        with(play_window)
         {
             var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"];
-            var custom_mods = gm_pane.gmmod_customs;
+            var custom_mods = gmmod_customs;
             var default_map, forced_map, place, default_mods_place, forced_mods_place;
             var mod_controls = gmmod_controls;
             var mod_id, mod_control, dmod, fmod, gmmod;

@@ -1,7 +1,5 @@
 function play_summary_update() {
-    var pane = play_menu_window.gamemode_pane;
-
-    with(pane)
+    with(play_menu_window)
     {
         var gamemode_text = "", place_text = "";
 

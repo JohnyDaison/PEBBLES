@@ -1,11 +1,11 @@
 function gamemode_picker_script() {
-    var gm_pane = play_menu_window.gamemode_pane;
-    var gm = DB.gamemodes[? gm_pane.gamemode_picker.cur_item_id], i, count, place;
+    var play_window = play_menu_window;
+    var gm = DB.gamemodes[? play_window.gamemode_picker.cur_item_id], i, count, place;
 
     if(!is_undefined(gm))
     {
         // GAMEMODE PANE
-        with(gm_pane)
+        with(play_window)
         {
             // UPDATE WORLD
             if(play_menu_window.world == noone || play_menu_window.world.object_index != gm[? "world"])

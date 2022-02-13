@@ -1,9 +1,9 @@
 function play_menu_window_next_step() {
-    var gm_pane = play_menu_window.gamemode_pane;
+    var play_window = play_menu_window;
     var world = play_menu_window.world;
 
     // GAMEMODE AND WORLD
-    var gm_id = gm_pane.gamemode_picker.cur_item_id;
+    var gm_id = play_window.gamemode_picker.cur_item_id;
     var gm = DB.gamemodes[? gm_id];
 
     // GAMEMODE
@@ -27,7 +27,7 @@ function play_menu_window_next_step() {
     }
 
     // WORLD
-    world.current_place = world.places[| gm_pane.place_picker.cur_item];
+    world.current_place = world.places[| play_window.place_picker.cur_item];
     gamemode.world = world;
 
     gamemode.arena_name = world.current_place.name;
@@ -37,14 +37,14 @@ function play_menu_window_next_step() {
 
     if(gamemode.is_campaign)
     {
-        gamemode.tournament_length = ds_list_size(world.places) - gm_pane.place_picker.cur_item;
+        gamemode.tournament_length = ds_list_size(world.places) - play_window.place_picker.cur_item;
     }
 
     gamemode.matches_remaining = gamemode.tournament_length;
     gamemode.random_place_order = false;
 
     // MODS
-    ds_map_copy(gamemode.custom_mods, gm_pane.gmmod_customs);
+    ds_map_copy(gamemode.custom_mods, play_window.gmmod_customs);
     mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
 
 
