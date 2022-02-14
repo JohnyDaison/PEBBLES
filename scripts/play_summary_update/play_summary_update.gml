@@ -28,19 +28,11 @@ function play_summary_update() {
             
             
             // LIMITS
-            var limits_text = "", gm_limits = gm[? "limits"], limit_id, limit_index;
+            var limits_text = "";
         
-            for(limit_index = 0; limit_index < DB.limit_count; limit_index++)
-            {
-                limit_id = DB.limit_ids[| limit_index];
-        
-                if(!is_undefined(gm_limits[? limit_id]))
-                {
-                    if(limit_id == "score")
-                    {
-                        limits_text += "Score to win: " + string(gm_limits[? limit_id]) + "\n";
-                    }
-                }
+            var score_limit = gmmod_controls[? "score_limit"].get_value();
+            if (is_number(score_limit)) {
+                limits_text += "Score to win: " + string(score_limit) + "\n";
             }
         
             if(limits_text != "")

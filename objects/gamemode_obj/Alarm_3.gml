@@ -1,4 +1,7 @@
 /// @description  WIN MESSAGE
+if (!instance_exists(center_overlay)) {
+    exit;
+}
 
 if (!is_campaign) {
     center_overlay.message = "It's a draw!";

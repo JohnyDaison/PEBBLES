@@ -42,11 +42,6 @@ function test_level_script() {
         instance_create(0,0,gamemode_obj);
     
         gamemode_obj.arena_name = place_obj.name;
-        for(i=0;i<DB.limit_count;i+=1)
-        {
-            var limit_name = DB.limit_ids[| i];
-            gamemode_obj.limit_active[? limit_name] = false;
-        }
     
         with(editor_guy_spawner_obj)
         {

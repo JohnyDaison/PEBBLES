@@ -9,7 +9,7 @@ function create_gamemodes_DB() {
     
     rule_categories = new RuleCategoriesDB();
 
-    var gm, limits, forced_mods, default_mods;
+    var gm, forced_mods, default_mods;
 
     // MODS
 
@@ -93,12 +93,22 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "number", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below X %.");
     gamemode_number_mod_values("orbs_energy_min_lock", 100, 10, 100, 10);
+    
+    gamemode_mod_create("score_limit", "Score Limit", "number", true, score_limit_mod_icon, "The game will end if a player reaches X points.");
+    gamemode_number_mod_values("score_limit", 200, 1, 999, 1);
+    
+    gamemode_mod_create("time_limit", "Time Limit", "number", true, time_limit_mod_icon, "The game will end after X minutes.");
+    gamemode_number_mod_values("time_limit", 15, 1, 60, 1);
+    
+    gamemode_mod_create("sudden_death_start", "Sudden Death", "number", true, sudden_death_start_mod_icon, "Players won't respawn after X minutes pass.");
+    gamemode_number_mod_values("sudden_death_start", 10, 1, 30, 1);
 
 
     // RULE CATEGORIES (MOD CATEGORIES)
     
     var category = rule_categories.add("Death and HP");
-    ds_list_add(category.rule_list, "hp_death", "holographic_spawners", "base_crystals", "base_crystal_hp", "base_crystal_shield_power", "guy_shield_power", "death_limit");
+    ds_list_add(category.rule_list, "hp_death", "holographic_spawners", "base_crystals", "base_crystal_hp", "base_crystal_shield_power", "guy_shield_power",
+                                    "death_limit", "score_limit", "time_limit", "sudden_death_start");
     
     var category = rule_categories.add("Colors and Energy");
     ds_list_add(category.rule_list, "equal_colors", "dark_color", "base_colors_only", "bad_status_effects", "abilities", "dark_orb_energy_lock", "color_orbs_energy_lock", "orbs_energy_min_lock");
@@ -159,6 +169,9 @@ function create_gamemodes_DB() {
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
     forced_mods[? "death_limit"] = false;
+    forced_mods[? "score_limit"] = false;
+    forced_mods[? "time_limit"] = false;
+    forced_mods[? "sudden_death_start"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;
@@ -183,6 +196,9 @@ function create_gamemodes_DB() {
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
     forced_mods[? "death_limit"] = 1;
+    forced_mods[? "score_limit"] = false;
+    forced_mods[? "time_limit"] = false;
+    forced_mods[? "sudden_death_start"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "dark_color"] = true;
@@ -200,9 +216,6 @@ function create_gamemodes_DB() {
     gm[? "min_teams"] = 2;
     gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
-
-    limits = gm[? "limits"];
-    limits[? "score"] = 400;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "tut_guide"] = false;
@@ -225,6 +238,7 @@ function create_gamemodes_DB() {
     
     default_mods[? "base_crystal_hp"] = 10;
     default_mods[? "base_crystal_shield_power"] = 6;
+    default_mods[? "score_limit"] = 400;
 
 
     // Arcade match
@@ -235,9 +249,6 @@ function create_gamemodes_DB() {
     gm[? "min_teams"] = 2;
     gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
-
-    limits = gm[? "limits"];
-    limits[? "score"] = 200;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "turrets"] = false;
@@ -262,6 +273,7 @@ function create_gamemodes_DB() {
     default_mods[? "artifacts"] = true;
     
     default_mods[? "base_crystal_hp"] = 7;
+    default_mods[? "score_limit"] = 200;
 
 
     /*
@@ -271,9 +283,6 @@ function create_gamemodes_DB() {
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 2;
     gm[? "start_place_room"] = closed_quarters_arena;
-
-    limits = gm[? "limits"];
-    limits[? "score"] = 200;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "turrets"] = false;
@@ -289,6 +298,7 @@ function create_gamemodes_DB() {
     
     default_mods[? "base_crystal_hp"] = 5;
     default_mods[? "base_crystal_shield_power"] = 2;
+    default_mods[? "score_limit"] = 200;
     */
 
 
@@ -334,9 +344,6 @@ function create_gamemodes_DB() {
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
 
-    limits = gm[? "limits"];
-    limits[? "score"] = 10;
-
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "hp_death"] = false;
     forced_mods[? "base_crystals"] = false;
@@ -366,12 +373,13 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
+    forced_mods[? "flag_capture"] = false;    
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
     default_mods[? "death_limit"] = true;
+    default_mods[? "score_limit"] = 10;
     
     
     // Hoopball
@@ -385,9 +393,6 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
-
-    limits = gm[? "limits"];
-    limits[? "score"] = 10;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "hp_death"] = false;
@@ -423,10 +428,13 @@ function create_gamemodes_DB() {
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
     forced_mods[? "death_limit"] = false;
+    forced_mods[? "score_limit"] = true;
+    forced_mods[? "sudden_death_start"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
+    default_mods[? "score_limit"] = 10;
 
 
     /*
@@ -497,6 +505,9 @@ function create_gamemodes_DB() {
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
     forced_mods[? "death_limit"] = false;
+    forced_mods[? "score_limit"] = false;
+    forced_mods[? "time_limit"] = false;
+    forced_mods[? "sudden_death_start"] = false;
 
     default_mods = gm[? "default_modifiers"];
     default_mods[? "tut_guide"] = true;

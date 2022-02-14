@@ -11,8 +11,6 @@ for(var i = -1; i <= player_count; i++)
 }
 
 ds_map_destroy(players);
-ds_map_destroy(limits);
-ds_map_destroy(limit_active);
 ds_map_destroy(stats);
 ds_map_destroy(score_values);
 

@@ -8,7 +8,6 @@ function gamemode_create(str_id, name, is_campaign, world) {
     var gm = ds_map_create();
 
     gm[? "id"] = str_id;
-    gm[? "limits"] = ds_map_create();
     gm[? "default_modifiers"] = ds_map_create();
     gm[? "forced_modifiers"] = ds_map_create();
 

@@ -17,8 +17,8 @@
   "width": 32,
   "height": 32,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Unused",
+    "path": "texturegroups/Unused",
   },
   "swatchColours": [
     4278190335,
@@ -124,9 +124,9 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"920bc3c3-9109-4317-8784-c0b02f62ca9c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0977c3c7-3f97-4914-bb7c-2bde64ae14c9","path":"sprites/tutorials_modX_icon/tutorials_modX_icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,

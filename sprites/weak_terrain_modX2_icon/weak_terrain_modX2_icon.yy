@@ -17,8 +17,8 @@
   "width": 40,
   "height": 40,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Unused",
+    "path": "texturegroups/Unused",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -42,9 +42,9 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3215faf9-77fd-4e92-a225-77d0ca7e0fa6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98f66196-49fa-4bc3-8760-395f0db68515","path":"sprites/weak_terrain_modX2_icon/weak_terrain_modX2_icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,

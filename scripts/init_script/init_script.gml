@@ -53,25 +53,6 @@ function init_script() {
     DB.color_effects[? g_white] = DB.status_effects[? "heavy_shots"];
     DB.color_effects[? g_octarine] = DB.status_effects[? "shield_down"];
 
-    // LIMITS MAP
-    DB.limit_ids = ds_list_create();
-    DB.limit_values = ds_map_create();
-
-    DB.limit_ids[| 0] =  "score";
-    DB.limit_values[? 0] =  400;
-    DB.limit_ids[| 1] =  "kills";
-    DB.limit_values[? 1] =  20;
-    DB.limit_ids[| 2] =  "deaths";
-    DB.limit_values[? 2] =  20;
-    DB.limit_ids[| 3] =  "time";
-    DB.limit_values[? 3] =  15;
-    DB.limit_ids[| 4] =  "walls";
-    DB.limit_values[? 4] =  42;
-    DB.limit_ids[| 5] =  "sudden_death";
-    DB.limit_values[? 5] =  13;
-
-    DB.limit_count = ds_list_size(DB.limit_ids);
-
     // RESOLUTIONS
     DB.resolution_list = ds_list_create();
     ds_list_add(DB.resolution_list, "1280x720");

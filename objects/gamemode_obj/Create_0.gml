@@ -5,9 +5,7 @@ inited_player_count = 0;
 human_player_count = 0;
 last_human_player = 0;
 players = ds_map_create();
-limits = ds_map_create();
 stats = ds_map_create();
-arena = noone;
 arena_name = "";
 mode = "";
 name = "";
@@ -16,7 +14,6 @@ closed_welcome = false;
 match_started = false;
 created_gui = false;
 limit_reached = false;
-limit_active = ds_map_create();
 reached_limit_name = "";
 match_start_time = current_time;
 last_minute = current_minute;
@@ -51,13 +48,6 @@ pixelate_time = 1;
 
 time_window = noone;
 battlefeed = noone;
-
-limits[? "score"] = 0;
-limits[? "kills"] = 0;
-limits[? "deaths"] = 0;
-limits[? "time"] = 0;
-limits[? "walls"] = 0;
-limits[? "mobs_killed"] = 0;
 
 init_match_stats();
 

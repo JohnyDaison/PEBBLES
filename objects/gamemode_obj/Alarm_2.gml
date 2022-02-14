@@ -71,7 +71,7 @@ if(player_count > 0)
                 
             if(team_member_defeat_count == team_member_count)
             {
-                team_defeat_count++;   
+                team_defeat_count++;
             }
         }
     }
@@ -80,72 +80,46 @@ if(player_count > 0)
 // LIMITS
 if(!limit_reached)
 {
-    // STAT BASED LIMITS
-    for(i=0; i<DB.limit_count && !limit_reached; i++)
-    {
-        var limit_name = DB.limit_ids[| i];
-        if(limit_active[? limit_name])
-        {
-            limit_value = limits[? limit_name];
-            
-            //show_debug_message("limit: "+string(limit_name));
-            //show_debug_message("player_count: "+string(player_count));
-            
-            switch(limit_name)
+    var time_started = instance_exists(time_window) && instance_exists(time_window.time);
+    
+    if (time_started) {
+        var limit_value;
+    
+        limit_value = mod_get_state("score_limit");
+    
+        if (is_number(limit_value)) {
+            for(var player_number = 1; player_number <= player_count; player_number++)
             {
-                case("score"):
-                case("kills"):
-                case("deaths"):
-                
-                    for(ii=1;ii<=player_count;ii+=1)
-                    {
-                        player = players[? ii];
-                        if(player.stats[? limit_name] >= limit_value)
-                        {
-                            limit_reached = true;
-                        }
-                    }
-                
-                break;
-                
-                case("time"):
-                
-                    time_limit = limit_value*60;
-                    if((current_time-match_start_time) > time_limit*1000)
-                    {
-                        limit_reached = true;
-                    }
-                
-                break;
-                
-                case("walls"):
-                
-                    if(ds_map_find_value(stats,"terrain_destroyed") >= limit_value)
-                    {
-                        limit_reached = true;
-                    }
-                
-                break;
-                
-                case("sudden_death"):
-                    
-                    if((current_time-match_start_time) > limit_value*60000)
-                    {
-                        if(!sudden_death)
-                        {
-                            sudden_death = true;
-                            var overlay = add_frame(center_overlay);
-                            overlay.message = "Sudden Death";
-                            overlay.alarm[2] = 240;
-                        }
-                    }
-                
-                break;
+                player = players[? player_number];
+                if(player.stats[? "score"] >= limit_value)
+                {
+                    limit_reached = true;
+                    reached_limit_name = "score";
+                }
             }
-            
-            if(limit_reached && reached_limit_name == "")
+        }
+    
+        limit_value = mod_get_state("time_limit");
+    
+        if (is_number(limit_value)) {
+            time_limit = limit_value * 60;
+            if(time_window.time.total >= time_limit)
             {
-                reached_limit_name = limit_name;
+                limit_reached = true;
+                reached_limit_name = "time";
+            }
+        }
+    
+        limit_value = mod_get_state("sudden_death_start");
+    
+        if (is_number(limit_value)) {
+            var sudden_death_start = limit_value * 60;
+            if(!sudden_death && time_window.time.total >= sudden_death_start)
+            {
+                sudden_death = true;
+                var overlay = add_frame(center_overlay);
+                overlay.message = "Sudden Death";
+                overlay.alarm[2] = 240;
             }
         }
     }
@@ -169,7 +143,7 @@ if(!limit_reached)
         }
     }
     
-    alarm[2] = 60;
+    alarm[2] = 30;
 }
 else
 {
@@ -336,7 +310,7 @@ else
                     if(reached_limit_name == "score")
                     {
                          var win_score = string(winner.stats[? "score"]);
-                         center_overlay.message += " scored " + string(win_score) +" of " + string(limits[? "score"]);
+                         center_overlay.message += " scored " + string(win_score) +" of " + string(mod_get_state("score_limit"));
                     }
                     else
                     {
@@ -371,7 +345,7 @@ else
         // match length
         if(instance_exists(time_window) && instance_exists(time_window.time))
         {
-            var minutes = string(time_window.time.total div 60);    
+            var minutes = string(time_window.time.total div 60);
             var seconds = string(time_window.time.total mod 60);
             
             while(string_length(minutes) < 2)

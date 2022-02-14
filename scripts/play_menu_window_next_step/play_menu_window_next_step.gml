@@ -47,25 +47,6 @@ function play_menu_window_next_step() {
     ds_map_copy(gamemode.custom_mods, play_window.gmmod_customs);
     mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
 
-
-    // LIMITS
-    var i, limit_id, gm_limits = gm[? "limits"];
-
-    for(i=0; i<DB.limit_count; i++)
-    {
-        limit_id = DB.limit_ids[| i];
-        
-        if(!is_undefined(gm_limits[? limit_id]))
-        {
-            gamemode.limit_active[? limit_id] = true;
-            gamemode.limits[? limit_id] = gm_limits[? limit_id];
-        }
-        else
-        {
-            gamemode.limit_active[? limit_id] = false;
-        }
-    }
-
     close_frame(mod_tooltip_window);
     close_frame(play_menu_window);
 

@@ -27,8 +27,6 @@ ds_list_destroy(arena_names);
 */
 ds_map_destroy(abimap);
 ds_map_destroy(abi_icons);
-ds_list_destroy(limit_ids);
-ds_map_destroy(limit_values);
 ds_list_destroy(resolution_list);
 
 ds_map_destroy(orb_regen_speeds);
