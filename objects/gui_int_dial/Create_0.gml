@@ -12,6 +12,7 @@ self.min_value = -self.max_value;
 self.is_int_input = false;
 self.is_percent = false;
 self.value_step = 1;
+self.custom_width = false;
 
 set_value = function(new_value) {
     if(is_undefined(new_value)) {

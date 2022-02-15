@@ -1,4 +1,6 @@
-self.width = max_digits*digit_width;
+if (!self.custom_width) {
+    self.width = max_digits * digit_width;
+}
 
 if(self.is_int_input)
 {
