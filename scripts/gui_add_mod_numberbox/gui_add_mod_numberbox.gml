@@ -4,7 +4,7 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
     var pane = gui_add_pane(0, 0, "");
     
     with(pane) {
-        var spacing = 8;
+        var spacing = 9;
         eloffset_x = x + spacing;
         eloffset_y = y + spacing;
         
@@ -20,7 +20,6 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
         number_input.gmmod_id = gmmod_id;
         number_input.custom_width = true;
         number_input.width = size;
-        number_input.height = size;
         number_input.draw_thick_border = true;
         number_input.thick_border_size = checkbox.thick_border_size;
         number_input.base_bg_color = checkbox.checked_bg_color;
@@ -73,10 +72,18 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
                 draw_bg_color = true;
             }
             
+            number_input.base_border_color = checkbox.border_color;
+            number_input.disabled_border_color = checkbox.border_color;
+            
             if (forced && value_is_bool) {
                 var gmmod = DB.gamemode_mods[? gmmod_id];
                 if (!value || (value && get_value() == gmmod[? "default_value"])) {
                     draw_bg_color = false;
+                }
+                
+                if (value) {
+                    number_input.base_border_color = checkbox.unlocked_border_color;
+                    number_input.disabled_border_color = checkbox.unlocked_border_color;   
                 }
                 
                 if (!play_menu_window.show_hidden_rules && !value) {
@@ -86,6 +93,11 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             
             if (forced && value_is_number) {
                 draw_bg_color = false;
+                
+                with (number_input) {
+                    dial.bg_color = dial.base_bg_color;
+                    dial.disabled_color = self.base_bg_color;
+                }
             }
             
             if (checkbox.checked) {
@@ -95,9 +107,6 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             if (forced && (value_is_number || value == false)) {
                 number_input.locked = true;
             }
-            
-            number_input.base_border_color = checkbox.border_color;
-            number_input.disabled_border_color = checkbox.border_color;
         }
     
         reset_value = function() {
@@ -116,6 +125,17 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             
             number_input.base_border_color = checkbox.border_color;
             number_input.disabled_border_color = checkbox.border_color;
+            
+            with (number_input) {
+                dial.base_bg_color = self.base_bg_color;
+                dial.disabled_color = self.disabled_color;
+                
+                if (locked) {
+                    dial.bg_color = dial.disabled_color;
+                } else {
+                    dial.bg_color = dial.base_bg_color;
+                }
+            }
         }
     }
 

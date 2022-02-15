@@ -72,6 +72,14 @@ if(enabled && visible)
         }
     }
     
+    if(focused && locked)
+    {
+        if((mouse_check_button_pressed(mb_left) && mouse_over) || DB.gui_controls[# confirm, pressed])
+        {
+            my_sound_play(nope_sound);
+        }
+    }
+    
     if(!focused)
     {
         if(!sticky)
@@ -125,6 +133,11 @@ else
         self.text_color = self.base_text_color;
         self.bg_color = self.disabled_color;
         self.border_color = self.disabled_border_color;
+        
+        if(cursor_obj.focus == id && mouse_check_button_pressed(mb_left))
+        {
+            my_sound_play(nope_sound);
+        }
     }
     self.active = false;
     if(!sticky)

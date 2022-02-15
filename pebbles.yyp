@@ -691,6 +691,7 @@
     {"id":{"name":"turret_mount_spr","path":"sprites/turret_mount_spr/turret_mount_spr.yy",},"order":1,},
     {"id":{"name":"turret_mount3_base_spr","path":"sprites/turret_mount3_base_spr/turret_mount3_base_spr.yy",},"order":2,},
     {"id":{"name":"beam_turret_base_spr","path":"sprites/beam_turret_base_spr/beam_turret_base_spr.yy",},"order":3,},
+    {"id":{"name":"nope_sound","path":"sounds/nope_sound/nope_sound.yy",},"order":20,},
     {"id":{"name":"beam_turret_spr","path":"sprites/beam_turret_spr/beam_turret_spr.yy",},"order":4,},
     {"id":{"name":"turret_mount2_base_spr","path":"sprites/turret_mount2_base_spr/turret_mount2_base_spr.yy",},"order":5,},
     {"id":{"name":"turret_mount2_spr","path":"sprites/turret_mount2_spr/turret_mount2_spr.yy",},"order":6,},

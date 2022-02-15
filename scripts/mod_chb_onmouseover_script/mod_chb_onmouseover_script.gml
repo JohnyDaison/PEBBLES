@@ -13,15 +13,11 @@ function mod_chb_onmouseover_script() {
     icon_label.bg_color = checked_bg_color;
 
     name_label.text = gmmod[? "name"];
-    switch(gmmod[? "type"])
-    {
-        case "bool":
-            if(checked)
-                state_str = "(On)";
-            else
-                state_str = "(Off)";
-            break;
-    }
+    
+    if(checked)
+        state_str = "(On)";
+    else
+        state_str = "(Off)";
 
     if(state_str != "")
     {

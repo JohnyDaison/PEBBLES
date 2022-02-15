@@ -1,4 +1,4 @@
-function gui_add_rules_category_pane(category, gmrule_controls) {
+function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) {
     var pane = rules_scroll_list.add_item();
     with (pane) {
         bg_color = c_black;
@@ -13,7 +13,6 @@ function gui_add_rules_category_pane(category, gmrule_controls) {
         eloffset_y = y + heading_height + vert_spacing;
         
         var rule_chb_size = 40;
-        var rule_grid_unit = 56;
         var rule_dist = rule_grid_unit;
         var rules_width = width;
 
@@ -30,11 +29,11 @@ function gui_add_rules_category_pane(category, gmrule_controls) {
             gmrule_type = gmrule[? "type"];
             
             if(gmrule_type == "bool") {
-                rule_dist = 56;
+                rule_dist = rule_grid_unit;
             }
         
             if(gmrule_type == "number") {
-                rule_dist = 2 * 56;
+                rule_dist = 2 * rule_grid_unit;
             }
             
             if((eloffset_x + rule_dist) > (rules_content_x + rules_width))

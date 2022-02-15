@@ -2,7 +2,7 @@ function gui_add_mod_boolbox(xx, yy, gmmod_id, size) {
     var pane = gui_add_pane(0, 0, "");
     
     with(pane) {
-        var spacing = 8;
+        var spacing = 9;
         eloffset_x = x + spacing;
         eloffset_y = y + spacing;
         

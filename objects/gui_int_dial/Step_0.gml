@@ -49,7 +49,7 @@ if(visible)
                 }
                 self.active = !self.active;
                 self.depressed = self.active;
-                my_sound_play(click_sound);    
+                my_sound_play(click_sound);
             }
         
             if(self.active)
@@ -132,5 +132,10 @@ if(visible)
         self.text_color = self.base_text_color;
         self.bg_color = self.disabled_color;
         self.border_color = self.disabled_border_color;
+        
+        if(cursor_obj.focus == id && mouse_check_button_pressed(mb_left))
+        {
+            my_sound_play(nope_sound);
+        }
     }
 }

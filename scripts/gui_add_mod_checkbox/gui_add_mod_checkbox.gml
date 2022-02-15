@@ -32,7 +32,7 @@ function gui_add_mod_checkbox() {
     ii.unchecked_icon_color = c_dkgray;
     ii.checked_bg_color = merge_color(c_black, c_white, 0.98);
     ii.center_icon = true;
-    ii.thick_border_size = 3;
+    ii.thick_border_size = 4;
 
     ii.centered = true;
     ii.onmouseover_script = mod_chb_onmouseover_script;
