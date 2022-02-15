@@ -103,7 +103,7 @@ function update_display() {
         {
             if(gamemode_obj.player_count > 2 && gamemode_obj.human_player_count > 2)
             {
-                player_port_height /= 2;   
+                player_port_height /= 2;
             }
         }
     
@@ -149,7 +149,7 @@ function update_display() {
     
         if(singleton_obj.scale_up_gui)
         {
-            if(!instance_exists(gamemode_obj) || room == pausemenu || room == match_summary)
+            if(!instance_exists(gamemode_obj) || room == mainmenu || room == pausemenu || room == match_summary)
             {
                 view_wport[0] = 1280;
                 view_hport[0] = 720;
@@ -157,7 +157,4 @@ function update_display() {
         }
     
     }
-
-
-
 }

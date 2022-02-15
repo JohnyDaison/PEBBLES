@@ -13,7 +13,7 @@ self.modal = true;
 heading = 48;
 pane_heading = 32;
 row_height = 32;
-spacing = 12;
+side_spacing = 12;
 col_thin = 32;
 col_number = 80;
 col_label = 128;
@@ -40,7 +40,8 @@ with(score_pane)
     
     heading = other.pane_heading;
     row_height = other.row_height;
-    spacing = other.spacing;
+    side_spacing = other.side_spacing;
+    spacing = 12;
     col_thin = other.col_thin;
     col_label = other.col_label;
     col_wide = other.col_wide;
@@ -48,7 +49,7 @@ with(score_pane)
     var player_num = gamemode_obj.player_count;
         
     // column labels
-    eloffset_x = x + spacing;
+    eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
     
     // rows
@@ -113,7 +114,7 @@ with(plstats_pane)
     
     heading = other.pane_heading;
     row_height = other.row_height;
-    side_spacing = 8;
+    side_spacing = other.side_spacing;
     spacing = 1;
     col_thin = other.col_thin;
     col_label = other.col_label;
@@ -217,25 +218,6 @@ with(plstats_pane)
             }
         }
     }
-    
-    // ARROWS
-    self.up_arrow = gui_add_button(4,0,"",gui_list_picker_script,true);
-    up_arrow.width = 27;
-    up_arrow.height = 27;
-    up_arrow.icon = small_nice_up_arrow_spr;
-    up_arrow.show_icon = true; 
-    up_arrow.center_icon = true;
-    up_arrow.button_function = "up";
-    up_arrow.centered = true;
-    
-    self.down_arrow = gui_add_button(4,scroll_list.height-27,"",gui_list_picker_script,true);
-    down_arrow.width = 27;
-    down_arrow.height = 27;
-    down_arrow.icon = small_nice_down_arrow_spr;
-    down_arrow.show_icon = true;
-    down_arrow.center_icon = true;
-    down_arrow.button_function = "down";
-    down_arrow.centered = true;
 }
 
 //eloffset_y += 164;
@@ -255,7 +237,7 @@ with(match_pane)
     centered = true;
     heading = other.pane_heading;
     row_height = other.row_height;
-    side_spacing = 8;
+    side_spacing = other.side_spacing;
     spacing = 1;
     col_thin = other.col_thin;
     col_label = other.col_label;
@@ -266,7 +248,7 @@ with(match_pane)
     max_items = floor((table_height-32)/32);
   
     // MATCH SCROLL LISTS
-    eloffset_x = x;
+    eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
     
     scroll_group = gui_child_init(0,0,gui_scroll_group);
@@ -285,7 +267,7 @@ with(match_pane)
      
     //VALUES
     ii = gui_add_scroll_list(0,0);
-    ii.width = col_number;
+    ii.width = col_number + ii.bar_width;
     ii.height = table_height;
     ii.max_items = max_items;
     ii.centered = true;
@@ -317,25 +299,6 @@ with(match_pane)
         
         frame_manager.window_log_str += "\n";
     }
-    
-    // MATCH ARROWS
-    self.up_arrow = gui_add_button(4,0,"",gui_list_picker_script,true);
-    up_arrow.width = 27;
-    up_arrow.height = 27;
-    up_arrow.icon = small_nice_up_arrow_spr;
-    up_arrow.show_icon = true;
-    up_arrow.center_icon = true;
-    up_arrow.button_function = "up";
-    up_arrow.centered = true;
-    
-    self.down_arrow = gui_add_button(4,scroll_list.height-27,"",gui_list_picker_script,true);
-    down_arrow.width = 27;
-    down_arrow.height = 27;
-    down_arrow.icon = small_nice_down_arrow_spr;
-    down_arrow.show_icon = true;
-    down_arrow.center_icon = true;
-    down_arrow.button_function = "down";
-    down_arrow.centered = true;
 }
 
 // BUTTONS
@@ -368,23 +331,8 @@ ii.base_text_color = c_white;
 
 eloffset_y += 48;
 
-// MAIN MENU 
-
-/*
-ii = gui_add_button(16,16, "Main Menu", goto_mainmenu);
-//ii.icon = big_tick_spr;
-//ii.show_icon = true;
-//ii.center_icon = true;
-ii.enabled = false;
-ok_button = ii.id;
-
-frame_manager.window_log_str += "\n";
-*/
-
+// PLAY MENU
 ii = gui_add_button(16,16, "Back", goto_playmenu);
-//ii.icon = big_tick_spr;
-//ii.show_icon = true;
-//ii.center_icon = true;
 ii.enabled = false;
 ok_button = ii.id;
 
@@ -404,7 +352,7 @@ with(awards_pane)
     centered = true;
     heading = other.pane_heading;
     row_height = other.row_height;
-    spacing = other.spacing;
+    side_spacing = other.side_spacing;
     col_thin = other.col_thin;
     col_label = other.col_label;
     col_wide = other.col_wide;
@@ -413,12 +361,12 @@ with(awards_pane)
     table_height = height - heading;
     max_items = floor((table_height-32)/32);
     
-    eloffset_x = x;
+    eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
     
     // AWARDS LABELS
     ii = gui_add_scroll_list(0,0);
-    ii.width = width-32;
+    ii.width = width - 2 * side_spacing;
     ii.height = table_height;
     ii.max_items = max_items;
     ii.centered = true;
@@ -442,25 +390,6 @@ with(awards_pane)
             }
         }
     }
-    
-    // AWARDS ARROWS
-    self.up_arrow = gui_add_button(4,0, "",gui_list_picker_script,true);
-    up_arrow.width = 27;
-    up_arrow.height = 27;
-    up_arrow.icon = small_nice_up_arrow_spr;
-    up_arrow.show_icon = true;
-    up_arrow.center_icon = true;
-    up_arrow.button_function = "up";
-    up_arrow.centered = true;
-    
-    self.down_arrow = gui_add_button(4,scroll_list.height-27, "",gui_list_picker_script,true);
-    down_arrow.width = 27;
-    down_arrow.height = 27;
-    down_arrow.icon = small_nice_down_arrow_spr;
-    down_arrow.show_icon = true;
-    down_arrow.center_icon = true;
-    down_arrow.button_function = "down";
-    down_arrow.centered = true;
 }
 
 
