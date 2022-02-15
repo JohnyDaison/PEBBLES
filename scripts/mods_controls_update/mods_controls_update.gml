@@ -31,31 +31,7 @@ function mods_controls_update() {
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? mod_id];
-                    
-                    mod_control.bg_color = mod_control.default_bg_color;
-                    
-                    if(gmmod[? "type"] == "bool")
-                    {
-                        with(mod_control.checkbox)
-                        {
-                            locked = false;
-                            gui_checkbox_script(false);
-                        }
-                    } 
-                    else if(gmmod[? "type"] == "number")
-                    {
-                        with(mod_control)
-                        {
-                            with(checkbox) {
-                                locked = false;
-                                gui_checkbox_script(false);
-                            }
-                            
-                            number_input.locked = true;
-                            number_input.set_value(gmmod[? "default_value"], true);
-                        }
-                    }
-                    
+                    mod_control.reset_value();
                 }
             
                 mod_id = ds_map_find_next(mod_controls, mod_id);
@@ -89,37 +65,7 @@ function mods_controls_update() {
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? dmod];
-                    
-                    if(gmmod[? "type"] == "bool")
-                    {
-                        with(mod_control.checkbox)
-                        {
-                            gui_checkbox_script(default_map[? dmod]);
-                        }
-                    }
-                    else if(gmmod[? "type"] == "number")
-                    {
-                        with(mod_control)
-                        {
-                            var default_value = default_map[? dmod];
-                            var value_is_number = is_number(default_value);
-                            
-                            with(checkbox) {
-                                if (is_bool(default_value)) {
-                                    gui_checkbox_script(default_value);
-                                } else {
-                                    gui_checkbox_script(true);
-                                }
-                            }
-                            
-                            if (value_is_number) {
-                                number_input.set_value(default_value, true);
-                            }
-                            if (checkbox.checked) {
-                                number_input.locked = false;
-                            }
-                        }
-                    }
+                    mod_control.set_value(default_map[? dmod], false, false);
                 }
             
                 dmod = ds_map_find_next(default_map, dmod);
@@ -136,10 +82,7 @@ function mods_controls_update() {
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? mod_id];
-                    
-                    with(mod_control) {
-                        self.default_value = self.get_value();
-                    }
+                    mod_control.default_value = mod_control.get_value();
                 }
                 
                 mod_id = ds_map_find_next(mod_controls, mod_id);
@@ -156,41 +99,7 @@ function mods_controls_update() {
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? mod_id];
-                    
-                    if(gmmod[? "type"] == "bool")
-                    {
-                        with(mod_control.checkbox)
-                        {
-                            gui_checkbox_script(custom_mods[? mod_id]);
-                        }
-                    }
-                    else if(gmmod[? "type"] == "number")
-                    {
-                        with(mod_control)
-                        {
-                            var custom_value = custom_mods[? mod_id];
-                            var value_is_number = is_number(custom_value);
-                            
-                            with(checkbox) {
-                                if (is_bool(custom_value)) {
-                                    gui_checkbox_script(custom_value);
-                                } else {
-                                    gui_checkbox_script(true);
-                                }
-                            }
-                            
-                            if (value_is_number) {
-                                number_input.set_value(custom_value, true);
-                            }
-                            if (checkbox.checked) {
-                                number_input.locked = false;
-                            }
-                        }
-                    }
-                    
-                    if (mod_control.get_value() != mod_control.default_value) {
-                        mod_control.bg_color = mod_control.customized_bg_color;
-                    }
+                    mod_control.set_value(custom_mods[? mod_id], true, false);
                 }
             
                 mod_id = ds_map_find_next(custom_mods, mod_id);
@@ -214,6 +123,7 @@ function mods_controls_update() {
                 }
             }
         
+            // apply result
             fmod = ds_map_find_first(forced_map);
         
             while(!is_undefined(fmod))
@@ -223,48 +133,7 @@ function mods_controls_update() {
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? fmod];
-                    
-                    if(gmmod[? "type"] == "bool")
-                    {
-                        with(mod_control.checkbox)
-                        {
-                            locked = true;
-                            gui_checkbox_script(forced_map[? fmod]);
-                        }
-                        
-                        mod_control.bg_color = mod_control.default_bg_color;
-                    }
-                    else if(gmmod[? "type"] == "number")
-                    {
-                        with(mod_control)
-                        {
-                            var forced_value = forced_map[? fmod];
-                            var value_is_number = is_number(forced_value);
-                            
-                            with(checkbox) {
-                                locked = true;
-                                if (is_bool(forced_value)) {
-                                    gui_checkbox_script(forced_value);
-                                } else {
-                                    gui_checkbox_script(true);
-                                }
-                            }
-                            
-                            if (is_bool(forced_value)) {
-                                if (!forced_value || (forced_value && get_value() == gmmod[? "default_value"])) {
-                                    bg_color = default_bg_color;
-                                }
-                            }
-                            
-                            if (value_is_number) {
-                                number_input.set_value(forced_value, true);
-                                bg_color = default_bg_color;
-                            }
-                            if (value_is_number || forced_value == false) {
-                                number_input.locked = true;
-                            }
-                        }
-                    }
+                    mod_control.set_value(forced_map[? fmod], false, true);
                 }
             
                 fmod = ds_map_find_next(forced_map, fmod);

@@ -16,11 +16,39 @@ function gui_add_mod_boolbox(xx, yy, gmmod_id, size) {
         width = checkbox.width + 2 * spacing;
         height = checkbox.height + 2 * spacing;
         centered = true;
-    }
     
-    pane.get_value = method(pane, function() {
-        return checkbox.get_value();
-    });
+        get_value = function() {
+            return checkbox.get_value();
+        }
+        
+        set_value = function(value, custom, forced) {
+            with(checkbox)
+            {
+                if (forced) {
+                    locked = true;
+                }
+                gui_checkbox_script(value);
+            }
+            
+            if (custom && get_value() != default_value) {
+                bg_color = customized_bg_color;
+            }
+            
+            if (forced) {
+                bg_color = default_bg_color;
+            }
+        }
+        
+        reset_value = function() {
+            bg_color = default_bg_color;
+            
+            with(checkbox)
+            {
+                locked = false;
+                gui_checkbox_script(false);
+            }
+        }
+    }
 
     return pane;
 }
