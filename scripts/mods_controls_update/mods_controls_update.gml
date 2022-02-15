@@ -73,7 +73,7 @@ function mods_controls_update() {
         
             ds_map_destroy(default_map);
         
-            // set default value on number mod controls
+            // set default value on mod controls
             mod_id = ds_map_find_first(mod_controls);
             while(!is_undefined(mod_id))
             {   

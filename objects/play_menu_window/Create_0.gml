@@ -23,6 +23,8 @@ place_ids = ds_list_create();
 gmmod_controls = ds_map_create();
 gmmod_customs = ds_map_create();
 
+show_hidden_rules = false;
+
 gamemode_description_list = ds_list_create();
 place_description_list = ds_list_create();
 
@@ -151,17 +153,51 @@ for (var index = 0; index < count; index++) {
 
 add_frame(mod_tooltip_window);
 
-eloffset_x = width - 224;
-eloffset_y = height - 56;
+eloffset_x = width;
+eloffset_y = height;
 
-ii = gui_add_button(0, vert_spacing, "Back", goto_mainmenu);
-ii.width = 96;
-ii.centered = true;
+var button_pane = gui_add_pane(0, 0, "");
 
-ii = gui_add_button(112, vert_spacing, "Next", play_menu_window_next_step);
-ii.width = 96;
-ii.centered = true;
-ii.base_bg_color = select_color;
+with (button_pane) {
+    eloffset_x = x + hor_spacing;
+    eloffset_y = y;
+    height = 32 + 2 * vert_spacing;
+    draw_bg_color = true;
+    centered = true;
+    
+    rules_checkbox = gui_add_checkbox(12, height/2, play_menu_window.show_hidden_rules);
+    with (rules_checkbox) {
+        onchange_function = function() {
+            play_menu_window.show_hidden_rules = checked;
+            mods_controls_update();
+        }
+    }
+    
+    eloffset_x += rules_checkbox.width + hor_spacing * 0.5;
+    
+    ii = gui_add_label(0, vert_spacing, "Show Hidden Rules");
+    ii.width = 196;
+    ii.centered = true;
+    
+    eloffset_x += ii.width + hor_spacing * 1.5;
+    
+    ii = gui_add_button(0, vert_spacing, "Back", goto_mainmenu);
+    ii.width = 96;
+    ii.centered = true;
+
+    eloffset_x += ii.width + hor_spacing;
+
+    ii = gui_add_button(0, vert_spacing, "Next", play_menu_window_next_step);
+    ii.width = 96;
+    ii.centered = true;
+    ii.base_bg_color = select_color;
+    
+    eloffset_x += ii.width + hor_spacing;
+    
+    width = eloffset_x - x;
+}
+
+gui_move_element(button_pane, button_pane.x - button_pane.width - hor_spacing, button_pane.y - button_pane.height - vert_spacing);
 
 // DESTROY ELEPHANT
 if(instance_exists(menu_elephant_obj))

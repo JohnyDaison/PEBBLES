@@ -28,7 +28,7 @@ if(enabled && visible)
             gui_lose_focus();
             cursor_obj.tooltip = "";
         }
-        mouse_over = false;  
+        mouse_over = false;
     }
     
     if(focused && !locked)
@@ -66,7 +66,7 @@ if(enabled && visible)
             }
             if(!sticky)
             {
-                self.depressed = false;      
+                self.depressed = false;
             }
             
         }
@@ -141,9 +141,12 @@ else
     {
         if(mouse_over)
         { 
+            if(self.onmouseleave_script != noone)
+                script_execute(self.onmouseleave_script);
+            gui_lose_focus();
             cursor_obj.tooltip = "";
         }
-        mouse_over = false;  
+        mouse_over = false;
     }
 }
 

@@ -13,6 +13,7 @@ self.custom_width = false;
 self.draw_thick_border = false;
 self.thick_border_size = 2;
 self.height = 32;
+self.base_bg_color = c_ltgray;
 
 self.dial = noone;
 self.minus_box = noone;

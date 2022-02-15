@@ -9,9 +9,9 @@ function gui_add_mod_boolbox(xx, yy, gmmod_id, size) {
         checkbox = gui_add_mod_checkbox(0, 0, gmmod_id, size);
         
         default_value = false;
-        default_bg_color = bg_color;
-        customized_bg_color = c_yellow;
-        bg_alpha = 0.3;
+        draw_bg_color = false;
+        bg_color = c_yellow;
+        bg_alpha = 0.8;
         
         width = checkbox.width + 2 * spacing;
         height = checkbox.height + 2 * spacing;
@@ -31,16 +31,21 @@ function gui_add_mod_boolbox(xx, yy, gmmod_id, size) {
             }
             
             if (custom && get_value() != default_value) {
-                bg_color = customized_bg_color;
+                draw_bg_color = true;
             }
             
             if (forced) {
-                bg_color = default_bg_color;
+                draw_bg_color = false;
+                
+                if (!play_menu_window.show_hidden_rules && !value) {
+                   gui_hide_element(id);
+                }
             }
         }
         
         reset_value = function() {
-            bg_color = default_bg_color;
+            draw_bg_color = false;
+            gui_show_element(id);
             
             with(checkbox)
             {

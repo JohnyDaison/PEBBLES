@@ -18,3 +18,6 @@ self.checked_icon_color = c_white;
 self.unchecked_icon_color = c_white;
 
 alarm[2] = 1;
+
+onchange_function = function() {
+}

@@ -11,21 +11,34 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
         self.gmmod_id = gmmod_id;
         
         checkbox = gui_add_mod_checkbox(0, 0, gmmod_id, size);
-        number_input = gui_add_int_input(checkbox.width + 30, checkbox.height / 2, gmmod[? "default_value"], gmmod[? "min_value"], gmmod[? "max_value"]);
+        
+        var num_x = checkbox.width + checkbox.thick_border_size + size / 2;
+        var num_y = checkbox.height / 2;
+        
+        number_input = gui_add_int_input(num_x, num_y, gmmod[? "default_value"], gmmod[? "min_value"], gmmod[? "max_value"]);
         number_input.value_step = gmmod[? "value_step"];
         number_input.gmmod_id = gmmod_id;
+        number_input.custom_width = true;
+        number_input.width = size;
+        number_input.height = size;
+        number_input.draw_thick_border = true;
+        number_input.thick_border_size = checkbox.thick_border_size;
+        number_input.base_bg_color = checkbox.checked_bg_color;
+        number_input.bg_color = number_input.base_bg_color;
+        number_input.disabled_color = checkbox.unchecked_bg_color;
+        
         
         default_value = false;
-        default_bg_color = bg_color;
-        customized_bg_color = c_yellow;
-        bg_alpha = 0.3;
+        draw_bg_color = false;
+        bg_color = c_yellow;
+        bg_alpha = 0.8;
         
         with (number_input) {
             event_perform(ev_alarm, 0);
             alarm[0] = -1;
         }
         
-        width = checkbox.width + number_input.width + 2.5 * spacing;
+        width = checkbox.width + checkbox.thick_border_size + number_input.width + 2 * spacing;
         height = checkbox.height + 2 * spacing;
         centered = true;
     
@@ -52,22 +65,27 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
                 }
             }
             
+            if (value_is_number) {
+                number_input.set_value(value, true);
+            }
+            
             if (custom && get_value() != default_value) {
-                bg_color = customized_bg_color;
+                draw_bg_color = true;
             }
             
             if (forced && value_is_bool) {
                 var gmmod = DB.gamemode_mods[? gmmod_id];
                 if (!value || (value && get_value() == gmmod[? "default_value"])) {
-                    bg_color = default_bg_color;
+                    draw_bg_color = false;
+                }
+                
+                if (!play_menu_window.show_hidden_rules && !value) {
+                   gui_hide_element(id);
                 }
             }
             
-            if (value_is_number) {
-                number_input.set_value(value, true);
-                if (forced) {
-                    bg_color = default_bg_color;
-                }
+            if (forced && value_is_number) {
+                draw_bg_color = false;
             }
             
             if (checkbox.checked) {
@@ -77,12 +95,16 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             if (forced && (value_is_number || value == false)) {
                 number_input.locked = true;
             }
+            
+            number_input.base_border_color = checkbox.border_color;
+            number_input.disabled_border_color = checkbox.border_color;
         }
     
         reset_value = function() {
             var gmmod = DB.gamemode_mods[? gmmod_id];
             
-            bg_color = default_bg_color;
+            draw_bg_color = false;
+            gui_show_element(id);
             
             with(checkbox) {
                 locked = false;
@@ -91,6 +113,9 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             
             number_input.locked = true;
             number_input.set_value(gmmod[? "default_value"], true);
+            
+            number_input.base_border_color = checkbox.border_color;
+            number_input.disabled_border_color = checkbox.border_color;
         }
     }
 

@@ -12,7 +12,12 @@ if(instance_exists(dial))
         dial.had_focus = false;
     }
     minus_box.enabled = (self.enabled && visible && min_value < 0);
-    minus_box.visible = visible && minus_box.enabled;
+    var minus_visible = visible && minus_box.enabled;
+    if (minus_visible) {
+        gui_show_element(minus_box);
+    } else {
+        gui_hide_element(minus_box);
+    }
     
     if(!dial.active)
     {

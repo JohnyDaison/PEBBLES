@@ -7,6 +7,8 @@ if(self.is_int_input)
     self.min_value = gui_parent.min_value;
     self.max_value = gui_parent.max_value;
     self.enabled = !gui_parent.locked;
+    self.base_border_color = gui_parent.base_border_color;
+    self.disabled_border_color = gui_parent.disabled_border_color;
 }
 
 if(visible)

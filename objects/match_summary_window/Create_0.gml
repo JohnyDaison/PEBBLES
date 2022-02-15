@@ -228,7 +228,7 @@ frame_manager.window_log_str += "\n";
 eloffset_x = x;
 eloffset_y = y + heading + score_pane.height+16;
 
-match_pane = gui_add_pane(16,0,"MATCH");
+match_pane = gui_add_pane(16,0,"MATCH STATS");
 match_pane.width = score_pane.width;
 match_pane.height = height - heading - score_pane.height - 16 - 64 - 52;
 

@@ -8,6 +8,9 @@ dial.custom_width = self.custom_width;
 dial.draw_thick_border = self.draw_thick_border;
 dial.thick_border_size = self.thick_border_size;
 dial.height = self.height;
+dial.base_bg_color = self.base_bg_color;
+dial.bg_color = dial.base_bg_color;
+dial.disabled_color = self.disabled_color;
 
 if (!self.custom_width) {
     dial.width = dial.max_digits * dial.digit_width;
