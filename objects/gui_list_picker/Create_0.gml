@@ -19,8 +19,6 @@ text_color = c_black;
 select_text_color = c_black;
 
 scroll_list = noone;
-up_arrow = noone;
-down_arrow = noone;
 
 alarm[0] = 2;
 

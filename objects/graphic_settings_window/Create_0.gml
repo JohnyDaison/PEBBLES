@@ -120,7 +120,7 @@ eloffset_y += 24;
 ii = gui_add_list_picker(0,0, "text", DB.resolution_list);
 ii.auto_items = true;
 ii.item_height = 36;
-ii.height = 176;
+ii.height = 5 * ii.item_height;
 resolution_picker = ii.id;
 
 

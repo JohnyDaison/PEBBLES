@@ -54,29 +54,10 @@ if(cur_item != -1)
     var items_center_x = items_start_x + self.main_width/2;
     var items_start_y = y + ends_height;
     
-    if(!is_list_picker)
-    {
-        if(first_item > 0)
-        {
-            draw_sprite_ext(centered_arrow_spr, 0,
-                            items_center_x,
-                            y + ends_height/2 + 3, 
-                            1, -1, 0, c_white, 1);
-        }
-        if(last_item < item_count-1)
-        {
-            draw_sprite_ext(centered_arrow_spr, 0,
-                            items_center_x,
-                            y + 1.5*ends_height - 2 + max_items*item_height,
-                            1, 1, 0, c_white, 1);
-        }
-    }
-    
-    
     show_count = last_item - first_item + 1;
     var cur, high, force_bg, base_color, over_color, final_text_color;
     
-    for(i = 0;i < show_count; i+=1)
+    for(var i = 0; i < show_count; i++)
     {
         // ITEM BG
         cur = (first_item+i == cur_item);

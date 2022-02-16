@@ -22,6 +22,7 @@ if(is_dropdown)
         item_click_script = gui_dropdown_script;
         item_height = 36;
         item_padding = 4;
+        ends_height = 2;
         width += bar_width;
         bar_bg_color = merge_color(c_gray, c_ltgray, 0.5);
     
@@ -34,6 +35,7 @@ else
 {
     scroll_list.item_height = 40;
     scroll_list.item_padding = 8;
+    scroll_list.ends_height = 0;
     
     scroll_list.auto_items = true;
 }
@@ -51,63 +53,5 @@ if(!is_undefined(item_padding))
 scroll_list.update_main_width();
 
 gui_reset_scroll_items(scroll_list, type, label_list);
-
-/*
-if(ds_exists(source_list, ds_type_list))
-{
-    if(type == "text")
-    {
-        ds_list_copy(scroll_list.items, source_list);
-        scroll_list.type = "text";
-    }
-    else if(type == "flag")
-    {
-        var i, count = ds_list_size(source_list);
-
-        for(i=0; i < count; i++)
-        {
-            scroll_list.items[| i] = DB.battlefeed_icon_map[? (source_list[| i])];
-        }
-        
-        scroll_list.type = "icon";
-    }
-}
-*/
-
-
-eloffset_x = x; //  + scroll_list.width + 8
-eloffset_y = y;
-
-
-self.up_arrow = gui_add_button(scroll_list.side_margin, 0, "", gui_list_picker_script, true);
-up_arrow.icon = small_nice_up_arrow_spr;
-up_arrow.button_function = "up";
-
-up_arrow.width = scroll_list.main_width;
-up_arrow.height = scroll_list.ends_height;
-up_arrow.show_icon = true; 
-up_arrow.center_icon = true;
-up_arrow.centered = true;
-up_arrow.depth -= 1;
-
-up_arrow.enabled_icon_color = up_arrow.base_bg_color;
-up_arrow.base_bg_color = merge_color(select_color, c_white, 0.5);
-
-
-self.down_arrow = gui_add_button(scroll_list.side_margin, scroll_list.height - scroll_list.ends_height,
-                                 "",gui_list_picker_script,true);
-down_arrow.icon = small_nice_down_arrow_spr;
-down_arrow.button_function = "down";
-
-down_arrow.width = scroll_list.main_width;
-down_arrow.height = scroll_list.ends_height;
-down_arrow.show_icon = true;
-down_arrow.center_icon = true;
-down_arrow.centered = true;
-down_arrow.depth -= 1;
-
-down_arrow.enabled_icon_color = down_arrow.base_bg_color;
-down_arrow.base_bg_color = merge_color(select_color, c_white, 0.5);
-
 
 gui_list_picker_update_script(id);

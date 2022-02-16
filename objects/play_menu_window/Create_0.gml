@@ -34,12 +34,12 @@ var heading_start = y + 2 * vert_spacing;
 var heading_bg_alpha = 0.25;
 var heading_bg_color = c_gray;
 var content_start = heading_start + 32 + vert_spacing;
-var picker_height = 352;
+var picker_height = 360;
 var gamemode_picker_width = 256;
 var level_picker_width = 280;
 
-var description_line_count = 13;
-var description_height = description_line_count * 20 + 32;
+var description_line_count = 14;
+var description_height = description_line_count * 20 + 8;
 var description_start = content_start + picker_height + vert_spacing;
 var rules_grid_unit = 58;
 var rules_column_count = 11;

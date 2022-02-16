@@ -56,6 +56,7 @@ i.alternate_lines = true;
 i.item_height = 32;
 i.bar_width = 16;
 i.item_padding = 0;
+i.ends_height = 16;
 i.highlight_color = merge_colour(c_black, c_purple, 0.5);
 i.select_color = merge_colour(c_black, c_lime, 0.5);
 i.max_items = visible_line_count;

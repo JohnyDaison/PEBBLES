@@ -23,7 +23,6 @@ function gui_list_picker_update_script() {
             if(auto_height)
             {
                 height = scroll_list.height;
-                down_arrow.y = y + height - scroll_list.ends_height;
             }
             
             if(auto_items)
@@ -44,19 +43,6 @@ function gui_list_picker_update_script() {
             if(force_change_script || last_cur_item != cur_item || last_cur_item_id == cur_item_id)
             {
                 script_execute(item_change_script);
-            }
-        
-            up_arrow.enabled = false;
-            down_arrow.enabled = false;
-        
-            if(scroll_list.cur_item > 0)
-            {
-                up_arrow.enabled = true;
-            }
-        
-            if(scroll_list.cur_item < scroll_list.item_count-1)
-            {
-                down_arrow.enabled = true;
             }
         }
     }

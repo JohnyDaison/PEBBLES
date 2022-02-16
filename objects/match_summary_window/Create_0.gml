@@ -3,8 +3,8 @@ event_inherited();
 singleton_obj.display_updated = false;
 update_display();
 
-self.width = 1232;
-self.height = 688;
+self.width = 1216;
+self.height = 704;
 x = view_wport[0]/2 - self.width/2;
 y = view_hport[0]/2 - self.height/2;
 self.text = "Match Summary";
@@ -26,7 +26,6 @@ eloffset_y = y + heading;
 // SCORE BOARD
 score_pane = gui_add_pane(16,0,"SCORE BOARD");
 score_pane.width = 416;
-score_pane.height = 252;
 
 frame_manager.window_log_str = "";
 
@@ -97,6 +96,8 @@ with(score_pane)
         eloffset_y += row_height+spacing;
         frame_manager.window_log_str += "\n";
     }
+    
+    height = eloffset_y - y;
 }
 
 frame_manager.window_log_str += "\n";
@@ -106,7 +107,6 @@ eloffset_x = x + score_pane.width+32;
 
 plstats_pane = gui_add_pane(0,0,"PLAYER STATS");
 plstats_pane.width = 752;
-plstats_pane.height = height - heading - pane_heading - 160;
 
 with(plstats_pane)
 {
@@ -120,9 +120,7 @@ with(plstats_pane)
     col_label = other.col_label;
     col_number = other.col_number;
     col_wide = other.col_wide + 48;
-    
-    table_height = 384;
-    max_items = floor((table_height-32)/32);
+    table_rows = 12;
     
     eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
@@ -130,17 +128,17 @@ with(plstats_pane)
     // STATS TABLE
     
     // HEADINGS
-    ii = gui_add_label(0,0,"Stats");
-    ii.width = col_wide;
+    ii = gui_add_label(1,0,"Stats");
+    ii.width = col_wide - 1;
     ii.draw_border = true;
     ii.centered = true;
     
     for(i=0;i<=player_num;i+=1)
     {
-        eloffset_x += ii.width + spacing;
+        eloffset_x += ii.width + spacing + 1;
         
-        ii = gui_add_label(0,0,string(i));
-        ii.width = col_number;
+        ii = gui_add_label(1,0,string(i));
+        ii.width = col_number - 1;
         ii.draw_border = true;
         ii.centered = true;
     }
@@ -148,14 +146,15 @@ with(plstats_pane)
     
     // SCROLL LISTS
     eloffset_x = x + side_spacing;
-    eloffset_y += row_height;
+    eloffset_y += row_height + 1;
     
     ii = gui_add_scroll_list(0,0);
     ii.width = col_wide;
-    ii.height = table_height;
-    ii.max_items = max_items;
+    ii.max_items = table_rows;
+    ii.auto_height = true;
     ii.centered = true;
     ii.bar_width = 0;
+    ii.do_auto_updates();
     
     self.scroll_list = ii;
 
@@ -169,20 +168,23 @@ with(plstats_pane)
             
         ii = gui_add_scroll_list(0,0);
         ii.width = col_number;
-        ii.height = table_height;
-        ii.max_items = max_items;
+        ii.max_items = table_rows;
+        ii.auto_height = true;
         ii.centered = true;
         if (i < player_num) {
             ii.bar_width = 0;
         } else {
             ii.width += ii.bar_width;
         }
+        ii.do_auto_updates();
         
         self.scroll_lists[i] = ii;
         ds_list_add(scroll_group.scroll_lists,ii);
     }
     
     eloffset_x += ii.width+spacing;
+    eloffset_y += scroll_list.height + side_spacing;
+    height = eloffset_y - y;
     
     frame_manager.window_log_str += "\n";
     
@@ -230,7 +232,6 @@ eloffset_y = y + heading + score_pane.height+16;
 
 match_pane = gui_add_pane(16,0,"MATCH STATS");
 match_pane.width = score_pane.width;
-match_pane.height = height - heading - score_pane.height - 16 - 64 - 52;
 
 with(match_pane)
 {
@@ -243,10 +244,8 @@ with(match_pane)
     col_label = other.col_label;
     col_wide = other.match_col_wide;
     col_number = other.col_number;
+    table_rows = 7;
     
-    table_height = height - heading;
-    max_items = floor((table_height-32)/32);
-  
     // MATCH SCROLL LISTS
     eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
@@ -256,10 +255,11 @@ with(match_pane)
     // LABELS
     ii = gui_add_scroll_list(0,0);
     ii.width = col_wide;
-    ii.height = table_height;
-    ii.max_items = max_items;
+    ii.max_items = table_rows;
+    ii.auto_height = true;
     ii.centered = true;
     ii.bar_width = 0;
+    ii.do_auto_updates();
     
     self.scroll_list = ii;
     ds_list_add(scroll_group.scroll_lists,ii);
@@ -268,13 +268,17 @@ with(match_pane)
     //VALUES
     ii = gui_add_scroll_list(0,0);
     ii.width = col_number + ii.bar_width;
-    ii.height = table_height;
-    ii.max_items = max_items;
+    ii.max_items = table_rows;
+    ii.auto_height = true;
     ii.centered = true;
+    ii.do_auto_updates();
     
     self.scroll_list_values = ii;
     ds_list_add(scroll_group.scroll_lists,ii);
-    eloffset_x += ii.width+spacing;
+    
+    eloffset_x += ii.width + spacing;
+    eloffset_y += scroll_list.height + side_spacing;
+    height = eloffset_y - y;
     
     // FILL MATCH LIST WITH DATA
     frame_manager.window_log_str += "\n";
@@ -345,7 +349,6 @@ eloffset_y = y + heading + plstats_pane.height + 16;
 
 awards_pane = gui_add_pane(0,0,"PLAYER ACHIEVEMENTS AND AWARDS");
 awards_pane.width = 752;
-awards_pane.height = 160;
 
 with(awards_pane)
 {
@@ -357,9 +360,7 @@ with(awards_pane)
     col_label = other.col_label;
     col_wide = other.col_wide;
     col_number = other.col_number;
-    
-    table_height = height - heading;
-    max_items = floor((table_height-32)/32);
+    table_rows = 3;
     
     eloffset_x = x + side_spacing;
     eloffset_y = y + heading;
@@ -367,12 +368,16 @@ with(awards_pane)
     // AWARDS LABELS
     ii = gui_add_scroll_list(0,0);
     ii.width = width - 2 * side_spacing;
-    ii.height = table_height;
-    ii.max_items = max_items;
+    ii.max_items = table_rows;
+    ii.auto_height = true;
     ii.centered = true;
+    ii.do_auto_updates();
+
     self.scroll_list = ii;
     
     eloffset_x += ii.width;
+    eloffset_y += scroll_list.height + side_spacing;
+    height = eloffset_y - y;
     
     var i,a,str;
     
