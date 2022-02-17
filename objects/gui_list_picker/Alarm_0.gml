@@ -50,7 +50,7 @@ if(!is_undefined(item_padding))
     scroll_list.item_padding = item_padding;
 }
 
-scroll_list.update_main_width();
+scroll_list.update();
 
 gui_reset_scroll_items(scroll_list, type, label_list);
 

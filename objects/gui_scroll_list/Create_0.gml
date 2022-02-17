@@ -93,8 +93,9 @@ select_item = function(index) {
     return true;
 }
 
-update_main_width = function() {
+update = function() {
     main_width = width - 2 * side_margin - bar_width;
+    total_items_height = item_count * item_height;
 }
 
 load_long_text = function(new_text, list) {

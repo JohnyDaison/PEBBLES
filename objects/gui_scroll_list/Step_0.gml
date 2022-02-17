@@ -2,7 +2,7 @@ event_inherited();
 
 do_auto_updates();
 
-update_main_width();
+update();
 
 // SCROLL BAR
 if(self.bar_width > 0)
@@ -10,7 +10,8 @@ if(self.bar_width > 0)
     bar_start = width - bar_width;
     
     var item_range = max(0, item_count - max_items);
-    knob_height = height/(1 + item_range);
+    var diplayed_ratio = (height - 2 * ends_height) / total_items_height;
+    knob_height = height * diplayed_ratio;
     if(bar_width > knob_height)
     {
         knob_height = bar_width;

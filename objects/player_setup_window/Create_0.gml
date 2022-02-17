@@ -42,7 +42,7 @@ with(players_pane)
     used_teams_map = ds_map_create();
     
     
-    ii = gui_add_label(64, 16, "Number of players:");
+    ii = gui_add_label(64, 16, "Number of Players:");
     
     playernum_input = gui_add_int_input(204, 16, 0, 1, 1);
     
@@ -79,7 +79,7 @@ with(players_pane)
     
     eloffset_x += back_button.width + hor_spacing;
     
-    ii = gui_add_button(0,0, "Start game", player_setup_window_start_game);
+    ii = gui_add_button(0,0, "Start Game", player_setup_window_start_game);
     ii.width = start_button_width;
     ii.centered = true;
     ii.base_bg_color = select_color;
