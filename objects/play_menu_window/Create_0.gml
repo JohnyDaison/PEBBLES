@@ -25,8 +25,7 @@ gmmod_customs = ds_map_create();
 
 show_hidden_rules = false;
 
-gamemode_description_list = ds_list_create();
-place_description_list = ds_list_create();
+summary_list = ds_list_create();
 
 var hor_spacing = 16;
 var vert_spacing = 8;
@@ -34,13 +33,16 @@ var heading_start = y + 2 * vert_spacing;
 var heading_bg_alpha = 0.25;
 var heading_bg_color = c_gray;
 var content_start = heading_start + 32 + vert_spacing;
+
 var picker_height = 360;
 var gamemode_picker_width = 256;
 var level_picker_width = 280;
 
-var description_line_count = 14;
-var description_height = description_line_count * 20 + 8;
-var description_start = content_start + picker_height + vert_spacing;
+var summary_width = gamemode_picker_width + hor_spacing + level_picker_width;
+var summary_line_count = 14;
+var summary_height = summary_line_count * 20 + 8;
+var summary_start = content_start + picker_height + vert_spacing;
+
 var rules_grid_unit = 58;
 var rules_column_count = 11;
 var rules_margins = 40;
@@ -79,14 +81,14 @@ ii.item_change_script = gamemode_picker_script;
 gamemode_picker = ii.id;
 
 
-// Description SECTION
-eloffset_y = description_start;
+// Summary SECTION
+eloffset_y = summary_start;
 
 ii = gui_add_text_display_scroll_list(0,0);
-ii.width = gamemode_picker_width;
-ii.height = description_height;
+ii.width = summary_width;
+ii.height = summary_height;
 
-gamemode_description_scroll_list = ii.id;
+summary_scroll_list = ii.id;
 
 eloffset_x += gamemode_picker.width + hor_spacing;
 
@@ -111,15 +113,6 @@ ii.centered = true;
 ii.align_items = "left";
 ii.item_change_script = place_picker_script;
 place_picker = ii.id;
-
-// Description SECTION
-eloffset_y = description_start;
-
-ii = gui_add_text_display_scroll_list(0,0);
-ii.width = level_picker_width;
-ii.height = description_height;
-
-level_description_scroll_list = ii.id;
 
 eloffset_x += place_picker.width + hor_spacing;
 

@@ -72,18 +72,18 @@ with(players_pane)
     eloffset_x = x + width - (start_button_width + back_button_width + 2*hor_spacing);
     eloffset_y = y + height - 32 - vert_spacing;
     
+    ii = gui_add_button(0,0, "Back", goto_playmenu);
+    ii.width = back_button_width;
+    ii.centered = true;
+    back_button = ii.id;
+    
+    eloffset_x += back_button.width + hor_spacing;
+    
     ii = gui_add_button(0,0, "Start game", player_setup_window_start_game);
     ii.width = start_button_width;
     ii.centered = true;
     ii.base_bg_color = select_color;
     start_button = ii.id;
-    
-    eloffset_x += start_button.width + hor_spacing;
-    
-    ii = gui_add_button(0,0, "Back", goto_playmenu);
-    ii.width = back_button_width;
-    ii.centered = true;
-    //back_button = ii.id;
     
     eloffset_y += start_button.height + vert_spacing;
     
