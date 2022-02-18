@@ -16,6 +16,23 @@ view_surface = noone;
 width = 0;
 height = 0;
 
+// darkness
+darkness_surface = noone;
+darkness_alpha = 0;
+surface_width = 0;
+surface_height = 0;
+bg_light = noone;
+main_light = noone;
+light_x_offset = 0;
+light_y_offset = 0;
+light_size_coef = 1;
+darkness_light_size_coef = 3;
+
+var darkness_value = mod_get_state("darkness");
+if (is_number(darkness_value)) {
+    darkness_alpha = darkness_value / 100;
+}
+
 death_cover_show = false;
 
 // background and camera movement coefs
@@ -47,6 +64,7 @@ move_speed_x = 0;
 move_speed_y = 0;
 on = false;
 only_cam = false;
+camera_ready = false;
 
 // looks
 draw_frame = true;

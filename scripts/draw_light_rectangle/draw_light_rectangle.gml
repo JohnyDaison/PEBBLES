@@ -1,21 +1,18 @@
-/// @description draw_light_rectangle(size, tint, [base_size])
-/// @function draw_light_rectangle
 /// @param size
 /// @param tint
-function draw_light_rectangle() {
-
-    var size = argument[0];
-    var tint = argument[1];
+/// @param camera
+/// @param [base_size]
+function draw_light_rectangle(size, tint, camera) {
+    size *= camera.light_size_coef;
     var base_size = size;
     var is_ambient = false;
 
-    if(argument_count > 2)
+    if(argument_count > 3)
     {
-        base_size = argument[2];
+        base_size = argument[3];
         is_ambient = true;
     }
-
-
+    
     if(size == 0)
     {
         return false;
@@ -31,7 +28,6 @@ function draw_light_rectangle() {
         size = base_size;
     }
 
-
     var corner_radius = max(1, size) * self.corner_radius;
     var base_corner_radius = max(1, base_size) * self.corner_radius;
 
@@ -39,7 +35,7 @@ function draw_light_rectangle() {
     var corner_radius = size * self.corner_radius;
     var base_corner_radius = base_size * self.corner_radius;
     */
-    var center_x = x + light_xoffset, center_y = y + light_yoffset;
+    var center_x = x + light_xoffset + camera.light_x_offset, center_y = y + light_yoffset + camera.light_y_offset;
 
     var bbox_width = bbox_right - bbox_left;
     var bbox_height = bbox_bottom - bbox_top;

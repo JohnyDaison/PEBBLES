@@ -102,13 +102,16 @@ function create_gamemodes_DB() {
     
     gamemode_mod_create("sudden_death_start", "Sudden Death", "number", true, sudden_death_start_mod_icon, "Players won't respawn after X minutes pass.");
     gamemode_number_mod_values("sudden_death_start", 10, 1, 30, 1);
+    
+    gamemode_mod_create("darkness", "Darkness", "number", true, darkness_mod_icon, "Make the arena dark(er). 100 is pitch black.");
+    gamemode_number_mod_values("darkness", 80, 50, 100, 1);
 
 
     // RULE CATEGORIES (MOD CATEGORIES)
     
     var category = rule_categories.add("Death and HP");
     ds_list_add(category.rule_list, "hp_death", "holographic_spawners", "base_crystals", "base_crystal_hp", "base_crystal_shield_power", "guy_shield_power",
-                                    "death_limit", "score_limit", "time_limit", "sudden_death_start");
+                                    "death_limit", "score_limit", "time_limit", "sudden_death_start", "darkness");
     
     var category = rule_categories.add("Colors and Energy");
     ds_list_add(category.rule_list, "equal_colors", "dark_color", "base_colors_only", "bad_status_effects", "abilities", "dark_orb_energy_lock", "color_orbs_energy_lock", "orbs_energy_min_lock");

@@ -12,6 +12,9 @@ my_angle = 0;
 my_distance = 48;
 orbiting_lerp_ratio = 0.05;
 
+ambient_light = 0.5;
+direct_light = 0.25;
+
 self.pickup_sound = crystal_sound;
 self.inventory_spr = sprite_index;
 

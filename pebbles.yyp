@@ -455,6 +455,7 @@
     {"id":{"name":"bf_icon_consume","path":"sprites/bf_icon_consume/bf_icon_consume.yy",},"order":0,},
     {"id":{"name":"console_divider_length","path":"scripts/console_divider_length/console_divider_length.yy",},"order":15,},
     {"id":{"name":"bf_icon_snaketrophy","path":"sprites/bf_icon_snaketrophy/bf_icon_snaketrophy.yy",},"order":1,},
+    {"id":{"name":"darkness_mod_icon","path":"sprites/darkness_mod_icon/darkness_mod_icon.yy",},"order":65,},
     {"id":{"name":"bf_icon_snakemob","path":"sprites/bf_icon_snakemob/bf_icon_snakemob.yy",},"order":2,},
     {"id":{"name":"infocursor_tool_obj","path":"objects/infocursor_tool_obj/infocursor_tool_obj.yy",},"order":0,},
     {"id":{"name":"bf_icon_fall","path":"sprites/bf_icon_fall/bf_icon_fall.yy",},"order":3,},
