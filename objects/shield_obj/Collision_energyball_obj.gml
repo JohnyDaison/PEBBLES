@@ -3,9 +3,9 @@ if(instance_exists(my_guy) && my_guy != self.id)
 {
     var projectile = other.id;
     var shield = id;
-    var catalyst_fired_it = projectile.my_source == charge_ball_obj;
+    var not_octarine = projectile.my_color != g_octarine;
     
-    if(catalyst_fired_it && projectile.my_player.team_number == my_player.team_number && is_undefined(projectile.has_left_inst[? id]))
+    if(not_octarine && projectile.my_player.team_number == my_player.team_number && is_undefined(projectile.has_left_inst[? id]))
     {
         if(was_meeting_me(projectile))
         {
@@ -25,7 +25,7 @@ if(instance_exists(my_guy) && my_guy != self.id)
     
     if((projectile.my_player.team_number != my_player.team_number || has_left_me(projectile)) && self.holographic == projectile.holographic)
     {
-        if(my_color == projectile.my_color && my_color != g_octarine)
+        if(my_color == projectile.my_color && not_octarine)
         {
             if(radius < bounce_radius_threshold && !projectile.was_stopped)
             {
