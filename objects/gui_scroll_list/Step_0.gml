@@ -10,8 +10,8 @@ if(self.bar_width > 0)
     bar_start = width - bar_width;
     
     var item_range = max(0, item_count - max_items);
-    var diplayed_ratio = (height - 2 * ends_height) / total_items_height;
-    knob_height = height * diplayed_ratio;
+    var displayed_ratio = (height - 2 * ends_height) / total_items_height;
+    knob_height = height * displayed_ratio;
     if(bar_width > knob_height)
     {
         knob_height = bar_width;
@@ -20,6 +20,19 @@ if(self.bar_width > 0)
     //knob_offset = round(knob_height * first_item);
     knob_offset = ceil((height - knob_height) * (first_item / item_range));
     knob_height = floor(knob_height);
+    
+    if (item_range == 0) {
+        drawn_bar_width = 0;
+    } else {
+        drawn_bar_width = bar_width;
+        
+        if (!dropdown_bar_handled) {
+            width += bar_width;
+            dropdown_bar_handled = true;
+        }
+    }
+} else {
+    drawn_bar_width = 0;
 }
 
 
@@ -48,14 +61,10 @@ clamp_current_position();
 // MAIN UPDATE
 if(cur_item != -1)
 {
-    selection_pos = max(0, min(selection_pos, min(item_count-1, max_items-1)));
-    
-    first_item = max(0, min(item_count - max_items, cur_item - selection_pos));
-    last_item = min(item_count-1, first_item + max_items-1);
-
     mouse_over = false;
     
     var i, diff;
+    var items_start_y = y + ends_height;
     
     if(visible && cursor_obj.focus == id)
     {
@@ -63,9 +72,9 @@ if(cur_item != -1)
         for(i = 0; i < (last_item - first_item + 1) && !mouse_over; i++)
         {
             if(DB.mouse_has_moved
-            && cursor_obj.x > x && cursor_obj.x < (x + main_width)
-            && cursor_obj.y > (y + ends_height + i*item_height + item_padding)
-            && cursor_obj.y < (y + ends_height + (i+1)*item_height - item_padding))
+            && cursor_obj.x > x + side_margin && cursor_obj.x < (x + side_margin + drawn_main_width)
+            && cursor_obj.y > (items_start_y + i*item_height + item_padding/2)
+            && cursor_obj.y < (items_start_y + (i+1)*item_height - item_padding/2))
             {
                 mouse_over = true;
                 highlighted_item = i+first_item;
@@ -87,7 +96,7 @@ if(cur_item != -1)
         }
         
         // SCROLL BAR
-        if(DB.mouse_has_moved
+        if(DB.mouse_has_moved && drawn_bar_width > 0
         && cursor_obj.x > (x + bar_start) && cursor_obj.x < (x + bar_start + bar_width)
         && cursor_obj.y > (y + bar_knob_margin) && cursor_obj.y < (y + height - bar_knob_margin))
         {
@@ -130,7 +139,7 @@ if(!had_focus && focused)
 }
 if(had_focus && !mouse_over)
 {
-    highlighted_item = -1;    
+    highlighted_item = -1;
 }
 
 had_focus = focused;

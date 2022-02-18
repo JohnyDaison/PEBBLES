@@ -14,6 +14,7 @@ bar_bg_color = c_white;
 bar_knob_color = merge_color(c_ltgray, c_white, 0.5);
 bar_knob_margin = 0;
 bar_knob_alpha = 0.9;
+drawn_bar_width = 0;
 main_width = 0;
 bar_start = 0;
 knob_offset = 0;
@@ -161,11 +162,27 @@ set_scroll_offset = function(offset) {
 }
 
 update = function() {
+    var last_main_width = main_width;
     main_width = width - 2 * side_margin - bar_width;
+    if (bar_width > 0 && drawn_bar_width == 0) {
+        main_width += bar_width;
+    }
+    if (last_main_width != main_width) {
+        update_items_width();
+    }
+    
     item_count = ds_list_size(gui_content);
     total_items_height = get_items_range_height(0, item_count - 1);
     scroll_range = max(0, total_items_height - height + vertical_margin);
     max_first_item = get_max_first_item();
+}
+
+update_items_width = function() {
+    for (var index = 0; index < item_count; index++) {
+        var child = gui_content[| index];
+            
+        child.width = main_width;
+    }
 }
 
 get_items_range_height = function(first_index, last_index) {

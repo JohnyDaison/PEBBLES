@@ -22,13 +22,13 @@ if(self.draw_bg_color)
 }
 
 // SCROLL BAR
-if(self.bar_width > 0)
+if(self.drawn_bar_width > 0)
 {
     draw_set_alpha(bg_alpha);
     draw_set_colour(bar_bg_color);
     
     draw_roundrect_ext(x + bar_start, y, 
-                       x + bar_start + bar_width, y + self.height,
+                       x + bar_start + drawn_bar_width, y + self.height,
                        bar_corner_radius, bar_corner_radius, false);
     
     if (scroll_range > 0) {
@@ -36,7 +36,7 @@ if(self.bar_width > 0)
         draw_set_colour(bar_knob_color);
     
         draw_roundrect_ext(x + bar_start + bar_knob_margin, y + knob_offset + bar_knob_margin,
-                           x + bar_start + bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin,
+                           x + bar_start + drawn_bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin,
                            bar_corner_radius - bar_knob_margin, bar_corner_radius - bar_knob_margin, false);
     }
 }

@@ -18,6 +18,7 @@ self.alternate_lines = true;
 self.content_padding = 6;
 self.side_margin = 4;
 self.bar_width = 16;
+self.drawn_bar_width = 0;
 self.bar_corner_radius = corner_radius;
 self.bar_bg_color = c_white;
 self.bar_knob_color = merge_color(c_ltgray, c_white, 0.5);
@@ -26,9 +27,11 @@ self.bar_knob_alpha = 0.9;
 self.auto_height = false;
 self.auto_items = false;
 main_width = 0;
+drawn_main_width = 0;
 bar_start = 0;
 knob_offset = 0;
 knob_height = 0;
+dropdown_bar_handled = true;
 
 type = "text";
 centered = false;
@@ -74,6 +77,11 @@ clamp_current_position = function() {
             cur_item = item_count-1;
             selection_pos = min(item_count-1, max_items-1);
         }
+        
+        selection_pos = max(0, min(selection_pos, min(item_count-1, max_items-1)));
+    
+        first_item = max(0, min(item_count - max_items, cur_item - selection_pos));
+        last_item = min(item_count-1, first_item + max_items-1);
     }
 }
 
@@ -95,6 +103,10 @@ select_item = function(index) {
 
 update = function() {
     main_width = width - 2 * side_margin - bar_width;
+    drawn_main_width = main_width;
+    if (bar_width > 0 && drawn_bar_width == 0) {
+        drawn_main_width += bar_width;
+    }
     total_items_height = item_count * item_height;
 }
 

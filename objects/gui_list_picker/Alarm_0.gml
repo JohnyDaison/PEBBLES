@@ -23,8 +23,8 @@ if(is_dropdown)
         item_height = 36;
         item_padding = 4;
         ends_height = 2;
-        width += bar_width;
         bar_bg_color = merge_color(c_gray, c_ltgray, 0.5);
+        dropdown_bar_handled = false;
     
         height = ends_height*2 + max_items*item_height;
     }
@@ -50,8 +50,8 @@ if(!is_undefined(item_padding))
     scroll_list.item_padding = item_padding;
 }
 
-scroll_list.update();
-
 gui_reset_scroll_items(scroll_list, type, label_list);
+
+scroll_list.update();
 
 gui_list_picker_update_script(id);

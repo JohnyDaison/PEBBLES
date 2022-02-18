@@ -51,10 +51,10 @@ else
 if(cur_item != -1)
 { 
     var items_start_x = x + side_margin;
-    var items_center_x = items_start_x + self.main_width/2;
+    var items_center_x = items_start_x + self.drawn_main_width/2;
     var items_start_y = y + ends_height;
     
-    show_count = last_item - first_item + 1;
+    var show_count = last_item - first_item + 1;
     var cur, high, force_bg, base_color, over_color, final_text_color;
     
     for(var i = 0; i < show_count; i++)
@@ -123,7 +123,7 @@ if(cur_item != -1)
                     }
                 
                     draw_roundrect_ext(items_start_x, items_start_y + i*item_height + item_padding/2,
-                                       items_start_x + self.main_width, items_start_y + (i+1)*item_height - item_padding/2,
+                                       items_start_x + self.drawn_main_width, items_start_y + (i+1)*item_height - item_padding/2,
                                        corner_radius, corner_radius, false);
                 }
             }
@@ -160,20 +160,20 @@ if(cur_item != -1)
 }
 
 // SCROLL BAR
-if(self.bar_width > 0)
+if(self.drawn_bar_width > 0)
 {
     draw_set_alpha(bg_alpha);
     draw_set_colour(bar_bg_color);
     
     draw_roundrect_ext(x + bar_start, y, 
-                       x + bar_start + bar_width, y + self.height,
+                       x + bar_start + drawn_bar_width, y + self.height,
                        bar_corner_radius, bar_corner_radius, false);
     
     draw_set_alpha(bar_knob_alpha);
     draw_set_colour(bar_knob_color);
     
     draw_roundrect_ext(x + bar_start + bar_knob_margin, y + knob_offset + bar_knob_margin,
-                       x + bar_start + bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin,
+                       x + bar_start + drawn_bar_width - bar_knob_margin, y + knob_offset + knob_height - bar_knob_margin,
                        bar_corner_radius - bar_knob_margin, bar_corner_radius - bar_knob_margin, false);
 }
 

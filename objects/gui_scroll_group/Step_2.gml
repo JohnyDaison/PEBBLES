@@ -33,6 +33,8 @@ if(list_count > 1)
         list.selection_pos = new_sel_pos;
         list.first_item = new_first_item;
         list.highlighted_item = new_high_item;
+        
+        list.clamp_current_position();
     }
     
     cur_item = new_cur_item;

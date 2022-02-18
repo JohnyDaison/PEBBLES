@@ -10,9 +10,9 @@ if(self.bar_width > 0)
     knob_offset = 0;
     
     if (scroll_range > 0) {
-        var diplayed_ratio = height / total_items_height;
+        var displayed_ratio = height / total_items_height;
         
-        knob_height = height * diplayed_ratio;
+        knob_height = height * displayed_ratio;
         if(bar_width > knob_height)
         {
             knob_height = bar_width;
@@ -21,6 +21,14 @@ if(self.bar_width > 0)
         knob_offset = ceil((height - knob_height) * (scroll_offset / scroll_range));
     }
     knob_height = floor(knob_height);
+    
+    if (scroll_range == 0) {
+        drawn_bar_width = 0;
+    } else {
+        drawn_bar_width = bar_width;
+    }
+} else {
+    drawn_bar_width = 0;
 }
 
 
