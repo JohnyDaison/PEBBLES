@@ -15,6 +15,8 @@ function define_rules_DB() {
     gamemode_mod_create("dark_orb_energy_lock", "Dark Orb Energy lock", "bool", true, dark_orb_energy_lock_mod_icon, "Dark Orb energy will always be at 100%.");
     
     gamemode_mod_create("color_orbs_energy_lock", "Color Orb Energy lock", "bool", true, orbs_energy_lock_mod_icon, "Color Orb energy will always be at 100%.");
+    
+    gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "bool", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below 100%.");
 
     gamemode_mod_create("heavy_shots", "Heavy Bolts", "bool", true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
@@ -76,9 +78,6 @@ function define_rules_DB() {
     
     gamemode_mod_create("death_limit", "Death Limit", "number", true, death_limit_mod_icon, "Players won't respawn after dying X times.");
     gamemode_number_mod_values("death_limit", 3, 1, 20, 1);
-    
-    gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "number", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below X %.");
-    gamemode_number_mod_values("orbs_energy_min_lock", 100, 10, 100, 10);
     
     gamemode_mod_create("score_limit", "Score Limit", "number", true, score_limit_mod_icon, "The game will end if a player reaches X points.");
     gamemode_number_mod_values("score_limit", 200, 1, 999, 1);

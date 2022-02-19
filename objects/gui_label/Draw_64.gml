@@ -167,6 +167,10 @@ else
 {
     var icon_width = sprite_get_width(icon);
     var text_icon_offset = icon_width;
+    if(text_align == "center")
+    {
+        text_icon_offset = 0;
+    }
     
     if(center_icon)
     {

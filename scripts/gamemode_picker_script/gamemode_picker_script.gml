@@ -44,6 +44,12 @@ function gamemode_picker_script() {
                 for(i=0; i<count; i++)
                 {
                     preset = DB.rule_presets.find_preset_by_id(preset_list[| i]);
+                    
+                    if (is_undefined(preset)) {
+                        my_console_log("!!! PRESET NOT FOUND: " + string(preset_list[| i]));
+                        continue;
+                    }
+                    
                     ds_list_add(preset_names, preset.name);
                     ds_list_add(preset_ids, preset.str_id);
                 }

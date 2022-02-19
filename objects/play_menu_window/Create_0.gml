@@ -228,8 +228,10 @@ alarm[0] = 2;
 load_from_gamemode = function () {
     if (instance_exists(gamemode_obj)) {
         gamemode_picker.select_item_by_id(gamemode_obj.mode);
-        preset_dropdown.list_picker.select_item_by_id(gamemode_obj.rule_preset.str_id);
-        preset_dropdown.inited = true;
+        if (is_struct(gamemode_obj.rule_preset)) {
+            preset_dropdown.list_picker.select_item_by_id(gamemode_obj.rule_preset.str_id);
+            preset_dropdown.inited = true;
+        }
         place_picker.select_item_by_id(gamemode_obj.world.current_place.room_id);
         
         ds_map_copy(gmmod_customs, gamemode_obj.custom_mods);
