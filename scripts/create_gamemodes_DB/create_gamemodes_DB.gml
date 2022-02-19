@@ -103,100 +103,22 @@ function create_gamemodes_DB() {
     default_mods[? "abilities"] = true;
 
 
-    // Standard match  a.k.a. Full battle
-    gm = gamemode_create("battle", "Standard Match", false, arena_world);
-    //gm[? "description"] = "Dive into all-out warfare in this semi-tactical-action Battle mode.";
-    gm[? "description"] = "Play a canonical duel match. Dive into all-out warfare in this semi-tactical battle mode.";
+    // Clash
+    gm = gamemode_create("clash", "Clash", false, arena_world);
+    gm[? "description"] = "Fight another player (or a bot) in various arenas.";
 
     gm[? "min_players"] = 2;
     gm[? "max_players"] = 4;
     gm[? "min_teams"] = 2;
     gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
+    
+    ds_list_add(gm[? "rule_presets"], "clash_novice", "clash_apprentice", "clash_arcade", "clash_standard");
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "tut_guide"] = false;
 
     default_mods = gm[? "default_modifiers"];
-    default_mods[? "turrets"] = true;
-    default_mods[? "cannons"] = true;
-    default_mods[? "mob_portals"] = true;
-    default_mods[? "shield_push"] = true;
-
-    default_mods[? "hp_death"] = true;
-    default_mods[? "base_crystals"] = true;
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
-
-    default_mods[? "snakes_on_a_plane"] = true;
-    default_mods[? "slime_mob_rain"] = true;
-    default_mods[? "artifacts"] = true;
-    
-    default_mods[? "base_crystal_hp"] = 10;
-    default_mods[? "base_crystal_shield_power"] = 6;
-    default_mods[? "score_limit"] = 400;
-
-
-    // Arcade match
-    gm = gamemode_create("arcade", "Arcade Match", false, arena_world);
-    gm[? "description"] = "Play a Versus match with Arcade rules for some simple, high-powered action.";
-    gm[? "min_players"] = 2;
-    gm[? "max_players"] = 4;
-    gm[? "min_teams"] = 2;
-    gm[? "max_teams"] = 4;
-    gm[? "start_place_room"] = classic_arena;
-
-    forced_mods = gm[? "forced_modifiers"];
-    forced_mods[? "turrets"] = false;
-    forced_mods[? "cannons"] = false;
-    forced_mods[? "mob_portals"] = false;
-    forced_mods[? "holographic_spawners"] = true;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "tut_guide"] = false;
-    forced_mods[? "shield_push"] = true;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "orbs_energy_min_lock"] = true;
-    
-    default_mods = gm[? "default_modifiers"];
-    default_mods[? "random_item_spawner"] = true;
-    default_mods[? "base_crystals"] = true;
-    default_mods[? "weak_terrain"] = true;
-    default_mods[? "dark_orb_energy_lock"] = true;
-    default_mods[? "equal_colors"] = true;
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
-    default_mods[? "artifacts"] = true;
-    
-    default_mods[? "base_crystal_hp"] = 7;
-    default_mods[? "score_limit"] = 200;
-
-
-    /*
-    // Simple match
-    gm = gamemode_create("simple", "Modern Match", false, arena_world);
-    gm[? "description"] = "Play a Versus match with Modern rules, without new elements.";
-    gm[? "min_players"] = 2;
-    gm[? "max_players"] = 2;
-    gm[? "start_place_room"] = closed_quarters_arena;
-
-    forced_mods = gm[? "forced_modifiers"];
-    forced_mods[? "turrets"] = false;
-    forced_mods[? "cannons"] = false;
-    forced_mods[? "mob_portals"] = false;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "tut_guide"] = false;
-
-    default_mods = gm[? "default_modifiers"];
-    default_mods[? "base_crystals"] = true;
-    default_mods[? "hp_death"] = true;
-    default_mods[? "artifacts"] = true;
-    
-    default_mods[? "base_crystal_hp"] = 5;
-    default_mods[? "base_crystal_shield_power"] = 2;
-    default_mods[? "score_limit"] = 200;
-    */
 
 
     // Tower climb
