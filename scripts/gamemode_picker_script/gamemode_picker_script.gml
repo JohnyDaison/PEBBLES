@@ -19,6 +19,7 @@ function gamemode_picker_script() {
             
                 //world_name_label.text = play_menu_window.world.name;
             
+                // POPULATE place_picker
                 ds_list_clear(place_names);
                 ds_list_clear(place_ids);
             
@@ -32,6 +33,22 @@ function gamemode_picker_script() {
                 }
             
                 gui_list_picker_items_reset(place_picker, "text", place_names, place_ids);
+                
+                // POPULATE preset_dropdown
+                ds_list_clear(preset_names);
+                ds_list_clear(preset_ids);
+                
+                var preset_list = gm[? "rule_presets"];
+                var i, count = ds_list_size(preset_list), preset;
+
+                for(i=0; i<count; i++)
+                {
+                    preset = DB.rule_presets.find_preset_by_id(preset_list[| i]);
+                    ds_list_add(preset_names, preset.name);
+                    ds_list_add(preset_ids, preset.str_id);
+                }
+                
+                gui_list_picker_items_reset(preset_dropdown.list_picker, "text", preset_names, preset_ids);
             }
         
             // UPDATE PLACES

@@ -14,6 +14,7 @@ button.centered = true;
 button.icon = arrow_down_spr;
 button.show_icon = true;
 button.button_function = "toggleDropdown";
+button.text_align = text_align;
 
 if(id_list != noone)
 {
@@ -26,5 +27,8 @@ else
 
 list_picker.width = width;
 list_picker.visible = false;
+list_picker.depth -= 20;
 list_picker.hidden = true;
 list_picker.is_dropdown = true;
+list_picker.item_change_script = self.item_change_script;
+list_picker.align_items = align_items;

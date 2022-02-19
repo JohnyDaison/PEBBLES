@@ -9,6 +9,7 @@ stats = ds_map_create();
 arena_name = "";
 mode = "";
 name = "";
+rule_preset = noone;
 shown_welcome = false;
 closed_welcome = false;
 match_started = false;

@@ -15,6 +15,7 @@ function play_menu_window_next_step() {
     gamemode.is_coop = gm[? "is_coop"];
     gamemode.is_deathmatch = gm[? "is_deathmatch"];
     gamemode.team_based = gm[? "team_based"];
+    gamemode.rule_preset = DB.rule_presets.find_preset_by_id(play_window.preset_dropdown.list_picker.cur_item_id);
 
     with(gamemode)
     {
@@ -45,7 +46,7 @@ function play_menu_window_next_step() {
 
     // MODS
     ds_map_copy(gamemode.custom_mods, play_window.gmmod_customs);
-    mods_update_state(gm_id, world.current_place, gamemode.custom_mods, gamemode.mods_state);
+    mods_update_state(gm_id, gamemode.rule_preset, world.current_place, gamemode.custom_mods, gamemode.mods_state);
 
     close_frame(mod_tooltip_window);
     close_frame(play_menu_window);

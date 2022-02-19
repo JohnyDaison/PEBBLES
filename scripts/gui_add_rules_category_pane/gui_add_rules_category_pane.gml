@@ -71,7 +71,7 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
             eloffset_x += rule_dist;
         }
     
-        eloffset_y += rule_grid_unit + vert_spacing;
+        eloffset_y += rule_grid_unit + vert_spacing + 4;
     }
     
     rules_scroll_list.resize_item(pane.item_index, pane.eloffset_y - pane.y);

@@ -9,19 +9,14 @@ function mods_controls_update() {
         {
             var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"];
             var custom_mods = gmmod_customs;
-            var default_map, forced_map, place, default_mods_place, forced_mods_place;
+            var default_map, forced_map, place, preset;
             var mod_controls = gmmod_controls;
             var mod_id, mod_control, dmod, fmod, gmmod;
-        
-        
+            
+            preset = DB.rule_presets.find_preset_by_id(preset_dropdown.list_picker.cur_item_id);
             place = play_menu_window.world.places[| place_picker.cur_item];
-            if(!is_undefined(place))
-            {
-                default_mods_place = place.default_modifiers;
-                forced_mods_place = place.forced_modifiers;
-            }
-        
-
+            
+            
             // reset all
             mod_id = ds_map_find_first(mod_controls);
             while(!is_undefined(mod_id))
@@ -40,20 +35,11 @@ function mods_controls_update() {
         
             // DEFAULTS
         
-            // merge gm and place
+            // merge gm, preset and place
             default_map = ds_map_create();
             ds_map_copy(default_map, default_mods_gm);
-        
-            if(!is_undefined(place))
-            {
-                dmod = ds_map_find_first(default_mods_place);
-                while(!is_undefined(dmod))
-                {
-                    default_map[? dmod] = default_mods_place[? dmod];
-            
-                    dmod = ds_map_find_next(default_mods_place, dmod);
-                }
-            }
+            merge_rules_maps(default_map, preset, "default");
+            merge_rules_maps(default_map, place, "default");
         
             // apply result
             dmod = ds_map_find_first(default_map);
@@ -108,20 +94,11 @@ function mods_controls_update() {
         
             // FORCED
         
-            // merge gm and place
+            // merge gm, preset and place
             forced_map = ds_map_create();
             ds_map_copy(forced_map, forced_mods_gm);
-        
-            if(!is_undefined(place))
-            {
-                fmod = ds_map_find_first(forced_mods_place);
-                while(!is_undefined(fmod))
-                {
-                    forced_map[? fmod] = forced_mods_place[? fmod];
-            
-                    fmod = ds_map_find_next(forced_mods_place, fmod);
-                }
-            }
+            merge_rules_maps(forced_map, preset, "forced");
+            merge_rules_maps(forced_map, place, "forced");
         
             // apply result
             fmod = ds_map_find_first(forced_map);

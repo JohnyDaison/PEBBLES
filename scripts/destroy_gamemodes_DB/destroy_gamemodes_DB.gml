@@ -9,6 +9,7 @@ function destroy_gamemodes_DB() {
     
         ds_map_destroy(gm_map[? "default_modifiers"]);
         ds_map_destroy(gm_map[? "forced_modifiers"]);
+        ds_list_destroy(gm_map[? "rule_presets"]);
     
         ds_map_destroy(gm_map);
     }
@@ -23,6 +24,7 @@ function destroy_gamemodes_DB() {
     }
 
     rule_categories.destroy();
+    rule_presets.destroy();
 
     ds_map_destroy(gamemodes);
     ds_list_destroy(gamemode_list);

@@ -20,6 +20,8 @@ eloffset_y = y;
 gamemode_names = ds_list_create();
 place_names = ds_list_create();
 place_ids = ds_list_create();
+preset_names = ds_list_create();
+preset_ids = ds_list_create();
 gmmod_controls = ds_map_create();
 gmmod_customs = ds_map_create();
 
@@ -47,7 +49,7 @@ var rules_grid_unit = 58;
 var rules_column_count = 11;
 var rules_margins = 40;
 var rules_width = rules_column_count * rules_grid_unit + rules_margins;
-var rules_height = y + height - content_start - 64;
+var rules_height = y + height - content_start - 64 - 48;
 
 // POPULATE gamemode_names
 var i, count = ds_list_size(DB.gamemode_list), gm, ii;
@@ -118,6 +120,7 @@ eloffset_x += place_picker.width + hor_spacing;
 
 
 // Rules COLUMN
+var rules_x_start = eloffset_x;
 eloffset_y = heading_start;
 
 ii = gui_add_label(rules_width/2, 16, "Rules");
@@ -125,8 +128,29 @@ ii.width = rules_width;
 ii.bg_alpha = heading_bg_alpha;
 ii.bg_color = heading_bg_color;
 
+eloffset_y = content_start + vert_spacing;
 
-eloffset_y = content_start;
+ii = gui_add_label(0, 0, "Preset");
+ii.width = 96;
+ii.centered = true;
+
+eloffset_x += ii.width + hor_spacing * 0.5;
+
+ii = gui_add_dropdown(0, 0, "text", noone, 0);
+ii.width = 256;
+ii.text_align = "left";
+ii.align_items = "left";
+ii.item_change_script = rule_preset_dropdown_script;
+preset_dropdown = ii;
+
+eloffset_x = rules_x_start + rules_width;
+
+ii = gui_add_button(0,0, "Reset to default", reset_custom_mod_controls);
+ii.centered = true;
+gui_move_element(ii, ii.x - ii.width, ii.y);
+
+eloffset_x = rules_x_start;
+eloffset_y += 32 + vert_spacing;
 
 ii = gui_add_scroll_list2(0,0);
 ii.width = rules_width;
@@ -204,6 +228,8 @@ alarm[0] = 2;
 load_from_gamemode = function () {
     if (instance_exists(gamemode_obj)) {
         gamemode_picker.select_item_by_id(gamemode_obj.mode);
+        preset_dropdown.list_picker.select_item_by_id(gamemode_obj.rule_preset.str_id);
+        preset_dropdown.inited = true;
         place_picker.select_item_by_id(gamemode_obj.world.current_place.room_id);
         
         ds_map_copy(gmmod_customs, gamemode_obj.custom_mods);

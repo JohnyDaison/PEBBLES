@@ -76,8 +76,7 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
             number_input.disabled_border_color = checkbox.border_color;
             
             if (forced && value_is_bool) {
-                var gmmod = DB.gamemode_mods[? gmmod_id];
-                if (!value || (value && get_value() == gmmod[? "default_value"])) {
+                if (!value || (value && get_value() == default_value)) {
                     draw_bg_color = false;
                 }
                 

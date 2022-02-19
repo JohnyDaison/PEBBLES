@@ -165,13 +165,17 @@ if(icon == noone || !show_icon)
 }
 else
 {
+    var icon_width = sprite_get_width(icon);
+    var text_icon_offset = icon_width;
+    
     if(center_icon)
     {
         str_width = string_width(disp_text);
         draw_sprite_ext(icon, image_index,
-                        center_x - str_width/2 - sprite_get_width(icon)/2 + sprite_get_xoffset(icon) +1,
+                        center_x - str_width/2 - icon_width/2 + sprite_get_xoffset(icon) +1,
                         center_y - sprite_get_height(icon)/2 + sprite_get_yoffset(icon) +1,
                         1,1,0, icon_color,icon_alpha);
+        text_icon_offset = icon_width/2;
     }
     else
     {
@@ -180,10 +184,10 @@ else
     
     if(multiline)
     {
-        my_draw_text_ext(text_x+16, text_y, disp_text, line_separation, width-48);
+        my_draw_text_ext(text_x + text_icon_offset, text_y, disp_text, line_separation, width-48);
     }
     else
     {
-        my_draw_text(text_x+16, text_y, disp_text);
+        my_draw_text(text_x + text_icon_offset, text_y, disp_text);
     }
 }
