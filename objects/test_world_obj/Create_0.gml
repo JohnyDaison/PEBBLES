@@ -45,6 +45,15 @@ place.description = "Order and Chaos";
 ds_list_add(place.level_configs_list, "match");
 
 
+place = add_place_in_room(room_bot_jump_test, "Bot Jump Test", 0,0, 2048,2048, 0);
+place.description = "Can the bot get to the top?";
+/*  Yes, if you move the left-most waypoint on bot's platform two blocks to the right after running navgraph.
+    Why is it stopping on those waypoints instead of just running through? Is this related with START BREAKING EARLY? */
+place.controller = autogenerate_place_controller_obj;
+place.max_team_count = 2;
+ds_list_add(place.level_configs_list, "movement");
+
+
 place = add_place_in_room(room_show_off, "Show Off!", 0,0, 2368,2048, 0);
 place.description = "Quick jumps";
 ds_list_add(place.level_configs_list, "match");

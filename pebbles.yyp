@@ -1288,6 +1288,7 @@
     {"id":{"name":"achiev_shadow_ninja","path":"scripts/achiev_shadow_ninja/achiev_shadow_ninja.yy",},"order":3,},
     {"id":{"name":"achiev_idle_pickup","path":"scripts/achiev_idle_pickup/achiev_idle_pickup.yy",},"order":4,},
     {"id":{"name":"draw_lightning_width","path":"scripts/draw_lightning_width/draw_lightning_width.yy",},"order":0,},
+    {"id":{"name":"room_bot_jump_test","path":"rooms/room_bot_jump_test/room_bot_jump_test.yy",},"order":14,},
     {"id":{"name":"init_skins_DB","path":"scripts/init_skins_DB/init_skins_DB.yy",},"order":3,},
     {"id":{"name":"draw_orb_belt_gui","path":"scripts/draw_orb_belt_gui/draw_orb_belt_gui.yy",},"order":1,},
     {"id":{"name":"draw_light_circle","path":"scripts/draw_light_circle/draw_light_circle.yy",},"order":2,},
@@ -2148,6 +2149,7 @@
     {"roomId":{"name":"two_towers_arena","path":"rooms/two_towers_arena/two_towers_arena.yy",},},
     {"roomId":{"name":"the_low_ceiling_court","path":"rooms/the_low_ceiling_court/the_low_ceiling_court.yy",},},
     {"roomId":{"name":"less_vertigo_arena","path":"rooms/less_vertigo_arena/less_vertigo_arena.yy",},},
+    {"roomId":{"name":"room_bot_jump_test","path":"rooms/room_bot_jump_test/room_bot_jump_test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

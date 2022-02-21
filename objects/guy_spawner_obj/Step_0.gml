@@ -156,6 +156,7 @@ if(self.enabled)
             my_shield.done_for = true;
         }
         i = instance_create(x,y,slot_explosion_obj);
+        i.my_player = my_player;
         i.my_color = irandom_range(1,7);
         i.my_source = object_index;
         self.visible = false;

@@ -1,0 +1,1 @@
+waypoint_id = "jump2_end";
