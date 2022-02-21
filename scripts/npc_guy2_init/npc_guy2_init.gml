@@ -67,4 +67,6 @@ function npc_guy2_init() {
     npc_counter_confusion_start = -1;
     npc_confusion_start_delay = 60;
     npc_confusion_stop_delay = 60;
+    
+    npc_do_steep_jump = false;
 }

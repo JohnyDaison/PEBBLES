@@ -8,6 +8,7 @@ function npc_guy2_step() {
     hor_dir_held = false;
 
     var vertical_waypoint_angle_range = 30;
+    var steep_jump_angle_range = 20;
     var waypoint_reset_delay = 420;
     var storey_height = 256;
     var facing_wall = false, jump_is_charged = false, near_edge = false, has_charged_jump = false, is_blocked = false, can_land = false, can_land_on_feet = false;
@@ -283,6 +284,40 @@ function npc_guy2_step() {
         {
             wanna_run = false;
         }
+        
+        // STOP FULLY WHEN ON SLIPPERY FLOOR
+        if (sliding || (instance_exists(landing_terrain) && landing_terrain.my_color == g_blue)) {
+            near_fullstop_point = true;
+        }
+        
+        // STEEP JUMP DETECTION
+        if (!npc_do_steep_jump && !airborne && instance_exists(nearest_waypoint)) {
+            var next_wp_id = current_path[| 0];
+            var next_wp = group_find_member(get_group("waypoints"), next_wp_id);
+            if (!is_undefined(next_wp) && next_wp != nearest_waypoint) {
+                // NOTE: next_wp.x doesn't always equal npc_waypoint_x, same for next_wp.y and npc_waypoint_y
+                
+                var dir = point_direction(nearest_waypoint.x, nearest_waypoint.y, next_wp.x, next_wp.y);
+                var diff = abs(dir - 90);
+                if (diff < steep_jump_angle_range) {
+                    npc_do_steep_jump = true;
+                }
+            }
+        }
+        
+        // DON'T RUN WHEN DOING STEEP JUMP
+        if (npc_do_steep_jump) {
+            near_fullstop_point = true;
+            if (jumping_charge > (jumping_max_charge - 1) || airborne) {
+                wanna_run = false;
+            }
+            
+            var angle_diff = abs(angle_difference(90, waypoint_dir));
+            if (airborne && (angle_diff > 70 || (vspeed > -1 && doublejump_count >= max_doublejumps - 1))) {
+                npc_do_steep_jump = false;
+            }
+        }
+        
     
         // this replaced waypoint_dist in jump_is_charged
         //var max_axis_dist = max(abs(waypoint_hdist), abs(npc_waypoint_y - y));
@@ -290,6 +325,9 @@ function npc_guy2_step() {
         // COMPUTE MORE CLEVER STUFF
         facing_wall = place_meeting(x+facing, y, terrain_obj);
         jump_is_charged = (self.jumping_charge >= ( min(1, waypoint_dist/npc_jump_dist) * jumping_max_charge ));
+        if (npc_do_steep_jump) {
+            jump_is_charged = self.jumping_charge == jumping_max_charge && sprite_index == my_skin[? "guy_crouch"];
+        }
         is_blocked = instance_exists(blocking_terrain);
     
         if(airborne)
@@ -589,7 +627,7 @@ function npc_guy2_step() {
         {
             if(( ( !near_fullstop_point && speed <= max_walking_speed ) // on normal waypoint slow down to walk
                     || (near_fullstop_point && fullstopped_on_point) ) // on fullstop point stop
-                || ( npc_waypoint != npc_final_waypoint && (!airborne || holding_wall) ) // if it's not final wp, being on ground is enough, don't need to slow down
+                || ( !near_fullstop_point && npc_waypoint != npc_final_waypoint && (!airborne || holding_wall) ) // if it's not final wp, being on ground is enough, don't need to slow down
                 || ( near_point_exists && (nearest_waypoint.spawn_point || nearest_waypoint.airborne) )) // spawn and airborne points have no conditions
             {
                 /*
@@ -706,7 +744,7 @@ function npc_guy2_step() {
             
                 if(is_undefined(nearest_wp_id))
                 {
-                    show_debug_message("Bad waypoint? " + string(nearest_waypoint) + " Waypoints group is broken? " + string(wp_group));
+                    my_console_log("Bad waypoint? " + string(nearest_waypoint) + " Waypoints group is broken? " + string(wp_group));
                     nearest_wp_id = "";
                     // bad, shouldn't happen, probably
                 }
