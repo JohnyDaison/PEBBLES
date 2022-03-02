@@ -21,3 +21,7 @@ self.locked = false;
 self.draw_unlocked_border = false;
 self.locked_border_color = merge_colour(c_red,c_black,0.25);
 self.unlocked_border_color = merge_colour(c_green,c_white,0.25);
+
+ondown_function = function() {};
+onrepeat_function = function() {};
+onup_function = function() {};

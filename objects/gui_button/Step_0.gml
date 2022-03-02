@@ -38,6 +38,7 @@ if(enabled && visible)
             self.depressed = true;
             if(self.ondown_script != noone)
                 script_execute(self.ondown_script);
+            ondown_function();
             step_count = 0;
         }
         
@@ -51,6 +52,7 @@ if(enabled && visible)
                     my_sound_play(click_sound, true, 0.1);
                     if(self.onrepeat_script != noone)
                         script_execute(self.onrepeat_script);
+                    onrepeat_function();
                 }
             }
             step_count += 1;
@@ -63,6 +65,7 @@ if(enabled && visible)
                 my_sound_play(click_sound);
                 if(self.onup_script != noone)
                     script_execute(self.onup_script);
+                onup_function();
             }
             if(!sticky)
             {

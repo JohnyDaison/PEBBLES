@@ -29,14 +29,14 @@ if(visible)
         }
     
         if(focused)
-        {   
+        {
             if((mouse_check_button_released(mb_left) && mouse_over) || (DB.gui_controls[# confirm,released] && (!mouse_over || active)))
-            {   
+            {
                 if(!self.active)
                 {
                     if(self.text == self.prompt_str)
                     {
-                        keyboard_string = "";    
+                        keyboard_string = "";
                     }
                     else
                     {
@@ -44,16 +44,17 @@ if(visible)
                     }
                 }
                 if(was_active)
-                {             
+                {
                     self.text = keyboard_string;
                     if(self.onup_script != noone)
                     {
                         script_execute(self.onup_script);
                     }
+                    onup_function();
                 }
                 self.active = !self.active;
                 self.depressed = self.active;
-                my_sound_play(click_sound);    
+                my_sound_play(click_sound);
             }
         }
     
@@ -65,7 +66,7 @@ if(visible)
         if(!focused && had_focus)
         {
             if(was_active)
-            {             
+            {
                 self.text = keyboard_string;
             }
             self.active = false;
@@ -75,7 +76,7 @@ if(visible)
         }
     
         if(self.depressed)
-        { 
+        {
             self.text_color = self.depressed_text_color;
             self.bg_color = self.depressed_color;
         }
