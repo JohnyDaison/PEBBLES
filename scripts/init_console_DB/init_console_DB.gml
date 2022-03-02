@@ -76,6 +76,7 @@ function init_console_DB() {
     add_console_script("dumpinst", command_dump_instance, "number", "List all variables and values of instance(1)");
     add_console_script("dumplist", command_dump_list, "number", "List all values in list(1)");
     add_console_script("dumpmap", command_dump_map, "number", "List all keys and values of map(1)");
+    add_console_script("watches", open_watches_window, "[number]", "Open Watches window. If 0 is passed as (1), close it instead");
 
     add_console_script("camfollow", camera_override, "number, object", "Make the camera(1) follow instance(2)");
     add_console_script("camgoto", camera_position, "number, number, number", "Move the camera(1) to coordinates[2,3]");
@@ -127,7 +128,7 @@ function init_console_DB() {
 
     ds_list_add(test, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 
-    ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph", "infocursor");
+    ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph", "infocursor", "watches");
     console_modes[? "test"] = test;
 
 
@@ -158,4 +159,6 @@ function init_console_DB() {
     debug_keys_list = create_debug_keys_list();
     
     read_command_history_file();
+    
+    create_watch_types();
 }

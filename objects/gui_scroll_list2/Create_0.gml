@@ -49,6 +49,39 @@ add_item = function() {
         centered = true;
         item_index = ds_list_find_index(other.gui_content, id);
     }
+    item_count++;
+    
+    return pane;
+}
+
+insert_item = function(index) {
+    eloffset_x = x;
+    eloffset_y = y;
+    update();
+    
+    if (index < 0) {
+        index += item_count + 1;
+    }
+    
+    var pane = add_item();
+    var diff = index - pane.item_index;
+    
+    if (index < 0 || diff >= 0) {
+        return pane;
+    }
+    
+    var item_full_height = pane.height + vertical_margin;
+    var old_y = get_y_of_item(pane.item_index);
+    var new_y = get_y_of_item(index);
+    var y_delta = new_y - old_y;
+    
+    ds_list_delete(gui_content, pane.item_index);
+    ds_list_insert(gui_content, index, pane);
+    pane.item_index = index;
+    
+    gui_move_element(pane, pane.x, pane.y + y_delta);
+    
+    reposition_lower_items(index + 1, item_full_height);
     
     return pane;
 }
@@ -71,6 +104,7 @@ resize_item = function(index, height) {
 reposition_lower_items = function(start_index, y_delta) {
     for (var index = start_index; index < item_count; index++) {
         var child = gui_content[| index];
+        child.item_index = index;
         
         gui_move_element(child, child.x, child.y + y_delta);
     }
@@ -236,4 +270,35 @@ set_visibility_range = function() {
             gui_hide_element(child);
         }
     }
+}
+
+remove_item = function(index) {
+    var child = gui_content[| index];
+    
+    if (is_undefined(child)) {
+        return;
+    }
+    
+    var diff = -(child.height + vertical_margin);
+    instance_destroy(child);
+    ds_list_delete(gui_content, index);
+    item_count--;
+    
+    if (item_count == 0) {
+        cur_item = -1;
+    }
+    
+    reposition_lower_items(index, diff);
+}
+
+remove_all_items = function() {
+    for (var index = item_count - 1; index >= 0; index--) {
+        var child = gui_content[| index];
+        
+        instance_destroy(child);
+        ds_list_delete(gui_content, index);
+    }
+    
+    item_count = 0;
+    cur_item = -1;
 }

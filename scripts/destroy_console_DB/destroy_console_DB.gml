@@ -34,4 +34,7 @@ function destroy_console_DB() {
     ds_map_destroy(console_vars);
     ds_map_destroy(console_modes);
     ds_map_destroy(objectmap);
+    
+    ds_list_destroy(watch_type_name_list);
+    ds_list_destroy(watch_type_id_list);
 }

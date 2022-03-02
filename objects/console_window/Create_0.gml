@@ -130,10 +130,13 @@ with(menu_pane)
     
     i = gui_add_button(192, 64, "Copy & Execute", console_dropdown_copyparse);
     i.align = "left";
+    
+    i = gui_add_button(416, 64, "Watches", open_watches_window);
+    i.align = "left";
 }
 
 if (DB.console_history_cur_item == -1) {
-    history_list.cur_item = history_list.item_count;	
+    history_list.cur_item = history_list.item_count;
     history_list.selection_pos = history_list.max_items;
 } else {
     history_list.cur_item = DB.console_history_cur_item;

@@ -120,7 +120,7 @@ if(DB.mouse_has_moved && mouse_check_button_pressed(mb_any))
         {
             var name = object_get_name(object_index);
             show_debug_message("cursor is in frame " + name);
-            var is_console = object_index == console_window;
+            var is_console = object_index == console_window || object_index == watches_window;
             
             if(!new_is_console && (new_frame == noone || is_console 
                     || (!focused_is_modal && !new_is_modal) || modal)) {
