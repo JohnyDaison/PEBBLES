@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_wallclimbhold_biker","path":"sprites/guy_wallclimbhold_biker/guy_wallclimbhold_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_wallclimbhold_biker",
     "tags": [],
     "resourceType": "GMSequence",

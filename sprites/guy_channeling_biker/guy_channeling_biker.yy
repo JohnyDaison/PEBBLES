@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_channeling_biker","path":"sprites/guy_channeling_biker/guy_channeling_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_channeling_biker",
     "tags": [],
     "resourceType": "GMSequence",

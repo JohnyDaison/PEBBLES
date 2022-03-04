@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_wallclimbup_biker","path":"sprites/guy_wallclimbup_biker/guy_wallclimbup_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_wallclimbup_biker",
     "tags": [],
     "resourceType": "GMSequence",

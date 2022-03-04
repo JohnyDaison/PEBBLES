@@ -60,7 +60,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sudden_death_start_mod_icon","path":"sprites/sudden_death_start_mod_icon/sudden_death_start_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sudden_death_start_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

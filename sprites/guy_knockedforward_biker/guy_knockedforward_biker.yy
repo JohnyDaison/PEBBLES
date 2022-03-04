@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_knockedforward_biker","path":"sprites/guy_knockedforward_biker/guy_knockedforward_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_knockedforward_biker",
     "tags": [],
     "resourceType": "GMSequence",

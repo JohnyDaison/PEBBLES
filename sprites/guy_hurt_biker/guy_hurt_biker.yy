@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_hurt_biker","path":"sprites/guy_hurt_biker/guy_hurt_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_hurt_biker",
     "tags": [],
     "resourceType": "GMSequence",

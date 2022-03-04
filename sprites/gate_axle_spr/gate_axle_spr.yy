@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"LayerId":{"name":"ef62ccbe-61cc-4f93-90cd-d4d5ed3c9128","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"LayerId":{"name":"d30fdbea-7b3b-41e7-833a-c48c1efcc9ea","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"LayerId":{"name":"ef62ccbe-61cc-4f93-90cd-d4d5ed3c9128","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"gate_axle_spr","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"resourceVersion":"1.0","name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -43,7 +43,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6357c243-b052-4c87-b298-0698dc782934","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -60,7 +60,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gate_axle_spr","path":"sprites/gate_axle_spr/gate_axle_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gate_axle_spr",
     "tags": [],
     "resourceType": "GMSequence",

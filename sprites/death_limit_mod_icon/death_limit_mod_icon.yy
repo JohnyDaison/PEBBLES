@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"death_limit_mod_icon","path":"sprites/death_limit_mod_icon/death_limit_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "death_limit_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

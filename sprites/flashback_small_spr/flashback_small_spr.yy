@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"flashback_small_spr","path":"sprites/flashback_small_spr/flashback_small_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "flashback_small_spr",
     "tags": [],
     "resourceType": "GMSequence",

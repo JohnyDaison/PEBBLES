@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"time_limit_mod_icon","path":"sprites/time_limit_mod_icon/time_limit_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "time_limit_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

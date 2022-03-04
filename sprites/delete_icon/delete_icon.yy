@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"delete_icon","path":"sprites/delete_icon/delete_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "delete_icon",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tiny_flag_capsule_spr","path":"sprites/tiny_flag_capsule_spr/tiny_flag_capsule_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tiny_flag_capsule_spr",
     "tags": [],
     "resourceType": "GMSequence",

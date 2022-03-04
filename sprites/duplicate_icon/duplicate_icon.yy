@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":{"name":"4d5cdec9-9127-4c19-be33-8979740f6609","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":{"name":"6b9b1d5f-dfc0-4d4f-93e0-063069f1b251","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":{"name":"e1081ece-ed74-46f8-95cd-488446df15f2","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":{"name":"6b9b1d5f-dfc0-4d4f-93e0-063069f1b251","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"41d905f6-3804-4235-985b-25e138f36f9a","path":"sprites/duplicate_icon/duplicate_icon.yy",},"LayerId":{"name":"4d5cdec9-9127-4c19-be33-8979740f6609","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"duplicate_icon","path":"sprites/duplicate_icon/duplicate_icon.yy",},"resourceVersion":"1.0","name":"41d905f6-3804-4235-985b-25e138f36f9a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -61,7 +61,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"duplicate_icon","path":"sprites/duplicate_icon/duplicate_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "duplicate_icon",
     "tags": [],
     "resourceType": "GMSequence",

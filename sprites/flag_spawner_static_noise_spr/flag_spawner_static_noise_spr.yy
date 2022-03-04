@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"flag_spawner_static_noise_spr","path":"sprites/flag_spawner_static_noise_spr/flag_spawner_static_noise_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "flag_spawner_static_noise_spr",
     "tags": [],
     "resourceType": "GMSequence",

@@ -97,7 +97,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"typed_tiles1_spr","path":"sprites/typed_tiles1_spr/typed_tiles1_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "",
     "tags": [],
     "resourceType": "GMSequence",

@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"LayerId":{"name":"ec2d5e77-4c89-461b-a56f-6f50896ca791","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"LayerId":{"name":"3325faa1-37ae-49d4-8037-f364a637e25b","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"LayerId":{"name":"ec2d5e77-4c89-461b-a56f-6f50896ca791","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"gate_dot_spr","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"resourceVersion":"1.0","name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -43,7 +43,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"84d87ea6-02ca-4463-9d47-c47d0fd931c0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18a8d2a7-193f-47f2-87b5-af8e09d77171","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -60,7 +60,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gate_dot_spr","path":"sprites/gate_dot_spr/gate_dot_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gate_dot_spr",
     "tags": [],
     "resourceType": "GMSequence",

@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_walk_biker","path":"sprites/guy_walk_biker/guy_walk_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_walk_biker",
     "tags": [],
     "resourceType": "GMSequence",

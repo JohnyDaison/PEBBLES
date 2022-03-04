@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_charging_biker","path":"sprites/guy_charging_biker/guy_charging_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_charging_biker",
     "tags": [],
     "resourceType": "GMSequence",

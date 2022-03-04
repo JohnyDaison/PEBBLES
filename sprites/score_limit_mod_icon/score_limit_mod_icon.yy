@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"score_limit_mod_icon","path":"sprites/score_limit_mod_icon/score_limit_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "score_limit_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

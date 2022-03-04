@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"flag_capsule_spr","path":"sprites/flag_capsule_spr/flag_capsule_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "flag_capsule_spr",
     "tags": [],
     "resourceType": "GMSequence",

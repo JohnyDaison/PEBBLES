@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"darkness_mod_icon","path":"sprites/darkness_mod_icon/darkness_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "darkness_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

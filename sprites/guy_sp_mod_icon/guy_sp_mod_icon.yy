@@ -61,7 +61,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_sp_mod_icon","path":"sprites/guy_sp_mod_icon/guy_sp_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_sp_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

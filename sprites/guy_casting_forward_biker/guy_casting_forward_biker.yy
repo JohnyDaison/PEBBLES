@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_casting_forward_biker","path":"sprites/guy_casting_forward_biker/guy_casting_forward_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_casting_forward_biker",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_stand_biker","path":"sprites/guy_stand_biker/guy_stand_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_stand_biker",
     "tags": [],
     "resourceType": "GMSequence",

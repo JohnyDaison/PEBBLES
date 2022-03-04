@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"568fb779-01df-475f-8728-db3265a5abe6","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"568fb779-01df-475f-8728-db3265a5abe6","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"LayerId":{"name":"d5468591-73da-4fde-9399-1a680a075f2e","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"568fb779-01df-475f-8728-db3265a5abe6","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"LayerId":{"name":"7c3d5ec3-e755-498a-96ff-4bed710cddbb","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"568fb779-01df-475f-8728-db3265a5abe6","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"LayerId":{"name":"def01d45-c031-4d4e-bf00-1181bcf5b930","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"568fb779-01df-475f-8728-db3265a5abe6","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"LayerId":{"name":"d5468591-73da-4fde-9399-1a680a075f2e","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"base_crystal_sp_mod_icon","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},"resourceVersion":"1.0","name":"568fb779-01df-475f-8728-db3265a5abe6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -61,7 +61,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"base_crystal_sp_mod_icon","path":"sprites/base_crystal_sp_mod_icon/base_crystal_sp_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "base_crystal_sp_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

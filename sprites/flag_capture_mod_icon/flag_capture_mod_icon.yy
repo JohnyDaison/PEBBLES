@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"flag_capture_mod_icon","path":"sprites/flag_capture_mod_icon/flag_capture_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "flag_capture_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",

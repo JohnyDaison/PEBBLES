@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_idle_biker","path":"sprites/guy_idle_biker/guy_idle_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_idle_biker",
     "tags": [],
     "resourceType": "GMSequence",

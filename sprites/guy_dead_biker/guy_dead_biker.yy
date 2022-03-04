@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_dead_biker","path":"sprites/guy_dead_biker/guy_dead_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_dead_biker",
     "tags": [],
     "resourceType": "GMSequence",

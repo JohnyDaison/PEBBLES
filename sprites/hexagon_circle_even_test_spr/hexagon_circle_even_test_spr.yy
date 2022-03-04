@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"10b45aec-667e-4a85-b50d-dd06630f8171","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"2d755076-38f6-4b16-93fe-e3c828ce196f","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"124d6d94-3e13-4fc2-8be2-61f15510a257","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"13710a52-cf45-4911-90f2-a3b5b2b21f3b","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"124d6d94-3e13-4fc2-8be2-61f15510a257","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"2d755076-38f6-4b16-93fe-e3c828ce196f","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"LayerId":{"name":"10b45aec-667e-4a85-b50d-dd06630f8171","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"hexagon_circle_even_test_spr","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -45,7 +45,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"eb73ffe1-41ae-4e2c-9bba-1e799495741c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,7 +62,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"hexagon_circle_even_test_spr","path":"sprites/hexagon_circle_even_test_spr/hexagon_circle_even_test_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "hexagon_circle_even_test_spr",
     "tags": [],
     "resourceType": "GMSequence",

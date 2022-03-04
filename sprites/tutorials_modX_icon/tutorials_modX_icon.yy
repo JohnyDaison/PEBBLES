@@ -141,7 +141,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tutorials_modX_icon","path":"sprites/tutorials_modX_icon/tutorials_modX_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "",
     "tags": [],
     "resourceType": "GMSequence",

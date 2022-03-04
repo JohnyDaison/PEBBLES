@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"part_star_spr","path":"sprites/part_star_spr/part_star_spr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "part_star_spr",
     "tags": [],
     "resourceType": "GMSequence",

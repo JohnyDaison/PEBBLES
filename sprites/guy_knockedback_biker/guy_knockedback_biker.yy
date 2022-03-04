@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"guy_knockedback_biker","path":"sprites/guy_knockedback_biker/guy_knockedback_biker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "guy_knockedback_biker",
     "tags": [],
     "resourceType": "GMSequence",

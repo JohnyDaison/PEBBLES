@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"base_crystals_mod_icon","path":"sprites/base_crystals_mod_icon/base_crystals_mod_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "base_crystals_mod_icon",
     "tags": [],
     "resourceType": "GMSequence",
