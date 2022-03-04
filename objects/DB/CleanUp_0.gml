@@ -59,9 +59,6 @@ ds_map_destroy(terrain_config);
 // GAMEMODES
 destroy_gamemodes_DB();
 
-// CONSOLE
-destroy_console_DB();
-
 // CHUNK EXCEPTIONS
 ds_list_destroy(chunk_exceptions);
 
@@ -81,3 +78,6 @@ ds_list_destroy(team_names);
 quests_destroy();
 
 ds_map_destroy(bot_names);
+
+// CONSOLE
+destroy_console_DB();

@@ -9,8 +9,9 @@ function quest_node_destroy(quest_id) {
 
     for(i = count - 1; i >= 0; i--)
     {
-        subtask_id = node[? "subtasks_list"];
-        subtask = subtasks[? "subtask_id"];
+        subtask_id = node[? "subtasks_list"][| i];
+        subtask = subtasks[? subtask_id];
+
         ds_map_destroy(subtask);
     }
 
@@ -22,7 +23,7 @@ function quest_node_destroy(quest_id) {
 
     for(i = count - 1; i >= 0; i--)
     {
-        quest_transition_destroy(node, i);
+        quest_transition_destroy(node[? "quest_id"], i);
     }
 
     ds_list_destroy(node[? "state_transitions"]);

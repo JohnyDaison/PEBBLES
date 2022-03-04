@@ -10,4 +10,3 @@ with(cursor_obj)
 {
     instance_destroy();
 }
-
