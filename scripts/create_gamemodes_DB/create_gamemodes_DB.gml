@@ -258,18 +258,23 @@ function create_gamemodes_DB() {
     default_mods[? "score_limit"] = 10;
 
 
-    /*
     // Base survival
     gm = gamemode_create("survival", "Base Survival", true, survival_world);
     gm[? "description"] = "Defend against infinite waves of enemies.";
     gm[? "start_script"] = gm_survival_start;
-    gm[? "min_real_players"] = 0;
+    gm[? "min_real_players"] = 1;
     gm[? "max_players"] = 1;
     gm[? "is_coop"] = true;
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "base_crystals"] = true;
+    forced_mods[? "indestr_terrain"] = false;
+    forced_mods[? "regenerate_terrain"] = false;
+    forced_mods[? "flag_capture"] = false;
+    forced_mods[? "random_item_spawner"] = false;
+    forced_mods[? "snakes_on_a_plane"] = false;
+    forced_mods[? "shield_push"] = true;
     forced_mods[? "tut_guide"] = false;
     
     default_mods = gm[? "default_modifiers"];
@@ -279,7 +284,7 @@ function create_gamemodes_DB() {
     default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
-    */
+    default_mods[? "weak_terrain"] = true;
 
 
     // Old Training
