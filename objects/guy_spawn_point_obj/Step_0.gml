@@ -15,7 +15,7 @@ if(instance_exists(my_spawner))
             my_guy.speed = 0;
             my_guy.alarm[2] = my_spawner.protection_time;
         
-            if(my_guy.wanna_run || my_guy.wanna_jump)
+            if(my_guy.wanna_run || my_guy.wanna_jump || gamemode_obj.mode == "survival")
             {
                 self.activated = false;
                 my_spawner.activated = false;
