@@ -13,6 +13,7 @@ function init_console_DB() {
     console_divider_max_steps = 10;
     console_divider_step_length = 12;
     console_popup_on_log = false;
+    dumpfile_folder = "dumpfiles";
     
     var ccs = console_commands_saved;
 
@@ -73,9 +74,9 @@ function init_console_DB() {
     add_console_script("setstring", set_single_value, "object, string, string", "For all instances(1) set variable(2) to string(3)");
     add_console_script("objname", obj_getname, "number", "Return name of the object with given ID(1)");
     add_console_script("spritename", spr_getname, "number", "Return name of the sprite with given ID(1)");
-    add_console_script("dumpinst", command_dump_instance, "number", "List all variables and values of instance(1)");
-    add_console_script("dumplist", command_dump_list, "number", "List all values in list(1)");
-    add_console_script("dumpmap", command_dump_map, "number", "List all keys and values of map(1)");
+    add_console_script("dumpinst", command_dump_instance, "object [, number]", "List all variables and values of instance(1), bool(2) = create dumpfile");
+    add_console_script("dumplist", command_dump_list, "number [, number]", "List all values in list(1), bool(2) = create dumpfile");
+    add_console_script("dumpmap", command_dump_map, "number [, number]", "List all keys and values of map(1), bool(2) = create dumpfile");
     add_console_script("watches", open_watches_window, "[number]", "Open Watches window. If 0 is passed as (1), close it instead");
 
     add_console_script("camfollow", camera_override, "number, object", "Make the camera(1) follow instance(2)");
