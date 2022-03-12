@@ -9,7 +9,7 @@ walkable = true;
 hp = 5;
 my_color = g_white;
 my_shield = noone;
-shield_ready = true;
+shield_ready = gamemode_obj.mode != "survival";
 destroyed = false;
 name = "Plasma Cannon";
 draw_label = true;
