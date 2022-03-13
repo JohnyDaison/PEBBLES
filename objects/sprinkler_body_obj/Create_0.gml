@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 6;
+hp = 9;
 radius = 31;
 flight_speed = 2;
 max_speed = 3;
@@ -16,7 +16,8 @@ body_tint = c_ltgray;
 incoming_lockon_range = 208;
 smoke_resistant = true;
 airborne = true;
-refire_time = 15;
+refire_time = 20;
+gun_rotation_speed = 120/refire_time;
 
 min_terrain_dist = 24;
 min_burst_dist = 52;

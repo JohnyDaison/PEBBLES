@@ -28,6 +28,6 @@ repeat(gun_count)
     
     gun.rel_rotation_angle = gun_angle;
     gun_angle += gun_angle_step;
-    gun.rel_rotation_speed = 10/gun_count;
+    gun.rel_rotation_speed = gun_rotation_speed/gun_count;
 }
 
