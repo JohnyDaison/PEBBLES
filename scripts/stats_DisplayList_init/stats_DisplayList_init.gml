@@ -78,6 +78,10 @@ function stats_DisplayList_init(labels, stats) {
     stats[| i++] = "sprinklers_killed_total";
     labels[| i]  = "Sprinklers killed personally";
     stats[| i++] = "sprinklers_killed_by_guy";
+    labels[| i]  = "Spitters killed";
+    stats[| i++] = "spitters_killed_total";
+    labels[| i]  = "Spitters killed personally";
+    stats[| i++] = "spitters_killed_by_guy";
     labels[| i]  = "Slimes killed";
     stats[| i++] = "slimes_killed_total";
     labels[| i]  = "Slimes killed personally";

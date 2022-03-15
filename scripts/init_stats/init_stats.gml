@@ -51,6 +51,8 @@ function init_stats() {
     stats[? "mobs_killed_by_guy"] = 0;
     stats[? "sprinklers_killed_total"] = 0;
     stats[? "sprinklers_killed_by_guy"] = 0;
+    stats[? "spitters_killed_total"] = 0;
+    stats[? "spitters_killed_by_guy"] = 0;
     stats[? "slimes_killed_total"] = 0;
     stats[? "slimes_killed_by_guy"] = 0;
 

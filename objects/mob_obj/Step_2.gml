@@ -26,6 +26,10 @@ if(done_for)
                 {
                     increase_stat(la_player,"sprinklers_killed_by_guy", 1, false);
                 }
+                else if(object_index == spitter_body_obj)
+                {
+                    increase_stat(la_player,"spitters_killed_by_guy", 1, false);
+                }
                 else if(object_index == slime_mob_obj)
                 {
                     increase_stat(la_player,"slimes_killed_by_guy", 1, false);
@@ -50,6 +54,10 @@ if(done_for)
             if(object_index == sprinkler_body_obj)
             {
                 increase_stat(la_player,"sprinklers_killed_total", 1, false);
+            }
+            else if(object_index == spitter_body_obj)
+            {
+                increase_stat(la_player,"spitters_killed_total", 1, false);
             }
             else if(object_index == slime_mob_obj)
             {
