@@ -34,13 +34,13 @@ ready = false;
 active = false;
 walkable = true;
 
-ready_power[? g_dark]    = 0;
+ready_power[? g_dark]     = 0;
 ready_power[? g_red]      = 0.9;
 ready_power[? g_green]    = 0.95;
 ready_power[? g_blue]     = 0.9;
 ready_power[? g_yellow]   = 0.9;
-ready_power[? g_magenta]   = 0.9;
-ready_power[? g_cyan]    = 0.2;
+ready_power[? g_magenta]  = 0.9;
+ready_power[? g_cyan]     = 1;
 ready_power[? g_white]    = 0.9;
 ready_power[? g_octarine] = 0.9;
 
