@@ -7,7 +7,7 @@ function init_abilities_DB() {
     abi_cooldowns[? g_blue] = 900;
     abi_cooldowns[? g_yellow] = 1600;
     abi_cooldowns[? g_magenta] = 1620;
-    abi_cooldowns[? g_cyan] = 4200;
+    abi_cooldowns[? g_cyan] = 8400;
     abi_cooldowns[? g_white] = 36000;
     
     // MAP OF GAME COLORS TO ABILITIES
