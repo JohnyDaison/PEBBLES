@@ -1,5 +1,9 @@
 function levels_load_config(config) {
-    if(config == "match")
+    if(config == "reset")
+    {
+        init_levels_gamemode();
+    }
+    else if(config == "match")
     {
         config_level_gamemode("charged_jump",       "", "", 2);
         config_level_gamemode("air_jump",           "", "", 2);
@@ -130,6 +134,13 @@ function levels_load_config(config) {
     {
         config_level_gamemode("guy_orbit",          "", "", "", 2);
         config_level_gamemode("chargeball",         "", "", "", 2);
+    }
+    else if(config == "no_attacks")
+    {
+        config_level_gamemode("dark_mode",          "", "", 0, 0);
+        config_level_gamemode("blast_mode",         "", "", 0, 0);
+        config_level_gamemode("barrage_mode",       "", "", 0, 0);
+        config_level_gamemode("dashwave_mode",      "", "", 0, 0);
     }
     else if(config == "no_abilities")
     {
