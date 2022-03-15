@@ -49,9 +49,9 @@ function define_rule_presets_DB(presets) {
     default_rules[? "score_limit"] = false;
     
     
-    // CLASH
+    // ARENA
     
-    preset = presets.add("clash_novice", "Novice");
+    preset = presets.add("arena_novice", "Novice");
     
     forced_rules = preset.forced_modifiers;
     forced_rules[? "hp_death"] = false;
@@ -88,7 +88,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "shield_push"] = true;
     
     
-    preset = presets.add("clash_apprentice", "Apprentice");
+    preset = presets.add("arena_apprentice", "Apprentice");
     
     forced_rules = preset.forced_modifiers;
     forced_rules[? "guy_shield_power"] = false;
@@ -119,7 +119,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "score_limit"] = 200;
     
     
-    preset = presets.add("clash_arcade", "Arcade");
+    preset = presets.add("arena_arcade", "Arcade");
     
     forced_rules = preset.forced_modifiers;
     forced_rules[? "turrets"] = false;
@@ -146,7 +146,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "score_limit"] = 200;
     
     
-    preset = presets.add("clash_standard", "Pandemonium");
+    preset = presets.add("arena_standard", "Pandemonium");
     
     default_rules = preset.default_modifiers;
     default_rules[? "turrets"] = true;

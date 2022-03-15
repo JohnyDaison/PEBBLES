@@ -103,8 +103,8 @@ function create_gamemodes_DB() {
     default_mods[? "abilities"] = true;
 
 
-    // Clash
-    gm = gamemode_create("clash", "Clash", false, arena_world);
+    // Arena
+    gm = gamemode_create("arena", "Arena", false, arena_world);
     gm[? "description"] = "Fight another player (or a bot) in various arenas.";
 
     gm[? "min_players"] = 2;
@@ -113,7 +113,7 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
     
-    ds_list_add(gm[? "rule_presets"], "clash_novice", "clash_apprentice", "clash_arcade", "clash_standard");
+    ds_list_add(gm[? "rule_presets"], "arena_novice", "arena_apprentice", "arena_arcade", "arena_standard");
 
     forced_mods = gm[? "forced_modifiers"];
     forced_mods[? "tut_guide"] = false;

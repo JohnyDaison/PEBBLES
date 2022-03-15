@@ -65,9 +65,11 @@ function stats_DisplayList_init(labels, stats) {
 
     labels[| i]  = "";
     stats[| i++] = "";
-    labels[| i]  = "MOBS & ARTIFACTS";
+    labels[| i]  = "ARTIFACTS & MOBS";
     stats[| i++] = "";
 
+    labels[| i]  = "Artifacts destroyed";
+    stats[| i++] = "artifacts_destroyed";
     labels[| i]  = "Mobs killed";
     stats[| i++] = "mobs_killed_total";
     labels[| i]  = "Mobs killed personally";
@@ -80,10 +82,8 @@ function stats_DisplayList_init(labels, stats) {
     stats[| i++] = "slimes_killed_total";
     labels[| i]  = "Slimes killed personally";
     stats[| i++] = "slimes_killed_by_guy";
-    labels[| i]  = "Artifacts destroyed";
-    stats[| i++] = "artifacts_destroyed";
-
-
+    
+    
     labels[| i]  = "";
     stats[| i++] = "";
     labels[| i]  = "TURRETS";
