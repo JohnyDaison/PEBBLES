@@ -31,7 +31,7 @@ lightning_strikes_delay_ratio = 1/30; // every 40 steps
 lightning_strikes_prob_ratio = 0.35;
 
 // SLIME MOBS
-slime_mob_count = 5;
+slime_mob_count = 4;
 
 // SPAWNABLES
 spawnables = ds_list_create();
@@ -51,7 +51,7 @@ spawn_ratio = ds_map_create();
 
 spawn_ratio[? "snake"] = 2; //1
 spawn_ratio[? "star_core"] = 2; //1
-spawn_ratio[? "slime_mob"] = 2; //1
+spawn_ratio[? "slime_mob"] = 1; //1
 spawn_ratio[? "artifact"] = 5; //10
 spawn_ratio[? "lightning_strike"] = 100; //1
 spawn_ratio[? "small_bolt"] = 100; //95
