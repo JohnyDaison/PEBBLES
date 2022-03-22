@@ -30,12 +30,22 @@ da_ball = noone;
 
 subscribe_event("ballzone_enter", volleyball_event_script);
 
+subscribe_event("player_death", function(event, source, context_str, params) {
+    with(player_obj) {
+        if (number != 0 && team_number == source.my_player.team_number) {
+            increase_stat(id, "score", -1, true);
+        }
+    }
+});
+
 with(player_obj)
 {
     ball_touches = 0;
     was_touching_ball = false;
     touching_ball = false;
 }
+
+gamemode_obj.battlefeed.visible = false;
 
 alarm[1] = 2;
 alarm[2] = 4;

@@ -2,7 +2,7 @@
 
 if(!gamemode_obj.limit_reached && instance_exists(guy_obj))
 {
-    var inst = create_energy_ball(shield_generator_structure_obj, "artillery_shot", current_color, 2.1);
+    var inst = create_energy_ball(shield_generator_structure_obj, "artillery_shot", current_color, 1.5);
     inst.y -= ball_y_offset;
     var dir;
     switch(has_ball_number)

@@ -2,6 +2,8 @@ with(guy_obj)
 {
     if(my_player != gamemode_obj.environment)
     {
+        last_attacker_reset();
+        
         if(my_color != my_player.number)
         {
             my_color = other.player_colors[? my_player.number];
@@ -62,7 +64,7 @@ else
             pl4.ball_touches = 0;
         }
     }
-            
+    
     if(pl2.touching_ball || (!is_undefined(pl4) && pl4.touching_ball))
     {
         pl1.ball_touches = 0;
@@ -80,12 +82,12 @@ else
             {
                 ball_touches++;
                 
-                var teammate = noone; 
+                var teammate = noone;
                 with(player_obj)
                 {
-                    if(id != other.id && team_number == other.team_number)   
+                    if(id != other.id && team_number == other.team_number)
                     {
-                        teammate = id;   
+                        teammate = id;
                     }
                 }
                 
@@ -141,7 +143,7 @@ with(wall_obj)
 {
     if(mod_get_state("indestr_terrain"))
     {
-        color_locked = true;   
+        color_locked = true;
     }
     if(cover != cover_indestr)
     {
@@ -150,7 +152,7 @@ with(wall_obj)
             energy = max(0, energy - 0.01);
             if(energy == 0)
             {
-                my_next_color = g_dark;   
+                my_next_color = g_dark;
             }
         }
     }

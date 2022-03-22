@@ -92,6 +92,10 @@ function guy_die_from_falling() {
     
     broadcast_event("object_destroy", id, params);
     
+    if (my_player.my_guy == id) {
+        broadcast_event("player_death", id, params);
+    }
+    
     
     lost_control = true;
     front_hit = true;

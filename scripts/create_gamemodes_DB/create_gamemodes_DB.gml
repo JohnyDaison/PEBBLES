@@ -175,7 +175,7 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "shield_push"] = true;
+    forced_mods[? "shield_push"] = false;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "cannons"] = false;
     forced_mods[? "turrets"] = false;
@@ -185,7 +185,7 @@ function create_gamemodes_DB() {
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
     forced_mods[? "heavy_shots"] = false;
-    forced_mods[? "equal_colors"] = false;
+    forced_mods[? "equal_colors"] = true;
     forced_mods[? "base_colors_only"] = false;
     forced_mods[? "slime_mob_rain"] = false;
     forced_mods[? "artifacts"] = false;
@@ -194,12 +194,9 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_hp"] = false;
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;    
+    forced_mods[? "flag_capture"] = false;
 
     default_mods = gm[? "default_modifiers"];
-    default_mods[? "weak_terrain"] = true;
-    default_mods[? "regenerate_terrain"] = true;
-    default_mods[? "death_limit"] = true;
     default_mods[? "score_limit"] = 10;
     
     

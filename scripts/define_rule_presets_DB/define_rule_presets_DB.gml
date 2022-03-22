@@ -18,12 +18,10 @@ function define_rule_presets_DB(presets) {
     
     forced_rules = preset.forced_modifiers;
     forced_rules[? "indestr_terrain"] = false;
+    forced_rules[? "regenerate_terrain"] = true;
 
     default_rules = preset.default_modifiers;
     default_rules[? "weak_terrain"] = true;
-    default_rules[? "regenerate_terrain"] = true;
-    default_rules[? "death_limit"] = true;
-    default_rules[? "score_limit"] = true;
     
     
     preset = presets.add("court_attrition", "Court Attrition");
@@ -34,9 +32,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "death_limit"] = true;
 
     default_rules = preset.default_modifiers;
-    default_rules[? "weak_terrain"] = false;
     default_rules[? "death_limit"] = 5;
-    default_rules[? "score_limit"] = true;
     
     
     preset = presets.add("volley_infinite", "Infinite Game");
@@ -45,7 +41,6 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "regenerate_terrain"] = true;
 
     default_rules = preset.default_modifiers;
-    default_rules[? "death_limit"] = false;
     default_rules[? "score_limit"] = false;
     
     
