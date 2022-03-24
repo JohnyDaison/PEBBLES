@@ -4,9 +4,15 @@ function guy_die_from_falling() {
     var la_player = last_attacker_map[? "player"];
     var who = last_attacker_map[? "source_id"];
     var is_suicide = false;
+    var is_player_guy = my_player.my_guy == id;
 
+    // KILL STATS
     if(instance_exists(la_player))
     {
+        var is_la_player_guy = false;
+        if (instance_exists(who)) {
+            is_la_player_guy = who == la_player.my_guy;
+        }
         // KILLED BY ANOTHER
         if(la_player.team_number != my_player.team_number && gamemode_obj.is_deathmatch)
         {
@@ -14,32 +20,31 @@ function guy_die_from_falling() {
             {
                 score_value = gamemode_obj.score_values[? "npc_kills_guy"];
                         
-                if(instance_exists(who))
-                {
-                    if(object_is_ancestor(who.object_index, guy_obj))
-                    {
-                        score_value = gamemode_obj.score_values[? "guy_kills_guy"];
-                        increase_stat(la_player, "personal_kills", 1, false);
+                if(is_la_player_guy) {
+                    score_value = gamemode_obj.score_values[? "guy_kills_guy"];
+                    increase_stat(la_player, "personal_kills", 1, false);
+                    
+                    if (is_player_guy) {
                         if(my_player != gamemode_obj.environment)
                         {
                             who.min_damage += gamemode_obj.soul_tear * (who.hp - who.min_damage);
                         }
-                    }
-                }
                 
-                if(gamemode_obj.player_count > 1
-                && my_player != gamemode_obj.environment
-                && isPlayerStat(la_player, "score", "lowest", true))
-                {
-                    score_value += gamemode_obj.score_values[? "underdog_kill_bonus"];
-                    increase_stat(la_player, "underdog_kills", 1, false);
-                    battlefeed_post_string(la_player, "Underdog Kill");
+                        if(gamemode_obj.player_count > 1
+                        && my_player != gamemode_obj.environment
+                        && isPlayerStat(la_player, "score", "lowest", true))
+                        {
+                            score_value += gamemode_obj.score_values[? "underdog_kill_bonus"];
+                            increase_stat(la_player, "underdog_kills", 1, false);
+                            battlefeed_post_string(la_player, "Underdog Kill");
+                        }
+                    }
+                    
+                    increase_stat(la_player, "kills", 1, false);
+                    increase_stat(la_player, "killstreak", 1, false);
                 }
                 
                 score_value = round(score_value * self.score_multiplier);
-                
-                increase_stat(la_player, "kills", 1, false);
-                increase_stat(la_player, "killstreak", 1, false);
                 increase_stat(la_player, "score", score_value, false);
                 stat_str = stat_label("score", score_value, "+");
             }
@@ -62,51 +67,51 @@ function guy_die_from_falling() {
             
         last_attacker_update(id, "body", "fall");
     }
-        
-    if(is_suicide)
-    {
-        score_value = gamemode_obj.score_values[? "guy_suicide"];
-        
-        increase_stat(my_player,"suicides", 1, false);
-        if(!gamemode_obj.is_campaign && gamemode_obj.is_deathmatch)
-        {
-            increase_stat(my_player, "score", score_value, false);
-            stat_str = stat_label("score", score_value, "+");
-        }
-    }
     
-    
-    battlefeed_post_destruction(id, id.last_attacker_map, stat_str);
-    
-    increase_stat(my_player,"deaths",1,false);
-    increase_stat(my_player,"deathstreak",1,false);
-    
-    set_stat(my_player,"killstreak",0,false);
-    set_stat(my_player,"spellstreak",0,false);
-    set_stat(my_player,"abilitystreak",0,false);
-    
-    
+    // REPORT
     var params = create_params_map();
-    params[? "who"] = last_attacker_map[? "source_id"];
+    params[? "who"] = who;
     params[? "who_player"] = la_player;
     
+    battlefeed_post_destruction(id, id.last_attacker_map, stat_str);
     broadcast_event("object_destroy", id, params);
     
-    if (my_player.my_guy == id) {
+    // DEATH STATS
+    if (is_player_guy) {
+        if (is_suicide) {
+            score_value = gamemode_obj.score_values[? "guy_suicide"];
+        
+            increase_stat(my_player,"suicides", 1, false);
+            if(!gamemode_obj.is_campaign && gamemode_obj.is_deathmatch)
+            {
+                increase_stat(my_player, "score", score_value, false);
+                stat_str = stat_label("score", score_value, "+");
+            }
+        }
+        
+        increase_stat(my_player,"deaths",1,false);
+        increase_stat(my_player,"deathstreak",1,false);
+    
+        set_stat(my_player,"killstreak",0,false);
+        set_stat(my_player,"spellstreak",0,false);
+        set_stat(my_player,"abilitystreak",0,false);
+
         broadcast_event("player_death", id, params);
     }
     
-    
+    // GUY STATE
     lost_control = true;
     front_hit = true;
     dead = true;
     invisible = true;
     
-    if(instance_exists(my_player.my_camera) && my_player.my_guy == id)
+    // SHOW DEATH COVER
+    if(instance_exists(my_player.my_camera) && is_player_guy)
     {
         my_player.my_camera.death_cover_show = true;
     }
     
+    // DESTROY SHIELD
     if(instance_exists(my_shield))
     {
         with(my_shield)
@@ -125,7 +130,7 @@ function guy_die_from_falling() {
     body_unequip_all(id);
     
     // PLAYER GUY
-    if(my_player.my_guy == id)
+    if(is_player_guy)
     {
         if(!respawn_allowed())
         {

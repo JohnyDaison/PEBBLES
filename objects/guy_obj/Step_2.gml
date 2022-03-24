@@ -209,7 +209,9 @@ if(!self.climbing_up)
             create_damage_popup(diff, my_color, id, "wall");
             
             // STATS
-            my_player.wall_dmg_total += diff;
+            if (my_player.my_guy == id) {
+                my_player.wall_dmg_total += diff;
+            }
         }
     }
     
@@ -413,7 +415,9 @@ if(!self.climbing_up)
                     last_attacker_update(ter_block, "body", "damage");
                 
                     // STATS
-                    my_player.wall_dmg_total += diff;
+                    if (my_player.my_guy == id) {
+                        my_player.wall_dmg_total += diff;
+                    }
                 
                     self.jumping_charge = 0;
                 }

@@ -79,7 +79,9 @@ if(!done_for)
                 create_damage_popup(diff, guy.my_color, guy, "lifespark");
                 done_for = true;
                 my_sound_play(slot_absorbed_sound);
-                increase_stat(guy.my_player, "sparks_absorbed", 1, false);
+                if (guy.my_player.my_guy == guy) {
+                    increase_stat(guy.my_player, "sparks_absorbed", 1, false);
+                }
             }
         }
     }

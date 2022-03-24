@@ -3,7 +3,7 @@ event_inherited();
 self.step_count += 1;
 
 // COUNT TIME ON ENEMY SIDE
-if(!gamemode_obj.is_coop && gamemode_obj.player_count == 2)
+if(!gamemode_obj.is_coop && gamemode_obj.player_count == 2 && my_player.my_guy == id)
 {
     var enemy_side = false;
     if(my_player.number == 1)
@@ -523,7 +523,9 @@ if(self.channeling)
             channel_orig_color = -1;
         }
         
-        increase_stat(my_player, "channeling_time", channel_duration, false);
+        if (my_player.my_guy == id) {
+            increase_stat(my_player, "channeling_time", channel_duration, false);
+        }
         
         channeling = false;
         channel_duration = 0;
@@ -1113,7 +1115,9 @@ if(!self.frozen_in_time)
             vspeed = self.jumping_burstpower/2;
             self.have_jumped = true;
             //self.have_dived = true;
-            increase_stat(my_player, "jumps", 1, false);
+            if (my_player.my_guy == id) {
+                increase_stat(my_player, "jumps", 1, false);
+            }
         }
         
         // CHARGE
@@ -1238,7 +1242,9 @@ if(!self.frozen_in_time)
             self.is_jumping = true;
             self.have_jumped = true;
             self.jumping_charge = 0;
-            increase_stat(my_player, "jumps", 1, false);
+            if (my_player.my_guy == id) {
+                increase_stat(my_player, "jumps", 1, false);
+            }
         }
         
         // GLIDE/AIRBREAK
@@ -1316,7 +1322,9 @@ if(!self.frozen_in_time)
                     //doublejump_count++;
                     doublejump_count = max_doublejumps;
                     my_sound_play(swoop_sound);
-                    increase_stat(my_player, "jumps", 1, false);
+                    if (my_player.my_guy == id) {
+                        increase_stat(my_player, "jumps", 1, false);
+                    }
                 }
             }
             
@@ -1385,7 +1393,9 @@ if(!self.frozen_in_time)
                 doublejump_count++;
                 //doublejump_facing = facing;
                 my_sound_play(swoop_sound);
-                increase_stat(my_player, "jumps", 1, false);
+                if (my_player.my_guy == id) {
+                    increase_stat(my_player, "jumps", 1, false);
+                }
             }
             
             if(is_doublejumping && (step_count - doublejump_start_step)*flip_anim_speed >= 6)
@@ -1474,7 +1484,9 @@ if(!self.frozen_in_time)
         {
             self.is_walljumping = false;
             self.climbing_up = true;
-            increase_stat(my_player, "jumps", 1, false);
+            if (my_player.my_guy == id) {
+                increase_stat(my_player, "jumps", 1, false);
+            }
         }
 
         self.holding_wall = false;
@@ -1486,7 +1498,9 @@ if(!self.frozen_in_time)
             locked = false;
             self.have_jumped = true;
             self.is_walljumping = false;
-            increase_stat(my_player, "jumps", 1, false);
+            if (my_player.my_guy == id) {
+                increase_stat(my_player, "jumps", 1, false);
+            }
         }
     }
         
@@ -1739,10 +1753,12 @@ if(!self.frozen_in_time)
                     abi_last_script[? my_abi_color] = step_count;
                     
                     if(success) {
-                        increase_stat(my_player,"abilities",1,noone);
-                        increase_stat(my_player,"abilities" + string(my_abi_color),1,noone);
-                        increase_stat(my_player,"abilitystreak",1,noone);
-                        increase_stat(my_player,"combo",1,noone);
+                        if (my_player.my_guy == id) {
+                            increase_stat(my_player,"abilities",1,noone);
+                            increase_stat(my_player,"abilities" + string(my_abi_color),1,noone);
+                            increase_stat(my_player,"abilitystreak",1,noone);
+                            increase_stat(my_player,"combo",1,noone);
+                        }
                     
                         var params = create_params_map();
                         params[? "who"] = id;

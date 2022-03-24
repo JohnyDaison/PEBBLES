@@ -609,7 +609,7 @@ function receive_damage() {
                 self.tint = merge_color(ds_map_find_value(DB.colormap,my_color),last_damage_tint,damage_tint_ratio);
                 self.tint_updated = false;
             
-                if(object_is_ancestor(object_index, guy_obj))
+                if(object_is_ancestor(object_index, guy_obj) && my_player.my_guy == id)
                 {
                     if(final_damage > 0)
                     {
@@ -638,10 +638,11 @@ function receive_damage() {
                 
                     var la_player = last_attacker_map[? "player"];
                     var what = last_attacker_map[? "source"];
+                    var who = last_attacker_map[? "source_id"];
                 
                     if(what == guy_obj)
                     {
-                        if(final_damage > 0)
+                        if(final_damage > 0 && who.my_player.my_guy == who)
                         {
                             la_player.dealt_dmg_total += final_damage;
                         }

@@ -10,8 +10,11 @@ function guy_consume_shard(shard) {
 
     var orig_damage = damage;
     damage = max(min_damage, damage - shard.stack_size * shard.energy);
-    var damage_healed = orig_damage - damage;
-    my_player.healed_dmg_total += damage_healed;
+    
+    if (my_player.my_guy == id) {
+        var damage_healed = orig_damage - damage;
+        my_player.healed_dmg_total += damage_healed;
+    }
     
     // TODO: ORB REPLENISH
 

@@ -17,7 +17,9 @@ function abi_flashback_step() {
     tint = ds_map_find_value(old_state,"tint");
     var orig_damage = damage;
     damage = ds_map_find_value(old_state,"damage");
-    my_player.rewound_dmg_total += orig_damage - damage;
+    if (my_player.my_guy == id) {
+        my_player.rewound_dmg_total += orig_damage - damage;
+    }
 
     if(self.flashing_back && time_left <= time_rate)
     {

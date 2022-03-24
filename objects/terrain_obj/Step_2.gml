@@ -16,11 +16,12 @@ if(done_for && !destroyed)
         
         var la_player = last_attacker_map[? "player"];
         var what = last_attacker_map[? "source"];
+        var who = last_attacker_map[? "source_id"];
         
         if(instance_exists(la_player))
         {
             increase_stat(la_player, "terrain_destroyed", 1, false);
-            if(what == guy_obj || what == emp_grenade_obj)
+            if((what == guy_obj && who == who.my_player.my_guy) || what == emp_grenade_obj)
             {
                 increase_stat(la_player, "terrain_destroyed_by_guy", 1, false);
             }

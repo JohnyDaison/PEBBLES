@@ -1,10 +1,10 @@
 if(!cancelled)
 {
-    // BATTLEFEED AND SCORE    
+    // BATTLEFEED AND SCORE
     var score_str = "", i;
     var la_player = my_block.last_attacker_map[? "player"];
     var who = my_block.last_attacker_map[? "source_id"];
-    var what = last_attacker_map[? "source"];
+    var what = my_block.last_attacker_map[? "source"];
 
     if(instance_exists(la_player))
     {
@@ -12,7 +12,7 @@ if(!cancelled)
         {
             var score_value = 0;
    
-            if(my_block.last_attacker_map[? "source"] == guy_obj)
+            if(what == guy_obj && who == who.my_player.my_guy)
             {
                 score_value = gamemode_obj.score_values[? "guy_kills_turret"];
             }
@@ -31,7 +31,7 @@ if(!cancelled)
         if(la_player != turret.my_player)
         {
             increase_stat(la_player, "turrets_destroyed", 1, false);
-            if(what == guy_obj)
+            if(what == guy_obj && who == who.my_player.my_guy)
             {
                 increase_stat(la_player, "turrets_destroyed_by_guy", 1, false);
             }

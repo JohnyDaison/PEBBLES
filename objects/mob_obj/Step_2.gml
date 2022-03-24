@@ -7,6 +7,7 @@ if(done_for)
 {
     var la_player = last_attacker_map[? "player"];
     var what = last_attacker_map[? "source"];
+    var who = last_attacker_map[? "source_id"];
     
     var xx, yy, i, dir;
     
@@ -17,9 +18,13 @@ if(done_for)
             var full_score = false;
             var score_value = my_score_value;
             var score_str = "";
+            var is_la_player_guy = false;
+            if (instance_exists(who)) {
+                is_la_player_guy = who == who.my_player.my_guy;
+            }
 
-            if(what == guy_obj) 
-            {   
+            if(is_la_player_guy)
+            {
                 full_score = true;
                 increase_stat(la_player,"mobs_killed_by_guy", 1, false);
                 if(object_index == sprinkler_body_obj)
@@ -42,7 +47,7 @@ if(done_for)
             }
             
             if(la_player != my_player)
-            {    
+            {
                 score_str = stat_label("score", score_value, "+");
                 
                 increase_stat(la_player, "score", score_value, false);
