@@ -438,8 +438,12 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
             i = instance_create(cursor_obj.room_x, cursor_obj.room_y, basic_bot); 
             with(i)
             {
-                //sparring_bot1_init();
-                //npc_script = sparring_bot1;
+                var player = gamemode_obj.players[? cursor_obj.my_color];
+            
+                if(!is_undefined(player))
+                {
+                    my_player = player;
+                }
             
                 if(instance_exists(place_controller_obj) && place_controller_obj.nav_graph_exists)
                 {
@@ -451,15 +455,6 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 {
                     arena_bot1_init();
                     npc_script = arena_bot1;
-                }
-            
-                // difficulty = 1;
-            
-                var player = gamemode_obj.players[? cursor_obj.my_color];
-            
-                if(!is_undefined(player))
-                {
-                    my_player = player;
                 }
             }
         }
