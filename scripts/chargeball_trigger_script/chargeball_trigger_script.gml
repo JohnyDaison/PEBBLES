@@ -116,7 +116,7 @@ function chargeball_trigger_script() {
                             if(my_guy.my_shield.my_color != self.my_color)
                             {
                                 my_guy.my_shield.my_color = self.my_color;
-                                my_guy.my_shield.tint_updated = false;                       
+                                my_guy.my_shield.tint_updated = false;
                             }
                             
                             ret = true;
@@ -136,7 +136,7 @@ function chargeball_trigger_script() {
                     }
                     else
                     {
-                        my_sound_play(failed_sound);                
+                        my_sound_play(failed_sound);
                     }
                 }
             }
@@ -149,7 +149,7 @@ function chargeball_trigger_script() {
                     inst.direction = aim_direction;
                     inst.speed = 3 + 7 * self.charge;
                 
-                    if(object_is_ancestor(my_guy.object_index, guy_obj))
+                    if(is_player_guy)
                     {
                         viewshake(my_player.my_camera,
                             point_direction(inst.hspeed, inst.vspeed, 0, 0), 5);
@@ -242,7 +242,7 @@ function chargeball_trigger_script() {
                     inst.my_source = object_index;
                     inst.my_ball = id;
                     inst.holographic = self.holographic;
-                    my_guy.my_beam = inst;          
+                    my_guy.my_beam = inst;
                     my_guy.casting_beam = true;
                     firing = true;
 
@@ -277,7 +277,7 @@ function chargeball_trigger_script() {
                             }
                         }
                     }
-                    ret = true;      
+                    ret = true;
                 }
             }
         }  

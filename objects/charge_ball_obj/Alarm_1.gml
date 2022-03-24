@@ -24,7 +24,7 @@ if(instance_exists(my_guy))
     
     inst.direction = point_direction(0,0, rel_x, rel_y);
     
-    if(object_is_ancestor(my_guy.object_index, guy_obj))
+    if(object_is_ancestor(my_guy.object_index, guy_obj) && my_guy.my_player.my_guy == my_guy)
     {
         viewshake(my_player.my_camera, inst.direction+180, 3);
     }

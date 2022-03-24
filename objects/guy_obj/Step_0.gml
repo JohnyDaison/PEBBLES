@@ -797,7 +797,9 @@ if(!self.frozen_in_time)
                         i.impact_force = speed/max_speed;
                         i.holographic = holographic;
                         my_sound_play(impact_sound);
-                        viewshake(my_player.my_camera, 270, 12);
+                        if (my_player.my_guy == id) {
+                            viewshake(my_player.my_camera, 270, 12);
+                        }
                         hspeed = 0;
                         
                         ubershielded = is_shielded(id, "uber");

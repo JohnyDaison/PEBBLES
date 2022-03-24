@@ -171,7 +171,7 @@ if(falling && singleton_obj.step_count mod 5 == 0)
             with(guy_obj)
             {
                 var cam = my_player.my_camera;
-                if(cam != noone)
+                if(cam != noone && my_player.my_guy == id)
                 {
                     var dist = point_distance(x,y,other.x,other.y);
                     if(dist < other.shake_range)

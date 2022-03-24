@@ -1,6 +1,6 @@
 event_inherited();
 
-if(my_player == gamemode_obj.environment)
+if(my_player == gamemode_obj.environment || my_player.my_guy != id)
 {
     with(camera_obj)
     {
