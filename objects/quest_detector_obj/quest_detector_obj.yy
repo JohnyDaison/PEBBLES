@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spawner_spr",
-    "path": "sprites/spawner_spr/spawner_spr.yy",
+    "name": "quest_detector_spr",
+    "path": "sprites/quest_detector_spr/quest_detector_spr.yy",
   },
   "solid": false,
   "visible": true,

@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "structures",
-    "path": "folders/Objects/Game/structures.yy",
+    "name": "movement",
+    "path": "folders/Objects/Game/structures/movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "jump_pad_obj",

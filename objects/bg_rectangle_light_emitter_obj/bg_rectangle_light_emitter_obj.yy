@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "structures",
-    "path": "folders/Objects/Game/structures.yy",
+    "name": "lights",
+    "path": "folders/Objects/Game/structures/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "bg_rectangle_light_emitter_obj",

@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "structures",
-    "path": "folders/Sprites/structures.yy",
+    "name": "lights",
+    "path": "folders/Sprites/structures/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "point_light_emitter_spr",

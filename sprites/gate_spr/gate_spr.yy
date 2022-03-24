@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "structures",
-    "path": "folders/Sprites/structures.yy",
+    "name": "gate",
+    "path": "folders/Sprites/structures/gate.yy",
   },
   "resourceVersion": "1.0",
   "name": "gate_spr",

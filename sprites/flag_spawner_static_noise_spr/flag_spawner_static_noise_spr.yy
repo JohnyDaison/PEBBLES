@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "structures",
-    "path": "folders/Objects/Game/structures.yy",
+    "path": "folders/Sprites/structures.yy",
   },
   "resourceVersion": "1.0",
   "name": "flag_spawner_static_noise_spr",

@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/spawner_spr/spawner_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/spawner_spr/spawner_spr.yy",},"LayerId":{"name":"530dcb3c-e46f-45a0-8816-f934dfbabe18","path":"sprites/spawner_spr/spawner_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spawner_spr","path":"sprites/spawner_spr/spawner_spr.yy",},"resourceVersion":"1.0","name":"1d6d5db1-bb54-4a23-a505-90979eef829b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},"LayerId":{"name":"530dcb3c-e46f-45a0-8816-f934dfbabe18","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"quest_detector_spr","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},"resourceVersion":"1.0","name":"1d6d5db1-bb54-4a23-a505-90979eef829b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spawner_spr","path":"sprites/spawner_spr/spawner_spr.yy",},
+    "spriteId": {"name":"quest_detector_spr","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -41,10 +41,10 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8d3bab09-e053-41c7-a6ae-f98e3e784f89","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/spawner_spr/spawner_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8d3bab09-e053-41c7-a6ae-f98e3e784f89","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d6d5db1-bb54-4a23-a505-90979eef829b","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -58,9 +58,9 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spawner_spr","path":"sprites/spawner_spr/spawner_spr.yy",},
+    "parent": {"name":"quest_detector_spr","path":"sprites/quest_detector_spr/quest_detector_spr.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "quest_detector_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -69,11 +69,11 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "structures",
-    "path": "folders/Sprites/structures.yy",
+    "name": "energy",
+    "path": "folders/Sprites/structures/energy.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spawner_spr",
+  "name": "quest_detector_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }

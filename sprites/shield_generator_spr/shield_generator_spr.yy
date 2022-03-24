@@ -75,8 +75,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "structures",
-    "path": "folders/Sprites/structures.yy",
+    "name": "combat",
+    "path": "folders/Sprites/structures/combat.yy",
   },
   "resourceVersion": "1.0",
   "name": "shield_generator_spr",

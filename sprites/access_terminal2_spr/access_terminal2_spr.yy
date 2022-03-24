@@ -151,8 +151,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "structures",
-    "path": "folders/Sprites/structures.yy",
+    "name": "energy",
+    "path": "folders/Sprites/structures/energy.yy",
   },
   "resourceVersion": "1.0",
   "name": "access_terminal2_spr",
