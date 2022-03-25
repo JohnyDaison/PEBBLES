@@ -56,38 +56,10 @@ function create_player_things(player) {
     // GUY
     if(player.is_cpu)
     {
-        new_guy = instance_create(x,y, basic_bot);
+        new_guy = create_npc_guy(x, y, player);
     
         with(new_guy)
         {
-            my_player = player;
-            if(gamemode_obj.mode == "volleyball")
-            {
-                /*
-                if(player.number == 1)
-                {
-                    volleyball_bot1_init();
-                    npc_script = volleyball_bot1;
-                    npc_destroy_script = volleyball_bot1_destroy;
-                }
-                else
-                {*/
-                    volleyball_bot2_init();
-                    npc_script = volleyball_bot2;
-                    npc_destroy_script = volleyball_bot2_destroy;
-                //}
-            }
-            else if(instance_exists(place_controller_obj) && place_controller_obj.nav_graph_exists)
-            {
-                arena_bot3_init();
-                npc_script = arena_bot3;
-                npc_destroy_script = arena_bot3_destroy;
-            }
-            else
-            {
-                arena_bot1_init();
-                npc_script = arena_bot1;
-            }
             difficulty = player.cpu_difficulty;
             bot_speed = difficulty;
             bot_complexity = difficulty;

@@ -28,27 +28,29 @@ if(instance_exists(chunkgrid_obj))
     }
     
     // ORBS
-    var col, ii, list, orb, orb_count;
-    for(col=g_dark; col<=g_blue; col++)
-    {
-        if(col == g_yellow)
+    if (orbs_ready) {
+        var col, ii, list, orb, orb_count;
+        for(col=g_dark; col<=g_blue; col++)
         {
-            continue;
-        }
-        
-        list = orbs_in_use[? col];
-        orb_count = ds_list_size(list);
-        
-        for(ii = 0; ii < orb_count; ii++)
-        {
-            orb = list[| ii];
-            if(instance_exists(orb) && orb.object_index == data_holder_obj)
+            if(col == g_yellow)
             {
-                orb.x = x;
-                orb.y = y;
+                continue;
+            }
+        
+            list = orbs_in_use[? col];
+            orb_count = ds_list_size(list);
+        
+            for(ii = 0; ii < orb_count; ii++)
+            {
+                orb = list[| ii];
+                if(instance_exists(orb) && orb.object_index == data_holder_obj)
+                {
+                    orb.x = x;
+                    orb.y = y;
                 
-                chunk_deregister(chunkgrid_obj, orb);
-                my_console_log("CHUNKED ORB FIX");
+                    chunk_deregister(chunkgrid_obj, orb);
+                    my_console_log("CHUNKED ORB FIX");
+                }
             }
         }
     }

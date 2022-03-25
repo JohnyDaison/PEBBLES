@@ -107,6 +107,7 @@ regen_coef = 1;
 */
 
 // MOVEMENT
+self.running = 1;
 self.running_power = 0.2;
 self.running_maxspeed = 5;
 self.slowed_maxspeed = 1.5;
