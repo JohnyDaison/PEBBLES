@@ -1387,6 +1387,7 @@
     {"id":{"name":"anim_control_press_action","path":"scripts/anim_control_press_action/anim_control_press_action.yy",},"order":2,},
     {"id":{"name":"two_towers_arena","path":"rooms/two_towers_arena/two_towers_arena.yy",},"order":21,},
     {"id":{"name":"anim_control_release_action","path":"scripts/anim_control_release_action/anim_control_release_action.yy",},"order":3,},
+    {"id":{"name":"bot_spawner_trigger_obj","path":"objects/bot_spawner_trigger_obj/bot_spawner_trigger_obj.yy",},"order":16,},
     {"id":{"name":"anim_control_hold_action","path":"scripts/anim_control_hold_action/anim_control_hold_action.yy",},"order":4,},
     {"id":{"name":"create_group","path":"scripts/create_group/create_group.yy",},"order":0,},
     {"id":{"name":"get_group","path":"scripts/get_group/get_group.yy",},"order":1,},

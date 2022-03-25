@@ -49,7 +49,7 @@ count = i;
 // SPAWNABLES - PROBABILITY PERCENT
 spawn_ratio = ds_map_create();
 
-spawn_ratio[? "snake"] = 2; //1
+spawn_ratio[? "snake"] = 1; //1
 spawn_ratio[? "star_core"] = 2; //1
 spawn_ratio[? "slime_mob"] = 1; //1
 spawn_ratio[? "artifact"] = 5; //10

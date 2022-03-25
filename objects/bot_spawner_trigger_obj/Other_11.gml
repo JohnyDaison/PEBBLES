@@ -1,0 +1,1 @@
+bot_spawner_obj.trigger_spawn(my_guy);

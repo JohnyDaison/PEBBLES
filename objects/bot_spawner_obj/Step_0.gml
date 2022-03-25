@@ -25,6 +25,4 @@ for(var index = 0; index < guy_count; index++) {
             }
         }
     }
-    
-    trigger_spawn(guy);
 }
