@@ -1431,6 +1431,7 @@
     {"id":{"name":"command_debug_key_list","path":"scripts/command_debug_key_list/command_debug_key_list.yy",},"order":7,},
     {"id":{"name":"circle_precision_command","path":"scripts/circle_precision_command/circle_precision_command.yy",},"order":8,},
     {"id":{"name":"quest_nodes_printout","path":"scripts/quest_nodes_printout/quest_nodes_printout.yy",},"order":0,},
+    {"id":{"name":"test_methods_structs","path":"scripts/test_methods_structs/test_methods_structs.yy",},"order":1,},
     {"id":{"name":"quest_debug_printout","path":"scripts/quest_debug_printout/quest_debug_printout.yy",},"order":1,},
     {"id":{"name":"player_quest_state_printout","path":"scripts/player_quest_state_printout/player_quest_state_printout.yy",},"order":2,},
     {"id":{"name":"player_quest_log_printout","path":"scripts/player_quest_log_printout/player_quest_log_printout.yy",},"order":3,},
