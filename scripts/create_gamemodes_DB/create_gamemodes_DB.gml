@@ -40,7 +40,7 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "curve_balls"] = false;
     forced_mods[? "equal_colors"] = false;
     forced_mods[? "base_colors_only"] = false;
     forced_mods[? "shield_push"] = true;
@@ -184,7 +184,7 @@ function create_gamemodes_DB() {
     forced_mods[? "bad_status_effects"] = false;
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
-    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "curve_balls"] = false;
     forced_mods[? "equal_colors"] = true;
     forced_mods[? "base_colors_only"] = false;
     forced_mods[? "slime_mob_rain"] = false;
@@ -233,7 +233,7 @@ function create_gamemodes_DB() {
     forced_mods[? "bad_status_effects"] = false;
     forced_mods[? "abilities"] = false;
     forced_mods[? "tutorials"] = false;
-    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "curve_balls"] = false;
     forced_mods[? "equal_colors"] = false;
     forced_mods[? "base_colors_only"] = false;
     forced_mods[? "slime_mob_rain"] = false;
@@ -302,7 +302,7 @@ function create_gamemodes_DB() {
     forced_mods[? "dark_orb_energy_lock"] = false;
     forced_mods[? "color_orbs_energy_lock"] = false;
     forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "heavy_shots"] = false;
+    forced_mods[? "curve_balls"] = false;
     forced_mods[? "equal_colors"] = false;
     forced_mods[? "base_colors_only"] = false;
     forced_mods[? "shield_push"] = true;

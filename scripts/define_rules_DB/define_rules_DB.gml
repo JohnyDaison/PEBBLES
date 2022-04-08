@@ -18,7 +18,7 @@ function define_rules_DB() {
     
     gamemode_mod_create("orbs_energy_min_lock", "Orb Energy min-lock", "bool", true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below 100%.");
 
-    gamemode_mod_create("heavy_shots", "Heavy Bolts", "bool", true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
+    gamemode_mod_create("curve_balls", "Curve Balls", "bool", true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
     gamemode_mod_create("equal_colors", "Equal Colors", "bool", true, equal_colors_mod_icon, "All Colors are equal in damage.");
     

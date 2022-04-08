@@ -17,5 +17,5 @@ function define_rule_categories_DB(categories) {
     ds_list_add(category.rule_list, "random_item_spawner", "snakes_on_a_plane", "bolt_rain", "slime_mob_rain", "artifacts", "lightning_strikes");
     
     category = categories.add("Other");
-    ds_list_add(category.rule_list, "always_sliding", "heavy_shots", "shield_push", "tutorials", "tut_guide");
+    ds_list_add(category.rule_list, "always_sliding", "curve_balls", "shield_push", "tutorials", "tut_guide");
 }

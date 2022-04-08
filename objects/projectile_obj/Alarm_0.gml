@@ -1,8 +1,15 @@
 ///@description SET UP FRICTION AND MODS
 friction = orig_friction;
 
-var be_heavy = mod_get_state("heavy_shots") ||
-                (object_is_child(my_guy, guy_obj) && my_guy.status_left[? "heavy_shots"] > 0);
+var curve_ball = mod_get_state("curve_balls");
+var be_heavy = object_is_child(my_guy, guy_obj) && my_guy.status_left[? "heavy_shots"] > 0;
+
+if(curve_ball)
+{
+    was_stopped = true;
+    gravity_coef *= 2;
+    gravity = gravity_coef;
+}
 
 if(be_heavy)
 {
