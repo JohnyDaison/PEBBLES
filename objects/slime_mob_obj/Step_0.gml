@@ -97,7 +97,7 @@ else
     
     inside_entity = place_meeting(x,y, phys_body_obj);
     blocking_entity = instance_place(x + facing, y, phys_body_obj);
-    
+    var movingThroughGrates = place_meeting(x,y, grate_block_obj);
     
     /*
     var y2_diff = next_terrain.bbox_top - bbox_bottom;
@@ -111,6 +111,9 @@ else
         friction = friction_air;
         turning = false;
         
+        if (movingThroughGrates && speed > gratesMaxSpeed) {
+            friction = frictionAirGrates;
+        }
         
         if(jumping)
         {
@@ -205,7 +208,7 @@ else
                         if((!instance_exists(jump_block_terrain))
                             && ( instance_exists(jump_body_terrain)
                                 && (jump_body_terrain == next_terrain)
-                                )
+                                && !movingThroughGrates)
                             )
                         {
                             jumpable = true;
@@ -287,6 +290,11 @@ else
                     {
                         if(!instance_exists(blocking_terrain))
                         {
+                            crawl_speed = crawlSpeedNormal;
+                            if (movingThroughGrates) {
+                                crawl_speed = crawlSpeedGrates;
+                            }
+                            
                             hspeed = crawl_speed*facing;
                             image_index = crawl_sprite;
                             rested = false;

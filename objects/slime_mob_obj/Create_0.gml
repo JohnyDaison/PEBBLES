@@ -34,6 +34,11 @@ friction_air = 0.05;
 friction_ground = 0.1;
 image_speed = 0;
 
+gratesMaxSpeed = 2;
+frictionAirGrates = 1;
+crawlSpeedNormal = crawl_speed;
+crawlSpeedGrates = 0.7 * crawl_speed;
+
 touch_damage = 0.01;
 touch_damage_threshold = 0.25;
 
