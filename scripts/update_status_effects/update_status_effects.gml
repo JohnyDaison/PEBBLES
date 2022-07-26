@@ -1,7 +1,7 @@
 function update_status_effects() {
     var effect_id, effect;
 
-    for(var i=0; i < DB.status_effect_count; i++)
+    for(var i = 0; i < DB.status_effect_count; i++)
     {
         effect_id = DB.status_effects_list[| i];
         effect = DB.status_effects[? effect_id];
@@ -57,10 +57,10 @@ function update_status_effects() {
                 
                     status_particles[? effect_id] = ii; 
                 
-                    var i = instance_create(x,y-24,text_popup_obj);
-                    i.str = DB.status_effects[? effect_id].name + "!";
-                    i.my_color = DB.status_effects[? effect_id].color;
-                    i.tint_updated = false;
+                    var inst = instance_create(x,y-24,text_popup_obj);
+                    inst.str = DB.status_effects[? effect_id].name + "!";
+                    inst.my_color = DB.status_effects[? effect_id].color;
+                    inst.tint_updated = false;
                 }
             }
             else
