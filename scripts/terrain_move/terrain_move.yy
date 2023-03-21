@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "terrain_move",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "terrain",
     "path": "folders/Scripts/terrain.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "terrain_move",
-  "tags": [],
-  "resourceType": "GMScript",
 }

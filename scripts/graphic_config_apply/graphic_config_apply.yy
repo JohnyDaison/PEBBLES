@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "graphic_config_apply",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "settings",
     "path": "folders/Scripts/actions/settings.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "graphic_config_apply",
-  "tags": [],
-  "resourceType": "GMScript",
 }

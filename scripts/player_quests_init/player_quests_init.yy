@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "player_quests_init",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "player quest state",
     "path": "folders/Scripts/quests/player quest state.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "player_quests_init",
-  "tags": [],
-  "resourceType": "GMScript",
 }

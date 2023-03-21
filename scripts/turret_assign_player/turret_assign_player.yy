@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "turret_assign_player",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "mechanics",
     "path": "folders/Scripts/mechanics.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "turret_assign_player",
-  "tags": [],
-  "resourceType": "GMScript",
 }

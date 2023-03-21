@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "quest_debug_printout",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "quests",
     "path": "folders/Scripts/console/commands/quests.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "quest_debug_printout",
-  "tags": [],
-  "resourceType": "GMScript",
 }

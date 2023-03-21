@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "guy_respawn",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "spawning",
     "path": "folders/Scripts/mechanics/spawning.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "guy_respawn",
-  "tags": [],
-  "resourceType": "GMScript",
 }
