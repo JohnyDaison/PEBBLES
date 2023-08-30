@@ -1,3 +1,5 @@
+instance_destroy(singleton_obj);
+
 // SPEECH TERM COLORS
 speech_terms_destroy();
 

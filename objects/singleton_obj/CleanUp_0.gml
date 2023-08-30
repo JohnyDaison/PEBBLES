@@ -1,3 +1,7 @@
+if (cleanup_done) {
+    exit;
+}
+
 file_delete(working_directory + "players.dat");
 player_file = file_text_open_write(working_directory + "players.dat");
 player_str = ds_list_write(DB.player_names);
@@ -10,3 +14,5 @@ with(cursor_obj)
 {
     instance_destroy();
 }
+
+cleanup_done = true;

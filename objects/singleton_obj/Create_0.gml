@@ -118,3 +118,5 @@ instance_create(0,0,main_light_obj);
 */
 // GO TO MAIN MENU AFTER A DELAY
 singleton_obj.alarm[0] = 5;
+
+cleanup_done = false;
