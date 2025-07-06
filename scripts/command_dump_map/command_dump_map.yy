@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "command_dump_map",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/console/commands/other.yy",
+  "$GMScript":"",
+  "%Name":"command_dump_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"command_dump_map",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/console/commands/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "move_contact_object",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "misc",
-    "path": "folders/Scripts/misc.yy",
+  "$GMScript":"",
+  "%Name":"move_contact_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"move_contact_object",
+  "parent":{
+    "name":"misc",
+    "path":"folders/Scripts/misc.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

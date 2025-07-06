@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "exit_game",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "goto",
-    "path": "folders/Scripts/goto.yy",
+  "$GMScript":"",
+  "%Name":"exit_game",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"exit_game",
+  "parent":{
+    "name":"goto",
+    "path":"folders/Scripts/goto.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

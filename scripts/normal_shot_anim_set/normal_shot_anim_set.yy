@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "normal_shot_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "catalyst",
-    "path": "folders/Scripts/animations/sets/catalyst.yy",
+  "$GMScript":"",
+  "%Name":"normal_shot_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"normal_shot_anim_set",
+  "parent":{
+    "name":"catalyst",
+    "path":"folders/Scripts/animations/sets/catalyst.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

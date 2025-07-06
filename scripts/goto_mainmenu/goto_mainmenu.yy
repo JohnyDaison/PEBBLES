@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "goto_mainmenu",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "goto",
-    "path": "folders/Scripts/goto.yy",
+  "$GMScript":"",
+  "%Name":"goto_mainmenu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"goto_mainmenu",
+  "parent":{
+    "name":"goto",
+    "path":"folders/Scripts/goto.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

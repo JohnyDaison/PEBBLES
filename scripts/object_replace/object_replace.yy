@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "object_replace",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "game_objects",
-    "path": "folders/Scripts/console/commands/game_objects.yy",
+  "$GMScript":"",
+  "%Name":"object_replace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"object_replace",
+  "parent":{
+    "name":"game_objects",
+    "path":"folders/Scripts/console/commands/game_objects.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

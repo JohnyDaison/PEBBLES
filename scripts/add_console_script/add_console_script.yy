@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_console_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "console",
-    "path": "folders/Scripts/console.yy",
+  "$GMScript":"",
+  "%Name":"add_console_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_console_script",
+  "parent":{
+    "name":"console",
+    "path":"folders/Scripts/console.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

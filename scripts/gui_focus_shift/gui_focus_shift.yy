@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_focus_shift",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "focus",
-    "path": "folders/Scripts/GUI/focus.yy",
+  "$GMScript":"",
+  "%Name":"gui_focus_shift",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_focus_shift",
+  "parent":{
+    "name":"focus",
+    "path":"folders/Scripts/GUI/focus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_npc_guy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "guy",
-    "path": "folders/Scripts/npcs/guy.yy",
+  "$GMScript":"",
+  "%Name":"create_npc_guy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_npc_guy",
+  "parent":{
+    "name":"guy",
+    "path":"folders/Scripts/npcs/guy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

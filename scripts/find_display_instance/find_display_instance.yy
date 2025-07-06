@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "find_display_instance",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "management",
-    "path": "folders/Scripts/animations/management.yy",
+  "$GMScript":"",
+  "%Name":"find_display_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"find_display_instance",
+  "parent":{
+    "name":"management",
+    "path":"folders/Scripts/animations/management.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

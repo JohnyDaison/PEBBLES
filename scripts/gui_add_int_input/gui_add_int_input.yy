@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_add_int_input",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "combo",
-    "path": "folders/Scripts/GUI/add/input/combo.yy",
+  "$GMScript":"",
+  "%Name":"gui_add_int_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_int_input",
+  "parent":{
+    "name":"combo",
+    "path":"folders/Scripts/GUI/add/input/combo.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

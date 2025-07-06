@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "guy_die_from_damage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "guy",
-    "path": "folders/Scripts/methods/guy.yy",
+  "$GMScript":"",
+  "%Name":"guy_die_from_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"guy_die_from_damage",
+  "parent":{
+    "name":"guy",
+    "path":"folders/Scripts/methods/guy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

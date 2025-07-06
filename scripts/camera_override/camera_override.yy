@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "camera_override",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/console/commands/camera.yy",
+  "$GMScript":"",
+  "%Name":"camera_override",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_override",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/console/commands/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

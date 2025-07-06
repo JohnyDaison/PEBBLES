@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "jump_pad_onup",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "structure_placer",
-    "path": "folders/Scripts/editor/structure_placer.yy",
+  "$GMScript":"",
+  "%Name":"jump_pad_onup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"jump_pad_onup",
+  "parent":{
+    "name":"structure_placer",
+    "path":"folders/Scripts/editor/structure_placer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

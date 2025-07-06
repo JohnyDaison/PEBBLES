@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "set_guy_facing",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mechanics",
-    "path": "folders/Scripts/mechanics.yy",
+  "$GMScript":"",
+  "%Name":"set_guy_facing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_guy_facing",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

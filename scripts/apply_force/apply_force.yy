@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "apply_force",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mechanics",
-    "path": "folders/Scripts/mechanics.yy",
+  "$GMScript":"",
+  "%Name":"apply_force",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_force",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

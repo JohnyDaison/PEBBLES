@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_debug_keys_list",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "console",
-    "path": "folders/Scripts/console.yy",
+  "$GMScript":"",
+  "%Name":"create_debug_keys_list",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_debug_keys_list",
+  "parent":{
+    "name":"console",
+    "path":"folders/Scripts/console.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

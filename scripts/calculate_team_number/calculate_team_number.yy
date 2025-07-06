@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "calculate_team_number",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "gamemodes",
-    "path": "folders/Scripts/gamemodes.yy",
+  "$GMScript":"",
+  "%Name":"calculate_team_number",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"calculate_team_number",
+  "parent":{
+    "name":"gamemodes",
+    "path":"folders/Scripts/gamemodes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

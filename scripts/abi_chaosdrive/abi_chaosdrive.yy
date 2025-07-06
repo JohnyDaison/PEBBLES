@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "abi_chaosdrive",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "abilities",
-    "path": "folders/Scripts/abilities.yy",
+  "$GMScript":"",
+  "%Name":"abi_chaosdrive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"abi_chaosdrive",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

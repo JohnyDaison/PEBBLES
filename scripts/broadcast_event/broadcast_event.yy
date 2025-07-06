@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "broadcast_event",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "events",
-    "path": "folders/Scripts/events.yy",
+  "$GMScript":"",
+  "%Name":"broadcast_event",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"broadcast_event",
+  "parent":{
+    "name":"events",
+    "path":"folders/Scripts/events.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "volleyball_event_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mechanics",
-    "path": "folders/Scripts/mechanics.yy",
+  "$GMScript":"",
+  "%Name":"volleyball_event_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"volleyball_event_script",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

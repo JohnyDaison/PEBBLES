@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "getset_gamespeed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/console/commands/other.yy",
+  "$GMScript":"",
+  "%Name":"getset_gamespeed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"getset_gamespeed",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/console/commands/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

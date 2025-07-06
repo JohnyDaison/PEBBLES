@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "abi_selfdestruct",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "abilities",
-    "path": "folders/Scripts/abilities.yy",
+  "$GMScript":"",
+  "%Name":"abi_selfdestruct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"abi_selfdestruct",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

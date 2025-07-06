@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "zone_trigger_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "zones",
-    "path": "folders/Scripts/zones.yy",
+  "$GMScript":"",
+  "%Name":"zone_trigger_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"zone_trigger_script",
+  "parent":{
+    "name":"zones",
+    "path":"folders/Scripts/zones.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

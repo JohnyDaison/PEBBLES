@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "object_is_child",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "misc",
-    "path": "folders/Scripts/misc.yy",
+  "$GMScript":"",
+  "%Name":"object_is_child",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"object_is_child",
+  "parent":{
+    "name":"misc",
+    "path":"folders/Scripts/misc.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tut_guide3",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "guide",
-    "path": "folders/Scripts/npcs/guy/guide.yy",
+  "$GMScript":"",
+  "%Name":"tut_guide3",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tut_guide3",
+  "parent":{
+    "name":"guide",
+    "path":"folders/Scripts/npcs/guy/guide.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

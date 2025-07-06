@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "rule_preset_dropdown_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "play_menu_window",
-    "path": "folders/Scripts/GUI/behavior/play_menu_window.yy",
+  "$GMScript":"",
+  "%Name":"rule_preset_dropdown_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rule_preset_dropdown_script",
+  "parent":{
+    "name":"play_menu_window",
+    "path":"folders/Scripts/GUI/behavior/play_menu_window.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

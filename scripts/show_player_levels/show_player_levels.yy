@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "show_player_levels",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/console/commands/other.yy",
+  "$GMScript":"",
+  "%Name":"show_player_levels",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"show_player_levels",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/console/commands/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

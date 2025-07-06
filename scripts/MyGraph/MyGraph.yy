@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MyGraph",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Structs",
-    "path": "folders/Structs.yy",
+  "$GMScript":"",
+  "%Name":"MyGraph",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MyGraph",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "regenerate_nav_graph",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "utils",
-    "path": "folders/Scripts/nav_graphs/utils.yy",
+  "$GMScript":"",
+  "%Name":"regenerate_nav_graph",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"regenerate_nav_graph",
+  "parent":{
+    "name":"utils",
+    "path":"folders/Scripts/nav_graphs/utils.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

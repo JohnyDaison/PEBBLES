@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "chunks_content",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "chunks",
-    "path": "folders/Scripts/chunks.yy",
+  "$GMScript":"",
+  "%Name":"chunks_content",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"chunks_content",
+  "parent":{
+    "name":"chunks",
+    "path":"folders/Scripts/chunks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

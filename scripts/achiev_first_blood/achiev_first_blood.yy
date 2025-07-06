@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "achiev_first_blood",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "achievements",
-    "path": "folders/Scripts/achievements.yy",
+  "$GMScript":"",
+  "%Name":"achiev_first_blood",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"achiev_first_blood",
+  "parent":{
+    "name":"achievements",
+    "path":"folders/Scripts/achievements.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

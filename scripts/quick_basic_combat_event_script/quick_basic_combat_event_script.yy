@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "quick_basic_combat_event_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mechanics",
-    "path": "folders/Scripts/mechanics.yy",
+  "$GMScript":"",
+  "%Name":"quick_basic_combat_event_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"quick_basic_combat_event_script",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

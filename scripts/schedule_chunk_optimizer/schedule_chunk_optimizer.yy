@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "schedule_chunk_optimizer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "chunks",
-    "path": "folders/Scripts/chunks.yy",
+  "$GMScript":"",
+  "%Name":"schedule_chunk_optimizer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"schedule_chunk_optimizer",
+  "parent":{
+    "name":"chunks",
+    "path":"folders/Scripts/chunks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

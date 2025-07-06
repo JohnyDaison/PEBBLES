@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "save_place_onup",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "main",
-    "path": "folders/Scripts/editor/main.yy",
+  "$GMScript":"",
+  "%Name":"save_place_onup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"save_place_onup",
+  "parent":{
+    "name":"main",
+    "path":"folders/Scripts/editor/main.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

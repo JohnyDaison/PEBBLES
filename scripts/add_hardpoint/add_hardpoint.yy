@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_hardpoint",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "equipment",
-    "path": "folders/Scripts/mechanics/equipment.yy",
+  "$GMScript":"",
+  "%Name":"add_hardpoint",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_hardpoint",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/mechanics/equipment.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

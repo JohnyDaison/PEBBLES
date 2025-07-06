@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "stats_DisplayList_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/mechanics/stats.yy",
+  "$GMScript":"",
+  "%Name":"stats_DisplayList_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stats_DisplayList_init",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/mechanics/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

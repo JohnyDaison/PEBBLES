@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "destroy_console_DB",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "console",
-    "path": "folders/Scripts/console.yy",
+  "$GMScript":"",
+  "%Name":"destroy_console_DB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"destroy_console_DB",
+  "parent":{
+    "name":"console",
+    "path":"folders/Scripts/console.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "white_overload_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "basic_combat",
-    "path": "folders/Scripts/animations/sets/basic_combat.yy",
+  "$GMScript":"",
+  "%Name":"white_overload_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"white_overload_anim_set",
+  "parent":{
+    "name":"basic_combat",
+    "path":"folders/Scripts/animations/sets/basic_combat.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

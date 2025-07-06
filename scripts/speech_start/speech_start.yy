@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "speech_start",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "speech",
-    "path": "folders/Scripts/speech.yy",
+  "$GMScript":"",
+  "%Name":"speech_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"speech_start",
+  "parent":{
+    "name":"speech",
+    "path":"folders/Scripts/speech.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "camera_position",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/console/commands/camera.yy",
+  "$GMScript":"",
+  "%Name":"camera_position",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_position",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/console/commands/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

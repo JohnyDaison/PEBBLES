@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_add_mod_numberbox",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "combo",
-    "path": "folders/Scripts/GUI/add/input/combo.yy",
+  "$GMScript":"",
+  "%Name":"gui_add_mod_numberbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_mod_numberbox",
+  "parent":{
+    "name":"combo",
+    "path":"folders/Scripts/GUI/add/input/combo.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

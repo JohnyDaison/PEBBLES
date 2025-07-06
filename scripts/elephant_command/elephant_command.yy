@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "elephant_command",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/console/commands/other.yy",
+  "$GMScript":"",
+  "%Name":"elephant_command",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"elephant_command",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/console/commands/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

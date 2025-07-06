@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "color_sheet_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "advanced_combat",
-    "path": "folders/Scripts/animations/sets/advanced_combat.yy",
+  "$GMScript":"",
+  "%Name":"color_sheet_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"color_sheet_anim_set",
+  "parent":{
+    "name":"advanced_combat",
+    "path":"folders/Scripts/animations/sets/advanced_combat.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

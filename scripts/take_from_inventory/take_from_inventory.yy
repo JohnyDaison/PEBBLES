@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "take_from_inventory",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "inventory",
-    "path": "folders/Scripts/mechanics/inventory.yy",
+  "$GMScript":"",
+  "%Name":"take_from_inventory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"take_from_inventory",
+  "parent":{
+    "name":"inventory",
+    "path":"folders/Scripts/mechanics/inventory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

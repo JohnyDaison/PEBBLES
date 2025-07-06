@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "charged_triple_jump_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "run_jump",
-    "path": "folders/Scripts/animations/sets/run_jump.yy",
+  "$GMScript":"",
+  "%Name":"charged_triple_jump_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"charged_triple_jump_anim_set",
+  "parent":{
+    "name":"run_jump",
+    "path":"folders/Scripts/animations/sets/run_jump.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

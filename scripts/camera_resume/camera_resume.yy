@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "camera_resume",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/console/commands/camera.yy",
+  "$GMScript":"",
+  "%Name":"camera_resume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_resume",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/console/commands/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

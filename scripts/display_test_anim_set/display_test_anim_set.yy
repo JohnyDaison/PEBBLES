@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "display_test_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "sets",
-    "path": "folders/Scripts/animations/sets.yy",
+  "$GMScript":"",
+  "%Name":"display_test_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_test_anim_set",
+  "parent":{
+    "name":"sets",
+    "path":"folders/Scripts/animations/sets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gm_sparring_start",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "start scripts",
-    "path": "folders/Scripts/gamemodes/start scripts.yy",
+  "$GMScript":"",
+  "%Name":"gm_sparring_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gm_sparring_start",
+  "parent":{
+    "name":"start scripts",
+    "path":"folders/Scripts/gamemodes/start scripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

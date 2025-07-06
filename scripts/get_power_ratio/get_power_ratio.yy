@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_power_ratio",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mechanics",
-    "path": "folders/Scripts/mechanics.yy",
+  "$GMScript":"",
+  "%Name":"get_power_ratio",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_power_ratio",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

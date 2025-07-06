@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_light_circle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "graphics",
-    "path": "folders/Scripts/graphics.yy",
+  "$GMScript":"",
+  "%Name":"draw_light_circle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_light_circle",
+  "parent":{
+    "name":"graphics",
+    "path":"folders/Scripts/graphics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

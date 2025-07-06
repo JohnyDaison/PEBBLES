@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "npc_guy2_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "guy",
-    "path": "folders/Scripts/npcs/guy.yy",
+  "$GMScript":"",
+  "%Name":"npc_guy2_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"npc_guy2_init",
+  "parent":{
+    "name":"guy",
+    "path":"folders/Scripts/npcs/guy.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

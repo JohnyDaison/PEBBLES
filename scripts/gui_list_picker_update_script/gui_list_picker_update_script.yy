@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_list_picker_update_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "behavior",
-    "path": "folders/Scripts/GUI/behavior.yy",
+  "$GMScript":"",
+  "%Name":"gui_list_picker_update_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_list_picker_update_script",
+  "parent":{
+    "name":"behavior",
+    "path":"folders/Scripts/GUI/behavior.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

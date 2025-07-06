@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gamemode_picker_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "play_menu_window",
-    "path": "folders/Scripts/GUI/behavior/play_menu_window.yy",
+  "$GMScript":"",
+  "%Name":"gamemode_picker_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gamemode_picker_script",
+  "parent":{
+    "name":"play_menu_window",
+    "path":"folders/Scripts/GUI/behavior/play_menu_window.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "my_sound_stop",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "audio",
-    "path": "folders/Scripts/my_extensions/audio.yy",
+  "$GMScript":"",
+  "%Name":"my_sound_stop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"my_sound_stop",
+  "parent":{
+    "name":"audio",
+    "path":"folders/Scripts/my_extensions/audio.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

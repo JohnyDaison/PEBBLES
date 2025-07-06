@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "stop_holding_item",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "inventory",
-    "path": "folders/Scripts/mechanics/inventory.yy",
+  "$GMScript":"",
+  "%Name":"stop_holding_item",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stop_holding_item",
+  "parent":{
+    "name":"inventory",
+    "path":"folders/Scripts/mechanics/inventory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

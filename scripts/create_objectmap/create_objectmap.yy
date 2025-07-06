@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_objectmap",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "console",
-    "path": "folders/Scripts/console.yy",
+  "$GMScript":"",
+  "%Name":"create_objectmap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_objectmap",
+  "parent":{
+    "name":"console",
+    "path":"folders/Scripts/console.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_params_map",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "events",
-    "path": "folders/Scripts/events.yy",
+  "$GMScript":"",
+  "%Name":"create_params_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_params_map",
+  "parent":{
+    "name":"events",
+    "path":"folders/Scripts/events.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

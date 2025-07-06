@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "open_watches_window",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "console",
-    "path": "folders/Scripts/console.yy",
+  "$GMScript":"",
+  "%Name":"open_watches_window",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"open_watches_window",
+  "parent":{
+    "name":"console",
+    "path":"folders/Scripts/console.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

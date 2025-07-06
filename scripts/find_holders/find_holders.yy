@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "find_holders",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "game_objects",
-    "path": "folders/Scripts/console/commands/game_objects.yy",
+  "$GMScript":"",
+  "%Name":"find_holders",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"find_holders",
+  "parent":{
+    "name":"game_objects",
+    "path":"folders/Scripts/console/commands/game_objects.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

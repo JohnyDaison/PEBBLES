@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "increase_achievement_score",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/mechanics/stats.yy",
+  "$GMScript":"",
+  "%Name":"increase_achievement_score",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"increase_achievement_score",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/mechanics/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

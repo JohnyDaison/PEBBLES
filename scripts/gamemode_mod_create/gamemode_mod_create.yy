@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gamemode_mod_create",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "gamemodes",
-    "path": "folders/Scripts/gamemodes.yy",
+  "$GMScript":"",
+  "%Name":"gamemode_mod_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gamemode_mod_create",
+  "parent":{
+    "name":"gamemodes",
+    "path":"folders/Scripts/gamemodes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

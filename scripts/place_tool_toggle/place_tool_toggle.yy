@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "place_tool_toggle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "main",
-    "path": "folders/Scripts/editor/main.yy",
+  "$GMScript":"",
+  "%Name":"place_tool_toggle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"place_tool_toggle",
+  "parent":{
+    "name":"main",
+    "path":"folders/Scripts/editor/main.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

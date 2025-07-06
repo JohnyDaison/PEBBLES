@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "anim_control_click_action",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "controls",
-    "path": "folders/Scripts/animations/actions/controls.yy",
+  "$GMScript":"",
+  "%Name":"anim_control_click_action",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"anim_control_click_action",
+  "parent":{
+    "name":"controls",
+    "path":"folders/Scripts/animations/actions/controls.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

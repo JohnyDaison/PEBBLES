@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_add_scroll_list2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "basic",
-    "path": "folders/Scripts/GUI/add/input/basic.yy",
+  "$GMScript":"",
+  "%Name":"gui_add_scroll_list2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_scroll_list2",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/GUI/add/input/basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

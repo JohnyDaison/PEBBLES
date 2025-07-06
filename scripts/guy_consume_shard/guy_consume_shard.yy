@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "guy_consume_shard",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "shards",
-    "path": "folders/Scripts/mechanics/shards.yy",
+  "$GMScript":"",
+  "%Name":"guy_consume_shard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"guy_consume_shard",
+  "parent":{
+    "name":"shards",
+    "path":"folders/Scripts/mechanics/shards.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

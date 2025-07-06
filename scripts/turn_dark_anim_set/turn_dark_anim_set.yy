@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "turn_dark_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "advanced_combat",
-    "path": "folders/Scripts/animations/sets/advanced_combat.yy",
+  "$GMScript":"",
+  "%Name":"turn_dark_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"turn_dark_anim_set",
+  "parent":{
+    "name":"advanced_combat",
+    "path":"folders/Scripts/animations/sets/advanced_combat.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

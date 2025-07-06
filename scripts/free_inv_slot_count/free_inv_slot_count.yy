@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "free_inv_slot_count",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "inventory",
-    "path": "folders/Scripts/mechanics/inventory.yy",
+  "$GMScript":"",
+  "%Name":"free_inv_slot_count",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"free_inv_slot_count",
+  "parent":{
+    "name":"inventory",
+    "path":"folders/Scripts/mechanics/inventory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

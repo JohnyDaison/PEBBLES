@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MyVec2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Structs",
-    "path": "folders/Structs.yy",
+  "$GMScript":"",
+  "%Name":"MyVec2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MyVec2",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

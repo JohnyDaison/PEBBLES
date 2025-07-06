@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "end_test_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "main",
-    "path": "folders/Scripts/editor/main.yy",
+  "$GMScript":"",
+  "%Name":"end_test_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"end_test_script",
+  "parent":{
+    "name":"main",
+    "path":"folders/Scripts/editor/main.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

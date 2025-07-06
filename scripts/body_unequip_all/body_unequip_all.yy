@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "body_unequip_all",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "equipment",
-    "path": "folders/Scripts/mechanics/equipment.yy",
+  "$GMScript":"",
+  "%Name":"body_unequip_all",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"body_unequip_all",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/mechanics/equipment.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

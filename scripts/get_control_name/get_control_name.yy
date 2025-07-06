@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_control_name",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "controls",
-    "path": "folders/Scripts/misc/controls.yy",
+  "$GMScript":"",
+  "%Name":"get_control_name",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_control_name",
+  "parent":{
+    "name":"controls",
+    "path":"folders/Scripts/misc/controls.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

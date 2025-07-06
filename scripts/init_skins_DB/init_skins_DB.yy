@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_skins_DB",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "init",
-    "path": "folders/Scripts/init.yy",
+  "$GMScript":"",
+  "%Name":"init_skins_DB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_skins_DB",
+  "parent":{
+    "name":"init",
+    "path":"folders/Scripts/init.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "base_can_heal_me",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "shards",
-    "path": "folders/Scripts/mechanics/shards.yy",
+  "$GMScript":"",
+  "%Name":"base_can_heal_me",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"base_can_heal_me",
+  "parent":{
+    "name":"shards",
+    "path":"folders/Scripts/mechanics/shards.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

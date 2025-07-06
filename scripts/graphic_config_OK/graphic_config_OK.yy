@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "graphic_config_OK",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "settings",
-    "path": "folders/Scripts/actions/settings.yy",
+  "$GMScript":"",
+  "%Name":"graphic_config_OK",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"graphic_config_OK",
+  "parent":{
+    "name":"settings",
+    "path":"folders/Scripts/actions/settings.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

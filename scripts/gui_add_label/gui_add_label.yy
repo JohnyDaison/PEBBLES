@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_add_label",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "basic",
-    "path": "folders/Scripts/GUI/add/basic.yy",
+  "$GMScript":"",
+  "%Name":"gui_add_label",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_label",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/GUI/add/basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "group_find_member",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "groups",
-    "path": "folders/Scripts/groups.yy",
+  "$GMScript":"",
+  "%Name":"group_find_member",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"group_find_member",
+  "parent":{
+    "name":"groups",
+    "path":"folders/Scripts/groups.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

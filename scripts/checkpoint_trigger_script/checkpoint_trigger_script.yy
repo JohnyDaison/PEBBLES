@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "checkpoint_trigger_script",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "triggers",
-    "path": "folders/Scripts/mechanics/behaviours/triggers.yy",
+  "$GMScript":"",
+  "%Name":"checkpoint_trigger_script",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"checkpoint_trigger_script",
+  "parent":{
+    "name":"triggers",
+    "path":"folders/Scripts/mechanics/behaviours/triggers.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

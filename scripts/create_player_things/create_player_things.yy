@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_player_things",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "spawning",
-    "path": "folders/Scripts/mechanics/spawning.yy",
+  "$GMScript":"",
+  "%Name":"create_player_things",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_player_things",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Scripts/mechanics/spawning.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

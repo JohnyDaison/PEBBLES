@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "console_mode_command",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "other",
-    "path": "folders/Scripts/console/commands/other.yy",
+  "$GMScript":"",
+  "%Name":"console_mode_command",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"console_mode_command",
+  "parent":{
+    "name":"other",
+    "path":"folders/Scripts/console/commands/other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

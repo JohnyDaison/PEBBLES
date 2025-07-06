@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "chargeball_orbs_return",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "orbs",
-    "path": "folders/Scripts/mechanics/orbs.yy",
+  "$GMScript":"",
+  "%Name":"chargeball_orbs_return",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"chargeball_orbs_return",
+  "parent":{
+    "name":"orbs",
+    "path":"folders/Scripts/mechanics/orbs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

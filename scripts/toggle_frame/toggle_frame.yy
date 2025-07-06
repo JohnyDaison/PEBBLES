@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "toggle_frame",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "frames",
-    "path": "folders/Scripts/GUI/frames.yy",
+  "$GMScript":"",
+  "%Name":"toggle_frame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"toggle_frame",
+  "parent":{
+    "name":"frames",
+    "path":"folders/Scripts/GUI/frames.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

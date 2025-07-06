@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "sparring_bot1_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "combat",
-    "path": "folders/Scripts/npcs/guy/combat.yy",
+  "$GMScript":"",
+  "%Name":"sparring_bot1_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sparring_bot1_init",
+  "parent":{
+    "name":"combat",
+    "path":"folders/Scripts/npcs/guy/combat.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

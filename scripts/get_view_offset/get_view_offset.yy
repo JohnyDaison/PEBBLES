@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_view_offset",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/misc/camera.yy",
+  "$GMScript":"",
+  "%Name":"get_view_offset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_view_offset",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/misc/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

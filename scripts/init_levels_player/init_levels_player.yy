@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_levels_player",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "players",
-    "path": "folders/Scripts/mechanics/levels/players.yy",
+  "$GMScript":"",
+  "%Name":"init_levels_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_levels_player",
+  "parent":{
+    "name":"players",
+    "path":"folders/Scripts/mechanics/levels/players.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

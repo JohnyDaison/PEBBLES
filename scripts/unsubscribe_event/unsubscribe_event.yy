@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "unsubscribe_event",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "events",
-    "path": "folders/Scripts/events.yy",
+  "$GMScript":"",
+  "%Name":"unsubscribe_event",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"unsubscribe_event",
+  "parent":{
+    "name":"events",
+    "path":"folders/Scripts/events.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

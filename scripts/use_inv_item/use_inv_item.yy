@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "use_inv_item",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "inventory",
-    "path": "folders/Scripts/mechanics/inventory.yy",
+  "$GMScript":"",
+  "%Name":"use_inv_item",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"use_inv_item",
+  "parent":{
+    "name":"inventory",
+    "path":"folders/Scripts/mechanics/inventory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

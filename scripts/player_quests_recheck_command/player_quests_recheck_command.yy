@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_quests_recheck_command",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "quests",
-    "path": "folders/Scripts/console/commands/quests.yy",
+  "$GMScript":"",
+  "%Name":"player_quests_recheck_command",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_quests_recheck_command",
+  "parent":{
+    "name":"quests",
+    "path":"folders/Scripts/console/commands/quests.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_line_dashed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "editor",
-    "path": "folders/Scripts/editor.yy",
+  "$GMScript":"",
+  "%Name":"draw_line_dashed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_line_dashed",
+  "parent":{
+    "name":"editor",
+    "path":"folders/Scripts/editor.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

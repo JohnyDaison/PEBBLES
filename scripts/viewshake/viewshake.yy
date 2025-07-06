@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "viewshake",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/misc/camera.yy",
+  "$GMScript":"",
+  "%Name":"viewshake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"viewshake",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/misc/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

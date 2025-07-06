@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_levels_gamemode",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "gamemodes",
-    "path": "folders/Scripts/mechanics/levels/gamemodes.yy",
+  "$GMScript":"",
+  "%Name":"init_levels_gamemode",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_levels_gamemode",
+  "parent":{
+    "name":"gamemodes",
+    "path":"folders/Scripts/mechanics/levels/gamemodes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

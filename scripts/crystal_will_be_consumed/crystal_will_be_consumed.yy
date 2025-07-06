@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "crystal_will_be_consumed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "shards",
-    "path": "folders/Scripts/mechanics/shards.yy",
+  "$GMScript":"",
+  "%Name":"crystal_will_be_consumed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"crystal_will_be_consumed",
+  "parent":{
+    "name":"shards",
+    "path":"folders/Scripts/mechanics/shards.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

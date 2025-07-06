@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "merge_rules_maps",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "gamemodes",
-    "path": "folders/Scripts/gamemodes.yy",
+  "$GMScript":"",
+  "%Name":"merge_rules_maps",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"merge_rules_maps",
+  "parent":{
+    "name":"gamemodes",
+    "path":"folders/Scripts/gamemodes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

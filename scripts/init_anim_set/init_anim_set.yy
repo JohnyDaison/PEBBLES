@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_anim_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "management",
-    "path": "folders/Scripts/animations/management.yy",
+  "$GMScript":"",
+  "%Name":"init_anim_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_anim_set",
+  "parent":{
+    "name":"management",
+    "path":"folders/Scripts/animations/management.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

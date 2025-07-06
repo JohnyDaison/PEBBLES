@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_group_key",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "groups",
-    "path": "folders/Scripts/groups.yy",
+  "$GMScript":"",
+  "%Name":"get_group_key",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_group_key",
+  "parent":{
+    "name":"groups",
+    "path":"folders/Scripts/groups.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

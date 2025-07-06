@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "message_channeling",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "messages",
-    "path": "folders/Scripts/messages.yy",
+  "$GMScript":"",
+  "%Name":"message_channeling",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"message_channeling",
+  "parent":{
+    "name":"messages",
+    "path":"folders/Scripts/messages.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

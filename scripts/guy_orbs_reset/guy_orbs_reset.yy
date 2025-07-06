@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "guy_orbs_reset",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "orbs",
-    "path": "folders/Scripts/mechanics/orbs.yy",
+  "$GMScript":"",
+  "%Name":"guy_orbs_reset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"guy_orbs_reset",
+  "parent":{
+    "name":"orbs",
+    "path":"folders/Scripts/mechanics/orbs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MyPlaceGraph",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Structs",
-    "path": "folders/Structs.yy",
+  "$GMScript":"",
+  "%Name":"MyPlaceGraph",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MyPlaceGraph",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

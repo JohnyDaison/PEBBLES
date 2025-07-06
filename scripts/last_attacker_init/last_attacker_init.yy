@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "last_attacker_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "last_attacker",
-    "path": "folders/Scripts/mechanics/last_attacker.yy",
+  "$GMScript":"",
+  "%Name":"last_attacker_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"last_attacker_init",
+  "parent":{
+    "name":"last_attacker",
+    "path":"folders/Scripts/mechanics/last_attacker.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

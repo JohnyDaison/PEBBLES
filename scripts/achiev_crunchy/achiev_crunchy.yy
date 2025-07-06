@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "achiev_crunchy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "achievements",
-    "path": "folders/Scripts/achievements.yy",
+  "$GMScript":"",
+  "%Name":"achiev_crunchy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"achiev_crunchy",
+  "parent":{
+    "name":"achievements",
+    "path":"folders/Scripts/achievements.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

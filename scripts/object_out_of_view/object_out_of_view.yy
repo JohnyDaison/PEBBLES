@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "object_out_of_view",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/misc/camera.yy",
+  "$GMScript":"",
+  "%Name":"object_out_of_view",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"object_out_of_view",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/misc/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "guide_movement2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "training",
-    "path": "folders/Scripts/npcs/guy/guide/topics/training.yy",
+  "$GMScript":"",
+  "%Name":"guide_movement2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"guide_movement2",
+  "parent":{
+    "name":"training",
+    "path":"folders/Scripts/npcs/guy/guide/topics/training.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

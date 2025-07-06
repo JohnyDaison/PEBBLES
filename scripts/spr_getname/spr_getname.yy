@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "spr_getname",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "game_objects",
-    "path": "folders/Scripts/console/commands/game_objects.yy",
+  "$GMScript":"",
+  "%Name":"spr_getname",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spr_getname",
+  "parent":{
+    "name":"game_objects",
+    "path":"folders/Scripts/console/commands/game_objects.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

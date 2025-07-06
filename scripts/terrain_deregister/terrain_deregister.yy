@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "terrain_deregister",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "terrain",
-    "path": "folders/Scripts/terrain.yy",
+  "$GMScript":"",
+  "%Name":"terrain_deregister",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"terrain_deregister",
+  "parent":{
+    "name":"terrain",
+    "path":"folders/Scripts/terrain.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

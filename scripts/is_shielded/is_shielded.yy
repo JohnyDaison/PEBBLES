@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_shielded",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "shield",
-    "path": "folders/Scripts/mechanics/shield.yy",
+  "$GMScript":"",
+  "%Name":"is_shielded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_shielded",
+  "parent":{
+    "name":"shield",
+    "path":"folders/Scripts/mechanics/shield.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

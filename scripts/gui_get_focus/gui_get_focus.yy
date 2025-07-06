@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gui_get_focus",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "focus",
-    "path": "folders/Scripts/GUI/focus.yy",
+  "$GMScript":"",
+  "%Name":"gui_get_focus",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_get_focus",
+  "parent":{
+    "name":"focus",
+    "path":"folders/Scripts/GUI/focus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

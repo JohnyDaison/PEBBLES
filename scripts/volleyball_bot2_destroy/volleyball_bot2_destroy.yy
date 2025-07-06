@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "volleyball_bot2_destroy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "volleyball",
-    "path": "folders/Scripts/npcs/guy/volleyball.yy",
+  "$GMScript":"",
+  "%Name":"volleyball_bot2_destroy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"volleyball_bot2_destroy",
+  "parent":{
+    "name":"volleyball",
+    "path":"folders/Scripts/npcs/guy/volleyball.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

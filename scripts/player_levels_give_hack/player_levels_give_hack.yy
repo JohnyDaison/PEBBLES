@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_levels_give_hack",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "players",
-    "path": "folders/Scripts/mechanics/levels/players.yy",
+  "$GMScript":"",
+  "%Name":"player_levels_give_hack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_levels_give_hack",
+  "parent":{
+    "name":"players",
+    "path":"folders/Scripts/mechanics/levels/players.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

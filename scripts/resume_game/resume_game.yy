@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "resume_game",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "goto",
-    "path": "folders/Scripts/goto.yy",
+  "$GMScript":"",
+  "%Name":"resume_game",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"resume_game",
+  "parent":{
+    "name":"goto",
+    "path":"folders/Scripts/goto.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

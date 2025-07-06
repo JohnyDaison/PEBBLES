@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "message_teleport",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "abilities",
-    "path": "folders/Scripts/messages/abilities.yy",
+  "$GMScript":"",
+  "%Name":"message_teleport",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"message_teleport",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/messages/abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
