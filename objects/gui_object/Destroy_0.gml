@@ -9,7 +9,7 @@ if(self.gui_parent != noone)
     with(self.gui_parent)
     {
         ds_list_replace(self.gui_content,
-                        ds_list_find_index(self.gui_content,other),
+                        ds_list_find_index(self.gui_content,other.id),
                         noone);
     }
 }

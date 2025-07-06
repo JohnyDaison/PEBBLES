@@ -1,4 +1,4 @@
-/// @param frame
+/// @param {empty_frame} frame_id
 function close_frame(frame_id) {
 	if(instance_exists(frame_id))
 	{
@@ -11,7 +11,6 @@ function close_frame(frame_id) {
 	            gui_clear_focus(frame_manager);
 	        }
 	        with(frame_id) {
-	            ds_list_delete(frame_manager.gui_content, ds_list_find_index(frame_manager.gui_content,id));
 	            instance_destroy();
 	        };
         
