@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gm_quick_tutorial_start",
   "isCompatibility":false,
   "isDnD":false,

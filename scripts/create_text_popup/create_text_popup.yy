@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_text_popup",
   "isCompatibility":false,
   "isDnD":false,

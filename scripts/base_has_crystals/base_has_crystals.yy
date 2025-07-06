@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"base_has_crystals",
   "isCompatibility":false,
   "isDnD":false,

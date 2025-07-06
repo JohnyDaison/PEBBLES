@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"arena_bot1",
   "isCompatibility":false,
   "isDnD":false,

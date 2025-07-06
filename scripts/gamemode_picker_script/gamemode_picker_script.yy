@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gamemode_picker_script",
   "isCompatibility":false,
   "isDnD":false,

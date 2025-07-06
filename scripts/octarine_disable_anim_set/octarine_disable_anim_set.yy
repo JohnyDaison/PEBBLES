@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"octarine_disable_anim_set",
   "isCompatibility":false,
   "isDnD":false,

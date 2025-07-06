@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_power_ratio",
   "isCompatibility":false,
   "isDnD":false,

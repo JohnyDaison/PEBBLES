@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"orb_green_anim_set",
   "isCompatibility":false,
   "isDnD":false,

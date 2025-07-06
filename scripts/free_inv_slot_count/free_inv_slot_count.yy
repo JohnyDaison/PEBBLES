@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"free_inv_slot_count",
   "isCompatibility":false,
   "isDnD":false,

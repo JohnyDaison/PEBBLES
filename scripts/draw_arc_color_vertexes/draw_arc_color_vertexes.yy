@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_arc_color_vertexes",
   "isCompatibility":false,
   "isDnD":false,

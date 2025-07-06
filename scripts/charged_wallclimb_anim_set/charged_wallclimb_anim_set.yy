@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"charged_wallclimb_anim_set",
   "isCompatibility":false,
   "isDnD":false,

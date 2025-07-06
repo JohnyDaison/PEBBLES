@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_hide_element",
   "isCompatibility":false,
   "isDnD":false,

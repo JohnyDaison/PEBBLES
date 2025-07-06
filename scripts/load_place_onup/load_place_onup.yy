@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"load_place_onup",
   "isCompatibility":false,
   "isDnD":false,

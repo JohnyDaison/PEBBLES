@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"observer_add",
   "isCompatibility":false,
   "isDnD":false,

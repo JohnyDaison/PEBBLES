@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_quest_state_printout",
   "isCompatibility":false,
   "isDnD":false,

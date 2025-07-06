@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"object_transform",
   "isCompatibility":false,
   "isDnD":false,

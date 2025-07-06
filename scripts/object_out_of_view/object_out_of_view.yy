@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"object_out_of_view",
   "isCompatibility":false,
   "isDnD":false,

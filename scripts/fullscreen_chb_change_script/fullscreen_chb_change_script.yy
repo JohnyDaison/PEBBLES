@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fullscreen_chb_change_script",
   "isCompatibility":false,
   "isDnD":false,

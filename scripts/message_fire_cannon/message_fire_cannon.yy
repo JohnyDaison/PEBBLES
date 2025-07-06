@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"message_fire_cannon",
   "isCompatibility":false,
   "isDnD":false,

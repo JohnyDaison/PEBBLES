@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_anim_step_display",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"go_to_quest_command",
   "isCompatibility":false,
   "isDnD":false,

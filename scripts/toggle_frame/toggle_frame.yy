@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"toggle_frame",
   "isCompatibility":false,
   "isDnD":false,

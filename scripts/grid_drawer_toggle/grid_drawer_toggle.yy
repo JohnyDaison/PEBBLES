@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"grid_drawer_toggle",
   "isCompatibility":false,
   "isDnD":false,

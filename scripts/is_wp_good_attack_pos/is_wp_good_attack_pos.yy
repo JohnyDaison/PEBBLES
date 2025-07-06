@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"is_wp_good_attack_pos",
   "isCompatibility":false,
   "isDnD":false,

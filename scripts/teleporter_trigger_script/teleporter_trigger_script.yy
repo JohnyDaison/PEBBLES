@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"teleporter_trigger_script",
   "isCompatibility":false,
   "isDnD":false,

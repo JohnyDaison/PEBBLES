@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guide_quick_abilities",
   "isCompatibility":false,
   "isDnD":false,

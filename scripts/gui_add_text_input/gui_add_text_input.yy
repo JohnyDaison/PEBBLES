@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_text_input",
   "isCompatibility":false,
   "isDnD":false,

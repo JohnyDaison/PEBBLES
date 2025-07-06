@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"sparring_bot1_init",
   "isCompatibility":false,
   "isDnD":false,

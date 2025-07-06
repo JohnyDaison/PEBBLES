@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"terrain_grid_remove",
   "isCompatibility":false,
   "isDnD":false,

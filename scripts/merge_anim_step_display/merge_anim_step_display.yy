@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"merge_anim_step_display",
   "isCompatibility":false,
   "isDnD":false,

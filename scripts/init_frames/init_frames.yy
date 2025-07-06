@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_frames",
   "isCompatibility":false,
   "isDnD":false,

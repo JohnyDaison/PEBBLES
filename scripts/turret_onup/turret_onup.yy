@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"turret_onup",
   "isCompatibility":false,
   "isDnD":false,

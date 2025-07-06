@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_energy_ball",
   "isCompatibility":false,
   "isDnD":false,

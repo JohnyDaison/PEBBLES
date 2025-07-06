@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"nav_graph_destroy",
   "isCompatibility":false,
   "isDnD":false,

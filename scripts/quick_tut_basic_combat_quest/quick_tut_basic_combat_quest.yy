@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_tut_basic_combat_quest",
   "isCompatibility":false,
   "isDnD":false,

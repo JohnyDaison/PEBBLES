@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"play_control_state_display",
   "isCompatibility":false,
   "isDnD":false,

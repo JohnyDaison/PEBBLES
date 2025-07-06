@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"show_player_levels",
   "isCompatibility":false,
   "isDnD":false,

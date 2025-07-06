@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"grab_ledge_anim_set",
   "isCompatibility":false,
   "isDnD":false,

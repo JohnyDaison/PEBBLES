@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"open_watches_window",
   "isCompatibility":false,
   "isDnD":false,

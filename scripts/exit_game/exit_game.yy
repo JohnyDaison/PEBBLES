@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"exit_game",
   "isCompatibility":false,
   "isDnD":false,

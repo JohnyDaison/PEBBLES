@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"init",
   "creationCodeFile":"${project_dir}/rooms/init/RoomCreationCode.gml",
   "inheritCode":false,

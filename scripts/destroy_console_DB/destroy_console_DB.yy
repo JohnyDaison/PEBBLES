@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"destroy_console_DB",
   "isCompatibility":false,
   "isDnD":false,

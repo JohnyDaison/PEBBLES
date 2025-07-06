@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"chargeball_orbs_return",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"white_overload_anim_set",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_player_things",
   "isCompatibility":false,
   "isDnD":false,

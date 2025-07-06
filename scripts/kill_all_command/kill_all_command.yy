@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"kill_all_command",
   "isCompatibility":false,
   "isDnD":false,

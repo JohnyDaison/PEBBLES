@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_player_setup_pane",
   "isCompatibility":false,
   "isDnD":false,

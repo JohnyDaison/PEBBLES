@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_controls_DB",
   "isCompatibility":false,
   "isDnD":false,

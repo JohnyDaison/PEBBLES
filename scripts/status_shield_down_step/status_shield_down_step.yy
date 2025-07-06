@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_shield_down_step",
   "isCompatibility":false,
   "isDnD":false,

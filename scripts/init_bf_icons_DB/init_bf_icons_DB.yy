@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_bf_icons_DB",
   "isCompatibility":false,
   "isDnD":false,

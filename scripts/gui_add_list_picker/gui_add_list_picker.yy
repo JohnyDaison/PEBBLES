@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_list_picker",
   "isCompatibility":false,
   "isDnD":false,

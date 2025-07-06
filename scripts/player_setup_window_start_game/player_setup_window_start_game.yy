@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_setup_window_start_game",
   "isCompatibility":false,
   "isDnD":false,

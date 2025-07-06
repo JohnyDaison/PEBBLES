@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"impact_mechanic_anim_set",
   "isCompatibility":false,
   "isDnD":false,

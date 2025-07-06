@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"console_dropdown_copyparse",
   "isCompatibility":false,
   "isDnD":false,

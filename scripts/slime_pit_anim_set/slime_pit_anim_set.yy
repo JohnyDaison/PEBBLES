@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"slime_pit_anim_set",
   "isCompatibility":false,
   "isDnD":false,

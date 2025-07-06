@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_tutorial_abilities_strings",
   "isCompatibility":false,
   "isDnD":false,

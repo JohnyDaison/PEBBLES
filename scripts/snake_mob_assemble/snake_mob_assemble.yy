@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"snake_mob_assemble",
   "isCompatibility":false,
   "isDnD":false,

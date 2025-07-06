@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"turn_dark_anim_set",
   "isCompatibility":false,
   "isDnD":false,

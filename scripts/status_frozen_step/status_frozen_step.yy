@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_frozen_step",
   "isCompatibility":false,
   "isDnD":false,

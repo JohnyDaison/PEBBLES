@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_child_init",
   "isCompatibility":false,
   "isDnD":false,

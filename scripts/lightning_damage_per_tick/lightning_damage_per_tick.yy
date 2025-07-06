@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"lightning_damage_per_tick",
   "isCompatibility":false,
   "isDnD":false,

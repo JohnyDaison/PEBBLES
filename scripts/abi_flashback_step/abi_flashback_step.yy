@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"abi_flashback_step",
   "isCompatibility":false,
   "isDnD":false,

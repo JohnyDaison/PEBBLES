@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"battlefeed_post_assignfeed",
   "isCompatibility":false,
   "isDnD":false,

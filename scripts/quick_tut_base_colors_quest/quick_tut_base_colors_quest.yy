@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_tut_base_colors_quest",
   "isCompatibility":false,
   "isDnD":false,

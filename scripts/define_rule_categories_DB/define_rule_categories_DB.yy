@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"define_rule_categories_DB",
   "isCompatibility":false,
   "isDnD":false,

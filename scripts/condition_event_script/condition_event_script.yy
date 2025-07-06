@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"condition_event_script",
   "isCompatibility":false,
   "isDnD":false,

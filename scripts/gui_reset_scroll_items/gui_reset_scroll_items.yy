@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_reset_scroll_items",
   "isCompatibility":false,
   "isDnD":false,

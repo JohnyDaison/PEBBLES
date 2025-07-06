@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_gamemodes_DB",
   "isCompatibility":false,
   "isDnD":false,

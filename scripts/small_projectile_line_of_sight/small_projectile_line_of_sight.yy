@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"small_projectile_line_of_sight",
   "isCompatibility":false,
   "isDnD":false,

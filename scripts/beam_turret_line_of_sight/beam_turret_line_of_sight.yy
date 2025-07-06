@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"beam_turret_line_of_sight",
   "isCompatibility":false,
   "isDnD":false,

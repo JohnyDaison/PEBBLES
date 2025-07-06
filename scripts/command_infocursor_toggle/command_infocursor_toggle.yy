@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"command_infocursor_toggle",
   "isCompatibility":false,
   "isDnD":false,

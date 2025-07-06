@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_hardpoint",
   "isCompatibility":false,
   "isDnD":false,

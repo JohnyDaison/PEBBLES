@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_debug_printout",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"decide_flag_tint",
   "isCompatibility":false,
   "isDnD":false,

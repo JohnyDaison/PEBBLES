@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"structure_placer_toggle",
   "isCompatibility":false,
   "isDnD":false,

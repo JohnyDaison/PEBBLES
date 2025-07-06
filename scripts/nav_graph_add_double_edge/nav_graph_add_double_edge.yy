@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"nav_graph_add_double_edge",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pause_menu_restart",
   "isCompatibility":false,
   "isDnD":false,

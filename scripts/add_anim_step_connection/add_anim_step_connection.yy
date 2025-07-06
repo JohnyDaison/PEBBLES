@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_anim_step_connection",
   "isCompatibility":false,
   "isDnD":false,

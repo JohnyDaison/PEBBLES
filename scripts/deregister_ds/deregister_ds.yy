@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"deregister_ds",
   "isCompatibility":false,
   "isDnD":false,

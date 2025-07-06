@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"goto_control_settings",
   "isCompatibility":false,
   "isDnD":false,

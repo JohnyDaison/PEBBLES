@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_view_offset",
   "isCompatibility":false,
   "isDnD":false,

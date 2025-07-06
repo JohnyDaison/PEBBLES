@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_get_focus",
   "isCompatibility":false,
   "isDnD":false,

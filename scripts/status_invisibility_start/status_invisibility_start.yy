@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_invisibility_start",
   "isCompatibility":false,
   "isDnD":false,

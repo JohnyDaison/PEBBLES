@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"clean_up_ds",
   "isCompatibility":false,
   "isDnD":false,

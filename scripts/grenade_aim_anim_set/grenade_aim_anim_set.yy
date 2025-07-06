@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"grenade_aim_anim_set",
   "isCompatibility":false,
   "isDnD":false,

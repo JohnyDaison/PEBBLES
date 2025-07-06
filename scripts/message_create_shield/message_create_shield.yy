@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"message_create_shield",
   "isCompatibility":false,
   "isDnD":false,

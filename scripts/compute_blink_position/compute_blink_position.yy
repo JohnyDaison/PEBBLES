@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"compute_blink_position",
   "isCompatibility":false,
   "isDnD":false,

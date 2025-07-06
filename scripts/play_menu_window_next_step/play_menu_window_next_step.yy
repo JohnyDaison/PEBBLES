@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"play_menu_window_next_step",
   "isCompatibility":false,
   "isDnD":false,

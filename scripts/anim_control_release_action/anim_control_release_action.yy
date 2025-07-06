@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"anim_control_release_action",
   "isCompatibility":false,
   "isDnD":false,

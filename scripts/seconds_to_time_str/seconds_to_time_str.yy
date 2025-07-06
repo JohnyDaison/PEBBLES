@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"seconds_to_time_str",
   "isCompatibility":false,
   "isDnD":false,

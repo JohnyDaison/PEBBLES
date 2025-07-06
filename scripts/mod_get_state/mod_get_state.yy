@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"mod_get_state",
   "isCompatibility":false,
   "isDnD":false,

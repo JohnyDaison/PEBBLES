@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"speech_instant",
   "isCompatibility":false,
   "isDnD":false,

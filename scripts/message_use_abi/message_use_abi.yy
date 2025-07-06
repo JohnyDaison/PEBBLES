@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"message_use_abi",
   "isCompatibility":false,
   "isDnD":false,

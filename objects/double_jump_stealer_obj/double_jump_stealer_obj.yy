@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"double_jump_stealer_obj",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"guy_obj","path":"objects/guy_obj/guy_obj.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"guy_obj","path":"objects/guy_obj/guy_obj.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"double_jump_stealer_obj",

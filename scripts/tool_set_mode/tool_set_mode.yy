@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tool_set_mode",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_heal_start",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"number_mod_any_value",
   "isCompatibility":false,
   "isDnD":false,

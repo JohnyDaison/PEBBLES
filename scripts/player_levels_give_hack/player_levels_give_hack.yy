@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_levels_give_hack",
   "isCompatibility":false,
   "isDnD":false,

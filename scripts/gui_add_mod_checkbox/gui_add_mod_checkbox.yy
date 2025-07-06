@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_mod_checkbox",
   "isCompatibility":false,
   "isDnD":false,

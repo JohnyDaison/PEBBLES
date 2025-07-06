@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"last_attacker_reset",
   "isCompatibility":false,
   "isDnD":false,

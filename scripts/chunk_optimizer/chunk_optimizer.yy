@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"chunk_optimizer",
   "isCompatibility":false,
   "isDnD":false,

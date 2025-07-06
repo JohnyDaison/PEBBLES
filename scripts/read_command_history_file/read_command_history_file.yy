@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"read_command_history_file",
   "isCompatibility":false,
   "isDnD":false,

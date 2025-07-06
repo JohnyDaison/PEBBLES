@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"phys_body_obj_push_other",
   "isCompatibility":false,
   "isDnD":false,

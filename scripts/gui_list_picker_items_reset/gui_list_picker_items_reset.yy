@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_list_picker_items_reset",
   "isCompatibility":false,
   "isDnD":false,

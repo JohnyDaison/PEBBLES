@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"item_hold_mode",
   "isCompatibility":false,
   "isDnD":false,

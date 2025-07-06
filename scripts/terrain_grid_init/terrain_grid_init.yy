@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"terrain_grid_init",
   "isCompatibility":false,
   "isDnD":false,

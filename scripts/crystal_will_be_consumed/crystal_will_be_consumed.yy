@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"crystal_will_be_consumed",
   "isCompatibility":false,
   "isDnD":false,

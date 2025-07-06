@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_transition_create",
   "isCompatibility":false,
   "isDnD":false,

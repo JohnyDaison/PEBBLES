@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_params_map",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_mountain_nav_graph",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"anim_control_press_action",
   "isCompatibility":false,
   "isDnD":false,

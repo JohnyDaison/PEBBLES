@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"place_picker_script",
   "isCompatibility":false,
   "isDnD":false,

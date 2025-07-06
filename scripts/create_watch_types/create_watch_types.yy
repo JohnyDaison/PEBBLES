@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_watch_types",
   "isCompatibility":false,
   "isDnD":false,

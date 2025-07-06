@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"color_to_components",
   "isCompatibility":false,
   "isDnD":false,

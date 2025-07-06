@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tut_guide_teleport",
   "isCompatibility":false,
   "isDnD":false,

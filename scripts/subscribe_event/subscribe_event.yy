@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"subscribe_event",
   "isCompatibility":false,
   "isDnD":false,

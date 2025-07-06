@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rule_preset_dropdown_script",
   "isCompatibility":false,
   "isDnD":false,

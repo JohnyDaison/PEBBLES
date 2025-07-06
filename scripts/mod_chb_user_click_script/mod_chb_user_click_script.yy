@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"mod_chb_user_click_script",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"place_controller_trigger_script",
   "isCompatibility":false,
   "isDnD":false,

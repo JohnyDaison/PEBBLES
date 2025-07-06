@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"define_strings_DB",
   "isCompatibility":false,
   "isDnD":false,

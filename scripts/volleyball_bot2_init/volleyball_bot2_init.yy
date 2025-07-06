@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"volleyball_bot2_init",
   "isCompatibility":false,
   "isDnD":false,

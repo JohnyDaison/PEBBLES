@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_quests_clear",
   "isCompatibility":false,
   "isDnD":false,

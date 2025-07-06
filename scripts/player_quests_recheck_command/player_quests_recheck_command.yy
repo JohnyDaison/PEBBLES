@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_quests_recheck_command",
   "isCompatibility":false,
   "isDnD":false,

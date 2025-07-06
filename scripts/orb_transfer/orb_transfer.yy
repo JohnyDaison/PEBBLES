@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"orb_transfer",
   "isCompatibility":false,
   "isDnD":false,

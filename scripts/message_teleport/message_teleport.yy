@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"message_teleport",
   "isCompatibility":false,
   "isDnD":false,

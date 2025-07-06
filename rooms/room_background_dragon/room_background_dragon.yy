@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"room_background_dragon",
   "creationCodeFile":"",
   "inheritCode":false,

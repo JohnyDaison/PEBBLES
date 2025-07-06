@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_set_property",
   "isCompatibility":false,
   "isDnD":false,

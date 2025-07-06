@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"pausemenu",
   "creationCodeFile":"RoomCreationCode.gml",
   "inheritCode":false,

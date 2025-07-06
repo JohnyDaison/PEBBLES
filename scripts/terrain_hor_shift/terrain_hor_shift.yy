@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"terrain_hor_shift",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"mod_chb_onmouseleave_script",
   "isCompatibility":false,
   "isDnD":false,

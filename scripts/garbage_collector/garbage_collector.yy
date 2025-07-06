@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"garbage_collector",
   "isCompatibility":false,
   "isDnD":false,

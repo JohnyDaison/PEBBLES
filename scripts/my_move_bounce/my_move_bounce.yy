@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"my_move_bounce",
   "isCompatibility":false,
   "isDnD":false,

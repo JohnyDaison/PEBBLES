@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"camera_before_view",
   "isCompatibility":false,
   "isDnD":false,

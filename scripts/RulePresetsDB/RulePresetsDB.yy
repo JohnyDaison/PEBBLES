@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"RulePresetsDB",
   "isCompatibility":false,
   "isDnD":false,

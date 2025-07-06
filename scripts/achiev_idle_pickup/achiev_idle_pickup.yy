@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"achiev_idle_pickup",
   "isCompatibility":false,
   "isDnD":false,

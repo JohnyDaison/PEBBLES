@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"increase_achievement_score",
   "isCompatibility":false,
   "isDnD":false,

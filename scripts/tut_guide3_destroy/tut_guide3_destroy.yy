@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tut_guide3_destroy",
   "isCompatibility":false,
   "isDnD":false,

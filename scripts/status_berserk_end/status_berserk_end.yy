@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_berserk_end",
   "isCompatibility":false,
   "isDnD":false,

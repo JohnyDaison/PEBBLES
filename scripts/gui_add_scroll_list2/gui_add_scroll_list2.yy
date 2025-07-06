@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_scroll_list2",
   "isCompatibility":false,
   "isDnD":false,

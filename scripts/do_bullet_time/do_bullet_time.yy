@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"do_bullet_time",
   "isCompatibility":false,
   "isDnD":false,

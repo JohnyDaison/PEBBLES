@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_closest_spawner",
   "isCompatibility":false,
   "isDnD":false,

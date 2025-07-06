@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"find_display_instance",
   "isCompatibility":false,
   "isDnD":false,

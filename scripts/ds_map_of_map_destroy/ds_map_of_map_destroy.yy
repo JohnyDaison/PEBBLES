@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ds_map_of_map_destroy",
   "isCompatibility":false,
   "isDnD":false,

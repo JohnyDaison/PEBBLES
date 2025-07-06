@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_switcher_script",
   "isCompatibility":false,
   "isDnD":false,

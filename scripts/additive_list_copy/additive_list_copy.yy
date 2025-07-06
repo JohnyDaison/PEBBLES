@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"additive_list_copy",
   "isCompatibility":false,
   "isDnD":false,

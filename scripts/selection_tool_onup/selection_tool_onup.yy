@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"selection_tool_onup",
   "isCompatibility":false,
   "isDnD":false,

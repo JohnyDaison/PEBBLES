@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"console_mode_command",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_node_destroy",
   "isCompatibility":false,
   "isDnD":false,

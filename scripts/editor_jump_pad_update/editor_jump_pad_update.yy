@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"editor_jump_pad_update",
   "isCompatibility":false,
   "isDnD":false,

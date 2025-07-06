@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_orbs_reset",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_orb_belt_gui",
   "isCompatibility":false,
   "isDnD":false,

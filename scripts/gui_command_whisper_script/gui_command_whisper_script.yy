@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_command_whisper_script",
   "isCompatibility":false,
   "isDnD":false,

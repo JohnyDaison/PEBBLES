@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"reset_custom_mod_controls",
   "isCompatibility":false,
   "isDnD":false,

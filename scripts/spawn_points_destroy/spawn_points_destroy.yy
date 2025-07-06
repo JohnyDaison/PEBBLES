@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"spawn_points_destroy",
   "isCompatibility":false,
   "isDnD":false,

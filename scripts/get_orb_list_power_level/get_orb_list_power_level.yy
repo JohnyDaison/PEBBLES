@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_orb_list_power_level",
   "isCompatibility":false,
   "isDnD":false,

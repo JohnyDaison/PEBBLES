@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"place_tool_toggle",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"console_divider_length",
   "isCompatibility":false,
   "isDnD":false,

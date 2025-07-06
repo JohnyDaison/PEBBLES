@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"my_sound_stop",
   "isCompatibility":false,
   "isDnD":false,

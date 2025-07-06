@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gm_hoopball_start",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_add_color_power_pane",
   "isCompatibility":false,
   "isDnD":false,

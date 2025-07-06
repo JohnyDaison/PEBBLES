@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"speech_find_terms",
   "isCompatibility":false,
   "isDnD":false,

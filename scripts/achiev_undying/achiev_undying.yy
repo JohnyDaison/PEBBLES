@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"achiev_undying",
   "isCompatibility":false,
   "isDnD":false,

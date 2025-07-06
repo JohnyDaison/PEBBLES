@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"navgraph_command",
   "isCompatibility":false,
   "isDnD":false,

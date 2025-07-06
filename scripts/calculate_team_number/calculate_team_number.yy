@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"calculate_team_number",
   "isCompatibility":false,
   "isDnD":false,

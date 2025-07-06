@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"spr_getname",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"push_block_energy",
   "isCompatibility":false,
   "isDnD":false,

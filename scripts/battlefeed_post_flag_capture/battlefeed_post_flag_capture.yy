@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"battlefeed_post_flag_capture",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"do_room_cleanup",
   "isCompatibility":false,
   "isDnD":false,

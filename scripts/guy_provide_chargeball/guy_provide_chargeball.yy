@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_provide_chargeball",
   "isCompatibility":false,
   "isDnD":false,

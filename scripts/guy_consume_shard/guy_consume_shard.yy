@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_consume_shard",
   "isCompatibility":false,
   "isDnD":false,

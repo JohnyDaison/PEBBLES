@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"use_item1_anim_set",
   "isCompatibility":false,
   "isDnD":false,

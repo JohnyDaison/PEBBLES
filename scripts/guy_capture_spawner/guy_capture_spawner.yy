@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_capture_spawner",
   "isCompatibility":false,
   "isDnD":false,

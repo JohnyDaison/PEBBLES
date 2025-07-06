@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_node_create",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"movement_mountain_quest",
   "isCompatibility":false,
   "isDnD":false,

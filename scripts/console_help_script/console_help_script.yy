@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"console_help_script",
   "isCompatibility":false,
   "isDnD":false,

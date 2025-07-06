@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_npc_guy",
   "isCompatibility":false,
   "isDnD":false,

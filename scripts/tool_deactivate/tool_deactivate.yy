@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tool_deactivate",
   "isCompatibility":false,
   "isDnD":false,

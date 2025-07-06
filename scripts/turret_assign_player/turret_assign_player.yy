@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"turret_assign_player",
   "isCompatibility":false,
   "isDnD":false,

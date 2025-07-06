@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"set_guy_facing",
   "isCompatibility":false,
   "isDnD":false,

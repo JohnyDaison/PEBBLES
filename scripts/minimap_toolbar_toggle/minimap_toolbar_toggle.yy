@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"minimap_toolbar_toggle",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"jump_pad_onup",
   "isCompatibility":false,
   "isDnD":false,

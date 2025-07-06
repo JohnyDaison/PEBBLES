@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_respawn",
   "isCompatibility":false,
   "isDnD":false,

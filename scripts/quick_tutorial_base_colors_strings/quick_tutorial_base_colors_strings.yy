@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_tutorial_base_colors_strings",
   "isCompatibility":false,
   "isDnD":false,

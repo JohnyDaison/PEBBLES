@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"npc_guy2_step",
   "isCompatibility":false,
   "isDnD":false,

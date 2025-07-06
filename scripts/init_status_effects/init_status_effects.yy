@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_status_effects",
   "isCompatibility":false,
   "isDnD":false,

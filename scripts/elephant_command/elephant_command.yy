@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"elephant_command",
   "isCompatibility":false,
   "isDnD":false,

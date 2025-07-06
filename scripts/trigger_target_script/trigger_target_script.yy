@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"trigger_target_script",
   "isCompatibility":false,
   "isDnD":false,

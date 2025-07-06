@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_spawn_point_create",
   "isCompatibility":false,
   "isDnD":false,

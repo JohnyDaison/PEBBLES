@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_burn_step",
   "isCompatibility":false,
   "isDnD":false,

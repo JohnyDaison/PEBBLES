@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"my_sound_play_colored",
   "isCompatibility":false,
   "isDnD":false,

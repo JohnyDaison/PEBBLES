@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"strong_effect_anim_set",
   "isCompatibility":false,
   "isDnD":false,

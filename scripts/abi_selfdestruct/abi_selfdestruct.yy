@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"abi_selfdestruct",
   "isCompatibility":false,
   "isDnD":false,

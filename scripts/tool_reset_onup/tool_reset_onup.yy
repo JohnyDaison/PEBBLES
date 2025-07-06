@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tool_reset_onup",
   "isCompatibility":false,
   "isDnD":false,

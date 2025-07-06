@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_wall_trail_step",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"mod_forced_value_update",
   "isCompatibility":false,
   "isDnD":false,

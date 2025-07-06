@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MyGraph",
   "isCompatibility":false,
   "isDnD":false,

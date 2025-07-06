@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"structure_erase_onup",
   "isCompatibility":false,
   "isDnD":false,

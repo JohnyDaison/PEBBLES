@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ricochet_anim_set",
   "isCompatibility":false,
   "isDnD":false,

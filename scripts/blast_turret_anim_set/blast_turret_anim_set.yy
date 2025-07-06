@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"blast_turret_anim_set",
   "isCompatibility":false,
   "isDnD":false,

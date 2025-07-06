@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"find_nearest_visible_waypoint",
   "isCompatibility":false,
   "isDnD":false,

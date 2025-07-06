@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guy_belt_insert",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gui_move_element",
   "isCompatibility":false,
   "isDnD":false,

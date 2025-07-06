@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"achiev_first_blood",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"guide_movement2",
   "isCompatibility":false,
   "isDnD":false,

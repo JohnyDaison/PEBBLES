@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"nav_graph_add_node",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"aim_shot_anim_set",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"merge_rules_maps",
   "isCompatibility":false,
   "isDnD":false,

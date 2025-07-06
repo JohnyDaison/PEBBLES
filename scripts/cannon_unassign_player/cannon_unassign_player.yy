@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cannon_unassign_player",
   "isCompatibility":false,
   "isDnD":false,

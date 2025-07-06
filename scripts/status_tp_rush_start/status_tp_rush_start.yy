@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_tp_rush_start",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"speech_add_term",
   "isCompatibility":false,
   "isDnD":false,

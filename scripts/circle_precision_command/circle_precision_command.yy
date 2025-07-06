@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"circle_precision_command",
   "isCompatibility":false,
   "isDnD":false,

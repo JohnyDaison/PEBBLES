@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"abi_chaosdrive_end",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_ubershield_start",
   "isCompatibility":false,
   "isDnD":false,

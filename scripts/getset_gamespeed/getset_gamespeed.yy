@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"getset_gamespeed",
   "isCompatibility":false,
   "isDnD":false,

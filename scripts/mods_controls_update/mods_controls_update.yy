@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"mods_controls_update",
   "isCompatibility":false,
   "isDnD":false,

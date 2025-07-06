@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"body_unequip_all",
   "isCompatibility":false,
   "isDnD":false,

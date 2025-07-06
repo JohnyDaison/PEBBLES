@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"status_haste_start",
   "isCompatibility":false,
   "isDnD":false,

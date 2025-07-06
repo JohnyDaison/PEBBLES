@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"auto_pickup_quest_item",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"achiev_shadow_ninja",
   "isCompatibility":false,
   "isDnD":false,

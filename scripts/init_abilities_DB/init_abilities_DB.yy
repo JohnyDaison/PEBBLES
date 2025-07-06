@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_abilities_DB",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"npc_line_of_sight_instance",
   "isCompatibility":false,
   "isDnD":false,

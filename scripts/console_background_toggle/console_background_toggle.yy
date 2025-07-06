@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"console_background_toggle",
   "isCompatibility":false,
   "isDnD":false,

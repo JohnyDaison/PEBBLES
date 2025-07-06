@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"find_holders",
   "isCompatibility":false,
   "isDnD":false,

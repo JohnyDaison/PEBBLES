@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_add_subtask",
   "isCompatibility":false,
   "isDnD":false,

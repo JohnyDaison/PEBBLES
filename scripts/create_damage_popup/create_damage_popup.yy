@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_damage_popup",
   "isCompatibility":false,
   "isDnD":false,

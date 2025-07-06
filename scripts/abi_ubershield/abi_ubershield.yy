@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"abi_ubershield",
   "isCompatibility":false,
   "isDnD":false,

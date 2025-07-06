@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"speech_stop",
   "isCompatibility":false,
   "isDnD":false,

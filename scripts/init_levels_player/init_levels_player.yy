@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_levels_player",
   "isCompatibility":false,
   "isDnD":false,

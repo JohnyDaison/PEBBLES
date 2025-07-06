@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cannon_anim_set",
   "isCompatibility":false,
   "isDnD":false,

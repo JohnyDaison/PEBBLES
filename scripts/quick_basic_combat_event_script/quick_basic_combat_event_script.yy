@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_basic_combat_event_script",
   "isCompatibility":false,
   "isDnD":false,

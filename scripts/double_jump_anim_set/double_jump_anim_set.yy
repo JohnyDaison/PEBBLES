@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"double_jump_anim_set",
   "isCompatibility":false,
   "isDnD":false,

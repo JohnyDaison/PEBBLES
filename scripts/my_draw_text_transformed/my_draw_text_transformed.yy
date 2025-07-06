@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"my_draw_text_transformed",
   "isCompatibility":false,
   "isDnD":false,

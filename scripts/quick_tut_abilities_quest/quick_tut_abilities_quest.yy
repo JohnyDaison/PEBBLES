@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quick_tut_abilities_quest",
   "isCompatibility":false,
   "isDnD":false,

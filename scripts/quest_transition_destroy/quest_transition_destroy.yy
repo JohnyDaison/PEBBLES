@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"quest_transition_destroy",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_player_overlay",
   "isCompatibility":false,
   "isDnD":false,
