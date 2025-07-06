@@ -4,11 +4,11 @@ if(keep_inside)
 {
     if(instance_exists(main_camera_obj))
     {
-        border_width = main_camera_obj.border_width;
+        self.border_width = main_camera_obj.border_width;
     }
     else
     {
-        border_width = 0;
+        self.border_width = 0;
     }
     
     if(x < border_width)
@@ -33,7 +33,7 @@ if(keep_inside)
 //offset_y = y+self.view_y_offset;
 window_axis = x+self.width/2;
 
-if(focused || nonfocusable)
+if(self.focused || nonfocusable)
 {
     focus_modifier = 1;
 }

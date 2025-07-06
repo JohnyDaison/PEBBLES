@@ -22,7 +22,7 @@ menu_start = 224;
 
 self.modal = true;
 
-ii = instance_create(0,0,gui_label);
+var ii = instance_create(0,0,gui_label);
 ii.text = DB.version_string;
 ii.gui_parent = id;
 ii.align = "left"
@@ -38,7 +38,6 @@ ii.width = 2000;
 ii.bg_color = c_black;
 ii.bg_alpha = 0.9;
 ii.gui_parent = id;
-ds_list_add(self.gui_content,ii);
 
 eloffset_y = menu_start;
 
@@ -47,7 +46,7 @@ var dist = 48;
 var i=1, ii;
 
 ii = gui_add_button(0,y+dist*i++, "Play", goto_playmenu);
-ii.base_bg_color = select_color;
+ii.base_bg_color = self.select_color;
 
 gui_add_button(0,y+dist*i++, "Settings", goto_graphic_settings);
 
