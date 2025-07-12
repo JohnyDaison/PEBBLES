@@ -1,6 +1,6 @@
 if(instance_exists(my_guy) && my_guy != id)
 {
-    old_guy = my_guy;
+    var old_guy = my_guy;
     my_guy = id;
     old_guy.my_shield = noone;
     old_guy.shield_ready = false;
@@ -12,43 +12,43 @@ if(instance_exists(my_guy) && my_guy != id)
     
     if(collapsed)
     {
-        var xx, yy, i;
+        var xx, yy;
         
         if(charge > 0 && my_color > g_dark && my_color <= g_white)
         {
-            for(i=0; i<charge; i+=2)
+            for(var i=0; i<charge; i+=2)
             {
                 xx = x + radius * ( random(1) - 0.5 );
                 yy = y + radius * ( random(1) - 0.5 );
-                i = instance_create(xx,yy, slot_explosion_obj);
-                i.my_color = my_color;
-                i.my_source = object_index;                
-                i.energy = 5; 
-                i.holographic = holographic;
+                var inst = instance_create(xx,yy, slot_explosion_obj);
+                inst.my_color = my_color;
+                inst.my_source = object_index;
+                inst.energy = 5; 
+                inst.holographic = holographic;
             }
             
-            my_color = g_dark;        
-            with(old_guy) 
+            my_color = g_dark;
+            with(old_guy)
             {
                 receive_damage(other.charge-other.threshold);
             }
         }
         
         if(charge <= 0 && my_color > g_dark)
-        {          
-            i = instance_create(x,y,shield_obj);
-            i.my_player = old_guy.my_player;
-            i.max_charge = self.max_charge + self.overcharge;
-            i.overcharge = 1.5;
-            i.collapse_threshold = i.max_charge + i.overcharge;
+        {
+            var inst = instance_create(x,y,shield_obj);
+            inst.my_player = old_guy.my_player;
+            inst.max_charge = self.max_charge + self.overcharge;
+            inst.overcharge = 1.5;
+            inst.collapse_threshold = inst.max_charge + inst.overcharge;
             
-            i.chargerate = 250;            
-            i.charge = i.max_charge;
-            i.my_color = my_color; 
-            i.my_guy = i.id;
-            i.my_source = object_index;
-            i.source_id = old_guy.id;
-            i.holographic = holographic;
+            inst.chargerate = 250;
+            inst.charge = inst.max_charge;
+            inst.my_color = my_color; 
+            inst.my_guy = inst.id;
+            inst.my_source = object_index;
+            inst.source_id = old_guy.id;
+            inst.holographic = holographic;
         }
     }
 }
