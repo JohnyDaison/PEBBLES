@@ -1,5 +1,5 @@
 function subscribe_event(event, handler, source = all, context = "") {
-    var event_subscriptions, subscription
+    var event_subscriptions, subscription;
     var result = false;
 
     touch_event(event);
