@@ -1,5 +1,3 @@
-event_inherited();
-
 triggerable = true;
 trigger_script = place_controller_trigger_script;
 

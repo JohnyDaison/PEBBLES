@@ -38,7 +38,7 @@ if(!instance_exists(da_ball))
     da_ball = noone;
     
     with(player_obj)
-    {   
+    {
         ball_touches = 0;
         touching_ball = false;
         was_touching_ball = false;
@@ -96,9 +96,10 @@ else
                     teammate.ball_touches++;
                 }
                 
-                var new_color;
+                var new_color = place_controller_obj.current_color;
                 do {
-                    new_color = irandom_range(g_red, g_white);   
+                    var new_index = irandom(place_controller_obj.arena_color_count - 1);
+                    new_color = place_controller_obj.arena_colors[| new_index];
                 }
                 until(place_controller_obj.current_color != new_color)
                 

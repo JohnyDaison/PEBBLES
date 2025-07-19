@@ -22,6 +22,16 @@ player_colors[? 2] = g_blue;
 player_colors[? 3] = g_green;
 player_colors[? 4] = g_yellow;
 
+arena_colors = ds_list_create();
+for (var color = g_red; color <= g_white; color++) {
+    ds_list_add(arena_colors, color);
+}
+for (var i = 1; i <= gamemode_obj.player_count; i++) {
+    var used_color = player_colors[? i];
+    ds_list_delete(arena_colors, ds_list_find_index(arena_colors, used_color));
+}
+arena_color_count = ds_list_size(arena_colors);
+
 shield_generator_structure_obj.shield_max_charge = 2;
 shield_generator_structure_obj.shield_size = 0.3;
 shield_generator_structure_obj.my_guy = noone;
