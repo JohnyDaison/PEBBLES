@@ -832,7 +832,7 @@ if(!self.frozen_in_time)
                         {
                             my_sound_play(land_sound);
                         }
-                        else if(!self.quiet_run && !self.holographic)
+                        else if(!self.quiet_run && !self.holographic && status_left[? "frozen"] == 0)
                         {
                             if(last_step_sound == 2)
                             {
@@ -1075,7 +1075,7 @@ if(!self.frozen_in_time)
     if(!airborne && abs(hspeed) > 0 && !self.skidding && !self.charging && self.status_left[? "frozen"] == 0
         && !self.locked && !self.lost_control && !self.stuck && !self.quiet_run && !self.holographic)
     {   
-        temp = step_frequency/(2+abs(1.5*hspeed));
+        var temp = step_frequency/(2+abs(1.5*hspeed));
         if(step_count-last_step >= temp/2)
         {
             if(instance_exists(meeting_entity) && meeting_entity.object_index == gate_field_obj)
