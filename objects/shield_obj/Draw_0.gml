@@ -1,10 +1,10 @@
 if(instance_exists(my_guy) && sprite_index != noone && my_color != g_dark)
 {   
-    blink_off = false;
+    var blink_off = false;
     
     if(object_is_ancestor(my_guy.object_index, guy_obj) && my_guy.blink_off)
     {
-        blink_off = true;    
+        blink_off = true;
     }
     
     if(!blink_off)

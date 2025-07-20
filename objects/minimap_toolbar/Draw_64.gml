@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 minimap_left = x + map_margin;
 minimap_top = y + map_margin;
 minimap_right = x + width - map_margin - 1;
@@ -49,6 +50,3 @@ draw_set_alpha(0.6);
 draw_set_color(c_yellow);
 
 draw_rectangle(minimap_view_left,minimap_view_top,minimap_view_right,minimap_view_bottom,true);
-
-/* */
-/*  */

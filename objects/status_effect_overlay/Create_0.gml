@@ -19,15 +19,10 @@ status_order = ds_list_create();
 status_alpha = ds_map_create();
 status_fade_rate = 0.012;
 
-var effect_id;
-
 for(var i = 0; i < DB.status_effect_count; i++)
 {
-    effect_id = DB.status_effects_list[| i];
+    var effect_id = DB.status_effects_list[| i];
     
     status_list[| i] = effect_id;
     status_alpha[? effect_id] = 0;
-}    
-
-
-
+}

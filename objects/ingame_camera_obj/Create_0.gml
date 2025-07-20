@@ -1,4 +1,5 @@
 event_inherited();
+
 my_color = g_white;
 // states: recharging, ready, active
 ready = true;
@@ -16,4 +17,3 @@ surface = noone;
 max_speed = 0;
 
 name = "Camera";
-

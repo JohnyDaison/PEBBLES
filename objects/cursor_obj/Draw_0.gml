@@ -1,7 +1,6 @@
 var xx, yy;
 
-if(keyboard_check(vk_alt) && false)
-{
+if (keyboard_check(vk_alt) && false) {
     var left_end = -0.5, right_end = 1.5;
     
     xx = x + __view_get( e__VW.XView, view_current ) - __view_get( e__VW.XPort, view_current );
@@ -16,8 +15,7 @@ if(keyboard_check(vk_alt) && false)
 }
 
 
-if(keyboard_check(vk_alt))
-{
+if (keyboard_check(vk_alt)) {
     var left_end = -1.5, right_end = 0.5; 
     
     xx = x + __view_get( e__VW.XView, view_current ) - __view_get( e__VW.XPort, view_current );

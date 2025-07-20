@@ -1,12 +1,12 @@
 /// @description  MOVEMENT, COLLISION, CHARGING, AUTOFIRE
-if(!instance_exists(my_guy))
+if (!instance_exists(my_guy))
 {
     instance_destroy();
-    exit;   
+    exit;
 }
 
 
-if(my_guy != id && my_color > -1)
+if (my_guy != id && my_color > -1)
 {
     // COPY PARAMS
     invisible = my_guy.invisible;
@@ -17,63 +17,58 @@ if(my_guy != id && my_color > -1)
     charging = my_guy.charging && !firing;
     autofire = my_guy.autofire;
     overcharge = my_guy.ball_overcharge;
-    if(object_is_ancestor(my_guy.object_index, guy_obj))
-    {
+    if (object_is_ancestor(my_guy.object_index, guy_obj)) {
         overcharge -= my_guy.status_left[? "weakness"] / DB.status_effects[? "weakness"].max_charge;
     }
     chargerate = my_guy.ball_chargerate;
     threshold = max_charge + overcharge;
-        
+    
     max_orbs = get_level(id, "chargeball");
-        
+    
     // MOVEMENT
-    var des_x, des_y;
-    des_x = lengthdir_x(desired_dist, desired_angle);
-    des_y = lengthdir_y(desired_dist, desired_angle);
-        
-    des_dir = point_direction(rel_x, rel_y, des_x, des_y);
-    cur_dist = point_distance(rel_x, rel_y, des_x, des_y);   
-        
+    var des_x = lengthdir_x(desired_dist, desired_angle);
+    var des_y = lengthdir_y(desired_dist, desired_angle);
+    
+    var des_dir = point_direction(rel_x, rel_y, des_x, des_y);
+    cur_dist = point_distance(rel_x, rel_y, des_x, des_y);
+    
     var distance_ratio = cur_dist / (3 * radius);
-    cur_speed = min(cur_dist, base_speed * (1 + distance_ratio));  
-        
+    cur_speed = min(cur_dist, base_speed * (1 + distance_ratio));
+    
     // continue current movement
-    if(cur_speed > 0)
-    {
+    if (cur_speed > 0) {
         var dir_diff = angle_difference(des_dir, cur_dir);
-            
-        cur_dir += dir_diff * max(0.01, (1-(charge/threshold)*0.5)); 
+        cur_dir += dir_diff * max(0.01, (1-(charge/threshold)*0.5));
     }
-        
-    if(cur_speed == 0)
-    {
+    
+    if (cur_speed == 0) {
         // start from center
-        if((rel_x == 0 && rel_y == 0) || !object_is_ancestor(my_guy.object_index, guy_obj))
+        if ((rel_x == 0 && rel_y == 0) || !object_is_ancestor(my_guy.object_index, guy_obj))
         {
             cur_dir = des_dir;
         }
         // start from main directions
-        else if(rel_x == 0){
-            cur_dir = floor((des_dir + 90) / 180) * 180;      
+        else if (rel_x == 0){
+            cur_dir = floor((des_dir + 90) / 180) * 180;
         }
-        else if(rel_y == 0){
-            cur_dir = (0.5 + floor(des_dir / 180)) * 180;   
+        else if (rel_y == 0){
+            cur_dir = (0.5 + floor(des_dir / 180)) * 180;
         }
         // start from diagonal
         else {
-            cur_dir = (0.5 + floor(des_dir / 90)) * 90;   
+            cur_dir = (0.5 + floor(des_dir / 90)) * 90;
         }
     }
-    cur_dist = point_distance(rel_x, rel_y, des_x, des_y);        
+    cur_dist = point_distance(rel_x, rel_y, des_x, des_y);
         
         
     rel_x += lengthdir_x(cur_speed, cur_dir);
     rel_y += lengthdir_y(cur_speed, cur_dir);
         
-    if(object_is_ancestor(my_guy.object_index, guy_obj))
+    if (object_is_ancestor(my_guy.object_index, guy_obj))
     {
         // TERRAIN COL
-        if(desired_dist > 0)
+        if (desired_dist > 0)
         {
             while(is_my_guy_los_blocked(rel_x, rel_y) && abs(angle_difference(desired_angle, point_direction(0, 0, rel_x, rel_y))) < 90) {
                 rel_x -= lengthdir_x(5, desired_angle);
@@ -84,15 +79,15 @@ if(my_guy != id && my_color > -1)
         // EXHAUSTION
         var new_orb_exhaustion_ratio = get_orb_list_power_level(id.orbs);
         
-        if(new_orb_exhaustion_ratio > 0)
+        if (new_orb_exhaustion_ratio > 0)
         {
-            if(my_color != g_dark)
+            if (my_color != g_dark)
             {
-                if(new_orb_exhaustion_ratio < 1 && new_orb_exhaustion_ratio > DB.orb_exhaustion_threshold)
+                if (new_orb_exhaustion_ratio < 1 && new_orb_exhaustion_ratio > DB.orb_exhaustion_threshold)
                 {
                     new_orb_exhaustion_ratio = 1;
                 }
-                else if(new_orb_exhaustion_ratio <= DB.orb_exhaustion_threshold)
+                else if (new_orb_exhaustion_ratio <= DB.orb_exhaustion_threshold)
                 {
                     new_orb_exhaustion_ratio = 0.01;
                 }
@@ -102,7 +97,7 @@ if(my_guy != id && my_color > -1)
         }
             
         /*
-        if(object_is_ancestor(my_guy.object_index, guy_obj) && my_guy.current_slot > 0)
+        if (object_is_ancestor(my_guy.object_index, guy_obj) && my_guy.current_slot > 0)
         {
             display_exhaustion_ratio = get_orb_list_power_level(my_guy.color_slots);
         }    
@@ -120,19 +115,19 @@ threshold = (max_charge + overcharge) * orb_exhaustion_ratio;
 cur_charge_step = charge_step * chargerate * orb_exhaustion_ratio;
 
 // STOP CHARGING IF NO ORBS LEFT
-if(object_is_child(my_guy, guy_obj) && orb_count == 0) 
+if (object_is_child(my_guy, guy_obj) && orb_count == 0) 
 {
     charging = false;
     my_guy.charging = false;
 }
 
 // CHARGING
-if(charging && !firing)
+if (charging && !firing)
 {
-    if(!started)
+    if (!started)
     {
         started = true;
-        if(object_is_ancestor(my_guy.object_index, guy_obj))
+        if (object_is_ancestor(my_guy.object_index, guy_obj))
         {
             my_charge_sound = my_sound_play(charge_sound);
             //my_color = my_guy.my_color;
@@ -146,11 +141,11 @@ if(charging && !firing)
     cur_charge_step = min(cur_charge_step, max(0, threshold - charge));
     
     var orb_drain_step = 0;
-    if(orb_count != 0) {
+    if (orb_count != 0) {
         orb_drain_step = orb_exhaustion_rate * cur_charge_step / orb_count;
     }
     
-    for(i=0; i<orb_count; i++) 
+    for(var i=0; i<orb_count; i++) 
     {
         var orb = orbs[| i];
         var diff = orb.energy - orb_drain_step;
@@ -162,10 +157,10 @@ if(charging && !firing)
     charge = min(charge + cur_charge_step, threshold);
     
     // FULL CHARGE
-    if(charge >= threshold)
+    if (charge >= threshold)
     {
         // STRUCTURES
-        if(started && object_is_ancestor(my_guy.object_index, structure_obj))
+        if (started && object_is_ancestor(my_guy.object_index, structure_obj))
         {
             my_sound_stop(my_charge_sound);
             started = false;
@@ -173,26 +168,26 @@ if(charging && !firing)
         }
     }
     
-    if(desired_dist == 0 && cur_dist < centered_dist)
+    if (desired_dist == 0 && cur_dist < centered_dist)
     {
         // SHIELD CHANNELING
         
         channeling = false;
-        if(instance_exists(my_guy) && my_guy != id)
+        if (instance_exists(my_guy) && my_guy != id)
         {
-            if(object_is_ancestor(my_guy.object_index, guy_obj) && has_level(my_guy, "shield", 1))
+            if (object_is_ancestor(my_guy.object_index, guy_obj) && has_level(my_guy, "shield", 1))
             {
-                if(my_color > g_dark && charge >= threshold && my_guy.shield_ready)
+                if (my_color > g_dark && charge >= threshold && my_guy.shield_ready)
                 {
                     var shield = my_guy.my_shield;
-                    if(instance_exists(shield))
+                    if (instance_exists(shield))
                     {
-                        if(shield.my_color == my_color)
+                        if (shield.my_color == my_color)
                         {
                             var channel_step = charge_step * channelrate;
                             //var channel_step = cur_charge_step*channelrate;
                         
-                            if(shield.threshold > shield.charge)
+                            if (shield.threshold > shield.charge)
                             {
                                 channel_step = max(0, channel_step - sign(shield.diff)*shield.cur_step);
                             }
@@ -201,14 +196,14 @@ if(charging && !firing)
                         
                             channel_step = min(channel_step, max(diff,0) );
                             
-                            if(channel_step > 0)
+                            if (channel_step > 0)
                             {
                                 shield.charge += channel_step;
                                 //self.charge -= cur_charge_step;
                                 self.charge -= channel_step;
                             }
                             
-                            if(diff >= 0)
+                            if (diff >= 0)
                             {
                                 shield.channeled = true;
                                 channeling = true;
@@ -226,19 +221,19 @@ if(charging && !firing)
 }
 else
 {
-    if(started)
+    if (started)
     {
         my_sound_stop(my_charge_sound);
         started = false;
     }
     
     // FIRING
-    if(firing)
+    if (firing)
     {
         // STOP ON LOST CONTROL
-        if(object_is_ancestor(my_guy.object_index, guy_obj))
+        if (object_is_ancestor(my_guy.object_index, guy_obj))
         {
-            if(my_guy.lost_control)
+            if (my_guy.lost_control)
             {
                 firing = false;
                 dash_steps_left = 0;
@@ -248,7 +243,7 @@ else
         }
         
         // DASHWAVE
-        if(dash_steps_left > 0 && firing)
+        if (dash_steps_left > 0 && firing)
         {
             var dir = point_direction(0,0, rel_x, rel_y);
             var xx = lengthdir_x(dash_dist, dir);
@@ -264,7 +259,7 @@ else
                 var sprinkler_shield = instance_place(next_x, next_y, sprinkler_shield_obj);
                 var energy_shield = instance_place(next_x, next_y, shield_obj);
                 
-                if(!place_meeting(next_x, next_y, terrain_obj)
+                if (!place_meeting(next_x, next_y, terrain_obj)
                 && !place_meeting(next_x, next_y, gate_field_obj)
                 && (sprinkler_shield == noone || sprinkler_shield.my_guy == id)
                 && (energy_shield == noone || !iff_check("shield_will_push_me", id, energy_shield)))
@@ -273,9 +268,9 @@ else
                 }
             }
             
-            if(safe && !dash_interrupted)
+            if (safe && !dash_interrupted)
             {
-                if(my_guy.airborne)
+                if (my_guy.airborne)
                 {
                     my_guy.vspeed -= my_guy.gravity; 
                     my_guy.y -= my_guy.gravity;   
@@ -297,9 +292,9 @@ else
                 i.tint_updated = false;
                 i.my_guy = my_guy.id;
                 i.my_source = object_index;
-                i.holographic = self.holographic;          
+                i.holographic = self.holographic;
             
-                if(dash_steps_left == 0)
+                if (dash_steps_left == 0)
                 {
                     i.force = self.trig_charge * dash_end_ratio;
                     i.knockback = true;
@@ -312,12 +307,12 @@ else
                 }
             }
             
-            if(!safe || dash_interrupted)
+            if (!safe || dash_interrupted)
             {
                 dash_steps_left = 0;
             }
             
-            if(dash_steps_left <= 0)
+            if (dash_steps_left <= 0)
             {
                 firing = false;
                 my_guy.air_dashing = false;
@@ -330,9 +325,9 @@ else
     else
     {
         // ALL BUT STRUCTURES LOSE CHARGE
-        if(!object_is_ancestor(my_guy.object_index, structure_obj))
+        if (!object_is_ancestor(my_guy.object_index, structure_obj))
         {
-            if(charge > 0)
+            if (charge > 0)
             {
                 charge -= cur_charge_step;
                 /*
@@ -342,21 +337,21 @@ else
                     orb.direct_input_buffer += cur_charge_step / orb_count;
                 }
                 */
-            }    
-        }       
+            }
+        }
     }
 }
 
-if(charge < 0)
+if (charge < 0)
     charge = 0;
     
-if(my_guy != id)
+if (my_guy != id)
 {
     charge = min(charge, threshold);
 }
 
 // AUTOFIRE
-if(charge >= threshold && self.autofire)
+if (charge >= threshold && self.autofire)
 {
     trigger(id);
 }

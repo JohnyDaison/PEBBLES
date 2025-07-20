@@ -17,4 +17,3 @@ self.content_spacing = 9;
 self.corner_radius = 18;
 self.padding_size = 3;
 self.my_player = gamemode_obj.environment;
-

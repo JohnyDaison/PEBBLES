@@ -32,7 +32,7 @@ function camera_before_view() {
 
     if(read_terrain)
     {
-        var ter_block, cell_width, cell_height, hor_min, hor_max, ver_min, ver_max, xx, yy, list, size;
+        var ter_block, cell_width, cell_height, hor_min, hor_max, ver_min, ver_max, xx, yy, list, size, cur_grid_x, cur_grid_y;
     
         if(ter_list == noone)
         {
@@ -56,7 +56,7 @@ function camera_before_view() {
             // HIDE OLD
             for(i=ter_list_length-1; i>=0; i-=1)
             {
-                ter_block = ds_list_find_value(self.ter_list, i);
+                ter_block = ds_list_find_value(ter_list, i);
                 if(!is_undefined(ter_block) && instance_exists(ter_block))
                 {
                     ter_block.visible = false;
@@ -111,7 +111,7 @@ function camera_before_view() {
                 }
             }
         
-            ter_list_length = ds_list_size(ter_list);        
+            ter_list_length = ds_list_size(ter_list);
         
             // UPDATE GRID POSITION
             ter_grid_x = cur_grid_x;
@@ -153,7 +153,7 @@ function camera_before_view() {
             if(!is_undefined(ter_block) && instance_exists(ter_block))
             {
                ter_block.visible = true;
-            }   
+            }
         }
     }
 

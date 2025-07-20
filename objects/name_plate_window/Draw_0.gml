@@ -28,14 +28,15 @@ if(dodraw && instance_exists(my_guy))
         self.view_x_offset = __view_get( e__VW.XView, view_current );
         self.view_y_offset = __view_get( e__VW.YView, view_current );
         
-        view_center_x = self.view_x_offset + view_width/2;
-        view_center_y = self.view_y_offset + view_height/2;
+        var view_center_x = self.view_x_offset + view_width/2;
+        var view_center_y = self.view_y_offset + view_height/2;
         
-        xdist = my_guy.x - view_center_x;
-        ydist = my_guy.y - view_center_y;
+        var xdist = my_guy.x - view_center_x;
+        var ydist = my_guy.y - view_center_y;
         
         if(abs(xdist) > view_width/2 || abs(ydist) > view_height/2)
         {
+            var coef, new_x, new_y;
             draw_swapped = true;
             
             if(xdist != 0)
@@ -47,27 +48,27 @@ if(dodraw && instance_exists(my_guy))
                 coef = 0;
             }
             
-            vert_guide = 0;
-            hor_guide = 0;
+            var vert_guide = 0;
+            var hor_guide = 0;
             
             if(sign(xdist) >= 0)
             {
-                vert_guide = view_width/2 - border_width - width/2;   
+                vert_guide = view_width/2 - border_width - width/2;
             }
             
             if(sign(xdist) < 0)
             {
-                vert_guide = -view_width/2 + border_width + width/2;   
+                vert_guide = -view_width/2 + border_width + width/2;
             }
             
             if(sign(ydist) >= 0)
             {
-                hor_guide = view_height/2 - border_width - height/2;   
+                hor_guide = view_height/2 - border_width - height/2;
             }
             
             if(sign(ydist) < 0)
             {
-                hor_guide = -view_height/2 + border_width + height/2;   
+                hor_guide = -view_height/2 + border_width + height/2;
             }
             
             if(xdist != 0 && coef != 0)
@@ -90,7 +91,7 @@ if(dodraw && instance_exists(my_guy))
             {
                 x = view_center_x + vert_guide - width/2;
                 y = view_center_y + new_y - height/2;
-            }    
+            }
         }
     }
 
@@ -111,7 +112,7 @@ if(dodraw && instance_exists(my_guy))
     }
     
     if (instance_exists(enemy_flag)) {
-        var flag_tint = decide_flag_tint(enemy_flag.my_flag_spawner, view_player);
+        flag_tint = decide_flag_tint(enemy_flag.my_flag_spawner, view_player);
     
         draw_sprite_ext(enemy_flag.flag_icon, 0, window_axis, y + 48, 1, 1, 0, flag_tint, flag_alpha);
     }

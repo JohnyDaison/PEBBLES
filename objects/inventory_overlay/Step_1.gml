@@ -3,9 +3,8 @@ event_inherited();
 if(inv_size == -1)
 {
     inv_size = my_guy.inventory_size;
-    var i;
 
-    for(i=1; i <= inv_size; i++)
+    for(var i=1; i <= inv_size; i++)
     {
         bg_tint[? i] = c_white;
         blink_tint[? i] = c_white;
@@ -16,7 +15,7 @@ if(inv_size == -1)
 }
 else
 {
-    for(i=1; i <= inv_size; i++)
+    for(var i=1; i <= inv_size; i++)
     {
         //bg_tint[?i] = merge_colour(bg_tint[?i], c_white, 1/160);
         if(singleton_obj.step_count - blink_start[? i] > blink_length)
@@ -26,7 +25,7 @@ else
         
         if(blink_start[? i] == -1)
         {
-            bg_tint[?i] = c_white;    
+            bg_tint[?i] = c_white;
         }
         else
         {
@@ -34,7 +33,7 @@ else
             
             if((singleton_obj.step_count div blink_tick) mod 2 == 0)
             {
-                bg_tint[? i] = blink_tint[? i];    
+                bg_tint[? i] = blink_tint[? i];
             }
         }
     }

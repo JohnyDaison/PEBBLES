@@ -143,24 +143,24 @@ is_my_guy_los_blocked = function(rel_x, rel_y) {
     var current_y = next_guy_y + rel_y;
     
     ter = collision_line(next_guy_x, next_guy_y, current_x, current_y, solid_terrain_obj, false, true);
-    if(ter != noone)
+    if (ter != noone)
     {
         blocked = true;
     }
     
-    if(!blocked)
+    if (!blocked)
     {
         field = collision_line(next_guy_x, next_guy_y, current_x, current_y, gate_field_obj, false, true);
-        if(field != noone && (holographic || !field.holographic))
+        if (field != noone && (holographic || !field.holographic))
         {
             blocked = true;
         }
     }
     
-    if(!blocked)
+    if (!blocked)
     {
         body = collision_line(next_guy_x, next_guy_y, current_x, current_y, phys_body_obj, false, true);
-        if(body != noone && body.my_player.team_number != my_player.team_number && (holographic || !body.holographic))
+        if (body != noone && body.my_player.team_number != my_player.team_number && (holographic || !body.holographic))
         {
             blocked = true;
         }

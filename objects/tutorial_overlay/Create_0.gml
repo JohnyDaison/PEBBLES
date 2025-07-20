@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 self.width = 0;
 self.height = 0;
 self.orig_alpha = 1;
@@ -54,12 +55,9 @@ message_count = ds_map_size(messages);
 
 // 0 - NOT SHOWN, 1 - ACTIVE, 2 - WAS SHOWN
 message_state = ds_map_create();
-for(var i = 1; i <= message_count; i++)
+for(i = 1; i <= message_count; i++)
 {
     ds_map_add(message_state, i, 0);
 }
 
 alarm[2] = message_delay;
-
-/* */
-/*  */

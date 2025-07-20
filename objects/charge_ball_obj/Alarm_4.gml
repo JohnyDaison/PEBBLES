@@ -1,5 +1,5 @@
 /// @description SMOKE
-if(instance_exists(my_guy))
+if (instance_exists(my_guy))
 {
     var i = instance_create(x + irandom(10) - 5, y + irandom(10) - 5, energy_smoke_obj);
     i.my_player = my_guy.my_player;
@@ -8,7 +8,7 @@ if(instance_exists(my_guy))
     i.holographic = self.holographic;
     i.direction = point_direction(0,0, rel_x, rel_y);
     
-    if(charge >= smoke_charge) {
+    if (charge >= smoke_charge) {
         i.force = smoke_charge;
     } else {
         i.force = charge;
@@ -17,7 +17,7 @@ if(instance_exists(my_guy))
     i.max_force = i.force;
 
     var distance_ratio = 1;
-    if(desired_dist != 0) {
+    if (desired_dist != 0) {
         distance_ratio = point_distance(0,0, rel_x, rel_y) / desired_dist;
     }
     
@@ -31,7 +31,7 @@ if(instance_exists(my_guy))
     charge -= i.force;
 }
 
-if(charge > 0)
+if (charge > 0)
 {
     alarm[4] = smoke_delay;
 }

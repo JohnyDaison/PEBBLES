@@ -8,7 +8,7 @@ if(!ready)
         my_camera = my_player.my_camera;
         if(instance_exists(my_camera))
         {
-            offset_set = false;
+            var offset_set = false;
             if(__view_get( e__VW.Visible, my_camera.view ) && __view_get( e__VW.Object, my_camera.view ) = my_camera)
             {
                 self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );

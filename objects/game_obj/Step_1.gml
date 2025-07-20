@@ -76,14 +76,14 @@ if(obj_center_offset && !obj_center_updated)
     obj_center_dist = point_distance(0,0, obj_center_xoff, obj_center_yoff);
     obj_center_angle = point_direction(0,0, obj_center_xoff, obj_center_yoff);
     
-    obj_center_updated = true;   
+    obj_center_updated = true;
 }
 
 // TERRAIN OPTIMIZATION
 
 if(read_terrain)
 {
-    var hor_min, hor_max, ver_min, ver_max, xx, yy, list, size;
+    var hor_min, hor_max, ver_min, ver_max, xx, yy, list, size, cur_grid_x, cur_grid_y;
     
     if(ter_list == noone)
     {
@@ -140,7 +140,7 @@ if(read_terrain)
             }
         }
         
-        ter_list_length = ds_list_size(ter_list);        
+        ter_list_length = ds_list_size(ter_list);
         
         // UPDATE GRID POSITION
         ter_grid_x = cur_grid_x;

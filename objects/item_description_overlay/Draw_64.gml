@@ -39,14 +39,14 @@ if(self.alpha > 0)
     
     
     // HEADING
-    i = 2;
+    var i = 2;
     repeat(2)
     {
         my_draw_text(x + scaled_halfwidth + text_width/2 + i,
                      y + 0.75*line_height + i,
                      self.title);
         /*
-        draw_set_color(self.outline_color);                        
+        draw_set_color(self.outline_color);
         if(i==2)
         {
             i = -2;
@@ -72,7 +72,7 @@ if(self.alpha > 0)
                          message,
                          line_height, text_width - 32);
 
-        draw_set_color(self.color);                        
+        draw_set_color(self.color);
         i=0;
     }
 }

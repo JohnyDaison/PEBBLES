@@ -6,14 +6,14 @@ ds_map_destroy(status_card_visible);
 ds_map_destroy(status_last_active);
 
 group_count = ds_map_size(abi_groups);
-for(i=1; i<=group_count; i++)
+for(var i = 1; i <= group_count; i++)
 {
-    ds_map_destroy(abi_groups[?i]);
+    ds_map_destroy(abi_groups[? i]);
 }
 ds_map_destroy(abi_groups);
 
 ds_map_destroy(show_belt);
-for(col=g_dark; col<=g_blue; col++)
+for(var col = g_dark; col <= g_blue; col++)
 {
     if(col != g_yellow)
     {

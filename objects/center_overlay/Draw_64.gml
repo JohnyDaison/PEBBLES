@@ -1,5 +1,5 @@
 /// @description  ADJUST WIDTH TO MESSAGE
-if(message != "" && !adjusted)
+if (message != "" && !adjusted)
 {
     my_draw_set_font(big_font);
     width = string_width(string_hash_to_newline(message))+96;
@@ -10,35 +10,38 @@ if(message != "" && !adjusted)
     draw_border = true;
     draw_bg_color = true;
 }
-if(message=="")
+
+if (message=="")
 {
     draw_border = false;
     draw_bg_color = false;
 }
 
 
-action_inherited();
+event_inherited();
+
 /// DRAW MESSAGE
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-if(message != "")
+if (message != "")
 {
     my_draw_set_font(big_font);
     draw_set_color(c_ltgray - self.color);
     
-    i=2;
+    var i=2;
     repeat(2)
     {
         my_draw_text(x+width/2+i,y+height/2+i,string_hash_to_newline(message));
         
-        draw_set_color(self.color);                        
+        draw_set_color(self.color);
         i=0;
     }
 }
-if(is_string(tip) && tip != "")
+
+if (is_string(tip) && tip != "")
 {
-    tip_margin = 4;
+    var tip_margin = 4;
     draw_set_color(bg_color);
     draw_set_alpha(bg_alpha);
     draw_roundrect(x + tip_margin, y+height +tip_offset-floor(tip_height/2) +tip_margin,
@@ -47,15 +50,14 @@ if(is_string(tip) && tip != "")
     draw_set_alpha(1);
     my_draw_set_font(window_font);
     draw_set_color(c_ltgray - self.color);
-    i=2;
+    var i=2;
     repeat(2)
     {
         my_draw_text(x+width/2+i,y+height+tip_offset+i,string_hash_to_newline("Tip: "+tip));
         
-        draw_set_color(self.color);                        
+        draw_set_color(self.color);
         i=0;
     }
-    
 }
 
 // debug

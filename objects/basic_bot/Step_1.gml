@@ -2,21 +2,21 @@
 
 event_inherited();
 
-if(dead)
+if (dead)
 {
     phase = 0;
-    if(my_player.my_guy != id)
+    if (my_player.my_guy != id)
     {
         npc_active = false;
     }
 }
 else
 {
-    if(lost_control)
+    if (lost_control)
     {
         phase = 0;
         
-        if(bot_type == "tut_guide")
+        if (bot_type == "tut_guide")
         {
             has_spoken = false;
             has_autospoken = false;
@@ -29,7 +29,7 @@ else
         var obj_index = guy_obj;
         
         // HACK
-        if(bot_type == "arena_bot")
+        if (bot_type == "arena_bot")
         {
             obj_index = phys_body_obj;
         }
@@ -37,15 +37,15 @@ else
         // PHYS BODIES
         with(obj_index)
         {
-            if(iff_check("not_allied", other, id))
+            if (iff_check("not_allied", other, id))
             {
                 var nearest = false;
-                if(near_guy == noone || point_distance(x,y, other.x, other.y) < nearest_distance)
+                if (near_guy == noone || point_distance(x,y, other.x, other.y) < nearest_distance)
                 {
                     nearest = true;
                 }
                 
-                if(nearest && !invisible && (!protected || (is_npc && bot_type == "arena_bot")) && (other.bot_type == "tut_guide" || holographic == other.holographic))
+                if (nearest && !invisible && (!protected || (is_npc && bot_type == "arena_bot")) && (other.bot_type == "tut_guide" || holographic == other.holographic))
                 {
                     near_guy = id;
                     nearest_distance = point_distance(x,y, other.x, other.y);
@@ -54,20 +54,20 @@ else
         }
         
         // HACK
-        if(bot_type == "arena_bot")
+        if (bot_type == "arena_bot")
         {
             // SHIELDS
             with(shield_obj)
             {
-                if(my_guy != id && iff_check("attack_target_valid", other, id))
+                if (my_guy != id && iff_check("attack_target_valid", other, id))
                 {
                     var nearest = false;
-                    if(near_guy == noone || point_distance(x,y, other.x, other.y) <= nearest_distance)
+                    if (near_guy == noone || point_distance(x,y, other.x, other.y) <= nearest_distance)
                     {
                         nearest = true;
                     }
                 
-                    if(nearest)
+                    if (nearest)
                     {
                         near_guy = id;
                         nearest_distance = point_distance(x,y, other.x, other.y);
@@ -77,11 +77,11 @@ else
         }
 
         // NPC ACTIVATE/DEACTIVATE
-        if(instance_exists(near_guy))
+        if (instance_exists(near_guy))
         {
-            if(!npc_active)
+            if (!npc_active)
             {
-                if(point_distance(x,y, near_guy.x, near_guy.y) < bot_activation_distance)
+                if (point_distance(x,y, near_guy.x, near_guy.y) < bot_activation_distance)
                 {
                     npc_active = true;
                     observer_add(chunkgrid_obj, id);
@@ -89,7 +89,7 @@ else
             }
             else
             {
-                if(!stay_activated && point_distance(x,y, near_guy.x, near_guy.y) > bot_deactivation_distance)
+                if (!stay_activated && point_distance(x,y, near_guy.x, near_guy.y) > bot_deactivation_distance)
                 {
                     npc_active = false;
                 }
@@ -98,27 +98,27 @@ else
     
         script_execute(npc_script, near_guy);
         
-        if(npc_active)
+        if (npc_active)
         {
-            if(spawn_batteries)
+            if (spawn_batteries)
             {
                 // SELF SUSTAIN
                 var sust_coef = 1;
-                if(difficulty < 1)
+                if (difficulty < 1)
                 {
                     sust_coef = difficulty;
                 }
-                else if(difficulty > 1)
+                else if (difficulty > 1)
                 {
                     sust_coef = sqr(difficulty);
                 }
     
                 var allow_battery = false;
-                var col, total_power_level = 0, average_power_level;
+                var total_power_level = 0, average_power_level;
     
-                for(col=g_red; col<=g_blue; col++)
+                for (var col=g_red; col<=g_blue; col++)
                 {
-                    if(col != g_yellow)
+                    if (col != g_yellow)
                     {
                         total_power_level += get_orb_list_power_level(orbs_in_use[? col]);
                     }
@@ -127,7 +127,7 @@ else
                 average_power_level = total_power_level/3;
                 allow_battery = average_power_level < 0.4;
     
-                if(allow_battery && (step_count mod sustain_tick_time) == 0 && random(20/sust_coef) < 1)
+                if (allow_battery && (step_count mod sustain_tick_time) == 0 && random(20/sust_coef) < 1)
                 {
                     var batt = instance_create(x,y, orb_battery_obj);
                     batt.my_guy = id;
@@ -143,8 +143,7 @@ else
 }
 
 // STOP OBSERVING
-if(!npc_active && (speed == 0 || dead) && my_chunkgrid != noone)
+if (!npc_active && (speed == 0 || dead) && my_chunkgrid != noone)
 {
     observer_remove(chunkgrid_obj, id);
 }
-

@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 self.width = singleton_obj.current_width/7;
 self.height = self.width;
 self.text = "";
@@ -28,5 +29,3 @@ minimap_view_left = minimap_left + floor(minimap_width/2 - minimap_view_width/2)
 minimap_view_top = minimap_top + floor(minimap_height/2 - minimap_view_height/2);
 minimap_view_right = minimap_view_left + minimap_view_width;
 minimap_view_bottom = minimap_view_top + minimap_view_height;
-
-

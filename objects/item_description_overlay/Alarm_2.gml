@@ -4,7 +4,7 @@ if(!instance_exists(my_player.my_camera))
     instance_destroy();
     exit;
 }
-view = my_player.my_camera.view;
+var view = my_player.my_camera.view;
 max_width = view_wport[view] - 192;
 //max_width = __view_get( e__VW.WPort, view ) - 192;
 
@@ -27,10 +27,10 @@ if(message != "")
         width += 32;
         height = string_height_ext(message, line_height, width - 32);
     }
-    text_width = width;    
+    text_width = width;
     
     width += scaled_halfwidth;
-    height += 64;       
+    height += 64;
     
     fadeout_step = 0;
     
@@ -49,14 +49,14 @@ if(message != "")
 else
 {
     width = 0;
-    height = 0;     
+    height = 0;
 }
 
 side_x = __view_get( e__VW.XPort, view ) + 112;
 
 //start_x = __view_get( e__VW.XPort, view ) + __view_get( e__VW.WPort, view )/2 - width/2;
-start_x = side_x;
-start_y = __view_get( e__VW.YPort, view ) + __view_get( e__VW.HPort, view )*0.35 - height/2;
+var start_x = side_x;
+var start_y = __view_get( e__VW.YPort, view ) + __view_get( e__VW.HPort, view )*0.35 - height/2;
 
 x = start_x;
 y = start_y;

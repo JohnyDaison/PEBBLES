@@ -5,13 +5,11 @@ if (sprite_index != noone) {
     draw_sprite_ext(sprite_index,0,x,y,1,1,0,c_white,0.2);
 }
 
-if(active_tool != noone)
-{
+if (active_tool != noone) {
     draw_sprite_ext(target_cross2,0,x,y,1,1,0,c_white,1);
 }
 
-if(tooltip != "")
-{
+if (tooltip != "") {
     my_draw_set_font(label_font);
     draw_set_color(self.tint);
     draw_set_alpha(1);
@@ -27,7 +25,7 @@ if(tooltip != "")
     draw_roundrect(tip_x - 4, tip_y - 26, tip_x + width, tip_y + 2, false);
     
     draw_set_color(c_gray - self.tooltip_color);
-    i = -1;
+    var i = -1;
     repeat(2)
     {
         my_draw_text(tip_x+i, tip_y+i, text);
@@ -38,8 +36,7 @@ if(tooltip != "")
 }
 
 /// DISABLED
-if(keyboard_check(vk_alt) && false)
-{
+if (keyboard_check(vk_alt) && false) {
     draw_set_color(c_white);
     draw_set_alpha(1);
     draw_set_blend_mode_ext(bm_inv_dest_color,bm_src_alpha_sat);

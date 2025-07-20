@@ -1,11 +1,11 @@
 ///@description COLLAPSE, PARTICLES, POSITION, SIZE
 
 // COLLAPSE
-if(charge > threshold)
+if (charge > threshold)
 {
-    if(instance_exists(my_guy))
+    if (instance_exists(my_guy))
     {
-        if(object_is_ancestor(my_guy.object_index, guy_obj))
+        if (object_is_ancestor(my_guy.object_index, guy_obj))
         {
             with(my_guy)
             {
@@ -16,9 +16,9 @@ if(charge > threshold)
         }
 
         // IMPLOSION
-        if(my_color == g_dark)
+        if (my_color == g_dark)
         {
-            i = instance_create(x,y,black_aoe_obj);
+            var i = instance_create(x,y,black_aoe_obj);
             i.my_player = my_guy.my_player;
             i.force = charge/2;
             i.my_color = my_color;
@@ -28,20 +28,20 @@ if(charge > threshold)
         // EXPLOSION
         else
         {
-            i = instance_create(x,y,slot_explosion_obj);
+            var i = instance_create(x,y,slot_explosion_obj);
             i.my_color = my_color;
             i.my_player = my_guy.my_player;
             i.my_guy = my_guy;
             i.my_source = object_index;
             i.holographic = holographic;
             
-            if(my_guy != id)
+            if (my_guy != id)
             {
                 my_guy.lost_control = true;
                 my_guy.front_hit = true;
-                if(rel_x != 0)
+                if (rel_x != 0)
                     my_guy.hspeed -= (radius/rel_x)*charge;
-                if(rel_y != 0)
+                if (rel_y != 0)
                     my_guy.vspeed -= (radius/rel_y)*charge;
             }
         }
@@ -53,22 +53,22 @@ if(charge > threshold)
 // PARTICLES, POSITION, SIZE
 sprite_size = size_coef*(0.25 + 0.50 * charge/max_charge);
 
-if(instance_exists(my_guy) && sprite_index != noone && my_color != -1)
+if (instance_exists(my_guy) && sprite_index != noone && my_color != -1)
 {
     if (desired_dist > 0) {
-        desired_rel_x = rel_x;
+        var desired_rel_x = rel_x;
         
         visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
-    } else if(cur_dist < centered_dist) {
+    } else if (cur_dist < centered_dist) {
         var rest_rel_x = my_guy.facing * rest_x_offset;
-        desired_rel_x = rest_rel_x;
+        var desired_rel_x = rest_rel_x;
         
-        if(is_my_guy_los_blocked(visual_rel_x, rel_y)) {
+        if (is_my_guy_los_blocked(visual_rel_x, rel_y)) {
             visual_rel_x -= lengthdir_x(5, point_direction(0, 0, visual_rel_x, rel_y));
         } else {
             var next_visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
             
-            if(!is_my_guy_los_blocked(next_visual_rel_x, rel_y)) {
+            if (!is_my_guy_los_blocked(next_visual_rel_x, rel_y)) {
                 visual_rel_x = next_visual_rel_x;
             }
         }

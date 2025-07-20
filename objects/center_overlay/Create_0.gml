@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 self.width = 624;
 self.height = 160;
 self.tip_height = 48;

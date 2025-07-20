@@ -1,4 +1,5 @@
-action_inherited();
+event_inherited();
+
 if(cursor_obj.x > minimap_left && cursor_obj.x < minimap_right
 && cursor_obj.y > minimap_top && cursor_obj.y < minimap_bottom
 && DB.mouse_has_moved)
@@ -15,4 +16,3 @@ if(cursor_obj.x > minimap_left && cursor_obj.x < minimap_right
         }
     }
 }
-

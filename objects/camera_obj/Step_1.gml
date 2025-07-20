@@ -57,8 +57,8 @@ if(on && view != -1)
             var delayed_start = my_guy.look_start + look_zoom_delay * singleton_obj.game_speed;
             var current_step = my_guy.step_count - delayed_start;
             var zoom_steps = look_zoom_duration * singleton_obj.game_speed;
-            var ratio = clamp(current_step / zoom_steps, 0, 1);
-            var desired_zoom = lerp(normal_zoom, look_zoom, ratio);
+            ratio = clamp(current_step / zoom_steps, 0, 1);
+            desired_zoom = lerp(normal_zoom, look_zoom, ratio);
             
             zoom_level = desired_zoom;
             

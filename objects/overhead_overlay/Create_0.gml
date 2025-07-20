@@ -25,6 +25,8 @@ last_abi_name = "";
 abi_panel_icon_bg_radius = 18;
 hide_abi = false;
 hide_storage = false;
+abi_dial_color = c_white;
+abi_label_tint = c_white;
 
 //att_draw_dist = 64;
 
@@ -50,7 +52,7 @@ status_order = ds_map_create();
 status_card_visible = ds_map_create();
 status_last_active = ds_map_create();
 
-i=1;
+var i = 1;
 
 //status_order[? i++] = g_dark;
 status_order[? i++] = g_blue;
@@ -62,12 +64,8 @@ status_order[? i++] = g_yellow;
 status_order[? i++] = g_white;
 status_order[? i++] = g_octarine;
 
-var effect_id;
-
-for(var i=0; i<DB.status_effect_count; i++)
-{
-    effect_id = DB.status_effects_list[| i];
-    
+for (i = 0; i < DB.status_effect_count; i++) {
+    var effect_id = DB.status_effects_list[| i];
     status_card_visible[? effect_id] = false;
     status_last_active[? effect_id] = 0;
 }
@@ -86,38 +84,36 @@ abi_outline_color = merge_color(c_gray, c_white, 0.5);
 group_count = 4;
 abi_groups = ds_map_create();
 
-var group, group_members, i, ii=1;
+var group, group_members, i, ii = 1;
 
-for(i=1; i<=group_count; i++)
-{
-    abi_groups[?i] = ds_map_create();
+for (i = 1; i <= group_count; i++) {
+    abi_groups[? i] = ds_map_create();
 }
 
-i=1;
-ii=1;
+i = 1;
+ii = 1;
 group = abi_groups[? i++];
 group[? ii++] = g_dark;
 
-ii=1;
+ii = 1;
 group = abi_groups[? i++];
 group[? ii++] = g_blue;
 group[? ii++] = g_green;
 group[? ii++] = g_red;
 
-ii=1;
+ii = 1;
 group = abi_groups[? i++];
 group[? ii++] = g_cyan;
 group[? ii++] = g_magenta;
-group[? ii++] = g_yellow
+group[? ii++] = g_yellow;
 
-ii=1;
+ii = 1;
 group = abi_groups[? i++];
 group[? ii++] = g_white;
 
 abi_panel_width = 0;
 
-for(i=1; i<=group_count; i++)
-{
+for (i = 1; i <= group_count; i++) {
     group = abi_groups[? i];
     group_members = ds_map_size(group);
     abi_panel_width += group_members * (abi_bar_width + abi_bar_space);
@@ -139,26 +135,24 @@ belt_list = ds_map_create();
 left_side_belt_order = ds_list_create();
 right_side_belt_order = ds_list_create();
 
-for(col=g_dark; col<=g_blue; col++)
-{
-    if(col != g_yellow)
-    {
+for (var col = g_dark; col <= g_blue; col++) {
+    if (col != g_yellow) {
         show_belt[? col] = false;
         belt_list[? col] = ds_list_create();
-    }   
+    }
 }
 
-i=0;
-left_side_belt_order[|i++] = g_blue;
-left_side_belt_order[|i++] = g_green;
-left_side_belt_order[|i++] = g_red;
-left_side_belt_order[|i++] = g_dark;
+i = 0;
+left_side_belt_order[| i++] = g_blue;
+left_side_belt_order[| i++] = g_green;
+left_side_belt_order[| i++] = g_red;
+left_side_belt_order[| i++] = g_dark;
 
-i=0;
-right_side_belt_order[|i++] = g_dark;
-right_side_belt_order[|i++] = g_blue;
-right_side_belt_order[|i++] = g_green;
-right_side_belt_order[|i++] = g_red;
+i = 0;
+right_side_belt_order[| i++] = g_dark;
+right_side_belt_order[| i++] = g_blue;
+right_side_belt_order[| i++] = g_green;
+right_side_belt_order[| i++] = g_red;
 
 chborbit_blink_time = 0;
 belts_blink_time = 0;

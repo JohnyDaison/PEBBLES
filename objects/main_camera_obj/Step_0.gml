@@ -1,24 +1,21 @@
 event_inherited();
 
-total_x = 0;
-total_y = 0;
-var i,ii;
-
-if(count>0 && !on) //&& view_visible[0]
+if (count > 0 && !on) //&& view_visible[0]
 {
     //view_visible[0]=false;
+    var total_x = 0;
+    var total_y = 0;
     
-    if(my_chunkgrid != noone)
-    {
+    if (my_chunkgrid != noone) {
         observer_remove(my_chunkgrid, id);
     }
-    for(i=0; i<count; i++)
+
+    for (var i = 0; i < count; i++)
     {
         var player_view = player_view_list[| i];
-        cam = cameras[? player_view];
+        var cam = cameras[? player_view];
         cam.on = true;
-        if(cam.my_chunkgrid == noone)
-        {
+        if (cam.my_chunkgrid == noone) {
             observer_add(chunkgrid_obj, cam.id);
         }
         total_x += cam.x;
@@ -34,12 +31,12 @@ if(count>0 && !on) //&& view_visible[0]
     __view_set( e__VW.XView, view, x-__view_get( e__VW.WView, view )/2 ); 
     __view_set( e__VW.YView, view, y-__view_get( e__VW.HView, view )/2 );
 
-    if(ter_list_length > 0)
+    if (ter_list_length > 0)
     {
-        for(ii=ter_list_length-1; ii>=0; ii-=1)
+        for (var ii = ter_list_length - 1; ii >= 0; ii--)
         {
-            ter_block = ds_list_find_value(ter_list, ii);
-            if(!is_undefined(ter_block) && instance_exists(ter_block))
+            var ter_block = ds_list_find_value(ter_list, ii);
+            if (!is_undefined(ter_block) && instance_exists(ter_block))
             {
                ter_block.visible = false;
             }
@@ -49,10 +46,10 @@ if(count>0 && !on) //&& view_visible[0]
     }
 }
 
-if(on || count == 0) // !view_visible[0] &&
+if (on || count == 0) // !view_visible[0] &&
 {
     //view_visible[0]=true;
-    for(i=0; i<count; i++)
+    for (var i = 0; i < count; i++)
     {
         var player_view = player_view_list[| i];
         var cam = cameras[? player_view];
@@ -61,12 +58,12 @@ if(on || count == 0) // !view_visible[0] &&
         {
             on = false;
             
-            if(ter_list_length > 0)
+            if (ter_list_length > 0)
             {
-                for(ii = ter_list_length-1; ii>=0; ii-=1)
+                for (var ii = ter_list_length - 1; ii >= 0; ii--)
                 {
-                    ter_block = ds_list_find_value(ter_list, ii);
-                    if(!is_undefined(ter_block) && instance_exists(ter_block))
+                    var ter_block = ds_list_find_value(ter_list, ii);
+                    if (!is_undefined(ter_block) && instance_exists(ter_block))
                     {
                        ter_block.visible = false;
                     }

@@ -19,7 +19,7 @@ self.toggleable_aim_mode = false;
 instance_create(0,0, keyboard1_obj);
 instance_create(0,0, keyboard2_obj);
 
-for(i=0;i<4;i++)
+for(var i=0;i<4;i++)
 {
     var inst = instance_create(0,0, gamepad_input_obj);
     inst.index = i;

@@ -6,13 +6,13 @@ my_draw_set_font(msg_font);
 draw_set_alpha(fade_ratio);
 var yy = y + content_spacing;
 
-for(i = 0; i < msg_count; i+=1)
+for (var i = 0; i < msg_count; i+=1)
 {
     var feed_str = msg_list[| i];
     var feed_item = feed_str;
     //yy = y + content_spacing + 0.5*msg_height + i*(msg_height + content_spacing);
     
-    if(is_string(feed_str))
+    if (is_string(feed_str))
     {
         yy += 16 + padding_size;
         
@@ -23,7 +23,7 @@ for(i = 0; i < msg_count; i+=1)
         
         yy += 16 + padding_size + content_spacing;
     }
-    else if(instance_exists(feed_item))
+    else if (instance_exists(feed_item))
     {
         var xx = x + floor(width/2 - feed_item.width/2);
         yy += (feed_item.height/2 + padding_size);
@@ -32,7 +32,7 @@ for(i = 0; i < msg_count; i+=1)
         var bg_color = merge_colour(c_black, DB.colormap[? "bf_orange"], max(0, (feed_item.fade_ratio - blinkend_ratio)) / feed_item.blinkin_duration);
         var max_content_height = 0;
         
-        for(ii = 0; ii < feed_item.content_length; ii++)
+        for (var ii = 0; ii < feed_item.content_length; ii++)
         {
             var content_type = feed_item.type[? ii];
             var content = feed_item.content[? ii];
@@ -41,9 +41,9 @@ for(i = 0; i < msg_count; i+=1)
             var content_width = 0; 
             var content_height = 0;
             
-            if(!is_undefined(content_type) && content_type != "blank")
+            if (!is_undefined(content_type) && content_type != "blank")
             {
-                if(content_type == "text")
+                if (content_type == "text")
                 {
                     content_width = string_width(content);
                     content_height = string_height(content);
@@ -67,7 +67,7 @@ for(i = 0; i < msg_count; i+=1)
                     
                     xx += floor(content_width/2);
                 }
-                else if(content_type == "icon")
+                else if (content_type == "icon")
                 {
                     content_width = sprite_get_width(content); 
                     content_height = sprite_get_height(content);
@@ -89,17 +89,16 @@ for(i = 0; i < msg_count; i+=1)
 
                 xx += self.content_spacing;
                 
-                if(feed_item.height == 0 && max_content_height < content_height)
+                if (feed_item.height == 0 && max_content_height < content_height)
                 {
                     max_content_height = content_height;
                 }
             }
         }
         
-        if(feed_item.height == 0)
+        if (feed_item.height == 0)
         {
             feed_item.height = max_content_height;
-            resize = true;
         }
         
         yy += (feed_item.height/2 + padding_size + content_spacing);

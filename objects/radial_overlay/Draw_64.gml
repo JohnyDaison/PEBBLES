@@ -24,8 +24,8 @@ if(ready)
         else if(object_index == guy_spawner_obj && my_player == other.my_player)
         {
             if(object_out_of_view(id, other.my_camera))
-            {   
-                draw_sprite_ext(sprite_index, 0, radial_gui_x, radial_gui_y, 0.5, 0.5, 0, tint, 0.4);  
+            {
+                draw_sprite_ext(sprite_index, 0, radial_gui_x, radial_gui_y, 0.5, 0.5, 0, tint, 0.4);
                 draw_sprite_ext(curved_arrow_spr, 0, radial_gui_x, radial_gui_y, 1.5, 1, radial_gui_dir, tint, 0.4);
             }
         }
@@ -43,4 +43,3 @@ if(ready)
         }
     }
 }
-

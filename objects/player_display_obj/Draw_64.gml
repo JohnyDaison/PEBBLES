@@ -40,4 +40,3 @@ if(instance_exists(my_camera))
         }
     }
 }
-

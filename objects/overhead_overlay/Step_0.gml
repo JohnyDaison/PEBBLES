@@ -9,7 +9,7 @@ if(gamemode_obj.player_count == 1)
     rotating_arrow_image += rotating_arrow_speed;
     if(rotating_arrow_image >= rotating_arrow_image_count)
     {
-        rotating_arrow_image = 0;   
+        rotating_arrow_image = 0;
     }
 
     if(rotating_arrow_alpha > rotating_arrow_alpha_min)
@@ -25,20 +25,20 @@ if(gamemode_obj.player_count == 1)
 // ORB COUNT UPDATE
 if(instance_exists(my_guy))
 {
-    for(col = g_red; col <= g_blue; col++)
+    for(var col = g_red; col <= g_blue; col++)
     {
         if(col == g_yellow) continue;
         
         if(last_orbs[? col] != my_guy.orb_reserve[? col])
             orb_light[? col] = 1;
-            
+        
         last_orbs[? col] = my_guy.orb_reserve[? col];
         total_storage_orbs += last_orbs[? col];
-    }    
+    }
     
     // ORB BELTS
     orb_panel_width = 0;
-    for(col=g_dark; col<=g_blue; col++)
+    for(var col=g_dark; col<=g_blue; col++)
     {
         if(col == g_yellow) continue;
 
@@ -66,8 +66,8 @@ if(instance_exists(my_guy))
     }
 }   
 
-// ORB FADING    
-for(col = g_red; col <= g_blue; col++)
+// ORB FADING
+for(var col = g_red; col <= g_blue; col++)
 {
     if(col == g_yellow) continue;
     

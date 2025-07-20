@@ -5,7 +5,7 @@ if(inv_size != -1)
         my_camera = my_player.my_camera;
         if(instance_exists(my_camera))
         {   
-            offset_set = false;
+            var offset_set = false;
             if(__view_get( e__VW.Visible, my_camera.view ))
             {
                 self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
@@ -51,28 +51,26 @@ if(inv_size != -1)
                 offset_x = x;
                 offset_y = y;
                 
-                view_center_x = __view_get( e__VW.XPort, my_camera.view ) + __view_get( e__VW.WPort, my_camera.view )/2;
-                view_center_y = __view_get( e__VW.YPort, my_camera.view ) + __view_get( e__VW.HPort, my_camera.view )/2;
+                var view_center_x = __view_get( e__VW.XPort, my_camera.view ) + __view_get( e__VW.WPort, my_camera.view )/2;
+                var view_center_y = __view_get( e__VW.YPort, my_camera.view ) + __view_get( e__VW.HPort, my_camera.view )/2;
             
                 var i, pickup, xx, yy, alpha_ratio;
                 for(i=1; i<=inv_size; i+=1)
                 {
                     pickup = my_guy.inventory[? i];
     
-                    var alpha_ratio = 0.8;
+                    alpha_ratio = 0.8;
     
                     // SLOT POSITION
                     if(my_guy.control_method == keyboard)
                     {
                         xx = slot_size / 2 + (i-1) * (slot_size + slot_dist);
                         yy = name_height + slot_size / 2;
-                        name_adjust = 1;
                     }
                     if(my_guy.control_method == gamepad)
                     {
                         xx = lengthdir_x(slot_range, i*90);
                         yy = lengthdir_y(slot_range, i*90);
-                        name_adjust = 0;
                     }
                     
                     var final_x = x + xx;
@@ -108,8 +106,7 @@ if(inv_size != -1)
 
                         
                         // DRAW ICON
-                        var icon_tint;
-                        icon_tint = pickup.tint;
+                        var icon_tint = pickup.tint;
                         if(pickup.activatable && pickup.active)
                         {
                             alpha_ratio = 1;
@@ -183,7 +180,7 @@ if(inv_size != -1)
                         {
                             final_x += stack_xx;
                             final_y += stack_yy;
-                            str = string(pickup.stack_size);
+                            var str = string(pickup.stack_size);
                             
                             my_draw_set_font(stack_font);
                             draw_set_halign(fa_center);
@@ -191,7 +188,7 @@ if(inv_size != -1)
     
                             draw_set_colour(c_gray);
                             draw_ellipse(final_x - stack_radius, final_y - stack_radius,
-                             final_x + stack_radius -1, final_y + stack_radius -1, false)
+                                         final_x + stack_radius -1, final_y + stack_radius -1, false);
                             draw_set_colour(c_black);
                             my_draw_text_ext(final_x+1, final_y+1, str, 20, 200);
                             draw_set_colour(c_white);

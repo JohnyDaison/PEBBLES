@@ -1,8 +1,7 @@
 draw_sprite_ext(charge_ball2_spr,image_index,x,y,image_xscale,image_yscale,image_angle,self.glow_tint,image_alpha*self.holo_alpha);
 //draw_sprite_ext(charge_ball3_highlight,image_index,x,y,sprite_size,sprite_size,0,c_white,image_alpha*0.5);
 
-if(instance_exists(my_guy) && (charging || firing))
-{
+if (instance_exists(my_guy) && (charging || firing)) {
     draw_set_color(glow_tint);
     draw_set_alpha(lightning_alpha);
     
@@ -20,7 +19,7 @@ if(instance_exists(my_guy) && (charging || firing))
     {
         x2 = start_x + rel_x*(i/lightning_steps) + random_range(lgt_r1, lgt_r2); 
         y2 = start_y + rel_y*(i/lightning_steps) + random_range(lgt_r1, lgt_r2);
-        if(i==lightning_steps)
+        if (i==lightning_steps)
         {
             x2 = x;
             y2 = y;

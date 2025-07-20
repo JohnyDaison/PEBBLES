@@ -19,7 +19,6 @@ y = view_hview[0]/2-height/2;
 self.title = "Item title";
 self.image = item_placeholder_spr;
 self.message = "Item description";
-old_message = message;
 self.adjusted = false;
 my_guy = noone;
 
@@ -33,6 +32,7 @@ item_halfwidth = 0;
 item_halfheight = 0;
 scaled_halfwidth = 0;
 scaled_halfheight = 0;
+side_x = 0;
 
 message_delay = 10;
 blink_time = 30;
@@ -43,17 +43,6 @@ fadeout_time = 600;
 blink_step = 0;
 slide_step = 0;
 fadeout_step = 0;
-
-messages = ds_map_create();
-var i=1;
-message_count = ds_map_size(messages);
-
-// 0 - NOT SHOWN, 1 - ACTIVE, 2 - WAS SHOWN
-message_state = ds_map_create();
-for(var i = 1; i <= message_count; i++)
-{
-    ds_map_add(message_state, i, 0);
-}
 
 birth_step = singleton_obj.step_count;
 

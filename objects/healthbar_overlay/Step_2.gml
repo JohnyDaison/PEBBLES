@@ -1,35 +1,28 @@
 event_inherited();
 
 /// UPDATE VALUES AND COORDS
-if(ready && instance_exists(my_guy))
-{ 
+if (ready && instance_exists(my_guy)) {
     width = __view_get( e__VW.WPort, my_camera.view ) - 2*border_width - my_camera.border_width * 2;
     base_exists = instance_exists(my_guy.my_base) && my_guy.my_base.object_index == guy_spawner_obj;
     
     // HIDING OWN HP
-    if(hide_own_hp)
-    {
+    if (hide_own_hp) {
         hide_own_hp = (my_guy.damage == my_guy.min_damage);
     }
     
-    if(hide_own_hp)
-    {
-        if(hide_hp_alpha > 0)
-        {
+    if (hide_own_hp) {
+        if (hide_hp_alpha > 0) {
             hide_hp_alpha = max(0, hide_hp_alpha - hide_speed);
         }
     }
-    else
-    {
-        if(hide_hp_alpha < 1)
-        {
+    else {
+        if (hide_hp_alpha < 1) {
             hide_hp_alpha = min(1, hide_hp_alpha + hide_speed);
         }
     }
     
     // BLINK OWN HP
-    if(own_hp_blink_time > 0)
-    {
+    if (own_hp_blink_time > 0) {
         draw_own_hp = ((own_hp_blink_time div own_hp_blink_rate) + 1) mod 2;
     
         own_hp_blink_time--;
@@ -37,21 +30,16 @@ if(ready && instance_exists(my_guy))
 
     
     // HIDING BASE HP
-    if(base_exists)
-    {
+    if (base_exists) {
         hide_base_hp = (my_guy.my_base.damage == 0);
         
-        if(hide_base_hp)
-        {
-            if(hide_basehp_alpha > 0)
-            {
+        if (hide_base_hp) {
+            if (hide_basehp_alpha > 0) {
                 hide_basehp_alpha = max(0, hide_basehp_alpha - hide_speed);
             }
         }
-        else
-        {
-            if(hide_basehp_alpha < 1)
-            {
+        else {
+            if (hide_basehp_alpha < 1) {
                 hide_basehp_alpha = min(1, hide_basehp_alpha + hide_speed);
             }
         }
@@ -246,10 +234,10 @@ if(ready && instance_exists(my_guy))
     center_y = y + height/2 -1;
     
     // LOSS GAIN
-    loss_x0 = hp_x1 + 1;          
+    loss_x0 = hp_x1 + 1;
     loss_x1 = loss_x0 + loss_width - 1;
     
-    gain_x0 = hp_x1 - gain_width;          
+    gain_x0 = hp_x1 - gain_width;
     gain_x1 = hp_x1;
     
     if(base_exists)
@@ -257,7 +245,7 @@ if(ready && instance_exists(my_guy))
         baseloss_x0 = basehp_x1 + 1;
         baseloss_x1 = baseloss_x0 + baseloss_width - 1;
         
-        basegain_x0 = basehp_x1 - basegain_width;          
+        basegain_x0 = basehp_x1 - basegain_width;
         basegain_x1 = basehp_x1;
     }
 }

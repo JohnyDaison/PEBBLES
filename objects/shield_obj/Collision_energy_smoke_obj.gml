@@ -1,6 +1,8 @@
 /// @description BOTH modes
 if(!other.immovable && holographic == other.holographic) // my_guy == id && 
 {
+    var smoke = noone;
+    
     if(my_guy != id)
     {
         smoke = other.id;

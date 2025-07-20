@@ -72,7 +72,7 @@ if(instance_exists(my_guy))
         status_panel_y = abi_panel_y;
         
         
-        // CORRECTION FOR 1-VIEW MODE        
+        // CORRECTION FOR 1-VIEW MODE
         if(my_camera == main_camera_obj.id)
         {
             abi_x += __view_get( e__VW.XPort, my_guy.my_player.my_camera.view );
@@ -92,7 +92,7 @@ if(instance_exists(my_guy))
         {
             if(my_guy.channeling)
             {
-                abi_color = g_dark;    
+                abi_color = g_dark;
             }
             else
             {
@@ -116,8 +116,8 @@ if(instance_exists(my_guy))
         {
             abi_icon = DB.abi_icons[? abi_color];
             abi_tint = DB.colormap[? abi_color];
-            abi_label_tint = c_white;
             hide_abi = false;
+            var abi_left;
         
             // COOLDOWN
             
@@ -134,7 +134,7 @@ if(instance_exists(my_guy))
             {
                 abi_status = -12*abi_left;
                 
-                abi_dial_ratio = 1 - 2*abi_left;
+                var abi_dial_ratio = 1 - 2*abi_left;
                 abi_dial_ratio = clamp(abi_dial_ratio,-1,1);
                 
                 abi_dial_color = make_color_rgb((max(abi_dial_ratio,0)-1)*-255,(min(abi_dial_ratio,0)+1)*255,0);
@@ -224,7 +224,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     var xx = x, visible_count = 0;
     
     status_count = ds_map_size(status_order);
-    for(i=1; i<=status_count; i++)
+    for(var i=1; i<=status_count; i++)
     {
         status_color = status_order[? i];
         effect = DB.color_effects[? status_color];
@@ -237,7 +237,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     panel_width = visible_count * (status_bar_space + status_bar_width) + status_bar_space;
     status_panel_y = move_lock_y - 32;
         
-    for(i=1; i<=status_count; i++)
+    for(var i=1; i<=status_count; i++)
     {
         status_color = status_order[? i];
         status_tint = DB.colormap[? status_color];

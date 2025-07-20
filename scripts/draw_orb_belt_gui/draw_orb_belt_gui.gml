@@ -3,7 +3,7 @@ function draw_orb_belt_gui(belt_x, belt_y, list, orientation, belt_width, belt_s
     var inner_border_width = 2;
     var border_i;
 
-    var orb, slot_x1, slot_x2, slot_y1, slot_y2, orb_x1, orb_x2, orb_y1, orb_y2, belt_x2, belt_y2, 
+    var orb, slot_x1, slot_x2, slot_y1, slot_y2, orb_x1, orb_x2, orb_y1, orb_y2, belt_x2, belt_y2,
         ii, edge_offset, selected, edge_range = belt_width/2-2;
 
     if(belt_size > 0 && ds_exists(list, ds_type_list))
@@ -89,24 +89,23 @@ function draw_orb_belt_gui(belt_x, belt_y, list, orientation, belt_width, belt_s
                     blink_white = false,
                     size_coef = 0,
                     size_boost = 0,
-                    anim_progress,
-                    orb_radius;
+                    orb_radius = 0;
 
                 if(orb.newly_got_steps > 0)
                 {
                     //blink_off = round(orb.newly_got_steps / orb.newly_got_anim_cycle) mod 2;
                     //blink_white = round(orb.newly_got_steps / orb.newly_got_anim_cycle) mod 2;
-                    anim_progress = /*sqr*/(1 - (orb.newly_got_steps / orb.newly_got_anim_duration));
+                    var anim_progress = /*sqr*/(1 - (orb.newly_got_steps / orb.newly_got_anim_duration));
                     size_coef = (1- ( abs(orb.newly_got_steps - orb.newly_got_anim_peak) / orb.newly_got_anim_peak));
                     size_boost = edge_range * orb.newly_got_anim_sizecoef * size_coef;
-                    var view_center_x = __view_get( e__VW.XPort, camera.view ) + __view_get( e__VW.WPort, camera.view )/2,
-                    var view_center_y = __view_get( e__VW.YPort, camera.view ) + __view_get( e__VW.HPort, camera.view )/2
-                            
+                    var view_center_x = __view_get( e__VW.XPort, camera.view ) + __view_get( e__VW.WPort, camera.view )/2;
+                    var view_center_y = __view_get( e__VW.YPort, camera.view ) + __view_get( e__VW.HPort, camera.view )/2;
+                    
                     orb_x1 = lerp(view_center_x, orb_x1, anim_progress);
                     orb_x2 = lerp(view_center_x, orb_x2, anim_progress);
                     orb_y1 = lerp(view_center_y, orb_y1, anim_progress);
                     orb_y2 = lerp(view_center_y, orb_y2, anim_progress);
-                
+                    
                     orb_radius = (1-anim_progress) * (abs((orb_x2 - orb_x1) - 2*edge_offset + 2*size_boost));
                 }
             
@@ -146,7 +145,7 @@ function draw_orb_belt_gui(belt_x, belt_y, list, orientation, belt_width, belt_s
                         draw_rectangle(orb_x1 + edge_offset, orb_y1 + edge_offset,
                                         orb_x2 - edge_offset, orb_y2 - edge_offset, false);
                     }
-                                
+                    
                     //outline
                     draw_set_colour(c_ltgray);
                     if(orb.newly_got_steps > 0)

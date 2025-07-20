@@ -131,7 +131,7 @@ with(phys_body_obj)
                                 my_guy.vspeed -= v_change/2;
                         }
                     }
-                }    
+                }
             }
             body = noone;
         }

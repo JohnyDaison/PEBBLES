@@ -18,6 +18,7 @@ bg_yoffset = 0;
 bg_hspeed = -0.2;
 bg_vspeed = 0;
 
+// NOTE: This is an actual method, it's not a global function
 function add_player_camera(player_camera) {
     ds_list_add(player_view_list, player_camera.view);
     cameras[? player_camera.view] = player_camera.id;

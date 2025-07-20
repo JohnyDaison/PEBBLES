@@ -4,13 +4,13 @@ var message_script;
 if(instance_exists(my_guy))
 {
     old_message = message;
-    change_made = false;
+    var change_made = false;
     // UPDATE MESSAGE
     for(var i = 1; i<= message_count; i++)
     { 
         message_script = ds_map_find_value(messages,i);
         
-        var state = message_state[?i];
+        var state = message_state[? i];
         
         if(state == 0 && message == "" && fadeout_step == fadeout_time)
         {
@@ -58,7 +58,7 @@ if(instance_exists(my_guy))
     }
 
     // UPDATE FRAME
-    view = my_player.my_camera.view;
+    var view = my_player.my_camera.view;
     max_width = __view_get( e__VW.WPort, view ) - 192;
     
     if(message != "")
@@ -75,14 +75,14 @@ if(instance_exists(my_guy))
             height = string_height_ext(string_hash_to_newline(message), line_height, width);  
         }
         width += 32;
-        height += 32;       
+        height += 32;
         
         focused = true;
     }
     else
     {
         width = 0;
-        height = 0;     
+        height = 0;
     }
     
     x = __view_get( e__VW.XPort, view ) + __view_get( e__VW.WPort, view )/2 - width/2;
@@ -91,7 +91,7 @@ if(instance_exists(my_guy))
 else
 {
     width = 0;
-    height = 0;     
+    height = 0;
 }
 
 alarm[2] = message_delay;

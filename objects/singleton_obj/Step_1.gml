@@ -93,7 +93,7 @@ if(DB.console_mode == "debug" && step_count mod 120 == 0)
     {
         if(error_placement)
         {
-            i = instance_create(x+15,y+15,text_popup_obj);
+            var i = instance_create(x+15,y+15,text_popup_obj);
             i.str = "OVERLAP!";
             i.my_color = g_red;
             i.tint = c_orange;
@@ -102,7 +102,7 @@ if(DB.console_mode == "debug" && step_count mod 120 == 0)
         
         if(aligned_x != x || aligned_y != y)
         {
-            i = instance_create(x+15,y+15,text_popup_obj);
+            var i = instance_create(x+15,y+15,text_popup_obj);
             i.str = "ALIGN!";
             i.my_color = g_red;
             i.tint = c_orange;
@@ -366,7 +366,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + O
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("O")))
         {
-            i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
+            var i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
             if(i.multicolor)
             {
                 i.my_color = g_octarine;
@@ -378,7 +378,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + I
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("I")))
         {
-            i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
+            var i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
             i.invisible = !i.invisible;
             i.tint_updated = false;
         }
@@ -387,7 +387,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + H
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("H")))
         {
-            i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
+            var i = instance_nearest(cursor_obj.room_x, cursor_obj.room_y, game_obj);
             if(i.holo_alpha != -1)
             {
                 i.holographic = !i.holographic;
@@ -402,7 +402,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // CTRL + O
         if(keyboard_check(vk_control) && keyboard_check_pressed(ord("O")))
         {
-            i = instance_create(cursor_obj.room_x,cursor_obj.room_y, color_orb_obj);
+            var i = instance_create(cursor_obj.room_x,cursor_obj.room_y, color_orb_obj);
             i.my_guy = i.id;
             i.airborne = true;
             i.color_added = true;
@@ -435,7 +435,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // CTRL + B
         if(keyboard_check(vk_control) && keyboard_check_pressed(ord("B")))
         {
-            i = instance_create(cursor_obj.room_x, cursor_obj.room_y, basic_bot); 
+            var i = instance_create(cursor_obj.room_x, cursor_obj.room_y, basic_bot); 
             with(i)
             {
                 var player = gamemode_obj.players[? cursor_obj.my_color];
@@ -463,16 +463,16 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + B
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("B")))
         {
-            i = instance_create(cursor_obj.room_x, cursor_obj.room_y, slime_mob_obj);
+            var i = instance_create(cursor_obj.room_x, cursor_obj.room_y, slime_mob_obj);
             i.my_color = irandom_range(g_red, g_white);
             i.tint_updated = false;
             if(cursor_obj.my_color == g_dark)
             {
-                i.energy = 0.0001;   
+                i.energy = 0.0001;
             }
             else if(cursor_obj.my_color == g_octarine)
             {
-                i.energy = i.max_energy - i.touch_damage;   
+                i.energy = i.max_energy - i.touch_damage;
             }
         }
     
@@ -497,7 +497,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
         // ALT + S
         if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("S")))
         {
-            i = instance_create(cursor_obj.room_x,cursor_obj.room_y,star_core_obj);
+            var i = instance_create(cursor_obj.room_x,cursor_obj.room_y,star_core_obj);
             i.my_guy = i.id;
             if(cursor_obj.my_color > g_dark)
             {
@@ -807,7 +807,7 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
                 var camera = instance_nearest(x,y, camera_obj);
                 if(instance_exists(camera) && point_distance(x,y, camera.x, camera.y) < 1024)
                 {
-                    i = instance_create(x,y, text_popup_obj);
+                    var i = instance_create(x,y, text_popup_obj);
                     i.str = object_get_name(transform_memory[? "object_index"]);
                     i.my_color = g_red;
                     i.tint = c_orange;
@@ -874,7 +874,7 @@ if( keyboard_check(vk_right) || keyboard_check(ord("D")))
 }
 
 
-for(i=right; i<=down; i+=1)
+for(var i=right; i<=down; i+=1)
 {
     DB.gui_controls[# i,pressed] = false;
     DB.gui_controls[# i,released] = false;
@@ -923,7 +923,7 @@ if(keyboard_check(vk_alt))
 }
 
 
-for(i=confirm; i<=stepmode; i+=1)
+for(var i=confirm; i<=stepmode; i+=1)
 {
     DB.gui_controls[# i,pressed] = false;
     DB.gui_controls[# i,released] = false;
