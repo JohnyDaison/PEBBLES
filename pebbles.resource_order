@@ -280,6 +280,7 @@
     {"name":"ter_font","order":9,"path":"fonts/ter_font/ter_font.yy",},
     {"name":"text_popup_font","order":1,"path":"fonts/text_popup_font/text_popup_font.yy",},
     {"name":"tutorial_font","order":4,"path":"fonts/tutorial_font/tutorial_font.yy",},
+    {"name":"__view_get usage","order":3,"path":"notes/__view_get usage/__view_get usage.yy",},
     {"name":"compatibility_report_020817_1133213321","order":1,"path":"notes/compatibility_report_020817_1133213321/compatibility_report_020817_1133213321.yy",},
     {"name":"import_notes","order":2,"path":"notes/import_notes/import_notes.yy",},
     {"name":"access_card_obj","order":10,"path":"objects/access_card_obj/access_card_obj.yy",},
