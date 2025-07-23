@@ -1,6 +1,11 @@
 function MyPlaceGraph() : MyGraph() constructor {
     last_connection_id = 0;
     
+    /// @function add_node
+    /// @param {String} node_id
+    /// @param {Id.Instance} _place
+    /// @param {String} _zone_id
+    /// @return {Bool}
     static add_node = function(node_id, _place, _zone_id) {
         var existing = nodes[? node_id];
         var place_id = _place.id;
@@ -23,6 +28,10 @@ function MyPlaceGraph() : MyGraph() constructor {
         return true;
     }
     
+    /// @function find_node
+    /// @param {Id.Instance} _place
+    /// @param {String} _zone_id
+    /// @return {String|undefined}
     static find_node = function(_place, _zone_id) {
         var count = ds_list_size(node_list);
         var place_id = _place.id;
@@ -32,13 +41,17 @@ function MyPlaceGraph() : MyGraph() constructor {
             var node = nodes[? node_id];
             
             if (node.place == place_id && node.zone_id == _zone_id) {
-                return node_id;   
+                return node_id;
             }
         }
         
         return undefined;
     }
     
+    /// @function add_connection
+    /// @param {String} from_node_id
+    /// @param {String} to_node_id
+    /// @return {Bool}
     static add_connection = function(from_node_id, to_node_id) {
         var connection_id = string(last_connection_id++);
         
@@ -75,6 +88,10 @@ function MyPlaceGraph() : MyGraph() constructor {
         return true;
     }
     
+    /// @function find_connection
+    /// @param {String} from_node_id
+    /// @param {String} to_node_id
+    /// @return {String|undefined}
     static find_connection = function(from_node_id, to_node_id) {
         var count = ds_list_size(connection_list);
         
@@ -84,7 +101,7 @@ function MyPlaceGraph() : MyGraph() constructor {
             
             if ((is_undefined(from_node_id) || connection.from == from_node_id) 
                 && (is_undefined(to_node_id) || connection.to == to_node_id)) {
-                return conn_id;   
+                return conn_id;
             }
         }
         

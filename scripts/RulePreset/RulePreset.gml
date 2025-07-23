@@ -1,3 +1,5 @@
+/// @param {String} str_id
+/// @param {String} name
 function RulePreset(str_id, name) constructor {
     self.str_id = str_id;
     self.name = name;

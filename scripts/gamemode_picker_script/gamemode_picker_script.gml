@@ -1,9 +1,8 @@
 function gamemode_picker_script() {
     var play_window = play_menu_window;
-    var gm = DB.gamemodes[? play_window.gamemode_picker.cur_item_id], i, count, place;
+    var gm = DB.gamemodes[? play_window.gamemode_picker.cur_item_id];
 
-    if(!is_undefined(gm))
-    {
+    if (!is_undefined(gm)) {
         // GAMEMODE PANE
         with(play_window)
         {
@@ -23,11 +22,10 @@ function gamemode_picker_script() {
                 ds_list_clear(place_names);
                 ds_list_clear(place_ids);
             
-                count = play_menu_window.world.place_count;
+                var place_count = play_menu_window.world.place_count;
             
-                for(i=0; i< count; i++)
-                {
-                    place = play_menu_window.world.places[| i];
+                for (var i = 0; i < place_count; i++) {
+                    var place = play_menu_window.world.places[| i];
                     place_names[| i] = place.name;
                     place_ids[| i] = place.room_id;
                 }
@@ -39,11 +37,10 @@ function gamemode_picker_script() {
                 ds_list_clear(preset_ids);
                 
                 var preset_list = gm[? "rule_presets"];
-                var i, count = ds_list_size(preset_list), preset;
+                var preset_count = ds_list_size(preset_list);
 
-                for(i=0; i<count; i++)
-                {
-                    preset = DB.rule_presets.find_preset_by_id(preset_list[| i]);
+                for (var i = 0; i < preset_count; i++) {
+                    var preset = DB.rule_presets.find_preset_by_id(preset_list[| i]);
                     
                     if (is_undefined(preset)) {
                         my_console_log("!!! PRESET NOT FOUND: " + string(preset_list[| i]));
@@ -65,6 +62,7 @@ function gamemode_picker_script() {
                     var last_cur_item = scroll_list.cur_item;
                     scroll_list.cur_item = ds_list_find_index(id_list, gm[? "start_place_room"]);
                     scroll_list.selection_pos += (scroll_list.cur_item - last_cur_item);
+                    
                     with(scroll_list)
                     {
                         script_execute(item_change_script);

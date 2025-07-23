@@ -17,14 +17,14 @@ if (!is_campaign) {
     var next = noone;
 
     if (world.next_place != noone) {
-        var next = world.next_place;
+        next = world.next_place;
     } else {
-        var next = (world.places[|(cur_index+1)]);
+        next = world.places[| cur_index + 1];
     }
 
     // add current stats to tournament_stats
 
-    if(reached_limit_name != "user_terminated" && next && instance_exists(next))
+    if(reached_limit_name != "user_terminated" && next != noone && instance_exists(next))
     {
         world.current_place = next.id;
         world.next_place = noone;

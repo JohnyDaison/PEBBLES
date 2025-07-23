@@ -39,10 +39,10 @@ with(level_start_obj)
     start_found = true;
 }
 
-for (var i=1; i <= player_count; i++) {
+for (var i = 1; i <= player_count; i++) {
     var level_start = ordered_starts[? i];
     if (!is_undefined(level_start)) {
-        with(level_start) {
+        with (level_start) {
             create_player_things(my_player);
         }
     }
@@ -52,7 +52,6 @@ ds_map_destroy(ordered_starts);
 
 alarm[1] = 20;
 
-if(!start_found && instance_exists(guy_spawner_obj))
-{
+if (!start_found && instance_exists(guy_spawner_obj)) {
     alarm[1] = guy_spawner_obj.first_spawn_time;
 }

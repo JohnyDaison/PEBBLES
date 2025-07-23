@@ -72,22 +72,19 @@ if(!singleton_obj.paused && game_started && !game_ended)
     }
 
     // APM
-    if(instance_exists(time_window) && instance_exists(time_window.time))
-    {
-        var minute = string(time_window.time.total div 60);
+    if (instance_exists(time_window) && instance_exists(time_window.time)) {
+        var minute = time_window.time.total div 60;
     
-        if(last_minute != minute)
-        {
-            with(player_obj)
-            {
+        if (last_minute != minute) {
+            with (player_obj) {
                 var apm = stats[? "actions"];
                 set_stat(id, "actions", 0, false);
         
-                if(stats[? "high_apm"] < apm) {
+                if (stats[? "high_apm"] < apm) {
                     set_stat(id, "high_apm", apm, false);
                 }
         
-                if(stats[? "low_apm"] == 0 || stats[? "low_apm"] > apm) {
+                if (stats[? "low_apm"] == 0 || stats[? "low_apm"] > apm) {
                     set_stat(id, "low_apm", apm, false);
                 }
             }
@@ -97,10 +94,8 @@ if(!singleton_obj.paused && game_started && !game_ended)
     }
 
     // RESTART
-    if(restart_match)
-    {
+    if (restart_match) {
         match_restart();
         restart_match = false;
     }
-
 }

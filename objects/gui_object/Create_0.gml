@@ -69,4 +69,3 @@ self.rel_position = "relative";
 self.shift_stop_dir = -1;
 self.left_hand_object = noone;
 self.right_hand_object = noone;
-

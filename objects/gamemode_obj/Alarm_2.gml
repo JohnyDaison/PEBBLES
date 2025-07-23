@@ -21,7 +21,7 @@ if(!match_started)
     reached_limit_name = "";
     
     match_start_time = current_time;
-    last_minute = current_minute;
+    last_minute = -1;
     
     instance_create(0,0,phenomena_obj);
     

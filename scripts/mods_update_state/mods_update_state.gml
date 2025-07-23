@@ -1,23 +1,13 @@
-/// @description mods_update_state(gamemode_id, preset, place, custom_mods, target_map)
-/// @function mods_update_state
-/// @param {string} gamemode_id
-/// @param {struct} preset
-/// @param {instance} place
-/// @param {ds_map} custom_map
-/// @param {ds_map} target_map
-/// @param {bool} [reset] default=true
-function mods_update_state() {
-    var gamemode_id = argument[0];
-    var preset = argument[1];
-    var place = argument[2];
-    var custom_mods = argument[3];
-    var target_map = argument[4];
-    var reset = true;
-    if (argument_count > 5)
-    {
-        reset = argument[5];
-    }
-
+/// @description Computes the new state of mods based on given Game mode, Preset, Place and the custom_mods map,
+/// @description then saves it to target map
+/// @param {String} gamemode_id
+/// @param {Struct.RulePreset} preset
+/// @param {Id.Instance} place
+/// @param {Id.DsMap} custom_mods
+/// @param {Id.DsMap} target_map
+/// @param {Bool} [reset] default=true
+/// @return {Bool} success
+function mods_update_state(gamemode_id, preset, place, custom_mods, target_map, reset = true) {
     var gm = DB.gamemodes[? gamemode_id];
 
     if(!ds_exists(target_map, ds_type_map))
@@ -28,8 +18,8 @@ function mods_update_state() {
     if(!is_undefined(gm))
     {
         var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"];
-        var preset, default_mods_preset, forced_mods_preset;
-        var place, default_mods_place, forced_mods_place;
+        var default_mods_preset, forced_mods_preset;
+        var default_mods_place, forced_mods_place;
         var mod_id, gmmod, count, mod_value;
         var preset_exists = is_struct(preset);
         var place_exists = instance_exists(place);
@@ -90,8 +80,8 @@ function mods_update_state() {
         
             // game mode forced
             mod_value = mod_default_value_update(gmmod, mod_value, forced_mods_gm[? mod_id]);
-         
-            // preset default
+        
+            // preset forced
             if(preset_exists)
             {
                 mod_value = mod_default_value_update(gmmod, mod_value, forced_mods_preset[? mod_id]);

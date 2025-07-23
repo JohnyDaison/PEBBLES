@@ -10,6 +10,7 @@ ds_list_destroy(control_set_order);
 ds_grid_destroy(gui_controls);
 
 ds_map_destroy(guy_skins[? "glowstick"]);
+ds_map_destroy(guy_skins[? "biker"]);
 ds_map_destroy(guy_skins);
 
 ds_list_destroy(player_names);

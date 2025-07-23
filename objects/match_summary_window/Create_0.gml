@@ -29,9 +29,12 @@ score_pane.width = 416;
 
 frame_manager.window_log_str = "";
 
-with(score_pane)
-{
-    /* 
+var player_num = gamemode_obj.player_count;
+
+with (score_pane) {
+    var ii = noone;
+    
+    /*
     x = x-width/2;
     y = y-height/2;
     */
@@ -45,7 +48,6 @@ with(score_pane)
     col_label = other.col_label;
     col_wide = other.col_wide;
     col_number = other.col_number;
-    var player_num = gamemode_obj.player_count;
         
     // column labels
     eloffset_x = x + side_spacing;
@@ -54,9 +56,8 @@ with(score_pane)
     // rows
     frame_manager.window_log_str += "\n";
     
-    for(i=0; i<=player_num; i+=1)
-    {
-        player = ds_map_find_value(gamemode_obj.players,i);
+    for (var i = 0; i <= player_num; i+=1) {
+        var player = ds_map_find_value(gamemode_obj.players, i);
         eloffset_x = x + spacing;
         
         ii = gui_add_label(0,0,string(player.number));
@@ -108,8 +109,9 @@ eloffset_x = x + score_pane.width+32;
 plstats_pane = gui_add_pane(0,0,"PLAYER STATS");
 plstats_pane.width = 752;
 
-with(plstats_pane)
-{
+with (plstats_pane) {
+    var ii = noone;
+    
     centered = true;
     
     heading = other.pane_heading;
@@ -133,8 +135,7 @@ with(plstats_pane)
     ii.draw_border = true;
     ii.centered = true;
     
-    for(i=0;i<=player_num;i+=1)
-    {
+    for (var i = 0; i <= player_num; i++) {
         eloffset_x += ii.width + spacing + 1;
         
         ii = gui_add_label(1,0,string(i));
@@ -162,8 +163,7 @@ with(plstats_pane)
     
     ds_list_add(scroll_group.scroll_lists,ii);
     
-    for(i=0;i<=player_num;i+=1)
-    {
+    for (var i = 0; i <= player_num; i++) {
         eloffset_x += ii.width+spacing;
             
         ii = gui_add_scroll_list(0,0);
@@ -189,33 +189,27 @@ with(plstats_pane)
     frame_manager.window_log_str += "\n";
     
     // FILL LISTS WITH DATA
-    for(i=0; i<DB.stats_display_rows; i+=1)
-    {
-        for(p=0;p<=player_num;p+=1)
-        {
-            var player = gamemode_obj.players[?p];
+    for (var i = 0; i < DB.stats_display_rows; i++) {
+        for (var p = 0; p <= player_num; p++) {
+            var player = gamemode_obj.players[? p];
             
-            if(p == 0) 
-            {
-                gui_add_scroll_item(self.scroll_list, DB.stats_display_labels[|i]);
+            if (p == 0) {
+                gui_add_scroll_item(self.scroll_list, DB.stats_display_labels[| i]);
             }
 
-            var stat = DB.stats_display_keys[|i];
+            var stat = DB.stats_display_keys[| i];
             var str = player.stats[? stat];
             
-            if(stat == "" || is_undefined(str))
-            {
+            if (stat == "" || is_undefined(str)) {
                 str = "";
             }
-            else
-            {
+            else {
                 str = string(str);
             }
            
             gui_add_scroll_item(self.scroll_lists[p], str);
             
-            if(p == player_num) 
-            {
+            if (p == player_num) {
                 frame_manager.window_log_str += "\n";
             }
         }
@@ -233,8 +227,9 @@ eloffset_y = y + heading + score_pane.height+16;
 match_pane = gui_add_pane(16,0,"MATCH STATS");
 match_pane.width = score_pane.width;
 
-with(match_pane)
-{
+with (match_pane) {
+    var ii = noone;
+    
     centered = true;
     heading = other.pane_heading;
     row_height = other.row_height;
@@ -283,11 +278,10 @@ with(match_pane)
     // FILL MATCH LIST WITH DATA
     frame_manager.window_log_str += "\n";
 
-    for(i=0; i<DB.match_stats_display_rows; i+=1)
-    {
-        gui_add_scroll_item(self.scroll_list, DB.match_stats_display_labels[|i]);
+    for (var i = 0; i < DB.match_stats_display_rows; i++) {
+        gui_add_scroll_item(self.scroll_list, DB.match_stats_display_labels[| i]);
 
-        var stat = DB.match_stats_display_keys[|i];
+        var stat = DB.match_stats_display_keys[| i];
         var str = gamemode_obj.stats[? stat];
         
         if(stat == "" || is_undefined(str))
@@ -306,21 +300,19 @@ with(match_pane)
 }
 
 // BUTTONS
-eloffset_x = x + match_pane.width/2;
-eloffset_y += match_pane.height+16;
+eloffset_x = x + match_pane.width / 2;
+eloffset_y += match_pane.height + 16;
 
 // REMATCH
 var rematch_text = "";
 
-if(gamemode_obj.is_coop)
-{
+if (gamemode_obj.is_coop) {
     rematch_text = "Restart level";
-}
-else
-{
+} else {
     rematch_text = "Rematch";
 }
 
+var ii = noone;
 
 ii = gui_add_button(16,16, rematch_text, match_restart);
 ii.icon = restart_icon;
@@ -350,8 +342,7 @@ eloffset_y = y + heading + plstats_pane.height + 16;
 awards_pane = gui_add_pane(0,0,"PLAYER ACHIEVEMENTS AND AWARDS");
 awards_pane.width = 752;
 
-with(awards_pane)
-{
+with (awards_pane) {
     centered = true;
     heading = other.pane_heading;
     row_height = other.row_height;
@@ -379,17 +370,12 @@ with(awards_pane)
     eloffset_y += scroll_list.height + side_spacing;
     height = eloffset_y - y;
     
-    var i,a,str;
-    
-    for(i=0; i <= player_num; i+=1)
-    {
-        player = ds_map_find_value(gamemode_obj.players,i);
+    for (var i = 0; i <= player_num; i++) {
+        var player = ds_map_find_value(gamemode_obj.players,i);
         
-        for(a=1; a <= player.achiev_count; a+=1)
-        {
-            if(player.achiev_state[? a] == 1)
-            {
-                str = script_execute(player.achievs[? a], "title") + ": " + player.name + " " + script_execute(player.achievs[? a], "verb");
+        for (var a = 1; a <= player.achiev_count; a++) {
+            if (player.achiev_state[? a] == 1) {
+                var str = script_execute(player.achievs[? a], "title") + ": " + player.name + " " + script_execute(player.achievs[? a], "verb");
                 gui_add_scroll_item(self.scroll_list, str);
                 frame_manager.window_log_str += "\n";
             }
@@ -412,12 +398,11 @@ filename += my_string_format(date_get_minute(curTime),2,0) + " ";
 
 filename += string_replace_all(gamemode_obj.stats[? "match_length"],":","-") + " ";
 
-for(i=1;i<=player_num;i+=1)
-{
-    var player = gamemode_obj.players[?i];
-    if(i!=1)
+for (var i = 1; i <= player_num; i++) {
+    var player = gamemode_obj.players[? i];
+    if (i != 1)
         filename += " - ";
-    filename += player.name;    
+    filename += player.name;
 }
 
 filename += " on " + gamemode_obj.arena_name;

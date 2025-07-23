@@ -16,5 +16,4 @@ self.font = label_font;
 self.bg_alpha = 0.75;
 self.bg_color = c_ltgray;
 
-alarm[2]=1;
-
+alarm[2] = 1;

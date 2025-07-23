@@ -2,6 +2,9 @@ function RulePresetsDB() constructor {
     list = ds_list_create();
     count = 0;
     
+    /// @param {String} str_id
+    /// @param {String} name
+    /// @return {Struct.RulePreset}
     static add = function(str_id, name) {
         var preset = new RulePreset(str_id, name);
         ds_list_add(list, preset);
@@ -10,6 +13,8 @@ function RulePresetsDB() constructor {
         return preset;
     }
     
+    /// @param {String} str_id
+    /// @return {Struct.RulePreset|undefined}
     static find_preset_by_id = function(str_id) {
         for (var index = 0; index < count; index++) {
             var preset = list[| index];
