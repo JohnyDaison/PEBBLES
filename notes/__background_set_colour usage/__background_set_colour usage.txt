@@ -1,0 +1,4 @@
+end_test_script
+level_editor
+singleton_obj-Begin Step
+gamemode_obj-Room Start
