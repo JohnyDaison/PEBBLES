@@ -112,12 +112,10 @@ if(DB.console_mode == "debug" && step_count mod 120 == 0)
 }
 
 // BACKGROUND TINT
-if(self.bgcolor_updated == false)
-{
-    __background_set_colour( merge_color(__background_get_colour( ),self.new_background_color,1/6 ));
+if (self.bgcolor_updated == false) {
+    __background_set_colour(merge_color(__background_get_colour( ), self.new_background_color, 1/6));
 
-    if(__background_get_colour( ) == self.new_background_color)
-    {
+    if (__background_get_colour( ) == self.new_background_color) {
         self.bgcolor_updated = true;
     }
 }

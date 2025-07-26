@@ -596,7 +596,7 @@ function __global_object_depths() {
     global.__objectID2Depth = [];
     for( var i=0; i<len; ++i ) {
         var objID = asset_get_index( global.__objectNames[i] );
-        if (objID >= 0) {
+        if (object_exists(objID)) {
             global.__objectID2Depth[ objID ] = global.__objectDepths[i];
         } // end if
     } // end for

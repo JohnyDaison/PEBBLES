@@ -32,12 +32,12 @@ function MyGraph() constructor {
         var to_node = nodes[? params.to];
         
         if (is_undefined(from_node)) {
-            my_console_log("Connection " + connection_id + " - From node " + from_node + " doesn't exist");
+            my_console_log("Connection " + connection_id + " - From node " + params.from + " doesn't exist");
             return false;
         }
         
         if (is_undefined(to_node)) {
-            my_console_log("Connection " + connection_id + " - To node " + to_node + " doesn't exist");
+            my_console_log("Connection " + connection_id + " - To node " + params.to + " doesn't exist");
             return false;
         }
         
