@@ -1,3 +1,5 @@
+/// @param {Real} player_number
+/// @param {Real} skip_to_quest
 function player_quest_skip_to_command(player_number, skip_to_quest) {
     if(!instance_exists(gamemode_obj)) {
         return 0;
@@ -11,7 +13,7 @@ function player_quest_skip_to_command(player_number, skip_to_quest) {
 
     var quest_state = player_quest_state_find(player, "", "", "main");
 
-    if(!quest_state) {
+    if (is_undefined(quest_state)) {
         return 0;
     }
 

@@ -1,3 +1,9 @@
+/// @param {Id.Instance} player
+/// @param {String} quest_id
+/// @param {Id.DsMap} parent_state
+/// @param {String} context_id
+/// @param {String} category
+/// @returns {Id.DsMap}
 function player_quest_state_create(player, quest_id, parent_state, context_id, category) {
     var address = "", parent_context = "", parent_quest_id = "";
     var root_context, context, count, i, quest_state, state, state_reps;
@@ -6,33 +12,29 @@ function player_quest_state_create(player, quest_id, parent_state, context_id, c
     var quest_node, subtasks_list, subtask_id, subtasks, subtask, sub_quest_state;
 
     //context_id IS VALID?
-    if(context_id == "" || string_pos(DB.quest_context_divider, context_id))
-    {
+    if (context_id == "" || string_pos(DB.quest_context_divider, context_id)) {
         return undefined;
     }
 
     root_context = context_id;
 
-    if(parent_state != noone)
-    {
+    if (!is_undefined(parent_state)) {
         address = parent_state[? "context"] + DB.quest_context_divider;
         parent_context = parent_state[? "context"];
         parent_quest_id = parent_state[? "quest_id"];
-        root_context = string_copy(address, 1, string_pos(DB.quest_context_divider, address)-1);
+        root_context = string_copy(address, 1, string_pos(DB.quest_context_divider, address) - 1);
     }
 
     context = address + context_id;
 
     //context_id IS UNIQUE?
-    if(ds_list_find_index(player.all_quest_list, context) != -1)
-    {
+    if (ds_list_find_index(player.all_quest_list, context) != -1) {
         return undefined;
     }
 
 
     //IS ROOT?
-    if(string_pos(DB.quest_context_divider, context) == 0)
-    {
+    if (string_pos(DB.quest_context_divider, context) == 0) {
         ds_list_add(player.root_quest_list, context);
     }
 
@@ -40,8 +42,7 @@ function player_quest_state_create(player, quest_id, parent_state, context_id, c
     ds_list_add(player.all_quest_list, context);
 
     // CATEGORY
-    if(ds_list_find_index(player.quest_category_list, category) == -1)
-    {
+    if (ds_list_find_index(player.quest_category_list, category) == -1) {
         ds_list_add(player.quest_category_list, category);
     }
 
@@ -72,10 +73,9 @@ function player_quest_state_create(player, quest_id, parent_state, context_id, c
 
     count = ds_list_size(DB.quest_states);
 
-    for(i = 0; i < count; i++)
-    {
+    for (i = 0; i < count; i++) {
         state = DB.quest_states[| i];
-    
+
         state_reps[? state] = 0;
     }
 
@@ -91,25 +91,21 @@ function player_quest_state_create(player, quest_id, parent_state, context_id, c
     tr_count = ds_list_size(tr_list);
     cond_states = quest_state[? "transition_condition_states"];
 
-    for(tr_i = 0; tr_i < tr_count; tr_i++)
-    {
+    for (tr_i = 0; tr_i < tr_count; tr_i++) {
         transition = tr_list[| tr_i];
-    
+
         cond_list = transition[? "conditions"];
         cond_count = ds_list_size(cond_list);
 
-        for(cond_i = 0; cond_i < cond_count; cond_i++)
-        {
+        for (cond_i = 0; cond_i < cond_count; cond_i++) {
             condition = cond_list[| cond_i];
             cond_str = condition[? "type"] + "_" + condition[? "verb"];
             tr_cond_str = string(tr_i) + " " + string(cond_i);
             cond_states[? tr_cond_str] = false;
-        
-            if(condition[? "event_based"])
-            {
-                with(player)
-                {
-                    subscribe_event(cond_str, condition_event_script, all, context+"|"+tr_cond_str);
+
+            if (condition[? "event_based"]) {
+                with (player) {
+                    subscribe_event(cond_str, condition_event_script, all, context + "|" + tr_cond_str);
                 }
             }
         }
@@ -120,11 +116,10 @@ function player_quest_state_create(player, quest_id, parent_state, context_id, c
     count = ds_list_size(subtasks_list);
     subtasks = quest_node[? "subtasks"];
 
-    for(i = 0; i < count; i++)
-    {
+    for (i = 0; i < count; i++) {
         subtask_id = subtasks_list[| i];
         subtask = subtasks[? subtask_id];
-    
+
         sub_quest_state = player_quest_state_create(player, subtask[? "quest_id"], quest_state, subtask[? "context_id"], category);
     }
 

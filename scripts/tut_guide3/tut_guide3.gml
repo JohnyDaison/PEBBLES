@@ -22,8 +22,7 @@ function tut_guide3(argument0) {
             {
                 var main_state = player_quest_state_find(my_player, other.main_quest_id, other.main_context, "main");
     
-                if(!main_state)
-                {
+                if (is_undefined(main_state)) {
                     continue;
                 }
                 
@@ -53,8 +52,7 @@ function tut_guide3(argument0) {
         {
             main_quest_state = player_quest_state_find(player, main_quest_id, main_context, "main");
     
-            if(!main_quest_state)
-            {
+            if (is_undefined(main_quest_state)) {
                 return;
             }
     

@@ -17,8 +17,7 @@ for(pl_index = 1; pl_index <= pl_count; pl_index++)
     
     main_quest_state = player_quest_state_find(player, quest_id, "", "");
     
-    if(!main_quest_state)
-    {
+    if (is_undefined(main_quest_state)) {
         continue;
     }
     
