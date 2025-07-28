@@ -1235,6 +1235,7 @@
     {"id":{"name":"my_sound_play","path":"scripts/my_sound_play/my_sound_play.yy",},},
     {"id":{"name":"my_sound_stop","path":"scripts/my_sound_stop/my_sound_stop.yy",},},
     {"id":{"name":"my_string_format","path":"scripts/my_string_format/my_string_format.yy",},},
+    {"id":{"name":"MyAchievement","path":"scripts/MyAchievement/MyAchievement.yy",},},
     {"id":{"name":"MyGraph","path":"scripts/MyGraph/MyGraph.yy",},},
     {"id":{"name":"MyPlaceGraph","path":"scripts/MyPlaceGraph/MyPlaceGraph.yy",},},
     {"id":{"name":"MyVec2","path":"scripts/MyVec2/MyVec2.yy",},},

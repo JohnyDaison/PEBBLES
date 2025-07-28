@@ -37,11 +37,12 @@ init_stats(id, stats);
 
 achievs = ds_map_create();
 var i=1;
-ds_map_add(achievs, i++ , achiev_first_blood);
-ds_map_add(achievs, i++ , achiev_shadow_ninja);
-ds_map_add(achievs, i++ , achiev_undying);
-ds_map_add(achievs, i++ , achiev_idle_pickup);
-ds_map_add(achievs, i++ , achiev_crunchy);
+ds_map_add(achievs, i++ , new FirstBloodAchievement(self));
+ds_map_add(achievs, i++ , new ShadowNinjaAchievement(self));
+ds_map_add(achievs, i++ , new UndyingAchievement(self));
+ds_map_add(achievs, i++ , new IdlePickupAchievement(self));
+ds_map_add(achievs, i++ , new CrunchyAchievement(self));
+
 achiev_count = ds_map_size(achievs);
 
 // 0 - AVAILABLE, 1 - EARNED, -1 - FAILED
@@ -85,25 +86,25 @@ function update_achievements() {
         var state = achiev_state[? i];
 
         if (state == 0) {
-            var achiev_script = ds_map_find_value(achievs, i);
-            var title = script_execute(achiev_script, "title");
+            var achiev_struct = achievs[? i];
+            var title = achiev_struct.title;
 
-            if (script_execute(achiev_script, "fail")) {
+            if (achiev_struct.fail()) {
                 state = -1;
             }
-            else if (script_execute(achiev_script, "success")) {
+            else if (achiev_struct.success()) {
                 state = 1;
-                battlefeed_post_string(gamemode_obj.environment, my_player.name + " " + script_execute(achiev_script, "verb"));
+                battlefeed_post_string(gamemode_obj.environment, my_player.name + " " + achiev_struct.verb);
 
-                var reward_score = script_execute(achiev_script, "reward_score");
+                var reward_score = achiev_struct.reward_score();
                 var score_str = "";
                 if (is_number(reward_score) && reward_score != 0) {
                     score_str = stat_label("score", reward_score, "+");
                     increase_achievement_score(my_player, reward_score, false);
                 }
 
-                battlefeed_post_achievement(achiev_script, my_player, score_str);
-                script_execute(achiev_script, "reward");
+                battlefeed_post_achievement(achiev_struct, my_player, score_str);
+                achiev_struct.reward();
             }
 
             achiev_state[? i] = state;

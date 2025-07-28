@@ -375,7 +375,8 @@ with (awards_pane) {
         
         for (var a = 1; a <= player.achiev_count; a++) {
             if (player.achiev_state[? a] == 1) {
-                var str = script_execute(player.achievs[? a], "title") + ": " + player.name + " " + script_execute(player.achievs[? a], "verb");
+                var achievement = player.achievs[? a];
+                var str = achievement.title + ": " + player.name + " " + achievement.verb;
                 gui_add_scroll_item(self.scroll_list, str);
                 frame_manager.window_log_str += "\n";
             }

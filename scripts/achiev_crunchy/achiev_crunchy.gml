@@ -1,28 +1,24 @@
-function achiev_crunchy(query) {
-    switch (query) {
-        case "title": {
-            return "Crunchy";
+/// @param {Id.Instance} myPlayer
+function CrunchyAchievement(myPlayer) : MyAchievement(myPlayer) constructor {
+    static title = "Crunchy";
+    static verb = "is Crunchy!";
+    
+    /// @return {Bool}
+    static success = function() {
+        if (gamemode_obj.is_campaign) {
+            return false;
         }
 
-        case "verb": {
-            return "is Crunchy!";
-        }
+        return self.myPlayer.stats[? "score"] >= gamemode_obj.score_values[? "crunchy_limit"];
+    }
 
-        case "success": {
-            if (gamemode_obj.is_campaign) {
-                return false;
-            }
+    /// @return {Bool}
+    static fail = function() {
+        return false;
+    }
 
-            return my_player.stats[? "score"] >= gamemode_obj.score_values[? "crunchy_limit"];
-        }
-
-        case "fail": {
-            var ret = false;
-            return ret;
-        }
-
-        case "reward": {
-            return true;
-        }
+    /// @return {Bool}
+    static reward = function() {
+        return true;
     }
 }

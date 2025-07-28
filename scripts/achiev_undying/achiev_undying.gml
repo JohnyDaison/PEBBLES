@@ -1,34 +1,36 @@
-function achiev_undying(query) {
-    switch (query) {
-        case "title": {
-            return "Undying";
+/// @param {Id.Instance} myPlayer
+function UndyingAchievement(myPlayer) : MyAchievement(myPlayer) constructor {
+    static title = "Undying";
+    static verb = "has destroyed enemy Crystal without dying";
+    
+    /// @return {Bool}
+    static success = function() {
+        if (gamemode_obj.player_count == 2) {
+            var opponent = gamemode_obj.players[? myPlayer.number mod 2 + 1];
+
+            return (instance_exists(opponent.my_base) 
+                && opponent.my_base.object_index == guy_spawner_obj
+                && opponent.my_base.last_attacker_map[? "player"] == myPlayer.id
+                && opponent.my_base.destroyed
+                && myPlayer.stats[? "deaths"] == 0);
         }
+        // TODO: proper general implementation with teams in mind
 
-        case "verb": {
-            return "has destroyed enemy Crystal without dying";
-        }
+        return false;
+    }
 
-        case "success": {
-            if (gamemode_obj.player_count == 2) {
-                var opponent = gamemode_obj.players[? my_player.number mod 2 + 1];
+    /// @return {Bool}
+    static fail = function() {
+        return !mod_get_state("base_crystals") || myPlayer.stats[? "deaths"] > 0;
+    }
 
-                return (instance_exists(opponent.my_base) && opponent.my_base.object_index == guy_spawner_obj && opponent.my_base.last_attacker_map[? "player"] == my_player && opponent.my_base.destroyed && my_player.stats[? "deaths"] == 0);
-            }
-            // TODO: proper general implementation with teams in mind
+    /// @return {Real}
+    static reward_score = function() {
+        return gamemode_obj.score_values[? "achiev_undying"];
+    }
 
-            return false;
-        }
-
-        case "fail": {
-            return !mod_get_state("base_crystals") || my_player.stats[? "deaths"] > 0;
-        }
-
-        case "reward_score": {
-            return gamemode_obj.score_values[? "achiev_undying"];
-        }
-
-        case "reward": {
-            return true;
-        }
+    /// @return {Bool}
+    static reward = function() {
+        return true;
     }
 }

@@ -1,37 +1,35 @@
-function achiev_shadow_ninja(query) {
-    switch (query) {
-        case "title": {
-            return "Shadow Ninja";
-        }
+/// @param {Id.Instance} myPlayer
+function ShadowNinjaAchievement(myPlayer) : MyAchievement(myPlayer) constructor {
+    static title = "Shadow Ninja";
+    static verb = "has killed without leaving the shadows";
+    
+    /// @return {Bool}
+    static success = function() {
+        var what = noone;
+        var achievPlayer = self.myPlayer;
 
-        case "verb": {
-            return "has killed without leaving the shadows";
-        }
-
-        case "success": {
-            var dead_guy = noone;
-            var what = noone;
-
-            with (guy_obj) {
-                if (dead && my_player != other.id && last_attacker_map[? "player"] == other.id) {
-                    dead_guy = id;
-                    what = last_attacker_map[? "source"];
-                }
+        with (guy_obj) {
+            if (dead && my_player != achievPlayer.id && last_attacker_map[? "player"] == achievPlayer.id) {
+                what = last_attacker_map[? "source"];
             }
-
-            return my_player.stats[? "kills"] > 0 && what == guy_obj;
         }
 
-        case "fail": {
-            return my_player.my_guy.my_color > g_dark && !my_player.my_guy.channeling;
-        }
+        return achievPlayer.stats[? "kills"] > 0 && what == guy_obj;
+    }
 
-        case "reward_score": {
-            return gamemode_obj.score_values[? "achiev_shadow_ninja"];
-        }
+    /// @return {Bool}
+    static fail = function() {
+        var guy = self.myPlayer.my_guy;
+        return guy.my_color > g_dark && !guy.channeling;
+    }
 
-        case "reward": {
-            return true;
-        }
+    /// @return {Real}
+    static reward_score = function() {
+        return gamemode_obj.score_values[? "achiev_shadow_ninja"];
+    }
+
+    /// @return {Bool}
+    static reward = function() {
+        return true;
     }
 }

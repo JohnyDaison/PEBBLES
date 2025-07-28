@@ -1,27 +1,26 @@
-function achiev_idle_pickup(query) {
-    switch (query) {
-        case "title": {
-            return "Idle Recipient";
+/// @param {Id.Instance} myPlayer
+function IdlePickupAchievement(myPlayer) : MyAchievement(myPlayer) constructor {
+    static title = "Idle Recipient";
+    static verb = "was delivered something";
+
+    /// @return {Bool}
+    static success = function() {
+        var guy = self.myPlayer.my_guy;
+        
+        if (instance_exists(guy)) {
+            return guy.idle && guy.idle_start < (guy.last_added_item_step - 300);
         }
 
-        case "verb": {
-            return "was delivered something";
-        }
+        return false;
+    }
 
-        case "success": {
-            if (instance_exists(my_guy)) {
-                return my_guy.idle && my_guy.idle_start < (my_guy.last_added_item_step - 300);
-            }
+    /// @return {Bool}
+    static fail = function() {
+        return false;
+    }
 
-            return false;
-        }
-
-        case "fail": {
-            return false;
-        }
-
-        case "reward": {
-            return true;
-        }
+    /// @return {Bool}
+    static reward = function() {
+        return true;
     }
 }

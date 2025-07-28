@@ -1036,6 +1036,7 @@
     {"name":"my_sound_loop","order":2,"path":"scripts/my_sound_loop/my_sound_loop.yy",},
     {"name":"my_sound_play_colored","order":3,"path":"scripts/my_sound_play_colored/my_sound_play_colored.yy",},
     {"name":"my_sound_stop","order":1,"path":"scripts/my_sound_stop/my_sound_stop.yy",},
+    {"name":"MyAchievement","order":5,"path":"scripts/MyAchievement/MyAchievement.yy",},
     {"name":"MyPlaceGraph","order":2,"path":"scripts/MyPlaceGraph/MyPlaceGraph.yy",},
     {"name":"MyVec2","order":1,"path":"scripts/MyVec2/MyVec2.yy",},
     {"name":"nav_graph_add_double_edge","order":5,"path":"scripts/nav_graph_add_double_edge/nav_graph_add_double_edge.yy",},
