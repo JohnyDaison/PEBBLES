@@ -29,7 +29,7 @@ function pause_game() {
 
 	// clear surface with black ?
 	/*
-	draw_set_color(c_black); // __background_get_colour()
+	draw_set_color(c_black);
 	draw_set_alpha(1);
 	draw_set_blend_mode(bm_normal);
 	draw_rectangle(0,0, singleton_obj.current_width, singleton_obj.current_height, false);

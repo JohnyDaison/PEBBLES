@@ -80,7 +80,8 @@ draw_lights = true;
 current_font = label_font;
 font_vmargin_coef = 4;
 
-new_background_color = __background_get_colour( );
+background_color_element = __background_get_colour_element()[0];
+new_background_color = layer_background_get_blend(background_color_element);
 self.bgcolor_updated = true;
 
 // AUDIO BALANCING
@@ -120,3 +121,10 @@ instance_create(0,0,main_light_obj);
 singleton_obj.alarm[0] = 5;
 
 cleanup_done = false;
+
+function randomizeBackgroundColor() {
+    var rand_color = DB.colormap[? irandom_range(g_dark, g_white)];
+    
+    self.new_background_color = merge_color(c_black, rand_color, 0.03);
+    self.bgcolor_updated = false;
+}

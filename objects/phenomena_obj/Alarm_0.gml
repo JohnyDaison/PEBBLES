@@ -24,7 +24,7 @@ var rand_value = random(total_value);
 var inst = noone;
 var do_effect = false;
 
-var i, key, value, wall, rand_color;
+var i, key, value, wall;
    
 for(i = 0; i < num && !have_spawned; i+=1)
 {
@@ -159,9 +159,7 @@ if(inst != noone)
     if(do_effect)
         instance_create(inst.x,inst.y,spawn_effect_obj);
         
-    rand_color = ds_map_find_value(DB.colormap, irandom_range(g_dark, g_white));
-    singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.02);
-    singleton_obj.bgcolor_updated = false;
+    singleton_obj.randomizeBackgroundColor();
 }
 
 
@@ -179,7 +177,7 @@ if(inst != noone)
 }
 else
 {
-    inst_name = "noone";   
+    inst_name = "noone";
 }
 
 if(alarm[0] != 1)

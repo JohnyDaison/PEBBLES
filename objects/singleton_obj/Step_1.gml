@@ -113,9 +113,12 @@ if(DB.console_mode == "debug" && step_count mod 120 == 0)
 
 // BACKGROUND TINT
 if (self.bgcolor_updated == false) {
-    __background_set_colour(merge_color(__background_get_colour( ), self.new_background_color, 1/6));
+    var currentColor = layer_background_get_blend(background_color_element);
+    var newColor = merge_color(currentColor, self.new_background_color, 1/6);
+    
+    layer_background_blend(background_color_element, newColor);
 
-    if (__background_get_colour( ) == self.new_background_color) {
+    if (newColor == self.new_background_color) {
         self.bgcolor_updated = true;
     }
 }

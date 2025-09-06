@@ -19,7 +19,7 @@ minimap_view_bottom = minimap_view_top + minimap_view_height;
 draw_set_alpha(0.9);
 draw_set_color(c_ltgray);
 draw_rectangle(minimap_left-1,minimap_top-1,minimap_right+1,minimap_bottom+1,true);
-draw_set_color(__background_get_colour( ));
+draw_set_color(c_black);
 draw_rectangle(minimap_left,minimap_top,minimap_right,minimap_bottom,false);
 
 with(editor_terrain_obj)

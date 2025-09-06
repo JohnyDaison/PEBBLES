@@ -1,4 +1,0 @@
-pause_game
-singleton_obj-Create
-singleton_obj-Begin Step
-minimap_toolbar-Draw GUI

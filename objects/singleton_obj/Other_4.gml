@@ -9,6 +9,7 @@ if(!paused)
 {
     step_count = 0;
     terrain_checked = false;
+    background_color_element = __background_get_colour_element()[0];
 }
 
 

@@ -16,7 +16,7 @@ var offset;
 var rand_value;
 var inst;
 
-var floor_below, yy, i, key, value, rand_color;
+var floor_below, yy, i, key, value;
 
 if(spawned_item_count >= spawned_item_limit)
 {
@@ -93,9 +93,7 @@ else
                     
                 alarm[0] = spawn_delay;
                 
-                rand_color = ds_map_find_value(DB.colormap, irandom_range(g_dark, g_white));
-                singleton_obj.new_background_color = merge_color(c_black, rand_color, 0.01);
-                singleton_obj.bgcolor_updated = false;
+                singleton_obj.randomizeBackgroundColor();
             }
         }
     }
