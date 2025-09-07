@@ -103,7 +103,7 @@ function end_test_script() {
     }
 
     add_frame(main_editor_toolbar);
-    i = add_frame(main_tools_toolbar);
+    var i = add_frame(main_tools_toolbar);
     i.x = main_editor_toolbar.x;
     i.y = main_editor_toolbar.y + main_editor_toolbar.height+1;
 
@@ -115,5 +115,5 @@ function end_test_script() {
 
     frame_manager.enable_focus_shift = true;
 
-    __background_set_colour( c_black );
+     singleton_obj.changeBackgroundColor(c_black);
 }

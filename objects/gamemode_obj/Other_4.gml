@@ -12,7 +12,10 @@ if(!singleton_obj.paused && room != mainmenu && room != match_summary)
         background_index[0] = medium_clouds_bg;
         background_index[1] = big_clouds_bg;
         */
-        __background_set_colour( make_color_rgb(0,0,12 ));
+        
+        var bgColor = make_color_rgb(0, 0, 12);
+        singleton_obj.changeBackgroundColor(bgColor);
+        
         __background_set( e__BG.Index, 0, stars1_bg );
         __background_set( e__BG.Index, 1, hexgrid_big_bg );
         

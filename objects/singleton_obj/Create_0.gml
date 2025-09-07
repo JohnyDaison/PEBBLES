@@ -122,9 +122,14 @@ singleton_obj.alarm[0] = 5;
 
 cleanup_done = false;
 
-function randomizeBackgroundColor() {
-    var rand_color = DB.colormap[? irandom_range(g_dark, g_white)];
-    
-    self.new_background_color = merge_color(c_black, rand_color, 0.03);
+function changeBackgroundColor(_color) {
+    self.new_background_color = _color;
     self.bgcolor_updated = false;
+}
+
+function randomizeBackgroundColor() {
+    var randomColor = DB.colormap[? irandom_range(g_dark, g_white)];
+    var darkenedColor = merge_color(c_black, randomColor, 0.03);
+    
+    self.changeBackgroundColor(darkenedColor);
 }
