@@ -16,7 +16,6 @@ function __view_get(argument0, argument1) {
 	case e__VW.HSpeed: var __cam = view_get_camera(__index); __res = camera_get_view_speed_x(__cam); break;
 	case e__VW.VSpeed: var __cam = view_get_camera(__index); __res = camera_get_view_speed_y(__cam); break;
 	case e__VW.Object: var __cam = view_get_camera(__index); __res = camera_get_view_target(__cam); break;
-	case e__VW.Visible: __res = view_get_visible(__index); break;
 	case e__VW.XPort: __res = view_get_xport(__index); break;
 	case e__VW.YPort: __res = view_get_yport(__index); break;
 	case e__VW.WPort: __res = view_get_wport(__index); break;

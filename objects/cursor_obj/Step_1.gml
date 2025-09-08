@@ -19,13 +19,13 @@ if (!view_drag) {
             zoom = main_camera_obj.zoom_level;
         }
         
-        if (__view_get( e__VW.Visible, 0 )) {
+        if (view_get_visible( 0 )) {
             room_x = __view_get( e__VW.XView, 0 ) + x/zoom;
             room_y = __view_get( e__VW.YView, 0 ) + y/zoom;
         } else {
             view_found = false;
             view = 1;
-            while(!view_found && __view_get( e__VW.Visible, view ))
+            while(!view_found && view_get_visible( view ))
             {
                 view_x = x - __view_get( e__VW.XPort, view );
                 view_y = y - __view_get( e__VW.YPort, view );

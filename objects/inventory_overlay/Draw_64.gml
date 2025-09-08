@@ -6,13 +6,13 @@ if(inv_size != -1)
         if(instance_exists(my_camera))
         {   
             var offset_set = false;
-            if(__view_get( e__VW.Visible, my_camera.view ))
+            if(view_get_visible( my_camera.view ))
             {
                 self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
                 self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );
                 offset_set = true;
             }
-            else if(__view_get( e__VW.Visible, main_camera_obj.view ))
+            else if(view_get_visible( main_camera_obj.view ))
             {
                 self.view_x_offset = __view_get( e__VW.XPort, main_camera_obj.view ) + (__view_get( e__VW.WPort, main_camera_obj.view )/2)*(my_camera.view-1);
                 self.view_y_offset = __view_get( e__VW.YPort, main_camera_obj.view );

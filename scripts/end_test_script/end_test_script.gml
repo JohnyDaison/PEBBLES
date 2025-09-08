@@ -78,12 +78,11 @@ function end_test_script() {
         instance_destroy();
     }
 
-    for(i=1;i<=7;i+=1)
-    {
-        __view_set( e__VW.Visible, i, false );
+    for (var i = 1; i <= 7; i += 1) {
+        view_set_visible( i, false );
     }
 
-    __view_set( e__VW.Visible, 0, true );
+    view_set_visible( 0, true );
     /*
     background_color = make_color_rgb(0,29,43);
     background_visible[0] = false;
@@ -115,5 +114,5 @@ function end_test_script() {
 
     frame_manager.enable_focus_shift = true;
 
-     singleton_obj.changeBackgroundColor(c_black);
+    singleton_obj.changeBackgroundColor(c_black);
 }

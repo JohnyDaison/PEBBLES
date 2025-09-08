@@ -12,7 +12,7 @@ if(!ready)
             my_camera = my_player.my_camera;
 
             var offset_set = false;
-            if(__view_get( e__VW.Visible, my_camera.view ))
+            if(view_get_visible( my_camera.view ))
             {
                 self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
                 self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );

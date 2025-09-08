@@ -15,7 +15,6 @@ function __view_set_internal(argument0, argument1, argument2) {
 	case e__VW.HSpeed: var __cam = view_get_camera(__index); camera_set_view_speed(__cam, __val, camera_get_view_speed_y(__cam)); break;
 	case e__VW.VSpeed: var __cam = view_get_camera(__index); camera_set_view_speed(__cam, camera_get_view_speed_x(__cam), __val); break;
 	case e__VW.Object: var __cam = view_get_camera(__index); camera_set_view_target(__cam, __val); break;
-	case e__VW.Visible: __res = view_set_visible(__index, __val); break;
 	case e__VW.XPort: __res = view_set_xport(__index, __val); break;
 	case e__VW.YPort: __res = view_set_yport(__index, __val); break;
 	case e__VW.WPort: __res = view_set_wport(__index, __val); break;
