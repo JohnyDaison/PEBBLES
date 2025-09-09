@@ -10,7 +10,6 @@ function __view_get(argument0, argument1) {
 	case e__VW.YView: var __cam = view_get_camera(__index); __res = camera_get_view_y(__cam); break;
 	case e__VW.WView: var __cam = view_get_camera(__index); __res = camera_get_view_width(__cam); break;
 	case e__VW.HView: var __cam = view_get_camera(__index); __res = camera_get_view_height(__cam); break;
-	case e__VW.Angle: var __cam = view_get_camera(__index); __res = camera_get_view_angle(__cam); break;
 	case e__VW.HBorder: var __cam = view_get_camera(__index); __res = camera_get_view_border_x(__cam); break;
 	case e__VW.VBorder: var __cam = view_get_camera(__index); __res = camera_get_view_border_y(__cam); break;
 	case e__VW.HSpeed: var __cam = view_get_camera(__index); __res = camera_get_view_speed_x(__cam); break;
@@ -20,8 +19,6 @@ function __view_get(argument0, argument1) {
 	case e__VW.YPort: __res = view_get_yport(__index); break;
 	case e__VW.WPort: __res = view_get_wport(__index); break;
 	case e__VW.HPort: __res = view_get_hport(__index); break;
-	case e__VW.Camera: __res = view_get_camera(__index); break;
-	case e__VW.SurfaceID: __res = view_get_surface_id(__index); break;
 	default: break;
 	};
 
