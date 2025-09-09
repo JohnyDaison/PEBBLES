@@ -261,29 +261,31 @@ function arena_bot3(argument0) {
                                 case 1:
                                     if(random(3) < 1)
                                     {
-                                        color_chosen = true;
+                                        if (has_level(id, "blast_mode", 1)) {
+                                            color_chosen = true;
+                                        }
                                     }
                                     break;
                     
                                 case 2:
                                     if(pl_dist >= third_attack_range || random(3) < 1)
                                     {
-                                        color_chosen = true;
+                                        if (has_level(id, "barrage_mode", 1)) {
+                                            color_chosen = true;
+                                        }
                                     }
                                     break;
                         
                                 case 3:
-                                    if(npc_line_of_sight(x,y, "move") && pl_dist < third_attack_range*get_orb_list_power_level(color_slots)) //  && 
-                                    {
+                                    if(has_level(id, "dashwave_mode", 1) && npc_line_of_sight(x,y, "move") && pl_dist < third_attack_range*get_orb_list_power_level(color_slots)) {
                                         color_chosen = true;
                                     }
-                                    else
-                                    {
-                                        wanna_cast = true;   
+                                    else {
+                                        wanna_cast = true;
                                     }
                                     break;
                             }
-                        }   
+                        }
                     }
         
                     // ADD NEW COLOR ORB

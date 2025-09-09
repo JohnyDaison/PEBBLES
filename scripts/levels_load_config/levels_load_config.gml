@@ -142,6 +142,11 @@ function levels_load_config(config) {
         config_level_gamemode("barrage_mode",       "", "", 0, 0);
         config_level_gamemode("dashwave_mode",      "", "", 0, 0);
     }
+    else if(config == "no_blast_no_barrage")
+    {
+        config_level_gamemode("blast_mode",         "", "", 0, 0);
+        config_level_gamemode("barrage_mode",       "", "", 0, 0);
+    }
     else if(config == "no_abilities")
     {
         config_level_gamemode("rewind",             "", "", 0, 0);
