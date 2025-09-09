@@ -9,8 +9,9 @@ if(!ready)
         if(instance_exists(my_camera))
         {
             var offset_set = false;
-            if(view_get_visible( my_camera.view ) && __view_get( e__VW.Object, my_camera.view ) = my_camera)
-            {
+            var camera = view_get_camera(my_camera.view);
+            
+            if (view_get_visible(my_camera.view) && camera_get_view_target(camera) == my_camera) {
                 self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
                 self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );
                 x = self.view_x_offset + floor(__view_get( e__VW.WPort, my_camera.view )/2);
