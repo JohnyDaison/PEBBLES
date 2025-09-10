@@ -1,7 +1,8 @@
 if (on) {
-    var half_wview = __view_get( e__VW.WView, view )/2;
-    var half_hview = __view_get( e__VW.HView, view )/2;
-    
+    var viewCamera = view_get_camera(view);
+    var half_wview = camera_get_view_width(viewCamera) / 2;
+    var half_hview = camera_get_view_height(viewCamera) / 2;
+
     if (pan_mode) {
         var mouse_down = mouse_check_button(mb_left);
         
@@ -30,7 +31,9 @@ if (on) {
         inited_view = true;
         update_display();
     }
-    
-    __view_set( e__VW.XView, view, x-__view_get( e__VW.WView, view )/2 );
-    __view_set( e__VW.YView, view, y-__view_get( e__VW.HView, view )/2 );
+
+    camera_set_view_pos(viewCamera,
+        x - camera_get_view_width(viewCamera) / 2,
+        y - camera_get_view_height(viewCamera) / 2
+    );
 }

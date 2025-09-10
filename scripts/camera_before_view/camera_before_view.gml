@@ -64,10 +64,14 @@ function camera_before_view() {
             }
             ds_list_clear(ter_list);
             ter_list_length = 0;
-        
+            
+            var viewCamera = view_get_camera(view);
+            var viewWidth = camera_get_view_width(viewCamera);
+            var viewHeight = camera_get_view_height(viewCamera);
+
             // BASE AREA
-            cell_width = ceil(__view_get( e__VW.WView, view ) / singleton_obj.grid_cell_size);
-            cell_height = ceil(__view_get( e__VW.HView, view ) / singleton_obj.grid_cell_size);
+            cell_width = ceil(viewWidth / singleton_obj.grid_cell_size);
+            cell_height = ceil(viewHeight / singleton_obj.grid_cell_size);
             hor_min = cur_grid_x - ceil(cell_width/2);
             hor_max = cur_grid_x + ceil(cell_width/2);
             ver_min = cur_grid_y - ceil(cell_height/2);

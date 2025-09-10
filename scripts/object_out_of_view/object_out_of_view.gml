@@ -18,9 +18,10 @@ function object_out_of_view(obj, camera) {
         var y_diff = obj_y - camera.y;
         var rad_coef = 1;
         var buffer_size = 0;
-    
-        var half_width = __view_get( e__VW.WView, camera.view )/2;
-        var half_height = __view_get( e__VW.HView, camera.view )/2;
+        
+        var viewCamera = view_get_camera(camera.view);
+        var half_width = camera_get_view_width(viewCamera) / 2;
+        var half_height = camera_get_view_height(viewCamera) / 2;
     
         if(other.id == camera)
         {

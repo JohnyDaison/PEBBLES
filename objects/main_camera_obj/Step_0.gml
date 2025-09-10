@@ -28,8 +28,11 @@ if (count > 0 && !on) //&& view_visible[0]
     followed_x = x;
     followed_y = y;
     
-    __view_set( e__VW.XView, view, x-__view_get( e__VW.WView, view )/2 ); 
-    __view_set( e__VW.YView, view, y-__view_get( e__VW.HView, view )/2 );
+    var viewCamera = view_get_camera(view);
+    camera_set_view_pos(viewCamera,
+        x - camera_get_view_width(viewCamera) / 2,
+        y - camera_get_view_height(viewCamera) / 2
+    );
 
     if (ter_list_length > 0)
     {
