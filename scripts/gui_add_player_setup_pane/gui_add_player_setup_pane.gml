@@ -1,6 +1,7 @@
 function gui_add_player_setup_pane(xx, yy, player_num) {
     var player_pane = gui_add_pane(xx, yy, "Player " + string(player_num));
     var team_number = calculate_team_number(player_num);
+    var defaultControlSetIndex = ds_list_find_index(DB.control_set_order, DB.default_control_set);
 
     with(player_pane)
     {
@@ -43,7 +44,7 @@ function gui_add_player_setup_pane(xx, yy, player_num) {
         eloffset_x = x + hor_spacing;
         eloffset_y += name_input.height + vert_spacing;
     
-        ii = gui_add_dropdown(0, 0, "text", DB.control_set_names, 0);
+        ii = gui_add_dropdown(0, 0, "text", DB.control_set_names, defaultControlSetIndex);
         ii.width = 192;
         control_dropdown = ii;
         

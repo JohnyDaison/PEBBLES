@@ -111,7 +111,8 @@ function init_controls_DB() {
     control_set_order[| i++] = cpu_control_set;
     control_set_order[| i++] = keyboard1;
     control_set_order[| i++] = keyboard2;
-
+    
+    default_control_set = cpu_control_set;
 
     // GUI CONTROLS
     gui_controls = ds_grid_create(stepmode+1, released+1);
