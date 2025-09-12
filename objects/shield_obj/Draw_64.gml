@@ -16,14 +16,18 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
             {
                 if(camera.on)
                 {
-                    var view_num = camera.view;
+                    var viewCamera = view_get_camera(camera.view);
+                    var viewX = camera_get_view_x(viewCamera);
+                    var viewY = camera_get_view_y(viewCamera);
+                    var viewWidth = camera_get_view_width(viewCamera);
+                    var viewHeight = camera_get_view_height(viewCamera);
                     
-                    if(x > __view_get( e__VW.XView, view_num ) && x < (__view_get( e__VW.XView, view_num ) + __view_get( e__VW.WView, view_num ))
-                    && y > __view_get( e__VW.YView, view_num ) && y < (__view_get( e__VW.YView, view_num ) + __view_get( e__VW.HView, view_num )))
+                    if (x > viewX && x < (viewX + viewWidth)
+                     && y > viewY && y < (viewY + viewHeight))
                     {
                         // POSITION
-                        xx = floor((x - __view_get( e__VW.XView, view_num ))*camera.zoom_level + view_get_xport( view_num ));
-                        yy = floor((y - __view_get( e__VW.YView, view_num ))*camera.zoom_level + view_get_yport( view_num ));
+                        xx = floor( (x - viewX) * camera.zoom_level + view_get_xport( camera.view ) );
+                        yy = floor( (y - viewY) * camera.zoom_level + view_get_yport( camera.view ) );
     
                         // SIZE
                         var base_charge = max_charge + overcharge;
