@@ -4,8 +4,8 @@ if (message != "" && !adjusted)
     my_draw_set_font(big_font);
     width = string_width(string_hash_to_newline(message))+96;
     height = string_height(string_hash_to_newline(message))+64;
-    x = __view_get( e__VW.WPort, 0 )/2 - width/2;
-    y = __view_get( e__VW.HPort, 0 )/2 - height/2;
+    x = view_get_wport( 0 )/2 - width/2;
+    y = view_get_hport( 0 )/2 - height/2;
     adjusted = true;
     draw_border = true;
     draw_bg_color = true;

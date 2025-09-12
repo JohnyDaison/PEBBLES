@@ -59,7 +59,7 @@ if(instance_exists(my_guy))
 
     // UPDATE FRAME
     var view = my_player.my_camera.view;
-    max_width = __view_get( e__VW.WPort, view ) - 192;
+    max_width = view_get_wport( view ) - 192;
     
     if(message != "")
     {
@@ -85,8 +85,8 @@ if(instance_exists(my_guy))
         height = 0;
     }
     
-    x = __view_get( e__VW.XPort, view ) + __view_get( e__VW.WPort, view )/2 - width/2;
-    y = __view_get( e__VW.YPort, view ) + __view_get( e__VW.HPort, view )*0.8 - height/2;
+    x = view_get_xport( view ) + view_get_wport( view )/2 - width/2;
+    y = view_get_yport( view ) + view_get_hport( view )*0.8 - height/2;
 }
 else
 {

@@ -27,10 +27,10 @@ if (!view_drag) {
             view = 1;
             while(!view_found && view_get_visible( view ))
             {
-                view_x = x - __view_get( e__VW.XPort, view );
-                view_y = y - __view_get( e__VW.YPort, view );
+                view_x = x - view_get_xport( view );
+                view_y = y - view_get_yport( view );
 
-                if (view_x >= 0 && view_x < __view_get( e__VW.WPort, view ) && view_y >= 0 && view_y < __view_get( e__VW.HPort, view )) {
+                if (view_x >= 0 && view_x < view_get_wport( view ) && view_y >= 0 && view_y < view_get_hport( view )) {
                     var cam;
                     with(camera_obj)
                     {

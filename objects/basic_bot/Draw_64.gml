@@ -14,8 +14,8 @@ if (my_player == gamemode_obj.environment || my_player.my_guy != id)
                 if (x > __view_get( e__VW.XView, view_num ) && x < (__view_get( e__VW.XView, view_num ) + __view_get( e__VW.WView, view_num ))
                  && y > __view_get( e__VW.YView, view_num ) && y < (__view_get( e__VW.YView, view_num ) + __view_get( e__VW.HView, view_num )))
                 {
-                    var xx = floor((x - __view_get( e__VW.XView, view_num ))*cam.zoom_level + __view_get( e__VW.XPort, view_num ));
-                    var yy = floor((y - __view_get( e__VW.YView, view_num ))*cam.zoom_level + __view_get( e__VW.YPort, view_num ));
+                    var xx = floor((x - __view_get( e__VW.XView, view_num ))*cam.zoom_level + view_get_xport( view_num ));
+                    var yy = floor((y - __view_get( e__VW.YView, view_num ))*cam.zoom_level + view_get_yport( view_num ));
                     
                     var base_bar_width = floor(hp_bar_width * cam.zoom_level);
                     

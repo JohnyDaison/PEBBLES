@@ -22,8 +22,8 @@ if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_
                     && y > __view_get( e__VW.YView, view_num ) && y < (__view_get( e__VW.YView, view_num ) + __view_get( e__VW.HView, view_num )))
                     {
                         // POSITION
-                        xx = floor((x - __view_get( e__VW.XView, view_num ))*camera.zoom_level + __view_get( e__VW.XPort, view_num ));
-                        yy = floor((y - __view_get( e__VW.YView, view_num ))*camera.zoom_level + __view_get( e__VW.YPort, view_num ));
+                        xx = floor((x - __view_get( e__VW.XView, view_num ))*camera.zoom_level + view_get_xport( view_num ));
+                        yy = floor((y - __view_get( e__VW.YView, view_num ))*camera.zoom_level + view_get_yport( view_num ));
     
                         // SIZE
                         var base_charge = max_charge + overcharge;

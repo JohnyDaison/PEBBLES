@@ -3,9 +3,9 @@ var xx, yy;
 if (keyboard_check(vk_alt) && false) {
     var left_end = -0.5, right_end = 1.5;
     
-    xx = x + __view_get( e__VW.XView, view_current ) - __view_get( e__VW.XPort, view_current );
+    xx = x + __view_get( e__VW.XView, view_current ) - view_get_xport( view_current );
     
-    yy = y + __view_get( e__VW.YView, view_current ) - __view_get( e__VW.YPort, view_current );
+    yy = y + __view_get( e__VW.YView, view_current ) - view_get_yport( view_current );
     
     draw_set_color(c_white);
     draw_set_alpha(1);
@@ -18,9 +18,9 @@ if (keyboard_check(vk_alt) && false) {
 if (keyboard_check(vk_alt)) {
     var left_end = -1.5, right_end = 0.5; 
     
-    xx = x + __view_get( e__VW.XView, view_current ) - __view_get( e__VW.XPort, view_current );
+    xx = x + __view_get( e__VW.XView, view_current ) - view_get_xport( view_current );
     
-    yy = y + __view_get( e__VW.YView, view_current ) - __view_get( e__VW.YPort, view_current );
+    yy = y + __view_get( e__VW.YView, view_current ) - view_get_yport( view_current );
     
     /*
     draw_set_color(c_white);

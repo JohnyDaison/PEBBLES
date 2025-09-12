@@ -118,17 +118,17 @@ if (resize)
             var offset_set = false;
             if (view_get_visible( my_camera.view ))
             {
-                self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
-                self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );
+                self.view_x_offset = view_get_xport( my_camera.view );
+                self.view_y_offset = view_get_yport( my_camera.view );
                 offset_set = true;
             }
             if (!offset_set)
             {
-                self.view_x_offset = __view_get( e__VW.XPort, 0 ) + (__view_get( e__VW.WPort, 0 )/2)*(my_camera.view-1);
-                self.view_y_offset = __view_get( e__VW.YPort, 0 );
+                self.view_x_offset = view_get_xport( 0 ) + (view_get_wport( 0 )/2)*(my_camera.view-1);
+                self.view_y_offset = view_get_yport( 0 );
             }
         
-            x = __view_get( e__VW.WPort, my_camera.view )/2  - width/2 + self.view_x_offset -1;
+            x = view_get_wport( my_camera.view )/2  - width/2 + self.view_x_offset -1;
             y = my_camera.border_width + 64 + self.view_y_offset -1;
             
             if (gamemode_obj.player_count == 1)

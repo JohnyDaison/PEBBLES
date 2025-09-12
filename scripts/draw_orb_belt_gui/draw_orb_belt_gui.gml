@@ -98,8 +98,8 @@ function draw_orb_belt_gui(belt_x, belt_y, list, orientation, belt_width, belt_s
                     var anim_progress = /*sqr*/(1 - (orb.newly_got_steps / orb.newly_got_anim_duration));
                     size_coef = (1- ( abs(orb.newly_got_steps - orb.newly_got_anim_peak) / orb.newly_got_anim_peak));
                     size_boost = edge_range * orb.newly_got_anim_sizecoef * size_coef;
-                    var view_center_x = __view_get( e__VW.XPort, camera.view ) + __view_get( e__VW.WPort, camera.view )/2;
-                    var view_center_y = __view_get( e__VW.YPort, camera.view ) + __view_get( e__VW.HPort, camera.view )/2;
+                    var view_center_x = view_get_xport( camera.view ) + view_get_wport( camera.view )/2;
+                    var view_center_y = view_get_yport( camera.view ) + view_get_hport( camera.view )/2;
                     
                     orb_x1 = lerp(view_center_x, orb_x1, anim_progress);
                     orb_x2 = lerp(view_center_x, orb_x2, anim_progress);

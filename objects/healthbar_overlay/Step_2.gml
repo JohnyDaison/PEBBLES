@@ -2,7 +2,7 @@ event_inherited();
 
 /// UPDATE VALUES AND COORDS
 if (ready && instance_exists(my_guy)) {
-    width = __view_get( e__VW.WPort, my_camera.view ) - 2*border_width - my_camera.border_width * 2;
+    width = view_get_wport( my_camera.view ) - 2*border_width - my_camera.border_width * 2;
     base_exists = instance_exists(my_guy.my_base) && my_guy.my_base.object_index == guy_spawner_obj;
     
     // HIDING OWN HP

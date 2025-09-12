@@ -36,18 +36,18 @@ if(instance_exists(my_guy))
     if(instance_exists(my_camera))
     {
         // GUY POSITION
-        x = (my_guy.x - __view_get( e__VW.XView, my_camera.view ))*my_camera.zoom_level + __view_get( e__VW.XPort, my_camera.view );
+        x = (my_guy.x - __view_get( e__VW.XView, my_camera.view ))*my_camera.zoom_level + view_get_xport( my_camera.view );
         
-        guy_y = (my_guy.y - __view_get( e__VW.YView, my_camera.view ))*my_camera.zoom_level + __view_get( e__VW.YPort, my_camera.view );
+        guy_y = (my_guy.y - __view_get( e__VW.YView, my_camera.view ))*my_camera.zoom_level + view_get_yport( my_camera.view );
         name_offset = guy_y - my_camera.zoom_level*name_dist;
         //y = name_offset - dial_dist;
-        y = __view_get( e__VW.HPort, my_camera.view )*0.25;
+        y = view_get_hport( my_camera.view )*0.25;
        
         // ABI HINT POSITION 
         if(my_guy.control_method == cpu_control || my_guy.control_method == keyboard)
         {
-            abi_y2 = my_camera.border_width + 244 + __view_get( e__VW.YPort, my_camera.view );
-            abi_x = __view_get( e__VW.XPort, my_camera.view ) + 80;
+            abi_y2 = my_camera.border_width + 244 + view_get_yport( my_camera.view );
+            abi_x = view_get_xport( my_camera.view ) + 80;
             if(gamemode_obj.no_inventory)
             {
                 abi_y2 -= 84;
@@ -56,8 +56,8 @@ if(instance_exists(my_guy))
         }
         if(my_guy.control_method == gamepad)
         {
-            abi_y2 = my_camera.border_width + 112 + __view_get( e__VW.YPort, my_camera.view );
-            abi_x = __view_get( e__VW.XPort, my_camera.view ) + 280;
+            abi_y2 = my_camera.border_width + 112 + view_get_yport( my_camera.view );
+            abi_x = view_get_xport( my_camera.view ) + 280;
             if(gamemode_obj.no_inventory)
             {
                 abi_x -= 184;
@@ -67,15 +67,15 @@ if(instance_exists(my_guy))
         abi_y1 = abi_y2 - dial_dist;
         
         // ABI PANEL
-        abi_panel_x = __view_get( e__VW.WPort, my_guy.my_player.my_camera.view )*0.5 + __view_get( e__VW.XPort, my_guy.my_player.my_camera.view ) - abi_panel_width/2;
-        abi_panel_y = __view_get( e__VW.YPort, my_camera.view ) + __view_get( e__VW.HPort, my_camera.view ) - my_camera.border_width;
+        abi_panel_x = view_get_wport( my_guy.my_player.my_camera.view )*0.5 + view_get_xport( my_guy.my_player.my_camera.view ) - abi_panel_width/2;
+        abi_panel_y = view_get_yport( my_camera.view ) + view_get_hport( my_camera.view ) - my_camera.border_width;
         status_panel_y = abi_panel_y;
         
         
         // CORRECTION FOR 1-VIEW MODE
         if(my_camera == main_camera_obj.id)
         {
-            abi_x += __view_get( e__VW.XPort, my_guy.my_player.my_camera.view );
+            abi_x += view_get_xport( my_guy.my_player.my_camera.view );
         }
         
         // ABILITY DISPLAY
@@ -155,13 +155,13 @@ if(instance_exists(my_guy))
         // ORB BELTS
         if(screen_side == -1)
         {
-            orb_panel_x = __view_get( e__VW.XPort, my_guy.my_player.my_camera.view ) + my_camera.border_width - 1 + orb_border_width;
+            orb_panel_x = view_get_xport( my_guy.my_player.my_camera.view ) + my_camera.border_width - 1 + orb_border_width;
         }
         else if(screen_side == 0 || screen_side == 1)
         {
-            orb_panel_x = __view_get( e__VW.XPort, my_guy.my_player.my_camera.view ) + __view_get( e__VW.WPort, my_guy.my_player.my_camera.view )  - my_camera.border_width - orb_panel_width - orb_border_width;
+            orb_panel_x = view_get_xport( my_guy.my_player.my_camera.view ) + view_get_wport( my_guy.my_player.my_camera.view )  - my_camera.border_width - orb_panel_width - orb_border_width;
         }
-        orb_panel_y = __view_get( e__VW.YPort, my_camera.view ) + __view_get( e__VW.HPort, my_camera.view ) - my_camera.border_width - orb_border_width;
+        orb_panel_y = view_get_yport( my_camera.view ) + view_get_hport( my_camera.view ) - my_camera.border_width - orb_border_width;
         
         belt_size = 0;
         for(i=0;i<belt_count;i++)

@@ -26,8 +26,8 @@ if(instance_exists(my_camera))
             
             draw_set_alpha(1);
             
-            var surface_x = __view_get( e__VW.XPort, my_camera.view ) + x;
-            var surface_y = __view_get( e__VW.YPort, my_camera.view ) + y;
+            var surface_x = view_get_xport( my_camera.view ) + x;
+            var surface_y = view_get_yport( my_camera.view ) + y;
             //my_console_log("DISPLAY " + string(my_camera.view) + " SURFACE: " + string(surface_x) + ";" + string(surface_y));
             
             draw_surface(my_camera.view_surface, surface_x, surface_y);

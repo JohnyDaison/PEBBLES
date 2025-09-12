@@ -8,20 +8,20 @@ if(inv_size != -1)
             var offset_set = false;
             if(view_get_visible( my_camera.view ))
             {
-                self.view_x_offset = __view_get( e__VW.XPort, my_camera.view );
-                self.view_y_offset = __view_get( e__VW.YPort, my_camera.view );
+                self.view_x_offset = view_get_xport( my_camera.view );
+                self.view_y_offset = view_get_yport( my_camera.view );
                 offset_set = true;
             }
             else if(view_get_visible( main_camera_obj.view ))
             {
-                self.view_x_offset = __view_get( e__VW.XPort, main_camera_obj.view ) + (__view_get( e__VW.WPort, main_camera_obj.view )/2)*(my_camera.view-1);
-                self.view_y_offset = __view_get( e__VW.YPort, main_camera_obj.view );
+                self.view_x_offset = view_get_xport( main_camera_obj.view ) + (view_get_wport( main_camera_obj.view )/2)*(my_camera.view-1);
+                self.view_y_offset = view_get_yport( main_camera_obj.view );
                 offset_set = true;
             }
             if(!offset_set)
             {
-                  self.view_x_offset = __view_get( e__VW.XPort, 0 ) + (__view_get( e__VW.WPort, 0 )/2)*(my_camera.view-1);
-                  self.view_y_offset = __view_get( e__VW.YPort, 0 );
+                  self.view_x_offset = view_get_xport( 0 ) + (view_get_wport( 0 )/2)*(my_camera.view-1);
+                  self.view_y_offset = view_get_yport( 0 );
             }
             
             draw_set_alpha(bg_alpha);
@@ -51,8 +51,8 @@ if(inv_size != -1)
                 offset_x = x;
                 offset_y = y;
                 
-                var view_center_x = __view_get( e__VW.XPort, my_camera.view ) + __view_get( e__VW.WPort, my_camera.view )/2;
-                var view_center_y = __view_get( e__VW.YPort, my_camera.view ) + __view_get( e__VW.HPort, my_camera.view )/2;
+                var view_center_x = view_get_xport( my_camera.view ) + view_get_wport( my_camera.view )/2;
+                var view_center_y = view_get_yport( my_camera.view ) + view_get_hport( my_camera.view )/2;
             
                 var i, pickup, xx, yy, alpha_ratio;
                 for(i=1; i<=inv_size; i+=1)

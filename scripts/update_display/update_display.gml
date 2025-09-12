@@ -126,19 +126,19 @@ function update_display() {
         {
             __view_set( e__VW.WView, view, singleton_obj.current_width/zoom );
             __view_set( e__VW.HView, view, singleton_obj.current_height/zoom );
-            __view_set( e__VW.WPort, view, singleton_obj.current_width );
-            __view_set( e__VW.HPort, view, singleton_obj.current_height );
-            __view_set( e__VW.XPort, view, 0 );
-            __view_set( e__VW.YPort, view, 0 );
+            view_set_wport( view, singleton_obj.current_width );
+            view_set_hport( view, singleton_obj.current_height );
+            view_set_xport( view, 0 );
+            view_set_yport( view, 0 );
         }
         else
         {       
             __view_set( e__VW.WView, view, singleton_obj.player_view_width/zoom );
             __view_set( e__VW.HView, view, singleton_obj.player_view_height/zoom );
-            __view_set( e__VW.WPort, view, singleton_obj.player_port_width );
-            __view_set( e__VW.HPort, view, singleton_obj.player_port_height );
-            __view_set( e__VW.XPort, view, 0+singleton_obj.player_port_width*((view-1) mod 2) );
-            __view_set( e__VW.YPort, view, 0+singleton_obj.player_port_height*(floor((view-1)/2)) );        
+            view_set_wport( view, singleton_obj.player_port_width );
+            view_set_hport( view, singleton_obj.player_port_height );
+            view_set_xport( view, 0+singleton_obj.player_port_width*((view-1) mod 2) );
+            view_set_yport( view, 0+singleton_obj.player_port_height*(floor((view-1)/2)) );        
         }
     }
     else
