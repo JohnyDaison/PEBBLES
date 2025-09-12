@@ -115,30 +115,38 @@ function update_display() {
 
     if(object_is_ancestor(object_index,camera_obj) || object_index == editor_camera)
     {
-        __view_set( e__VW.HBorder, view, 0 );
-        __view_set( e__VW.VBorder, view, 0 );
-        __view_set( e__VW.HSpeed, view, -1 );
-        __view_set( e__VW.VSpeed, view, -1 );
-
+        var viewCamera = view_get_camera(view);
         var zoom = zoom_level;
-    
+        
+        camera_set_view_border(viewCamera, 0, 0);
+        camera_set_view_speed(viewCamera, -1, -1);
+        
         if(only_cam)
         {
-            __view_set( e__VW.WView, view, singleton_obj.current_width/zoom );
-            __view_set( e__VW.HView, view, singleton_obj.current_height/zoom );
+            camera_set_view_size(viewCamera,
+                singleton_obj.current_width / zoom,
+                singleton_obj.current_height / zoom
+            );
+            
             view_set_wport( view, singleton_obj.current_width );
             view_set_hport( view, singleton_obj.current_height );
             view_set_xport( view, 0 );
             view_set_yport( view, 0 );
         }
         else
-        {       
-            __view_set( e__VW.WView, view, singleton_obj.player_view_width/zoom );
-            __view_set( e__VW.HView, view, singleton_obj.player_view_height/zoom );
+        {
+            var x_grid_pos = (view - 1) mod 2;
+            var y_grid_pos = floor((view - 1) / 2);
+            
+            camera_set_view_size(viewCamera,
+                singleton_obj.player_view_width / zoom,
+                singleton_obj.player_view_height / zoom
+            );
+            
             view_set_wport( view, singleton_obj.player_port_width );
             view_set_hport( view, singleton_obj.player_port_height );
-            view_set_xport( view, 0+singleton_obj.player_port_width*((view-1) mod 2) );
-            view_set_yport( view, 0+singleton_obj.player_port_height*(floor((view-1)/2)) );        
+            view_set_xport( view, 0 + singleton_obj.player_port_width * x_grid_pos );
+            view_set_yport( view, 0 + singleton_obj.player_port_height * y_grid_pos );
         }
     }
     else
