@@ -283,6 +283,7 @@
     {"name":"__view_get usage","order":3,"path":"notes/__view_get usage/__view_get usage.yy",},
     {"name":"compatibility_report_020817_1133213321","order":1,"path":"notes/compatibility_report_020817_1133213321/compatibility_report_020817_1133213321.yy",},
     {"name":"import_notes","order":2,"path":"notes/import_notes/import_notes.yy",},
+    {"name":"refactoring notes","order":4,"path":"notes/refactoring notes/refactoring notes.yy",},
     {"name":"access_card_obj","order":10,"path":"objects/access_card_obj/access_card_obj.yy",},
     {"name":"access_terminal_obj","order":6,"path":"objects/access_terminal_obj/access_terminal_obj.yy",},
     {"name":"antenna_obj","order":1,"path":"objects/antenna_obj/antenna_obj.yy",},

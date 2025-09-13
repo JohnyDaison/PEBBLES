@@ -340,6 +340,7 @@
     {"id":{"name":"compatibility_report_020817_1133213321","path":"notes/compatibility_report_020817_1133213321/compatibility_report_020817_1133213321.yy",},},
     {"id":{"name":"import_notes","path":"notes/import_notes/import_notes.yy",},},
     {"id":{"name":"notes","path":"notes/notes/notes.yy",},},
+    {"id":{"name":"refactoring notes","path":"notes/refactoring notes/refactoring notes.yy",},},
     {"id":{"name":"ability_pickup_obj","path":"objects/ability_pickup_obj/ability_pickup_obj.yy",},},
     {"id":{"name":"access_card_obj","path":"objects/access_card_obj/access_card_obj.yy",},},
     {"id":{"name":"access_terminal_obj","path":"objects/access_terminal_obj/access_terminal_obj.yy",},},
