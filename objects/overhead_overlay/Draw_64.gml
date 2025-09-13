@@ -43,6 +43,11 @@ if(instance_exists(my_guy))
         var portWidth = view_get_wport(my_camera.view);
         var portHeight = view_get_hport(my_camera.view);
         
+        // TODO: Do these three really need to exist?
+        var playerCameraView = my_guy.my_player.my_camera.view;
+        var playerPortX = view_get_xport(playerCameraView);
+        var playerPortWidth = view_get_wport(playerCameraView);
+        
         // GUY POSITION
         x = (my_guy.x - viewX) * my_camera.zoom_level + portX;
         
@@ -54,8 +59,8 @@ if(instance_exists(my_guy))
         // ABI HINT POSITION 
         if(my_guy.control_method == cpu_control || my_guy.control_method == keyboard)
         {
-            abi_y2 = my_camera.border_width + 244 + view_get_yport( my_camera.view );
-            abi_x = view_get_xport( my_camera.view ) + 80;
+            abi_y2 = my_camera.border_width + 244 + portY;
+            abi_x = portX + 80;
             if(gamemode_obj.no_inventory)
             {
                 abi_y2 -= 84;
@@ -64,8 +69,8 @@ if(instance_exists(my_guy))
         }
         if(my_guy.control_method == gamepad)
         {
-            abi_y2 = my_camera.border_width + 112 + view_get_yport( my_camera.view );
-            abi_x = view_get_xport( my_camera.view ) + 280;
+            abi_y2 = my_camera.border_width + 112 + portY;
+            abi_x = portX + 280;
             if(gamemode_obj.no_inventory)
             {
                 abi_x -= 184;
@@ -75,15 +80,15 @@ if(instance_exists(my_guy))
         abi_y1 = abi_y2 - dial_dist;
         
         // ABI PANEL
-        abi_panel_x = view_get_wport( my_guy.my_player.my_camera.view )*0.5 + view_get_xport( my_guy.my_player.my_camera.view ) - abi_panel_width/2;
-        abi_panel_y = view_get_yport( my_camera.view ) + view_get_hport( my_camera.view ) - my_camera.border_width;
+        abi_panel_x = playerPortWidth * 0.5 + playerPortX - abi_panel_width / 2;
+        abi_panel_y = portY + portHeight - my_camera.border_width;
         status_panel_y = abi_panel_y;
         
         
         // CORRECTION FOR 1-VIEW MODE
         if(my_camera == main_camera_obj.id)
         {
-            abi_x += view_get_xport( my_guy.my_player.my_camera.view );
+            abi_x += playerPortX;
         }
         
         // ABILITY DISPLAY
@@ -163,13 +168,13 @@ if(instance_exists(my_guy))
         // ORB BELTS
         if(screen_side == -1)
         {
-            orb_panel_x = view_get_xport( my_guy.my_player.my_camera.view ) + my_camera.border_width - 1 + orb_border_width;
+            orb_panel_x = playerPortX + my_camera.border_width - 1 + orb_border_width;
         }
         else if(screen_side == 0 || screen_side == 1)
         {
-            orb_panel_x = view_get_xport( my_guy.my_player.my_camera.view ) + view_get_wport( my_guy.my_player.my_camera.view )  - my_camera.border_width - orb_panel_width - orb_border_width;
+            orb_panel_x = playerPortX + playerPortWidth - my_camera.border_width - orb_panel_width - orb_border_width;
         }
-        orb_panel_y = view_get_yport( my_camera.view ) + view_get_hport( my_camera.view ) - my_camera.border_width - orb_border_width;
+        orb_panel_y = portY + portHeight - my_camera.border_width - orb_border_width;
         
         belt_size = 0;
         for(i=0;i<belt_count;i++)
