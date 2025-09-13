@@ -23,18 +23,20 @@ if(dodraw && instance_exists(my_guy))
 
     if(camera_on)
     {
-        view_width = __view_get( e__VW.WView, view_current );
-        view_height = __view_get( e__VW.HView, view_current );
-        self.view_x_offset = __view_get( e__VW.XView, view_current );
-        self.view_y_offset = __view_get( e__VW.YView, view_current );
+        var viewCamera = view_get_camera(view_current);
+        var viewWidth = camera_get_view_width(viewCamera);
+        var viewHeight = camera_get_view_height(viewCamera);
         
-        var view_center_x = self.view_x_offset + view_width/2;
-        var view_center_y = self.view_y_offset + view_height/2;
+        self.view_x_offset = camera_get_view_x(viewCamera);
+        self.view_y_offset = camera_get_view_y(viewCamera);
+        
+        var view_center_x = self.view_x_offset + viewWidth/2;
+        var view_center_y = self.view_y_offset + viewHeight/2;
         
         var xdist = my_guy.x - view_center_x;
         var ydist = my_guy.y - view_center_y;
         
-        if(abs(xdist) > view_width/2 || abs(ydist) > view_height/2)
+        if(abs(xdist) > viewWidth/2 || abs(ydist) > viewHeight/2)
         {
             var coef, new_x, new_y;
             draw_swapped = true;
@@ -53,22 +55,22 @@ if(dodraw && instance_exists(my_guy))
             
             if(sign(xdist) >= 0)
             {
-                vert_guide = view_width/2 - border_width - width/2;
+                vert_guide = viewWidth/2 - border_width - width/2;
             }
             
             if(sign(xdist) < 0)
             {
-                vert_guide = -view_width/2 + border_width + width/2;
+                vert_guide = -viewWidth/2 + border_width + width/2;
             }
             
             if(sign(ydist) >= 0)
             {
-                hor_guide = view_height/2 - border_width - height/2;
+                hor_guide = viewHeight/2 - border_width - height/2;
             }
             
             if(sign(ydist) < 0)
             {
-                hor_guide = -view_height/2 + border_width + height/2;
+                hor_guide = -viewHeight/2 + border_width + height/2;
             }
             
             if(xdist != 0 && coef != 0)

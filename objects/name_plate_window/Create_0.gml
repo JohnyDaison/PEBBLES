@@ -14,7 +14,5 @@ draw_swapped = false;
 friend = false;
 my_camera = noone;
 border_width = 0;
-view_width = 0;
-view_height = 0;
 
 alarm[0] = 0;
