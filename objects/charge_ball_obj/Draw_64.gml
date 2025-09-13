@@ -19,8 +19,16 @@ if (!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != no
             yy = my_guy.gui_y + 24;
         } else {
             scale = camera.zoom_level;
-            xx = floor((my_guy.x - __view_get( e__VW.XView, camera.view ))*camera.zoom_level + view_get_xport( camera.view ));
-            yy = floor((my_guy.y - __view_get( e__VW.YView, camera.view ))*camera.zoom_level + view_get_yport( camera.view ));
+            
+            var viewCamera = view_get_camera(camera.view);
+            var viewX = camera_get_view_x(viewCamera);
+            var viewY = camera_get_view_y(viewCamera);
+            
+            var portX = view_get_xport(camera.view);
+            var portY = view_get_yport(camera.view);
+            
+            xx = floor((my_guy.x - viewX) * camera.zoom_level + portX);
+            yy = floor((my_guy.y - viewY) * camera.zoom_level + portY);
         }
         
         bar_dist = (base_radius * 0.5 + 16) * scale;
