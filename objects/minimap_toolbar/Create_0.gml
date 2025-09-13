@@ -1,6 +1,6 @@
 event_inherited();
 
-self.width = singleton_obj.current_width/7;
+self.width = singleton_obj.current_width / 7;
 self.height = self.width;
 self.text = "";
 self.map_margin = 7;
@@ -22,10 +22,14 @@ minimap_bottom = y + height - map_margin - 1;
 minimap_width = minimap_right - minimap_left;
 minimap_height = minimap_bottom - minimap_top;
 
-minimap_view_width = floor(__view_get( e__VW.WView, 0 )/32)*mini_block_size;
-minimap_view_height = floor(__view_get( e__VW.HView, 0 )/32)*mini_block_size;
+myViewCamera = view_get_camera(0);
+var viewWidth = camera_get_view_width(myViewCamera);
+var viewHeight = camera_get_view_height(myViewCamera);
 
-minimap_view_left = minimap_left + floor(minimap_width/2 - minimap_view_width/2);
-minimap_view_top = minimap_top + floor(minimap_height/2 - minimap_view_height/2);
+minimap_view_width = floor(viewWidth / 32) * mini_block_size;
+minimap_view_height = floor(viewHeight / 32) * mini_block_size;
+
+minimap_view_left = minimap_left + floor(minimap_width / 2 - minimap_view_width / 2);
+minimap_view_top = minimap_top + floor(minimap_height / 2 - minimap_view_height / 2);
 minimap_view_right = minimap_view_left + minimap_view_width;
 minimap_view_bottom = minimap_view_top + minimap_view_height;
