@@ -1,20 +1,13 @@
-/// @description set_guy_facing(right)
-/// @function set_guy_facing
-/// @param right
-function set_guy_facing() {
-
-	facing_right = !!argument[0];
-	if(!frozen_in_time && status_left[? "frozen"] == 0)
-	{
-	    if(facing_right)
-	    {
-	        facing = 1; 
-	    }
-	    else
-	    {
-	        facing = -1;
-	    }
-	}
-
-
+/// @param {Bool} _facing_right
+function set_guy_facing(_facing_right) {
+    self.facing_right = !!_facing_right;
+    
+    if (!self.frozen_in_time && self.status_left[? "frozen"] == 0) {
+        if (self.facing_right) {
+            self.facing = 1;
+        }
+        else {
+            self.facing = -1;
+        }
+    }
 }

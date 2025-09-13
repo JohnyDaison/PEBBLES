@@ -520,6 +520,7 @@ function npc_guy2_step() {
             // START BREAKING EARLY (DUPLICATED ??)
             if(!npc_wanna_jump && sign(waypoint_hdist) == sign(hspeed) && abs(waypoint_hdist) < (sqr(abs(hspeed)) / (2*(running_power*0.4 + friction))) )
             {
+                // TODO: code smell
                 set_guy_facing(!sign(waypoint_hdist));
                 wanna_run = true;
             }
