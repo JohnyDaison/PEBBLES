@@ -2,3 +2,6 @@ basic_bot and shield_obj share same camera related code
 
 sprite_index 
 invalid value is no longer "noone", but -1
+
+overhead_overlay
+Draw_GUI needs refactoring

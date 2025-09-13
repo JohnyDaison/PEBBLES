@@ -33,15 +33,23 @@ if(instance_exists(my_guy))
         my_camera = main_camera_obj.id;
     }
     
-    if(instance_exists(my_camera))
-    {
-        // GUY POSITION
-        x = (my_guy.x - __view_get( e__VW.XView, my_camera.view ))*my_camera.zoom_level + view_get_xport( my_camera.view );
+    if (instance_exists(my_camera)) {
+        var viewCamera = view_get_camera(my_camera.view);
+        var viewX = camera_get_view_x(viewCamera);
+        var viewY = camera_get_view_y(viewCamera);
         
-        guy_y = (my_guy.y - __view_get( e__VW.YView, my_camera.view ))*my_camera.zoom_level + view_get_yport( my_camera.view );
-        name_offset = guy_y - my_camera.zoom_level*name_dist;
+        var portX = view_get_xport(my_camera.view);
+        var portY = view_get_yport(my_camera.view);
+        var portWidth = view_get_wport(my_camera.view);
+        var portHeight = view_get_hport(my_camera.view);
+        
+        // GUY POSITION
+        x = (my_guy.x - viewX) * my_camera.zoom_level + portX;
+        
+        guy_y = (my_guy.y - viewY) * my_camera.zoom_level + portY;
+        name_offset = guy_y - my_camera.zoom_level * name_dist;
         //y = name_offset - dial_dist;
-        y = view_get_hport( my_camera.view )*0.25;
+        y = portHeight * 0.25;
        
         // ABI HINT POSITION 
         if(my_guy.control_method == cpu_control || my_guy.control_method == keyboard)
