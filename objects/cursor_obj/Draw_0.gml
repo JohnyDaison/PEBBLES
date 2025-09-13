@@ -1,11 +1,17 @@
-var xx, yy;
+var viewCamera = view_get_camera(view_current);
+var viewX = camera_get_view_x(viewCamera);
+var viewY = camera_get_view_y(viewCamera);
+
+var portX = view_get_xport(view_current);
+var portY = view_get_yport(view_current);
 
 if (keyboard_check(vk_alt) && false) {
+    // TODO: This is completely disabled. What did it do? Can I delete it?
     var left_end = -0.5, right_end = 1.5;
     
-    xx = x + __view_get( e__VW.XView, view_current ) - view_get_xport( view_current );
+    var xx = x + viewX - portX;
     
-    yy = y + __view_get( e__VW.YView, view_current ) - view_get_yport( view_current );
+    var yy = y + viewY - portY;
     
     draw_set_color(c_white);
     draw_set_alpha(1);
@@ -18,9 +24,9 @@ if (keyboard_check(vk_alt) && false) {
 if (keyboard_check(vk_alt)) {
     var left_end = -1.5, right_end = 0.5; 
     
-    xx = x + __view_get( e__VW.XView, view_current ) - view_get_xport( view_current );
+    var xx = x + viewX - portX;
     
-    yy = y + __view_get( e__VW.YView, view_current ) - view_get_yport( view_current );
+    var yy = y + viewY - portY;
     
     /*
     draw_set_color(c_white);

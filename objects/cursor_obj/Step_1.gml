@@ -19,26 +19,33 @@ if (!view_drag) {
             zoom = main_camera_obj.zoom_level;
         }
         
-        if (view_get_visible( 0 )) {
-            room_x = __view_get( e__VW.XView, 0 ) + x/zoom;
-            room_y = __view_get( e__VW.YView, 0 ) + y/zoom;
+        if (view_get_visible(0)) {
+            var viewCamera = view_get_camera(0);
+            var viewX = camera_get_view_x(viewCamera);
+            var viewY = camera_get_view_y(viewCamera);
+            
+            room_x = viewX + x / zoom;
+            room_y = viewY + y / zoom;
         } else {
-            view_found = false;
-            view = 1;
-            while(!view_found && view_get_visible( view ))
-            {
-                view_x = x - view_get_xport( view );
-                view_y = y - view_get_yport( view );
+            var view_found = false;
+            var view = 1;
+            
+            while (!view_found && view_get_visible(view)) {
+                var viewCamera = view_get_camera(view);
+                var viewX = camera_get_view_x(viewCamera);
+                var viewY = camera_get_view_y(viewCamera);
+                
+                var cursorPortX = x - view_get_xport(view);
+                var cursorPortY = y - view_get_yport(view);
+                var portWidth = view_get_wport(view);
+                var portHeight = view_get_hport(view);
 
-                if (view_x >= 0 && view_x < view_get_wport( view ) && view_y >= 0 && view_y < view_get_hport( view )) {
-                    var cam;
-                    with(camera_obj)
-                    {
-                        if (view == other.view)
-                            cam = id;
-                    }
-                    room_x = __view_get( e__VW.XView, view ) + view_x/cam.zoom_level;
-                    room_y = __view_get( e__VW.YView, view ) + view_y/cam.zoom_level;
+                if (cursorPortX >= 0 && cursorPortX < portWidth && cursorPortY >= 0 && cursorPortY < portHeight) {
+                    var cam = main_camera_obj.cameras[? view];
+                    
+                    room_x = viewX + cursorPortX / cam.zoom_level;
+                    room_y = viewY + cursorPortY / cam.zoom_level;
+                    
                     view_found = true;
                 }
                 else {
