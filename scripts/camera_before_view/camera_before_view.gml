@@ -1,31 +1,24 @@
 function camera_before_view() {
-    var i;
-    for(i=0;i<2;i+=1)
-    {
+    for (var i = 0; i < 2; i += 1) {
         //background_x[i] = view_xview[view]*bg_shift_ratio[i] + main_camera_obj.bg_xoffset*bg_speed_ratio[i];
         //background_y[i] = view_yview[view]*bg_shift_ratio[i] + main_camera_obj.bg_yoffset*bg_speed_ratio[i];
         var bg_scale = lerp(1/zoom_level, 1, bg_zoom_ratio[i]);
-        __background_set( e__BG.X, i, (x*bg_shift_ratio[i] - bg_scale*__background_get( e__BG.Width, i )/2)
+        
+        var _elementData = __background_get_element(i);
+        var bgLayerElement = _elementData[0];
+        var bgLayer = _elementData[1];
+        
+        var bgSprite = layer_background_get_index(bgLayerElement);
+        var bgWidth = sprite_get_width(bgSprite);
+        var bgHeight = sprite_get_height(bgSprite);
+        
+        layer_x(bgLayer, (x * bg_shift_ratio[i] - bg_scale * bgWidth / 2)
                         + main_camera_obj.bg_xoffset*bg_scale*bg_speed_ratio[i] );
-        __background_set( e__BG.Y, i, (y*bg_shift_ratio[i] - bg_scale*__background_get( e__BG.Height, i )/2)
+        layer_y(bgLayer, (y * bg_shift_ratio[i] - bg_scale * bgHeight / 2)
                         + main_camera_obj.bg_yoffset*bg_scale*bg_speed_ratio[i] );
 
-        /*
-        var layer_id = layer_get_id("Compatibility_Background_"+string(i));
-        var back_id = layer_background_get_id(layer_id);
-        var _layer_depth = layer_get_depth(layer_id);
-        */
-        /*
-        layer_background_xscale(back_id, bg_scale);
-        layer_background_yscale(back_id, bg_scale);
-        */
-    
-        __background_set( e__BG.XScale, i, bg_scale );
-        __background_set( e__BG.YScale, i, bg_scale );
-    
-    
-        //__background_set( e__BG.Visible, i, false );
-        //background_visible[i] = true;
+        layer_background_xscale(bgLayerElement, bg_scale);
+        layer_background_yscale(bgLayerElement, bg_scale);
     }
 
     // TERRAIN DRAWING OPTIMIZATION
@@ -150,7 +143,7 @@ function camera_before_view() {
         }
     
         // DISPLAY MY TERRAIN
-        for(i=ter_list_length-1; i>=0; i-=1)
+        for(var i=ter_list_length-1; i>=0; i-=1)
         {
             ter_block = ds_list_find_value(self.ter_list, i);
             //show_debug_message("ter_block: "+string(ter_block));
