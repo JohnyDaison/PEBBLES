@@ -16,14 +16,17 @@ if(!singleton_obj.paused && room != mainmenu && room != match_summary)
         var bgColor = make_color_rgb(0, 0, 12);
         singleton_obj.changeBackgroundColor(bgColor);
         
-        __background_set( e__BG.Index, 0, stars1_bg );
-        __background_set( e__BG.Index, 1, hexgrid_big_bg );
+        var bgLayer0 = __background_get_element(0)[0];
+        var bgLayer1 = __background_get_element(1)[0];
         
-        __background_set( e__BG.Stretch, 0, false );
-        __background_set( e__BG.Stretch, 1, false );
+        layer_background_sprite(bgLayer0, stars1_bg);
+        layer_background_sprite(bgLayer1, hexgrid_big_bg);
         
-        __background_set( e__BG.Visible, 0, true );
-        __background_set( e__BG.Visible, 1, true );
+        layer_background_stretch(bgLayer0, false);
+        layer_background_stretch(bgLayer1, false);
+        
+        layer_background_visible(bgLayer0, true);
+        layer_background_visible(bgLayer1, true);
         
         
         frame_manager.enable_focus_shift = false;
