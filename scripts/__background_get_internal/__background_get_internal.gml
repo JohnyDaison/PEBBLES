@@ -24,7 +24,6 @@ function __background_get_internal(argument0, argument1, argument2) {
 	switch(__prop)
 	{
 	case e__BG.Visible: __res = layer_background_get_visible(__backid); break;
-	case e__BG.Foreground: __res = __isfore; break;
 	case e__BG.Index: __res = layer_background_get_sprite(__backid)  break;
 	case e__BG.X: __res = layer_get_x(__layerid); break;
 	case e__BG.Y: __res = layer_get_y(__layerid); break;

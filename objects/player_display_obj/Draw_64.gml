@@ -2,6 +2,7 @@ if(instance_exists(my_camera))
 {
     if(my_camera.on)
     {
+        // TODO: Investigate this fix
         // FIX FOR GUI
         if(!main_camera_obj.gui_fix_applied)
         {
