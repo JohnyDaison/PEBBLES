@@ -40,7 +40,7 @@ if (tooltip != "") {
 if (keyboard_check(vk_alt) && false) {
     draw_set_color(c_white);
     draw_set_alpha(1);
-    draw_set_blend_mode_ext(bm_inv_dest_color, bm_src_alpha_sat);
+    gpu_set_blendmode_ext(bm_inv_dest_color, bm_src_alpha_sat);
     draw_rectangle(x - 33, y - 100, x + 100, y + 100, false);
-    draw_set_blend_mode(bm_normal);
+    gpu_set_blendmode(bm_normal);
 }

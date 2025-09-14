@@ -8,11 +8,11 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
     {
         if(light_layer == "bg")
         {
-            draw_set_blend_mode(bm_add);
+            gpu_set_blendmode(bm_add);
         }
         if(light_layer == "main")
         {
-            draw_set_blend_mode_ext(bm_dest_color, bm_one);
+            gpu_set_blendmode_ext(bm_dest_color, bm_one);
         }
         
         var camera = my_camera;
@@ -59,7 +59,7 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
     // DIRECT LIGHT
     if(draw_direct)
     {
-        draw_set_blend_mode(bm_add);
+        gpu_set_blendmode(bm_add);
         
         with(game_obj)
         {
@@ -92,6 +92,6 @@ if(on && singleton_obj.draw_lights && instance_exists(my_camera) && view_current
     }
     
     // RESET MODE
-    draw_set_blend_mode(bm_normal);
+    gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);
 }

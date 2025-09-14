@@ -55,13 +55,13 @@ draw_set_alpha(self.alpha*self.border_alpha*focus_modifier);
 if(self.draw_border)
 {
     draw_set_color(self.border_color);
-    //draw_set_blend_mode(bm_subtract); 
+    //gpu_set_blendmode(bm_subtract); 
     draw_roundrect(x,y,x+self.width,y+self.height,true);
-    //draw_set_blend_mode(bm_normal);
+    //gpu_set_blendmode(bm_normal);
     if(self.focused && self.content_focused == -1)
     {
         draw_set_color(self.border_highlight_color);
-        //draw_set_blend_mode(bm_subtract); 
+        //gpu_set_blendmode(bm_subtract); 
         draw_roundrect(x,y,x+self.width,y+self.height,true);
     }
 }

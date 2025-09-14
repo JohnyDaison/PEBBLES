@@ -41,11 +41,11 @@ if(view > -1 && view_enabled)
             surface_reset_target();
             
             // draw darkness to view surface
-            draw_set_blend_mode_ext(bm_dest_color, bm_zero);
+            gpu_set_blendmode_ext(bm_dest_color, bm_zero);
             
             draw_surface_ext(darkness_surface, -light_x_offset, -light_y_offset, 1, 1, 0, c_white, 1);
             
-            draw_set_blend_mode(bm_normal);
+            gpu_set_blendmode(bm_normal);
         }
         
         light_x_offset = 0;

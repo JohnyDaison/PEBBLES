@@ -31,7 +31,7 @@ function pause_game() {
 	/*
 	draw_set_color(c_black);
 	draw_set_alpha(1);
-	draw_set_blend_mode(bm_normal);
+	gpu_set_blendmode(bm_normal);
 	draw_rectangle(0,0, singleton_obj.current_width, singleton_obj.current_height, false);
 	*/
 	//surface_save(singleton_obj.paused_surface, "paused_cleared.png");

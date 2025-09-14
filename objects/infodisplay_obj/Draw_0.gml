@@ -2,9 +2,9 @@ if(ready || shrink_anim_phase > 0)
 {
     /*
     draw_set_alpha(0.2);
-    draw_set_blend_mode(bm_add);
+    gpu_set_blendmode(bm_add);
     draw_circle_colour(x, y, shrink_anim_phase*radius, bg_anim_color, bg_color, false);
-    draw_set_blend_mode(bm_normal);
+    gpu_set_blendmode(bm_normal);
     */
 
     var bg_col1 = merge_color(bg_color, bg_anim_color,
