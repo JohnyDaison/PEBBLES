@@ -2,6 +2,7 @@ event_inherited();
 
 self.draw_border = true;
 self.round_corners = true;
+self.corner_radius = 12;
 self.draw_bg_color = true;
 self.bg_alpha = 0.9;
 self.border_color = merge_colour(c_purple,c_white,0.5);
