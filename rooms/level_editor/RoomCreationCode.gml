@@ -3,11 +3,14 @@ instance_create(0, 0, screen_fade_obj);
 var bgColor = make_color_rgb(0, 0, 12);
 singleton_obj.changeBackgroundColor(bgColor);
 
-__background_set( e__BG.Index, 0, hexgrid_bg );
-__background_set( e__BG.Index, 1, rectangles2_bg );
+var bgLayer0 = __background_get_element(0)[0];
+var bgLayer1 = __background_get_element(1)[0];
 
-__background_set( e__BG.Visible, 0, true );
-__background_set( e__BG.Visible, 1, true );
+layer_background_sprite(bgLayer0, hexgrid_bg);
+layer_background_sprite(bgLayer1, rectangles2_bg);
+
+layer_background_visible(bgLayer0, true);
+layer_background_visible(bgLayer1, true);
 
 var m = add_frame(main_editor_toolbar);
 m.x = 1;
