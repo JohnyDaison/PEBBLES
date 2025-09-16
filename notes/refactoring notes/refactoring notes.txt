@@ -5,3 +5,6 @@ invalid value is no longer "noone", but -1
 
 overhead_overlay
 Draw_GUI needs refactoring
+
+last_attacker_* system
+refactor into Struct

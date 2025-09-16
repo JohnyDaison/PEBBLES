@@ -126,10 +126,9 @@ if(!bounced && !collided)
 
 if(collided && holographic == other.holographic)
 {
-    power_ratio = get_power_ratio(self.my_color,other.my_color);
-    if(power_ratio != 0)
-    {
-        var body_dmg = force*power_ratio;
+    var power_ratio = get_power_ratio(self.my_color, other.my_color);
+    if (power_ratio != 0) {
+        var body_dmg = self.force * power_ratio;
 
         other.scale_buffer += body_dmg;
         other.my_next_color = self.my_color;
@@ -151,11 +150,11 @@ if(collided && holographic == other.holographic)
             other.falling = true;
         }
         
-        impact_strength = body_dmg;
+        self.impact_strength = body_dmg;
     
         if(body_dmg != 0)
         {
-            create_damage_popup(body_dmg, my_color, other.id);
+            create_damage_popup(body_dmg, self.my_color, other.id);
         }
     }
 }

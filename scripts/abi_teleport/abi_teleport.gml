@@ -3,6 +3,7 @@ function abi_teleport() {
     var abi_color = g_blue;
     var abi_level = get_level(id, "teleport");
     var success = false;
+    var result;
 
     if(abi_cooldown_length[? abi_color] == DB.abi_cooldowns[? abi_color])
     {
@@ -21,7 +22,7 @@ function abi_teleport() {
 
     if(desired_aim_dist > 0)
     {
-        var result = compute_blink_position(desired_aim_dir);
+        result = compute_blink_position(desired_aim_dir);
     
         if(result[? "dist"] > 0)
         {

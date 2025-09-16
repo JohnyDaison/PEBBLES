@@ -1,13 +1,15 @@
 if(instance_exists(my_holder))
 {
+    var block_color;
+    
     if(instance_exists(my_block))
     {
-        var block_color = my_block.my_next_color;
+        block_color = my_block.my_next_color;
     }
     
     if(instance_exists(my_struct))
     {
-        var block_color = my_struct.my_color;
+        block_color = my_struct.my_color;
     }
     
     var stabilised = tint_updated || my_color == g_octarine;
@@ -24,7 +26,7 @@ if(instance_exists(my_holder))
     {    
         if(!lightning_reset)
         {
-            for(i=0; i<4; i++)
+            for (var i = 0; i < 4; i++)
             {
                 lightning_dist[? i] = 0;
             }

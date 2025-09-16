@@ -1,11 +1,10 @@
-power_ratio = get_power_ratio(self.my_color,other.my_color);
-if(power_ratio != 0)
-{
-    body_dmg = (force/8)*power_ratio;
+var power_ratio = get_power_ratio(self.my_color, other.my_color);
+if (power_ratio != 0) {
+    var body_dmg = (self.force / 8) * power_ratio;
     
     if((other.damage + body_dmg) < 0)
     {
-        body_dmg = -other.damage;       
+        body_dmg = -other.damage;
     }
     
     if(body_dmg != 0)
@@ -18,11 +17,11 @@ if(power_ratio != 0)
         other.last_dmg += body_dmg;
         other.energy += abs(body_dmg);
         
-        i = instance_create(other.x,other.y,damage_popup_obj);
-        i.damage = body_dmg;
-        i.my_color = my_color;
-        i.tint_updated = false;
-        i.source = other.id;
+        var inst = instance_create(other.x, other.y, damage_popup_obj);
+        inst.damage = body_dmg;
+        inst.my_color = self.my_color;
+        inst.tint_updated = false;
+        inst.source = other.id;
     }
 }
 
