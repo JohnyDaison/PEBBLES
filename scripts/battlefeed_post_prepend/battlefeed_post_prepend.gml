@@ -14,7 +14,7 @@ function battlefeed_post_prepend() {
 
 	if(argument_count > 4)
 	{
-	    content_facing = argument_count[4];
+	    content_facing = argument[4];
 	}
 
 	battlefeed_post_insert(item, 0, type, content, color, content_facing);
