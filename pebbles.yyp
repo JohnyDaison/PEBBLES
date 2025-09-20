@@ -862,7 +862,6 @@
     {"id":{"name":"battlefeed_post_addblank","path":"scripts/battlefeed_post_addblank/battlefeed_post_addblank.yy",},},
     {"id":{"name":"battlefeed_post_assignfeed","path":"scripts/battlefeed_post_assignfeed/battlefeed_post_assignfeed.yy",},},
     {"id":{"name":"battlefeed_post_assignplayer","path":"scripts/battlefeed_post_assignplayer/battlefeed_post_assignplayer.yy",},},
-    {"id":{"name":"battlefeed_post_deprecated","path":"scripts/battlefeed_post_deprecated/battlefeed_post_deprecated.yy",},},
     {"id":{"name":"battlefeed_post_destruction","path":"scripts/battlefeed_post_destruction/battlefeed_post_destruction.yy",},},
     {"id":{"name":"battlefeed_post_fillblank","path":"scripts/battlefeed_post_fillblank/battlefeed_post_fillblank.yy",},},
     {"id":{"name":"battlefeed_post_flag_capture","path":"scripts/battlefeed_post_flag_capture/battlefeed_post_flag_capture.yy",},},
