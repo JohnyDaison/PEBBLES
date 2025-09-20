@@ -1,9 +1,6 @@
-/// @description color_to_components(color)
-/// @function color_to_components
-/// @param color
-function color_to_components(argument0) {
-    var color = argument0;
-    var comp;
+/// @param {Real} color
+function color_to_components(color) {
+    var comp = [];
 
     comp[g_red] = sign(color & g_red);
     comp[g_green] = sign(color & g_green);
@@ -11,13 +8,11 @@ function color_to_components(argument0) {
 
     num_colors_used = comp[g_red] + comp[g_green] + comp[g_blue];
 
-    if(num_colors_used == 0)
-    {
+    if (num_colors_used == 0) {
         comp[g_dark] = 1;
         num_colors_used = 1;
     }
-    else
-    {
+    else {
         comp[g_dark] = 0;
     }
 

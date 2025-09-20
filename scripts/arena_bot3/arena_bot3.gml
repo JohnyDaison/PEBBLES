@@ -40,13 +40,13 @@ function arena_bot3(argument0) {
             next_phase = 0;
         }
     
-        var above_pit = !collision_line(x-facing*15, y, x-facing*15, room_height, terrain_obj, false, false)
-                     && !collision_line(x, y, x, room_height, terrain_obj, false, false)
-                     && !collision_line(x+facing*17, y, x+facing*17, room_height, terrain_obj, false, false);
+        var above_pit = collision_line(x - facing * 15, y, x - facing * 15, room_height, terrain_obj, false, false) == noone
+                     && collision_line(x, y, x, room_height, terrain_obj, false, false) == noone
+                     && collision_line(x + facing * 17, y, x + facing * 17, room_height, terrain_obj, false, false) == noone;
         var near_room_edge = abs(x) < (flashback_margin / 2) || abs(x - room_width) < (flashback_margin / 2) || abs(y - room_height) < flashback_margin;
     
         // MATCH BURST COLOR
-        var burst = instance_place(x,y, energy_burst_obj), col;
+        var burst = instance_place(x,y, energy_burst_obj);
             
         if(instance_exists(burst))
         {
@@ -54,7 +54,7 @@ function arena_bot3(argument0) {
             {
                 if(current_slot == 0)
                 {
-                    for(col = g_red; col <= g_blue; col++)
+                    for(var col = g_red; col <= g_blue; col++)
                     {
                         if(col == g_yellow)
                             continue;
@@ -201,9 +201,8 @@ function arena_bot3(argument0) {
                             if(ready_for_new_color)
                             {
                                 var comp = color_to_components(filter_field_obj.my_color);
-                                var col;
                         
-                                for(col = g_red; col <= g_blue; col++)
+                                for(var col = g_red; col <= g_blue; col++)
                                 {
                                     if(col == g_yellow)
                                     {
@@ -589,8 +588,6 @@ function arena_bot3(argument0) {
             wanna_channel = false;
             wanna_abi = false;
         
-            var belt, orb, i, chbi;
-        
             if(!holding_wall)
             {
                 wanna_channel = true;
@@ -610,10 +607,10 @@ function arena_bot3(argument0) {
             
                     // Look at which orb will be picked for that color
                     // this copies heavily from HANDLE SLOT FILLING
-                    belt = orb_belts[? new_color];
+                    var belt = orb_belts[? new_color];
                     if(!is_undefined(belt) && ds_exists(belt, ds_type_list))
                     {
-                        orb = belt[|0];
+                        var orb = belt[| 0];
                         if(!is_undefined(orb) && instance_exists(orb))
                         {
                             if(orb.energy < (orb.max_energy - 3*channel_maxboost))
@@ -632,7 +629,7 @@ function arena_bot3(argument0) {
                             orb = noone;
                             if(instance_exists(charge_ball))
                             {
-                                for(chbi = charge_ball.orb_count-1; chbi >= 0; chbi--)
+                                for(var chbi = charge_ball.orb_count-1; chbi >= 0; chbi--)
                                 {
                                     orb = charge_ball.orbs[| chbi];
                                     if(instance_exists(orb) && orb.my_color == new_color)
@@ -667,7 +664,7 @@ function arena_bot3(argument0) {
         
             if(wanna_channel)
             {
-                for(i = 0; i < slot_number; i++)
+                for(var i = 0; i < slot_number; i++)
                 {
                     var orb = color_slots[| i];
                     if(orb.energy >= (orb.max_energy - 3*channel_maxboost))
@@ -856,10 +853,10 @@ function arena_bot3(argument0) {
         {
             // DESTROY ENEMY BASE
             var enemy_base = noone;
-            var nearest_distance = 0, dist;
+            var nearest_distance = 0;
             with(guy_spawner_obj)
             {
-                dist = point_distance(x,y, other.x, other.y);
+                var dist = point_distance(x,y, other.x, other.y);
                 if(iff_check("attack_target_valid", other, id))
                 {
                     var nearest = false;
@@ -901,10 +898,10 @@ function arena_bot3(argument0) {
     
             // DESTROY TURRETS
             var enemy_turret = noone;
-            var nearest_distance = 0, dist;
+            nearest_distance = 0;
             with(turret_obj)
             {
-                dist = point_distance(x,y, other.x, other.y);
+                var dist = point_distance(x,y, other.x, other.y);
                 if(iff_check("attack_target_valid", other, id))
                 {
                     var nearest = false;
@@ -957,11 +954,13 @@ function arena_bot3(argument0) {
         
             // SHOOT CLOSED GATES (only VERTICAL)
             // TODO: why it's not working?? wrong priority? problem with sight still not fixed?
-            var target_gate = noone, nearest_distance = 0, gate_fields = find_nearest_instances(id, gate_field_obj);
-            var i, result, field, gate1, gate2, gate1_valid, gate2_valid, dist1, dist2, count = ds_list_size(gate_fields);
+            var target_gate = noone;
+            nearest_distance = 0;
+            var gate_fields = find_nearest_instances(id, gate_field_obj);
+            var result, field, gate1, gate2, gate1_valid, gate2_valid, dist1, dist2, count = ds_list_size(gate_fields);
             var gate1_enabled_count, gate2_enabled_count;
         
-            for(i=0; i < count; i++)
+            for(var i=0; i < count; i++)
             {
                 result = gate_fields[| i];
                 field = result[? "id"];
@@ -1049,10 +1048,10 @@ function arena_bot3(argument0) {
     
             // SHOOT ITEM SPAWNER
             var item_spawner = noone;
-            var nearest_distance = 0, dist;
+            nearest_distance = 0;
             with(item_spawner_obj)
             {
-                dist = point_distance(x,y, other.x, other.y);
+                var dist = point_distance(x,y, other.x, other.y);
         
                 var nearest = false;
                 if((item_spawner == noone || dist < nearest_distance) && !invisible && holographic == other.holographic)
@@ -1126,10 +1125,10 @@ function arena_bot3(argument0) {
             if(move_target == noone && (damage - min_damage) > 1)
             {
                 var near_health = noone;
-                var nearest_distance = 0, dist;
+                var nearest_distance = 0;
                 with(health_obj)
                 {
-                    dist = point_distance(x,y, other.x, other.y);
+                    var dist = point_distance(x,y, other.x, other.y);
                     if(my_player != other.my_player && (for_player == -1 || for_player == other.my_player.number))
                     {
                         var nearest = false;
@@ -1164,12 +1163,12 @@ function arena_bot3(argument0) {
             if(move_target == noone && instance_exists(charge_ball))
             {
                 var near_battery = noone;
-                var nearest_distance = 0, dist;
+                var nearest_distance = 0;
                 with(orb_battery_obj)
                 {
                     if(my_player != other.my_player && (for_player == -1 || for_player == other.my_player.number) && !invisible && holographic == other.holographic)
                     {
-                        dist = point_distance(x,y, other.x, other.y);
+                        var dist = point_distance(x,y, other.x, other.y);
                     
                         var nearest = false;
                         if(near_battery == noone || dist < nearest_distance)
@@ -1209,13 +1208,13 @@ function arena_bot3(argument0) {
                 if(move_target == noone && grenade_space > 0)
                 {
                     var near_grenade = noone;
-                    var nearest_distance = 0, dist;
+                    var nearest_distance = 0;
                     with(emp_grenade_obj)
                     {
                         if(my_player != other.my_player && (for_player == -1 || for_player == other.my_player.number)
                         && !collected && !used && !invisible && holographic == other.holographic)
                         {
-                            dist = point_distance(x,y, other.x, other.y);
+                            var dist = point_distance(x,y, other.x, other.y);
                         
                             var nearest = false;
                             if(near_grenade == noone || dist < nearest_distance)
@@ -1253,13 +1252,13 @@ function arena_bot3(argument0) {
             if(move_target == noone && (inventory_space > 0 || crystal_will_be_consumed()))
             {
                 var near_crystal = noone;
-                var nearest_distance = 0, dist;
+                var nearest_distance = 0;
                 with(crystal_obj)
                 {
                     if(my_player != other.my_player && (for_player == -1 || for_player == other.my_player.number)
                     && !collected && !used && !invisible && holographic == other.holographic && !is_shielded(id))
                     {
-                        dist = point_distance(x,y, other.x, other.y);
+                        var dist = point_distance(x,y, other.x, other.y);
                     
                         var nearest = false;
                         if(near_crystal == noone || dist < nearest_distance)
@@ -1416,12 +1415,12 @@ function arena_bot3(argument0) {
             if(instance_exists(attack_target) && attack_target.object_index != item_spawner_obj)
             {
                 waypoints = find_nearest_instances(attack_target, npc_waypoint_obj, 480, "visible", "attack");
-                var count = ds_list_size(waypoints), i, result, wp;
+                var count = ds_list_size(waypoints), result, wp;
                 var att_dist = point_distance(x,y, attack_target.x, attack_target.y);
                 var min_dist = -1;
                 var stay_still = (charging || casting) && npc_destination_reached;
             
-                for(i=count-1; i>=0; i--)
+                for(var i=count-1; i>=0; i--)
                 {
                     result = waypoints[| i];
                     wp = result[? "id"];
@@ -1442,7 +1441,7 @@ function arena_bot3(argument0) {
                 // debug
                 if(object_is_child(requested_attack_target, guy_obj))
                 {
-                    for(i=0; i < count; i++)
+                    for(var i=0; i < count; i++)
                     {
                         wp = waypoints[| i];
                         requested_attack_target.attack_waypoints[| i] = wp[? "id"];
@@ -1507,7 +1506,7 @@ function arena_bot3(argument0) {
                 move_name = self.move_target.name;
             }
         
-            name = "P: " + string(phase) + " " + string(next_phase) + " " + string(color_chosen) + " " + string(auto_chosen_orbs); /*"AT:" + att_name + " WP:" + npc_final_waypoint + " MO:" + move_name*/;
+            name = "P: " + string(phase) + " " + string(next_phase) + " " + string(color_chosen) + " " + string(auto_chosen_orbs); /*"AT:" + att_name + " WP:" + npc_final_waypoint + " MO:" + move_name*/
             //name = string(phase) + " " + string(next_phase) + " A:" + string(airborne) + " S:" + string(npc_stuck) + " NJ:" + string(npc_wanna_jump) + " J:" + string(wanna_jump) + " DJ:" + string(is_doublejumping) + " CA:" + string(wanna_cast);
             //name = string(phase) + " " + string(next_phase) + " C:" + string(status_left[? "confusion"] > 0) + " CC:" + string(npc_counter_confusion);
         }
