@@ -19,15 +19,15 @@ if(!cancelled)
     
         my_sound_play_colored(shot_bounce_sound, my_color, true);
     
-        i = instance_create(x,y,shield_obj);
-        //i.sprite_index = old_shield_sprite;
-        i.my_player = my_player;
-        i.overcharge = 2;
-        i.chargerate = 150;
-        i.charge = 0.5;
-        i.my_color = self.my_color; 
-        i.my_guy = i.id;
-        i.my_source = object_index;
+        var inst = instance_create(x,y,shield_obj);
+        //inst.sprite_index = old_shield_sprite;
+        inst.my_player = my_player;
+        inst.overcharge = 2;
+        inst.chargerate = 150;
+        inst.charge = 0.5;
+        inst.my_color = self.my_color; 
+        inst.my_guy = inst.id;
+        inst.my_source = object_index;
     }
 }
 

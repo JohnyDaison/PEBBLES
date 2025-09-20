@@ -1,17 +1,10 @@
-/// @description battlefeed_post_new([type])
-/// @function battlefeed_post_new
-/// @param [type]
-function battlefeed_post_new() {
+/// @param {String} type
+function battlefeed_post_new(type) {
+    var new_item = instance_create(0, 0, battlefeed_item_obj);
 
-	new_item = instance_create(0,0, battlefeed_item_obj);
+    if (!is_undefined(type)) {
+        new_item.item_type = type;
+    }
 
-	if(argument_count > 0)
-	{
-	    new_item.item_type = argument[0];
-	}
-
-	return new_item;
-
-
-
+    return new_item;
 }
