@@ -1,14 +1,7 @@
-/// @param victim
-/// @param last_attacker_map
-/// @param [stat_str]
-function battlefeed_post_destruction(victim, last_attacker_data) {
-    var stat_str = "";
-
-    if(argument_count > 2)
-    {
-        stat_str = string(argument[2]);
-    }
-
+/// @param {Id.Instance} victim
+/// @param {Id.DsMap} last_attacker_data
+/// @param {String} stat_str
+function battlefeed_post_destruction(victim, last_attacker_data, stat_str = "") {
     var feed_item = noone;
     var actor_name = "", actor = noone, actor_color, victim_name = "", victim_index = noone;
     var carrier_dir = 1, skip_carrier = false, skip_victim = false;

@@ -112,7 +112,7 @@ if (resize)
     }
     else
     {
-        my_camera = my_player.my_camera;
+        var my_camera = my_player.my_camera;
         if (instance_exists(my_camera))
         {
             var offset_set = false;
