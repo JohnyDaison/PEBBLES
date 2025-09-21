@@ -1,7 +1,5 @@
-if(other.my_guy == other.id)
-{
+if (other.my_guy == other.id) {
     other.my_guy = self.id;
-    ds_list_add(stolen_slots,other.id);
-    slot_count = ds_list_size(stolen_slots);
+    ds_list_add(self.stolen_slots, other.id);
+    self.slot_count = ds_list_size(self.stolen_slots);
 }
-

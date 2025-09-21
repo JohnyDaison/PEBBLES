@@ -1,22 +1,19 @@
-if(sprite_index==noone)
-{
-    sprite_index = black_aoe;
-    image_index = 0;
-    image_speed = 0.5;
-    image_alpha = 0.8;
+if (self.sprite_index == noone) {
+    self.sprite_index = black_aoe;
+    self.image_index = 0;
+    self.image_speed = 0.5;
+    self.image_alpha = 0.8;
 }
-else
-{
-    if(my_guy != noone)
-    {
-        x = my_guy.x;
-        y = my_guy.y;
+else {
+    if (self.my_guy != noone) {
+        self.x = self.my_guy.x;
+        self.y = self.my_guy.y;
     }
-    if(image_index+image_speed<image_number)
-        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_ltgray,image_alpha);
+
+    if (self.image_index + self.image_speed < self.image_number)
+        draw_sprite_ext(self.sprite_index, self.image_index, self.x, self.y, 1, 1, 0, c_ltgray, self.image_alpha);
     else
         instance_destroy();
 }
 
-
-action_inherited();
+event_inherited();

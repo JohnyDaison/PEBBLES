@@ -1,28 +1,22 @@
 event_inherited();
 
-with(guy_obj)
-{
-    if(holographic == other.holographic)
-    {
-        dist = point_distance(x,y,other.x,other.y);
-        if(old_coef == 0)
-        {
-            old_coef = self.gravity_coef;
+with (guy_obj) {
+    if (self.holographic == other.holographic) {
+        var dist = point_distance(x, y, other.x, other.y);
+        if (self.old_coef == 0) {
+            self.old_coef = self.gravity_coef;
         }
-        
-        ubershielded = is_shielded(id, "uber");
-        
-        if(dist < other.radius)
-        {
-            if(ubershielded)
-            {             
-                my_shield.charge -= 0.01;
+
+        var ubershielded = is_shielded(id, "uber");
+
+        if (dist < other.radius) {
+            if (ubershielded) {
+                self.my_shield.charge -= 0.01;
                 my_sound_play(wall_hum_sound, true);
                 //my_sound_play_colored(wall_hum_sound, my_shield.my_color, true);
             }
-            
-            if(self.id != other.my_guy && other.force > 0 && !ubershielded && !protected)
-            {        
+
+            if (self.id != other.my_guy && other.force > 0 && !ubershielded && !self.protected) {
                 // SLOT THEFT
                 /*
                 other.slot = ds_list_find_value(self.color_slots,0);
@@ -65,44 +59,39 @@ with(guy_obj)
                     }
                 }
                 */
-                
+
                 // THROWING AROUND
-                if(!protected && !stuck && !hit_handled) // && speed < max_speed
+                if (!self.protected && !self.stuck && !self.hit_handled) // && speed < max_speed
                 {
-                    gravity_direction = point_direction(x,y,other.x,other.y);
+                    self.gravity_direction = point_direction(self.x, self.y, other.x, other.y);
                     /*
                     if(dist < other.radius/6)
                     {
                         dist = other.radius/6;
                     }
                     */
-                    gravity_coef = abs((1 - dist/other.radius))*2*other.force;
-                    if(vspeed == 0)
-                        vspeed = sign(other.y-y);
-                    
-                    if(!lost_control)
-                    {
-                        if(sign(lengthdir_x(dist,gravity_direction)) == facing)
-                        {
-                            back_hit = true;
+                    self.gravity_coef = abs((1 - dist / other.radius)) * 2 * other.force;
+                    if (self.vspeed == 0)
+                        self.vspeed = sign(other.y - self.y);
+
+                    if (!self.lost_control) {
+                        if (sign(lengthdir_x(dist, self.gravity_direction)) == self.facing) {
+                            self.back_hit = true;
                         }
-                        else
-                        {
-                            front_hit = true;
+                        else {
+                            self.front_hit = true;
                         }
                     }
-                    if(airborne)
-                    {
-                        lost_control = true;
+                    if (self.airborne) {
+                        self.lost_control = true;
                     }
-                    
+
                     last_attacker_update(other.id, "body", "dark");
                 }
-                
-                
+
+
             }
-            else
-            {
+            else {
                 /*
                 // STOLEN SLOT RETRIEVAL
                 if(other.stolen_slot != noone)
@@ -121,17 +110,13 @@ with(guy_obj)
                 */
             }
         }
-      
+
         // RETURN GRAVITY BACK TO NORMAL
-        else if(gravity_coef != old_coef || gravity_direction != 270)
-        {
-            gravity_direction = 270;
-            gravity_coef = old_coef;
-            y -= 1;
-            airborne = false;
+        else if (self.gravity_coef != self.old_coef || self.gravity_direction != 270) {
+            self.gravity_direction = 270;
+            self.gravity_coef = self.old_coef;
+            self.y -= 1;
+            self.airborne = false;
         }
     }
 }
-
-/* */
-/*  */

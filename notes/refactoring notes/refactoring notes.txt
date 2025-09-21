@@ -8,3 +8,6 @@ Draw_GUI needs refactoring
 
 last_attacker_* system
 refactor into Struct
+
+black_aoe_obj
+has some repeating code
