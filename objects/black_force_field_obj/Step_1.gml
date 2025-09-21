@@ -1,18 +1,14 @@
 event_inherited();
 
-switch(shape)
-{
+switch (self.shape) {
     case shape_circle:
-    
-    height = 2*radius;
-    width = 2*radius;
-    
-    break;
-    
-    case shape_rect:
-    
-    radius = min(width,height);
-    
-    break;
-}
+        self.height = 2 * self.radius;
+        self.width = 2 * self.radius;
 
+        break;
+
+    case shape_rect:
+        self.radius = min(self.width, self.height);
+
+        break;
+}

@@ -10,12 +10,9 @@ repels = false;
 field_power = 1;
 shape = shape_circle;
 radius = 160;
-width = 2*radius;
-height = 2*radius;
-field_focus = radius/2;
+width = 2 * radius;
+height = 2 * radius;
+field_focus = radius / 2;
 temporary = false;
 
 self.name = "Attractive Field";
-
-
-
