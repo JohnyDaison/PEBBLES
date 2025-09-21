@@ -1,4 +1,4 @@
-if (self.sprite_index == noone) {
+if (self.sprite_index == no_sprite) {
     self.sprite_index = black_aoe;
     self.image_index = 0;
     self.image_speed = 0.5;

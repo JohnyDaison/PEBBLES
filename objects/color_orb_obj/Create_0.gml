@@ -1,6 +1,6 @@
 event_inherited();
 
-sprite_index = noone;
+sprite_index = no_sprite;
 image_speed = 0;
 image_index = 0;
 //my_guy = noone;

@@ -26,7 +26,7 @@ min_trail_delay = 8;
 trail_delay = start_trail_delay;
 alarm[2] = trail_delay;
 
-//sprite_index = noone;
+//sprite_index = no_sprite;
 self.tint_updated = true;
 self.tint = merge_color(c_purple,c_white,0.333);
 highlight_alpha = 0.666;

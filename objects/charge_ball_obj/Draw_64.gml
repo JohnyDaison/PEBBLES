@@ -1,4 +1,4 @@
-if (!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noone && my_color != -1 && display_exhaustion_ratio > 0) {
+if (!gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != no_sprite && my_color != -1 && display_exhaustion_ratio > 0) {
     if (my_guy != id && !object_is_ancestor(my_guy.object_index, turret_obj) && my_guy.my_player != gamemode_obj.environment) {
         var xx, yy, scale = 1;
         

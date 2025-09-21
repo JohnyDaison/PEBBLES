@@ -53,7 +53,7 @@ if (charge > threshold)
 // PARTICLES, POSITION, SIZE
 sprite_size = size_coef*(0.25 + 0.50 * charge/max_charge);
 
-if (instance_exists(my_guy) && sprite_index != noone && my_color != -1)
+if (instance_exists(my_guy) && sprite_index != no_sprite && my_color != -1)
 {
     if (desired_dist > 0) {
         var desired_rel_x = rel_x;

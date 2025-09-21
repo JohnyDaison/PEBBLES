@@ -1,7 +1,7 @@
 event_inherited();
 
 /// ANIMATION ENDS AND ENERGY REGEN
-if(sprite_index != noone && image_speed > 0 && image_index+image_speed >= image_number)
+if(sprite_index != no_sprite && image_speed > 0 && image_index+image_speed >= image_number)
 {
     // ADD TO ORBIT
     if(color_added && !color_held)
@@ -19,7 +19,7 @@ if(sprite_index != noone && image_speed > 0 && image_index+image_speed >= image_
     {
         color_consumed = false;
         color_held = false;
-        sprite_index = noone;
+        sprite_index = no_sprite;
         image_speed = 0;
         invisible = true;
         if(object_is_ancestor(my_guy.object_index, guy_obj))

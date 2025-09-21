@@ -1,6 +1,6 @@
 if(instance_exists(my_guy))
 {
-    if(sprite_index != noone)
+    if(sprite_index != no_sprite)
     {
         draw_sprite_ext(sprite_index, image_index,
                         x, cur_y, size, size,

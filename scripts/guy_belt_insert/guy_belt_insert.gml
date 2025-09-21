@@ -20,7 +20,7 @@ function guy_belt_insert(argument0, argument1) {
 	        orb.color_held = false;
 	        orb.color_consumed = false;
 	        orb.invisible = true;
-	        orb.sprite_index = noone;
+	        orb.sprite_index = no_sprite;
 	        orb.cur_regen_speed = spd_slow;
         
 	        count = ds_list_size(belt);

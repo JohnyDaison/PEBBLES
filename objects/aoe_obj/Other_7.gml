@@ -1,3 +1,3 @@
-if(sprite_index != noone)
+if(sprite_index != no_sprite)
     instance_destroy();
 

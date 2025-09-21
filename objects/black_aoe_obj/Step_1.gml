@@ -48,7 +48,7 @@ with (guy_obj) {
                             slot.color_added = false;
                             slot.color_held = false;
                             slot.color_consumed = false;
-                            slot.sprite_index = noone;
+                            slot.sprite_index = no_sprite;
                         }
                         
                         alarm[3] = 1;

@@ -103,7 +103,7 @@ else
 }
 
 // ORB-ORB INTERACTIONS
-if(!invisible && sprite_index != noone && my_color > 0 && instance_exists(orbit_anchor))
+if(!invisible && sprite_index != no_sprite && my_color > 0 && instance_exists(orbit_anchor))
 {
     // GUY
     if(object_is_ancestor(orbit_anchor.object_index, guy_obj))
@@ -111,7 +111,7 @@ if(!invisible && sprite_index != noone && my_color > 0 && instance_exists(orbit_
         with(color_orb_obj)
         {
             // how the fuck could have "other" been "antenna_obj" here??
-            if(id != other.id && orbit_anchor == other.orbit_anchor && !invisible && sprite_index != noone && my_guy != id)
+            if(id != other.id && orbit_anchor == other.orbit_anchor && !invisible && sprite_index != no_sprite && my_guy != id)
             {
                 // LIGHTNING
                 if(my_color > 0) // !other.draw_lightning && 
@@ -121,7 +121,7 @@ if(!invisible && sprite_index != noone && my_color > 0 && instance_exists(orbit_
                         with(other)
                         {
                             dist = point_distance(x, y, other.x, other.y);
-                            if(dist < 96 && !invisible && sprite_index != noone)
+                            if(dist < 96 && !invisible && sprite_index != no_sprite)
                             {
                                 draw_lightning = true;
                                 lightning_target = other.id;
@@ -181,7 +181,7 @@ if(!invisible && sprite_index != noone && my_color > 0 && instance_exists(orbit_
         if(my_color > 0 && orbit_anchor.charging) // !other.draw_lightning && 
         {
             dist = point_distance(x, y, orbit_anchor.x, orbit_anchor.y);
-            if(dist < 96 && !invisible && sprite_index != noone)
+            if(dist < 96 && !invisible && sprite_index != no_sprite)
             {
                 draw_lightning = true;
                 lightning_target = orbit_anchor.id;

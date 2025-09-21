@@ -1,4 +1,4 @@
-if(instance_exists(my_guy) && sprite_index != noone && my_color != g_dark)
+if(instance_exists(my_guy) && sprite_index != no_sprite && my_color != g_dark)
 {   
     var blink_off = false;
     

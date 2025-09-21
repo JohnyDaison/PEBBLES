@@ -76,4 +76,5 @@ function macros() {
 #macro spd_fast 4
 #macro spd_veryfast 5
 #macro spd_instant 6
+#macro no_sprite -1 
 }

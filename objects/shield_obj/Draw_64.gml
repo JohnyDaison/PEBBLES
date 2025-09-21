@@ -1,4 +1,4 @@
-if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != noone && my_color != -1)
+if(draw_bar && !gamemode_obj.limit_reached && instance_exists(my_guy) && sprite_index != no_sprite && my_color != -1)
 {
     if(my_guy != id && !(my_guy.object_index == crystal_obj && my_guy.my_player.my_base == my_guy.my_guy))
     {
