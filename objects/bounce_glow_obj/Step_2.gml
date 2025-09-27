@@ -1,7 +1,6 @@
-action_inherited();
-if(active)
-{
-    if(image_index > 1)
-        image_index -= 1;
-}
+event_inherited();
 
+if (self.active) {
+    if (self.image_index > 1)
+        self.image_index -= 1;
+}

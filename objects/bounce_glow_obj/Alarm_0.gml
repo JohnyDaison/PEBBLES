@@ -1,3 +1,2 @@
-active = false;
-alarm[1]=round(30);
-
+self.active = false;
+self.alarm[1] = round(30);
