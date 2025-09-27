@@ -1,3 +1,3 @@
-part_emitter_destroy(system,em);
-part_type_destroy(pt);
-part_system_destroy(system);
+part_emitter_destroy(self.system, self.em);
+part_type_destroy(self.pt);
+part_system_destroy(self.system);

@@ -1,3 +1,3 @@
 my_guy = noone;
-system = noone;
+system = undefined;
 active = true;
