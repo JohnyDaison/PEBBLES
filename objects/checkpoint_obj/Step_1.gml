@@ -1,19 +1,16 @@
 /// @description HOLOGRAPHIC
 
 // HOLOGRAPHIC
-if(holographic)
-{
-    holo_alpha += holo_alpha_step;
-    
-    if(holo_alpha < holo_minalpha)
-    {
-        holo_alpha = holo_minalpha;
-        holo_alpha_step *= -1;
+if (self.holographic) {
+    self.holo_alpha += self.holo_alpha_step;
+
+    if (self.holo_alpha < self.holo_minalpha) {
+        self.holo_alpha = self.holo_minalpha;
+        self.holo_alpha_step *= -1;
     }
-    
-    if(holo_alpha > holo_maxalpha)
-    {
-        holo_alpha = holo_maxalpha;
-        holo_alpha_step *= -1;
+
+    if (self.holo_alpha > self.holo_maxalpha) {
+        self.holo_alpha = self.holo_maxalpha;
+        self.holo_alpha_step *= -1;
     }
 }

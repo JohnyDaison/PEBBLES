@@ -1,6 +1,5 @@
 var this = id;
-    
-with(other)
-{
+
+with (other) {
     trigger(this);
 }

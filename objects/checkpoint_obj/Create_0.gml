@@ -12,8 +12,8 @@ duplicate_me = false;
 label_distance = 32;
 label_scale = 1.5;
 
-trigger_script = checkpoint_trigger_script;
-triggerable = true;
+self.trigger_script = checkpoint_trigger_script;
+self.triggerable = true;
 
 self.holographic = false;
 self.holo_alpha = 1;
@@ -25,7 +25,6 @@ name = "Checkpoint";
 
 spawn_points = ds_map_create();
 
-if(gamemode_obj.is_campaign)
-{
+if (gamemode_obj.is_campaign) {
     alarm[3] = 3;
 }
