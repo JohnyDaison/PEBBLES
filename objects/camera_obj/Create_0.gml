@@ -77,7 +77,7 @@ outer_color = c_orange;
 
 // read terrain
 self.read_terrain = true;
-self.ter_list = noone;
+self.ter_list = undefined;
 self.ter_list_length = -1;
 self.ter_grid_x = -10;
 self.ter_grid_y = -10;
