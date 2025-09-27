@@ -32,7 +32,7 @@ grid_cell_size = 96; //96
 grid_margin = 0;
 grid_width = 0;
 grid_height = 0;
-terrain_grid = noone;
+terrain_grid = undefined;
 draw_ter_lists = false;
 draw_depths = false;
 

@@ -20,21 +20,26 @@ self.protected = false;
 self.triggerable = false;
 self.trigger_script = empty_script;
 self.last_attacker_map = noone;
+
 self.holographic = false;
 self.holo_alpha = -1;
+self.holo_alpha_step = 0.005;
+self.holo_minalpha = 0.4;
+self.holo_maxalpha = 0.6;
+
 self.my_source = noone;
 self.cancellable = true;
 self.cancelled = false;
 
-shape = shape_inherit;
-light_shape = shape_inherit;
+self.shape = shape_inherit;
+self.light_shape = shape_inherit;
 
-obj_center_offset = false;
-obj_center_updated = false;
-obj_center_xoff = 0;
-obj_center_yoff = 0;
-obj_center_dist = 0;
-obj_center_angle = 0;
+self.obj_center_offset = false;
+self.obj_center_updated = false;
+self.obj_center_xoff = 0;
+self.obj_center_yoff = 0;
+self.obj_center_dist = 0;
+self.obj_center_angle = 0;
 
 self.my_player = gamemode_obj.environment;
 
@@ -54,7 +59,7 @@ self.invisible = false;
 self.octarine_phase_shift = 0;
 
 self.read_terrain = false;
-self.ter_list = noone;
+self.ter_list = undefined;
 self.ter_list_length = -1;
 self.ter_grid_x = -10;
 self.ter_grid_y = -10;
