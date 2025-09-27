@@ -1,5 +1,5 @@
-draw_sprite_ext(black_bolt_spr,image_index,x,y,1,1,0,c_white,image_alpha);
-draw_sprite_ext(black_bolt_highlight,image_index,x,y,1,1,0,self.tint,highlight_alpha);
-facing = 0;
+draw_sprite_ext(black_bolt_spr, self.image_index, self.x, self.y, 1, 1, 0, c_white, self.image_alpha);
+draw_sprite_ext(black_bolt_highlight, self.image_index, self.x, self.y, 1, 1, 0, self.tint, self.highlight_alpha);
+self.facing = 0;
 
-action_inherited();
+event_inherited();

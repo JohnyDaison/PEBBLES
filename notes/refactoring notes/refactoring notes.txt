@@ -14,3 +14,6 @@ has some repeating code
 
 black_force_field_obj and black_projectile_obj
 share some code in "with(item_obj)" section
+
+black_aoe_obj and black_projectile_obj
+share code for returning guy to normal gravity

@@ -3,8 +3,7 @@ event_inherited();
 my_sound_play(shot1_sound);
 //my_sound_play_colored(shot1_sound, g_dark);
 
-if(instance_number(object_index)==1)
-{
+if (instance_number(object_index) == 1) {
     my_sound_loop(black_projectile_sound);
     //my_sound_play_colored(black_projectile_sound, g_dark, false, true);
 }
@@ -28,7 +27,7 @@ alarm[2] = trail_delay;
 
 //sprite_index = no_sprite;
 self.tint_updated = true;
-self.tint = merge_color(c_purple,c_white,0.333);
+self.tint = merge_color(c_purple, c_white, 0.333);
 highlight_alpha = 0.666;
 
 self.name = "Vortex";
