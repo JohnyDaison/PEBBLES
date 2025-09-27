@@ -1,4 +1,5 @@
-basic_bot and shield_obj share same camera related code
+basic_bot and shield_obj
+share same camera related code
 
 sprite_index 
 invalid value is no longer "noone", but -1
@@ -17,3 +18,6 @@ share some code in "with(item_obj)" section
 
 black_aoe_obj and black_projectile_obj
 share code for returning guy to normal gravity
+
+Convert strings used as Enums to Enums
+but store the string to Enum mapping somewhere
