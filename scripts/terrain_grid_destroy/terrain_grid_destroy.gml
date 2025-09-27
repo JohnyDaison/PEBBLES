@@ -1,33 +1,24 @@
-/// @description terrain_grid_destroy(grid_obj)
-/// @function terrain_grid_destroy
-/// @param grid_obj
-function terrain_grid_destroy(argument0) {
-	var obj = argument0, xx, yy;
+/// @param {Id.Instance} grid_obj
+function terrain_grid_destroy(grid_obj) {
+    if (!instance_exists(grid_obj))
+        return false;
 
-	if(!instance_exists(obj))
-	    return false;
+    if (!ds_exists(grid_obj.terrain_grid, ds_type_grid))
+        return false;
 
-	if(!ds_exists(obj.terrain_grid, ds_type_grid))
-	    return false;
-        
-	with(obj)
-	{
-	    for(xx=0; xx<grid_width; xx+=1)
-	    {
-	        for(yy=0; yy<grid_height; yy+=1)
-	        {
-	            ds_list_destroy(ds_grid_get(terrain_grid,xx,yy));
-	        }
-	    }
-	    ds_grid_destroy(terrain_grid);
-    
-	    grid_width = 0;
-	    grid_height = 0;
-	    terrain_grid = noone;
-	}
+    with (grid_obj) {
+        for (var xx = 0; xx < self.grid_width; xx++) {
+            for (var yy = 0; yy < self.grid_height; yy++) {
+                ds_list_destroy(self.terrain_grid[# xx, yy]);
+            }
+        }
 
-	return true;
+        ds_grid_destroy(self.terrain_grid);
 
+        self.grid_width = 0;
+        self.grid_height = 0;
+        self.terrain_grid = undefined;
+    }
 
-
+    return true;
 }
