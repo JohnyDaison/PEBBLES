@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.588311,
+  "duration":0.58331066,
   "name":"black_projectile_sound",
   "parent":{
     "name":"spells",
