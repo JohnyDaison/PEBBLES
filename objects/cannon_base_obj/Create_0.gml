@@ -48,7 +48,6 @@ hpbar_y1 = 3;
 hpbar_x2 = 17;
 hpbar_y2 = 13;
 hpbar_width = 34;
-hpbar_xx = 0;
 hpbar_tint = DB.colormap[? g_green];
 
 shot_color = g_dark;
@@ -58,6 +57,9 @@ orbs = ds_map_create();
 orbs[? g_red] = 0;
 orbs[? g_green] = 0;
 orbs[? g_blue] = 0;
+
+slot_size = 24;
+slot_offset = -slot_size * 1.5;
 
 // ORB FADING
 orb_light = ds_map_create();
@@ -83,19 +85,17 @@ direct_light = 0.1;
 
 my_waypoint = noone;
 
-if(instance_exists(place_controller_obj))
-{
-     var wp = instance_create(x, y + guy_y_offset, npc_waypoint_obj);
-     wp.auto_adjust = false;
-     wp.cannon_point = true;
-     my_waypoint = wp;
-     
-     if(!place_controller_obj.auto_init_waypoints)
-     {
+if (instance_exists(place_controller_obj)) {
+    var wp = instance_create(self.x, self.y + self.guy_y_offset, npc_waypoint_obj);
+    wp.auto_adjust = false;
+    wp.cannon_point = true;
+    my_waypoint = wp;
+
+    if (!place_controller_obj.auto_init_waypoints) {
         wp.waypoint_id = "wp" + string(wp.id);
-     }
-     
-     regenerate_nav_graph();
+    }
+
+    regenerate_nav_graph();
 }
 
-cannon_assign_player(self, my_player);
+cannon_assign_player(self, self.my_player);

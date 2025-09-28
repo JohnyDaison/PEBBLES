@@ -21,3 +21,6 @@ share code for returning guy to normal gravity
 
 Convert strings used as Enums to Enums
 but store the string to Enum mapping somewhere
+
+cannon_ mechanic scripts
+can be methods on cannon_base_obj object
