@@ -1,2 +1,2 @@
-message = "You're getting places!";
+message = "You're going places!";
 comment = "Sure."
