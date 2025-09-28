@@ -30,7 +30,7 @@ darkness_light_size_coef = 3;
 
 var darkness_value = mod_get_state("darkness");
 if (is_number(darkness_value)) {
-    darkness_alpha = darkness_value / 100;
+    self.darkness_alpha = darkness_value / 100;
 }
 
 death_cover_show = false;
@@ -49,6 +49,7 @@ bg_zoom_ratio[1] = 1;
 follow_guy = false;
 follow_spawner = false;
 follow_shot = false;
+my_shot = noone;
 follow_override = false;
 player = 0;
 view = -1;
@@ -88,7 +89,6 @@ self.my_chunkgrid = noone;
 shake_dir = 0;
 shake_dist = 0;
 shake_source_dir = 0;
-last_shake_dist = 0;
 shake_dist_decay = 0.25;
 
 // zoom

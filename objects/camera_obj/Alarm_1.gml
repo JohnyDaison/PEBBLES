@@ -1,3 +1,3 @@
 /// @description  COME BACK FROM SHOT
-follow_shot = false;
-follow_guy = true;
+self.follow_shot = false;
+self.follow_guy = true;
