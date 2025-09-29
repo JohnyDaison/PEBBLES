@@ -24,3 +24,6 @@ but store the string to Enum mapping somewhere
 
 cannon_ mechanic scripts
 can be methods on cannon_base_obj object
+
+DB.ds_registry entries
+should be Structs, not ds_maps
