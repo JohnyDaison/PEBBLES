@@ -1,18 +1,14 @@
-my_sound_stop(my_charge_sound);
+my_sound_stop(self.my_charge_sound);
 
-part_emitter_destroy(system, em);
-part_type_destroy(pt);
-part_system_destroy(system);
+part_emitter_destroy(self.system, self.em);
+part_type_destroy(self.pt);
+part_system_destroy(self.system);
 
-var i, orb;
-for(i = orb_count - 1; i >= 0; i--)
-{
-    orb = orbs[| i];
-    with(orb)
-    {
-        instance_destroy();
-    }
+for (var i = self.orb_count - 1; i >= 0; i--) {
+    var orb = self.orbs[| i];
+    instance_destroy(orb);
 }
-ds_list_destroy(orbs);
+
+ds_list_destroy(self.orbs);
 
 event_inherited();

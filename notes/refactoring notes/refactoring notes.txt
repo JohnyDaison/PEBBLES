@@ -30,3 +30,6 @@ should be Structs, not ds_maps
 
 "results" and "params"
 should be Structs, ds_*
+
+chunkgrid_obj
+chunks should be Structs, not ds_maps

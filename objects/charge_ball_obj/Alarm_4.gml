@@ -1,41 +1,38 @@
 /// @description SMOKE
-if (instance_exists(my_guy))
-{
-    var i = instance_create(x + irandom(10) - 5, y + irandom(10) - 5, energy_smoke_obj);
-    i.my_player = my_guy.my_player;
-    i.my_guy = my_guy.id;
-    i.my_source = object_index;
-    i.holographic = self.holographic;
-    i.direction = point_direction(0,0, rel_x, rel_y);
-    
+if (instance_exists(self.my_guy)) {
+    var inst = instance_create(x + irandom(10) - 5, y + irandom(10) - 5, energy_smoke_obj);
+    inst.my_player = self.my_guy.my_player;
+    inst.my_guy = self.my_guy.id;
+    inst.my_source = self.object_index;
+    inst.holographic = self.holographic;
+    inst.direction = point_direction(0, 0, self.rel_x, self.rel_y);
+
     if (charge >= smoke_charge) {
-        i.force = smoke_charge;
+        inst.force = smoke_charge;
     } else {
-        i.force = charge;
+        inst.force = charge;
     }
-    
-    i.max_force = i.force;
+
+    inst.max_force = inst.force;
 
     var distance_ratio = 1;
-    if (desired_dist != 0) {
-        distance_ratio = point_distance(0,0, rel_x, rel_y) / desired_dist;
+    if (self.desired_dist != 0) {
+        distance_ratio = point_distance(0, 0, self.rel_x, self.rel_y) / self.desired_dist;
     }
-    
-    i.speed = 5 + 3 * self.trig_charge * distance_ratio;
-    
-    i.hspeed += my_guy.hspeed;
-    i.vspeed += my_guy.vspeed;
-    
-    i.my_color = g_octarine;
-    i.tint_updated = false;
-    charge -= i.force;
+
+    inst.speed = 5 + 3 * self.trig_charge * distance_ratio;
+
+    inst.hspeed += self.my_guy.hspeed;
+    inst.vspeed += self.my_guy.vspeed;
+
+    inst.my_color = g_octarine;
+    inst.tint_updated = false;
+    self.charge -= inst.force;
 }
 
-if (charge > 0)
-{
-    alarm[4] = smoke_delay;
+if (self.charge > 0) {
+    self.alarm[4] = self.smoke_delay;
 }
-else
-{
-    firing = false;
+else {
+    self.firing = false;
 }

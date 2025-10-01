@@ -1,89 +1,84 @@
 ///@description COLLAPSE, PARTICLES, POSITION, SIZE
 
 // COLLAPSE
-if (charge > threshold)
-{
-    if (instance_exists(my_guy))
-    {
-        if (object_is_ancestor(my_guy.object_index, guy_obj))
-        {
-            with(my_guy)
-            {
-                charging = false;
+if (self.charge > self.threshold) {
+    if (instance_exists(self.my_guy)) {
+        if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
+            with (self.my_guy) {
+                self.charging = false;
                 status_left[? "frozen"] += 30;
-                spec_effect_to_guy(other.charge,"damage");
+                spec_effect_to_guy(other.charge, "damage");
             }
         }
 
         // IMPLOSION
-        if (my_color == g_dark)
-        {
-            var i = instance_create(x,y,black_aoe_obj);
-            i.my_player = my_guy.my_player;
-            i.force = charge/2;
-            i.my_color = my_color;
-            i.my_guy = i.id;  
-            i.my_source = object_index;
+        if (self.my_color == g_dark) {
+            var inst = instance_create(self.x, self.y, black_aoe_obj);
+            inst.my_player = self.my_guy.my_player;
+            inst.force = self.charge / 2;
+            inst.my_color = self.my_color;
+            inst.my_guy = inst.id;
+            inst.my_source = self.object_index;
         }
         // EXPLOSION
-        else
-        {
-            var i = instance_create(x,y,slot_explosion_obj);
-            i.my_color = my_color;
-            i.my_player = my_guy.my_player;
-            i.my_guy = my_guy;
-            i.my_source = object_index;
-            i.holographic = holographic;
-            
-            if (my_guy != id)
-            {
-                my_guy.lost_control = true;
-                my_guy.front_hit = true;
-                if (rel_x != 0)
-                    my_guy.hspeed -= (radius/rel_x)*charge;
-                if (rel_y != 0)
-                    my_guy.vspeed -= (radius/rel_y)*charge;
+        else {
+            var inst = instance_create(self.x, self.y, slot_explosion_obj);
+            inst.my_color = self.my_color;
+            inst.my_player = self.my_guy.my_player;
+            inst.my_guy = self.my_guy;
+            inst.my_source = self.object_index;
+            inst.holographic = self.holographic;
+
+            if (self.my_guy != id) {
+                self.my_guy.lost_control = true;
+                self.my_guy.front_hit = true;
+                if (self.rel_x != 0)
+                    self.my_guy.hspeed -= (self.radius / self.rel_x) * self.charge;
+                if (self.rel_y != 0)
+                    self.my_guy.vspeed -= (self.radius / self.rel_y) * self.charge;
             }
         }
-    } 
-    charge = 0;
+    }
+    self.charge = 0;
 }
 
 
 // PARTICLES, POSITION, SIZE
-sprite_size = size_coef*(0.25 + 0.50 * charge/max_charge);
+self.sprite_size = self.size_coef * (0.25 + 0.50 * self.charge / self.max_charge);
 
-if (instance_exists(my_guy) && sprite_index != no_sprite && my_color != -1)
-{
-    if (desired_dist > 0) {
-        var desired_rel_x = rel_x;
-        
-        visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
-    } else if (cur_dist < centered_dist) {
-        var rest_rel_x = my_guy.facing * rest_x_offset;
+if (instance_exists(self.my_guy) && self.sprite_index != no_sprite && self.my_color != -1) {
+    if (self.desired_dist > 0) {
+        var desired_rel_x = self.rel_x;
+
+        self.visual_rel_x = lerp(self.visual_rel_x, desired_rel_x, self.rest_ratio);
+    } else if (self.cur_dist < self.centered_dist) {
+        var rest_rel_x = self.my_guy.facing * self.rest_x_offset;
         var desired_rel_x = rest_rel_x;
-        
-        if (is_my_guy_los_blocked(visual_rel_x, rel_y)) {
-            visual_rel_x -= lengthdir_x(5, point_direction(0, 0, visual_rel_x, rel_y));
+
+        if (is_my_guy_los_blocked(self.visual_rel_x, self.rel_y)) {
+            self.visual_rel_x -= lengthdir_x(5, point_direction(0, 0, self.visual_rel_x, self.rel_y));
         } else {
-            var next_visual_rel_x = lerp(visual_rel_x, desired_rel_x, rest_ratio);
-            
-            if (!is_my_guy_los_blocked(next_visual_rel_x, rel_y)) {
-                visual_rel_x = next_visual_rel_x;
+            var next_visual_rel_x = lerp(self.visual_rel_x, desired_rel_x, self.rest_ratio);
+
+            if (!is_my_guy_los_blocked(next_visual_rel_x, self.rel_y)) {
+                self.visual_rel_x = next_visual_rel_x;
             }
         }
     }
-    
-    self.x = my_guy.x + center_offset_x + visual_rel_x;
-    self.y = my_guy.y + center_offset_y + rel_y;
+
+    self.x = self.my_guy.x + self.center_offset_x + self.visual_rel_x;
+    self.y = self.my_guy.y + self.center_offset_y + self.rel_y;
 }
 
-image_xscale = sprite_size;
-image_yscale = sprite_size;
-radius = base_radius*sprite_size;
-orb_dist = radius;
+self.image_xscale = self.sprite_size;
+self.image_yscale = self.sprite_size;
+self.radius = self.base_radius * self.sprite_size;
+self.orb_dist = self.radius;
 
-part_emitter_region(system,em,x - radius,x + radius,y - radius,y + radius,ps_shape_ellipse,ps_distr_gaussian);
-part_emitter_burst(system,em,pt,ceil(sprite_size)^2);
+part_emitter_region(self.system, self.em,
+    self.x - self.radius, self.x + self.radius,
+    self.y - self.radius, self.y + self.radius,
+    ps_shape_ellipse, ps_distr_gaussian);
+part_emitter_burst(self.system, self.em, self.pt, power(ceil(self.sprite_size), 2));
 
 event_inherited();
