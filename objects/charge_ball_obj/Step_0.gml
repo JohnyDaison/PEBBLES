@@ -72,7 +72,7 @@ if (self.my_guy != id && self.my_color > -1) {
         }
 
         // EXHAUSTION
-        var new_orb_exhaustion_ratio = get_orb_list_power_level(self.id.orbs);
+        var new_orb_exhaustion_ratio = get_orb_list_power_level(self.orbs);
 
         if (new_orb_exhaustion_ratio > 0) {
             if (self.my_color != g_dark) {
