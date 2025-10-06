@@ -12,7 +12,7 @@ if(instance_exists(my_block))
     // UPDATE POTENTIAL TARGETS
     if(update_potential_targets)
     {
-        chunks_content(potential_targets, chunkgrid_obj, chunkgrid_x - 1, chunkgrid_y - 1,
+        chunks_content(potential_targets, chunkgrid_obj.id, chunkgrid_x - 1, chunkgrid_y - 1,
                                           chunkgrid_x + 1, chunkgrid_y + 1, true);
         ds_list_clear(potential_drain_rods);
         
