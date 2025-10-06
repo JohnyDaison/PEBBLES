@@ -1,26 +1,15 @@
-/// @description observer_add(grid_obj, observer_obj)
-/// @function observer_add
-/// @param grid_obj
-/// @param  observer_obj
-function observer_add(argument0, argument1) {
-	var grid_obj = argument0;
-	var target = argument1;
-	var count = 0;
+/// @param {Asset.GMObject} grid_obj
+/// @param {Id.Instance} observer
+function observer_add(grid_obj, observer) {
+    if (!instance_exists(grid_obj)) {
+        return false;
+    }
 
-	if(instance_exists(grid_obj))
-	{
-	    with(target)
-	    {
-	        ds_list_add(grid_obj.observers, id);
-	        my_chunkgrid = grid_obj.id;
-	        obs_chunk_x = -1;
-	        obs_chunk_y = -1;
-	        count++;        
-	    }
-	}
+    ds_list_add(grid_obj.observers, observer.id);
 
-	return count;
+    observer.my_chunkgrid = grid_obj.id;
+    observer.obs_chunk_x = -1;
+    observer.obs_chunk_y = -1;
 
-
-
+    return true;
 }
