@@ -145,5 +145,5 @@ else
 // STOP OBSERVING
 if (!npc_active && (speed == 0 || dead) && my_chunkgrid != noone)
 {
-    observer_remove(chunkgrid_obj, id);
+    observer_remove(my_chunkgrid, id);
 }

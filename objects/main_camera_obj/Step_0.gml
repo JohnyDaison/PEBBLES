@@ -77,7 +77,7 @@ if (on || count == 0) // !view_visible[0] &&
             
             if(my_chunkgrid != noone)
             {
-                observer_remove(chunkgrid_obj, id);
+                observer_remove(my_chunkgrid, id);
             }
         }
     }
