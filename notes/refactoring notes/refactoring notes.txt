@@ -1,38 +1,36 @@
-basic_bot and shield_obj
+Miscelaneous:
+-------------
+* `basic_bot` and `shield_obj`
 share same camera related code
 
-sprite_index 
-invalid value is no longer "noone", but -1
+* `overhead_overlay`
+`Draw_GUI` needs refactoring
 
-overhead_overlay
-Draw_GUI needs refactoring
-
-last_attacker_* system
-refactor into Struct
-
-black_aoe_obj
+* `black_aoe_obj`
 has some repeating code
 
-black_force_field_obj and black_projectile_obj
-share some code in "with(item_obj)" section
+* `black_force_field_obj` and `black_projectile_obj`
+share some code in `with(item_obj)` section
 
-black_aoe_obj and black_projectile_obj
+* `black_aoe_obj` and `black_projectile_obj`
 share code for returning guy to normal gravity
 
-Convert strings used as Enums to Enums
-but store the string to Enum mapping somewhere
-cases:
-chunk[? "state"]
-DB.console_mode
+* `cannon_*` mechanics scripts
+can be methods on `cannon_base_obj` object
 
-cannon_ mechanic scripts
-can be methods on cannon_base_obj object
 
-DB.ds_registry entries
-should be Structs, not ds_maps
+Convert Strings used as Enums to Enums:
+---------------------------------------
+(but store the String to Enum mapping somewhere)
+* `chunk[? "state"]`
+* variable `mode` in chunk_optimizer
+* `DB.console_mode`
 
-"results" and "params"
-should be Structs, ds_*
 
-chunkgrid_obj
-chunks should be Structs, not ds_maps
+Convert these to Structs:
+-------------------------
+* `chunkgrid_obj` - `chunks`
+* `transform_memory`
+* `DB.ds_registry` entries
+* `"results"` and `"params"`
+* `last_attacker_*` system
