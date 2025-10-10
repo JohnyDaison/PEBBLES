@@ -766,7 +766,7 @@ my_console_log("GUY " + string(name));
 my_console_log("POS x: " + string(x) + " y: " + string(y));
 my_console_log("CHUNK x: " + string(chunkgrid_x) + " y: " + string(chunkgrid_y));
 my_console_log("OBS CHUNK x: " + string(obs_chunk_x) + " y: " + string(obs_chunk_y));
-my_console_log("CHUNK LIST: " + string(my_chunklist));
+my_console_log("CHUNK LIST: " + string(myChunkArray));
 }
 */
 event_inherited();

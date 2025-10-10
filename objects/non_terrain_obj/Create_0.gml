@@ -1,6 +1,6 @@
 event_inherited();
 
-my_chunklist = noone;
+myChunkArray = undefined;
 chunkgrid_x = -1;
 chunkgrid_y = -1;
 

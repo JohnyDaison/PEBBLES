@@ -70,10 +70,10 @@ function chunk_optimizer() {
                                 var chunk = gridInst.grid[# xx, yy];
 
                                 if (remove) {
-                                    chunk[? "observers"] -= 1;
+                                    chunk.observerCount -= 1;
                                 }
                                 else {
-                                    chunk[? "observers"] += 1;
+                                    chunk.observerCount += 1;
                                 }
                             }
                         }
@@ -102,26 +102,26 @@ function chunk_optimizer() {
             var chunk = gridInst.grid[# xx, yy];
             var mode = CHUNK_OPTIMIZER_MODE.NO_CHANGE;
 
-            chunk[? "active"] = chunk[? "observers"] > 0;
+            chunk.active = chunk.observerCount > 0;
 
-            if (gamemode_obj.mode == "rougelike" && chunk[? "active"] && !chunk[? "generated"]) {
+            if (gamemode_obj.mode == "rougelike" && chunk.active && !chunk.generated) {
                 chunk_generate(xx, yy, gridInst.seed);
             }
 
-            if (chunk[? "prev_active"] && !chunk[? "active"]) {
+            if (chunk.prevActive && !chunk.active) {
                 mode = CHUNK_OPTIMIZER_MODE.HOLD;
             }
-            else if (!chunk[? "prev_active"] && chunk[? "active"]) {
+            else if (!chunk.prevActive && chunk.active) {
                 mode = CHUNK_OPTIMIZER_MODE.ACTIVATE;
             }
 
             if (mode != CHUNK_OPTIMIZER_MODE.NO_CHANGE) {
                 // TERRAIN
-                var ter_list = chunk[? "terrain"];
-                var ter_list_size = ds_list_size(ter_list);
+                var terArray = chunk.terrainArray;
+                var terArraySize = array_length(terArray);
 
-                for (var item = 0; item < ter_list_size; item++) {
-                    var obj = ter_list[| item];
+                for (var item = 0; item < terArraySize; item++) {
+                    var obj = terArray[item];
 
                     if (mode == CHUNK_OPTIMIZER_MODE.ACTIVATE) {
                         objects_affected += object_transform(obj);
@@ -132,11 +132,11 @@ function chunk_optimizer() {
                 }
 
                 // NON-TERRAIN
-                var list = chunk[? "non_terrain"];
-                var list_size = ds_list_size(list);
+                var array = chunk.nonTerrainArray;
+                var arraySize = array_length(array);
 
-                for (var item = list_size - 1; item >= 0; item--) {
-                    var obj = list[| item];
+                for (var item = arraySize - 1; item >= 0; item--) {
+                    var obj = array[item];
                     var undef = is_undefined(obj);
 
                     if (!undef && instance_exists(obj)) {
@@ -149,7 +149,7 @@ function chunk_optimizer() {
                     }
                     else {
                         // DELETE ITEM
-                        ds_list_delete(list, item);
+                        array_delete(array, item , 1);
                         
                         // LOG ERROR
                         var error_str = "CHUNK[" + string(xx) + "," + string(yy) + "]:";
@@ -178,7 +178,7 @@ function chunk_optimizer() {
                 }
 
                 // FINISH STATE CHANGE
-                chunk[? "prev_active"] = chunk[? "active"];
+                chunk.prevActive = chunk.active;
 
                 if (debug) {
                     var update_str = "CHUNK[" + string(xx) + "," + string(yy) + "]: " + modeStrings[mode];

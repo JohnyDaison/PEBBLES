@@ -32,7 +32,7 @@ function observer_remove(gridInst, observer) {
                 // observer distance
                 if (point_distance(observer.obs_chunk_x, observer.obs_chunk_y, xx, yy) < observer_range + 0.5) {
                     var chunk = gridInst.grid[# xx, yy];
-                    chunk[? "observers"] -= 1;
+                    chunk.observerCount -= 1;
                 }
             }
         }

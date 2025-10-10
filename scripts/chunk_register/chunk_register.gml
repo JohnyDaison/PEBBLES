@@ -7,7 +7,7 @@ function chunk_register(gridObj, gameInst) {
     var target_is_observer = ds_list_find_index(gridInst.observers, gameInst) > -1;
 
     // IF OBSERVER LEFT A CHUNK, RUN OPTIMIZER
-    if (target_is_observer && gameInst.my_chunklist != noone) {
+    if (target_is_observer && !is_undefined(gameInst.myChunkArray)) {
         schedule_optimizer = true;
     }
 
@@ -18,7 +18,7 @@ function chunk_register(gridObj, gameInst) {
     if (xx >= 0 && xx < gridInst.grid_width && yy >= 0 && yy < gridInst.grid_height) {
         // IF OBSERVER ARRIVED IN NEW CHUNK, RUN OPTIMIZER
         if (target_is_observer) {
-            if (gameInst.my_chunklist == noone) {
+            if (is_undefined(gameInst.myChunkArray)) {
                 chunk_optimizer();
             }
             else {
@@ -37,19 +37,19 @@ function chunk_register(gridObj, gameInst) {
         if (object_is_ancestor(gameInst.object_index, terrain_obj)) {
             var ter = gameInst;
 
-            ter.my_chunklist = chunk[? "terrain"];
+            ter.myChunkArray = chunk.terrainArray;
             ter.chunkgrid_x = xx;
             ter.chunkgrid_y = yy;
 
-            if (!is_undefined(ter.my_chunklist) && ds_exists(ter.my_chunklist, ds_type_list)) {
-                if (ds_list_find_index(ter.my_chunklist, ter.id) != -1) {
+            if (!is_undefined(ter.myChunkArray)) {
+                if (array_get_index(ter.myChunkArray, ter.id) != -1) {
                     if (DB.console_mode == "debug") {
                         my_console_log("ERROR: Trying to re-add terrain " + id_str);
                     }
                     ret = false;
                 }
                 else {
-                    ds_list_add(ter.my_chunklist, ter.id);
+                    array_push(ter.myChunkArray, ter.id);
 
                     if (ter.object_index == wall_obj) {
                         ter.alarm[0] = 1;
@@ -64,19 +64,19 @@ function chunk_register(gridObj, gameInst) {
         else {
             var entity = gameInst;
 
-            entity.my_chunklist = chunk[? "non_terrain"];
+            entity.myChunkArray = chunk.nonTerrainArray;
             entity.chunkgrid_x = xx;
             entity.chunkgrid_y = yy;
 
-            if (!is_undefined(entity.my_chunklist) && ds_exists(entity.my_chunklist, ds_type_list)) {
-                if (ds_list_find_index(entity.my_chunklist, entity.id) != -1) {
+            if (!is_undefined(entity.myChunkArray)) {
+                if (array_get_index(entity.myChunkArray, entity.id) != -1) {
                     if (DB.console_mode == "debug") {
                         my_console_log("ERROR: Trying to re-add entity " + id_str);
                     }
                     ret = false;
                 }
                 else {
-                    ds_list_add(entity.my_chunklist, entity.id);
+                    array_push(entity.myChunkArray, entity.id);
 
                     ret = true;
                 }
@@ -90,7 +90,7 @@ function chunk_register(gridObj, gameInst) {
             }
 
             // IF THE NEW CHUNK IS FROZEN
-            if (!chunk[? "active"]) {
+            if (!chunk.active) {
                 // (BECAUSE OF ITEMS FALLING THROUGH TERRAIN):
                 // ---
                 // POSITION CORRECTION

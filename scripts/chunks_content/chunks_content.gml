@@ -24,22 +24,22 @@ function chunks_content(output_list, gridInst, x1, y1, x2, y2, only_active = fal
         for (var xx = x1; xx <= x2; xx++) {
             var chunk = gridInst.grid[# xx, yy];
 
-            if (!only_active || chunk[? "active"]) {
+            if (!only_active || chunk.active) {
                 if (type == "terrain" || type == "all") {
-                    var list = chunk[? "terrain"];
-                    var count = ds_list_size(list);
+                    var array = chunk.terrainArray;
+                    var count = array_length(array);
 
                     for (var i = 0; i < count; i++) {
-                        ds_list_add(output_list, list[| i]);
+                        ds_list_add(output_list, array[i]);
                     }
                 }
 
                 if (type == "non_terrain" || type == "all") {
-                    var list = chunk[? "non_terrain"];
-                    var count = ds_list_size(list);
+                    var array = chunk.nonTerrainArray;
+                    var count = array_length(array);
 
                     for (var i = 0; i < count; i++) {
-                        ds_list_add(output_list, list[| i]);
+                        ds_list_add(output_list, array[i]);
                     }
                 }
             }

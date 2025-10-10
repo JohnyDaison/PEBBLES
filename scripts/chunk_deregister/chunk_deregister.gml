@@ -1,28 +1,22 @@
-/// @description chunk_deregister(grid_obj, game_obj)
-/// @function chunk_deregister
-/// @param grid_obj
-/// @param  game_obj
-function chunk_deregister(argument0, argument1) {
-	var grid_obj = argument0;
-	var target = argument1;
+/// @param {Id.Instance|Asset.GMObject} gridObj
+/// @param {Id.Instance} gameInst
+function chunk_deregister(gridObj, gameInst) {
+    var gridInst = gridObj.id;
 
-	if(!ds_exists(grid_obj.grid, ds_type_grid))
-	    return false;
+    if (!ds_exists(gridInst.grid, ds_type_grid))
+        return false;
 
-	if(is_undefined(target.my_chunklist) || !ds_exists(target.my_chunklist, ds_type_list))
-	    return false;
-    
-	if(target.object_index == data_holder_obj)
-	{
-	    object_transform(target);
-	}
-    
-	ds_list_delete(target.my_chunklist,ds_list_find_index(target.my_chunklist,target.id));
+    if (is_undefined(gameInst.myChunkArray))
+        return false;
 
-	target.my_chunklist = noone;
+    if (gameInst.object_index == data_holder_obj) {
+        object_transform(gameInst);
+    }
 
-	return true;
+    var myIndex = array_get_index(gameInst.myChunkArray, gameInst.id);
+    array_delete(gameInst.myChunkArray, myIndex, 1);
 
+    gameInst.myChunkArray = undefined;
 
-
+    return true;
 }

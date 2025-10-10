@@ -1234,6 +1234,7 @@
     {"name":"was_meeting_me","order":3,"path":"scripts/was_meeting_me/was_meeting_me.yy",},
     {"name":"weak_effect_anim_set","order":1,"path":"scripts/weak_effect_anim_set/weak_effect_anim_set.yy",},
     {"name":"white_overload_anim_set","order":3,"path":"scripts/white_overload_anim_set/white_overload_anim_set.yy",},
+    {"name":"WorldChunk","order":7,"path":"scripts/WorldChunk/WorldChunk.yy",},
     {"name":"write_command_history_file","order":18,"path":"scripts/write_command_history_file/write_command_history_file.yy",},
     {"name":"yellow_confusion_anim_set","order":6,"path":"scripts/yellow_confusion_anim_set/yellow_confusion_anim_set.yy",},
     {"name":"artillery_shot_sound","order":3,"path":"sounds/artillery_shot_sound/artillery_shot_sound.yy",},

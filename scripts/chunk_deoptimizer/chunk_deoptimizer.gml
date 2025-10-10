@@ -19,30 +19,30 @@ function chunk_deoptimizer() {
             for (var yy = 0; yy < self.grid_height; yy++) {
                 var chunk = self.grid[# xx, yy];
 
-                chunk[? "active"] = true;
+                chunk.active = true;
                 
-                if (chunk[? "prev_active"]) {
+                if (chunk.prevActive) {
                     continue;
                 }
                 
-                chunk[? "prev_active"] = true;
+                chunk.prevActive = true;
                 
                 // TERRAIN
-                var ter_list = chunk[? "terrain"];
-                var ter_list_size = ds_list_size(ter_list);
+                var terArray = chunk.terrainArray;
+                var terArraySize = array_length(terArray);
 
-                for (var item = 0; item < ter_list_size; item++) {
-                    var obj = ter_list[| item];
+                for (var item = 0; item < terArraySize; item++) {
+                    var obj = terArray[item];
 
                     objects_affected += object_transform(obj);
                 }
 
                 // NON-TERRAIN
-                var non_ter_list = chunk[? "non_terrain"];
-                var non_ter_list_size = ds_list_size(non_ter_list);
+                var nonTerArray = chunk.nonTerrainArray;
+                var nonTerArraySize = array_length(nonTerArray);
 
-                for (var item = 0; item < non_ter_list_size; item++) {
-                    var obj = non_ter_list[| item];
+                for (var item = 0; item < nonTerArraySize; item++) {
+                    var obj = nonTerArray[item];
                     var undef = is_undefined(obj);
 
                     if (!undef && instance_exists(obj)) {

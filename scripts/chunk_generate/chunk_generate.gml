@@ -38,7 +38,7 @@ function chunk_generate(chunk_x, chunk_y, seed) {
             }
         }
 
-        chunk[? "generated"] = true;
+        chunk.generated = true;
     }
 
     return true;

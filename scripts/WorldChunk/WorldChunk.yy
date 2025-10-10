@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"WorldChunk",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"WorldChunk",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

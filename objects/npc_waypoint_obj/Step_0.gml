@@ -35,7 +35,7 @@ if(!dragged && auto_adjust && singleton_obj.step_count mod 5 == 3)
         
         while(place_meeting(x, y, terrain_obj))
         {
-            if(my_chunklist != noone)
+            if(!is_undefined(myChunkArray))
             {
                 chunk_deregister(chunkgrid_obj, id);
             }
@@ -55,7 +55,7 @@ if(!dragged && auto_adjust && singleton_obj.step_count mod 5 == 3)
         
         while(!place_meeting(x, y+32, terrain_obj) && !place_meeting(x, y+32, platform_obj))
         {
-            if(my_chunklist != noone)
+            if(!is_undefined(myChunkArray))
             {
                 chunk_deregister(chunkgrid_obj, id);
             }
@@ -100,7 +100,7 @@ if(!dragged && auto_adjust && singleton_obj.step_count mod 5 == 3)
             }
         }
         
-        if(my_chunklist == noone)
+        if(is_undefined(myChunkArray))
         {
             var done_for = false;
             var min_margin = 32;

@@ -27,7 +27,6 @@ Convert Strings used as Enums to Enums:
 
 Convert these to Structs:
 -------------------------
-* `chunkgrid_obj` - `chunks`
 * `transform_memory`
 * `DB.ds_registry` entries
 * `"results"` and `"params"`

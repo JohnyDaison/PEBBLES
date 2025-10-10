@@ -11,8 +11,8 @@ for (var yy = 0; yy < self.grid_height; yy += 1) {
     
     for (var xx = 0; xx < self.grid_width; xx += 1) {
         var chunk = self.my_chunkgrid.grid[# xx, yy];
-        var stateStr = chunk[? "active"] ? "a" : "h";
+        var stateStr = chunk.active ? "a" : "h";
         
-        self.ter_text[yy] += string(chunk[? "observers"]) + stateStr + " ";
+        self.ter_text[yy] += string(chunk.observerCount) + stateStr + " ";
     }
 }

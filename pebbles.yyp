@@ -1460,6 +1460,7 @@
     {"id":{"name":"was_meeting_me","path":"scripts/was_meeting_me/was_meeting_me.yy",},},
     {"id":{"name":"weak_effect_anim_set","path":"scripts/weak_effect_anim_set/weak_effect_anim_set.yy",},},
     {"id":{"name":"white_overload_anim_set","path":"scripts/white_overload_anim_set/white_overload_anim_set.yy",},},
+    {"id":{"name":"WorldChunk","path":"scripts/WorldChunk/WorldChunk.yy",},},
     {"id":{"name":"write_command_history_file","path":"scripts/write_command_history_file/write_command_history_file.yy",},},
     {"id":{"name":"yellow_confusion_anim_set","path":"scripts/yellow_confusion_anim_set/yellow_confusion_anim_set.yy",},},
     {"id":{"name":"zone_trigger_script","path":"scripts/zone_trigger_script/zone_trigger_script.yy",},},
