@@ -90,7 +90,7 @@ function chunk_register(gridObj, gameInst) {
             }
 
             // IF THE NEW CHUNK IS FROZEN
-            if (chunk[? "state"] == "held") {
+            if (!chunk[? "active"]) {
                 // (BECAUSE OF ITEMS FALLING THROUGH TERRAIN):
                 // ---
                 // POSITION CORRECTION

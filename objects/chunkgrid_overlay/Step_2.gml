@@ -8,8 +8,11 @@ for (var xx = 0; xx < self.grid_width; xx += 1) {
 
 for (var yy = 0; yy < self.grid_height; yy += 1) {
     self.ter_text[yy] = my_string_format(yy mod 100, 2, 0) + " ";
+    
     for (var xx = 0; xx < self.grid_width; xx += 1) {
         var chunk = self.my_chunkgrid.grid[# xx, yy];
-        self.ter_text[yy] += string(chunk[? "observers"]) + string_char_at(chunk[? "state"], 1) + " ";
+        var stateStr = chunk[? "active"] ? "a" : "h";
+        
+        self.ter_text[yy] += string(chunk[? "observers"]) + stateStr + " ";
     }
 }

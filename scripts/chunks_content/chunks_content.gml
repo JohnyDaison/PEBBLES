@@ -24,7 +24,7 @@ function chunks_content(output_list, gridInst, x1, y1, x2, y2, only_active = fal
         for (var xx = x1; xx <= x2; xx++) {
             var chunk = gridInst.grid[# xx, yy];
 
-            if (!only_active || chunk[? "state"] == "active") {
+            if (!only_active || chunk[? "active"]) {
                 if (type == "terrain" || type == "all") {
                     var list = chunk[? "terrain"];
                     var count = ds_list_size(list);

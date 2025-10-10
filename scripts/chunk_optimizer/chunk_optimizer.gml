@@ -102,21 +102,16 @@ function chunk_optimizer() {
             var chunk = gridInst.grid[# xx, yy];
             var mode = CHUNK_OPTIMIZER_MODE.NO_CHANGE;
 
-            if (chunk[? "observers"] == 0) {
-                chunk[? "state"] = "held";
-            }
-            else {
-                chunk[? "state"] = "active";
-            }
+            chunk[? "active"] = chunk[? "observers"] > 0;
 
-            if (gamemode_obj.mode == "rougelike" && chunk[? "state"] == "active" && !chunk[? "generated"]) {
+            if (gamemode_obj.mode == "rougelike" && chunk[? "active"] && !chunk[? "generated"]) {
                 chunk_generate(xx, yy, gridInst.seed);
             }
 
-            if (chunk[? "prev_state"] == "active" && chunk[? "state"] == "held") {
+            if (chunk[? "prev_active"] && !chunk[? "active"]) {
                 mode = CHUNK_OPTIMIZER_MODE.HOLD;
             }
-            else if (chunk[? "prev_state"] == "held" && chunk[? "state"] == "active") {
+            else if (!chunk[? "prev_active"] && chunk[? "active"]) {
                 mode = CHUNK_OPTIMIZER_MODE.ACTIVATE;
             }
 
@@ -183,7 +178,7 @@ function chunk_optimizer() {
                 }
 
                 // FINISH STATE CHANGE
-                chunk[? "prev_state"] = chunk[? "state"];
+                chunk[? "prev_active"] = chunk[? "active"];
 
                 if (debug) {
                     var update_str = "CHUNK[" + string(xx) + "," + string(yy) + "]: " + modeStrings[mode];

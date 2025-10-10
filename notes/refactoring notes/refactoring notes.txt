@@ -22,7 +22,6 @@ can be methods on `cannon_base_obj` object
 Convert Strings used as Enums to Enums:
 ---------------------------------------
 (but store the String to Enum mapping somewhere)
-* `chunk[? "state"]`
 * `DB.console_mode`
 
 

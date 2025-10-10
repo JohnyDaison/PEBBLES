@@ -15,8 +15,8 @@ for (var xx = 0; xx < self.grid_width; xx += 1) {
         
         chunk[? "observers"] = 0;
         chunk[? "generated"] = false;
-        chunk[? "state"] = "active";
-        chunk[? "prev_state"] = "active";
+        chunk[? "active"] = true;
+        chunk[? "prev_active"] = true;
         chunk[? "terrain"] = ds_list_create();
         chunk[? "non_terrain"] = ds_list_create();
         

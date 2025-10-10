@@ -19,13 +19,13 @@ function chunk_deoptimizer() {
             for (var yy = 0; yy < self.grid_height; yy++) {
                 var chunk = ds_grid_get(self.grid, xx, yy);
 
-                chunk[? "state"] = "active";
+                chunk[? "active"] = true;
                 
-                if (chunk[? "prev_state"] != "held") {
+                if (chunk[? "prev_active"]) {
                     continue;
                 }
                 
-                chunk[? "prev_state"] = "active";
+                chunk[? "prev_active"] = true;
                 
                 // TERRAIN
                 var ter_list = chunk[? "terrain"];
