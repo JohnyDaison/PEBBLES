@@ -20,6 +20,6 @@ for (var xx = 0; xx < self.grid_width; xx += 1) {
         chunk[? "terrain"] = ds_list_create();
         chunk[? "non_terrain"] = ds_list_create();
         
-        ds_grid_set(self.grid, xx, yy, chunk);
+        self.grid[# xx, yy] = chunk;
     }
 }

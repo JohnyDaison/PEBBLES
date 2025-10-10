@@ -31,7 +31,7 @@ function observer_remove(gridInst, observer) {
             for (var yy = min_y; yy <= max_y; yy += 1) {
                 // observer distance
                 if (point_distance(observer.obs_chunk_x, observer.obs_chunk_y, xx, yy) < observer_range + 0.5) {
-                    var chunk = ds_grid_get(gridInst.grid, xx, yy);
+                    var chunk = gridInst.grid[# xx, yy];
                     chunk[? "observers"] -= 1;
                 }
             }

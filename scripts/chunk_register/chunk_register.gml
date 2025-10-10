@@ -26,7 +26,7 @@ function chunk_register(gridObj, gameInst) {
             }
         }
 
-        var chunk = ds_grid_get(gridInst.grid, xx, yy);
+        var chunk = gridInst.grid[# xx, yy];
         var id_str;
 
         if (DB.console_mode == "debug") {

@@ -17,7 +17,7 @@ function chunk_deoptimizer() {
         // DO OBJECT TRANSFORM BASED ON STATE CHANGE
         for (var xx = 0; xx < self.grid_width; xx++) {
             for (var yy = 0; yy < self.grid_height; yy++) {
-                var chunk = ds_grid_get(self.grid, xx, yy);
+                var chunk = self.grid[# xx, yy];
 
                 chunk[? "active"] = true;
                 
