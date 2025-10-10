@@ -136,7 +136,7 @@ function camera_before_view() {
 
     // NON TERRAIN DRAWING OPTIMIZATION
     if (singleton_obj.do_my_visible_optim) {
-        var is_not_debug = DB.console_mode != "debug";
+        var is_not_debug = DB.console_mode != CONSOLE_MODE.DEBUG;
 
         // this does bullshit when you spam Alt+U in Shooting Range (room_shotshell_test)
         // "self" inside the with() can be red_colorizer_obj or <undefined>. WTF!

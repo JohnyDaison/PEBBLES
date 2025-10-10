@@ -1,21 +1,13 @@
-/// @description console_mode_command([mode])
-/// @function console_mode_command
-/// @param [mode]
-function console_mode_command() {
+/// @param {String} newModeStr
+function console_mode_command(newModeStr = "") {
 
-	var newMode = "";
+    if (newModeStr != "") {
+        var newMode = array_get_index(DB.consoleModeStrings, newModeStr);
 
-	if(argument_count > 0)
-	{
-	    newMode = argument[0];
-	}
+        if (!is_undefined(DB.console_modes[? newMode])) {
+            DB.console_mode = newMode;
+        }
+    }
 
-	if(newMode != "" && !is_undefined(DB.console_modes[? newMode]))
-	{
-	    DB.console_mode = newMode;
-	}
-
-	return DB.console_mode;
-
-
+    return DB.consoleModeStrings[DB.console_mode];
 }

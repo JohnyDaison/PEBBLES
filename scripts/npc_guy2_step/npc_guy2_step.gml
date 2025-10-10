@@ -698,7 +698,7 @@ function npc_guy2_step() {
     }
 
     /*
-    if(status_str != "" && DB.console_mode == "debug")
+    if(status_str != "" && DB.console_mode == CONSOLE_MODE.DEBUG)
     {
         speech_instant(status_str);
     }
@@ -728,7 +728,7 @@ function npc_guy2_step() {
                     status_str += " - NEW NEAREST FOUND";
                 }
                 /*
-                if(status_str != "" && DB.console_mode == "debug")
+                if(status_str != "" && DB.console_mode == CONSOLE_MODE.DEBUG)
                 {
                     speech_instant(status_str);
                 }
@@ -761,7 +761,7 @@ function npc_guy2_step() {
         
                     status_str += ", GOING TO " + npc_waypoint;
                     /*
-                    if(status_str != "" && DB.console_mode == "debug")
+                    if(status_str != "" && DB.console_mode == CONSOLE_MODE.DEBUG)
                     {
                         speech_instant(status_str);
                     }
@@ -790,7 +790,7 @@ function npc_guy2_step() {
                 status_str += " " + npc_last_waypoint + " IS NOW LAST";
             
                 /*
-                if(status_str != "" && DB.console_mode == "debug")
+                if(status_str != "" && DB.console_mode == CONSOLE_MODE.DEBUG)
                 {
                     speech_instant(status_str);
                 }

@@ -171,7 +171,7 @@ if(!dragged && auto_adjust && singleton_obj.step_count mod 5 == 3)
 
 
 // debug
-if(DB.console_mode == "debug")
+if(DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     invisible = false;
     visible = !invisible;

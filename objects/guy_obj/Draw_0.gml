@@ -162,7 +162,7 @@ with(color_orb_obj)
 }
 */
 
-if(DB.console_mode == "debug")
+if(DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     var count = ds_list_size(attack_waypoints), i, wp;
     draw_set_color(c_red);

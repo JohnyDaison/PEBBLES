@@ -112,7 +112,7 @@ function nav_graph_generate() {
                     else if(wp1wall && wp2wall)
                     {
                         offset = offset_size;
-                        if(show_debug && DB.console_mode == "debug")
+                        if(show_debug && DB.console_mode == CONSOLE_MODE.DEBUG)
                         {
                             my_console_log(wp1.waypoint_id + "-" + wp2.waypoint_id + " BOTH WALL");
                         }
@@ -128,7 +128,7 @@ function nav_graph_generate() {
                         var left_side_blocker = false;
                         left_side_blocker = left_side_blocker || collision_line(wp1.x - 1, wp1.y, wp2.x - 1, wp2.y, terrain_obj, false, false);
                     
-                        if(show_debug && DB.console_mode == "debug")
+                        if(show_debug && DB.console_mode == CONSOLE_MODE.DEBUG)
                         {
                             my_console_log("BLOCKERS:: HOR: " + string(blocker_across) + " R: " + string(right_side_blocker) + " L: " + string(left_side_blocker));
                         }
@@ -161,7 +161,7 @@ function nav_graph_generate() {
                         result = results[| result_i];
                         if(result != wp1 && result != wp2 && !result.airborne)
                         {
-                            if(show_debug && DB.console_mode == "debug")
+                            if(show_debug && DB.console_mode == CONSOLE_MODE.DEBUG)
                             {
                                 my_console_log(wp1.waypoint_id + "-" + wp2.waypoint_id + " REDUNDANT BECAUSE: " + string(result.waypoint_id));
                             }

@@ -1,6 +1,6 @@
 draw_sprite_ext(sprite_index, image_index, x,y, 1,1,0, tint, 1);
 
-if(DB.console_mode == "test" || DB.console_mode == "debug")
+if(DB.console_mode == CONSOLE_MODE.TEST || DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     if(instance_exists(my_block))
     {

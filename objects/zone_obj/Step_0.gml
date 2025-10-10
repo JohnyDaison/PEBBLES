@@ -1,4 +1,4 @@
-visible = (DB.console_mode == "debug");
+visible = (DB.console_mode == CONSOLE_MODE.DEBUG);
 
 if(!in_group && zone_id != "")
 {

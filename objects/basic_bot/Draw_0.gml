@@ -1,7 +1,7 @@
 event_inherited();
 
 // debug
-if (DB.console_mode == "debug")
+if (DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     if (is_general_npc)
     {

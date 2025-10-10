@@ -1,3 +1,9 @@
+enum CONSOLE_MODE {
+    PLAY,
+    TEST,
+    DEBUG
+}
+
 function init_console_DB() {
     console_history = ds_list_create();
     console_history_cur_item = -1;
@@ -14,6 +20,12 @@ function init_console_DB() {
     console_divider_step_length = 12;
     console_popup_on_log = false;
     dumpfile_folder = "dumpfiles";
+    
+    consoleModeStrings = [
+        "play",
+        "test",
+        "debug"
+    ];
     
     var ccs = console_commands_saved;
 
@@ -118,7 +130,7 @@ function init_console_DB() {
     // play
     var play = ds_list_create();
     ds_list_copy(play, common);
-    console_modes[? "play"] = play;
+    console_modes[? CONSOLE_MODE.PLAY] = play;
 
 
     // test
@@ -130,7 +142,7 @@ function init_console_DB() {
     ds_list_add(test, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 
     ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph", "infocursor", "watches");
-    console_modes[? "test"] = test;
+    console_modes[? CONSOLE_MODE.TEST] = test;
 
 
     // debug
@@ -143,18 +155,18 @@ function init_console_DB() {
     ds_list_add(debug, "dumpinst", "dumplist", "dumpmap");
 
     ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
-    console_modes[? "debug"] = debug;
+    console_modes[? CONSOLE_MODE.DEBUG] = debug;
 
 
 
     ds_list_destroy(common);
 
 
-    console_mode = "test"; // play test debug
+    console_mode = CONSOLE_MODE.TEST; // play test debug
 
     if(debug_mode)
     {
-        console_mode = "debug";
+        console_mode = CONSOLE_MODE.DEBUG;
     }
 
     debug_keys_list = create_debug_keys_list();

@@ -87,7 +87,7 @@ if(step_count mod 20 == 0)
 }
 
 // TERRAIN PLACEMENT ERROR - DISABLE IN RELEASE
-if(DB.console_mode == "debug" && step_count mod 120 == 0)
+if(DB.console_mode == CONSOLE_MODE.DEBUG && step_count mod 120 == 0)
 {
     with(terrain_obj)
     {
@@ -144,7 +144,7 @@ if(keyboard_check_pressed(192))
     }
 }
 
-if(DB.console_mode == "debug" || DB.console_mode == "test")
+if(DB.console_mode == CONSOLE_MODE.DEBUG || DB.console_mode == CONSOLE_MODE.TEST)
 {
 
     // CTRL + F
@@ -179,10 +179,10 @@ if(DB.console_mode == "debug" || DB.console_mode == "test")
     // ALT + M
     if(keyboard_check(vk_alt) && keyboard_check_pressed(ord("M")))
     {
-        if (DB.console_mode == "test") {
-            DB.console_mode = "debug";
-        } else if(DB.console_mode == "debug") {
-            DB.console_mode = "test";
+        if (DB.console_mode == CONSOLE_MODE.TEST) {
+            DB.console_mode = CONSOLE_MODE.DEBUG;
+        } else if(DB.console_mode == CONSOLE_MODE.DEBUG) {
+            DB.console_mode = CONSOLE_MODE.TEST;
         }
     }
 

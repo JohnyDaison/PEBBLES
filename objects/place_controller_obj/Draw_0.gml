@@ -1,5 +1,5 @@
 /// @description DEBUG NAV GRAPH
-if(DB.console_mode == "debug")
+if(DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     if(nav_graph_exists && nav_graph_enabled)
     {

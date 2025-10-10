@@ -6,7 +6,7 @@ function terrain_register(grid, terrain) {
         return false;
     }
     
-    var run_debug_code = DB.console_mode == "test" || DB.console_mode == "debug";
+    var run_debug_code = DB.console_mode == CONSOLE_MODE.TEST || DB.console_mode == CONSOLE_MODE.DEBUG;
     
     var xx, yy, i, count, other_terrain;
     xx = floor((terrain.x - grid.grid_margin) / grid.grid_cell_size);

@@ -29,7 +29,7 @@ function chunk_register(gridObj, gameInst) {
         var chunk = gridInst.grid[# xx, yy];
         var id_str;
 
-        if (DB.console_mode == "debug") {
+        if (DB.console_mode == CONSOLE_MODE.DEBUG) {
             id_str = "CHUNK[" + string(xx) + "," + string(yy) + "]: " + string(gameInst.id) + " " + object_get_name(gameInst.object_index);
         }
 
@@ -43,7 +43,7 @@ function chunk_register(gridObj, gameInst) {
 
             if (!is_undefined(ter.myChunkArray)) {
                 if (array_get_index(ter.myChunkArray, ter.id) != -1) {
-                    if (DB.console_mode == "debug") {
+                    if (DB.console_mode == CONSOLE_MODE.DEBUG) {
                         my_console_log("ERROR: Trying to re-add terrain " + id_str);
                     }
                     ret = false;
@@ -70,7 +70,7 @@ function chunk_register(gridObj, gameInst) {
 
             if (!is_undefined(entity.myChunkArray)) {
                 if (array_get_index(entity.myChunkArray, entity.id) != -1) {
-                    if (DB.console_mode == "debug") {
+                    if (DB.console_mode == CONSOLE_MODE.DEBUG) {
                         my_console_log("ERROR: Trying to re-add entity " + id_str);
                     }
                     ret = false;

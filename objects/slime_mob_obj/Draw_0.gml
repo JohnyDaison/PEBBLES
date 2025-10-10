@@ -1,7 +1,7 @@
 event_inherited();
 
 /*
-if(DB.console_mode == "debug")
+if(DB.console_mode == CONSOLE_MODE.DEBUG)
 {
     if(instance_exists(blocking_terrain))
     {

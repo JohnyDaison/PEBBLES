@@ -51,7 +51,7 @@ function speech_start() {
     // translate string
     if(is_undefined(str))
     {
-        if(safe && DB.console_mode != "debug")
+        if(safe && DB.console_mode != CONSOLE_MODE.DEBUG)
         {
             return false;
         }

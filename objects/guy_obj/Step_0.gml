@@ -1581,7 +1581,7 @@ if(!self.frozen_in_time)
                         if(new_color == g_dark)
                         {
                             auto_cast = true;
-                            if(DB.console_mode == "debug") // DB.console_mode == "test" ||
+                            if(DB.console_mode == CONSOLE_MODE.DEBUG) // DB.console_mode == CONSOLE_MODE.TEST ||
                             {
                                 speech_instant("AUTO CAST DARK");
                             }

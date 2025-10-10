@@ -340,7 +340,7 @@ function arena_bot3(argument0) {
                             npc_wanna_cast = true;
                             attack_mode = true;
                     
-                            if(DB.console_mode == "debug") // DB.console_mode == "test" ||
+                            if(DB.console_mode == CONSOLE_MODE.DEBUG) // DB.console_mode == CONSOLE_MODE.TEST ||
                             {
                                 if(potential_color == g_dark)
                                 {
@@ -1494,7 +1494,7 @@ function arena_bot3(argument0) {
         // ATTACK TARGET
         self.attack_target = attack_target;
     
-        if(DB.console_mode == "debug")
+        if(DB.console_mode == CONSOLE_MODE.DEBUG)
         {
             var att_name = "", move_name = "";
             if(instance_exists(self.attack_target))

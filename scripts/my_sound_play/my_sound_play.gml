@@ -81,7 +81,7 @@ function my_sound_play() {
     }
 
     /*
-    if(sound_inst != noone && DB.console_mode == "debug")
+    if(sound_inst != noone && DB.console_mode == CONSOLE_MODE.DEBUG)
     {
         my_console_log(object_get_name(object_index) + ":" + string(id) + ": " + audio_get_name(sound))   
     }
