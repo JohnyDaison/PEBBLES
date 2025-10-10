@@ -1,5 +1,17 @@
+enum CHUNK_OPTIMIZER_MODE {
+    NO_CHANGE,
+    ACTIVATE,
+    HOLD
+}
+
 /// @returns {Real} Number of objects affected, or -1 if grid doesn't exist
 function chunk_optimizer() {
+    static modeStrings = [
+        "no change",
+        "activate",
+        "hold"
+    ];
+
     var gridInst = noone;
     var debug = false;
 
@@ -88,7 +100,7 @@ function chunk_optimizer() {
     for (var xx = 0; xx < gridInst.grid_width; xx += 1) {
         for (var yy = 0; yy < gridInst.grid_height; yy += 1) {
             var chunk = gridInst.grid[# xx, yy];
-            var mode = "";
+            var mode = CHUNK_OPTIMIZER_MODE.NO_CHANGE;
 
             if (chunk[? "observers"] == 0) {
                 chunk[? "state"] = "held";
@@ -102,13 +114,13 @@ function chunk_optimizer() {
             }
 
             if (chunk[? "prev_state"] == "active" && chunk[? "state"] == "held") {
-                mode = "hold";
+                mode = CHUNK_OPTIMIZER_MODE.HOLD;
             }
             else if (chunk[? "prev_state"] == "held" && chunk[? "state"] == "active") {
-                mode = "activate";
+                mode = CHUNK_OPTIMIZER_MODE.ACTIVATE;
             }
 
-            if (mode != "") {
+            if (mode != CHUNK_OPTIMIZER_MODE.NO_CHANGE) {
                 // TERRAIN
                 var ter_list = chunk[? "terrain"];
                 var ter_list_size = ds_list_size(ter_list);
@@ -116,10 +128,10 @@ function chunk_optimizer() {
                 for (var item = 0; item < ter_list_size; item++) {
                     var obj = ter_list[| item];
 
-                    if (mode == "activate") {
+                    if (mode == CHUNK_OPTIMIZER_MODE.ACTIVATE) {
                         objects_affected += object_transform(obj);
                     }
-                    else if (mode == "hold") {
+                    else if (mode == CHUNK_OPTIMIZER_MODE.HOLD) {
                         objects_affected += object_transform(obj, data_holder_obj);
                     }
                 }
@@ -133,10 +145,10 @@ function chunk_optimizer() {
                     var undef = is_undefined(obj);
 
                     if (!undef && instance_exists(obj)) {
-                        if (mode == "activate") {
+                        if (mode == CHUNK_OPTIMIZER_MODE.ACTIVATE) {
                             objects_affected += object_transform(obj);
                         }
-                        else if (mode == "hold") {
+                        else if (mode == CHUNK_OPTIMIZER_MODE.HOLD) {
                             objects_affected += object_transform(obj, data_holder_obj);
                         }
                     }
@@ -174,7 +186,7 @@ function chunk_optimizer() {
                 chunk[? "prev_state"] = chunk[? "state"];
 
                 if (debug) {
-                    var update_str = "CHUNK[" + string(xx) + "," + string(yy) + "]: " + mode;
+                    var update_str = "CHUNK[" + string(xx) + "," + string(yy) + "]: " + modeStrings[mode];
 
                     my_console_log(update_str);
                 }

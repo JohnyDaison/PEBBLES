@@ -23,7 +23,6 @@ Convert Strings used as Enums to Enums:
 ---------------------------------------
 (but store the String to Enum mapping somewhere)
 * `chunk[? "state"]`
-* variable `mode` in chunk_optimizer
 * `DB.console_mode`
 
 
