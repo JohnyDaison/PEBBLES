@@ -1,6 +1,5 @@
-if(instance_exists(my_chunkgrid))
-{
-    observer_remove(my_chunkgrid, id);
+if (instance_exists(self.my_chunkgrid)) {
+    observer_remove(self.my_chunkgrid, self.id);
 }
 
 event_inherited();

@@ -12,4 +12,4 @@ orig_ambient_light = 0.8;
 self.name = "Artillery Shot";
 
 observer_range = 1;
-observer_add(chunkgrid_obj, id);
+observer_add(chunkgrid_obj, self.id);
