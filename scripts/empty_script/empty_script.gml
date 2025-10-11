@@ -1,6 +1,3 @@
 function empty_script() {
-	return 0;
-
-
-
+    return 0;
 }
