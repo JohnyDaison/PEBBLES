@@ -1,22 +1,21 @@
 event_inherited();
 
-my_color = g_octarine;
-hp = 0.75;
-immovable = true;
-max_speed = 2;
+self.my_color = g_octarine;
+self.hp = 0.75;
+self.immovable = true;
+self.max_speed = 2;
 
-image_alpha = 1;
-image_index = 0;
-image_speed = 0;
+self.image_alpha = 1;
+self.image_index = 0;
+self.image_speed = 0;
 
 self.protected = false;
 self.damage_tint_ratio = 0.5;
-my_shield = noone;
+self.my_shield = noone;
 last_attacker_init();
 
-alarm[0] = irandom(180)+1;
+self.alarm[0] = irandom(180) + 1;
 
 self.name = "Artifact";
 
-event_perform(ev_other,ev_user1);
-
+event_perform(ev_other, ev_user1);

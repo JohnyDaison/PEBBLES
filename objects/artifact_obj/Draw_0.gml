@@ -1,3 +1,3 @@
-draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,self.tint,image_alpha);
+draw_sprite_ext(self.sprite_index, self.image_index, self.x, self.y, 1, 1, 0, self.tint, self.image_alpha);
 
-action_inherited();
+event_inherited();
