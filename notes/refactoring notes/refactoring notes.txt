@@ -18,10 +18,15 @@ share code for returning guy to normal gravity
 * `cannon_*` mechanics scripts
 can be methods on `cannon_base_obj` object
 
+* `border_width` variable
+on `healthbar_overlay` doesn't have the same logic as in `empty_frame`
+because `healthbar_overlay` overrides parent's `Draw GUI` event without inheriting it
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
 (but store the String to Enum mapping somewhere)
+
+gui_object.rel_position
 
 
 Convert these to Structs:

@@ -1,16 +1,14 @@
 /// @description  MOVE MY ELEMENTS WITH ME
 
-var xdiff = x - xprevious;
-var ydiff = y - yprevious;
-if(xdiff != 0 || ydiff != 0)
-{
-    with(gui_element)
-    {
-        if(parent_frame == other.id && rel_position == "relative")
-        {
-            x = parent_frame.x + rel_x;
-            y = parent_frame.y + rel_y;
+var xdiff = self.x - self.xprevious;
+var ydiff = self.y - self.yprevious;
+var frame = self.id;
+
+if (xdiff != 0 || ydiff != 0) {
+    with (gui_element) {
+        if (self.parent_frame == frame && self.rel_position == "relative") {
+            self.x = self.parent_frame.x + self.rel_x;
+            self.y = self.parent_frame.y + self.rel_y;
         }
     }
 }
-

@@ -1,14 +1,15 @@
-action_inherited();
+event_inherited();
+
 self.font = window_font;
 self.draw_border = true;
 self.draw_bg_color = true;
-self.border_color = merge_color(c_dkgray,c_black,0.5);
+self.border_color = merge_color(c_dkgray, c_black, 0.5);
 self.border_alpha = 0.3;
-self.border_highlight_color = ds_map_find_value(DB.colormap,g_cyan);
+self.border_highlight_color = ds_map_find_value(DB.colormap, g_cyan);
 self.bg_alpha = 0.6;
 self.bg_color = c_dkgray;
 self.alpha = 1;
-//self.unique = false; //e.g. whether the window is a singleton NOT DONE
+self.focus_modifier = 1;
 
 self.view_x_offset = 0;
 self.view_y_offset = 0;
@@ -25,4 +26,4 @@ self.draggable = false;
 self.has_active_elem = false;
 self.nonfocusable = false;
 
-alarm[0] = 3;
+self.alarm[0] = 3;
