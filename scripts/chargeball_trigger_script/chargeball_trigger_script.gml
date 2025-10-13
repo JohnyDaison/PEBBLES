@@ -1,357 +1,343 @@
+/// @self charge_ball_obj
+/// @returns {Bool} did it fire successfully?
 function chargeball_trigger_script() {
     var ret = false;
     //show_debug_message("TRIGGER chargeball");
-    if(instance_exists(my_guy) && my_color >= g_dark && !firing && charge > 0)
-    {
-        var aim_direction = point_direction(0, 0, rel_x, rel_y);
-    
-        self.trig_charge = charge;
-    
-        my_guy.casting = false;
-        my_guy.casting_hor = false;
-        my_guy.casting_shield = false;
-        my_guy.casting_up = false;
-        my_guy.casting_down = false;
-    
+    if (instance_exists(self.my_guy) && self.my_color >= g_dark && !self.firing && self.charge > 0) {
+        var aim_direction = point_direction(0, 0, self.rel_x, self.rel_y);
+
+        self.trig_charge = self.charge;
+
+        self.my_guy.casting = false;
+        self.my_guy.casting_hor = false;
+        self.my_guy.casting_shield = false;
+        self.my_guy.casting_up = false;
+        self.my_guy.casting_down = false;
+
         var orb_count = 0;
         var is_guy = false;
         var is_player_guy = false;
         var inst, hboost, vboost;
-    
-        if(object_is_ancestor(my_guy.object_index, guy_obj))
-        {
+
+        if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
             orb_count = self.orb_count;
             is_guy = true;
-            if(my_guy.id == my_player.my_guy) {
+
+            if (self.my_guy.id == self.my_player.my_guy) {
                 is_player_guy = true;
             }
             // show_debug_message("orb_count: " + string(orb_count) + " my_color: " + string(my_color));
         }
-        else
-        {
-            orb_count = my_guy.slots_absorbed;
+        else {
+            orb_count = self.my_guy.slots_absorbed;
         }
-    
-        if(my_color == g_dark) {
-            if(orb_count > 0 && (!is_guy || has_level(my_guy, "dark_mode", 1)))
-            {
-                if(desired_dist == 0)
-                {
+
+        if (self.my_color == g_dark) {
+            if (orb_count > 0 && (!is_guy || has_level(self.my_guy, "dark_mode", 1))) {
+                if (self.desired_dist == 0) {
                     // DARK AOE
-                    inst = instance_create(x, y, black_aoe_obj);
+                    inst = instance_create(self.x, self.y, black_aoe_obj);
+
                     inst.my_player = self.my_player;
                     inst.force = self.charge;
                     inst.my_color = self.my_color;
-                    inst.my_guy = my_guy.id;
-                    inst.my_source = object_index;
+                    inst.my_guy = self.my_guy.id;
+                    inst.my_source = self.object_index;
                     inst.holographic = self.holographic;
-                    if(my_guy != id && !my_guy.immovable) 
-                    {  
-                        my_guy.speed /= my_guy.running_maxspeed * 2;
+
+                    if (self.my_guy != self.id && !self.my_guy.immovable) {
+                        self.my_guy.speed /= self.my_guy.running_maxspeed * 2;
                     }
-                    
+
                     ret = true;
-                    if(is_player_guy) {
-                        increase_stat(my_guy.my_player, "implosion_count", 1, false);
+
+                    if (is_player_guy) {
+                        increase_stat(self.my_guy.my_player, "implosion_count", 1, false);
                     }
                 }
-                else
-                {
+                else {
                     // VORTEX
-                    inst = instance_create(x, y, black_projectile_obj);
+                    inst = instance_create(self.x, self.y, black_projectile_obj);
+
                     inst.my_player = self.my_player;
                     inst.force = self.charge;
                     inst.holographic = self.holographic;
-            
+
                     inst.direction = aim_direction;
                     inst.speed = 5 + 9 * self.charge;
                     inst.my_color = self.my_color;
-                    inst.my_guy = my_guy.id;
-                    inst.my_source = object_index;
-                    if(my_guy != id && !my_guy.immovable)
-                    {  
-                        my_guy.hspeed /= 4;
-                        my_guy.vspeed /= 4;
+                    inst.my_guy = self.my_guy.id;
+                    inst.my_source = self.object_index;
+
+                    if (self.my_guy != id && !self.my_guy.immovable) {
+                        self.my_guy.hspeed /= 4;
+                        self.my_guy.vspeed /= 4;
                     }
-                    
+
                     ret = true;
-                    if(is_player_guy) {
-                        increase_stat(my_guy.my_player, "vortex_count", 1, false);
+
+                    if (is_player_guy) {
+                        increase_stat(self.my_guy.my_player, "vortex_count", 1, false);
                     }
                 }
             }
         }
-        else
-        {
-            if(desired_dist == 0)
-            {
+        else {
+            if (self.desired_dist == 0) {
                 // SHIELD
-                if(object_is_ancestor(my_guy.object_index, guy_obj))
-                {
-                    if(has_level(my_guy, "shield", 1) && !my_guy.berserk && my_guy.shield_ready)
-                    {
+                if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
+                    if (has_level(self.my_guy, "shield", 1) && !self.my_guy.berserk && self.my_guy.shield_ready) {
                         var play_shield_sound = false;
-                        if(my_guy.my_shield == noone)
-                        {
-                            inst = instance_create(my_guy.x, my_guy.y, shield_obj);
-                            inst.my_guy = my_guy.id;
-                            inst.my_source = object_index;
+
+                        if (self.my_guy.my_shield == noone) {
+                            inst = instance_create(self.my_guy.x, self.my_guy.y, shield_obj);
+
+                            inst.my_guy = self.my_guy.id;
+                            inst.my_source = self.object_index;
                             inst.my_player = self.my_player;
                             inst.charge = self.charge;
-                            inst.max_charge = my_guy.shield_max_charge;
-                            inst.channel_maxboost = my_guy.shield_channel_maxboost;
-                            inst.size_coef = my_guy.shield_size;
+                            inst.max_charge = self.my_guy.shield_max_charge;
+                            inst.channel_maxboost = self.my_guy.shield_channel_maxboost;
+                            inst.size_coef = self.my_guy.shield_size;
                             inst.my_color = self.my_color;
                             inst.holographic = self.holographic;
-                            my_guy.my_shield = inst.id;
+
+                            self.my_guy.my_shield = inst.id;
+
                             play_shield_sound = true;
-                            
+
                             ret = true;
                         }
-                        else
-                        {
-                            my_guy.my_shield.charge += self.charge * channelrate;
+                        else {
+                            self.my_guy.my_shield.charge += self.charge * self.channelrate;
                             play_shield_sound = true;
-                              
-                            if(my_guy.my_shield.my_color != self.my_color)
-                            {
-                                my_guy.my_shield.my_color = self.my_color;
-                                my_guy.my_shield.tint_updated = false;
+
+                            if (self.my_guy.my_shield.my_color != self.my_color) {
+                                self.my_guy.my_shield.my_color = self.my_color;
+                                self.my_guy.my_shield.tint_updated = false;
                             }
-                            
+
                             ret = true;
                         }
-                    
-                        if(ret)
-                        {
-                            if(is_player_guy) {
-                                increase_stat(my_guy.my_player, "shield_count", 1, false);
+
+                        if (ret) {
+                            if (is_player_guy) {
+                                increase_stat(self.my_guy.my_player, "shield_count", 1, false);
                             }
-                            if(play_shield_sound)
-                            {
+
+                            if (play_shield_sound) {
                                 my_sound_play(shield_sound);
                             }
-                            my_guy.casting_shield = true;
+
+                            self.my_guy.casting_shield = true;
                         }
                     }
-                    else
-                    {
+                    else {
                         my_sound_play(failed_sound);
                     }
                 }
             }
-            else if(!is_guy || my_guy.status_left[? "suppressed"] == 0)
-            {
+            else if (!is_guy || self.my_guy.status_left[? "suppressed"] == 0) {
                 // BIG BOLT
-                if(orb_count == 1 && (!is_guy || has_level(my_guy, "blast_mode", 1)))
-                {
-                    inst = create_energy_ball(id, "big_bolt", my_color, charge);
+                if (orb_count == 1 && (!is_guy || has_level(self.my_guy, "blast_mode", 1))) {
+                    inst = create_energy_ball(id, "big_bolt", self.my_color, self.charge);
+
                     inst.direction = aim_direction;
                     inst.speed = 3 + 7 * self.charge;
-                
-                    if(is_player_guy)
-                    {
-                        viewshake(my_player.my_camera,
+
+                    if (is_player_guy) {
+                        viewshake(self.my_player.my_camera,
                             point_direction(inst.hspeed, inst.vspeed, 0, 0), 5);
                     }
 
                     hboost = -inst.hspeed / 10;
                     vboost = -inst.vspeed / 10;
-                
-                    inst.hspeed += my_guy.hspeed;
-                    inst.vspeed += my_guy.vspeed;
-                
-                    if(my_guy != id && !my_guy.immovable) 
-                    {   
-                        with(my_guy)
-                        {
-                            hspeed += hboost;
-                        
-                            if(vboost <= 0 || !place_meeting(x, y + 1, terrain_obj))
-                            {
-                                vspeed += vboost;
+
+                    inst.hspeed += self.my_guy.hspeed;
+                    inst.vspeed += self.my_guy.vspeed;
+
+                    if (self.my_guy != self.id && !self.my_guy.immovable) {
+                        with (self.my_guy) {
+                            self.hspeed += hboost;
+
+                            if (vboost <= 0 || !place_meeting(self.x, self.y + 1, terrain_obj)) {
+                                self.vspeed += vboost;
                             }
                         }
                     }
-                
+
                     ret = true;
-                    if(is_player_guy) {
-                        increase_stat(my_guy.my_player, "blast_count" , 1, false);
+
+                    if (is_player_guy) {
+                        increase_stat(self.my_guy.my_player, "blast_count", 1, false);
                     }
                 }
-            
+
                 // BARRAGE
-                if(orb_count == 2 && (!is_guy || has_level(my_guy, "barrage_mode", 1)))
-                {
-                    firing = true;
-                    event_perform(ev_alarm,1);
-                    
+                if (orb_count == 2 && (!is_guy || has_level(self.my_guy, "barrage_mode", 1))) {
+                    self.firing = true;
+                    event_perform(ev_alarm, 1);
+
                     ret = true;
-                    if(is_player_guy) {
-                        increase_stat(my_guy.my_player, "barrage_count", 1, false);
+
+                    if (is_player_guy) {
+                        increase_stat(self.my_guy.my_player, "barrage_count", 1, false);
                     }
                 }
-            
+
                 // DASHWAVE
 
-                if(orb_count == 3 && (!is_guy || has_level(my_guy, "dashwave_mode", 1)))
-                {
-                    if(!my_guy.airborne)
-                    {
-                        my_guy.y -= 1;
-                        y -= 1;
+                if (orb_count == 3 && (!is_guy || has_level(self.my_guy, "dashwave_mode", 1))) {
+                    if (!self.my_guy.airborne) {
+                        self.my_guy.y -= 1;
+                        self.y -= 1;
                     }
-                
-                    inst = instance_create(x, y, dash_wave_obj);
+
+                    inst = instance_create(self.x, self.y, dash_wave_obj);
+
                     inst.image_angle = aim_direction;
                     inst.image_xscale = 0.5;
                     inst.image_yscale = 0.5;
-                    inst.dash_dist = dash_dist;
+                    inst.dash_dist = self.dash_dist;
                     inst.my_player = self.my_player;
-                    inst.force = self.charge * dash_step_ratio;
+                    inst.force = self.charge * self.dash_step_ratio;
                     inst.my_color = self.my_color;
                     inst.tint_updated = false;
-                    inst.my_guy = my_guy.id;
-                    inst.my_source = object_index;
+                    inst.my_guy = self.my_guy.id;
+                    inst.my_source = self.object_index;
                     inst.holographic = self.holographic;
-                
-                    my_guy.air_dashing = true;
-                    my_guy.speed *= 0.5;
-                
-                    firing = true;
-                    dash_steps_left = ceil(min(charge + 0.25, 1.25) * dash_base_steps);
-                    
+
+                    self.my_guy.air_dashing = true;
+                    self.my_guy.speed *= 0.5;
+
+                    self.firing = true;
+                    self.dash_steps_left = ceil(min(self.charge + 0.25, 1.25) * self.dash_base_steps);
+
                     ret = true;
-                    if(is_player_guy) {
-                        increase_stat(my_guy.my_player, "dashwave_count", 1, false);
+
+                    if (is_player_guy) {
+                        increase_stat(self.my_guy.my_player, "dashwave_count", 1, false);
                     }
                 }
 
-            
+
                 // BEAM
-            
-                if(orb_count == 5)
-                {
-                    inst = instance_create(x, y, beam_obj);
-                    inst.facing_right = my_guy.facing_right;
-                    inst.my_player = my_player;
-                    inst.force = charge;
-                    inst.orig_force = charge;
+
+                if (orb_count == 5) {
+                    inst = instance_create(self.x, self.y, beam_obj);
+
+                    inst.facing_right = self.my_guy.facing_right;
+                    inst.my_player = self.my_player;
+                    inst.force = self.charge;
+                    inst.orig_force = self.charge;
                     inst.my_color = self.my_color;
-                    inst.my_guy = my_guy.id;
-                    inst.my_source = object_index;
-                    inst.my_ball = id;
+                    inst.my_guy = self.my_guy.id;
+                    inst.my_source = self.object_index;
+                    inst.my_ball = self.id;
                     inst.holographic = self.holographic;
-                    my_guy.my_beam = inst;
-                    my_guy.casting_beam = true;
-                    firing = true;
+
+                    self.my_guy.my_beam = inst;
+                    self.my_guy.casting_beam = true;
+                    self.firing = true;
 
                     ret = true;
                 }
-            
+
                 // ARTILLERY SHOT
-                if(orb_count == 4)
-                {
-                    inst = create_energy_ball(id, "artillery_shot", my_color, max_charge + overcharge);
-                    inst.hspeed = rel_x;
-                    inst.vspeed = rel_y;   
+                if (orb_count == 4) {
+                    inst = create_energy_ball(self.id, "artillery_shot", self.my_color, self.max_charge + self.overcharge);
+
+                    inst.hspeed = self.rel_x;
+                    inst.vspeed = self.rel_y;
                     inst.speed = 5 + 7 * self.charge;
                     inst.tracked = true;
-                    if(my_guy != id && !my_guy.immovable) 
-                    {   
-                        my_guy.hspeed -= inst.hspeed / 10;  
-                        my_guy.vspeed -= inst.vspeed / 10;
+
+                    if (self.my_guy != self.id && !self.my_guy.immovable) {
+                        self.my_guy.hspeed -= inst.hspeed / 10;
+                        self.my_guy.vspeed -= inst.vspeed / 10;
                     }
-                    if(my_guy.object_index == cannon_base_obj)
-                    {
-                        increase_stat(my_guy.my_player, "cannon_shots", 1, false);
-                    
-                        if(my_guy.my_guy.seated)
-                        {
-                            var cam = my_guy.my_player.my_camera;
-                            if(instance_exists(cam))
-                            {
+
+                    if (self.my_guy.object_index == cannon_base_obj) {
+                        increase_stat(self.my_guy.my_player, "cannon_shots", 1, false);
+
+                        if (self.my_guy.my_guy.seated) {
+                            var cam = self.my_guy.my_player.my_camera;
+                            if (instance_exists(cam)) {
                                 cam.follow_shot = true;
                                 cam.follow_guy = false;
                                 cam.my_shot = inst.id;
                             }
                         }
                     }
+
                     ret = true;
                 }
             }
-        }  
-    
-        if(ret)
-        {
-            my_guy.casting = true;
-            if (!my_guy.casting_shield) {
-                if (abs(rel_x) > abs(rel_y)) {
-                    my_guy.casting_hor = true; 
+        }
+
+        if (ret) {
+            self.my_guy.casting = true;
+            if (!self.my_guy.casting_shield) {
+                if (abs(self.rel_x) > abs(self.rel_y)) {
+                    self.my_guy.casting_hor = true;
                 } else {
-                    my_guy.casting_up = rel_y < 0;
-                    my_guy.casting_down = rel_y > 0;
+                    self.my_guy.casting_up = self.rel_y < 0;
+                    self.my_guy.casting_down = self.rel_y > 0;
                 }
             }
-        
-            if(is_player_guy)
-            {
-                increase_stat(my_guy.my_player, "spells", 1, false);
-                increase_stat(my_guy.my_player, "spells" + string(my_color), 1, false);
-                increase_stat(my_guy.my_player, "spellstreak", 1, false);
-                increase_stat(my_guy.my_player, "combo", 1, false);
+
+            if (is_player_guy) {
+                increase_stat(self.my_guy.my_player, "spells", 1, false);
+                increase_stat(self.my_guy.my_player, "spells" + string(self.my_color), 1, false);
+                increase_stat(self.my_guy.my_player, "spellstreak", 1, false);
+                increase_stat(self.my_guy.my_player, "combo", 1, false);
             }
-        
-            if(my_guy.object_index == cannon_base_obj)
-            {
-                with(my_guy)
-                {
-                    if(shot_color > g_dark)
-                    {
-                        orbs[? shot_color] -= 1;
+
+            // CANNON COLOR CYCLING
+            if (self.my_guy.object_index == cannon_base_obj) {
+                with (self.my_guy) {
+                    if (self.shot_color > g_dark) {
+                        self.orbs[? self.shot_color] -= 1;
                     }
-                
+
                     // NEXT SHOT COLOR
-                    var next_shot_color = shot_color,
+                    var next_shot_color = self.shot_color,
                         orb_found = false, colors_tried = 0;
-                    do
-                    {
+
+                    do {
                         next_shot_color--;
-                        if(next_shot_color == g_yellow) next_shot_color = g_green; 
-                        if(next_shot_color < g_red)
+                        if (next_shot_color == g_yellow) next_shot_color = g_green;
+                        if (next_shot_color < g_red)
                             next_shot_color = g_blue;
-                        
-                        if(orbs[? next_shot_color] >= 1)
-                        {
-                            shot_color = next_shot_color;
-                            slots_absorbed = 4;
+
+                        if (self.orbs[? next_shot_color] >= 1) {
+                            self.shot_color = next_shot_color;
+                            self.slots_absorbed = 4;
                             orb_found = true;
                         }
                         colors_tried++;
                     }
                     until(orb_found || colors_tried >= 3)
                 
-                    if(!orb_found)
-                    {
-                        shot_color = g_dark;
-                        slots_absorbed = 0;
+                    if (!orb_found) {
+                        self.shot_color = g_dark;
+                        self.slots_absorbed = 0;
                     }
                 }
-            
-                my_color = my_guy.shot_color;
-                tint_updated = false;
+
+                self.my_color = self.my_guy.shot_color;
+                self.tint_updated = false;
             }
         }
-        
-        if(!firing)
-        {
-            charge = 0;
+
+        if (!self.firing) {
+            self.charge = 0;
         }
-        
-        my_guy.charging = false;
-        my_sound_stop(my_charge_sound);
-        started = false;
+
+        self.my_guy.charging = false;
+        my_sound_stop(self.my_charge_sound);
+        self.started = false;
     }
-        
+
     return ret;
 }
