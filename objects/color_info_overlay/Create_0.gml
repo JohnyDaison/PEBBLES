@@ -1,114 +1,135 @@
 event_inherited();
 
-my_player = noone;
+self.my_player = noone;
 
-nonfocusable = true;
-draw_border = false;
+self.nonfocusable = true;
+self.draw_border = false;
 self.bg_color = c_black;
 self.bg_alpha = 0.8;
 
 self.width = 416;
 self.height = 302;
-abi_panel_height = 64;
-margin = 8;
-line_height = 24;
+self.abi_panel_height = 64;
+self.margin = 8;
+self.line_height = 24;
 
 // to prevent visual blink in initial position
-x = -1000;
-y = -1000;
+self.x = -1000;
+self.y = -1000;
 
-eloffset_x = x + margin;
-eloffset_y = y + margin;
-
-
-power_pane = gui_add_color_power_pane(0, 0);
-power_pane.centered = true;
+// LEFT TOP CORNER
+self.eloffset_x = self.x + self.margin;
+self.eloffset_y = self.y + self.margin;
 
 
-eloffset_x += power_pane.width + margin;
-eloffset_y = y + power_pane.margin + power_pane.heading_height;
+// POWER PANE
+self.power_pane = gui_add_color_power_pane(0, 0);
+self.power_pane.centered = true;
 
 
-var ii, second_column_width = sprite_get_width(color_wheel_info_spr);
-var label_column_offset = line_height + margin;
+// SECOND COLUMN
+self.eloffset_x += self.power_pane.width + self.margin;
+self.eloffset_y = y + self.power_pane.margin + self.power_pane.heading_height;
+
+
+var inst;
+var second_column_width = sprite_get_width(color_wheel_info_spr);
+var label_column_offset = self.line_height + self.margin;
 var label_column_width = second_column_width - label_column_offset;
 
 
-ii = gui_add_label(0, 0, "");
-ii.icon = row_arrow_spr;
-ii.width = line_height;
-ii.height = line_height;
-ii.show_icon = true;
-ii.center_icon = true;
-ii.centered = true;
+// ATTACK ICON
+inst = gui_add_label(0, 0, "");
+
+inst.icon = row_arrow_spr;
+inst.width = self.line_height;
+inst.height = self.line_height;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.centered = true;
 
 //attack_icon = ii;
 
 
-ii = gui_add_label(label_column_offset, 0, "ATTACK");
-ii.centered = true;
-ii.width = label_column_width;
-ii.height = 24;
+// ATTACK LABEL
+inst = gui_add_label(label_column_offset, 0, "ATTACK");
+
+inst.centered = true;
+inst.width = label_column_width;
+inst.height = 24;
 
 //attack_label = ii;
 
 
-eloffset_y += line_height + margin;
+// NEW LINE
+self.eloffset_y += self.line_height + self.margin;
 
 
-ii = gui_add_label(0, 0, "");
-ii.icon = column_circle_spr;
-ii.width = line_height;
-ii.height = line_height;
-ii.show_icon = true;
-ii.center_icon = true;
-ii.centered = true;
+// DEFENSE ICON
+inst = gui_add_label(0, 0, "");
+
+inst.icon = column_circle_spr;
+inst.width = self.line_height;
+inst.height = self.line_height;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.centered = true;
 
 //defense_icon = ii;
 
 
-ii = gui_add_label(label_column_offset, 0, "DEFENSE");
-ii.centered = true;
-ii.width = label_column_width;
-ii.height = 24;
+// DEFENSE LABEL
+inst = gui_add_label(label_column_offset, 0, "DEFENSE");
+
+inst.centered = true;
+inst.width = label_column_width;
+inst.height = 24;
 
 //defense_label = ii;
 
 
-eloffset_y += line_height + margin;
+// NEW LINE
+self.eloffset_y += self.line_height + self.margin;
 
 
-ii = gui_add_label(0, 0, "");
-ii.icon = heal_power_spr;
-ii.width = line_height;
-ii.height = line_height;
-ii.show_icon = true;
-ii.center_icon = true;
-ii.centered = true;
+// HEAL ICON
+inst = gui_add_label(0, 0, "");
+
+inst.icon = heal_power_spr;
+inst.width = self.line_height;
+inst.height = self.line_height;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.centered = true;
 
 //healing_icon = ii;
 
 
-ii = gui_add_label(label_column_offset, 0, "HEAL");
-ii.centered = true;
-ii.width = label_column_width;
-ii.height = 24;
+// HEAL LABEL
+inst = gui_add_label(label_column_offset, 0, "HEAL");
+
+inst.centered = true;
+inst.width = label_column_width;
+inst.height = 24;
 
 //healing_label = ii;
 
 
-eloffset_y += line_height + margin;
+// NEW LINE
+self.eloffset_y += self.line_height + self.margin;
 
 
-ii = gui_add_label(0, 0, "");
-ii.icon = color_wheel_info_spr;
-ii.width = sprite_get_width(ii.icon) - 1;
-ii.height = sprite_get_height(ii.icon) - 1;
-ii.show_icon = true;
-ii.center_icon = true;
-ii.centered = true;
-ii.draw_bg_color = false;
+// COLOR WHEEL
+inst = gui_add_label(0, 0, "");
 
-color_wheel = ii;
+inst.icon = color_wheel_info_spr;
+inst.width = sprite_get_width(inst.icon) - 1;
+inst.height = sprite_get_height(inst.icon) - 1;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.centered = true;
+inst.draw_bg_color = false;
 
-color_wheel.rel_y = power_pane.height - color_wheel.height - 1;
+self.color_wheel = inst;
+
+self.color_wheel.rel_y = self.power_pane.height - self.color_wheel.height - 1;
