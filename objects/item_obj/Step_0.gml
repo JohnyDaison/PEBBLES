@@ -9,7 +9,7 @@ if(instance_exists(my_guy))
         invisible = true;
         if(object_index == color_orb_obj)
         {
-            if(color_added || color_held) { //  || color_in_use
+            if(color_added || color_held) {
                 invisible = my_guy.invisible;
             }
         }

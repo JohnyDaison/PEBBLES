@@ -1,4 +1,4 @@
 /// @description RENAME BASED ON COLOR
-self.name = DB.colornames[? my_color] + " Orb";
+self.name = DB.colornames[? self.my_color] + " Orb";
 
 event_inherited();

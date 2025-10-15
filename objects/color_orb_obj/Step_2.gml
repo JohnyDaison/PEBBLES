@@ -1,139 +1,118 @@
-if(singleton_obj.paused)
-{
+if (singleton_obj.paused) {
     exit;
 }
 
 /// STATE STARTS, ORBIT BEHAVIOURS, WALL AND SLIME DRAIN
-if(color_added && (sprite_index != color_slot_appear || invisible))
-{
-    invisible = false;
-    //visible = true;
-    sprite_index = color_slot_appear;
-    image_speed = 0.4;
-    image_index = 0;
-    size_coef = 1;
+if (self.color_added && (self.sprite_index != color_slot_appear || self.invisible)) {
+    self.invisible = false;
+    //self.visible = true;
+    self.sprite_index = color_slot_appear;
+    self.image_speed = 0.4;
+    self.image_index = 0;
+    self.size_coef = 1;
 
-    if(!instance_exists(orbit_anchor) && instance_exists(my_guy) && (object_is_ancestor(my_guy.object_index, guy_obj) || my_guy.object_index == charge_ball_obj))
-    {
-        orbit_anchor = my_guy.id;
+    if (!instance_exists(self.orbit_anchor) && instance_exists(self.my_guy) && (object_is_ancestor(self.my_guy.object_index, guy_obj) || self.my_guy.object_index == charge_ball_obj)) {
+        self.orbit_anchor = self.my_guy.id;
+    }
+}
+
+if (self.color_held && self.sprite_index != color_slot) {
+    self.sprite_index = color_slot;
+}
+
+if (self.color_consumed) {
+    self.color_held = false;
+
+    if (self.sprite_index != color_slot_disappear) {
+        self.sprite_index = color_slot_disappear;
+        //self.image_index = 0;
+        self.image_speed = 1;
     }
 
-    //color_in_use = false;
-    
-}
-if(color_held && sprite_index != color_slot)
-{
-    sprite_index = color_slot;
-}
-if(color_consumed)
-{ 
-    color_held = false;
-    if(sprite_index != color_slot_disappear)
-    {
-        sprite_index = color_slot_disappear;
-        //image_index = 0;
-        image_speed = 1;
+    if (instance_exists(self.orbit_anchor)) {
+        self.my_distance = (self.orbit_anchor.orb_dist) * (1 - (self.image_index / self.image_number));
     }
-    if(instance_exists(orbit_anchor))
-    {   
-        my_distance = (orbit_anchor.orb_dist)*(1-(image_index/image_number));
-    }
-    if(object_is_ancestor(my_guy.object_index, guy_obj))
-    {
-        if(my_guy.abi_triggered || my_guy.charging)
-        {
-            image_index = image_number-2*image_speed;  
+
+    if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
+        if (self.my_guy.abi_triggered || self.my_guy.charging) {
+            self.image_index = self.image_number - 2 * self.image_speed;
         }
     }
-}    
+}
 
-if(!instance_exists(my_guy))
-{
+if (!instance_exists(self.my_guy)) {
     instance_destroy();
     show_debug_message("ERROR: ORB DIED OF LONELINESS!!!");
     exit;
 }
 
 // ORBITING
-if(instance_exists(orbit_anchor))
-{  
+if (instance_exists(self.orbit_anchor)) {
     var xx, yy;
-    
-    my_distance = orbit_anchor.orb_dist;
-    base_size = orbit_anchor.orb_base_size;
-    if(!invisible)
-    {
-        if(object_is_child(orbit_anchor, guy_obj))
-        {
-            if(orbit_anchor.has_tped)   
-            {
-                x += orbit_anchor.x - orbit_anchor.pre_tp_x;
-                y += orbit_anchor.y - orbit_anchor.pre_tp_y;
+
+    self.my_distance = self.orbit_anchor.orb_dist;
+    self.base_size = self.orbit_anchor.orb_base_size;
+
+    if (!self.invisible) {
+        if (object_is_child(self.orbit_anchor, guy_obj)) {
+            if (self.orbit_anchor.has_tped) {
+                self.x += self.orbit_anchor.x - self.orbit_anchor.pre_tp_x;
+                self.y += self.orbit_anchor.y - self.orbit_anchor.pre_tp_y;
             }
         }
-        
-        xx = orbit_anchor.x + (cos(my_angle)*my_distance);
-        yy = orbit_anchor.y - sin(my_angle)*my_distance;
-        
-        direction = point_direction(x,y,xx,yy);
-        speed = 0.5*point_distance(x,y,xx,yy);
+
+        xx = self.orbit_anchor.x + (cos(self.my_angle) * self.my_distance);
+        yy = self.orbit_anchor.y - sin(self.my_angle) * self.my_distance;
+
+        self.direction = point_direction(self.x, self.y, xx, yy);
+        self.speed = 0.5 * point_distance(self.x, self.y, xx, yy);
     }
-    else 
-    {
-        x = orbit_anchor.x + (cos(my_angle)*my_distance);
-        y = orbit_anchor.y - sin(my_angle)*my_distance;
+    else {
+        self.x = self.orbit_anchor.x + (cos(self.my_angle) * self.my_distance);
+        self.y = self.orbit_anchor.y - sin(self.my_angle) * self.my_distance;
         speed = 0;
     }
 }
-else
-{
-    x = my_guy.x;
-    y = my_guy.y;
+else {
+    self.x = self.my_guy.x;
+    self.y = self.my_guy.y;
 }
 
-if(my_guy == id)
-{
-    cur_y = y-step-hover_offset;
-    light_yoffset = -step-hover_offset;
+if (self.my_guy == self.id) {
+    self.cur_y = self.y - self.step - self.hover_offset;
+    self.light_yoffset = -self.step - self.hover_offset;
 }
-else
-{
-    cur_y = y;
-    light_yoffset = 0;
+else {
+    self.cur_y = self.y;
+    self.light_yoffset = 0;
 }
 
 // ORB-ORB INTERACTIONS
-if(!invisible && sprite_index != no_sprite && my_color > 0 && instance_exists(orbit_anchor))
-{
+if (!self.invisible && self.sprite_index != no_sprite && self.my_color > 0 && instance_exists(self.orbit_anchor)) {
     // GUY
-    if(object_is_ancestor(orbit_anchor.object_index, guy_obj))
-    {
-        with(color_orb_obj)
-        {
+    if (object_is_ancestor(self.orbit_anchor.object_index, guy_obj)) {
+        with (color_orb_obj) {
             // how the fuck could have "other" been "antenna_obj" here??
-            if(id != other.id && orbit_anchor == other.orbit_anchor && !invisible && sprite_index != no_sprite && my_guy != id)
-            {
+            if (self.id != other.id && self.orbit_anchor == other.orbit_anchor && !self.invisible && self.sprite_index != no_sprite && self.my_guy != self.id) {
                 // LIGHTNING
-                if(my_color > 0) // !other.draw_lightning && 
+                if (self.my_color > g_dark) // !other.draw_lightning && 
                 {
-                    if(lightning_target != other.id && my_color != other.my_color)
-                    {
-                        with(other)
-                        {
-                            dist = point_distance(x, y, other.x, other.y);
-                            if(dist < 96 && !invisible && sprite_index != no_sprite)
-                            {
-                                draw_lightning = true;
-                                lightning_target = other.id;
-                                lightning_x = other.x;
-                                lightning_y = other.y;
-                                lightning_color = my_guy.potential_color;
+                    if (self.lightning_target != other.id && self.my_color != other.my_color) {
+                        with (other) {
+                            var dist = point_distance(self.x, self.y, other.x, other.y);
+
+                            if (dist < 96 && !self.invisible && self.sprite_index != no_sprite) {
+                                self.draw_lightning = true;
+                                self.lightning_target = other.id;
+                                self.lightning_x = other.x;
+                                self.lightning_y = other.y;
+                                self.lightning_color = self.my_guy.potential_color;
                                 other.receives_lightning = true;
                             }
                         }
                     }
                 }
-                    
+
                 // RESONANCE
                 /*
                 if(my_color == other.my_color)
@@ -146,145 +125,124 @@ if(!invisible && sprite_index != no_sprite && my_color > 0 && instance_exists(or
                 */
             }
         }
-        
+
         // EXTRA ENERGY DISTRIBUTION
-        if(orbit_anchor.channeling)
-        {
-            var i, orb, diff, orb_count = ds_list_size(orbit_anchor.color_slots);
-            
-            if(orb_count > 1)
-            {
-                for(i=0;i<orb_count;i++)
-                {
-                    orb = orbit_anchor.color_slots[| i];
-                    if(!is_undefined(orb) && instance_exists(orb) && orb.id != id && orb.my_color == my_color)
-                    {
-                        if(energy > 1 && orb.energy < 1)
-                        {
-                            diff = energy - orb.energy; 
-                            if(diff >= 2*distribution_step)
-                            {
-                                orb.direct_input_buffer += distribution_step;
-                                energy -= distribution_step;
+        if (self.orbit_anchor.channeling) {
+            var orb_count = ds_list_size(self.orbit_anchor.color_slots);
+
+            if (orb_count > 1) {
+                for (var i = 0; i < orb_count; i++) {
+                    var orb = self.orbit_anchor.color_slots[| i];
+
+                    if (!is_undefined(orb) && instance_exists(orb) && orb.id != self.id && orb.my_color == self.my_color) {
+                        if (self.energy > 1 && orb.energy < 1) {
+                            var diff = self.energy - orb.energy;
+
+                            if (diff >= 2 * self.distribution_step) {
+                                orb.direct_input_buffer += self.distribution_step;
+                                self.energy -= self.distribution_step;
                             }
                         }
                     }
                 }
             }
         }
-    
+
     }
     // CHARGE BALL
-    else if(orbit_anchor.object_index == charge_ball_obj)
-    {
+    else if (self.orbit_anchor.object_index == charge_ball_obj) {
         // LIGHTNING
-        if(my_color > 0 && orbit_anchor.charging) // !other.draw_lightning && 
+        if (self.my_color > 0 && self.orbit_anchor.charging) // !other.draw_lightning && 
         {
-            dist = point_distance(x, y, orbit_anchor.x, orbit_anchor.y);
-            if(dist < 96 && !invisible && sprite_index != no_sprite)
-            {
-                draw_lightning = true;
-                lightning_target = orbit_anchor.id;
-                lightning_x = orbit_anchor.x;
-                lightning_y = orbit_anchor.y;
-                lightning_color = my_color;
-                //orbit_anchor.receives_lightning = true;
+            var dist = point_distance(self.x, self.y, self.orbit_anchor.x, self.orbit_anchor.y);
+
+            if (dist < 96 && !self.invisible && self.sprite_index != no_sprite) {
+                self.draw_lightning = true;
+                self.lightning_target = self.orbit_anchor.id;
+                self.lightning_x = self.orbit_anchor.x;
+                self.lightning_y = self.orbit_anchor.y;
+                self.lightning_color = self.my_color;
+                //self.orbit_anchor.receives_lightning = true;
             }
         }
-        
+
         // EXTRA ENERGY DISTRIBUTION
-        var i, orb, diff, orb_count = ds_list_size(orbit_anchor.orbs);
-        
-        if(orb_count > 1)
-        {
-            for(i=0;i<orb_count;i++)
-            {
-                orb = orbit_anchor.orbs[| i];
-                if(!is_undefined(orb) && instance_exists(orb) && orb.id != id && orb.my_color == my_color)
-                {
-                    if(energy > 1 && orb.energy < 1)
-                    {
-                        diff = energy - orb.energy; 
-                        if(diff >= 2*distribution_step)
-                        {
-                            orb.direct_input_buffer += distribution_step;
-                            energy -= distribution_step;
+        var orb_count = ds_list_size(self.orbit_anchor.orbs);
+
+        if (orb_count > 1) {
+            for (var i = 0; i < orb_count; i++) {
+                var orb = self.orbit_anchor.orbs[| i];
+
+                if (!is_undefined(orb) && instance_exists(orb) && orb.id != self.id && orb.my_color == self.my_color) {
+                    if (self.energy > 1 && orb.energy < 1) {
+                        var diff = self.energy - orb.energy;
+
+                        if (diff >= 2 * self.distribution_step) {
+                            orb.direct_input_buffer += self.distribution_step;
+                            self.energy -= self.distribution_step;
                         }
                     }
                 }
             }
         }
-        
+
     }
 }
 
 // OBJECT DRAIN
-if(instance_exists(drained_object))
-{
+if (instance_exists(self.drained_object)) {
     var stop_drain = false;
-    
+
     /*
-    if(!(drained_object.my_color & my_color))
+    if(!(self.drained_object.my_color & self.my_color))
     {
         stop_drain = true;
     }
     */
-    
-    var drain_efficiency = min_drain_efficiency;
-    if(energy < base_energy)
-    {
-        drain_efficiency = max_drain_efficiency;
+
+    var drain_efficiency = self.min_drain_efficiency;
+    if (self.energy < self.base_energy) {
+        drain_efficiency = self.max_drain_efficiency;
     }
-    
-    if(!stop_drain)
-    {
-        if(drained_object.object_index == wall_obj)
-        {
-            if(holographic == drained_object.holographic)
-            {
-                if(drained_object.energy > drain_energy_step)
-                {
-                    drained_object.energy -= drain_energy_step;
-                    energy += drain_efficiency*drain_energy_step;
+
+    if (!stop_drain) {
+        if (self.drained_object.object_index == wall_obj) {
+            if (self.holographic == self.drained_object.holographic) {
+                if (self.drained_object.energy > self.drain_energy_step) {
+                    self.drained_object.energy -= self.drain_energy_step;
+                    self.energy += drain_efficiency * self.drain_energy_step;
                 }
-                else if(drained_object.energy > 0)
-                {
-                    energy += drain_efficiency*drained_object.energy;
-                    drained_object.energy = 0;
-                    drained_object.my_next_color = g_dark;
-                
+                else if (self.drained_object.energy > 0) {
+                    self.energy += drain_efficiency * self.drained_object.energy;
+                    self.drained_object.energy = 0;
+                    self.drained_object.my_next_color = g_dark;
+
                     stop_drain = true;
                 }
             }
         }
-        else if(drained_object.object_index == slime_mob_obj)
-        {
-            if(holographic == drained_object.holographic)
-            {
-                if(drained_object.energy > drain_energy_step)
-                {
-                    drained_object.energy -= drain_energy_step;
-                    energy += drain_efficiency*drain_energy_step;
+        else if (self.drained_object.object_index == slime_mob_obj) {
+            if (self.holographic == self.drained_object.holographic) {
+                if (self.drained_object.energy > self.drain_energy_step) {
+                    self.drained_object.energy -= self.drain_energy_step;
+                    self.energy += drain_efficiency * self.drain_energy_step;
                 }
-                else
-                {
+                else {
                     stop_drain = true;
                 }
             }
         }
     }
-    
-    if(stop_drain)
-    {
-        drained_object = noone;
-        alarm[6] = drain_quick_update_delay;
+
+    if (stop_drain) {
+        self.drained_object = noone;
+        self.alarm[6] = self.drain_quick_update_delay;
     }
 }
 // DRAINED OBJECT DESTROYED
-else if(drained_object != noone)
-{
-    drained_object = noone;
-    alarm[6] = drain_quick_update_delay;
+else if (self.drained_object != noone) {
+    self.drained_object = noone;
+    self.alarm[6] = self.drain_quick_update_delay;
 }
 
 
@@ -312,16 +270,15 @@ else
 }
 */
 
-size = base_size * size_coef * (0.2 + 0.8*energy/base_energy); // * resonance_size_boost
+self.size = self.base_size * self.size_coef * (0.2 + 0.8 * self.energy / self.base_energy); // * resonance_size_boost
 
 // PARTICLES
 
-if(!invisible)
-{
-    part_type_colour1(part_type,self.tint);
-    part_type_size(part_type, 0, size, -0.025, 0);
-    part_type_alpha1(part_type, holo_alpha);
-    part_particles_create(part_system, x, cur_y, part_type, 1);
+if (!self.invisible) {
+    part_type_colour1(self.part_type, self.tint);
+    part_type_size(self.part_type, 0, self.size, -0.025, 0);
+    part_type_alpha1(self.part_type, self.holo_alpha);
+    part_particles_create(self.part_system, self.x, self.cur_y, self.part_type, 1);
 }
 
 event_inherited();

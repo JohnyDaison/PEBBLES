@@ -24,7 +24,7 @@ gravity_coef = 0.04;
 friction_coef = 0.01;
 custom_sprite = true;
 draw_label = false;
-if(gamemode_obj.is_campaign) // TODO: change condition
+if (gamemode_obj.is_campaign) // TODO: change condition
 {
     draw_label = true;
 }
@@ -72,13 +72,13 @@ part_system = part_system_create();
 part_system_depth(part_system, depth);
 part_system_automatic_draw(part_system, false);
 part_type = part_type_create();
-part_type_sprite(part_type,color_slot,false,false,false);
-part_type_blend(part_type,true);
+part_type_sprite(part_type, color_slot, false, false, false);
+part_type_blend(part_type, true);
 part_type_scale(part_type, 1, 1);
 part_type_size(part_type, 0, 1, -0.025, 0);
-part_type_life(part_type,40,40);
-part_type_gravity(part_type,0,0);
-part_type_orientation(part_type,0,0,9,0,0);
+part_type_life(part_type, 40, 40);
+part_type_gravity(part_type, 0, 0);
+part_type_orientation(part_type, 0, 0, 9, 0, 0);
 
 // LIGHTNING
 
@@ -92,8 +92,8 @@ lightning_steps = 5;
 lightning_thickness = 5;
 lightning_width = 16;
 lightning_alpha = 1;
-lgt_r1 = -0.5*lightning_width; 
-lgt_r2 = 0.5*lightning_width;
+lgt_r1 = -0.5 * lightning_width;
+lgt_r2 = 0.5 * lightning_width;
 
 // RESONANCE
 /*
@@ -106,7 +106,6 @@ resonance_step = 0;
 */
 self.name = "Color Orb";
 
-self.description = 
+self.description =
 @"Lets you change your color, powers your spells.
 Recharges itself slowly.";
-
