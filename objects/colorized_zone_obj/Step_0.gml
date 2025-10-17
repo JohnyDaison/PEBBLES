@@ -1,5 +1,5 @@
 event_inherited();
 
-if (visible) {
-    zone_debug_tint = DB.colormap[? my_color];
+if (self.visible) {
+    self.zone_debug_tint = DB.colormap[? self.my_color];
 }

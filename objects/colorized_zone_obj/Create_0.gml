@@ -1,3 +1,3 @@
 event_inherited();
 
-my_color = g_white;
+self.my_color = g_white;
