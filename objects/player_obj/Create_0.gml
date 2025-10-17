@@ -5,6 +5,7 @@ flag = "";
 icon = empty_mask;
 control_set = 0;
 control_index = -1;
+// this control_obj is only used in room_escape1, everything else uses guy_obj.control_obj
 control_obj = noone;
 handicaps = ds_map_create();
 stats = ds_map_create();
