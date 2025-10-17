@@ -1,14 +1,14 @@
 event_inherited();
 
-small_margin = 8;
-large_margin = 16;
-line_height = 32;
+var small_margin = 8;
+var large_margin = 16;
+var line_height = 32;
 
 self.width = 992;
 self.text = "Control Settings";
 self.modal = true;
 
-var labels;
+var labels = [];
 
 labels[up] = "Up";
 labels[down] = "Down";
@@ -30,54 +30,59 @@ labels[inventory_4] = "Item 4";
 labels[colorinfo] = "Color Info";
 labels[pause] = "Pause";
 
-input_count = colorinfo + 1;
+self.input_count = colorinfo + 1;
 
 
-top_line = 64;
-column_size = 176;
-column_start = top_line + line_height;
+var top_line = 64;
+var column_size = 176;
+var column_start = top_line + line_height;
 
-self.height = column_start - line_height/2 
-                + line_height * input_count 
-                + line_height + 2 * small_margin;
-x = room_width/2-self.width/2;
-y = room_height/2-self.height/2;
+var columnCenters = [
+    column_size * 1 / 2,
+    column_size * 3 / 2,
+    column_size * 5 / 2,
+    column_size * 7 / 2,
+    column_size * 9 / 2
+];
+
+self.height = column_start - (line_height / 2) + (line_height * (self.input_count + 1)) + (2 * small_margin);
+self.x = room_width / 2 - self.width / 2;
+self.y = room_height / 2 - self.height / 2;
 
 
-eloffset_x = x + large_margin;
-eloffset_y = y + top_line;
+self.eloffset_x = self.x + large_margin;
+self.eloffset_y = self.y + top_line;
 
-gui_add_label(column_size*3/2, 0, "Keyboard 1");
+gui_add_label(columnCenters[1], 0, "Keyboard 1");
+gui_add_label(columnCenters[2], 0, "Keyboard 2");
+gui_add_label(columnCenters[3], 0, "Gamepad 1");
+gui_add_label(columnCenters[4], 0, "Gamepad 2");
 
-gui_add_label(column_size*5/2, 0, "Keyboard 2");
+self.eloffset_y = self.y + column_start;
 
-gui_add_label(column_size*7/2, 0, "Gamepad 1");
+for (var i = 0; i < self.input_count; i++) {
+    var inst = noone;
+    gui_add_label(columnCenters[0], 0, labels[i]);
 
-gui_add_label(column_size*9/2, 0, "Gamepad 2");
+    inst = gui_add_keybinder(columnCenters[1], 0, keyboard1_obj.binds[? i]);
+    self.key1[i] = ds_list_find_index(self.gui_content, inst);
 
-eloffset_y = y + column_start;
+    inst = gui_add_keybinder(columnCenters[2], 0, keyboard2_obj.binds[? i]);
+    self.key2[i] = ds_list_find_index(self.gui_content, inst);
 
-for(i=0; i < input_count; i+=1)
-{
-    gui_add_label(column_size*1/2, line_height*i, labels[i]);
-    
-    ii = gui_add_keybinder(column_size*3/2, line_height*i, keyboard1_obj.binds[? i]);
-    self.key1[i] = ds_list_find_index(self.gui_content, ii);
-    
-    ii = gui_add_keybinder(column_size*5/2, line_height*i, keyboard2_obj.binds[? i]);
-    self.key2[i] = ds_list_find_index(self.gui_content, ii);
-    
-    ii = gui_add_gamepad_binder(column_size*7/2, line_height*i, 0, i);
-    self.pad1[i] = ds_list_find_index(self.gui_content, ii);
-    
-    ii = gui_add_gamepad_binder(column_size*9/2, line_height*i, 1, i);
-    self.pad2[i] = ds_list_find_index(self.gui_content, ii);
+    inst = gui_add_gamepad_binder(columnCenters[3], 0, 0, i);
+    self.pad1[i] = ds_list_find_index(self.gui_content, inst);
+
+    inst = gui_add_gamepad_binder(columnCenters[4], 0, 1, i);
+    self.pad2[i] = ds_list_find_index(self.gui_content, inst);
+
+    self.eloffset_y += line_height;
 }
 
-eloffset_x = x;
-eloffset_y += line_height*i + small_margin;
+self.eloffset_x = self.x;
+self.eloffset_y += small_margin;
 
-ii = gui_add_button(self.width/2, 0, "OK", control_config_OK);
-ii.icon = big_tick_spr;
-ii.center_icon = true;
-ii.show_icon = true;
+var inst = gui_add_button(self.width / 2, 0, "OK", control_config_OK);
+inst.icon = big_tick_spr;
+inst.center_icon = true;
+inst.show_icon = true;
