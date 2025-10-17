@@ -22,13 +22,17 @@ can be methods on `cannon_base_obj` object
 on `healthbar_overlay` doesn't have the same logic as in `empty_frame`
 because `healthbar_overlay` overrides parent's `Draw GUI` event without inheriting it
 
+* `gui_label` and `gui_pane`
+have duplicate centering code
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
 (but store the String to Enum mapping somewhere)
 
-gui_object.rel_position
-mods - should be dynamic enum
+* `gui_object.rel_position`
+* mods - should be dynamic Enum
+* `singleton_obj.show_console`
 
 
 Convert these to Structs:

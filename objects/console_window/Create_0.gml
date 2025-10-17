@@ -7,26 +7,30 @@ self.show_state = "hide";
 self.menu_open = false;
 self.show_backgrounds = true;
 
-var resolution_coef = view_hport[0]/1080;
+function updateVisibleLineCount() {
+    var resolution_coef = view_hport[0] / 1080;
 
-switch(singleton_obj.show_console)
-{
-    case "peek":
-        visible_line_count = 3;
-        break;
-    case "normal":
-        visible_line_count = floor(resolution_coef * 12);
-        break;
-    case "full":
-        visible_line_count = floor(resolution_coef * 30);
-        break;
+    switch (singleton_obj.show_console) {
+        case "peek":
+            self.visible_line_count = 3;
+            break;
+        case "normal":
+            self.visible_line_count = floor(resolution_coef * 12);
+            break;
+        case "full":
+            self.visible_line_count = floor(resolution_coef * 30);
+            break;
+    }
+
+    self.height = (self.visible_line_count + 1) * self.line_height + self.panel_height;
 }
 
-self.width = view_wport[0];
-self.height = (visible_line_count+1)*line_height + panel_height;
+updateVisibleLineCount();
 
-x = 0;
-y = 0;
+self.width = view_wport[0];
+
+self.x = 0;
+self.y = 0;
 
 self.keep_inside = false;
 
@@ -39,113 +43,111 @@ self.border_color = c_green;
 
 // ELEMENTS
 
-var i;
+var inst;
 
 // HISTORY
-i = gui_add_scroll_list(x, y);
-i.width = self.width;
-i.height = self.height - panel_height;
-i.centered = true;
-i.auto_items = true;
-i.align_items = "left";
-i.draw_bg_color = false;
-i.draw_border = false;
-i.bg_color = c_black;
-i.text_color = c_white;
-i.alternate_lines = true;
-i.item_height = 32;
-i.bar_width = 16;
-i.item_padding = 0;
-i.ends_height = 16;
-i.highlight_color = merge_colour(c_black, c_purple, 0.5);
-i.select_color = merge_colour(c_black, c_lime, 0.5);
-i.max_items = visible_line_count;
-i.is_list_picker = true;
+inst = gui_add_scroll_list(self.x, self.y);
+inst.width = self.width;
+inst.height = self.height - self.panel_height;
+inst.centered = true;
+inst.auto_items = true;
+inst.align_items = "left";
+inst.draw_bg_color = false;
+inst.draw_border = false;
+inst.bg_color = c_black;
+inst.text_color = c_white;
+inst.alternate_lines = true;
+inst.item_height = 32;
+inst.bar_width = 16;
+inst.item_padding = 0;
+inst.ends_height = 16;
+inst.highlight_color = merge_colour(c_black, c_purple, 0.5);
+inst.select_color = merge_colour(c_black, c_lime, 0.5);
+inst.max_items = self.visible_line_count;
+inst.is_list_picker = true;
 
-gui_reset_scroll_items(i, "text", DB.console_history);
+gui_reset_scroll_items(inst, "text", DB.console_history);
 
-self.history_list = i;
+self.history_list = inst;
 
 
 // POPUP TOGGLE
-i = gui_add_button(x, y+height-32, "", console_toggle_popup_on_log);
-i.icon = green_dot_spr;
-i.show_icon = true;
-i.center_icon = true;
-i.width = 31;
-i.height = 31;
-i.centered = true;
-i.tooltip = "Show Console when a new log message is added (toggle)";
+inst = gui_add_button(self.x, self.y + self.height - 32, "", console_toggle_popup_on_log);
+inst.icon = green_dot_spr;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.width = 31;
+inst.height = 31;
+inst.centered = true;
+inst.tooltip = "Show Console when a new log message is added (toggle)";
 
-self.log_popup_button = i;
+self.log_popup_button = inst;
 
 // INPUT
-i = gui_add_command_input(x+32, y+height-32, ">");
-i.text_align = "left";
-i.show_prompt = true;
-i.width = self.width-64;
-i.height = 31;
-i.centered = true;
+inst = gui_add_command_input(self.x + 32, self.y + self.height - 32, ">");
+inst.text_align = "left";
+inst.show_prompt = true;
+inst.width = self.width - 64;
+inst.height = 31;
+inst.centered = true;
 
-self.command_input = i;
+self.command_input = inst;
 
 // MENU
 
-i = gui_add_button(x+width-32, y+height-32, "", toggle_console_menu);
-i.icon = hamburger_icon_spr;
-i.show_icon = true;
-i.center_icon = true;
-i.width = 31;
-i.height = 31;
-i.centered = true;
+inst = gui_add_button(self.x + self.width - 32, self.y + self.height - 32, "", toggle_console_menu);
+inst.icon = hamburger_icon_spr;
+inst.show_icon = true;
+inst.center_icon = true;
+inst.width = 31;
+inst.height = 31;
+inst.centered = true;
 
-self.menu_button = i;
+self.menu_button = inst;
 
-menu_height = 128;
+self.menu_height = 128;
 
-i = gui_add_pane(x+width/2 -32, y+height - (menu_height+panel_height), "");
-i.width = width/2;
-i.height = menu_height;
-i.draw_bg_color = true;
-i.bg_alpha = 0.8;
-i.depth -= 5;
-i.visible = false;
-i.hidden = true;
-i.align = "left";
-i.centered = true;
+inst = gui_add_pane(self.x + self.width / 2 - 32, self.y + self.height - (self.menu_height + self.panel_height), "");
+inst.width = self.width / 2;
+inst.height = self.menu_height;
+inst.draw_bg_color = true;
+inst.bg_alpha = 0.8;
+inst.depth -= 5;
+inst.visible = false;
+inst.hidden = true;
+inst.align = "left";
+inst.centered = true;
 
-self.menu_pane = i;
+self.menu_pane = inst;
 
-with(menu_pane)
-{
-    eloffset_x = x + 16;
-    eloffset_y = y + 8;
-    
-    command_drop = gui_add_dropdown(0, 16, "text", DB.console_commands_saved, 0);
-    
-    command_drop.width = width - 64;
-    
-    i = gui_add_button(0, 64, "Copy", console_dropdown_copy);
-    i.align = "left";
-    
-    i = gui_add_button(192, 64, "Copy & Execute", console_dropdown_copyparse);
-    i.align = "left";
-    
-    i = gui_add_button(416, 64, "Watches", open_watches_window);
-    i.align = "left";
+with (self.menu_pane) {
+    self.eloffset_x = self.x + 16;
+    self.eloffset_y = self.y + 8;
+
+    self.command_drop = gui_add_dropdown(0, 16, "text", DB.console_commands_saved, 0);
+
+    self.command_drop.width = self.width - 64;
+
+    inst = gui_add_button(0, 64, "Copy", console_dropdown_copy);
+    inst.align = "left";
+
+    inst = gui_add_button(192, 64, "Copy & Execute", console_dropdown_copyparse);
+    inst.align = "left";
+
+    inst = gui_add_button(416, 64, "Watches", open_watches_window);
+    inst.align = "left";
 }
 
 if (DB.console_history_cur_item == -1) {
-    history_list.cur_item = history_list.item_count;
-    history_list.selection_pos = history_list.max_items;
+    self.history_list.cur_item = self.history_list.item_count;
+    self.history_list.selection_pos = self.history_list.max_items;
 } else {
-    history_list.cur_item = DB.console_history_cur_item;
-    history_list.selection_pos = DB.console_history_selection_pos;
+    self.history_list.cur_item = DB.console_history_cur_item;
+    self.history_list.selection_pos = DB.console_history_selection_pos;
 }
 
-with(history_list)
-{
-    script_execute(item_change_script);
+with (self.history_list) {
+    script_execute(self.item_change_script);
 }
 
-alarm[1] = 5;
+self.alarm[1] = 5;
