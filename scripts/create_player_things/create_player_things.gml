@@ -1,43 +1,43 @@
+/// @self guy_spawner_obj | level_start_obj
+/// @param {Id.Instance} player Description
 function create_player_things(player) {
     var new_guy = noone;
 
     // CREATE SPAWN POINT
-    guy_spawn_point_create(id, player, true);
-    
+    guy_spawn_point_create(self.id, player, true);
+
     var last_human = gamemode_obj.last_human_player;
     var has_view = !player.is_cpu; // human
-    
+
     // less than 2 humans, first 2 players
     if (!has_view) {
-         has_view = gamemode_obj.human_player_count < 2 && player.number <= 2
+        has_view = gamemode_obj.human_player_count < 2 && player.number <= 2
                     && (last_human == 0 || player.team_number != gamemode_obj.players[? last_human].team_number);
     }
-    
+
     // more than 2 humans
     if (!has_view) {
-         has_view = gamemode_obj.human_player_count > 2;
+        has_view = gamemode_obj.human_player_count > 2;
     }
-    
+
     var player_camera = noone;
 
-    if(has_view)
-    {
+    if (has_view) {
         // CREATE CAMERA
-        var ii = instance_create(x,y,player_camera_obj);
+        var inst = instance_create(self.x, self.y, player_camera_obj);
 
-        ii.on = true;
-        player_camera = ii;
-        player_camera.view = ds_list_size(main_camera_obj.player_view_list)+1; // first unused view
+        inst.on = true;
+        player_camera = inst;
+        player_camera.view = ds_list_size(main_camera_obj.player_view_list) + 1; // first unused view
         if (gamemode_obj.human_player_count > 2) {
             player_camera.view = player.number;
         }
-        
+
         player_camera.depth -= player_camera.view; // is this needed?
-        
+
         main_camera_obj.add_player_camera(player_camera);
 
-        if(gamemode_obj.player_count == 1)
-        {
+        if (gamemode_obj.player_count == 1) {
             player_camera.only_cam = true;
         }
 
@@ -54,44 +54,40 @@ function create_player_things(player) {
     player.my_base = id;
 
     // GUY
-    if(player.is_cpu)
-    {
-        new_guy = create_npc_guy(x, y, player);
-    
-        with(new_guy)
-        {
-            difficulty = player.cpu_difficulty;
-            bot_speed = difficulty;
-            bot_complexity = difficulty;
-            bot_aggressiveness = difficulty;
-        
-            if(object_index == guy_spawner_obj) // it's about match vs campaign, not the object
+    if (player.is_cpu) {
+        new_guy = create_npc_guy(self.x, self.y, player);
+
+        with (new_guy) {
+            self.difficulty = player.cpu_difficulty;
+            self.bot_speed = self.difficulty;
+            self.bot_complexity = self.difficulty;
+            self.bot_aggressiveness = self.difficulty;
+
+            if (self.object_index == guy_spawner_obj) // it's about match vs campaign, not the object
             {
-                bot_activation_distance *= 10;
-                bot_deactivation_distance *= 20;
+                self.bot_activation_distance *= 10;
+                self.bot_deactivation_distance *= 20;
             }
-            else
-            {
-                bot_activation_distance *= 5;
-                bot_deactivation_distance *= 10;
+            else {
+                self.bot_activation_distance *= 5;
+                self.bot_deactivation_distance *= 10;
             }
-        
-            draw_label = false;
+
+            self.draw_label = false;
         }
         player.title = "CPU" + string(player.number);
     }
-    else
-    {
-        new_guy = instance_create(x,y, player_guy);
+    else {
+        new_guy = instance_create(self.x, self.y, player_guy);
         player.title = "P" + string(player.number);
     }
 
-    my_guy = new_guy;
+    self.my_guy = new_guy;
 
     new_guy.my_player = player;
     new_guy.my_spawner = self.id;
     new_guy.my_base = self.id;
-    
+
     // select skin based on flag for now
     if (new_guy.my_player.flag == "racing_flag") {
         new_guy.my_skin = DB.guy_skins[? "biker"];
@@ -102,8 +98,7 @@ function create_player_things(player) {
     new_guy.control_index = player.control_index;
     player.my_guy = new_guy;
 
-    if(!mod_get_state("dark_color"))
-    {
+    if (!mod_get_state("dark_color")) {
         new_guy.my_color = g_red;
         new_guy.potential_color = new_guy.my_color;
         new_guy.tint_updated = false;
@@ -116,10 +111,9 @@ function create_player_things(player) {
     // CHARGEBALL
     guy_provide_chargeball(new_guy);
 
-    instance_create(x,y,spawn_effect_obj);
+    instance_create(self.x, self.y, spawn_effect_obj);
 
-    if(has_view)
-    {
+    if (has_view) {
         // SET UP CAMERA
 
         player_camera.my_guy = new_guy.id;
@@ -127,21 +121,20 @@ function create_player_things(player) {
         player_camera.follow_spawner = false;
 
         // OVERLAYS
-        if(gamemode_obj.mode != "volleyball" || player.number <= 2)
-        {
+        if (gamemode_obj.mode != "volleyball" || player.number <= 2) {
             add_player_overlay(healthbar_overlay, player);
         }
-        
-        if(!gamemode_obj.no_inventory)
+
+        if (!gamemode_obj.no_inventory)
             add_player_overlay(inventory_overlay, player);
         add_player_overlay(overhead_overlay, player);
-        if(mod_get_state("tutorials") && !player.is_cpu)
+        if (mod_get_state("tutorials") && !player.is_cpu)
             add_player_overlay(tutorial_overlay, player);
         add_player_overlay(status_effect_overlay, player);
         add_player_overlay(radial_overlay, player);
         player.battlefeed = add_player_overlay(battlefeed_overlay, player);
     }
 
-    ii = instance_create(x,y,name_plate_window);
-    ii.my_guy = new_guy.id;
+    var inst = instance_create(self.x, self.y, name_plate_window);
+    inst.my_guy = new_guy.id;
 }
