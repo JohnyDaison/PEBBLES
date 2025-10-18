@@ -32,6 +32,6 @@ if(player_start_point)
 if(has_cannon)
 {
     var cannon = instance_create(x,y-128,cannon_base_obj);
-    cannon_assign_player(cannon, my_player);
+    cannon.assignPlayer(self.my_player);
     base_cannon = cannon;
 }

@@ -42,6 +42,6 @@ else {
 ds_map_destroy(self.orbs);
 ds_map_destroy(self.orb_light);
 
-cannon_unassign_player(self);
+self.unassignPlayer();
 
 event_inherited();

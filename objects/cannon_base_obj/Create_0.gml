@@ -85,6 +85,50 @@ direct_light = 0.1;
 
 my_waypoint = noone;
 
+// METHODS
+
+/// @param {Id.Instance} player
+function assignPlayer(player) {
+    if (!instance_exists(player)) {
+        return;
+    }
+
+    if (self.my_player != player.id) {
+        self.unassignPlayer();
+    }
+
+    var index = ds_list_find_index(player.my_cannons, self.id);
+
+    if (index == -1) {
+        ds_list_add(player.my_cannons, self.id);
+    }
+
+    self.my_player = player.id;
+    self.my_guy = player.my_guy;
+}
+
+/// @param {Real} playerNumber
+function assignPlayerNumber(playerNumber) {
+    var player = gamemode_obj.players[? playerNumber];
+
+    if (!is_undefined(player)) {
+        self.assignPlayer(player);
+    }
+}
+
+function unassignPlayer() {
+    if (!instance_exists(self.my_player)) {
+        return;
+    }
+
+    var index = ds_list_find_index(self.my_player.my_cannons, self.id);
+
+    if (index != -1) {
+        ds_list_delete(self.my_player.my_cannons, index);
+    }
+}
+
+// INIT
 if (instance_exists(place_controller_obj)) {
     var wp = instance_create(self.x, self.y + self.guy_y_offset, npc_waypoint_obj);
     wp.auto_adjust = false;
@@ -98,4 +142,4 @@ if (instance_exists(place_controller_obj)) {
     regenerate_nav_graph();
 }
 
-cannon_assign_player(self, self.my_player);
+self.assignPlayer(self.my_player);

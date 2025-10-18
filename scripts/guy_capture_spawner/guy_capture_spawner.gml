@@ -16,7 +16,7 @@ function guy_capture_spawner(guy, spawner) {
             
                 if(instance_exists(spawner.base_cannon))
                 {
-                    cannon_assign_player(spawner.base_cannon, player);
+                    spawner.base_cannon.assignPlayer(player);
                 }
             }
         

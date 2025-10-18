@@ -1,1 +1,1 @@
-cannon_assign_player_number(self, 1);
+self.assignPlayerNumber(1);
