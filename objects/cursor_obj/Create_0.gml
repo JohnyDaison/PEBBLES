@@ -1,28 +1,28 @@
-room_x = 0;
-room_y = 0;
+self.room_x = 0;
+self.room_y = 0;
 
 self.my_color = g_dark;
 self.tint_updated = false;
 self.tint = c_dkgray;
 self.new_tint = self.tint;
 
-last_x = x;
-last_y = y;
+self.last_x = x;
+self.last_y = y;
 
-glow_dir = 1;
-glow_step = 0.01;
-glow_min = 0.4;
-glow_ratio = glow_min;
+self.glow_dir = 1;
+self.glow_step = 0.01;
+self.glow_min = 0.4;
+self.glow_ratio = self.glow_min;
 
-square_side = 128;
+self.square_side = 128;
 
-sprite_index = cursor_arrow;
-active_tool = noone;
-last_active_tool = active_tool;
-ctrl_tool = panning_tool_obj;
-old_tool = noone;
-image_speed = 0;
+self.sprite_index = cursor_arrow;
+self.active_tool = noone;
+self.last_active_tool = self.active_tool;
+self.ctrl_tool = panning_tool_obj;
+self.old_tool = noone;
+self.image_speed = 0;
 
-tooltip = "";
-tooltip_color = DB.colormap[? g_yellow];
-tooltip_bg_color = make_color_rgb(16, 16, 16);
+self.tooltip = "";
+self.tooltip_color = DB.colormap[? g_yellow];
+self.tooltip_bg_color = make_color_rgb(16, 16, 16);

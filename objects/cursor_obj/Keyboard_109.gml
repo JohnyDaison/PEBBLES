@@ -1,3 +1,3 @@
-if (square_side > 1) {
-    square_side -= 1;
+if (self.square_side > 1) {
+    self.square_side -= 1;
 }

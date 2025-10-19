@@ -1,3 +1,3 @@
-if (square_side < 512) {
-    square_side += 1;
+if (self.square_side < 512) {
+    self.square_side += 1;
 }

@@ -1,14 +1,15 @@
+var cursor = self.id;
 var view_drag = false;
 if (instance_exists(editor_camera) && editor_camera.dragging) {
     view_drag = true;
 }
 
 if (singleton_obj.fullscreen_set) {
-    x = display_mouse_get_x() / display_get_width() * display_get_gui_width();
-    y = display_mouse_get_y() / display_get_height() * display_get_gui_height();
+    self.x = display_mouse_get_x() / display_get_width() * display_get_gui_width();
+    self.y = display_mouse_get_y() / display_get_height() * display_get_gui_height();
 } else {
-    x = window_mouse_get_x();
-    y = window_mouse_get_y();
+    self.x = window_mouse_get_x();
+    self.y = window_mouse_get_y();
 }
 
 if (!view_drag) {
@@ -24,8 +25,8 @@ if (!view_drag) {
             var viewX = camera_get_view_x(viewCamera);
             var viewY = camera_get_view_y(viewCamera);
 
-            room_x = viewX + x / zoom;
-            room_y = viewY + y / zoom;
+            self.room_x = viewX + x / zoom;
+            self.room_y = viewY + y / zoom;
         } else {
             var view_found = false;
             var view = 1;
@@ -43,8 +44,8 @@ if (!view_drag) {
                 if (cursorPortX >= 0 && cursorPortX < portWidth && cursorPortY >= 0 && cursorPortY < portHeight) {
                     var cam = main_camera_obj.cameras[? view];
 
-                    room_x = viewX + cursorPortX / cam.zoom_level;
-                    room_y = viewY + cursorPortY / cam.zoom_level;
+                    self.room_x = viewX + cursorPortX / cam.zoom_level;
+                    self.room_y = viewY + cursorPortY / cam.zoom_level;
 
                     view_found = true;
                 }
@@ -55,29 +56,30 @@ if (!view_drag) {
         }
     }
     else {
-        room_x = mouse_x;
-        room_y = mouse_y;
+        self.room_x = mouse_x;
+        self.room_y = mouse_y;
     }
 }
 
 // CHECK MOUSE
 if (!DB.mouse_has_moved) {
-    if (x != last_x || y != last_y) {
+    if (self.x != self.last_x || self.y != self.last_y) {
         DB.mouse_has_moved = true;
     }
 }
-last_x = x;
-last_y = y;
+
+self.last_x = x;
+self.last_y = y;
 
 if (room == level_editor) {
     if (DB.mouse_has_moved && keyboard_check_pressed(vk_control)) {
-        old_tool = active_tool.object_index;
-        tool_activate(ctrl_tool);
+        self.old_tool = self.active_tool.object_index;
+        tool_activate(self.ctrl_tool);
     }
 
     if (DB.mouse_has_moved && keyboard_check_released(vk_control)) {
-        tool_deactivate(ctrl_tool);
-        tool_activate(old_tool);
+        tool_deactivate(self.ctrl_tool);
+        tool_activate(self.old_tool);
     }
 }
 
@@ -99,20 +101,20 @@ if (DB.mouse_has_moved && mouse_check_button_pressed(mb_any)) {
     var new_is_console = false;
 
     with (empty_frame) {
-        if (visible
-                && x <= cursor_obj.x && cursor_obj.x < x + width
-                && y <= cursor_obj.y && cursor_obj.y < y + height) {
-            var name = object_get_name(object_index);
+        if (self.visible
+                && self.x <= cursor.x && cursor.x < (self.x + self.width)
+                && self.y <= cursor.y && cursor.y < (self.y + self.height)) {
+            var name = object_get_name(self.object_index);
             show_debug_message("cursor is in frame " + name);
 
-            var is_console = object_index == console_window || object_index == watches_window;
+            var is_console = self.object_index == console_window || self.object_index == watches_window;
 
             if (!new_is_console && (new_frame == noone || is_console
-                || (!focused_is_modal && !new_is_modal) || modal)) {
+                || (!focused_is_modal && !new_is_modal) || self.modal)) {
                 show_debug_message("frame " + name + " is considered");
 
-                new_frame = id;
-                new_is_modal = modal
+                new_frame = self.id;
+                new_is_modal = self.modal;
                 new_is_console = is_console;
             }
         }
@@ -129,10 +131,12 @@ if (DB.mouse_has_moved && mouse_check_button_pressed(mb_any)) {
             }
             else if (object_is_ancestor(focused_frame.object_index, gui_object)) {
                 with (focused_frame) {
-                    if (visible && !focus_found && x <= cursor_obj.x && cursor_obj.x < x + width && y <= cursor_obj.y && cursor_obj.y < y + height) {
+                    if (self.visible && !focus_found && 
+                        self.x <= cursor.x && cursor.x < (self.x + self.width) && 
+                        self.y <= cursor.y && cursor.y < (self.y + self.height)) {
                         show_debug_message("cursor is in frame " + focused_name);
 
-                        if (focused) {
+                        if (self.focused) {
                             show_debug_message("manager focused on me and I am");
                             focus_found = true;
                         } else {
@@ -150,7 +154,7 @@ if (DB.mouse_has_moved && mouse_check_button_pressed(mb_any)) {
         show_debug_message("focused frame not found, clearing all");
         gui_clear_focus(frame_manager, force_new);
     }
-    else if (instance_exists(cursor_obj.focus) && !cursor_obj.focus.visible) {
+    else if (instance_exists(self.focus) && !self.focus.visible) {
         show_debug_message("focused element invisible, clearing all");
         gui_clear_focus(frame_manager, force_new);
     }
@@ -166,40 +170,40 @@ if (DB.mouse_has_moved && mouse_check_button_pressed(mb_any)) {
         show_debug_message("focus found, clearing tools");
         clear_tools();
     }
-    else if (instance_exists(last_active_tool)) {
-        tool_activate(last_active_tool);
+    else if (instance_exists(self.last_active_tool)) {
+        tool_activate(self.last_active_tool);
     }
 }
 else if (singleton_obj.last_gui_device == mouse) {
     singleton_obj.last_gui_device = -1;
 }
 
-if (!instance_exists(active_tool)) {
-    glow_ratio += glow_dir * glow_step;
+if (!instance_exists(self.active_tool)) {
+    self.glow_ratio += self.glow_dir * self.glow_step;
 
-    if (glow_ratio >= 1 - glow_step) {
-        glow_ratio = 1 - glow_step;
-        glow_dir = -1;
+    if (self.glow_ratio >= 1 - self.glow_step) {
+        self.glow_ratio = 1 - self.glow_step;
+        self.glow_dir = -1;
     }
 
-    if (glow_ratio <= glow_min) {
-        glow_ratio = glow_min;
-        glow_dir = 1;
+    if (self.glow_ratio <= self.glow_min) {
+        self.glow_ratio = self.glow_min;
+        self.glow_dir = 1;
 
         if (!instance_exists(gamemode_obj)) {
-            my_color = irandom(7);
-            tint_updated = false;
+            self.my_color = irandom(7);
+            self.tint_updated = false;
         }
     }
 }
 else {
-    glow_ratio = 0.5;
-    my_color = g_white;
-    last_active_tool = active_tool.object_index;
+    self.glow_ratio = 0.5;
+    self.my_color = g_white;
+    self.last_active_tool = self.active_tool.object_index;
 }
 
 if (self.tint_updated == false) {
-    self.new_tint = ds_map_find_value(DB.colormap, my_color);
+    self.new_tint = DB.colormap[? self.my_color];
 
     self.tint = merge_color(self.tint, self.new_tint, 1 / 6);
 
@@ -208,17 +212,21 @@ if (self.tint_updated == false) {
     }
 }
 
-focus = noone;
-focus_depth = 20000;
+var focus = noone;
+var focus_depth = 20000;
+
 if (DB.mouse_has_moved) {
     with (gui_element) {
-        if (want_focus && visible) {
-            if (cursor_obj.x > x && cursor_obj.x < (x + self.width)
-                && cursor_obj.y > y && cursor_obj.y < (y + self.height)
-                && (cursor_obj.focus == noone || depth < cursor_obj.focus_depth)) {
-                cursor_obj.focus = id;
-                cursor_obj.focus_depth = depth;
+        if (self.want_focus && self.visible) {
+            if (cursor.x > self.x && cursor.x < (self.x + self.width)
+            && cursor.y > self.y && cursor.y < (self.y + self.height)
+            && (focus == noone || self.depth < focus_depth)) {
+                focus = self.id;
+                focus_depth = self.depth;
             }
         }
     }
 }
+
+self.focus = focus;
+self.focus_depth = focus_depth;
