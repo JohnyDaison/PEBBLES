@@ -1,6 +1,6 @@
 event_inherited();
 
-if (count > 0 && !on) //&& view_visible[0]
+if (self.playerCamCount > 0 && !on) //&& view_visible[0]
 {
     //view_visible[0]=false;
     var total_x = 0;
@@ -10,7 +10,7 @@ if (count > 0 && !on) //&& view_visible[0]
         observer_remove(my_chunkgrid, id);
     }
 
-    for (var i = 0; i < count; i++)
+    for (var i = 0; i < self.playerCamCount; i++)
     {
         var player_view = player_view_list[| i];
         var cam = cameras[? player_view];
@@ -22,8 +22,8 @@ if (count > 0 && !on) //&& view_visible[0]
         total_y += cam.y;
     }
     
-    x = total_x/count;
-    y = total_y/count;
+    x = total_x/self.playerCamCount;
+    y = total_y/self.playerCamCount;
     
     followed_x = x;
     followed_y = y;
@@ -49,10 +49,10 @@ if (count > 0 && !on) //&& view_visible[0]
     }
 }
 
-if (on || count == 0) // !view_visible[0] &&
+if (on || self.playerCamCount == 0) // !view_visible[0] &&
 {
     //view_visible[0]=true;
-    for (var i = 0; i < count; i++)
+    for (var i = 0; i < self.playerCamCount; i++)
     {
         var player_view = player_view_list[| i];
         var cam = cameras[? player_view];

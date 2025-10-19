@@ -22,7 +22,7 @@ because `healthbar_overlay` overrides parent's `Draw GUI` event without inheriti
 * `gui_label` and `gui_pane`
 have duplicate centering code
 
-* `count` in `main_camera_obj` - rename variable
+* `RulePresetsDB`, `RuleCategoriesDB` - rename variable `count`
 
 
 Convert Strings used as Enums to Enums:
