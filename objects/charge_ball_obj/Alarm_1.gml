@@ -1,29 +1,18 @@
 /// @description  BARRAGE SHOT
 if (instance_exists(self.my_guy)) {
-    var hboost, vboost, force;
+    var force = self.charge;
 
-    if (self.charge >= self.small_charge) {
+    if (force >= self.small_charge) {
         force = self.small_charge;
     }
-    else {
-        force = self.charge;
-    }
 
-    var inst = create_energy_ball(id, "small_bolt", self.my_color, force);
-    //var inst = instance_create(x,y,small_projectile_obj);
-    //inst.facing_right = my_guy.facing_right;
-    /*
-    inst.my_player = self.my_player;
-    inst.my_guy = my_guy.id;
-    inst.my_source = object_index;
-    inst.holographic = self.holographic;
-    */
-
+    var inst = create_energy_ball(self.id, "small_bolt", self.my_color, force);
     inst.direction = point_direction(0, 0, self.rel_x, self.rel_y);
 
     if (object_is_ancestor(self.my_guy.object_index, guy_obj) && self.my_guy.my_player.my_guy == self.my_guy) {
         viewshake(self.my_player.my_camera, inst.direction + 180, 3);
     }
+
     if (self.desired_dist != 0) {
         inst.speed = 3 + 6 * self.trig_charge * point_distance(0, 0, self.rel_x, self.rel_y) / self.desired_dist;
     }
@@ -32,8 +21,8 @@ if (instance_exists(self.my_guy)) {
     }
 
 
-    hboost = -inst.hspeed / 50;
-    vboost = -inst.vspeed / 50;
+    var hboost = -inst.hspeed / 50;
+    var vboost = -inst.vspeed / 50;
 
     inst.hspeed += self.my_guy.hspeed;
     inst.vspeed += self.my_guy.vspeed;
