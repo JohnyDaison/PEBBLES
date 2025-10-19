@@ -1,18 +1,18 @@
-if (my_color > g_dark && energy > 0) {
-    if (!instance_exists(flame)) {
-        flame = instance_create_depth(x,y, 16, ball_torch_flame_obj);
-        flame.my_guy = id;
+if (self.my_color > g_dark && self.energy > 0) {
+    if (!instance_exists(self.flame)) {
+        self.flame = instance_create_depth(self.x, self.y, 16, ball_torch_flame_obj);
+        self.flame.my_guy = self.id;
     }
 } else {
-    if (instance_exists(flame)) {
-        flame.active = false;
-        flame.alarm[0] = 1;
+    if (instance_exists(self.flame)) {
+        self.flame.active = false;
+        self.flame.alarm[0] = 1;
     }
 }
 
-energy = clamp(energy, 0, max_energy);
+self.energy = clamp(self.energy, 0, self.max_energy);
 
-var energy_ratio = energy/max_energy;
+var energy_ratio = self.energy / self.max_energy;
 
-ambient_light = energy_ratio * max_ambient_light;
-direct_light = energy_ratio * max_direct_light;
+self.ambient_light = energy_ratio * self.max_ambient_light;
+self.direct_light = energy_ratio * self.max_direct_light;
