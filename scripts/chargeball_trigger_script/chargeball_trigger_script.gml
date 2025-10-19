@@ -17,7 +17,6 @@ function chargeball_trigger_script() {
         var orb_count = 0;
         var is_guy = false;
         var is_player_guy = false;
-        var inst, hboost, vboost;
 
         if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
             orb_count = self.orb_count;
@@ -36,7 +35,7 @@ function chargeball_trigger_script() {
             if (orb_count > 0 && (!is_guy || has_level(self.my_guy, "dark_mode", 1))) {
                 if (self.desired_dist == 0) {
                     // DARK AOE
-                    inst = instance_create(self.x, self.y, black_aoe_obj);
+                    var inst = instance_create(self.x, self.y, black_aoe_obj);
 
                     inst.my_player = self.my_player;
                     inst.force = self.charge;
@@ -57,7 +56,7 @@ function chargeball_trigger_script() {
                 }
                 else {
                     // VORTEX
-                    inst = instance_create(self.x, self.y, black_projectile_obj);
+                    var inst = instance_create(self.x, self.y, black_projectile_obj);
 
                     inst.my_player = self.my_player;
                     inst.force = self.charge;
@@ -90,7 +89,7 @@ function chargeball_trigger_script() {
                         var play_shield_sound = false;
 
                         if (self.my_guy.my_shield == noone) {
-                            inst = instance_create(self.my_guy.x, self.my_guy.y, shield_obj);
+                            var inst = instance_create(self.my_guy.x, self.my_guy.y, shield_obj);
 
                             inst.my_guy = self.my_guy.id;
                             inst.my_source = self.object_index;
@@ -140,7 +139,7 @@ function chargeball_trigger_script() {
             else if (!is_guy || self.my_guy.status_left[? "suppressed"] == 0) {
                 // BIG BOLT
                 if (orb_count == 1 && (!is_guy || has_level(self.my_guy, "blast_mode", 1))) {
-                    inst = create_energy_ball(id, "big_bolt", self.my_color, self.charge);
+                    var inst = create_energy_ball(id, "big_bolt", self.my_color, self.charge);
 
                     inst.direction = aim_direction;
                     inst.speed = 3 + 7 * self.charge;
@@ -150,8 +149,8 @@ function chargeball_trigger_script() {
                             point_direction(inst.hspeed, inst.vspeed, 0, 0), 5);
                     }
 
-                    hboost = -inst.hspeed / 10;
-                    vboost = -inst.vspeed / 10;
+                    var hboost = -inst.hspeed / 10;
+                    var vboost = -inst.vspeed / 10;
 
                     inst.hspeed += self.my_guy.hspeed;
                     inst.vspeed += self.my_guy.vspeed;
@@ -193,7 +192,7 @@ function chargeball_trigger_script() {
                         self.y -= 1;
                     }
 
-                    inst = instance_create(self.x, self.y, dash_wave_obj);
+                    var inst = instance_create(self.x, self.y, dash_wave_obj);
 
                     inst.image_angle = aim_direction;
                     inst.image_xscale = 0.5;
@@ -224,7 +223,7 @@ function chargeball_trigger_script() {
                 // BEAM
 
                 if (orb_count == 5) {
-                    inst = instance_create(self.x, self.y, beam_obj);
+                    var inst = instance_create(self.x, self.y, beam_obj);
 
                     inst.facing_right = self.my_guy.facing_right;
                     inst.my_player = self.my_player;
@@ -245,7 +244,7 @@ function chargeball_trigger_script() {
 
                 // ARTILLERY SHOT
                 if (orb_count == 4) {
-                    inst = create_energy_ball(self.id, "artillery_shot", self.my_color, self.max_charge + self.overcharge);
+                    var inst = create_energy_ball(self.id, "artillery_shot", self.my_color, self.max_charge + self.overcharge);
 
                     inst.hspeed = self.rel_x;
                     inst.vspeed = self.rel_y;
