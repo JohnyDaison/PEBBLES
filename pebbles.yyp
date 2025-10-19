@@ -841,6 +841,7 @@
     {"id":{"name":"add_player_overlay","path":"scripts/add_player_overlay/add_player_overlay.yy",},},
     {"id":{"name":"add_to_inventory","path":"scripts/add_to_inventory/add_to_inventory.yy",},},
     {"id":{"name":"additive_list_copy","path":"scripts/additive_list_copy/additive_list_copy.yy",},},
+    {"id":{"name":"addSourceVelocityToProjectile","path":"scripts/addSourceVelocityToProjectile/addSourceVelocityToProjectile.yy",},},
     {"id":{"name":"aim_shot_anim_set","path":"scripts/aim_shot_anim_set/aim_shot_anim_set.yy",},},
     {"id":{"name":"anim_control_click_action","path":"scripts/anim_control_click_action/anim_control_click_action.yy",},},
     {"id":{"name":"anim_control_doubleclick_action","path":"scripts/anim_control_doubleclick_action/anim_control_doubleclick_action.yy",},},

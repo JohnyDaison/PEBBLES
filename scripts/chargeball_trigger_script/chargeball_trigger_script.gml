@@ -152,8 +152,7 @@ function chargeball_trigger_script() {
                     var hboost = -inst.hspeed / 10;
                     var vboost = -inst.vspeed / 10;
 
-                    inst.hspeed += self.my_guy.hspeed;
-                    inst.vspeed += self.my_guy.vspeed;
+                    addSourceVelocityToProjectile(self.my_guy, inst);
 
                     if (self.my_guy != self.id && !self.my_guy.immovable) {
                         with (self.my_guy) {

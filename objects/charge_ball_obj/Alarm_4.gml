@@ -22,8 +22,7 @@ if (instance_exists(self.my_guy)) {
 
     inst.speed = 5 + 3 * self.trig_charge * distance_ratio;
 
-    inst.hspeed += self.my_guy.hspeed;
-    inst.vspeed += self.my_guy.vspeed;
+    addSourceVelocityToProjectile(self.my_guy, inst);
 
     inst.my_color = g_octarine;
     inst.tint_updated = false;

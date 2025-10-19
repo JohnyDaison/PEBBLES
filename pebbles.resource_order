@@ -703,6 +703,7 @@
     {"name":"add_place_in_room","order":9,"path":"scripts/add_place_in_room/add_place_in_room.yy",},
     {"name":"add_player_overlay","order":3,"path":"scripts/add_player_overlay/add_player_overlay.yy",},
     {"name":"additive_list_copy","order":23,"path":"scripts/additive_list_copy/additive_list_copy.yy",},
+    {"name":"addSourceVelocityToProjectile","order":28,"path":"scripts/addSourceVelocityToProjectile/addSourceVelocityToProjectile.yy",},
     {"name":"aim_shot_anim_set","order":11,"path":"scripts/aim_shot_anim_set/aim_shot_anim_set.yy",},
     {"name":"anim_control_doubleclick_action","order":1,"path":"scripts/anim_control_doubleclick_action/anim_control_doubleclick_action.yy",},
     {"name":"anim_control_hold_action","order":4,"path":"scripts/anim_control_hold_action/anim_control_hold_action.yy",},

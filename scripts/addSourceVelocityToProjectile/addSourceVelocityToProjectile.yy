@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"addSourceVelocityToProjectile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"addSourceVelocityToProjectile",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
