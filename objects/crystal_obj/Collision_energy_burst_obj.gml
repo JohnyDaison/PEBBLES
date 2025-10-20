@@ -1,4 +1,3 @@
-if(!collected && instance_exists(my_shield) && !other.done_for && holographic == other.holographic)
-{
+if (!self.collected && instance_exists(self.my_shield) && !other.done_for && self.holographic == other.holographic) {
     receive_damage(other.energy);
 }
