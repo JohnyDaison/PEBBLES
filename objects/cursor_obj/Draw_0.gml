@@ -75,3 +75,60 @@ if (keyboard_check(vk_alt)) {
     gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);
 }
+
+var drawColorDebugGrid = false;
+
+if (drawColorDebugGrid && keyboard_check(vk_control)) {
+    var xx = self.x + viewX - portX;
+    var yy = self.y + viewY - portY;
+    
+    draw_set_alpha(1);
+    
+    for (var gridY = g_dark; gridY <= g_octarine; gridY++) {
+        var baseColor = DB.colormap[? gridY];
+        var color = baseColor;
+        
+        for (var gridX = 0; gridX < 6; gridX++) {
+            if (gridX == 1) {
+                color = c_gray - baseColor;
+            }
+            else if (gridX == 2) {
+                color = makeTextOutlineColor(baseColor, false);
+            }
+            else if (gridX == 3) {
+                color = makeTextOutlineColor(baseColor, true);
+            }
+            else if (gridX == 4) {
+                var redComponent = color_get_red(baseColor);
+                var greenComponent = color_get_green(baseColor);
+                var blueComponent = color_get_blue(baseColor);
+                
+                // invert
+                redComponent = 255 - redComponent;
+                greenComponent = 255 - greenComponent;
+                blueComponent = 255 - blueComponent;
+                
+                color = make_color_rgb(redComponent, greenComponent, blueComponent);
+                color = merge_color(color, c_white, 0.4);
+                color = merge_color(color, c_gray, 0.6);
+            }
+            else if (gridX == 5) {
+                var hue = color_get_hue(baseColor);
+                var sat = color_get_saturation(baseColor);
+                var val = color_get_value(baseColor);
+                
+                hue = (hue + 128) % 255;
+                sat = lerp(sat, 0, 0.75);
+                val = lerp(val, 64, 0.5);
+                
+                color = make_color_hsv(hue, sat, val);
+            }
+            
+            var xPos = xx + gridX * self.square_side;
+            var yPos = yy + gridY * self.square_side;
+            
+            draw_set_color(color);
+            draw_rectangle(xPos, yPos, xPos + self.square_side, yPos + self.square_side, false);
+        }
+    }
+}
