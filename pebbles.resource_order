@@ -979,6 +979,7 @@
     {"name":"list_instances","order":4,"path":"scripts/list_instances/list_instances.yy",},
     {"name":"load_place_onup","order":11,"path":"scripts/load_place_onup/load_place_onup.yy",},
     {"name":"magenta_suppression_anim_set","order":8,"path":"scripts/magenta_suppression_anim_set/magenta_suppression_anim_set.yy",},
+    {"name":"makeTextOutlineColor","order":7,"path":"scripts/makeTextOutlineColor/makeTextOutlineColor.yy",},
     {"name":"match_force_finish","order":12,"path":"scripts/match_force_finish/match_force_finish.yy",},
     {"name":"match_restart","order":10,"path":"scripts/match_restart/match_restart.yy",},
     {"name":"match_stats_DisplayList_init","order":8,"path":"scripts/match_stats_DisplayList_init/match_stats_DisplayList_init.yy",},

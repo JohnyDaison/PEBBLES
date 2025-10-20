@@ -55,7 +55,7 @@ draw_roundrect(x-half_width,y-half_height, x+half_width,y+half_height, false);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_alpha(fade_ratio);
-draw_set_color(tint-c_gray);
+draw_set_color(makeTextOutlineColor(self.tint, true));
 
 my_draw_text(x-1, y-1, dmg_str);
 my_draw_text(x+1, y+1, dmg_str);

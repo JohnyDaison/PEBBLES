@@ -1167,6 +1167,7 @@
     {"id":{"name":"load_place_onup","path":"scripts/load_place_onup/load_place_onup.yy",},},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},},
     {"id":{"name":"magenta_suppression_anim_set","path":"scripts/magenta_suppression_anim_set/magenta_suppression_anim_set.yy",},},
+    {"id":{"name":"makeTextOutlineColor","path":"scripts/makeTextOutlineColor/makeTextOutlineColor.yy",},},
     {"id":{"name":"match_force_finish","path":"scripts/match_force_finish/match_force_finish.yy",},},
     {"id":{"name":"match_restart","path":"scripts/match_restart/match_restart.yy",},},
     {"id":{"name":"match_stats_DisplayList_init","path":"scripts/match_stats_DisplayList_init/match_stats_DisplayList_init.yy",},},
