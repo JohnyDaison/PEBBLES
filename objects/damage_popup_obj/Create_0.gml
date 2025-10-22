@@ -1,13 +1,13 @@
 event_inherited();
 
-damage = 0;
-bg_alpha = 0.4;
-alarm[1] = 2;
-type = "";
+self.damage = 0;
+self.bg_alpha = 0.4;
+self.alarm[1] = 2;
+self.type = "";
 
-max_number = 50;
+self.max_number = 50;
 
-if(my_instance_number(object_index) > max_number)
-{
-    instance_destroy(object_index.id)
+if (instance_number(self.object_index) > self.max_number) {
+    // destroys the oldest damage popup
+    instance_destroy(self.object_index.id)
 }

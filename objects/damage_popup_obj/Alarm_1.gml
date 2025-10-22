@@ -1,3 +1,2 @@
 /// @description  MAKE VISIBLE
-visible = true;
-
+self.visible = true;
