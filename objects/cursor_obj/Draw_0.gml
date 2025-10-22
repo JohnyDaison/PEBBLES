@@ -29,8 +29,8 @@ if (showInverseFilterRectangle && keyboard_check(vk_alt)) {
 if (keyboard_check(vk_alt)) {
     var left_end = -1.5, right_end = 0.5;
 
-    var xx = x + viewX - portX;
-    var yy = y + viewY - portY;
+    var xx = self.x + viewX - portX;
+    var yy = self.y + viewY - portY;
 
     // "main" lights
     draw_set_alpha(1);

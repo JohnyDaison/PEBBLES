@@ -17,8 +17,8 @@ if (self.tooltip != "") {
     draw_set_valign(fa_bottom);
     
     var text = self.tooltip;
-    var tip_x = x + 8;
-    var tip_y = y - 8;
+    var tip_x = self.x + 8;
+    var tip_y = self.y - 8;
     
     draw_set_color(self.tooltip_bg_color);
     var width = string_width(text);
