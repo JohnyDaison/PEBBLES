@@ -1,3 +1,5 @@
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,self.tint,image_alpha*fade_ratio*self.holo_alpha);
+draw_sprite_ext(self.sprite_index, self.image_index,
+                self.x, self.y, self.image_xscale, self.image_yscale,
+                self.image_angle, self.tint, self.image_alpha * self.fade_ratio * self.holo_alpha);
 
-action_inherited();
+event_inherited();
