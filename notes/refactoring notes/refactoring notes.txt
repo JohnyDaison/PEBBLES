@@ -40,3 +40,4 @@ Convert these to Structs:
 * `"results"` and `"params"`
 * `last_attacker_*` system
 * `last_standing_position` variable
+* `hardpoint_*` maps
