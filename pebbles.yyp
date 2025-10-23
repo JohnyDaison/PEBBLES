@@ -983,6 +983,7 @@
     {"id":{"name":"drop_inv_item","path":"scripts/drop_inv_item/drop_inv_item.yy",},},
     {"id":{"name":"ds_list_of_map_destroy","path":"scripts/ds_list_of_map_destroy/ds_list_of_map_destroy.yy",},},
     {"id":{"name":"ds_map_of_map_destroy","path":"scripts/ds_map_of_map_destroy/ds_map_of_map_destroy.yy",},},
+    {"id":{"name":"DsRegistryEntry","path":"scripts/DsRegistryEntry/DsRegistryEntry.yy",},},
     {"id":{"name":"editor_exit","path":"scripts/editor_exit/editor_exit.yy",},},
     {"id":{"name":"editor_jump_pad_update","path":"scripts/editor_jump_pad_update/editor_jump_pad_update.yy",},},
     {"id":{"name":"elephant_command","path":"scripts/elephant_command/elephant_command.yy",},},

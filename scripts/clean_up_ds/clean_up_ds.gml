@@ -13,47 +13,47 @@ function clean_up_ds(forced, name, type, instance, object = all) {
     var count = ds_list_size(DB.ds_registry);
 
     for (var i = count - 1; i >= 0; i--) {
-        var info_map = DB.ds_registry[| i];
+        var entry = DB.ds_registry[| i];
 
-        if (name != "" && name != info_map[? "name"]) {
+        if (name != "" && name != entry.name) {
             continue;
         }
 
-        if (type != all && type != info_map[? "type"]) {
+        if (type != all && type != entry.type) {
             continue;
         }
 
-        if (instance != all && instance != info_map[? "instance"]) {
+        if (instance != all && instance != entry.instance) {
             continue;
         }
 
-        if (object != all && objectName != info_map[? "object"]) {
+        if (object != all && objectName != entry.objectName) {
             continue;
         }
 
-        if (forced || !instance_exists(info_map[? "instance"])) {
-            switch (info_map[? "type"]) {
+        if (forced || !instance_exists(entry.instance)) {
+            switch (entry.type) {
                 case ds_type_list:
-                    ds_list_destroy(info_map[? "id"]);
+                    ds_list_destroy(entry.id);
                     break;
                 case ds_type_map:
-                    ds_map_destroy(info_map[? "id"]);
+                    ds_map_destroy(entry.id);
                     break;
                 case ds_type_grid:
-                    ds_grid_destroy(info_map[? "id"]);
+                    ds_grid_destroy(entry.id);
                     break;
             }
 
-            switch (info_map[? "type"]) {
+            switch (entry.type) {
                 case "ds_list_of_map":
-                    ds_list_of_map_destroy(info_map[? "id"]);
+                    ds_list_of_map_destroy(entry.id);
                     break;
                 case "ds_map_of_map":
-                    ds_map_of_map_destroy(info_map[? "id"]);
+                    ds_map_of_map_destroy(entry.id);
                     break;
             }
 
-            deregister_ds(info_map[? "type"], info_map[? "id"]);
+            deregister_ds(entry.type, entry.id);
         }
     }
 }

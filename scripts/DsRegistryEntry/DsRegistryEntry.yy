@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DsRegistryEntry",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DsRegistryEntry",
+  "parent":{
+    "name":"ds_registry",
+    "path":"folders/Scripts/ds_registry.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
