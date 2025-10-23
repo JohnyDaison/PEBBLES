@@ -143,14 +143,14 @@ function guy_die_from_falling() {
             // UPDATE my_spawner TO NEAREST
             var last_standing_position = instance_create(last_standing_x, last_standing_y, place_holder_obj);
             var results = find_nearest_instances(last_standing_position, guy_spawn_point_obj, -1, "player", my_player);
-            var result_count = ds_list_size(results);
-            var p_i, result, point, my_spawn_point = noone;
+            var result_count = array_length(results);
+            var my_spawn_point = noone;
             
-            for(p_i = 0; p_i < result_count; p_i++)
+            for(var p_i = 0; p_i < result_count; p_i++)
             {
-                result = results[| p_i];
-                //my_console_log("Point"+string(p_i)+": " + string(result[? "distance"]));
-                point = result[? "id"];
+                var result = results[p_i];
+                //my_console_log("Point"+string(p_i)+": " + string(result.distance));
+                var point = result.id;
                 
                 if(point.my_spawner.enabled)
                 {

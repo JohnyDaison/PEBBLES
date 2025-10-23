@@ -656,7 +656,7 @@ function arena_bot3(requested_attack_target) {
 
 
     // FIND TARGET
-    var attack_waypoint = noone, waypoint = noone, waypoints;
+    var attack_waypoint = noone, waypoint = noone;
     var attack_target = noone;
     var move_target = noone;
     var move_target_y_offset = 0;
@@ -823,13 +823,14 @@ function arena_bot3(requested_attack_target) {
         // TODO: why it's not working?? wrong priority? problem with sight still not fixed?
         var target_gate = noone;
         nearest_distance = 0;
-        var gate_fields = find_nearest_instances(id, gate_field_obj);
-        var result, field, gate1, gate2, gate1_valid, gate2_valid, dist1, dist2, count = ds_list_size(gate_fields);
+        var gate_fields = find_nearest_instances(self.id, gate_field_obj);
+        var count = array_length(gate_fields);
+        var gate1, gate2, gate1_valid, gate2_valid, dist1, dist2;
         var gate1_enabled_count, gate2_enabled_count;
 
         for (var i = 0; i < count; i++) {
-            result = gate_fields[| i];
-            field = result[? "id"];
+            var result = gate_fields[i];
+            var field = result.id;
 
             if (field.vertical) {
                 gate1_valid = false;
@@ -1206,17 +1207,17 @@ function arena_bot3(requested_attack_target) {
     else if (instance_exists(waypoint)) {
         // KEEP DISTANCE FROM ATTACK TARGET
         if (instance_exists(attack_target) && attack_target.object_index != item_spawner_obj) {
-            waypoints = find_nearest_instances(attack_target, npc_waypoint_obj, 480, "visible", "attack");
-            var count = ds_list_size(waypoints);
+            var waypoints = find_nearest_instances(attack_target, npc_waypoint_obj, 480, "visible", "attack");
+            var count = array_length(waypoints);
             var att_dist = point_distance(self.x, self.y, attack_target.x, attack_target.y);
             var min_dist = -1;
             var stay_still = (self.charging || self.casting) && self.npc_destination_reached;
 
             for (var i = count - 1; i >= 0; i--) {
-                var result = waypoints[| i];
-                var wp = result[? "id"];
+                var result = waypoints[i];
+                var wp = result.id;
                 var wp_dist = point_distance(self.x, self.y, wp.x, wp.y);
-                var isGoodPosition = is_wp_good_attack_pos(wp, result[? "distance"], att_dist);
+                var isGoodPosition = is_wp_good_attack_pos(wp, result.distance, att_dist);
                 var isClosest = min_dist == -1 || wp_dist < min_dist;
                 var isInRange = isClosest && wp_dist < att_dist + 90;
 
@@ -1233,8 +1234,8 @@ function arena_bot3(requested_attack_target) {
             // debug
             if (object_is_child(requested_attack_target, guy_obj)) {
                 for (var i = 0; i < count; i++) {
-                    var wp = waypoints[| i];
-                    requested_attack_target.attack_waypoints[| i] = wp[? "id"];
+                    var wp = waypoints[i];
+                    requested_attack_target.attack_waypoints[| i] = wp.id;
                 }
             }
         }

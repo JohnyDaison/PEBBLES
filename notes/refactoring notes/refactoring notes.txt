@@ -39,3 +39,4 @@ Convert these to Structs:
 * `transform_memory`
 * `"results"` and `"params"`
 * `last_attacker_*` system
+* `last_standing_position` variable

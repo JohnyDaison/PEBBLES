@@ -5,11 +5,12 @@ if(my_guy == id)
 {
     var guy = noone;
     var guys = find_nearest_instances(id, guy_obj, 1600, "holographic", holographic);
-    if(ds_list_size(guys) > 0)
+    if(array_length(guys) > 0)
     {
-        var result = guys[| 0];
-        guy = result[? "id"];
+        var result = guys[0];
+        guy = result.id;
     }
+
     if(instance_exists(guy))
     {
         var xx = guy.x;

@@ -3049,8 +3049,8 @@ if(hum)
 // ADJUST LABEL ALPHA WHEN NEAR ITEMS
 //var nearest_item = instance_nearest(x,y, item_obj); 
 var nearest_items = find_nearest_instances(id, item_obj, 128, "with_label_not_mine", true);
-var result = nearest_items[| 0];
-if(!is_undefined(result))
+
+if(array_length(nearest_items) > 0)
 {
     //var nearest_item = result[? "id"];
     //var dist = point_distance(x,y, nearest_item.x, nearest_item.y);

@@ -1,9 +1,9 @@
 /// @param {Id.Instance} from origin
 /// @param {Asset.GMObject} object
-/// @param {Real} range
-/// @param {String} condition
-/// @param {String} param
-/// @return {Id.DsList<Id.DsMap<Any>>} list of maps with keys "id" and "distance"
+/// @param {Real} range default = 1024
+/// @param {String} condition optional, one of: "visible", "holographic", "player", "with_label_not_mine"
+/// @param {String} param optional, specific to given condition
+/// @return {Array<Struct.GameQueryResult>} list of maps with keys "id" and "distance"
 function find_nearest_instances(from, object, range = 1024, condition = "", param = "") {
     var visible_type = "move";
 
@@ -11,40 +11,41 @@ function find_nearest_instances(from, object, range = 1024, condition = "", para
         visible_type = param;
     }
 
-    var results = ds_list_create();
-    register_ds("results", "ds_list_of_map", results, id);
+    var results = [];
 
+    with (object) {
+        var instance = id;
+        
+        with (from) {
+            var dist = point_distance(from.x, from.y, instance.x, instance.y);
 
-    with (from) {
-        with (object) {
-            var instance = id;
-            with (other) {
-                var dist = point_distance(x, y, instance.x, instance.y);
+            // TODO: npc_line_of_sight might not be the best script for this purpose
+            if ((dist <= range || range == -1)
+                && (condition != "visible" || npc_line_of_sight_instance(instance, visible_type))
+                && (condition != "holographic" || instance.holographic == param)
+                && (condition != "player" || instance.my_player == param)
+                && (condition != "with_label_not_mine" || (instance.my_guy != id && instance.draw_label == param))
+            ) {
+                var new_result = new GameQueryResult();
+                
+                new_result.x = instance.x;
+                new_result.y = instance.y;
+                new_result.id = instance.id;
+                new_result.distance = dist;
 
-                // npc_line_of_sight might not be the best script for this purpose
-                if ((dist <= range || range == -1)
-                    && (condition != "visible" || npc_line_of_sight_instance(instance, visible_type))
-                    && (condition != "holographic" || instance.holographic == param)
-                    && (condition != "player" || instance.my_player == param)
-                    && (condition != "with_label_not_mine" || (instance.my_guy != id && instance.draw_label == param))
-                ) {
-                    var new_result = ds_map_create();
-                    new_result[? "id"] = instance;
-                    new_result[? "distance"] = dist;
+                var count = array_length(results);
+                var position = count;
 
-                    var count = ds_list_size(results);
-                    var position = count;
+                for (var i = 0; i < count; i++) {
+                    var result = results[i];
 
-                    for (var i = 0; i < count; i++) {
-                        var result = results[| i];
-                        if (result[? "distance"] > dist) {
-                            position = i;
-                            break;
-                        }
+                    if (result.distance > dist) {
+                        position = i;
+                        break;
                     }
-
-                    ds_list_insert(results, position, new_result);
                 }
+
+                array_insert(results, position, new_result);
             }
         }
     }
