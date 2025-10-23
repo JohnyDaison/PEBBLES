@@ -37,7 +37,7 @@ Convert Strings used as Enums to Enums:
 Convert these to Structs:
 -------------------------
 * `transform_memory`
-* `"results"` and `"params"`
+* `"params"`
 * `last_attacker_*` system
 * `last_standing_position` variable
 * `hardpoint_*` maps
