@@ -467,7 +467,6 @@ function arena_bot3(requested_attack_target) {
 
                 if (dist <= tp_dist) {
                     var offset = 0;
-                    var result, above_wp;
                     var done = false;
 
                     while (!done) {
@@ -479,9 +478,9 @@ function arena_bot3(requested_attack_target) {
                             break;
                         }
 
-                        result = compute_blink_position(dir);
+                        var result = compute_blink_position(dir);
 
-                        above_wp = abs(result[? "x"] - self.npc_waypoint_x) < 16 && result[? "y"] < self.npc_waypoint_y;
+                        var above_wp = abs(result.x - self.npc_waypoint_x) < 16 && result.y < self.npc_waypoint_y;
 
                         if (above_wp) {
                             done = true;

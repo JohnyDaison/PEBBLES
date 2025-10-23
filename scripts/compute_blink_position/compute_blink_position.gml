@@ -1,11 +1,10 @@
 /// @param {Real} direction
-/// @return {Id.DsMap<Any>}
+/// @return {Struct.GameQueryResult}
 function compute_blink_position(direction) {
     var tp_dist = 256;
     var tp_step = 32;
 
-    var result = ds_map_create();
-    register_ds("results", ds_type_map, result, self.id);
+    var result = new GameQueryResult();
 
     var hor_coef = lengthdir_x(1, direction);
     var ver_coef = lengthdir_y(1, direction);
@@ -31,9 +30,9 @@ function compute_blink_position(direction) {
         }
     }
 
-    result[? "x"] = xx;
-    result[? "y"] = yy;
-    result[? "dist"] = tp_dist - reduce_dist;
+    result.x = xx;
+    result.y = yy;
+    result.distance = tp_dist - reduce_dist;
 
     return result;
 }

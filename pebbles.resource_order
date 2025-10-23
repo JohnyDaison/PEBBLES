@@ -841,6 +841,7 @@
     {"name":"gamemode_create","order":2,"path":"scripts/gamemode_create/gamemode_create.yy",},
     {"name":"gamemode_mod_create","order":3,"path":"scripts/gamemode_mod_create/gamemode_mod_create.yy",},
     {"name":"gamemode_number_mod_values","order":7,"path":"scripts/gamemode_number_mod_values/gamemode_number_mod_values.yy",},
+    {"name":"GameQueryResult","order":29,"path":"scripts/GameQueryResult/GameQueryResult.yy",},
     {"name":"garbage_collector","order":3,"path":"scripts/garbage_collector/garbage_collector.yy",},
     {"name":"gate_180_anim_set","order":4,"path":"scripts/gate_180_anim_set/gate_180_anim_set.yy",},
     {"name":"gate_90_anim_set","order":3,"path":"scripts/gate_90_anim_set/gate_90_anim_set.yy",},

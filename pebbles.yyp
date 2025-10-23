@@ -1003,6 +1003,7 @@
     {"id":{"name":"gamemode_mod_create","path":"scripts/gamemode_mod_create/gamemode_mod_create.yy",},},
     {"id":{"name":"gamemode_number_mod_values","path":"scripts/gamemode_number_mod_values/gamemode_number_mod_values.yy",},},
     {"id":{"name":"gamemode_picker_script","path":"scripts/gamemode_picker_script/gamemode_picker_script.yy",},},
+    {"id":{"name":"GameQueryResult","path":"scripts/GameQueryResult/GameQueryResult.yy",},},
     {"id":{"name":"garbage_collector","path":"scripts/garbage_collector/garbage_collector.yy",},},
     {"id":{"name":"gate_180_anim_set","path":"scripts/gate_180_anim_set/gate_180_anim_set.yy",},},
     {"id":{"name":"gate_90_anim_set","path":"scripts/gate_90_anim_set/gate_90_anim_set.yy",},},

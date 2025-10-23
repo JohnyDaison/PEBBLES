@@ -1,3 +1,5 @@
+/// @self guy_obj
+/// @returns {Bool} success
 function abi_teleport() {
     show_debug_message("teleport used");
 
@@ -21,7 +23,7 @@ function abi_teleport() {
     if (self.desired_aim_dist > 0) {
         result = compute_blink_position(self.desired_aim_dir);
 
-        if (result[? "dist"] > 0) {
+        if (result.distance > 0) {
             success = true;
         }
     }
@@ -38,8 +40,8 @@ function abi_teleport() {
     self.pre_tp_x = self.x;
     self.pre_tp_y = self.y;
 
-    self.x = result[? "x"];
-    self.y = result[? "y"];
+    self.x = result.x;
+    self.y = result.y;
 
     self.last_x = self.x;
     self.last_y = self.y;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GameQueryResult",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GameQueryResult",
+  "parent":{
+    "name":"mechanics",
+    "path":"folders/Scripts/mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
