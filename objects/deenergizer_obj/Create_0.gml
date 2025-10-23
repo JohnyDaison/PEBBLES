@@ -1,3 +1,3 @@
-alarm[0] = 2;
+self.alarm[0] = 2;
 
-go_dark = true;
+self.go_dark = true;
