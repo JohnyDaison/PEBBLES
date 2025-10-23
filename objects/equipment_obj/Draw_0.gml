@@ -1,3 +1,3 @@
-draw_sprite_ext(sprite_index,image_index,x+x_offset,y+y_offset,image_xscale,image_yscale,image_angle,self.tint,alpha_ratio*image_alpha);
+draw_sprite_ext(self.sprite_index, self.image_index, self.x + self.x_offset, self.y + self.y_offset, self.image_xscale, self.image_yscale, self.image_angle, self.tint, self.alpha_ratio * self.image_alpha);
 
 event_inherited();

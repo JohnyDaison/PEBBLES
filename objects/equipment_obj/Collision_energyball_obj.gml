@@ -1,5 +1,3 @@
-if(!unhittable && other.holographic == self.holographic)
-{
+if (!self.unhittable && other.holographic == self.holographic) {
     receive_damage(other.force);
 }
-

@@ -1,2 +1,1 @@
-protected = false;
-
+self.protected = false;
