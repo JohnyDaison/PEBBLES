@@ -1,6 +1,8 @@
 // Note: "self.node_x" is "x" of "beam_head_node"
 if (self.endpoint_reached && !self.invalid) {
     var last_node = ds_list_size(self.beam_nodes) - 1;
+    var beamHeadX = self.node_x + self.beam_head_dist;
+    var highlightAlpha = self.image_alpha * self.beam_highlight_ratio;
 
     self.updateFacing();
 
@@ -10,27 +12,27 @@ if (self.endpoint_reached && !self.invalid) {
         draw_sprite_ext(beam_start, self.image_index, node.x, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
 
         if (self.beam_head_fired && !self.beam_head_landed) {
-            draw_sprite_ext(beam_head, self.image_index, self.node_x + self.beam_head_dist, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
+            draw_sprite_ext(beam_head, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
         }
 
         var phase_str = "";
 
-        for (var ii = node.x; sign((1 + 1.1 * self.facing) * room_width / 2 - ii) == self.facing; ii += self.beam_speed * self.facing) {
-            var next_ii = ii + self.beam_speed * self.facing;
+        for (var xx = node.x; sign((1 + 1.1 * self.facing) * room_width / 2 - xx) == self.facing; xx += self.beam_speed * self.facing) {
+            var next_ii = xx + self.beam_speed * self.facing;
 
             // DETECT PHASE CHANGE
             if (self.beam_head_fired) {
-                if (self.beam_draw_phase != 0 && sign(self.node_x + self.beam_head_dist - ii) == self.facing) {
+                if (self.beam_draw_phase != 0 && sign(beamHeadX - xx) == self.facing) {
                     self.beam_draw_phase = 0;
                     self.radii_updated = false;
                 }
 
-                if (self.beam_draw_phase != 2 && sign(ii - (self.node_x + self.beam_head_dist)) == self.facing) {
+                if (self.beam_draw_phase != 2 && sign(xx - beamHeadX) == self.facing) {
                     self.beam_draw_phase = 2;
                     self.radii_updated = false;
                 }
 
-                if (self.beam_draw_phase != 1 && sign((self.node_x + self.beam_head_dist) - ii) == self.facing && sign(next_ii - (self.node_x + self.beam_head_dist)) == self.facing) {
+                if (self.beam_draw_phase != 1 && sign(beamHeadX - xx) == self.facing && sign(next_ii - beamHeadX) == self.facing) {
                     self.beam_draw_phase = 1;
                     self.radii_updated = false;
                 }
@@ -72,10 +74,10 @@ if (self.endpoint_reached && !self.invalid) {
                 // DRAW CORE TRIANGLES
 
                 repeat(2) {
-                    draw_vertex_texture(ii, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
+                    draw_vertex_texture(xx, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
 
                     repeat(2) {
-                        draw_vertex_texture(ii, self.y, 0, 1);
+                        draw_vertex_texture(xx, self.y, 0, 1);
                         draw_vertex_texture(next_ii, self.y - self.next_core_radius * flip, 1, self.beam_tex_glow_end);
                     }
 
@@ -87,10 +89,10 @@ if (self.endpoint_reached && !self.invalid) {
                 // DRAW GLOW TRIANGLES
 
                 repeat(2) {
-                    draw_vertex_texture(ii, self.y - self.beam_radius * flip, 0, self.beam_tex_glow_start);
+                    draw_vertex_texture(xx, self.y - self.beam_radius * flip, 0, self.beam_tex_glow_start);
 
                     repeat(2) {
-                        draw_vertex_texture(ii, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
+                        draw_vertex_texture(xx, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
                         draw_vertex_texture(next_ii, self.y - self.next_beam_radius * flip, 1, self.beam_tex_glow_start);
                     }
 
@@ -103,12 +105,11 @@ if (self.endpoint_reached && !self.invalid) {
             }
         }
 
-        draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, self.image_alpha * self.beam_highlight_ratio);
+        draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, highlightAlpha);
 
         if (self.beam_head_fired && !self.beam_head_landed) {
-            draw_sprite_ext(beam_head_highlight, self.image_index, self.node_x + self.beam_head_dist, self.y, self.head_facing, 1, 0, c_white, self.image_alpha * self.beam_highlight_ratio);
+            draw_sprite_ext(beam_head_highlight, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, c_white, highlightAlpha);
         }
-        //show_debug_message("phases: "+phase_str);
     }
 
     //BEAM HITS SOMETHING
@@ -116,15 +117,15 @@ if (self.endpoint_reached && !self.invalid) {
         var node_fix = 0;
         var next_node_fix = 0;
 
-        for (var i = 0; i <= last_node; i += 1) {
-            var node = self.beam_nodes[| i];
+        for (var nodeIndex = 0; nodeIndex <= last_node; nodeIndex += 1) {
+            var node = self.beam_nodes[| nodeIndex];
 
-            if (i != 0) {
+            if (nodeIndex != 0) {
                 node_fix = next_node_fix;
             }
 
-            if (i <= last_node - 1) {
-                var next_node = self.beam_nodes[| i + 1];
+            if (nodeIndex <= last_node - 1) {
+                var next_node = self.beam_nodes[| nodeIndex + 1];
 
                 if (!(instance_exists(node) && instance_exists(next_node))) {
                     break;
@@ -139,42 +140,42 @@ if (self.endpoint_reached && !self.invalid) {
                 }
 
                 // DRAW START SPRITE
-                if (i == 0) {
+                if (nodeIndex == 0) {
                     draw_sprite_ext(beam_start, self.image_index, node.x, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
                 }
 
                 // DRAW END SPRITE
-                if (i == last_node - 1) {
+                if (nodeIndex == last_node - 1) {
                     draw_sprite_ext(beam_end_sprite, self.image_index, next_node.x + next_node_fix, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
                 }
 
                 // DRAW HEAD SPRITE
                 if (self.beam_head_fired && !self.beam_head_landed) {
-                    draw_sprite_ext(beam_head, self.image_index, self.node_x + beam_head_dist, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
+                    draw_sprite_ext(beam_head, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
                 }
 
                 var phase_str = "";
 
-                for (var ii = node.x + node_fix; sign((next_node.x + next_node_fix) - ii) == self.facing; ii += self.beam_speed * self.facing) {
-                    var next_ii = ii + self.beam_speed * self.facing;
+                for (var xx = node.x + node_fix; sign((next_node.x + next_node_fix) - xx) == self.facing; xx += self.beam_speed * self.facing) {
+                    var next_ii = xx + self.beam_speed * self.facing;
 
-                    if (abs(ii - (next_node.x + next_node_fix)) <= self.beam_speed) {
+                    if (abs(xx - (next_node.x + next_node_fix)) <= self.beam_speed) {
                         next_ii = next_node.x + next_node_fix;
                     }
 
                     // DETECT PHASE CHANGE
                     if (self.beam_head_fired) {
-                        if (self.beam_draw_phase != 0 && (i < self.beam_head_node || (i == self.beam_head_node && sign(self.node_x + self.beam_head_dist - (ii - node_fix)) == self.facing))) {
+                        if (self.beam_draw_phase != 0 && (nodeIndex < self.beam_head_node || (nodeIndex == self.beam_head_node && sign(beamHeadX - (xx - node_fix)) == self.facing))) {
                             self.beam_draw_phase = 0;
                             self.radii_updated = false;
                         }
 
-                        if (self.beam_draw_phase != 2 && (i > self.beam_head_node || (i == self.beam_head_node && sign((ii - node_fix) - (self.node_x + self.beam_head_dist)) == self.facing))) {
+                        if (self.beam_draw_phase != 2 && (nodeIndex > self.beam_head_node || (nodeIndex == self.beam_head_node && sign((xx - node_fix) - beamHeadX) == self.facing))) {
                             self.beam_draw_phase = 2;
                             self.radii_updated = false;
                         }
 
-                        if (beam_draw_phase != 1 && i == beam_head_node && sign((self.node_x + beam_head_dist) - (ii - node_fix)) == facing && sign((next_ii - node_fix) - (self.node_x + beam_head_dist)) == facing) {
+                        if (self.beam_draw_phase != 1 && nodeIndex == self.beam_head_node && sign(beamHeadX - (xx - node_fix)) == self.facing && sign((next_ii - node_fix) - beamHeadX) == self.facing) {
                             self.beam_draw_phase = 1;
                             self.radii_updated = false;
                         }
@@ -221,10 +222,10 @@ if (self.endpoint_reached && !self.invalid) {
                         // DRAW CORE TRIANGLES
 
                         repeat(2) {
-                            draw_vertex_texture(ii, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
+                            draw_vertex_texture(xx, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
 
                             repeat(2) {
-                                draw_vertex_texture(ii, self.y, 0, 1);
+                                draw_vertex_texture(xx, self.y, 0, 1);
                                 draw_vertex_texture(next_ii, self.y - self.next_core_radius * flip, 1, self.beam_tex_glow_end);
                             }
 
@@ -238,10 +239,10 @@ if (self.endpoint_reached && !self.invalid) {
                         // DRAW GLOW TRIANGLES
 
                         repeat(2) {
-                            draw_vertex_texture(ii, self.y - self.beam_radius * flip, 0, self.beam_tex_glow_start);
+                            draw_vertex_texture(xx, self.y - self.beam_radius * flip, 0, self.beam_tex_glow_start);
 
                             repeat(2) {
-                                draw_vertex_texture(ii, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
+                                draw_vertex_texture(xx, self.y - self.core_radius * flip, 0, self.beam_tex_glow_end);
                                 draw_vertex_texture(next_ii, self.y - self.next_beam_radius * flip, 1, self.beam_tex_glow_start);
                             }
 
@@ -254,23 +255,21 @@ if (self.endpoint_reached && !self.invalid) {
                     }
                 }
 
-                //show_debug_message("phases: "+phase_str);
-
                 // HIGHLIGHTS
 
                 // DRAW START SPRITE
-                if (i == 0) {
-                    draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, self.image_alpha * self.beam_highlight_ratio);
+                if (nodeIndex == 0) {
+                    draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, highlightAlpha);
                 }
 
                 // DRAW END SPRITE
-                if (i == last_node - 1) {
-                    draw_sprite_ext(beam_end_highlight, self.image_index, next_node.x + next_node_fix, self.y, self.facing, 1, 0, c_white, self.image_alpha * self.beam_highlight_ratio);
+                if (nodeIndex == last_node - 1) {
+                    draw_sprite_ext(beam_end_highlight, self.image_index, next_node.x + next_node_fix, self.y, self.facing, 1, 0, c_white, highlightAlpha);
                 }
 
                 // DRAW HEAD SPRITE
                 if (self.beam_head_fired && !self.beam_head_landed) {
-                    draw_sprite_ext(beam_head_highlight, self.image_index, self.node_x + self.beam_head_dist, self.y, self.head_facing, 1, 0, c_white, self.image_alpha * self.beam_highlight_ratio);
+                    draw_sprite_ext(beam_head_highlight, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, c_white, highlightAlpha);
                 }
             }
 
