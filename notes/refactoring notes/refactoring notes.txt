@@ -24,6 +24,11 @@ have duplicate centering code
 
 * `RulePresetsDB`, `RuleCategoriesDB` - rename variable `count`
 
+* Rename `mods`,`modifiers` to `rules` in code
+
+* `beam_obj`
+has a lot of repeated code, refactor to methods
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
@@ -41,3 +46,4 @@ Convert these to Structs:
 * `last_attacker_*` system
 * `last_standing_position` variable
 * `hardpoint_*` maps
+* `gamemode`

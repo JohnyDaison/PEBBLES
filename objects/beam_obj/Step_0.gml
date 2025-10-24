@@ -1,437 +1,359 @@
 event_inherited();
 
-last_node = ds_list_size(beam_nodes)-1;
-if(beam_head_node > last_node)
-{
-    beam_head_node = last_node;
-    beam_head_node_changed = true;
+var last_node = ds_list_size(self.beam_nodes) - 1;
+
+if (self.beam_head_node > last_node) {
+    self.beam_head_node = last_node;
+    self.beam_head_node_changed = true;
 }
 
-for(i=0;i<=last_node;i+=1)
-{
-    node = ds_list_find_value(beam_nodes,i);
-    if(!instance_exists(node))
-    {
-        alarm[0] = 1;
-        invalid = true;
+for (var i = 0; i <= last_node; i += 1) {
+    var node = self.beam_nodes[| i];
+
+    if (!instance_exists(node)) {
+        self.alarm[0] = 1;
+        self.invalid = true;
     }
 }
 
-if(endpoint_reached && !invalid)
-{
-    if(head_facing==0)
-    {    
-        if(facing_right)
-            head_facing = 1;
-        else
-            head_facing = -1;
+if (self.endpoint_reached && !self.invalid) {
+    if (self.head_facing == 0) {
+        self.head_facing = self.facing_right ? 1 : -1;
     }
-    
-    if(beam_head_node_changed)
-    {   
+
+    if (self.beam_head_node_changed) {
         //show_debug_message("beam:"+string(beam_head_node)+" "+string(ds_list_size(beam_nodes)));
-        head_node = ds_list_find_value(beam_nodes, beam_head_node);
-        
-        if(instance_exists(head_node))
-        {
-            node_x = head_node.x;
-            if(beam_head_node != last_node)
-            {
-                next_node = ds_list_find_value(beam_nodes,beam_head_node+1);
-                next_node_x = next_node.x;
-                if(object_is_ancestor(next_node.object_index,terrain_obj))
-                    next_node_x += 16 - facing*16;
-                if(next_node.object_index == shield_obj)
-                    next_node_x += -facing*next_node.radius;
+        self.head_node = self.beam_nodes[| self.beam_head_node];
+
+        if (instance_exists(head_node)) {
+            self.node_x = self.head_node.x;
+
+            if (self.beam_head_node != last_node) {
+                var next_node = self.beam_nodes[| self.beam_head_node + 1];
+                self.next_node_x = next_node.x;
+
+                if (object_is_ancestor(next_node.object_index, terrain_obj)) {
+                    self.next_node_x += 16 - self.facing * 16;
+                }
+
+                if (next_node.object_index == shield_obj) {
+                    self.next_node_x += -self.facing * next_node.radius;
+                }
             }
-            if(last_node == 0)
-            {
-                next_node_x = (1+1.1*head_facing)*room_width/2;
+            if (last_node == 0) {
+                self.next_node_x = (1 + 1.1 * self.head_facing) * room_width / 2;
             }
-            
+
             // PUSH
-            if(!beam_head_landed)
-            {
-                pushed_guy = noone;
-                if(object_is_ancestor(head_node.object_index,guy_obj))
-                {
-                    pushed_guy = head_node;
+            if (!self.beam_head_landed) {
+                var pushed_guy = noone;
+                var head = self.head_node;
+
+                if (object_is_ancestor(head.object_index, guy_obj)) {
+                    pushed_guy = head;
                 }
-                if(head_node.object_index == shield_obj && instance_exists(head_node.my_guy) && object_is_ancestor(head_node.my_guy.object_index,guy_obj))
-                {
-                    pushed_guy = head_node.my_guy;
+
+                if (head.object_index == shield_obj && instance_exists(head.my_guy) && object_is_ancestor(head.my_guy.object_index, guy_obj)) {
+                    pushed_guy = head.my_guy;
                 }
-                if(pushed_guy != noone)
-                {
-                    if(pushed_guy != my_guy)
-                        pushed_guy.hspeed -= head_facing*4;
+
+                if (pushed_guy != noone) {
+                    if (pushed_guy != self.my_guy)
+                        pushed_guy.hspeed -= self.head_facing * 4;
                     else
-                        pushed_guy.hspeed -= head_facing;
+                        pushed_guy.hspeed -= self.head_facing;
                 }
             }
         }
-        
-        beam_head_node_changed = false;
+
+        self.beam_head_node_changed = false;
     }
-    
-    // BEAM HEAD PROPAGATION    
-    if(beam_head_fired)
-    {
-        if(!beam_head_landed)
-        {
-            beam_head_dist += (head_facing*beam_speed/2);
-            //show_debug_message("head_dist: " + string(beam_head_dist));
-            if(sign(next_node_x-(node_x+beam_head_dist)) != head_facing)
-            {
-                if(beam_head_node+1 < last_node)
-                {
-                    beam_head_node += 1;
-                    beam_head_dist = 0;
-                    head_facing *= -1;
-                    show_debug_message("head_node: " + string(beam_head_node));
-                    show_debug_message("head_facing: " + string(head_facing));
-                    beam_head_node_changed = true;    
+
+    // BEAM HEAD PROPAGATION
+    if (self.beam_head_fired) {
+        if (!self.beam_head_landed) {
+            self.beam_head_dist += (self.head_facing * self.beam_speed / 2);
+            //show_debug_message("head_dist: " + string(self.beam_head_dist));
+            if (sign(self.next_node_x - (self.node_x + self.beam_head_dist)) != self.head_facing) {
+                if (self.beam_head_node + 1 < last_node) {
+                    self.beam_head_node += 1;
+                    self.beam_head_dist = 0;
+                    self.head_facing *= -1;
+                    show_debug_message("head_node: " + string(self.beam_head_node));
+                    show_debug_message("head_facing: " + string(self.head_facing));
+                    self.beam_head_node_changed = true;
                 }
-                else
-                {
-                    beam_head_dist = next_node_x-node_x;
-                    beam_head_landed = true;
+                else {
+                    self.beam_head_dist = self.next_node_x - self.node_x;
+                    self.beam_head_landed = true;
                 }
             }
         }
-        
-        if(beam_head_landed && !instance_exists(beam_end))
-        {
-            beam_end = instance_create(node_x+beam_head_dist,y,beam_end_obj);
-            beam_end.my_beam = self.id;    
+
+        if (self.beam_head_landed && !instance_exists(self.beam_end)) {
+            self.beam_end = instance_create(self.node_x + self.beam_head_dist, self.y, beam_end_obj);
+            self.beam_end.my_beam = self.id;
         }
-        
-        if(beam_head_landed && instance_exists(beam_end))
-        {
-            if(beam_head_node == last_node && last_node >= 1)
-            {
-                beam_head_dist = next_node_x-node_x;
-            }   
-            
-            beam_end.x = head_node.x + beam_head_dist;
-            beam_end.y = head_node.y;
-            if(object_is_ancestor(head_node.object_index,terrain_obj))
-            {
-                beam_end.x += 16 - facing*16;
-                beam_end.y += 16;
+
+        if (self.beam_head_landed && instance_exists(self.beam_end)) {
+            if (self.beam_head_node == last_node && last_node >= 1) {
+                self.beam_head_dist = self.next_node_x - self.node_x;
+            }
+
+            self.beam_end.x = self.head_node.x + self.beam_head_dist;
+            self.beam_end.y = self.head_node.y;
+
+            if (object_is_ancestor(self.head_node.object_index, terrain_obj)) {
+                self.beam_end.x += 16 - self.facing * 16;
+                self.beam_end.y += 16;
             }
         }
-        
-        if(abs(beam_head_dist) > 0 || beam_head_node > 0)
-        {
-            force -= 0.01;
+
+        if (abs(self.beam_head_dist) > 0 || self.beam_head_node > 0) {
+            self.force -= 0.01;
         }
     }
-    if(force < 0.3)
-    {
-        image_alpha -= 0.02;
-        beam_alpha -= 0.02;
+
+    if (self.force < 0.3) {
+        self.image_alpha -= 0.02;
+        self.beam_alpha -= 0.02;
     }
-    
+
+    var beam = self;
+
     // DAMAGE DEALING
-    if(force > 0)
-    {            
-        if(facing_right)
-            facing = 1;
-        else
-            facing = -1;
-          
+    if (self.force > 0) {
+        self.facing = self.facing_right ? 1 : -1;
+
         // BEAM GOES OUTSIDE ROOM
-        if(!collided)
-        {
-            node = ds_list_find_value(beam_nodes,0);
-            
-            if(beam_head_fired)
-            {
-                with(phys_body_obj)
-                {
-                    if(my_player != other.my_player)
-                    {
-                        if(collision_rectangle(other.node.x,other.node.y-other.beam_big_core_size/2,other.node.x+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                        {
-                            receive_damage(other.force/other.big_beam_coef,true);
+        if (!self.collided) {
+            var node = self.beam_nodes[| 0];
+
+            if (self.beam_head_fired) {
+                with (phys_body_obj) {
+                    if (self.my_player != beam.my_player) {
+                        if (collision_rectangle(node.x, node.y - beam.beam_big_core_size / 2, node.x + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                            receive_damage(beam.force / beam.big_beam_coef, true);
                         }
                     }
                 }
-                
-                with(artifact_obj)
-                {
-                    if(collision_rectangle(other.node.x,other.node.y-other.beam_big_core_size/2,other.node.x+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                    {
-                        receive_damage(other.force/other.big_beam_coef,true);
-                        event_perform(ev_other,ev_user1);
+
+                with (artifact_obj) {
+                    if (collision_rectangle(node.x, node.y - beam.beam_big_core_size / 2, node.x + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                        receive_damage(beam.force / beam.big_beam_coef, true);
+                        event_perform(ev_other, ev_user1);
                     }
                 }
-                
-                with(crystal_obj)
-                {
-                    if(collision_rectangle(other.node.x,other.node.y-other.beam_big_core_size/2,other.node.x+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                    {
-                        receive_damage(other.force/other.big_beam_coef,true);
-                        event_perform(ev_other,ev_user1);
+
+                with (crystal_obj) {
+                    if (collision_rectangle(node.x, node.y - beam.beam_big_core_size / 2, node.x + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                        receive_damage(beam.force / beam.big_beam_coef, true);
+                        event_perform(ev_other, ev_user1);
                     }
                 }
-                    
+
             }
-            
-            if(!beam_head_landed)
-            {
-                with(phys_body_obj)
-                {
-                    if(my_player != other.my_player)
-                    {
-                        if(collision_rectangle(other.node.x+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.node.x+(1+1.1*other.facing)*room_width/2,other.node.y+other.beam_small_core_size/2,id,false,false))
-                        {
-                            receive_damage(other.force/other.small_beam_coef,false);
+
+            if (!self.beam_head_landed) {
+                with (phys_body_obj) {
+                    if (self.my_player != beam.my_player) {
+                        if (collision_rectangle(node.x + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, node.x + (1 + 1.1 * beam.facing) * room_width / 2, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                            receive_damage(beam.force / beam.small_beam_coef, false);
                         }
                     }
                 }
-                
-                with(artifact_obj)
-                {
-                    if(collision_rectangle(other.node.x+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.node.x+(1+1.1*other.facing)*room_width/2,other.node.y+other.beam_small_core_size/2,id,false,false))
-                    {
-                        receive_damage(other.force/other.small_beam_coef,false);
-                        event_perform(ev_other,ev_user1);
+
+                with (artifact_obj) {
+                    if (collision_rectangle(node.x + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, node.x + (1 + 1.1 * beam.facing) * room_width / 2, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                        receive_damage(beam.force / beam.small_beam_coef, false);
+                        event_perform(ev_other, ev_user1);
                     }
                 }
-                
-                with(crystal_obj)
-                {
-                    if(collision_rectangle(other.node.x+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.node.x+(1+1.1*other.facing)*room_width/2,other.node.y+other.beam_small_core_size/2,id,false,false))
-                    {
-                        receive_damage(other.force/other.small_beam_coef,false);
-                        event_perform(ev_other,ev_user1);
+
+                with (crystal_obj) {
+                    if (collision_rectangle(node.x + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, node.x + (1 + 1.1 * beam.facing) * room_width / 2, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                        receive_damage(beam.force / beam.small_beam_coef, false);
+                        event_perform(ev_other, ev_user1);
                     }
                 }
             }
         }
-        
-        //BEAM HITS SOMETHING    
-        else
-        {   
-            node_fix = 0;
-            next_node_fix = 0;
-            for(i=0;i<=last_node;i+=1)
-            {
-                node = ds_list_find_value(beam_nodes,i);
-                
-                if(i != 0)
-                {
+
+        //BEAM HITS SOMETHING
+        else {
+            var node_fix = 0;
+            var next_node_fix = 0;
+
+            for (var i = 0; i <= last_node; i += 1) {
+                var node = self.beam_nodes[| i];
+
+                if (i != 0) {
                     node_fix = next_node_fix;
                 }
-                
-                if(i <= last_node-1)
-                {
-                    next_node = ds_list_find_value(beam_nodes,i+1);
-                    
-                    if(!instance_exists(next_node))
-                    {
-                       break; 
-                    }
-                    
-                    if(object_is_ancestor(next_node.object_index,terrain_obj))
-                        next_node_fix = 16 - facing*16;
-                    if(next_node.object_index == shield_obj)
-                        next_node_fix = -facing*next_node.radius;
 
-                    if(beam_head_fired)
-                    {
-                        if(i < beam_head_node)
-                        {
-                            with(phys_body_obj)
-                            {
-                                if(my_player != other.my_player)
-                                {
-                                    if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                    {
-                                        receive_damage(other.force/other.big_beam_coef,true);
-                                    }    
+                if (i <= last_node - 1) {
+                    var next_node = self.beam_nodes[| i + 1];
+
+                    if (!instance_exists(next_node)) {
+                        break;
+                    }
+
+                    if (object_is_ancestor(next_node.object_index, terrain_obj)) {
+                        next_node_fix = 16 - self.facing * 16;
+                    }
+
+                    if (next_node.object_index == shield_obj) {
+                        next_node_fix = -self.facing * next_node.radius;
+                    }
+
+                    if (self.beam_head_fired) {
+                        if (i < self.beam_head_node) {
+                            with (phys_body_obj) {
+                                if (self.my_player != beam.my_player) {
+                                    if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                        receive_damage(beam.force / beam.big_beam_coef, true);
+                                    }
                                 }
                             }
-                            
-                            with(artifact_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.big_beam_coef,true);
-                                    event_perform(ev_other,ev_user1);    
-                                }    
+
+                            with (artifact_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.big_beam_coef, true);
+                                    event_perform(ev_other, ev_user1);
+                                }
                             }
-                            
-                            with(crystal_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.big_beam_coef,true);
-                                    event_perform(ev_other,ev_user1);    
-                                }    
+
+                            with (crystal_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.big_beam_coef, true);
+                                    event_perform(ev_other, ev_user1);
+                                }
                             }
                         }
-                        
-                        if(i > beam_head_node)
-                        {
-                            with(phys_body_obj)
-                            {
-                                if(my_player != other.my_player)
-                                {
-                                    if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                    {
-                                        receive_damage(other.force/other.small_beam_coef,false);
+
+                        if (i > self.beam_head_node) {
+                            with (phys_body_obj) {
+                                if (self.my_player != beam.my_player) {
+                                    if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                        receive_damage(beam.force / beam.small_beam_coef, false);
                                     }
-                                }    
+                                }
                             }
-                            
-                            with(artifact_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.small_beam_coef,false);
-                                    event_perform(ev_other,ev_user1);    
-                                }    
+
+                            with (artifact_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.small_beam_coef, false);
+                                    event_perform(ev_other, ev_user1);
+                                }
                             }
-                            
-                            with(crystal_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.small_beam_coef,false);
-                                    event_perform(ev_other,ev_user1);    
-                                }    
-                            }    
+
+                            with (crystal_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.small_beam_coef, false);
+                                    event_perform(ev_other, ev_user1);
+                                }
+                            }
                         }
-                        
-                        if(i == beam_head_node)
-                        {
-                            with(phys_body_obj)
-                            {
-                                if(my_player != other.my_player)
-                                {
-                                    if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.node.x+other.node_fix+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                    {
-                                        receive_damage(other.force/other.big_beam_coef,true);
+
+                        if (i == self.beam_head_node) {
+                            with (phys_body_obj) {
+                                if (self.my_player != beam.my_player) {
+                                    if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, node.x + node_fix + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                        receive_damage(beam.force / beam.big_beam_coef, true);
                                     }
-                                    
-                                    if(sign(other.next_node.x-other.beam_head_dist) == other.head_facing)
-                                    {
-                                        if(collision_rectangle(other.node.x+other.node_fix+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                        {
-                                            receive_damage(other.force/other.small_beam_coef,false);
+
+                                    if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
+                                        if (collision_rectangle(node.x + node_fix + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                            receive_damage(beam.force / beam.small_beam_coef, false);
                                         }
-                                    }    
+                                    }
                                 }
                             }
-                            
-                            with(artifact_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.node.x+other.node_fix+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.big_beam_coef,true);
-                                    event_perform(ev_other,ev_user1);    
+
+                            with (artifact_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, node.x + node_fix + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.big_beam_coef, true);
+                                    event_perform(ev_other, ev_user1);
                                 }
-                                
-                                if(sign(other.next_node.x-other.beam_head_dist) == other.head_facing)
-                                {
-                                    if(collision_rectangle(other.node.x+other.node_fix+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                    {
-                                        receive_damage(other.force/other.small_beam_coef,false);
-                                        event_perform(ev_other,ev_user1);    
+
+                                if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
+                                    if (collision_rectangle(node.x + node_fix + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                        receive_damage(beam.force / beam.small_beam_coef, false);
+                                        event_perform(ev_other, ev_user1);
                                     }
-                                }    
+                                }
                             }
-                            
-                            with(crystal_obj)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_big_core_size/2,other.node.x+other.node_fix+other.beam_head_dist,other.node.y+other.beam_big_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.big_beam_coef,true);
-                                    event_perform(ev_other,ev_user1);    
+
+                            with (crystal_obj) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_big_core_size / 2, node.x + node_fix + beam.beam_head_dist, node.y + beam.beam_big_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.big_beam_coef, true);
+                                    event_perform(ev_other, ev_user1);
                                 }
-                                
-                                if(sign(other.next_node.x-other.beam_head_dist) == other.head_facing)
-                                {
-                                    if(collision_rectangle(other.node.x+other.node_fix+other.beam_head_dist,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                    {
-                                        receive_damage(other.force/other.small_beam_coef,false);
-                                        event_perform(ev_other,ev_user1);    
+
+                                if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
+                                    if (collision_rectangle(node.x + node_fix + beam.beam_head_dist, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                        receive_damage(beam.force / beam.small_beam_coef, false);
+                                        event_perform(ev_other, ev_user1);
                                     }
-                                }    
+                                }
                             }
                         }
                     }
-                    else
-                    {
-                        with(phys_body_obj)
-                        {
-                            if(my_player != other.my_player)
-                            {
-                                if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                                {
-                                    receive_damage(other.force/other.small_beam_coef,false);
+                    else {
+                        with (phys_body_obj) {
+                            if (self.my_player != beam.my_player) {
+                                if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                    receive_damage(beam.force / beam.small_beam_coef, false);
                                 }
-                            }    
+                            }
                         }
-                        
-                        with(artifact_obj)
-                        {
-                            if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                            {
-                                receive_damage(other.force/other.small_beam_coef,false);
-                                event_perform(ev_other,ev_user1);    
-                            }    
+
+                        with (artifact_obj) {
+                            if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                receive_damage(beam.force / beam.small_beam_coef, false);
+                                event_perform(ev_other, ev_user1);
+                            }
                         }
-                        
-                        with(crystal_obj)
-                        {
-                            if(collision_rectangle(other.node.x+other.node_fix,other.node.y-other.beam_small_core_size/2,other.next_node.x+other.next_node_fix,other.node.y+other.beam_small_core_size/2,id,false,false))
-                            {
-                                receive_damage(other.force/other.small_beam_coef,false);
-                                event_perform(ev_other,ev_user1);    
-                            }    
+
+                        with (crystal_obj) {
+                            if (collision_rectangle(node.x + node_fix, node.y - beam.beam_small_core_size / 2, next_node.x + next_node_fix, node.y + beam.beam_small_core_size / 2, self.id, false, false) != noone) {
+                                receive_damage(beam.force / beam.small_beam_coef, false);
+                                event_perform(ev_other, ev_user1);
+                            }
                         }
                     }
                 }
-                facing *= -1;
+
+                self.facing *= -1;
             }
         }
     }
 }
 
 
-if(instance_exists(my_guy) && object_is_ancestor(my_guy.object_index, guy_obj))
-{
-    if(my_guy.lost_control)
-    {
-        my_holder = instance_create(x,y,place_holder_obj);
-        ds_list_replace(beam_nodes,0,my_holder.id);
-        
-        if(force > 0.3)
-        {
-            force = 0.3;
+if (instance_exists(self.my_guy) && object_is_ancestor(self.my_guy.object_index, guy_obj)) {
+    if (self.my_guy.lost_control) {
+        self.my_holder = instance_create(self.x, self.y, place_holder_obj);
+        ds_list_replace(self.beam_nodes, 0, self.my_holder.id);
+
+        if (self.force > 0.3) {
+            self.force = 0.3;
         }
-        
-        with(my_guy)
-        {   
+
+        with (self.my_guy) {
             self.casting = false;
             self.casting_beam = false;
-            charge_ball.firing = false;
+            self.charge_ball.firing = false;
             self.have_casted = true;
-            alarm[0] = spell_cooldown;
+            self.alarm[0] = self.spell_cooldown;
         }
-        
     }
 }
 
-if(instance_exists(my_ball))
-{
-    my_ball.charge = force;
+if (instance_exists(self.my_ball)) {
+    self.my_ball.charge = self.force;
 }
 
-if(force <= 0)
+if (self.force <= 0) {
     instance_destroy();
-
+}
