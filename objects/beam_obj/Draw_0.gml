@@ -2,7 +2,7 @@
 if (self.endpoint_reached && !self.invalid) {
     var last_node = ds_list_size(self.beam_nodes) - 1;
 
-    self.facing = self.facing_right ? 1 : -1;
+    self.updateFacing();
 
     // BEAM GOES OUTSIDE ROOM
     if (!self.collided) {
@@ -43,26 +43,8 @@ if (self.endpoint_reached && !self.invalid) {
 
             // UPDATE RADII WHEN PHASE CHANGES
             if (!self.radii_updated) {
-                if (self.beam_draw_phase == 0) {
-                    self.core_radius = beam_big_core_size / 2;
-                    self.next_core_radius = beam_big_core_size / 2;
-                    phase_str += "0";
-                }
+                self.updateRadii();
 
-                if (self.beam_draw_phase == 1) {
-                    self.core_radius = beam_big_core_size / 2;
-                    self.next_core_radius = beam_small_core_size / 2;
-                    phase_str += "1";
-                }
-
-                if (self.beam_draw_phase == 2) {
-                    self.core_radius = beam_small_core_size / 2;
-                    self.next_core_radius = beam_small_core_size / 2;
-                    phase_str += "2";
-                }
-
-                self.beam_radius = core_radius + beam_glow_size;
-                self.next_beam_radius = next_core_radius + beam_glow_size;
                 self.radii_updated = true;
             }
 
@@ -210,28 +192,8 @@ if (self.endpoint_reached && !self.invalid) {
 
                     // UPDATE RADII WHEN PHASE CHANGES
                     if (!self.radii_updated) {
-                        if (self.beam_draw_phase == 0) {
-                            self.core_radius = self.beam_big_core_size / 2;
-                            self.next_core_radius = self.beam_big_core_size / 2;
+                        self.updateRadii();
 
-                            phase_str += "0";
-                        }
-
-                        if (beam_draw_phase == 1) {
-                            self.core_radius = self.beam_big_core_size / 2;
-                            self.next_core_radius = self.beam_small_core_size / 2;
-
-                            phase_str += "1";
-                        }
-
-                        if (beam_draw_phase == 2) {
-                            self.core_radius = beam_small_core_size / 2;
-                            self.next_core_radius = beam_small_core_size / 2;
-                            phase_str += "2";
-                        }
-
-                        self.beam_radius = self.core_radius + self.beam_glow_size;
-                        self.next_beam_radius = self.next_core_radius + self.beam_glow_size;
                         self.radii_updated = true;
                     }
 

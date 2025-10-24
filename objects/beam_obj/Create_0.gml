@@ -45,3 +45,23 @@ self.beam_radius = 0;
 self.next_beam_radius = 0;
 
 self.name = "BEAM!!!";
+
+function updateFacing() {
+    self.facing = self.facing_right ? 1 : -1;
+}
+
+function updateRadii() {
+    if (self.beam_draw_phase == 0) {
+        self.core_radius      = self.beam_big_core_size / 2;
+        self.next_core_radius = self.beam_big_core_size / 2;
+    } else if (self.beam_draw_phase == 1) {
+        self.core_radius      = self.beam_big_core_size / 2;
+        self.next_core_radius = self.beam_small_core_size / 2;
+    } else if (self.beam_draw_phase == 2) {
+        self.core_radius      = self.beam_small_core_size / 2;
+        self.next_core_radius = self.beam_small_core_size / 2;
+    }
+    
+    self.beam_radius      = self.core_radius + self.beam_glow_size;
+    self.next_beam_radius = self.next_core_radius + self.beam_glow_size;
+}

@@ -123,7 +123,7 @@ if (self.endpoint_reached && !self.invalid) {
 
     // DAMAGE DEALING
     if (self.force > 0) {
-        self.facing = self.facing_right ? 1 : -1;
+        self.updateFacing();
 
         // BEAM GOES OUTSIDE ROOM
         if (!self.collided) {

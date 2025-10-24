@@ -22,7 +22,7 @@ else {
 }
 
 // FACING
-self.facing = self.facing_right ? 1 : -1;
+self.updateFacing();
 
 // BEAM EDGES
 var beam_top = self.y - self.beam_small_core_size / 2;
