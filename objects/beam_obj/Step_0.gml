@@ -40,8 +40,11 @@ if (self.endpoint_reached && !self.invalid) {
                     self.next_node_x += -self.facing * next_node.radius;
                 }
             }
+
             if (last_node == 0) {
-                self.next_node_x = (1 + 1.1 * self.head_facing) * room_width / 2;
+                var outsideRoomX = (1 + 1.1 * self.head_facing) * room_width / 2;
+
+                self.next_node_x = outsideRoomX;
             }
 
             // PUSH
@@ -128,12 +131,14 @@ if (self.endpoint_reached && !self.invalid) {
         // BEAM GOES OUTSIDE ROOM
         if (!self.collided) {
             var node = self.beam_nodes[| 0];
-            var outsideRoomX = node.x + (1 + 1.1 * beam.facing) * room_width / 2;
             var beamHeadX = node.x + beam.beam_head_dist;
             var bigBeamTopY = node.y - beam.beam_big_core_size / 2;
             var bigBeamBottomY = node.y + beam.beam_big_core_size / 2;
             var smallBeamTopY = node.y - beam.beam_small_core_size / 2;
             var smallBeamBottomY = node.y + beam.beam_small_core_size / 2;
+            
+            // TODO: Why add to node.x and not the same as other outsideRoomX ?
+            var outsideRoomX = node.x + (1 + 1.1 * beam.facing) * room_width / 2;
             
             var bigBeamData = {
                 x1: node.x,

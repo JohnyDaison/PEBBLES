@@ -14,9 +14,9 @@ if (self.endpoint_reached && !self.invalid) {
             self.drawBaseSprite(beam_head, beamHeadX, self.head_facing);
         }
 
-        var phase_str = "";
+        var outsideRoomX = (1 + 1.1 * self.facing) * room_width / 2;
 
-        for (var xx = node.x; sign((1 + 1.1 * self.facing) * room_width / 2 - xx) == self.facing; xx += self.beam_speed * self.facing) {
+        for (var xx = node.x; sign(outsideRoomX - xx) == self.facing; xx += self.beam_speed * self.facing) {
             var next_ii = xx + self.beam_speed * self.facing;
 
             // DETECT PHASE CHANGE
