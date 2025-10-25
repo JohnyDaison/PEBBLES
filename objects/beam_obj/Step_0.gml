@@ -114,7 +114,7 @@ if (self.endpoint_reached && !self.invalid) {
         }
     }
 
-    if (self.force < 0.3) {
+    if (self.force < self.fadeOutStart) {
         self.image_alpha -= 0.02;
         self.beam_alpha -= 0.02;
     }
@@ -344,23 +344,19 @@ if (self.endpoint_reached && !self.invalid) {
     }
 }
 
+var shooter = self.my_guy;
 
-if (instance_exists(self.my_guy) && object_is_ancestor(self.my_guy.object_index, guy_obj)) {
-    if (self.my_guy.lost_control) {
+if (instance_exists(shooter) && object_is_ancestor(shooter.object_index, guy_obj)) {
+    if (shooter.lost_control) {
         self.my_holder = instance_create(self.x, self.y, place_holder_obj);
         ds_list_replace(self.beam_nodes, 0, self.my_holder.id);
 
-        if (self.force > 0.3) {
-            self.force = 0.3;
+        if (self.force > self.fadeOutStart) {
+            self.force = self.fadeOutStart;
         }
 
-        with (self.my_guy) {
-            self.casting = false;
-            self.casting_beam = false;
-            self.charge_ball.firing = false;
-            self.have_casted = true;
-            self.alarm[0] = self.spell_cooldown;
-        }
+        self.finishCasting(shooter);
+        shooter.charge_ball.firing = false;
     }
 }
 

@@ -8,10 +8,7 @@ var shooter = self.my_guy;
 
 if (instance_exists(shooter) && !instance_exists(self.my_holder)) {
     if (object_is_ancestor(shooter.object_index, guy_obj)) {
-        shooter.casting = false;
-        shooter.casting_beam = false;
-        shooter.have_casted = true;
-        shooter.alarm[0] = shooter.spell_cooldown;
+        self.finishCasting(shooter);
     }
 
     if (shooter.object_index == beam_turret_mount_obj) {

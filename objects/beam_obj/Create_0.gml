@@ -34,6 +34,7 @@ self.my_holder = noone;
 self.head_node = noone;
 self.facing_right = false;
 self.facing = -1;
+self.fadeOutStart = 0.3;
 
 self.node_x = 0;
 self.next_node_x = 0;
@@ -64,4 +65,11 @@ function updateRadii() {
     
     self.beam_radius      = self.core_radius + self.beam_glow_size;
     self.next_beam_radius = self.next_core_radius + self.beam_glow_size;
+}
+
+function finishCasting(guy) {
+    guy.casting = false;
+    guy.casting_beam = false;
+    guy.have_casted = true;
+    guy.alarm[0] = guy.spell_cooldown;
 }
