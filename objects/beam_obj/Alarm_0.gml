@@ -42,13 +42,17 @@ self.collided = false;
 while (!self.endpoint_reached) {
     var step_resolved = false;
 
-    var shields_found = 0;
-    var shields = [noone];
-    var correct_shield = noone;
-
-    var walls_found = 0;
-    var walls = [noone];
-    var correct_wall = noone;
+    var shieldSearch = {
+        found: 0,
+        array: [noone],
+        correct: noone
+    };
+    
+    var wallSearch = {
+        found: 0,
+        array: [noone],
+        correct: noone
+    };
 
     // SHIELDS
     with (shield_obj) {
@@ -58,24 +62,25 @@ while (!self.endpoint_reached) {
             sign(shield.x - beam_point) == beam.facing &&
             shield.y + shield.radius > beam_top &&
             shield.y - shield.radius < beam_bottom) {
-                shields[shields_found] = self.id;
-                shields_found += 1;
+                shieldSearch.array[shieldSearch.found] = self.id;
+                shieldSearch.found += 1;
         }
     }
-    //show_debug_message("found shields: "+string(shields_found));
+    //show_debug_message("found shields: "+string(shieldSearch.found));
 
-    if (shields_found == 1) {
-        correct_shield = shields[0];
+    if (shieldSearch.found == 1) {
+        shieldSearch.correct = shieldSearch.array[0];
     }
-    else if (shields_found > 1) {
+    else if (shieldSearch.found > 1) {
         var closest_x = self.facing * room_width;
 
-        for (var i = 0; i < shields_found; i += 1) {
-            var shield = shields[i];
+        for (var i = 0; i < shieldSearch.found; i += 1) {
+            var shield = shieldSearch.array[i];
+            var shieldEdgeX = shield.x - self.facing * shield.radius;
 
-            if (sign(closest_x - (shield.x - self.facing * shield.radius)) == self.facing) {
-                closest_x = shield.x - self.facing * shield.radius;
-                correct_shield = shield;
+            if (sign(closest_x - shieldEdgeX) == self.facing) {
+                closest_x = shieldEdgeX;
+                shieldSearch.correct = shield;
             }
         }
     }
@@ -84,34 +89,34 @@ while (!self.endpoint_reached) {
     with (terrain_obj) {
         if (self.object_index != grate_block_obj) {
             if (sign(self.x - beam_point) == beam.facing && self.y + 32 > beam_top && y < beam_bottom) {
-                walls[walls_found] = self.id;
-                walls_found += 1;
+                wallSearch.array[wallSearch.found] = self.id;
+                wallSearch.found += 1;
             }
         }
     }
-    //show_debug_message("found walls: "+string(walls_found));
+    //show_debug_message("found walls: "+string(wallSearch.found));
 
-    if (walls_found == 1) {
-        correct_wall = walls[0];
+    if (wallSearch.found == 1) {
+        wallSearch.correct = wallSearch.array[0];
     }
-    else if (walls_found > 1) {
+    else if (wallSearch.found > 1) {
         var closest_x = self.facing * room_width;
 
-        for (var i = 0; i < walls_found; i += 1) {
-            var wall = walls[i];
+        for (var i = 0; i < wallSearch.found; i += 1) {
+            var wall = wallSearch.array[i];
 
             if (sign(closest_x - wall.x) == self.facing) {
                 closest_x = wall.x;
-                correct_wall = wall;
+                wallSearch.correct = wall;
             }
         }
     }
 
     // FINALIZING
     //show_debug_message("final");
-    if (correct_wall != noone && correct_shield != noone && !step_resolved) {
-        if (sign(correct_shield.x - correct_wall.x) == self.facing) {
-            ds_list_add(self.beam_nodes, correct_wall);
+    if (wallSearch.correct != noone && shieldSearch.correct != noone && !step_resolved) {
+        if (sign(shieldSearch.correct.x - wallSearch.correct.x) == self.facing) {
+            ds_list_add(self.beam_nodes, wallSearch.correct);
 
             self.endpoint_reached = true;
             self.collided = true;
@@ -120,19 +125,19 @@ while (!self.endpoint_reached) {
         }
     }
 
-    if (correct_shield != noone && !step_resolved) {
-        if (ds_list_find_index(self.beam_nodes, correct_shield) == -1) {
-            ds_list_add(self.beam_nodes, correct_shield);
+    if (shieldSearch.correct != noone && !step_resolved) {
+        if (ds_list_find_index(self.beam_nodes, shieldSearch.correct) == -1) {
+            ds_list_add(self.beam_nodes, shieldSearch.correct);
 
             self.facing *= -1;
             collided = true;
 
-            beam_point = correct_shield.x + facing * correct_shield.radius;
-            last_obj = correct_shield;
+            beam_point = shieldSearch.correct.x + facing * shieldSearch.correct.radius;
+            last_obj = shieldSearch.correct;
             step_resolved = true;
         }
         else {
-            ds_list_add(self.beam_nodes, correct_shield);
+            ds_list_add(self.beam_nodes, shieldSearch.correct);
 
             self.endpoint_reached = true;
             collided = true;
@@ -141,8 +146,8 @@ while (!self.endpoint_reached) {
         }
     }
 
-    if (correct_wall != noone && !step_resolved) {
-        ds_list_add(self.beam_nodes, correct_wall);
+    if (wallSearch.correct != noone && !step_resolved) {
+        ds_list_add(self.beam_nodes, wallSearch.correct);
 
         self.endpoint_reached = true;
         self.collided = true;
@@ -150,7 +155,7 @@ while (!self.endpoint_reached) {
         step_resolved = true;
     }
 
-    if (correct_wall == noone && correct_shield == noone && !step_resolved) {
+    if (wallSearch.correct == noone && shieldSearch.correct == noone && !step_resolved) {
         self.endpoint_reached = true;
         step_resolved = true;
     }
