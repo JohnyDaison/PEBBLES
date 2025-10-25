@@ -73,3 +73,64 @@ function finishCasting(guy) {
     guy.have_casted = true;
     guy.alarm[0] = guy.spell_cooldown;
 }
+
+/// @param {Struct} beamData
+function dealDamageSimpleToAll(beamData) {
+    self.dealDamageSimple(phys_body_obj, beamData, true, false);
+    self.dealDamageSimple(artifact_obj, beamData, false, true);
+    self.dealDamageSimple(crystal_obj, beamData, false, true);
+}
+
+/// @param {Asset.GMObject} targetObj
+/// @param {Struct} beamData
+/// @param {Bool} ignoreSamePlayer
+/// @param {Bool} triggerUserEvent
+function dealDamageSimple(targetObj, beamData, ignoreSamePlayer, triggerUserEvent) {
+    with (targetObj) {
+        if (ignoreSamePlayer && self.my_player == other.my_player) {
+            continue;
+        }
+
+        if (collision_rectangle(beamData.x1, beamData.y1, beamData.x2, beamData.y2, self.id, false, false) != noone) {
+            receive_damage(beamData.damage, beamData.isBig);
+
+            if (triggerUserEvent) {
+                event_perform(ev_other, ev_user1);
+            }
+        }
+    }
+}
+
+/// @param {Asset.GMObject} targetObj
+/// @param {Struct} bigBeamData
+/// @param {Struct} smallBeamData
+/// @param {Bool} ignoreSamePlayer
+/// @param {Bool} triggerUserEvent
+/// @param {Bool} facingCondition
+function dealDamageBeamHead(targetObj, bigBeamData, smallBeamData, ignoreSamePlayer, triggerUserEvent, facingCondition) {
+    with (targetObj) {
+        if (ignoreSamePlayer && self.my_player == other.my_player) {
+            continue;
+        }
+
+        if (collision_rectangle(bigBeamData.x1, bigBeamData.y1, bigBeamData.x2, bigBeamData.y2, self.id, false, false) != noone) {
+            receive_damage(bigBeamData.damage, bigBeamData.isBig);
+
+            if (triggerUserEvent) {
+                event_perform(ev_other, ev_user1);
+            }
+        }
+
+        if (!facingCondition) {
+            continue;
+        }
+
+        if (collision_rectangle(smallBeamData.x1, smallBeamData.y1, smallBeamData.x2, smallBeamData.y2, self.id, false, false) != noone) {
+            receive_damage(smallBeamData.damage, smallBeamData.isBig);
+
+            if (triggerUserEvent) {
+                event_perform(ev_other, ev_user1);
+            }
+        }
+    }
+}

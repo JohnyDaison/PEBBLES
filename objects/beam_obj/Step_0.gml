@@ -134,54 +134,31 @@ if (self.endpoint_reached && !self.invalid) {
             var bigBeamBottomY = node.y + beam.beam_big_core_size / 2;
             var smallBeamTopY = node.y - beam.beam_small_core_size / 2;
             var smallBeamBottomY = node.y + beam.beam_small_core_size / 2;
+            
+            var bigBeamData = {
+                x1: node.x,
+                y1: bigBeamTopY,
+                x2: beamHeadX,
+                y2: bigBeamBottomY,
+                damage: beam.force / beam.big_beam_coef,
+                isBig: true
+            };
+            
+            var smallBeamData = {
+                x1: beamHeadX,
+                y1: smallBeamTopY,
+                x2: outsideRoomX,
+                y2: smallBeamBottomY,
+                damage: beam.force / beam.small_beam_coef,
+                isBig: false
+            };
 
             if (self.beam_head_fired) {
-                with (phys_body_obj) {
-                    if (self.my_player != beam.my_player) {
-                        if (collision_rectangle(node.x, bigBeamTopY, beamHeadX, bigBeamBottomY, self.id, false, false) != noone) {
-                            receive_damage(beam.force / beam.big_beam_coef, true);
-                        }
-                    }
-                }
-
-                with (artifact_obj) {
-                    if (collision_rectangle(node.x, bigBeamTopY, beamHeadX, bigBeamBottomY, self.id, false, false) != noone) {
-                        receive_damage(beam.force / beam.big_beam_coef, true);
-                        event_perform(ev_other, ev_user1);
-                    }
-                }
-
-                with (crystal_obj) {
-                    if (collision_rectangle(node.x, bigBeamTopY, beamHeadX, bigBeamBottomY, self.id, false, false) != noone) {
-                        receive_damage(beam.force / beam.big_beam_coef, true);
-                        event_perform(ev_other, ev_user1);
-                    }
-                }
-
+                self.dealDamageSimpleToAll(bigBeamData);
             }
 
             if (!self.beam_head_landed) {
-                with (phys_body_obj) {
-                    if (self.my_player != beam.my_player) {
-                        if (collision_rectangle(beamHeadX, smallBeamTopY, outsideRoomX, smallBeamBottomY, self.id, false, false) != noone) {
-                            receive_damage(beam.force / beam.small_beam_coef, false);
-                        }
-                    }
-                }
-
-                with (artifact_obj) {
-                    if (collision_rectangle(beamHeadX, smallBeamTopY, outsideRoomX, smallBeamBottomY, self.id, false, false) != noone) {
-                        receive_damage(beam.force / beam.small_beam_coef, false);
-                        event_perform(ev_other, ev_user1);
-                    }
-                }
-
-                with (crystal_obj) {
-                    if (collision_rectangle(beamHeadX, smallBeamTopY, outsideRoomX, smallBeamBottomY, self.id, false, false) != noone) {
-                        receive_damage(beam.force / beam.small_beam_coef, false);
-                        event_perform(ev_other, ev_user1);
-                    }
-                }
+                self.dealDamageSimpleToAll(smallBeamData);
             }
         }
 
@@ -219,122 +196,48 @@ if (self.endpoint_reached && !self.invalid) {
                     var bigBeamBottomY = node.y + beam.beam_big_core_size / 2;
                     var smallBeamTopY = node.y - beam.beam_small_core_size / 2;
                     var smallBeamBottomY = node.y + beam.beam_small_core_size / 2;
+                    
+                    var bigBeamData = {
+                        x1: nodeFixedX,
+                        y1: bigBeamTopY,
+                        x2: nextNodeFixedX,
+                        y2: bigBeamBottomY,
+                        damage: beam.force / beam.big_beam_coef,
+                        isBig: true
+                    };
+                    
+                    var smallBeamData = {
+                        x1: nodeFixedX,
+                        y1: smallBeamTopY,
+                        x2: nextNodeFixedX,
+                        y2: smallBeamBottomY,
+                        damage: beam.force / beam.small_beam_coef,
+                        isBig: false
+                    };
 
                     if (self.beam_head_fired) {
                         if (nodeIndex < self.beam_head_node) {
-                            with (phys_body_obj) {
-                                if (self.my_player != beam.my_player) {
-                                    if (collision_rectangle(nodeFixedX, bigBeamTopY, nextNodeFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                        receive_damage(beam.force / beam.big_beam_coef, true);
-                                    }
-                                }
-                            }
-
-                            with (artifact_obj) {
-                                if (collision_rectangle(nodeFixedX, bigBeamTopY, nextNodeFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.big_beam_coef, true);
-                                    event_perform(ev_other, ev_user1);
-                                }
-                            }
-
-                            with (crystal_obj) {
-                                if (collision_rectangle(nodeFixedX, bigBeamTopY, nextNodeFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.big_beam_coef, true);
-                                    event_perform(ev_other, ev_user1);
-                                }
-                            }
+                            self.dealDamageSimpleToAll(bigBeamData);
                         }
 
-                        if (nodeIndex > self.beam_head_node) {
-                            with (phys_body_obj) {
-                                if (self.my_player != beam.my_player) {
-                                    if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                        receive_damage(beam.force / beam.small_beam_coef, false);
-                                    }
-                                }
-                            }
-
-                            with (artifact_obj) {
-                                if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.small_beam_coef, false);
-                                    event_perform(ev_other, ev_user1);
-                                }
-                            }
-
-                            with (crystal_obj) {
-                                if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.small_beam_coef, false);
-                                    event_perform(ev_other, ev_user1);
-                                }
-                            }
+                        else if (nodeIndex > self.beam_head_node) {
+                            self.dealDamageSimpleToAll(smallBeamData);
                         }
 
-                        if (nodeIndex == self.beam_head_node) {
-                            with (phys_body_obj) {
-                                if (self.my_player != beam.my_player) {
-                                    if (collision_rectangle(nodeFixedX, bigBeamTopY, beamHeadFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                        receive_damage(beam.force / beam.big_beam_coef, true);
-                                    }
+                        else if (nodeIndex == self.beam_head_node) {
+                            bigBeamData.x2 = beamHeadFixedX;
+                            smallBeamData.x1 = beamHeadFixedX;
 
-                                    if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
-                                        if (collision_rectangle(beamHeadFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                            receive_damage(beam.force / beam.small_beam_coef, false);
-                                        }
-                                    }
-                                }
-                            }
+                            // TODO: This is probably wrong
+                            var facingCondition = sign(next_node.x - beam.beam_head_dist) == beam.head_facing;
 
-                            with (artifact_obj) {
-                                if (collision_rectangle(nodeFixedX, bigBeamTopY, beamHeadFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.big_beam_coef, true);
-                                    event_perform(ev_other, ev_user1);
-                                }
-
-                                if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
-                                    if (collision_rectangle(beamHeadFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                        receive_damage(beam.force / beam.small_beam_coef, false);
-                                        event_perform(ev_other, ev_user1);
-                                    }
-                                }
-                            }
-
-                            with (crystal_obj) {
-                                if (collision_rectangle(nodeFixedX, bigBeamTopY, beamHeadFixedX, bigBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.big_beam_coef, true);
-                                    event_perform(ev_other, ev_user1);
-                                }
-
-                                if (sign(next_node.x - beam.beam_head_dist) == beam.head_facing) {
-                                    if (collision_rectangle(beamHeadFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                        receive_damage(beam.force / beam.small_beam_coef, false);
-                                        event_perform(ev_other, ev_user1);
-                                    }
-                                }
-                            }
+                            self.dealDamageBeamHead(phys_body_obj, bigBeamData, smallBeamData, true, false, facingCondition);
+                            self.dealDamageBeamHead(artifact_obj, bigBeamData, smallBeamData, false, true, facingCondition);
+                            self.dealDamageBeamHead(crystal_obj, bigBeamData, smallBeamData, false, true, facingCondition);
                         }
                     }
                     else {
-                        with (phys_body_obj) {
-                            if (self.my_player != beam.my_player) {
-                                if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                    receive_damage(beam.force / beam.small_beam_coef, false);
-                                }
-                            }
-                        }
-
-                        with (artifact_obj) {
-                            if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                receive_damage(beam.force / beam.small_beam_coef, false);
-                                event_perform(ev_other, ev_user1);
-                            }
-                        }
-
-                        with (crystal_obj) {
-                            if (collision_rectangle(nodeFixedX, smallBeamTopY, nextNodeFixedX, smallBeamBottomY, self.id, false, false) != noone) {
-                                receive_damage(beam.force / beam.small_beam_coef, false);
-                                event_perform(ev_other, ev_user1);
-                            }
-                        }
+                        self.dealDamageSimpleToAll(smallBeamData);
                     }
                 }
 
