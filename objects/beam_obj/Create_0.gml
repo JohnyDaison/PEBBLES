@@ -134,3 +134,19 @@ function dealDamageBeamHead(targetObj, bigBeamData, smallBeamData, ignoreSamePla
         }
     }
 }
+
+/// @param {Asset.GMSprite} sprite
+/// @param {Real} xPos
+/// @param {Real} facing 1 or -1
+function drawBaseSprite(sprite, xPos, facing) {
+    draw_sprite_ext(sprite, self.image_index, xPos, self.y, facing, 1, 0, self.tint, self.image_alpha);
+}
+
+/// @param {Asset.GMSprite} sprite
+/// @param {Real} xPos
+/// @param {Real} facing 1 or -1
+function drawHighlightSprite(sprite, xPos, facing) {
+    var highlightAlpha = self.image_alpha * self.beam_highlight_ratio;
+
+    draw_sprite_ext(sprite, self.image_index, xPos, self.y, facing, 1, 0, c_white, highlightAlpha);
+}

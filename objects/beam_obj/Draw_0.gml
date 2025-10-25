@@ -2,17 +2,16 @@
 if (self.endpoint_reached && !self.invalid) {
     var last_node = ds_list_size(self.beam_nodes) - 1;
     var beamHeadX = self.node_x + self.beam_head_dist;
-    var highlightAlpha = self.image_alpha * self.beam_highlight_ratio;
 
     self.updateFacing();
 
     // BEAM GOES OUTSIDE ROOM
     if (!self.collided) {
         var node = self.beam_nodes[| 0];
-        draw_sprite_ext(beam_start, self.image_index, node.x, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
+        self.drawBaseSprite(beam_start, node.x, self.facing);
 
         if (self.beam_head_fired && !self.beam_head_landed) {
-            draw_sprite_ext(beam_head, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
+            self.drawBaseSprite(beam_head, beamHeadX, self.head_facing);
         }
 
         var phase_str = "";
@@ -105,10 +104,10 @@ if (self.endpoint_reached && !self.invalid) {
             }
         }
 
-        draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, highlightAlpha);
+        self.drawHighlightSprite(beam_start_highlight, node.x, self.facing);
 
         if (self.beam_head_fired && !self.beam_head_landed) {
-            draw_sprite_ext(beam_head_highlight, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, c_white, highlightAlpha);
+            self.drawHighlightSprite(beam_head_highlight, beamHeadX, self.head_facing);
         }
     }
 
@@ -141,17 +140,17 @@ if (self.endpoint_reached && !self.invalid) {
 
                 // DRAW START SPRITE
                 if (nodeIndex == 0) {
-                    draw_sprite_ext(beam_start, self.image_index, node.x, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
+                    self.drawBaseSprite(beam_start, node.x, self.facing);
                 }
 
                 // DRAW END SPRITE
                 if (nodeIndex == last_node - 1) {
-                    draw_sprite_ext(beam_end_sprite, self.image_index, next_node.x + next_node_fix, self.y, self.facing, 1, 0, self.tint, self.image_alpha);
+                    self.drawBaseSprite(beam_end_sprite, next_node.x + next_node_fix, self.facing);
                 }
 
                 // DRAW HEAD SPRITE
                 if (self.beam_head_fired && !self.beam_head_landed) {
-                    draw_sprite_ext(beam_head, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, self.tint, self.image_alpha);
+                    self.drawBaseSprite(beam_head, beamHeadX, self.head_facing);
                 }
 
                 var phase_str = "";
@@ -259,17 +258,17 @@ if (self.endpoint_reached && !self.invalid) {
 
                 // DRAW START SPRITE
                 if (nodeIndex == 0) {
-                    draw_sprite_ext(beam_start_highlight, self.image_index, node.x, self.y, self.facing, 1, 0, c_white, highlightAlpha);
+                    self.drawHighlightSprite(beam_start_highlight, node.x, self.facing);
                 }
 
                 // DRAW END SPRITE
                 if (nodeIndex == last_node - 1) {
-                    draw_sprite_ext(beam_end_highlight, self.image_index, next_node.x + next_node_fix, self.y, self.facing, 1, 0, c_white, highlightAlpha);
+                    self.drawHighlightSprite(beam_end_highlight, next_node.x + next_node_fix, self.facing);
                 }
 
                 // DRAW HEAD SPRITE
                 if (self.beam_head_fired && !self.beam_head_landed) {
-                    draw_sprite_ext(beam_head_highlight, self.image_index, beamHeadX, self.y, self.head_facing, 1, 0, c_white, highlightAlpha);
+                    self.drawHighlightSprite(beam_head_highlight, beamHeadX, self.head_facing);
                 }
             }
 
