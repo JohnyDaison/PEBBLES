@@ -88,7 +88,7 @@ while (!self.endpoint_reached) {
     // WALLS
     with (terrain_obj) {
         if (self.object_index != grate_block_obj) {
-            if (sign(self.x - beam_point) == beam.facing && self.y + 32 > beam_top && y < beam_bottom) {
+            if (sign(self.x - beam_point) == beam.facing && self.y + 32 > beam_top && self.y < beam_bottom) {
                 wallSearch.array[wallSearch.found] = self.id;
                 wallSearch.found += 1;
             }
@@ -130,9 +130,9 @@ while (!self.endpoint_reached) {
             ds_list_add(self.beam_nodes, shieldSearch.correct);
 
             self.facing *= -1;
-            collided = true;
+            self.collided = true;
 
-            beam_point = shieldSearch.correct.x + facing * shieldSearch.correct.radius;
+            beam_point = shieldSearch.correct.x + self.facing * shieldSearch.correct.radius;
             last_obj = shieldSearch.correct;
             step_resolved = true;
         }
@@ -140,7 +140,7 @@ while (!self.endpoint_reached) {
             ds_list_add(self.beam_nodes, shieldSearch.correct);
 
             self.endpoint_reached = true;
-            collided = true;
+            self.collided = true;
 
             step_resolved = true;
         }
