@@ -37,6 +37,8 @@ Convert Strings used as Enums to Enums:
 * `gui_object.rel_position`
 * mods - should be dynamic Enum
 * `singleton_obj.show_console`
+* `damage_popup_obj.type`
+* `last_attacker_update` function parameters `target`, `type`
 
 
 Convert these to Structs:
