@@ -1,15 +1,14 @@
-battlefeed = noone;
-width = 0;
-height = 0;
-content_length = 0;
-item_type = "";
-type = ds_map_create();
-content = ds_map_create();
-tint = ds_map_create();
-facing = ds_map_create();
-blanks = ds_map_create();
+self.battlefeed = noone;
+self.width = 0;
+self.height = 0;
+self.content_length = 0;
+self.item_type = "";
+self.type = ds_map_create();
+self.content = ds_map_create();
+self.tint = ds_map_create();
+self.facing = ds_map_create();
+self.blanks = ds_map_create();
 
-init_fade_ratio = 4;
-blinkin_duration = 0.75;
-fade_ratio = init_fade_ratio;
-
+self.init_fade_ratio = 4;
+self.blinkin_duration = 0.75;
+self.fade_ratio = self.init_fade_ratio;

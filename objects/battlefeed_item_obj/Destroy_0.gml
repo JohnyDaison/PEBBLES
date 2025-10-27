@@ -1,6 +1,5 @@
-ds_map_destroy(type);
-ds_map_destroy(content);
-ds_map_destroy(tint);
-ds_map_destroy(facing);
-ds_map_destroy(blanks);
-
+ds_map_destroy(self.type);
+ds_map_destroy(self.content);
+ds_map_destroy(self.tint);
+ds_map_destroy(self.facing);
+ds_map_destroy(self.blanks);
