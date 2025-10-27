@@ -39,6 +39,7 @@ Convert Strings used as Enums to Enums:
 * `singleton_obj.show_console`
 * `damage_popup_obj.type`
 * `last_attacker_update` function parameters `target`, `type`
+* `battlefeed_post_insert` function parameters `type`, `content`
 
 
 Convert these to Structs:
