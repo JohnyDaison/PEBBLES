@@ -1,16 +1,8 @@
-/// @description battlefeed_post_assignfeed(feed_item, battlefeed_obj)
-/// @function battlefeed_post_assignfeed
-/// @param feed_item
-/// @param  battlefeed_obj
-function battlefeed_post_assignfeed(argument0, argument1) {
-	var item = argument0;
-	var feed = argument1;
+/// @param {Id.Instance} feedItem
+/// @param {Id.Instance} feed battlefeed_obj
+function battlefeed_post_assignfeed(feedItem, feed) {
+    var message_list = feed.msg_list;
 
-	var message_list = feed.msg_list;
-
-	ds_list_add(message_list, item);
-	item.battlefeed = feed;
-
-
-
+    ds_list_add(message_list, feedItem);
+    feedItem.battlefeed = feed;
 }
