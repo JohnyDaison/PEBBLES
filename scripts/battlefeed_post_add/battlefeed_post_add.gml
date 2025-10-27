@@ -1,31 +1,14 @@
-/// @description battlefeed_post_add(feed_item, type, content, color, [facing])
-/// @function battlefeed_post_add
-/// @param feed_item
-/// @param  type
-/// @param  content
-/// @param  color
-/// @param  [facing]
-function battlefeed_post_add() {
-	var item = argument[0];
-	var type = argument[1];
-	var content = argument[2];
-	var color = argument[3];
-	var content_facing = 1;
+/// @param {Id.Instance} feedItem
+/// @param {String} type one of: "text", "icon", "image"
+/// @param {String|Asset.GMObject} content
+/// @param {Real|String} color g_* or "bf_orange"
+/// @param {Real} facing 1 or -1
+function battlefeed_post_add(feedItem, type, content, color, facing = 1) {
+    if (!instance_exists(feedItem)) {
+        return;
+    }
 
-	if(argument_count > 4)
-	{
-	    content_facing = argument[4];
-	}
+    battlefeed_post_insert(feedItem, feedItem.content_length, type, content, color, facing);
 
-	if(instance_exists(item))
-	{
-	    new_index = item.content_length;
-    
-	    battlefeed_post_insert(item, item.content_length, type, content, color, content_facing);
-    
-	    item.content_length += 1;
-	}
-
-
-
+    feedItem.content_length += 1;
 }
