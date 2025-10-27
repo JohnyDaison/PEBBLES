@@ -29,6 +29,9 @@ have duplicate centering code
 * `beam_obj`
 has a lot of repeated code, refactor to methods
 
+* `battlefield_post_*` scripts 
+which take existing `feedItem` as parameter should be methods on `battlefeed_item_obj`
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
