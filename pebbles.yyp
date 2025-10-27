@@ -870,7 +870,6 @@
     {"id":{"name":"battlefeed_post_insert","path":"scripts/battlefeed_post_insert/battlefeed_post_insert.yy",},},
     {"id":{"name":"battlefeed_post_new","path":"scripts/battlefeed_post_new/battlefeed_post_new.yy",},},
     {"id":{"name":"battlefeed_post_pickup","path":"scripts/battlefeed_post_pickup/battlefeed_post_pickup.yy",},},
-    {"id":{"name":"battlefeed_post_prepend","path":"scripts/battlefeed_post_prepend/battlefeed_post_prepend.yy",},},
     {"id":{"name":"battlefeed_post_string","path":"scripts/battlefeed_post_string/battlefeed_post_string.yy",},},
     {"id":{"name":"beam_turret_line_of_sight","path":"scripts/beam_turret_line_of_sight/beam_turret_line_of_sight.yy",},},
     {"id":{"name":"blast_turret_anim_set","path":"scripts/blast_turret_anim_set/blast_turret_anim_set.yy",},},

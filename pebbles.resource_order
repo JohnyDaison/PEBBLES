@@ -729,7 +729,6 @@
     {"name":"battlefeed_post_image","order":4,"path":"scripts/battlefeed_post_image/battlefeed_post_image.yy",},
     {"name":"battlefeed_post_insert","order":1,"path":"scripts/battlefeed_post_insert/battlefeed_post_insert.yy",},
     {"name":"battlefeed_post_pickup","order":3,"path":"scripts/battlefeed_post_pickup/battlefeed_post_pickup.yy",},
-    {"name":"battlefeed_post_prepend","order":3,"path":"scripts/battlefeed_post_prepend/battlefeed_post_prepend.yy",},
     {"name":"battlefeed_post_string","order":1,"path":"scripts/battlefeed_post_string/battlefeed_post_string.yy",},
     {"name":"beam_turret_line_of_sight","order":1,"path":"scripts/beam_turret_line_of_sight/beam_turret_line_of_sight.yy",},
     {"name":"blast_turret_anim_set","order":11,"path":"scripts/blast_turret_anim_set/blast_turret_anim_set.yy",},
