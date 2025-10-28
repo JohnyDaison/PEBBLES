@@ -55,7 +55,7 @@ if(!self.orbs_ready)
         orb_belts[? col] = ds_list_create();
         orbs_in_use[? col] = ds_list_create();
         
-        if((col == g_dark && !mod_get_state("dark_color")) || gamemode_obj.no_orbs_start)
+        if((col == g_dark && !rule_get_state("dark_color")) || gamemode_obj.no_orbs_start)
         {
             ii = 0;
         }
@@ -130,7 +130,7 @@ if(self.slots_absorbed > charge_ball.orb_count && charge_ball.orb_count > 0)
 
 // GO DARK IF YOU HAVE NO SLOTS
 /*
-if(my_color != g_dark && slot_number == 0 && mod_get_state("dark_color"))
+if(my_color != g_dark && slot_number == 0 && rule_get_state("dark_color"))
 {
     my_color = g_dark;
     self.slots_absorbed = 0;
@@ -496,7 +496,7 @@ if(self.channeling)
         // RESET   
         if(channel_orig_color != -1)
         {
-            if(!mod_get_state("dark_color")) //  || ds_list_size(orbs_in_use[? g_dark]) == 0
+            if(!rule_get_state("dark_color")) //  || ds_list_size(orbs_in_use[? g_dark]) == 0
             {
                 set_my_color(channel_orig_color);
                 guy_orbs_return(id);
@@ -512,7 +512,7 @@ if(self.channeling)
                 ds_list_clear(new_colors);
             }
             
-            if(instance_exists(charge_ball) && mod_get_state("dark_color") && ds_list_size(orbs_in_use[? g_dark]) > 0)
+            if(instance_exists(charge_ball) && rule_get_state("dark_color") && ds_list_size(orbs_in_use[? g_dark]) > 0)
             {
                 ds_list_add(new_colors, g_dark);
                 auto_chosen_orbs = true;
@@ -536,7 +536,7 @@ if(self.channeling)
 }
 
 // DARK COLOR CHANGE IN LOST_CONTROL
-if(self.wanna_channel && lost_control && my_color != g_dark && mod_get_state("dark_color"))
+if(self.wanna_channel && lost_control && my_color != g_dark && rule_get_state("dark_color"))
 {
     set_my_color(g_dark);
     slots_absorbed = 0;
@@ -552,7 +552,7 @@ if(!self.frozen_in_time)
     var charge_ball_firing = (instance_exists(charge_ball) && charge_ball.firing);
     
     // HEALTH DEATH
-    if(damage >= hp && !dead && mod_get_state("hp_death"))
+    if(damage >= hp && !dead && rule_get_state("hp_death"))
     {    
         die_from_damage();
 
@@ -1532,7 +1532,7 @@ if(!self.frozen_in_time)
                 }
             
                 if(first_color != g_dark && self.current_slot < self.slot_maxnumber
-                && (!mod_get_state("base_colors_only") || first_color == -1 || new_color == first_color))
+                && (!rule_get_state("base_colors_only") || first_color == -1 || new_color == first_color))
                 {
                     if(self.current_slot == 0)
                     {
@@ -1742,7 +1742,7 @@ if(!self.frozen_in_time)
             self.my_abi_tint = ds_map_find_value(DB.colormap,my_abi_color);
             
             // this string_lower call is bad for performance
-            if(mod_get_state("abilities") && has_level(id, DB.abimap[? my_abi_color], 1))
+            if(rule_get_state("abilities") && has_level(id, DB.abimap[? my_abi_color], 1))
             {
                 if(abi_cooldown[? my_abi_color] == 0)
                 {
@@ -1858,7 +1858,7 @@ if(!self.frozen_in_time)
             
             if(wanna_abi)
             {
-                if(!mod_get_state("abilities") || !has_level(id, DB.abimap[? potential_color], 1))
+                if(!rule_get_state("abilities") || !has_level(id, DB.abimap[? potential_color], 1))
                 {
                     self.slots_triggered = false;
                 }

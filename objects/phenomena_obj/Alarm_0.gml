@@ -5,8 +5,8 @@ alarm[0] = 1;
 
 var have_spawned = false;
 var cannot_spawn = 
-    !mod_get_state("snakes_on_a_plane") && !mod_get_state("artifacts") && !gamemode_obj.star_fall
-    && !mod_get_state("bolt_rain") && !mod_get_state("slime_mob_rain") && !mod_get_state("lightning_strikes");
+    !rule_get_state("snakes_on_a_plane") && !rule_get_state("artifacts") && !gamemode_obj.star_fall
+    && !rule_get_state("bolt_rain") && !rule_get_state("slime_mob_rain") && !rule_get_state("lightning_strikes");
 var num = ds_list_size(spawnables);
 var total_value = 0;
 
@@ -39,7 +39,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
     if(rand_value < value + offset)
     {
         // SNAKE
-        if(key == "snake" && mod_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period)
+        if(key == "snake" && rule_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period)
         {
             wall = instance_nearest(x,y, wall_obj);
             if(wall != noone && wall.cover != cover_indestr && !wall.moving && !wall.falling 
@@ -53,7 +53,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
         } 
            
         // ARTIFACT
-        if(key == "artifact" && mod_get_state("artifacts"))
+        if(key == "artifact" && rule_get_state("artifacts"))
         {
             inst = instance_create(x,y,artifact_obj); 
             gamemode_obj.stats[? "artifacts_spawned_total"] += 1;
@@ -77,7 +77,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
         }
                 
         // BOLT RAIN
-        if(key == "small_bolt" && mod_get_state("bolt_rain") && singleton_obj.step_count > bolt_rain_grace_period)
+        if(key == "small_bolt" && rule_get_state("bolt_rain") && singleton_obj.step_count > bolt_rain_grace_period)
         {
             if(bolt_rain_started)
             {
@@ -92,7 +92,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
         }
             
         // SLIME MOB RAIN
-        if(key == "slime_mob" && mod_get_state("slime_mob_rain"))
+        if(key == "slime_mob" && rule_get_state("slime_mob_rain"))
         {
             repeat(slime_mob_count)
             {
@@ -105,7 +105,7 @@ for(i = 0; i < num && !have_spawned; i+=1)
         }
         
         // LIGHTNING STRIKES
-        if(key == "lightning_strike" && mod_get_state("lightning_strikes") && singleton_obj.step_count > lightning_strikes_grace_period)
+        if(key == "lightning_strike" && rule_get_state("lightning_strikes") && singleton_obj.step_count > lightning_strikes_grace_period)
         {
             if(lightning_strikes_started)
             {
@@ -134,7 +134,7 @@ if(slots_enabled && !have_spawned)
 {
     /*
     new_color = 3;
-    while(new_color == 3 || (!mod_get_state("dark_color") && new_color == 0))
+    while(new_color == 3 || (!rule_get_state("dark_color") && new_color == 0))
     {
         new_color = irandom(4);
     }

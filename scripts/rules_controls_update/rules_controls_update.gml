@@ -8,28 +8,28 @@ function rules_controls_update() {
         with(play_window)
         {
             var default_rules_gm = gm[? "default_rules"], forced_rules_gm = gm[? "forced_rules"];
-            var custom_rules = gmmod_customs;
+            var custom_rules = gmrule_customs;
             var default_map, forced_map, place, preset;
-            var mod_controls = gmmod_controls;
-            var mod_id, mod_control, dmod, fmod, gmmod;
+            var rule_controls = gmrule_controls;
+            var rule_id, rule_control, dmod, fmod, gmmod;
             
             preset = DB.rule_presets.find_preset_by_id(preset_dropdown.list_picker.cur_item_id);
             place = play_menu_window.world.places[| place_picker.cur_item];
             
             
             // reset all
-            mod_id = ds_map_find_first(mod_controls);
-            while(!is_undefined(mod_id))
+            rule_id = ds_map_find_first(rule_controls);
+            while(!is_undefined(rule_id))
             {
-                gmmod = DB.gamemode_rules[? mod_id];
+                gmmod = DB.gamemode_rules[? rule_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
-                    mod_control = mod_controls[? mod_id];
-                    mod_control.reset_value();
+                    rule_control = rule_controls[? rule_id];
+                    rule_control.reset_value();
                 }
             
-                mod_id = ds_map_find_next(mod_controls, mod_id);
+                rule_id = ds_map_find_next(rule_controls, rule_id);
             }
         
         
@@ -50,8 +50,8 @@ function rules_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
-                    mod_control = mod_controls[? dmod];
-                    mod_control.set_value(default_map[? dmod], false, false);
+                    rule_control = rule_controls[? dmod];
+                    rule_control.set_value(default_map[? dmod], false, false);
                 }
             
                 dmod = ds_map_find_next(default_map, dmod);
@@ -60,35 +60,35 @@ function rules_controls_update() {
             ds_map_destroy(default_map);
         
             // set default value on mod controls
-            mod_id = ds_map_find_first(mod_controls);
-            while(!is_undefined(mod_id))
+            rule_id = ds_map_find_first(rule_controls);
+            while(!is_undefined(rule_id))
             {   
-                gmmod = DB.gamemode_rules[? mod_id];
+                gmmod = DB.gamemode_rules[? rule_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
-                    mod_control = mod_controls[? mod_id];
-                    mod_control.default_value = mod_control.get_value();
+                    rule_control = rule_controls[? rule_id];
+                    rule_control.default_value = rule_control.get_value();
                 }
                 
-                mod_id = ds_map_find_next(mod_controls, mod_id);
+                rule_id = ds_map_find_next(rule_controls, rule_id);
             }
         
         
             // CUSTOM
-            mod_id = ds_map_find_first(custom_rules);
+            rule_id = ds_map_find_first(custom_rules);
         
-            while(!is_undefined(mod_id))
+            while(!is_undefined(rule_id))
             {
-                gmmod = DB.gamemode_rules[? mod_id];
+                gmmod = DB.gamemode_rules[? rule_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
-                    mod_control = mod_controls[? mod_id];
-                    mod_control.set_value(custom_rules[? mod_id], true, false);
+                    rule_control = rule_controls[? rule_id];
+                    rule_control.set_value(custom_rules[? rule_id], true, false);
                 }
             
-                mod_id = ds_map_find_next(custom_rules, mod_id);
+                rule_id = ds_map_find_next(custom_rules, rule_id);
             }
         
         
@@ -109,8 +109,8 @@ function rules_controls_update() {
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
-                    mod_control = mod_controls[? fmod];
-                    mod_control.set_value(forced_map[? fmod], false, true);
+                    rule_control = rule_controls[? fmod];
+                    rule_control.set_value(forced_map[? fmod], false, true);
                 }
             
                 fmod = ds_map_find_next(forced_map, fmod);

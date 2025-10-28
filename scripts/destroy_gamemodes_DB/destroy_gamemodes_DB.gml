@@ -1,5 +1,5 @@
 function destroy_gamemodes_DB() {
-    var i, count, gm_id, gm_map, mod_id, mod_map;
+    var i, count, gm_id, gm_map, rule_id, rule_map;
 
     count = ds_list_size(gamemode_list);
     for(i = count-1; i >= 0; i--)
@@ -14,13 +14,13 @@ function destroy_gamemodes_DB() {
         ds_map_destroy(gm_map);
     }
 
-    count = ds_list_size(gamemode_mod_list);
+    count = ds_list_size(gamemode_rule_list);
     for(i = count-1; i >= 0; i--)
     {
-        mod_id = gamemode_mod_list[| i];
-        mod_map = gamemode_rules[? mod_id];
+        rule_id = gamemode_rule_list[| i];
+        rule_map = gamemode_rules[? rule_id];
     
-        ds_map_destroy(mod_map);
+        ds_map_destroy(rule_map);
     }
 
     rule_categories.destroy();
@@ -30,6 +30,6 @@ function destroy_gamemodes_DB() {
     ds_list_destroy(gamemode_list);
 
     ds_map_destroy(gamemode_rules);
-    ds_list_destroy(gamemode_mod_list);
-    ds_list_destroy(gamemode_mod_type_list);
+    ds_list_destroy(gamemode_rule_list);
+    ds_list_destroy(gamemode_rule_type_list);
 }

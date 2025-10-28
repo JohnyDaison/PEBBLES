@@ -19,7 +19,7 @@ function spec_effect_to_guy() {
             return false;
         }
         */
-        if(!ds_map_exists(DB.color_effects, other.my_color) || !mod_get_state("bad_status_effects"))
+        if(!ds_map_exists(DB.color_effects, other.my_color) || !rule_get_state("bad_status_effects"))
         {
             return false;
         }

@@ -496,7 +496,7 @@ if(self.warmed > 0)
     self.ball_chargerate -= self.warmed;
 self.warmed = 0;
 
-var always_sliding = mod_get_state("always_sliding");
+var always_sliding = rule_get_state("always_sliding");
 
 if(always_sliding && place_meeting(x,y+1,solid_terrain_obj)) {
     if(speed > 0) {

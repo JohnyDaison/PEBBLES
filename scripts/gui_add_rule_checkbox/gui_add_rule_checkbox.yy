@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gui_add_rule_checkbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_rule_checkbox",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/GUI/add/input/basic.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

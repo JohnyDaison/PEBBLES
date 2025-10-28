@@ -1,7 +1,7 @@
 ///@description SET UP FRICTION AND RULES
 friction = orig_friction;
 
-var curve_ball = mod_get_state("curve_balls");
+var curve_ball = rule_get_state("curve_balls");
 var be_heavy = object_is_child(my_guy, guy_obj) && my_guy.status_left[? "heavy_shots"] > 0;
 
 if(curve_ball)

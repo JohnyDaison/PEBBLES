@@ -8,18 +8,18 @@ function merge_rules_maps(target_map, source, type) {
             source_map = source.forced_rules;
         }
         
-        var mod_id = ds_map_find_first(source_map);
-        while(!is_undefined(mod_id))
+        var rule_id = ds_map_find_first(source_map);
+        while(!is_undefined(rule_id))
         {
-            gmmod = DB.gamemode_rules[? mod_id];
+            gmmod = DB.gamemode_rules[? rule_id];
             
             if (type == "default") {
-                target_map[? mod_id] = mod_default_value_update(gmmod, target_map[? mod_id], source_map[? mod_id]);
+                target_map[? rule_id] = rule_default_value_update(gmmod, target_map[? rule_id], source_map[? rule_id]);
             } else if (type == "forced") {
-                target_map[? mod_id] = mod_forced_value_update(gmmod, target_map[? mod_id], source_map[? mod_id]);
+                target_map[? rule_id] = rule_forced_value_update(gmmod, target_map[? rule_id], source_map[? rule_id]);
             }
             
-            mod_id = ds_map_find_next(source_map, mod_id);
+            rule_id = ds_map_find_next(source_map, rule_id);
         }
     }
 }

@@ -48,21 +48,21 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
         
                 if(gmrule_type == "bool")
                 {
-                    ii = gui_add_mod_boolbox(0, 0, gmrule_id, rule_chb_size);
+                    ii = gui_add_rule_boolbox(0, 0, gmrule_id, rule_chb_size);
 
-                    ii.checkbox.user_clicked_script = mod_chb_user_click_script;
+                    ii.checkbox.user_clicked_script = rule_chb_user_click_script;
                     ii.checkbox.onchange_script = schedule_play_summary_update;
                     ii.checkbox.draw_unlocked_border = true;
                 }
                 else if(gmrule_type == "number")
                 {
-                    ii = gui_add_mod_numberbox(0, 0, gmrule_id, rule_chb_size);
+                    ii = gui_add_rule_numberbox(0, 0, gmrule_id, rule_chb_size);
 
-                    ii.checkbox.user_clicked_script = mod_chb_user_click_script;
-                    ii.checkbox.onchange_script = number_mod_change_state_script;
+                    ii.checkbox.user_clicked_script = rule_chb_user_click_script;
+                    ii.checkbox.onchange_script = number_rule_change_state_script;
                     ii.checkbox.draw_unlocked_border = true;
                     
-                    ii.number_input.onchange_script = number_mod_change_value_script;
+                    ii.number_input.onchange_script = number_rule_change_value_script;
                 }
             
                 gmrule_controls[? gmrule_id] = ii;

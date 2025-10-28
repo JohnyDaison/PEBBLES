@@ -45,10 +45,10 @@ function play_menu_window_next_step() {
     gamemode.random_place_order = false;
 
     // RULES
-    ds_map_copy(gamemode.custom_rules, play_window.gmmod_customs);
+    ds_map_copy(gamemode.custom_rules, play_window.gmrule_customs);
     rules_update_state(gm_id, gamemode.rule_preset, world.current_place, gamemode.custom_rules, gamemode.rules_state);
 
-    close_frame(mod_tooltip_window);
+    close_frame(rule_tooltip_window);
     close_frame(play_menu_window);
 
     add_frame(player_setup_window);

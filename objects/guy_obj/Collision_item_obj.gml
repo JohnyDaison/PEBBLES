@@ -48,7 +48,7 @@ if(!lost_control && !item.collected && holographic == item.holographic
         var overlay;
         var show_desc =
             gamemode_obj.is_campaign
-            && !(gamemode_obj.mode == "quick_tutorial" && mod_get_state("tut_guide"))
+            && !(gamemode_obj.mode == "quick_tutorial" && rule_get_state("tut_guide"))
             && instance_exists(my_player.my_camera)
             && item_index != SECRET_obj
             && item_index != qubit_obj

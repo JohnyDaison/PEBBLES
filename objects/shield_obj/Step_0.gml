@@ -73,7 +73,7 @@ if(done_for)
     exit;
 }
 
-if(!mod_get_state("shield_push") && my_guy != id) {
+if(!rule_get_state("shield_push") && my_guy != id) {
     exit;
 }
 

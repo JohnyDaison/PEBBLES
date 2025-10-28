@@ -33,7 +33,7 @@ function play_summary_update() {
             
             
             // LIMITS
-            var score_limit = gmmod_controls[? "score_limit"].get_value();
+            var score_limit = gmrule_controls[? "score_limit"].get_value();
             if (is_number(score_limit)) {
                 var score_text = "Score to win: " + string(score_limit);
                 

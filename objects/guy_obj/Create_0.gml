@@ -82,9 +82,9 @@ self.shield_channel_maxboost = 0.5;
 self.shield_threshold = 3;
 self.shield_repair_time = 180;
 
-var mod_sp = mod_get_state("guy_shield_power");
-if (!is_undefined(mod_sp) && !is_bool(mod_sp) ) {
-    shield_max_charge = mod_sp/100;
+var rule_sp = rule_get_state("guy_shield_power");
+if (!is_undefined(rule_sp) && !is_bool(rule_sp) ) {
+    shield_max_charge = rule_sp/100;
 }
 
 self.ball_chargerate = 1;
@@ -561,10 +561,10 @@ respawn_allowed = function() {
     var allowed = !gamemode_obj.sudden_death;
     
     if (allowed) {
-        var mod_death_limit = mod_get_state("death_limit");
+        var rule_death_limit = rule_get_state("death_limit");
         
-        if (!is_undefined(mod_death_limit) && !is_bool(mod_death_limit) ) {
-            allowed = my_player.stats[? "deaths"] < mod_death_limit;
+        if (!is_undefined(rule_death_limit) && !is_bool(rule_death_limit) ) {
+            allowed = my_player.stats[? "deaths"] < rule_death_limit;
         }
     }
     return allowed;

@@ -18,19 +18,19 @@ alarm[1] = 1;
 shield_threshold = 12;
 shield_power = 6;
 
-var mod_sp = mod_get_state("base_crystal_shield_power");
-if (!is_undefined(mod_sp) && !is_bool(mod_sp) ) {
-    shield_power = mod_sp;
+var rule_sp = rule_get_state("base_crystal_shield_power");
+if (!is_undefined(rule_sp) && !is_bool(rule_sp) ) {
+    shield_power = rule_sp;
 }
 
 shield_repair_time = max(1, shield_power) * 300;
 
-var mod_hp = mod_get_state("base_crystal_hp");
-if (!is_undefined(mod_hp) && mod_hp != false) {
-    damage = hp - mod_hp;
+var rule_hp = rule_get_state("base_crystal_hp");
+if (!is_undefined(rule_hp) && rule_hp != false) {
+    damage = hp - rule_hp;
 }
 
-holographic = mod_get_state("holographic_spawners");
+holographic = rule_get_state("holographic_spawners");
 
 if(gamemode_obj.inited_player_count == gamemode_obj.player_count)
 {

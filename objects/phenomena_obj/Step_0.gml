@@ -1,10 +1,10 @@
-spawn_active[? "snake"] = mod_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period;
-spawn_active[? "artifact"] = mod_get_state("artifacts");
+spawn_active[? "snake"] = rule_get_state("snakes_on_a_plane") && singleton_obj.step_count > snake_grace_period;
+spawn_active[? "artifact"] = rule_get_state("artifacts");
 spawn_active[? "star_core"] = gamemode_obj.star_fall && singleton_obj.step_count > starfall_grace_period;
-spawn_active[? "slime_mob"] = mod_get_state("slime_mob_rain");
+spawn_active[? "slime_mob"] = rule_get_state("slime_mob_rain");
 
 // Bolt rain start/stop
-if(mod_get_state("bolt_rain") && singleton_obj.step_count > bolt_rain_grace_period)
+if(rule_get_state("bolt_rain") && singleton_obj.step_count > bolt_rain_grace_period)
 {
     if(!bolt_rain_started)
     {
@@ -27,7 +27,7 @@ if(mod_get_state("bolt_rain") && singleton_obj.step_count > bolt_rain_grace_peri
 
 
 // Lightning strikes start/stop
-if(mod_get_state("lightning_strikes") && singleton_obj.step_count > lightning_strikes_grace_period)
+if(rule_get_state("lightning_strikes") && singleton_obj.step_count > lightning_strikes_grace_period)
 {
     if(!lightning_strikes_started)
     {

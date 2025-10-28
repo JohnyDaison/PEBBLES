@@ -120,7 +120,7 @@ if(instance_exists(my_guy))
         
         abi_name = DB.abi_name_map[? abi_color];
         var abi_key = DB.abimap[? abi_color];
-        if(is_undefined(abi_key) || !mod_get_state("abilities") || !has_level(my_guy, abi_key, 1))
+        if(is_undefined(abi_key) || !rule_get_state("abilities") || !has_level(my_guy, abi_key, 1))
         {
             abi_name = "";
             hide_abi = true;
@@ -322,7 +322,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
     
     // ABI PANEL
     // TODO: could use optimisation
-    if(mod_get_state("abilities") && show_abilities)
+    if(rule_get_state("abilities") && show_abilities)
     {
         var group_count, group, group_members, i, ii, abi_level,
             bar_height, bar_color, bar_tint, bar_alpha, icon_alpha, outline_alpha;
@@ -340,7 +340,7 @@ if(instance_exists(my_guy) && instance_exists(my_camera))
                 bar_color = group[? ii];
                 abi_level = get_level(my_guy, DB.abimap[? bar_color]);
             
-                if(!mod_get_state("dark_color") && bar_color == g_dark)
+                if(!rule_get_state("dark_color") && bar_color == g_dark)
                     continue;
                     
                 // HAS ABI COLOR? 

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"rule_get_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rule_get_state",
+  "parent":{
+    "name":"gamemodes",
+    "path":"folders/Scripts/gamemodes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

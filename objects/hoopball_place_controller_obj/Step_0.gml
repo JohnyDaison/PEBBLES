@@ -44,7 +44,7 @@ if(!instance_exists(da_ball))
 
 with(wall_obj)
 {
-    if(mod_get_state("indestr_terrain"))
+    if(rule_get_state("indestr_terrain"))
     {
         color_locked = true;   
     }

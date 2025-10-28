@@ -57,7 +57,7 @@ function guy_respawn() {
     
         ds_list_clear(flashback_queue);
     
-        if(mod_get_state("dark_color"))
+        if(rule_get_state("dark_color"))
         {
             set_my_color(g_dark);
             tint_updated = false;

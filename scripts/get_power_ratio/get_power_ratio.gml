@@ -3,7 +3,7 @@ function get_power_ratio(attacker, defender) {
     {
         var result = ds_grid_get(DB.colormatrix, round(attacker), round(defender));
 
-        if (instance_exists(gamemode_obj) && mod_get_state("equal_colors")) {
+        if (instance_exists(gamemode_obj) && rule_get_state("equal_colors")) {
             if (result > 0) {
                 result = 1;
             }

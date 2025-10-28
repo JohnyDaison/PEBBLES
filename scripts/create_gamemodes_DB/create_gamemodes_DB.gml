@@ -2,8 +2,8 @@ function create_gamemodes_DB() {
     gamemode_list = ds_list_create();
     gamemodes = ds_map_create();
 
-    gamemode_mod_list = ds_list_create();
-    gamemode_mod_type_list = ds_list_create();
+    gamemode_rule_list = ds_list_create();
+    gamemode_rule_type_list = ds_list_create();
 
     gamemode_rules = ds_map_create();
     

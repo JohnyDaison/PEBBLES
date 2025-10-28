@@ -18,11 +18,11 @@ max_energy = DB.terrain_config[? "max_energy"];
 hp = 3;
 core = core_energy;
 
-if(mod_get_state("weak_terrain"))
+if(rule_get_state("weak_terrain"))
 {
     hp = 1;
 }
-if(mod_get_state("indestr_terrain"))
+if(rule_get_state("indestr_terrain"))
 {
     cover = cover_indestr;
 }

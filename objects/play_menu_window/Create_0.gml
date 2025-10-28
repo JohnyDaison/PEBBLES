@@ -22,8 +22,8 @@ place_names = ds_list_create();
 place_ids = ds_list_create();
 preset_names = ds_list_create();
 preset_ids = ds_list_create();
-gmmod_controls = ds_map_create();
-gmmod_customs = ds_map_create();
+gmrule_controls = ds_map_create();
+gmrule_customs = ds_map_create();
 
 show_hidden_rules = false;
 
@@ -145,7 +145,7 @@ preset_dropdown = ii;
 
 eloffset_x = rules_x_start + rules_width;
 
-ii = gui_add_button(0,0, "Reset to default", reset_custom_mod_controls);
+ii = gui_add_button(0,0, "Reset to default", reset_custom_rule_controls);
 ii.centered = true;
 gui_move_element(ii, ii.x - ii.width, ii.y);
 
@@ -165,10 +165,10 @@ var list = DB.rule_categories.list;
 for (var index = 0; index < count; index++) {
     var category = list[| index];
     
-    gui_add_rules_category_pane(category, gmmod_controls, rules_grid_unit);
+    gui_add_rules_category_pane(category, gmrule_controls, rules_grid_unit);
 }
 
-add_frame(mod_tooltip_window);
+add_frame(rule_tooltip_window);
 
 eloffset_x = width;
 eloffset_y = height;
@@ -234,7 +234,7 @@ load_from_gamemode = function () {
         }
         place_picker.select_item_by_id(gamemode_obj.world.current_place.room_id);
         
-        ds_map_copy(gmmod_customs, gamemode_obj.custom_rules);
+        ds_map_copy(gmrule_customs, gamemode_obj.custom_rules);
         rules_controls_update();
     }
     

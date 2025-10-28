@@ -98,7 +98,7 @@ function create_player_things(player) {
     new_guy.control_index = player.control_index;
     player.my_guy = new_guy;
 
-    if (!mod_get_state("dark_color")) {
+    if (!rule_get_state("dark_color")) {
         new_guy.my_color = g_red;
         new_guy.potential_color = new_guy.my_color;
         new_guy.tint_updated = false;
@@ -128,7 +128,7 @@ function create_player_things(player) {
         if (!gamemode_obj.no_inventory)
             add_player_overlay(inventory_overlay, player);
         add_player_overlay(overhead_overlay, player);
-        if (mod_get_state("tutorials") && !player.is_cpu)
+        if (rule_get_state("tutorials") && !player.is_cpu)
             add_player_overlay(tutorial_overlay, player);
         add_player_overlay(status_effect_overlay, player);
         add_player_overlay(radial_overlay, player);

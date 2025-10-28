@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"reset_custom_rule_controls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"reset_custom_rule_controls",
+  "parent":{
+    "name":"play_menu_window",
+    "path":"folders/Scripts/GUI/behavior/play_menu_window.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

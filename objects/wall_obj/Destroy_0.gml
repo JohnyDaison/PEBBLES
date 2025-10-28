@@ -6,7 +6,7 @@ event_inherited();
 last_attacker_destroy();
 
 // CREATE regenerator OBJECT
-if (!cancelled && mod_get_state("regenerate_terrain") && cover != cover_grate) {
+if (!cancelled && rule_get_state("regenerate_terrain") && cover != cover_grate) {
     var regen_obj = instance_create(xstart, ystart, wall_regenerator_obj);
     regen_obj.energy = orig_energy;
     regen_obj.my_color = orig_color;

@@ -14,7 +14,7 @@ spawn_points = ds_map_create();
 
 alarm[2] = 90;
 
-if(!mod_get_state("tut_guide"))
+if(!rule_get_state("tut_guide"))
 {
     introduction_finished = true;
     alarm[2] = -1;

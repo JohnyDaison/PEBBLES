@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gui_add_rule_boolbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gui_add_rule_boolbox",
+  "parent":{
+    "name":"combo",
+    "path":"folders/Scripts/GUI/add/input/combo.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
