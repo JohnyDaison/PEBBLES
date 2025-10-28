@@ -12,8 +12,8 @@ ds_list_add(place.level_configs_list, "tutorial");
 */
 place = add_place_in_room(towerclimb_arena, "Tower of Madness", 0,0, 4800,16000, 0);
 place.description = "Get through the swarms of Spitters and frantic Sprinklers. There's no princess at the end.";
-place.forced_modifiers[? "cannons"] = true;
-place.forced_modifiers[? "holographic_spawners"] = false;
+place.forced_rules[? "cannons"] = true;
+place.forced_rules[? "holographic_spawners"] = false;
 place.max_team_count = 2;
 
 place_count = ds_list_size(places);

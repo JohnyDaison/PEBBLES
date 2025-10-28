@@ -7,8 +7,8 @@ function destroy_gamemodes_DB() {
         gm_id = gamemode_list[| i];
         gm_map = gamemodes[? gm_id];
     
-        ds_map_destroy(gm_map[? "default_modifiers"]);
-        ds_map_destroy(gm_map[? "forced_modifiers"]);
+        ds_map_destroy(gm_map[? "default_rules"]);
+        ds_map_destroy(gm_map[? "forced_rules"]);
         ds_list_destroy(gm_map[? "rule_presets"]);
     
         ds_map_destroy(gm_map);

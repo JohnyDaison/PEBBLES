@@ -3,9 +3,9 @@ function merge_rules_maps(target_map, source, type) {
     
     if(!is_undefined(source)) {
         if (type == "default") {
-            source_map = source.default_modifiers;
+            source_map = source.default_rules;
         } else if (type == "forced") {
-            source_map = source.forced_modifiers;
+            source_map = source.forced_rules;
         }
         
         var mod_id = ds_map_find_first(source_map);

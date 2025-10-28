@@ -17,7 +17,7 @@ function mods_update_state(gamemode_id, preset, place, custom_mods, target_map, 
 
     if(!is_undefined(gm))
     {
-        var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"];
+        var default_mods_gm = gm[? "default_rules"], forced_mods_gm = gm[? "forced_rules"];
         var default_mods_preset, forced_mods_preset;
         var default_mods_place, forced_mods_place;
         var mod_id, gmmod, count, mod_value;
@@ -26,14 +26,14 @@ function mods_update_state(gamemode_id, preset, place, custom_mods, target_map, 
         
         if(preset_exists)
         {
-            default_mods_preset = preset.default_modifiers;
-            forced_mods_preset = preset.forced_modifiers;
+            default_mods_preset = preset.default_rules;
+            forced_mods_preset = preset.forced_rules;
         }
         
         if(place_exists)
         {
-            default_mods_place = place.default_modifiers;
-            forced_mods_place = place.forced_modifiers;
+            default_mods_place = place.default_rules;
+            forced_mods_place = place.forced_rules;
         }
     
         count = ds_list_size(DB.gamemode_mod_list);

@@ -7,7 +7,7 @@ function mods_controls_update() {
     {
         with(play_window)
         {
-            var default_mods_gm = gm[? "default_modifiers"], forced_mods_gm = gm[? "forced_modifiers"];
+            var default_mods_gm = gm[? "default_rules"], forced_mods_gm = gm[? "forced_rules"];
             var custom_mods = gmmod_customs;
             var default_map, forced_map, place, preset;
             var mod_controls = gmmod_controls;

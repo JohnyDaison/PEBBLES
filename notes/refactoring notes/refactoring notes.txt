@@ -29,11 +29,11 @@ Convert Strings used as Enums to Enums:
 (but store the String to Enum mapping somewhere)
 
 * `gui_object.rel_position`
-* mods - should be dynamic Enum
+* mods / rules - should be dynamic Enum
 * `singleton_obj.show_console`
 * `damage_popup_obj.type`
 * `last_attacker_update` function parameters `target`, `type`
-* `battlefeed_post_insert` function parameters `type`, `content`
+* `battlefeed_item_obj.setValuesAtIndex` function parameters `type`, `content`
 * `gamemode_obj.score_values` keys
 
 
@@ -45,3 +45,4 @@ Convert these to Structs:
 * `last_standing_position` variable
 * `hardpoint_*` maps
 * `gamemode`
+* quest system `transition`, `condition`, `effect`, `state_properties`

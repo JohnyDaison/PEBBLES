@@ -31,7 +31,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
     gm[? "is_deathmatch"] = false;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "turrets"] = true;
     forced_mods[? "cannons"] = false;
     forced_mods[? "mob_portals"] = true;
@@ -70,7 +70,7 @@ function create_gamemodes_DB() {
     forced_mods[? "time_limit"] = false;
     forced_mods[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "tut_guide"] = true;
 
 
@@ -79,7 +79,7 @@ function create_gamemodes_DB() {
     gm[? "description"] = "Face a series of fighters of increasing difficulty. How many can you defeat before you fall?";
     gm[? "start_script"] = gm_sparring_start;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "hp_death"] = true;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "tut_guide"] = false;
@@ -97,7 +97,7 @@ function create_gamemodes_DB() {
     forced_mods[? "time_limit"] = false;
     forced_mods[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
     default_mods[? "abilities"] = true;
@@ -115,10 +115,10 @@ function create_gamemodes_DB() {
     
     ds_list_add(gm[? "rule_presets"], "arena_novice", "arena_apprentice", "arena_arcade", "arena_standard");
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "tut_guide"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
 
 
     // Tower climb
@@ -132,7 +132,7 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "tut_guide"] = false;
     forced_mods[? "shield_push"] = true;
@@ -141,7 +141,7 @@ function create_gamemodes_DB() {
     forced_mods[? "base_crystal_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "turrets"] = true;
     default_mods[? "cannons"] = true;
     default_mods[? "snakes_on_a_plane"] = false;
@@ -165,7 +165,7 @@ function create_gamemodes_DB() {
     
     ds_list_add(gm[? "rule_presets"], "basic_bumping", "deadly_spiking", "court_attrition", "volley_infinite");
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "hp_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "holographic_spawners"] = false;
@@ -196,7 +196,7 @@ function create_gamemodes_DB() {
     forced_mods[? "guy_shield_power"] = false;
     forced_mods[? "flag_capture"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "score_limit"] = 10;
     
     
@@ -212,7 +212,7 @@ function create_gamemodes_DB() {
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "hp_death"] = false;
     forced_mods[? "base_crystals"] = false;
     forced_mods[? "holographic_spawners"] = false;
@@ -249,7 +249,7 @@ function create_gamemodes_DB() {
     forced_mods[? "score_limit"] = true;
     forced_mods[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "weak_terrain"] = true;
     default_mods[? "regenerate_terrain"] = true;
     default_mods[? "score_limit"] = 10;
@@ -263,7 +263,7 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 1;
     gm[? "is_coop"] = true;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "mob_portals"] = true;
     forced_mods[? "base_crystals"] = true;
     forced_mods[? "indestr_terrain"] = false;
@@ -274,7 +274,7 @@ function create_gamemodes_DB() {
     forced_mods[? "shield_push"] = true;
     forced_mods[? "tut_guide"] = false;
     
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "hp_death"] = true;
     default_mods[? "turrets"] = true;
     default_mods[? "cannons"] = true;
@@ -294,7 +294,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
     gm[? "is_deathmatch"] = false;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "turrets"] = true;
     forced_mods[? "cannons"] = true;
     forced_mods[? "mob_portals"] = true;
@@ -332,7 +332,7 @@ function create_gamemodes_DB() {
     forced_mods[? "time_limit"] = false;
     forced_mods[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "tut_guide"] = true;
 
 
@@ -344,10 +344,10 @@ function create_gamemodes_DB() {
     gm[? "start_place_room"] = room_empty_base;
     gm[? "is_coop"] = true;
     
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "tut_guide"] = false;
     
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "shield_push"] = true;
 
 
@@ -359,10 +359,10 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
     
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "tut_guide"] = false;
 
-    default_mods = gm[? "default_modifiers"];
+    default_mods = gm[? "default_rules"];
     default_mods[? "shield_push"] = true;
     default_mods[? "dark_color"] = true;
     default_mods[? "bad_status_effects"] = true;
@@ -376,7 +376,7 @@ function create_gamemodes_DB() {
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 1;
 
-    forced_mods = gm[? "forced_modifiers"];
+    forced_mods = gm[? "forced_rules"];
     forced_mods[? "turrets"] = true;
     forced_mods[? "cannons"] = true;
     forced_mods[? "mob_portals"] = true;

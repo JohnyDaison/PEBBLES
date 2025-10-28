@@ -13,7 +13,7 @@ level_configs_list = ds_list_create();
 
 controller = noone;
 
-default_modifiers = ds_map_create();
-forced_modifiers = ds_map_create();
+default_rules = ds_map_create();
+forced_rules = ds_map_create();
 
 times = ds_map_create();

@@ -5,7 +5,7 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("basic_bumping", "Basic Bumping");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "weak_terrain"] = false;
     forced_rules[? "indestr_terrain"] = true;
     forced_rules[? "regenerate_terrain"] = false;
@@ -16,31 +16,31 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("deadly_spiking", "Deadly Spiking");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = true;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "weak_terrain"] = true;
     
     
     preset = presets.add("court_attrition", "Court Attrition");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = false;
     forced_rules[? "death_limit"] = true;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "death_limit"] = 5;
     
     
     preset = presets.add("volley_infinite", "Infinite Game");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "regenerate_terrain"] = true;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "score_limit"] = false;
     
     
@@ -48,7 +48,7 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("arena_novice", "Novice");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "hp_death"] = false;
     forced_rules[? "holographic_spawners"] = true;
     forced_rules[? "base_crystals"] = true;
@@ -77,7 +77,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "curve_balls"] = false;
     forced_rules[? "flag_capture"] = false;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "base_crystal_hp"] = 5;
     default_rules[? "score_limit"] = 200;
     default_rules[? "shield_push"] = true;
@@ -85,7 +85,7 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("arena_apprentice", "Apprentice");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "guy_shield_power"] = false;
     forced_rules[? "death_limit"] = false;
     forced_rules[? "dark_orb_energy_lock"] = false;
@@ -100,7 +100,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "always_sliding"] = false;
     forced_rules[? "curve_balls"] = false;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "base_crystals"] = true;
     default_rules[? "hp_death"] = true;
     default_rules[? "equal_colors"] = true;
@@ -116,7 +116,7 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("arena_arcade", "Arcade");
     
-    forced_rules = preset.forced_modifiers;
+    forced_rules = preset.forced_rules;
     forced_rules[? "turrets"] = false;
     forced_rules[? "cannons"] = false;
     forced_rules[? "mob_portals"] = false;
@@ -126,7 +126,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "base_crystal_shield_power"] = false;
     forced_rules[? "orbs_energy_min_lock"] = true;
 
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "random_item_spawner"] = true;
     default_rules[? "base_crystals"] = true;
     default_rules[? "weak_terrain"] = true;
@@ -143,7 +143,7 @@ function define_rule_presets_DB(presets) {
     
     preset = presets.add("arena_standard", "Pandemonium");
     
-    default_rules = preset.default_modifiers;
+    default_rules = preset.default_rules;
     default_rules[? "turrets"] = true;
     default_rules[? "cannons"] = true;
     default_rules[? "mob_portals"] = true;
