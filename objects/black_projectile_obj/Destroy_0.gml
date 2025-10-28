@@ -2,18 +2,6 @@ if (instance_number(self.object_index) == 1) {
     my_sound_stop(black_projectile_sound);
 }
 
-// give guys normal gravity
-with (guy_obj) {
-    if (self.id != other.my_guy) {
-        if (self.holographic == other.holographic && (self.gravity_coef != self.old_coef || gravity_direction != 270)) {
-            self.gravity_direction = 270;
-            self.gravity_coef = self.old_coef;
-            self.y -= 1;
-            self.airborne = false;
-        }
-    }
-}
-
 self.explosion_count = 0;
 
 // explode slots

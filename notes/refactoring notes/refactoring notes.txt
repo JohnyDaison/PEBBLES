@@ -12,9 +12,6 @@ has some repeating code
 * `black_force_field_obj` and `black_projectile_obj`
 share some code in `with(item_obj)` section
 
-* `black_aoe_obj` and `black_projectile_obj`
-share code for returning guy to normal gravity
-
 * `border_width` variable
 on `healthbar_overlay` doesn't have the same logic as in `empty_frame`
 because `healthbar_overlay` overrides parent's `Draw GUI` event without inheriting it
@@ -28,6 +25,9 @@ have duplicate centering code
 
 * `beam_obj`
 has a lot of repeated code, refactor to methods
+
+* `black_aoe_obj`
+rework to use `motion_add` instead of `gravity_direction`, like `black_projectile_obj`
 
 
 Convert Strings used as Enums to Enums:

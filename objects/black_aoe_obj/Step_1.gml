@@ -17,6 +17,7 @@ with (guy_obj) {
             }
 
             if (self.id != other.my_guy && other.force > 0 && !ubershielded && !self.protected) {
+                // TODO: revive commented code
                 // SLOT THEFT
                 /*
                 other.slot = ds_list_find_value(self.color_slots,0);

@@ -18,6 +18,7 @@ with (guy_obj) {
                     //my_sound_play_colored(wall_hum_sound, my_shield.my_color);
                 }
                 else if (vortex.force != 0 && self.my_color != g_dark) {
+                    // TODO: revive commented code
                     // SLOT THEFT
                     /*
                     if(current_slot > 0 && !lost_control && !slots_triggered)
@@ -103,15 +104,6 @@ with (guy_obj) {
                 }
             }
         }
-        /*
-        // RETURN GRAVITY BACK TO NORMAL
-        else if(gravity_coef != old_coef || gravity_direction != 270)
-        {
-            gravity_direction = 270;
-            gravity_coef = old_coef;
-            y-=1;
-            airborne = false;
-        }*/
     }
 }
 
