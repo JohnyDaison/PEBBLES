@@ -818,7 +818,6 @@
     {"name":"drop_all_items","order":7,"path":"scripts/drop_all_items/drop_all_items.yy",},
     {"name":"drop_inv_item","order":6,"path":"scripts/drop_inv_item/drop_inv_item.yy",},
     {"name":"ds_list_of_map_destroy","order":14,"path":"scripts/ds_list_of_map_destroy/ds_list_of_map_destroy.yy",},
-    {"name":"ds_map_of_map_destroy","order":15,"path":"scripts/ds_map_of_map_destroy/ds_map_of_map_destroy.yy",},
     {"name":"DsRegistryEntry","order":4,"path":"scripts/DsRegistryEntry/DsRegistryEntry.yy",},
     {"name":"elephant_command","order":13,"path":"scripts/elephant_command/elephant_command.yy",},
     {"name":"empty_display","order":3,"path":"scripts/empty_display/empty_display.yy",},

@@ -1,4 +1,4 @@
-/// @param {Constant.DsType|String} type
+/// @param {Constant.DsType} type
 /// @param {Id.DsList|Id.DsMap|Id.DsGrid} ds_id
 function deregister_ds(type, ds_id) {
     var regId = string(type) + string(ds_id);

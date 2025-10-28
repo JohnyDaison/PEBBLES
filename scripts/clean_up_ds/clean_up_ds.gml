@@ -1,6 +1,6 @@
 /// @param {Bool} forced
 /// @param {String} name
-/// @param {Constant.DsType|String|Constant.All} type
+/// @param {Constant.DsType|Constant.All} type
 /// @param {Id.Instance|Constant.All} instance
 /// @param {Asset.GMObject|Constant.All} object default = all
 function clean_up_ds(forced, name, type, instance, object = all) {
@@ -41,15 +41,6 @@ function clean_up_ds(forced, name, type, instance, object = all) {
                     break;
                 case ds_type_grid:
                     ds_grid_destroy(entry.id);
-                    break;
-            }
-
-            switch (entry.type) {
-                case "ds_list_of_map":
-                    ds_list_of_map_destroy(entry.id);
-                    break;
-                case "ds_map_of_map":
-                    ds_map_of_map_destroy(entry.id);
                     break;
             }
 

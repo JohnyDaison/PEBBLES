@@ -1,5 +1,5 @@
 /// @param {String} name
-/// @param {Constant.DsType|String} type
+/// @param {Constant.DsType} type
 /// @param {Id.DsList|Id.DsMap|Id.DsGrid} dsId
 /// @param {Id.Instance} instance
 function DsRegistryEntry(name, type, dsId, instance) constructor {

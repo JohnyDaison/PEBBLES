@@ -1,5 +1,5 @@
 /// @param {String} name
-/// @param {Constant.DsType|String} type
+/// @param {Constant.DsType} type
 /// @param {Id.DsList|Id.DsMap|Id.DsGrid} ds_id
 /// @param {Id.Instance} instance
 function register_ds(name, type, ds_id, instance) {
