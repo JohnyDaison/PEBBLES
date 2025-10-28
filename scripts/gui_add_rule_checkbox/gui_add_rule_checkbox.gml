@@ -5,7 +5,7 @@
 /// @param gmrule_id
 /// @param [size]
 function gui_add_rule_checkbox() {
-    var xx,yy,ii, size, gmrule_id, gmmod;
+    var xx,yy,ii, size, gmrule_id, gmRule;
 
     xx = argument[0];
     yy = argument[1];
@@ -21,11 +21,11 @@ function gui_add_rule_checkbox() {
         ii.width = size;
     }
 
-    gmmod = DB.gamemode_rules[? gmrule_id];
+    gmRule = DB.gamemode_rules[? gmrule_id];
 
-    ii.unchecked_icon = gmmod[? "icon"];
-    ii.checked_icon = gmmod[? "icon"];
-    //ii.tooltip = gmmod[? "name"];
+    ii.unchecked_icon = gmRule[? "icon"];
+    ii.checked_icon = gmRule[? "icon"];
+    //ii.tooltip = gmRule[? "name"];
     ii.gmrule_id = gmrule_id;
 
     ii.unchecked_bg_color = merge_color(c_black, c_dkgray, 0.5);

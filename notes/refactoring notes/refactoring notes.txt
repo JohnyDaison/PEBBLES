@@ -15,8 +15,6 @@ have duplicate centering code
 
 * `RulePresetsDB`, `RuleCategoriesDB` - rename variable `count`
 
-* Rename `mods`,`modifiers` to `rules` in code
-
 * `beam_obj`
 has a lot of repeated code, refactor to methods
 

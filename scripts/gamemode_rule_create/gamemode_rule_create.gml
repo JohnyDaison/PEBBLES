@@ -28,19 +28,19 @@ function gamemode_rule_create() {
         return false;   
     }
 
-    var gmmod = ds_map_create();
+    var gmRule = ds_map_create();
 
-    gmmod[? "name"] = name;
-    gmmod[? "description"] = description;
-    gmmod[? "type"] = type;
-    gmmod[? "public"] = public;
-    gmmod[? "icon"] = icon;
+    gmRule[? "name"] = name;
+    gmRule[? "description"] = description;
+    gmRule[? "type"] = type;
+    gmRule[? "public"] = public;
+    gmRule[? "icon"] = icon;
     
     if (type == "number") {
-        gmmod[? "default_value"] = 0;
-        gmmod[? "min_value"] = 0;
-        gmmod[? "max_value"] = 0;
-        gmmod[? "value_step"] = 0;
+        gmRule[? "default_value"] = 0;
+        gmRule[? "min_value"] = 0;
+        gmRule[? "max_value"] = 0;
+        gmRule[? "value_step"] = 0;
     }
 
     if(ds_list_find_index(gamemode_rule_type_list, type) == -1)
@@ -50,7 +50,7 @@ function gamemode_rule_create() {
 
 
     ds_list_add(gamemode_rule_list, str_id);
-    gamemode_rules[? str_id] = gmmod;
+    gamemode_rules[? str_id] = gmRule;
 
-    return gmmod;
+    return gmRule;
 }

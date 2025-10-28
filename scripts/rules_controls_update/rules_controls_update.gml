@@ -11,7 +11,7 @@ function rules_controls_update() {
             var custom_rules = gmrule_customs;
             var default_map, forced_map, place, preset;
             var rule_controls = gmrule_controls;
-            var rule_id, rule_control, dmod, fmod, gmmod;
+            var rule_id, rule_control, dRule, fRule, gmRule;
             
             preset = DB.rule_presets.find_preset_by_id(preset_dropdown.list_picker.cur_item_id);
             place = play_menu_window.world.places[| place_picker.cur_item];
@@ -21,9 +21,9 @@ function rules_controls_update() {
             rule_id = ds_map_find_first(rule_controls);
             while(!is_undefined(rule_id))
             {
-                gmmod = DB.gamemode_rules[? rule_id];
+                gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmmod) && gmmod[? "public"])
+                if(!is_undefined(gmRule) && gmRule[? "public"])
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.reset_value();
@@ -42,19 +42,19 @@ function rules_controls_update() {
             merge_rules_maps(default_map, place, "default");
         
             // apply result
-            dmod = ds_map_find_first(default_map);
+            dRule = ds_map_find_first(default_map);
         
-            while(!is_undefined(dmod))
+            while(!is_undefined(dRule))
             {
-                gmmod = DB.gamemode_rules[? dmod];
+                gmRule = DB.gamemode_rules[? dRule];
             
-                if(!is_undefined(gmmod) && gmmod[? "public"])
+                if(!is_undefined(gmRule) && gmRule[? "public"])
                 {
-                    rule_control = rule_controls[? dmod];
-                    rule_control.set_value(default_map[? dmod], false, false);
+                    rule_control = rule_controls[? dRule];
+                    rule_control.set_value(default_map[? dRule], false, false);
                 }
             
-                dmod = ds_map_find_next(default_map, dmod);
+                dRule = ds_map_find_next(default_map, dRule);
             }
         
             ds_map_destroy(default_map);
@@ -63,9 +63,9 @@ function rules_controls_update() {
             rule_id = ds_map_find_first(rule_controls);
             while(!is_undefined(rule_id))
             {   
-                gmmod = DB.gamemode_rules[? rule_id];
+                gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmmod) && gmmod[? "public"])
+                if(!is_undefined(gmRule) && gmRule[? "public"])
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.default_value = rule_control.get_value();
@@ -80,9 +80,9 @@ function rules_controls_update() {
         
             while(!is_undefined(rule_id))
             {
-                gmmod = DB.gamemode_rules[? rule_id];
+                gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmmod) && gmmod[? "public"])
+                if(!is_undefined(gmRule) && gmRule[? "public"])
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.set_value(custom_rules[? rule_id], true, false);
@@ -101,19 +101,19 @@ function rules_controls_update() {
             merge_rules_maps(forced_map, place, "forced");
         
             // apply result
-            fmod = ds_map_find_first(forced_map);
+            fRule = ds_map_find_first(forced_map);
         
-            while(!is_undefined(fmod))
+            while(!is_undefined(fRule))
             {
-                gmmod = DB.gamemode_rules[? fmod];
+                gmRule = DB.gamemode_rules[? fRule];
             
-                if(!is_undefined(gmmod) && gmmod[? "public"])
+                if(!is_undefined(gmRule) && gmRule[? "public"])
                 {
-                    rule_control = rule_controls[? fmod];
-                    rule_control.set_value(forced_map[? fmod], false, true);
+                    rule_control = rule_controls[? fRule];
+                    rule_control.set_value(forced_map[? fRule], false, true);
                 }
             
-                fmod = ds_map_find_next(forced_map, fmod);
+                fRule = ds_map_find_next(forced_map, fRule);
             }
         }
     }

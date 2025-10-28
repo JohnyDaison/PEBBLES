@@ -20,7 +20,7 @@ function rules_update_state(gamemode_id, preset, place, custom_rules, target_map
         var default_rules_gm = gm[? "default_rules"], forced_rules_gm = gm[? "forced_rules"];
         var default_rules_preset, forced_rules_preset;
         var default_rules_place, forced_rules_place;
-        var rule_id, gmmod, count, rule_value;
+        var rule_id, gmRule, count, rule_value;
         var preset_exists = is_struct(preset);
         var place_exists = instance_exists(place);
         
@@ -45,31 +45,31 @@ function rules_update_state(gamemode_id, preset, place, custom_rules, target_map
         for(var i=0; i<count; i++)
         {
             rule_id = DB.gamemode_rule_list[| i];
-            gmmod = DB.gamemode_rules[? rule_id];
+            gmRule = DB.gamemode_rules[? rule_id];
             rule_value = undefined;
         
             // type default
             if (reset)
             {
-                if(gmmod[? "type"] == "bool")
+                if(gmRule[? "type"] == "bool")
                 {
                     rule_value = false;
                 }
             }
         
             // game mode default
-            rule_value = rule_default_value_update(gmmod, rule_value, default_rules_gm[? rule_id]);
+            rule_value = rule_default_value_update(gmRule, rule_value, default_rules_gm[? rule_id]);
             
             // preset default
             if(preset_exists)
             {
-                rule_value = rule_default_value_update(gmmod, rule_value, default_rules_preset[? rule_id]);
+                rule_value = rule_default_value_update(gmRule, rule_value, default_rules_preset[? rule_id]);
             }
             
             // place default
             if(place_exists)
             {
-                rule_value = rule_default_value_update(gmmod, rule_value, default_rules_place[? rule_id]);
+                rule_value = rule_default_value_update(gmRule, rule_value, default_rules_place[? rule_id]);
             }
         
             // custom
@@ -79,18 +79,18 @@ function rules_update_state(gamemode_id, preset, place, custom_rules, target_map
             }
         
             // game mode forced
-            rule_value = rule_default_value_update(gmmod, rule_value, forced_rules_gm[? rule_id]);
+            rule_value = rule_default_value_update(gmRule, rule_value, forced_rules_gm[? rule_id]);
         
             // preset forced
             if(preset_exists)
             {
-                rule_value = rule_default_value_update(gmmod, rule_value, forced_rules_preset[? rule_id]);
+                rule_value = rule_default_value_update(gmRule, rule_value, forced_rules_preset[? rule_id]);
             }
             
             // place forced
             if(place_exists)
             {
-                rule_value = rule_default_value_update(gmmod, rule_value, forced_rules_place[? rule_id]);
+                rule_value = rule_default_value_update(gmRule, rule_value, forced_rules_place[? rule_id]);
             }
         
             // write the value
