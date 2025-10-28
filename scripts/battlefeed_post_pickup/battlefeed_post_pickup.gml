@@ -32,7 +32,7 @@ function battlefeed_post_pickup(player, what, score_gain) {
     }
     else {
         feed_item = battlefeed_post_new("pickup");
-        battlefeed_post_assignplayer(feed_item, player);
+        feed_item.assignPlayer(player);
 
         var new_score_str = string(score_gain);
 
@@ -40,8 +40,8 @@ function battlefeed_post_pickup(player, what, score_gain) {
             new_score_str = "+" + new_score_str;
         }
 
-        battlefeed_post_add(feed_item, "text", new_score_str, g_yellow);
-        battlefeed_post_add(feed_item, "icon", what, "bf_orange");
+        feed_item.add("text", new_score_str, g_yellow);
+        feed_item.add("icon", what, "bf_orange");
         feed_item.got_item = what;
         feed_item.score_value = score_gain;
     }

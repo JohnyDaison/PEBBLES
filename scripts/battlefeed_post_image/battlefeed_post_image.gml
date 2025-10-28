@@ -3,8 +3,8 @@
 function battlefeed_post_image(player, image) {
     var feedItem = battlefeed_post_new("image");
 
-    battlefeed_post_assignplayer(feedItem, player);
-    battlefeed_post_add(feedItem, "image", image, g_white);
+    feedItem.assignPlayer(player);
+    feedItem.add("image", image, g_white);
 
     return feedItem;
 }

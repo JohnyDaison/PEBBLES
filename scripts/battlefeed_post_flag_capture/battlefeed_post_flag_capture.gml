@@ -16,11 +16,11 @@ function battlefeed_post_flag_capture(flag, capturer, stat_str = "") {
 
     feed_item = battlefeed_post_new("flag_capture");
 
-    battlefeed_post_addblank(feed_item, "actorflag");
-    battlefeed_post_addblank(feed_item, "name");
-    battlefeed_post_addblank(feed_item, "score");
-    battlefeed_post_addblank(feed_item, "victimname");
-    battlefeed_post_addblank(feed_item, "victimflag");
+    feed_item.addBlank("actorflag");
+    feed_item.addBlank("name");
+    feed_item.addBlank("score");
+    feed_item.addBlank("victimname");
+    feed_item.addBlank("victimflag");
 
     var victimPlayer = flag.my_flag_spawner.my_player;
     victim_name = victimPlayer.name;
@@ -28,21 +28,21 @@ function battlefeed_post_flag_capture(flag, capturer, stat_str = "") {
     var la_player = capturer.my_player;
     actor_name = la_player.name;
 
-    battlefeed_post_assignplayer(feed_item, la_player);
+    feed_item.assignPlayer(la_player);
     is_in_player_feed = feed_item.battlefeed == la_player.battlefeed;
 
     /*
     if(!is_in_player_feed) {
-        battlefeed_post_fillblank(feed_item, "actorflag", "icon", la_player.flag, g_white);
+        feed_item.fillBlank("actorflag", "icon", la_player.flag, g_white);
     }
     */
 
     if (victimPlayer != gamemode_obj.environment) {
-        battlefeed_post_fillblank(feed_item, "victimflag", "icon", victimPlayer.flag, "bf_orange");
+        feed_item.fillBlank("victimflag", "icon", victimPlayer.flag, "bf_orange");
     }
 
     if (actor_name != "" && actor_name != gamemode_obj.environment.name && !is_in_player_feed) {
-        battlefeed_post_fillblank(feed_item, "name", "text", actor_name, g_white);
+        feed_item.fillBlank("name", "text", actor_name, g_white);
     }
 
     if (stat_str != "") {
@@ -51,12 +51,12 @@ function battlefeed_post_flag_capture(flag, capturer, stat_str = "") {
 
         stat_str = string_replace(stat_str, score_label + " ", "");
 
-        battlefeed_post_fillblank(feed_item, "score", "text", stat_str, g_yellow);
+        feed_item.fillBlank("score", "text", stat_str, g_yellow);
     }
 
     /*
     if(flag.my_flag_spawner.my_player != gamemode_obj.environment) { // victim_name != my_player.name && 
-        battlefeed_post_fillblank(feed_item, "victimname", "text", victim_name, g_white); // "bf_orange"
+        feed_item.fillBlank("victimname", "text", victim_name, g_white); // "bf_orange"
     }
     */
 
