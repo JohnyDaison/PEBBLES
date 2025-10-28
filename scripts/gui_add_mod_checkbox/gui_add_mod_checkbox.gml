@@ -21,7 +21,7 @@ function gui_add_mod_checkbox() {
         ii.width = size;
     }
 
-    gmmod = DB.gamemode_mods[? gmmod_id];
+    gmmod = DB.gamemode_rules[? gmmod_id];
 
     ii.unchecked_icon = gmmod[? "icon"];
     ii.checked_icon = gmmod[? "icon"];

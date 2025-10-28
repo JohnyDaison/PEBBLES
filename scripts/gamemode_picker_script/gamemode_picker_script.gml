@@ -72,7 +72,7 @@ function gamemode_picker_script() {
         }
     }
 
-    mods_controls_update();
+    rules_controls_update();
 
     schedule_play_summary_update();
 }

@@ -22,9 +22,9 @@ ds_map_destroy(level_maxstart);
 
 ds_list_destroy(losers);
 
-// mods
-ds_map_destroy(mods_state);
-ds_map_destroy(custom_mods);
+// rules
+ds_map_destroy(rules_state);
+ds_map_destroy(custom_rules);
 
 if(instance_exists(world))
 {

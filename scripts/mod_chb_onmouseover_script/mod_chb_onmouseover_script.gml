@@ -1,5 +1,5 @@
 function mod_chb_onmouseover_script() {
-    var gmmod = DB.gamemode_mods[? self.gmmod_id];
+    var gmmod = DB.gamemode_rules[? self.gmmod_id];
 
     var window = mod_tooltip_window;
     var icon_label = window.mod_icon_label;

@@ -1,6 +1,6 @@
 function mod_chb_user_click_script() {
     var gmmod_customs = play_menu_window.gmmod_customs;
-    var gmmod = DB.gamemode_mods[? gmmod_id];
+    var gmmod = DB.gamemode_rules[? gmmod_id];
     var mod_control = play_menu_window.gmmod_controls[? gmmod_id];
     var control_value = mod_control.get_value();
         

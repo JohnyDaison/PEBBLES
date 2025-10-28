@@ -1,5 +1,5 @@
 function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
-    var gmmod = DB.gamemode_mods[? gmmod_id];
+    var gmmod = DB.gamemode_rules[? gmmod_id];
     
     var pane = gui_add_pane(0, 0, "");
     
@@ -109,7 +109,7 @@ function gui_add_mod_numberbox(xx, yy, gmmod_id, size) {
         }
     
         reset_value = function() {
-            var gmmod = DB.gamemode_mods[? gmmod_id];
+            var gmmod = DB.gamemode_rules[? gmmod_id];
             
             draw_bg_color = false;
             gui_show_element(id);

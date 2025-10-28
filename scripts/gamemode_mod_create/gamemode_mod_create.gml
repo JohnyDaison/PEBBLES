@@ -50,7 +50,7 @@ function gamemode_mod_create() {
 
 
     ds_list_add(gamemode_mod_list, str_id);
-    gamemode_mods[? str_id] = gmmod;
+    gamemode_rules[? str_id] = gmmod;
 
     return gmmod;
 }

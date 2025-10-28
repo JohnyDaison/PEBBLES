@@ -1,4 +1,4 @@
-///@description SET UP FRICTION AND MODS
+///@description SET UP FRICTION AND RULES
 friction = orig_friction;
 
 var curve_ball = mod_get_state("curve_balls");

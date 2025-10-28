@@ -34,9 +34,9 @@ game_ended = false;
 
 sudden_death = false;
 
-// mods
-mods_state = ds_map_create();
-custom_mods = ds_map_create();
+// rules
+rules_state = ds_map_create();
+custom_rules = ds_map_create();
 
 winner = noone;
 loser = noone;

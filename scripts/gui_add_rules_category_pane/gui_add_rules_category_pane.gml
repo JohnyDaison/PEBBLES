@@ -25,7 +25,7 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
         for(i=0; i<count; i++)
         {
             gmrule_id = list[| i];
-            gmrule = DB.gamemode_mods[? gmrule_id];
+            gmrule = DB.gamemode_rules[? gmrule_id];
             gmrule_type = gmrule[? "type"];
             
             if(gmrule_type == "bool") {

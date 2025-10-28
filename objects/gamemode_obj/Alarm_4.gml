@@ -45,7 +45,7 @@ if (!is_campaign) {
     
         init_match_stats();
     
-        mods_update_state(mode, rule_preset, world.current_place, custom_mods, mods_state);
+        rules_update_state(mode, rule_preset, world.current_place, custom_rules, rules_state);
     
         room_goto(next.room_id);
     }

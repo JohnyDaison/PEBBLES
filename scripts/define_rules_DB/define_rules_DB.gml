@@ -63,7 +63,7 @@ function define_rules_DB() {
     gamemode_mod_create("tut_guide", "Tutorial Guide", "bool", true, tut_guide_mod_icon, "NPC Guide will show and explain the game to you.");
 
 
-    // number mods
+    // number rules
     gamemode_mod_create("base_crystal_hp", "Base Crystal HP", "number", true, base_crystal_hp_mod_icon, "Starting Health of your Base");
     gamemode_number_mod_values("base_crystal_hp", 10, 1, 10, 1);
     

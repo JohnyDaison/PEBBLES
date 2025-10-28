@@ -186,7 +186,7 @@ with (button_pane) {
     with (rules_checkbox) {
         onchange_function = function() {
             play_menu_window.show_hidden_rules = checked;
-            mods_controls_update();
+            rules_controls_update();
         }
     }
     
@@ -234,8 +234,8 @@ load_from_gamemode = function () {
         }
         place_picker.select_item_by_id(gamemode_obj.world.current_place.room_id);
         
-        ds_map_copy(gmmod_customs, gamemode_obj.custom_mods);
-        mods_controls_update();
+        ds_map_copy(gmmod_customs, gamemode_obj.custom_rules);
+        rules_controls_update();
     }
     
     with(gamemode_obj)

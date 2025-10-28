@@ -78,7 +78,7 @@ self.direct_input_buffer = 0;
 var energy_regen_step = min(DB.orb_regen_speeds[? self.cur_regen_speed], max(0, self.base_energy - self.energy));
 self.energy += energy_regen_step;
 
-// ENERGY MODS
+// ENERGY RULES
 if (mod_get_state("orbs_energy_min_lock") && self.my_color != g_dark && self.energy < self.base_energy) {
     self.energy = self.base_energy;
 }

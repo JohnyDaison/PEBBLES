@@ -18,7 +18,7 @@ function destroy_gamemodes_DB() {
     for(i = count-1; i >= 0; i--)
     {
         mod_id = gamemode_mod_list[| i];
-        mod_map = gamemode_mods[? mod_id];
+        mod_map = gamemode_rules[? mod_id];
     
         ds_map_destroy(mod_map);
     }
@@ -29,7 +29,7 @@ function destroy_gamemodes_DB() {
     ds_map_destroy(gamemodes);
     ds_list_destroy(gamemode_list);
 
-    ds_map_destroy(gamemode_mods);
+    ds_map_destroy(gamemode_rules);
     ds_list_destroy(gamemode_mod_list);
     ds_list_destroy(gamemode_mod_type_list);
 }

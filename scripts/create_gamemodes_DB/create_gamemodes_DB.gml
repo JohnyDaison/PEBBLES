@@ -5,7 +5,7 @@ function create_gamemodes_DB() {
     gamemode_mod_list = ds_list_create();
     gamemode_mod_type_list = ds_list_create();
 
-    gamemode_mods = ds_map_create();
+    gamemode_rules = ds_map_create();
     
     rule_categories = new RuleCategoriesDB();
     rule_presets = new RulePresetsDB();
@@ -20,7 +20,7 @@ function create_gamemodes_DB() {
     define_rule_presets_DB(rule_presets);
     
     // GAMEMODES
-    var gm, forced_mods, default_mods;
+    var gm, forced_rules, default_rules;
 
     // Quick Training
     gm = gamemode_create("quick_tutorial", "Training", true, quick_tutorial_world_obj);
@@ -31,47 +31,47 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
     gm[? "is_deathmatch"] = false;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "turrets"] = true;
-    forced_mods[? "cannons"] = false;
-    forced_mods[? "mob_portals"] = true;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "dark_orb_energy_lock"] = false;
-    forced_mods[? "color_orbs_energy_lock"] = false;
-    forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "curve_balls"] = false;
-    forced_mods[? "equal_colors"] = false;
-    forced_mods[? "base_colors_only"] = false;
-    forced_mods[? "shield_push"] = true;
-    forced_mods[? "hp_death"] = true;
-    forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "weak_terrain"] = false;
-    forced_mods[? "indestr_terrain"] = false;
-    forced_mods[? "regenerate_terrain"] = false;
-    forced_mods[? "always_sliding"] = false;
-    forced_mods[? "dark_color"] = true;
-    forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "bad_status_effects"] = true;
-    forced_mods[? "abilities"] = false;
-    forced_mods[? "tutorials"] = false;
-    forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "slime_mob_rain"] = false;
-    forced_mods[? "artifacts"] = false;
-    forced_mods[? "lightning_strikes"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "turrets"] = true;
+    forced_rules[? "cannons"] = false;
+    forced_rules[? "mob_portals"] = true;
+    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? "color_orbs_energy_lock"] = false;
+    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? "curve_balls"] = false;
+    forced_rules[? "equal_colors"] = false;
+    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? "shield_push"] = true;
+    forced_rules[? "hp_death"] = true;
+    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? "indestr_terrain"] = false;
+    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? "always_sliding"] = false;
+    forced_rules[? "dark_color"] = true;
+    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? "bad_status_effects"] = true;
+    forced_rules[? "abilities"] = false;
+    forced_rules[? "tutorials"] = false;
+    forced_rules[? "random_item_spawner"] = false;
+    forced_rules[? "slime_mob_rain"] = false;
+    forced_rules[? "artifacts"] = false;
+    forced_rules[? "lightning_strikes"] = false;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
-    forced_mods[? "death_limit"] = false;
-    forced_mods[? "score_limit"] = false;
-    forced_mods[? "time_limit"] = false;
-    forced_mods[? "sudden_death_start"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "guy_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
+    forced_rules[? "death_limit"] = false;
+    forced_rules[? "score_limit"] = false;
+    forced_rules[? "time_limit"] = false;
+    forced_rules[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "tut_guide"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "tut_guide"] = true;
 
 
     // Pit Fight
@@ -79,28 +79,28 @@ function create_gamemodes_DB() {
     gm[? "description"] = "Face a series of fighters of increasing difficulty. How many can you defeat before you fall?";
     gm[? "start_script"] = gm_sparring_start;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "hp_death"] = true;
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "tut_guide"] = false;
-    forced_mods[? "slime_mob_rain"] = false;
-    forced_mods[? "artifacts"] = false;
-    forced_mods[? "lightning_strikes"] = false;
-    forced_mods[? "shield_push"] = true;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "hp_death"] = true;
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "tut_guide"] = false;
+    forced_rules[? "slime_mob_rain"] = false;
+    forced_rules[? "artifacts"] = false;
+    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? "shield_push"] = true;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
-    forced_mods[? "death_limit"] = 1;
-    forced_mods[? "score_limit"] = false;
-    forced_mods[? "time_limit"] = false;
-    forced_mods[? "sudden_death_start"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "guy_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
+    forced_rules[? "death_limit"] = 1;
+    forced_rules[? "score_limit"] = false;
+    forced_rules[? "time_limit"] = false;
+    forced_rules[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "dark_color"] = true;
+    default_rules[? "bad_status_effects"] = true;
+    default_rules[? "abilities"] = true;
 
 
     // Arena
@@ -115,10 +115,10 @@ function create_gamemodes_DB() {
     
     ds_list_add(gm[? "rule_presets"], "arena_novice", "arena_apprentice", "arena_arcade", "arena_standard");
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "tut_guide"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "tut_guide"] = false;
 
-    default_mods = gm[? "default_rules"];
+    default_rules = gm[? "default_rules"];
 
 
     // Tower climb
@@ -132,23 +132,23 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "tut_guide"] = false;
-    forced_mods[? "shield_push"] = true;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "tut_guide"] = false;
+    forced_rules[? "shield_push"] = true;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "turrets"] = true;
-    default_mods[? "cannons"] = true;
-    default_mods[? "snakes_on_a_plane"] = false;
-    default_mods[? "hp_death"] = true;
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "turrets"] = true;
+    default_rules[? "cannons"] = true;
+    default_rules[? "snakes_on_a_plane"] = false;
+    default_rules[? "hp_death"] = true;
+    default_rules[? "dark_color"] = true;
+    default_rules[? "bad_status_effects"] = true;
+    default_rules[? "abilities"] = true;
 
 
     // Volleyball
@@ -165,39 +165,39 @@ function create_gamemodes_DB() {
     
     ds_list_add(gm[? "rule_presets"], "basic_bumping", "deadly_spiking", "court_attrition", "volley_infinite");
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "hp_death"] = false;
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "dark_orb_energy_lock"] = false;
-    forced_mods[? "color_orbs_energy_lock"] = false;
-    forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "shield_push"] = false;
-    forced_mods[? "tut_guide"] = false;
-    forced_mods[? "cannons"] = false;
-    forced_mods[? "turrets"] = false;
-    forced_mods[? "mob_portals"] = false;
-    forced_mods[? "dark_color"] = false;
-    forced_mods[? "bad_status_effects"] = false;
-    forced_mods[? "abilities"] = false;
-    forced_mods[? "tutorials"] = false;
-    forced_mods[? "curve_balls"] = false;
-    forced_mods[? "equal_colors"] = true;
-    forced_mods[? "base_colors_only"] = false;
-    forced_mods[? "slime_mob_rain"] = false;
-    forced_mods[? "artifacts"] = false;
-    forced_mods[? "lightning_strikes"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "hp_death"] = false;
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? "random_item_spawner"] = false;
+    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? "color_orbs_energy_lock"] = false;
+    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? "shield_push"] = false;
+    forced_rules[? "tut_guide"] = false;
+    forced_rules[? "cannons"] = false;
+    forced_rules[? "turrets"] = false;
+    forced_rules[? "mob_portals"] = false;
+    forced_rules[? "dark_color"] = false;
+    forced_rules[? "bad_status_effects"] = false;
+    forced_rules[? "abilities"] = false;
+    forced_rules[? "tutorials"] = false;
+    forced_rules[? "curve_balls"] = false;
+    forced_rules[? "equal_colors"] = true;
+    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? "slime_mob_rain"] = false;
+    forced_rules[? "artifacts"] = false;
+    forced_rules[? "lightning_strikes"] = false;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "guy_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "score_limit"] = 10;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "score_limit"] = 10;
     
     
     // Hoopball
@@ -212,47 +212,47 @@ function create_gamemodes_DB() {
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "hp_death"] = false;
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "weak_terrain"] = false;
-    forced_mods[? "indestr_terrain"] = false;
-    forced_mods[? "regenerate_terrain"] = false;
-    forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "dark_color"] = false;
-    forced_mods[? "dark_orb_energy_lock"] = false;
-    forced_mods[? "color_orbs_energy_lock"] = false;
-    forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "tut_guide"] = false;
-    forced_mods[? "cannons"] = false;
-    forced_mods[? "turrets"] = false;
-    forced_mods[? "mob_portals"] = false;
-    forced_mods[? "bad_status_effects"] = false;
-    forced_mods[? "abilities"] = false;
-    forced_mods[? "tutorials"] = false;
-    forced_mods[? "curve_balls"] = false;
-    forced_mods[? "equal_colors"] = false;
-    forced_mods[? "base_colors_only"] = false;
-    forced_mods[? "slime_mob_rain"] = false;
-    forced_mods[? "artifacts"] = false;
-    forced_mods[? "lightning_strikes"] = false;
-    forced_mods[? "shield_push"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "hp_death"] = false;
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? "indestr_terrain"] = false;
+    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? "random_item_spawner"] = false;
+    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? "dark_color"] = false;
+    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? "color_orbs_energy_lock"] = false;
+    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? "tut_guide"] = false;
+    forced_rules[? "cannons"] = false;
+    forced_rules[? "turrets"] = false;
+    forced_rules[? "mob_portals"] = false;
+    forced_rules[? "bad_status_effects"] = false;
+    forced_rules[? "abilities"] = false;
+    forced_rules[? "tutorials"] = false;
+    forced_rules[? "curve_balls"] = false;
+    forced_rules[? "equal_colors"] = false;
+    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? "slime_mob_rain"] = false;
+    forced_rules[? "artifacts"] = false;
+    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? "shield_push"] = false;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
-    forced_mods[? "death_limit"] = false;
-    forced_mods[? "score_limit"] = true;
-    forced_mods[? "sudden_death_start"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "guy_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
+    forced_rules[? "death_limit"] = false;
+    forced_rules[? "score_limit"] = true;
+    forced_rules[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "weak_terrain"] = true;
-    default_mods[? "regenerate_terrain"] = true;
-    default_mods[? "score_limit"] = 10;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "weak_terrain"] = true;
+    default_rules[? "regenerate_terrain"] = true;
+    default_rules[? "score_limit"] = 10;
 
 
     // Base survival
@@ -263,25 +263,25 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 1;
     gm[? "is_coop"] = true;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "mob_portals"] = true;
-    forced_mods[? "base_crystals"] = true;
-    forced_mods[? "indestr_terrain"] = false;
-    forced_mods[? "regenerate_terrain"] = false;
-    forced_mods[? "flag_capture"] = false;
-    forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "shield_push"] = true;
-    forced_mods[? "tut_guide"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "mob_portals"] = true;
+    forced_rules[? "base_crystals"] = true;
+    forced_rules[? "indestr_terrain"] = false;
+    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? "flag_capture"] = false;
+    forced_rules[? "random_item_spawner"] = false;
+    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? "shield_push"] = true;
+    forced_rules[? "tut_guide"] = false;
     
-    default_mods = gm[? "default_rules"];
-    default_mods[? "hp_death"] = true;
-    default_mods[? "turrets"] = true;
-    default_mods[? "cannons"] = true;
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
-    default_mods[? "weak_terrain"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "hp_death"] = true;
+    default_rules[? "turrets"] = true;
+    default_rules[? "cannons"] = true;
+    default_rules[? "dark_color"] = true;
+    default_rules[? "bad_status_effects"] = true;
+    default_rules[? "abilities"] = true;
+    default_rules[? "weak_terrain"] = true;
 
 
     // Old Training
@@ -294,46 +294,46 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
     gm[? "is_deathmatch"] = false;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "turrets"] = true;
-    forced_mods[? "cannons"] = true;
-    forced_mods[? "mob_portals"] = true;
-    forced_mods[? "snakes_on_a_plane"] = false;
-    forced_mods[? "dark_orb_energy_lock"] = false;
-    forced_mods[? "color_orbs_energy_lock"] = false;
-    forced_mods[? "orbs_energy_min_lock"] = false;
-    forced_mods[? "curve_balls"] = false;
-    forced_mods[? "equal_colors"] = false;
-    forced_mods[? "base_colors_only"] = false;
-    forced_mods[? "shield_push"] = true;
-    forced_mods[? "hp_death"] = true;
-    forced_mods[? "holographic_spawners"] = false;
-    forced_mods[? "base_crystals"] = false;
-    forced_mods[? "weak_terrain"] = false;
-    forced_mods[? "indestr_terrain"] = false;
-    forced_mods[? "regenerate_terrain"] = false;
-    forced_mods[? "always_sliding"] = false;
-    forced_mods[? "dark_color"] = true;
-    forced_mods[? "bolt_rain"] = false;
-    forced_mods[? "bad_status_effects"] = true;
-    forced_mods[? "abilities"] = true;
-    forced_mods[? "tutorials"] = false;
-    forced_mods[? "random_item_spawner"] = false;
-    forced_mods[? "slime_mob_rain"] = false;
-    forced_mods[? "artifacts"] = false;
-    forced_mods[? "lightning_strikes"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "turrets"] = true;
+    forced_rules[? "cannons"] = true;
+    forced_rules[? "mob_portals"] = true;
+    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? "color_orbs_energy_lock"] = false;
+    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? "curve_balls"] = false;
+    forced_rules[? "equal_colors"] = false;
+    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? "shield_push"] = true;
+    forced_rules[? "hp_death"] = true;
+    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? "base_crystals"] = false;
+    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? "indestr_terrain"] = false;
+    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? "always_sliding"] = false;
+    forced_rules[? "dark_color"] = true;
+    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? "bad_status_effects"] = true;
+    forced_rules[? "abilities"] = true;
+    forced_rules[? "tutorials"] = false;
+    forced_rules[? "random_item_spawner"] = false;
+    forced_rules[? "slime_mob_rain"] = false;
+    forced_rules[? "artifacts"] = false;
+    forced_rules[? "lightning_strikes"] = false;
     
-    forced_mods[? "base_crystal_hp"] = false;
-    forced_mods[? "base_crystal_shield_power"] = false;
-    forced_mods[? "guy_shield_power"] = false;
-    forced_mods[? "flag_capture"] = false;
-    forced_mods[? "death_limit"] = false;
-    forced_mods[? "score_limit"] = false;
-    forced_mods[? "time_limit"] = false;
-    forced_mods[? "sudden_death_start"] = false;
+    forced_rules[? "base_crystal_hp"] = false;
+    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? "guy_shield_power"] = false;
+    forced_rules[? "flag_capture"] = false;
+    forced_rules[? "death_limit"] = false;
+    forced_rules[? "score_limit"] = false;
+    forced_rules[? "time_limit"] = false;
+    forced_rules[? "sudden_death_start"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "tut_guide"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "tut_guide"] = true;
 
 
     // Loop world
@@ -344,11 +344,11 @@ function create_gamemodes_DB() {
     gm[? "start_place_room"] = room_empty_base;
     gm[? "is_coop"] = true;
     
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "tut_guide"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "tut_guide"] = false;
     
-    default_mods = gm[? "default_rules"];
-    default_mods[? "shield_push"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "shield_push"] = true;
 
 
     // Test mode
@@ -359,14 +359,14 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
     
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "tut_guide"] = false;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "tut_guide"] = false;
 
-    default_mods = gm[? "default_rules"];
-    default_mods[? "shield_push"] = true;
-    default_mods[? "dark_color"] = true;
-    default_mods[? "bad_status_effects"] = true;
-    default_mods[? "abilities"] = true;
+    default_rules = gm[? "default_rules"];
+    default_rules[? "shield_push"] = true;
+    default_rules[? "dark_color"] = true;
+    default_rules[? "bad_status_effects"] = true;
+    default_rules[? "abilities"] = true;
 
     /*
     // Roguelike
@@ -376,10 +376,10 @@ function create_gamemodes_DB() {
     gm[? "min_real_players"] = 0;
     gm[? "max_players"] = 1;
 
-    forced_mods = gm[? "forced_rules"];
-    forced_mods[? "turrets"] = true;
-    forced_mods[? "cannons"] = true;
-    forced_mods[? "mob_portals"] = true;
-    forced_mods[? "hp_death"] = true;
+    forced_rules = gm[? "forced_rules"];
+    forced_rules[? "turrets"] = true;
+    forced_rules[? "cannons"] = true;
+    forced_rules[? "mob_portals"] = true;
+    forced_rules[? "hp_death"] = true;
     */
 }

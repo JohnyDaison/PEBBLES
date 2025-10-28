@@ -44,9 +44,9 @@ function play_menu_window_next_step() {
     gamemode.matches_remaining = gamemode.tournament_length;
     gamemode.random_place_order = false;
 
-    // MODS
-    ds_map_copy(gamemode.custom_mods, play_window.gmmod_customs);
-    mods_update_state(gm_id, gamemode.rule_preset, world.current_place, gamemode.custom_mods, gamemode.mods_state);
+    // RULES
+    ds_map_copy(gamemode.custom_rules, play_window.gmmod_customs);
+    rules_update_state(gm_id, gamemode.rule_preset, world.current_place, gamemode.custom_rules, gamemode.rules_state);
 
     close_frame(mod_tooltip_window);
     close_frame(play_menu_window);

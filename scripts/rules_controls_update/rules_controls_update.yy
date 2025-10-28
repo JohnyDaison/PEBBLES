@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"mods_controls_update",
+  "%Name":"rules_controls_update",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"mods_controls_update",
+  "name":"rules_controls_update",
   "parent":{
     "name":"play_menu_window",
     "path":"folders/Scripts/GUI/behavior/play_menu_window.yy",

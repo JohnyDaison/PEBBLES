@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"mods_update_state",
+  "%Name":"rules_update_state",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"mods_update_state",
+  "name":"rules_update_state",
   "parent":{
     "name":"gamemodes",
     "path":"folders/Scripts/gamemodes.yy",

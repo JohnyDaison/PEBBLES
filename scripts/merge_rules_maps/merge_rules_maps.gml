@@ -11,7 +11,7 @@ function merge_rules_maps(target_map, source, type) {
         var mod_id = ds_map_find_first(source_map);
         while(!is_undefined(mod_id))
         {
-            gmmod = DB.gamemode_mods[? mod_id];
+            gmmod = DB.gamemode_rules[? mod_id];
             
             if (type == "default") {
                 target_map[? mod_id] = mod_default_value_update(gmmod, target_map[? mod_id], source_map[? mod_id]);

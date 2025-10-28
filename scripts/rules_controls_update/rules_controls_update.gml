@@ -1,5 +1,5 @@
-function mods_controls_update() {
-    // UPDATE MODS CONTROLS
+function rules_controls_update() {
+    // UPDATE RULES CONTROLS
     var play_window = play_menu_window;
     var gm = DB.gamemodes[? play_window.gamemode_picker.cur_item_id];
     
@@ -7,8 +7,8 @@ function mods_controls_update() {
     {
         with(play_window)
         {
-            var default_mods_gm = gm[? "default_rules"], forced_mods_gm = gm[? "forced_rules"];
-            var custom_mods = gmmod_customs;
+            var default_rules_gm = gm[? "default_rules"], forced_rules_gm = gm[? "forced_rules"];
+            var custom_rules = gmmod_customs;
             var default_map, forced_map, place, preset;
             var mod_controls = gmmod_controls;
             var mod_id, mod_control, dmod, fmod, gmmod;
@@ -21,7 +21,7 @@ function mods_controls_update() {
             mod_id = ds_map_find_first(mod_controls);
             while(!is_undefined(mod_id))
             {
-                gmmod = DB.gamemode_mods[? mod_id];
+                gmmod = DB.gamemode_rules[? mod_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
@@ -37,7 +37,7 @@ function mods_controls_update() {
         
             // merge gm, preset and place
             default_map = ds_map_create();
-            ds_map_copy(default_map, default_mods_gm);
+            ds_map_copy(default_map, default_rules_gm);
             merge_rules_maps(default_map, preset, "default");
             merge_rules_maps(default_map, place, "default");
         
@@ -46,7 +46,7 @@ function mods_controls_update() {
         
             while(!is_undefined(dmod))
             {
-                gmmod = DB.gamemode_mods[? dmod];
+                gmmod = DB.gamemode_rules[? dmod];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
@@ -63,7 +63,7 @@ function mods_controls_update() {
             mod_id = ds_map_find_first(mod_controls);
             while(!is_undefined(mod_id))
             {   
-                gmmod = DB.gamemode_mods[? mod_id];
+                gmmod = DB.gamemode_rules[? mod_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
@@ -76,19 +76,19 @@ function mods_controls_update() {
         
         
             // CUSTOM
-            mod_id = ds_map_find_first(custom_mods);
+            mod_id = ds_map_find_first(custom_rules);
         
             while(!is_undefined(mod_id))
             {
-                gmmod = DB.gamemode_mods[? mod_id];
+                gmmod = DB.gamemode_rules[? mod_id];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {
                     mod_control = mod_controls[? mod_id];
-                    mod_control.set_value(custom_mods[? mod_id], true, false);
+                    mod_control.set_value(custom_rules[? mod_id], true, false);
                 }
             
-                mod_id = ds_map_find_next(custom_mods, mod_id);
+                mod_id = ds_map_find_next(custom_rules, mod_id);
             }
         
         
@@ -96,7 +96,7 @@ function mods_controls_update() {
         
             // merge gm, preset and place
             forced_map = ds_map_create();
-            ds_map_copy(forced_map, forced_mods_gm);
+            ds_map_copy(forced_map, forced_rules_gm);
             merge_rules_maps(forced_map, preset, "forced");
             merge_rules_maps(forced_map, place, "forced");
         
@@ -105,7 +105,7 @@ function mods_controls_update() {
         
             while(!is_undefined(fmod))
             {
-                gmmod = DB.gamemode_mods[? fmod];
+                gmmod = DB.gamemode_rules[? fmod];
             
                 if(!is_undefined(gmmod) && gmmod[? "public"])
                 {

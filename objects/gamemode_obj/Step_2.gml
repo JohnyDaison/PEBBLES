@@ -1,8 +1,8 @@
-/// @description MODS, APM, RESTART
+/// @description RULES, APM, RESTART
 
 if(!singleton_obj.paused && game_started && !game_ended)
 {
-    // MODS
+    // RULES
     if(!mod_get_state("base_crystals"))
     {
         // destroy crystals right after they spawn guys
