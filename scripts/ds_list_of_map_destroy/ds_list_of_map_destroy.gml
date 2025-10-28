@@ -1,21 +1,10 @@
-/// @description ds_list_of_map_destroy(list);
-/// @function ds_list_of_map_destroy
-/// @param list
-function ds_list_of_map_destroy(argument0) {
-	var list = argument0;
+/// @param {Id.DsList} list
+function ds_list_of_map_destroy(list) {
+    var count = ds_list_size(list);
 
-	var map, count, i;
+    for (var i = count - 1; i >= 0; i--) {
+        ds_map_destroy(list[| i]);
+    }
 
-	count = ds_list_size(list);
-
-	for(i = count-1; i >= 0; i--)
-	{
-	    map = list[| i];
-	    ds_map_destroy(map);
-	}
-
-	ds_list_destroy(list);
-
-
-
+    ds_list_destroy(list);
 }
