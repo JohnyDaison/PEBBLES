@@ -28,11 +28,11 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
             gmRule = DB.gamemode_rules[? gmrule_id];
             gmrule_type = gmRule.type;
             
-            if(gmrule_type == "bool") {
+            if(gmrule_type == RuleType.Bool) {
                 rule_dist = rule_grid_unit;
             }
         
-            if(gmrule_type == "number") {
+            if(gmrule_type == RuleType.Number) {
                 rule_dist = 2 * rule_grid_unit;
             }
             
@@ -46,7 +46,7 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
             {
                 ii = noone;
         
-                if(gmrule_type == "bool")
+                if(gmrule_type == RuleType.Bool)
                 {
                     ii = gui_add_rule_boolbox(0, 0, gmrule_id, rule_chb_size);
 
@@ -54,7 +54,7 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
                     ii.checkbox.onchange_script = schedule_play_summary_update;
                     ii.checkbox.draw_unlocked_border = true;
                 }
-                else if(gmrule_type == "number")
+                else if(gmrule_type == RuleType.Number)
                 {
                     ii = gui_add_rule_numberbox(0, 0, gmrule_id, rule_chb_size);
 
