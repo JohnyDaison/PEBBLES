@@ -14,15 +14,6 @@ function destroy_gamemodes_DB() {
         ds_map_destroy(gm_map);
     }
 
-    count = ds_list_size(gamemode_rule_list);
-    for(i = count-1; i >= 0; i--)
-    {
-        rule_id = gamemode_rule_list[| i];
-        rule_map = gamemode_rules[? rule_id];
-    
-        ds_map_destroy(rule_map);
-    }
-
     rule_presets.destroy();
 
     ds_map_destroy(gamemodes);

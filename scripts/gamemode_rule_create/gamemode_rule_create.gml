@@ -25,23 +25,10 @@ function gamemode_rule_create() {
 
     if(ds_list_find_index(gamemode_rule_list, str_id) != -1)
     {
-        return false;   
+        return;
     }
 
-    var gmRule = ds_map_create();
-
-    gmRule[? "name"] = name;
-    gmRule[? "description"] = description;
-    gmRule[? "type"] = type;
-    gmRule[? "public"] = public;
-    gmRule[? "icon"] = icon;
-    
-    if (type == "number") {
-        gmRule[? "default_value"] = 0;
-        gmRule[? "min_value"] = 0;
-        gmRule[? "max_value"] = 0;
-        gmRule[? "value_step"] = 0;
-    }
+    var gmRule = new Rule(name, type, public, icon, description);
 
     if(ds_list_find_index(gamemode_rule_type_list, type) == -1)
     {

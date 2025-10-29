@@ -23,9 +23,9 @@ function gui_add_rule_checkbox() {
 
     gmRule = DB.gamemode_rules[? gmrule_id];
 
-    ii.unchecked_icon = gmRule[? "icon"];
-    ii.checked_icon = gmRule[? "icon"];
-    //ii.tooltip = gmRule[? "name"];
+    ii.unchecked_icon = gmRule.icon;
+    ii.checked_icon = gmRule.icon;
+    //ii.tooltip = gmRule.name;
     ii.gmrule_id = gmrule_id;
 
     ii.unchecked_bg_color = merge_color(c_black, c_dkgray, 0.5);

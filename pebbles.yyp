@@ -1326,6 +1326,7 @@
     {"id":{"name":"rule_forced_value_update","path":"scripts/rule_forced_value_update/rule_forced_value_update.yy",},},
     {"id":{"name":"rule_get_state","path":"scripts/rule_get_state/rule_get_state.yy",},},
     {"id":{"name":"rule_preset_dropdown_script","path":"scripts/rule_preset_dropdown_script/rule_preset_dropdown_script.yy",},},
+    {"id":{"name":"Rule","path":"scripts/Rule/Rule.yy",},},
     {"id":{"name":"RuleCategoriesDB","path":"scripts/RuleCategoriesDB/RuleCategoriesDB.yy",},},
     {"id":{"name":"RuleCategory","path":"scripts/RuleCategory/RuleCategory.yy",},},
     {"id":{"name":"RulePreset","path":"scripts/RulePreset/RulePreset.yy",},},

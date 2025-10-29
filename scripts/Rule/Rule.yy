@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Rule",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Rule",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

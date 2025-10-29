@@ -15,8 +15,8 @@ function gui_add_rule_numberbox(xx, yy, gmrule_id, size) {
         var num_x = checkbox.width + checkbox.thick_border_size + size / 2;
         var num_y = checkbox.height / 2;
         
-        number_input = gui_add_int_input(num_x, num_y, gmRule[? "default_value"], gmRule[? "min_value"], gmRule[? "max_value"]);
-        number_input.value_step = gmRule[? "value_step"];
+        number_input = gui_add_int_input(num_x, num_y, gmRule.default_value, gmRule.min_value, gmRule.max_value);
+        number_input.value_step = gmRule.value_step;
         number_input.gmrule_id = gmrule_id;
         number_input.custom_width = true;
         number_input.width = size;
@@ -120,7 +120,7 @@ function gui_add_rule_numberbox(xx, yy, gmrule_id, size) {
             }
             
             number_input.locked = true;
-            number_input.set_value(gmRule[? "default_value"], true);
+            number_input.set_value(gmRule.default_value, true);
             
             number_input.base_border_color = checkbox.border_color;
             number_input.disabled_border_color = checkbox.border_color;

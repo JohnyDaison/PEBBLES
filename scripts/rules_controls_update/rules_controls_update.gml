@@ -23,7 +23,7 @@ function rules_controls_update() {
             {
                 gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmRule) && gmRule[? "public"])
+                if(!is_undefined(gmRule) && gmRule.public)
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.reset_value();
@@ -48,7 +48,7 @@ function rules_controls_update() {
             {
                 gmRule = DB.gamemode_rules[? dRule];
             
-                if(!is_undefined(gmRule) && gmRule[? "public"])
+                if(!is_undefined(gmRule) && gmRule.public)
                 {
                     rule_control = rule_controls[? dRule];
                     rule_control.set_value(default_map[? dRule], false, false);
@@ -65,7 +65,7 @@ function rules_controls_update() {
             {   
                 gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmRule) && gmRule[? "public"])
+                if(!is_undefined(gmRule) && gmRule.public)
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.default_value = rule_control.get_value();
@@ -82,7 +82,7 @@ function rules_controls_update() {
             {
                 gmRule = DB.gamemode_rules[? rule_id];
             
-                if(!is_undefined(gmRule) && gmRule[? "public"])
+                if(!is_undefined(gmRule) && gmRule.public)
                 {
                     rule_control = rule_controls[? rule_id];
                     rule_control.set_value(custom_rules[? rule_id], true, false);
@@ -107,7 +107,7 @@ function rules_controls_update() {
             {
                 gmRule = DB.gamemode_rules[? fRule];
             
-                if(!is_undefined(gmRule) && gmRule[? "public"])
+                if(!is_undefined(gmRule) && gmRule.public)
                 {
                     rule_control = rule_controls[? fRule];
                     rule_control.set_value(forced_map[? fRule], false, true);

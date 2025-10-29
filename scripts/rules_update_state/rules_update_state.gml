@@ -51,7 +51,7 @@ function rules_update_state(gamemode_id, preset, place, custom_rules, target_map
             // type default
             if (reset)
             {
-                if(gmRule[? "type"] == "bool")
+                if(gmRule.type == "bool")
                 {
                     rule_value = false;
                 }

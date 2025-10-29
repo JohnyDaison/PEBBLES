@@ -1118,6 +1118,7 @@
     {"name":"rule_forced_value_update","order":14,"path":"scripts/rule_forced_value_update/rule_forced_value_update.yy",},
     {"name":"rule_get_state","order":6,"path":"scripts/rule_get_state/rule_get_state.yy",},
     {"name":"rule_preset_dropdown_script","order":10,"path":"scripts/rule_preset_dropdown_script/rule_preset_dropdown_script.yy",},
+    {"name":"Rule","order":9,"path":"scripts/Rule/Rule.yy",},
     {"name":"RuleCategoriesDB","order":3,"path":"scripts/RuleCategoriesDB/RuleCategoriesDB.yy",},
     {"name":"RuleCategory","order":4,"path":"scripts/RuleCategory/RuleCategory.yy",},
     {"name":"RulePreset","order":5,"path":"scripts/RulePreset/RulePreset.yy",},

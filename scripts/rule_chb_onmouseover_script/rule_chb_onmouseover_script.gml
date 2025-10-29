@@ -8,11 +8,11 @@ function rule_chb_onmouseover_script() {
 
     var state_str = "";
 
-    icon_label.icon = gmRule[? "icon"];
+    icon_label.icon = gmRule.icon;
     //icon_label.enabled_icon_color = enabled_icon_color;
     icon_label.bg_color = checked_bg_color;
 
-    name_label.text = gmRule[? "name"];
+    name_label.text = gmRule.name;
     
     if(checked)
         state_str = "(On)";
@@ -24,7 +24,7 @@ function rule_chb_onmouseover_script() {
         name_label.text += state_str;
     }
 
-    description_label.text = gmRule[? "description"];
+    description_label.text = gmRule.description;
     window.rule_button = id;
 
     gui_show_element(window);
