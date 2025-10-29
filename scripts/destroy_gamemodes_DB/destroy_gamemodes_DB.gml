@@ -21,5 +21,4 @@ function destroy_gamemodes_DB() {
 
     ds_map_destroy(gamemode_rules);
     ds_list_destroy(gamemode_rule_list);
-    ds_list_destroy(gamemode_rule_type_list);
 }
