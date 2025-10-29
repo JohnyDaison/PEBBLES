@@ -159,11 +159,11 @@ ii.centered = true;
 
 rules_scroll_list = ii.id;
 
-var count = DB.rule_categories.count;
-var list = DB.rule_categories.list;
+var categories = DB.rule_categories.categories;
+var category_count = array_length(categories);
 
-for (var index = 0; index < count; index++) {
-    var category = list[| index];
+for (var index = 0; index < category_count; index++) {
+    var category = categories[index];
     
     gui_add_rules_category_pane(category, gmrule_controls, rules_grid_unit);
 }

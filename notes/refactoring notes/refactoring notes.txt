@@ -1,5 +1,7 @@
 Miscelaneous:
 -------------
+* start using nullish operators `??`, `??=`
+
 * `basic_bot` and `shield_obj`
 share same camera related code
 

@@ -23,7 +23,6 @@ function destroy_gamemodes_DB() {
         ds_map_destroy(rule_map);
     }
 
-    rule_categories.destroy();
     rule_presets.destroy();
 
     ds_map_destroy(gamemodes);

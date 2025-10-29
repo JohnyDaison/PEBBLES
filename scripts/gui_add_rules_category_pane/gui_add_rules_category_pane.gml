@@ -17,14 +17,14 @@ function gui_add_rules_category_pane(category, gmrule_controls, rule_grid_unit) 
         var rules_width = width;
 
         var rules_content_x = eloffset_x;
-        var gmrule_id, gmRule, gmrule_type, i, ii, list, count;
+        var gmrule_id, gmRule, gmrule_type, i, ii, rules, count;
         
-        list = category.rule_list;
-        count = ds_list_size(list);
+        rules = category.rules;
+        count = array_length(rules);
 
         for(i=0; i<count; i++)
         {
-            gmrule_id = list[| i];
+            gmrule_id = rules[i];
             gmRule = DB.gamemode_rules[? gmrule_id];
             gmrule_type = gmRule[? "type"];
             
