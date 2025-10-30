@@ -1,6 +1,6 @@
 event_inherited();
 
-var RuleID = self.RuleID;
+var RuleID = global.RuleID;
 
 self.step_count += 1;
 

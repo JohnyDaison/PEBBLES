@@ -1,7 +1,5 @@
 event_inherited();
 
-self.RuleID = DB.RuleID_DynEnum.dynEnum;
-
 sprite_index = no_sprite;
 image_speed = 0;
 image_index = 0;

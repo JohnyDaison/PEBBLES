@@ -2,7 +2,7 @@ event_inherited();
 
 name = "Arena World";
 
-var RuleID = DB.RuleID_DynEnum.dynEnum;
+var RuleID = global.RuleID;
 var place;
 
 place = add_place_in_room(classic_arena, "Classic Arena", 0,0, 2912,1472, 0);

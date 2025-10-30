@@ -1,7 +1,6 @@
 event_inherited();
 
-self.RuleID = DB.RuleID_DynEnum.dynEnum;
-var RuleID = self.RuleID;
+var RuleID = global.RuleID;
 
 image_speed = 0;
 my_next_color = my_color;

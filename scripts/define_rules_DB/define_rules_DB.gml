@@ -5,6 +5,7 @@ enum RuleType {
 
 function define_rules_DB() {
     self.RuleID_DynEnum = new DynamicEnum();
+
     self.convertedRules = [ 
         "HpDeath",
         "HolographicSpawners",
@@ -14,7 +15,7 @@ function define_rules_DB() {
         "AlwaysSliding",
         "DarkOrbEnergyLock",
     ];
-    
+
     // rules
     gamemode_rule_create("HpDeath", "HP Death", RuleType.Bool, true, hp_death_mod2_icon, "Losing all HP will result in instant death. (Otherwise you die only by falling off the arena.)");
 
@@ -106,4 +107,6 @@ function define_rules_DB() {
     
     gamemode_rule_create("darkness", "Darkness", RuleType.Number, true, darkness_mod_icon, "Make the arena dark(er). 100 is pitch black.");
     gamemode_number_rule_values("darkness", 80, 50, 100, 1);
+    
+    global.RuleID = self.RuleID_DynEnum.dynEnum;
 }

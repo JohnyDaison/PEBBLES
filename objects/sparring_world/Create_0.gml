@@ -2,7 +2,7 @@ event_inherited();
 
 name = "Pit world";
 
-var RuleID = DB.RuleID_DynEnum.dynEnum;
+var RuleID = global.RuleID;
 var place;
 
 place = add_place_in_room(sparring_arena, "The Pit", 0,0, 2816,2176, 0);

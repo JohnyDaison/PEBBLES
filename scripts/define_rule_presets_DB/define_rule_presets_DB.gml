@@ -1,6 +1,6 @@
 function define_rule_presets_DB(presets) {
     var preset, forced_rules, default_rules;
-    var RuleID = self.RuleID_DynEnum.dynEnum;
+    var RuleID = global.RuleID;
     
     // VOLLEYBALL
     

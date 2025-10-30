@@ -1,7 +1,5 @@
 event_inherited();
 
-self.RuleID = DB.RuleID_DynEnum.dynEnum;
-
 my_spawner = noone;
 my_base = noone;
 my_guy = id;

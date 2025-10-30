@@ -20,7 +20,7 @@ function create_gamemodes_DB() {
     
     // GAMEMODES
     var gm, forced_rules, default_rules;
-    var RuleID = self.RuleID_DynEnum.dynEnum;
+    var RuleID = global.RuleID;
 
     // Quick Training
     gm = gamemode_create("quick_tutorial", "Training", true, quick_tutorial_world_obj);

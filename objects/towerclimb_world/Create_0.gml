@@ -2,7 +2,7 @@ event_inherited();
 
 name = "Tower Climb world";
 
-var RuleID = DB.RuleID_DynEnum.dynEnum;
+var RuleID = global.RuleID;
 var place;
 //place = add_place_in_room(room_weapons_test, "Weapons", 0,0, 9600,4800, 0);
 

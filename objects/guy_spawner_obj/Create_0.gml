@@ -1,8 +1,7 @@
 /// @description INIT AND PARAMS
 event_inherited();
 
-self.RuleID = DB.RuleID_DynEnum.dynEnum;
-var RuleID = self.RuleID;
+var RuleID = global.RuleID;
 
 name = "Base Crystal";
 self.hp = 10;

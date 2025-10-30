@@ -1,5 +1,5 @@
 function define_rule_categories_DB(categories) {
-    var RuleID = self.RuleID_DynEnum.dynEnum;
+    var RuleID = global.RuleID;
     var category;
     
     category = categories.add("Death and HP");

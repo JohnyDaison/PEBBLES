@@ -1,3 +1,5 @@
+var RuleID = global.RuleID;
+
 with(guy_obj)
 {
     if(my_player != gamemode_obj.environment)

@@ -1,3 +1,5 @@
+var RuleID = global.RuleID;
+
 // COMPUTE STUCK 
 /*
 if(push_success)

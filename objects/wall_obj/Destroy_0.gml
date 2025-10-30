@@ -1,4 +1,6 @@
 /// @description  DESTROY WILL_SPREAD MAP
+var RuleID = global.RuleID;
+
 ds_map_destroy(will_spread);
 
 event_inherited();

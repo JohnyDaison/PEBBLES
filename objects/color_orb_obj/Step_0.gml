@@ -1,6 +1,6 @@
 event_inherited();
 
-var RuleID = self.RuleID;
+var RuleID = global.RuleID;
 
 /// ANIMATION ENDS AND ENERGY REGEN
 if (self.sprite_index != no_sprite && self.image_speed > 0 && self.image_index + self.image_speed >= self.image_number) {
