@@ -2,8 +2,10 @@
 
 if(!singleton_obj.paused && game_started && !game_ended)
 {
+    var RuleID = global.RuleID;
+
     // RULES
-    if(!rule_get_state("base_crystals"))
+    if(!rule_get_state(RuleID.BaseCrystals))
     {
         // destroy crystals right after they spawn guys
         with(guy_obj)
@@ -28,7 +30,7 @@ if(!singleton_obj.paused && game_started && !game_ended)
         }
     }
 
-    if(!rule_get_state("turrets"))
+    if(!rule_get_state(RuleID.Turrets))
     {
         with(turret_obj)
         {
@@ -37,7 +39,7 @@ if(!singleton_obj.paused && game_started && !game_ended)
         }
     }
 
-    if(!rule_get_state("cannons"))
+    if(!rule_get_state(RuleID.Cannons))
     {
         with(cannon_base_obj)
         {
@@ -46,7 +48,7 @@ if(!singleton_obj.paused && game_started && !game_ended)
         }
     }
 
-    if(!rule_get_state("mob_portals"))
+    if(!rule_get_state(RuleID.MobPortals))
     {
         with(mob_portal_obj)
         {

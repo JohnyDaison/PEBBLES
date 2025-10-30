@@ -9,7 +9,7 @@ place = add_place_in_room(classic_arena, "Classic Arena", 0,0, 2912,1472, 0);
 place.description = "Small arena from the dawn of the age.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
-place.forced_rules[? "turrets"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? "flag_capture"] = false;
 
 
@@ -18,9 +18,9 @@ place.description = "Very small arena with constant supply of Orb Batteries.";
 place.controller = autogenerate_place_controller_obj;
 place.single_cam = true;
 place.max_team_count = 2;
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 place.forced_rules[? "flag_capture"] = false;
 
 place.forced_rules[? "random_item_spawner"] = false;
@@ -37,14 +37,14 @@ place.controller = autogenerate_place_controller_obj;
 place.single_cam = true;
 place.max_team_count = 2;
 ds_list_add(place.level_configs_list, "just_2orbs_start");
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 place.forced_rules[? "flag_capture"] = false;
 
 place.forced_rules[? RuleID.HolographicSpawners] = true;
 place.forced_rules[? RuleID.HpDeath] = true;
-place.forced_rules[? "dark_color"] = false;
+place.forced_rules[? RuleID.DarkColor] = false;
 place.forced_rules[? RuleID.DarkOrbEnergyLock] = false;
 place.forced_rules[? "random_item_spawner"] = false;
 place.forced_rules[? RuleID.WeakTerrain] = false;
@@ -56,7 +56,7 @@ place.forced_rules[? "bolt_rain"] = false;
 place.forced_rules[? "slime_mob_rain"] = false;
 place.forced_rules[? "artifacts"] = false;
 place.forced_rules[? "lightning_strikes"] = false;
-place.forced_rules[? "abilities"] = false;
+place.forced_rules[? RuleID.Abilities] = false;
 place.forced_rules[? "death_limit"] = true;
 place.forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
@@ -65,9 +65,9 @@ place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,3072, 0);
 place.description = "Very few places to stand on and almost no cover.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 
 place.forced_rules[? "random_item_spawner"] = false;
 place.forced_rules[? "snakes_on_a_plane"] = false;
@@ -79,9 +79,9 @@ place = add_place_in_room(less_vertigo_arena, "New Vertigo", 0,0, 3840,3456, 0);
 place.description = "Not much terrain and no cover.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 
 place.forced_rules[? "snakes_on_a_plane"] = false;
 place.forced_rules[? "slime_mob_rain"] = false;
@@ -101,9 +101,9 @@ place.description = "Very small arena.";
 place.controller = autogenerate_place_controller_obj;
 place.single_cam = true;
 place.max_team_count = 2;
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 place.forced_rules[? "flag_capture"] = false;
 
 place.forced_rules[? "random_item_spawner"] = false;

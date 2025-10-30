@@ -19,7 +19,9 @@ function message_teleport(argument0) {
     
 	    case "show_check":
 	    {
-	        return my_guy.potential_color == abi_color && rule_get_state("abilities") && has_level(my_guy, "teleport", 1);
+	        var RuleID = global.RuleID;
+
+            return my_guy.potential_color == abi_color && rule_get_state(RuleID.Abilities) && has_level(my_guy, "teleport", 1);
 	    }
 	    break;
     

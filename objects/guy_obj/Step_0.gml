@@ -57,7 +57,7 @@ if(!self.orbs_ready)
         orb_belts[? col] = ds_list_create();
         orbs_in_use[? col] = ds_list_create();
         
-        if((col == g_dark && !rule_get_state("dark_color")) || gamemode_obj.no_orbs_start)
+        if((col == g_dark && !rule_get_state(RuleID.DarkColor)) || gamemode_obj.no_orbs_start)
         {
             ii = 0;
         }
@@ -132,7 +132,7 @@ if(self.slots_absorbed > charge_ball.orb_count && charge_ball.orb_count > 0)
 
 // GO DARK IF YOU HAVE NO SLOTS
 /*
-if(my_color != g_dark && slot_number == 0 && rule_get_state("dark_color"))
+if(my_color != g_dark && slot_number == 0 && rule_get_state(RuleID.DarkColor))
 {
     my_color = g_dark;
     self.slots_absorbed = 0;
@@ -498,7 +498,7 @@ if(self.channeling)
         // RESET   
         if(channel_orig_color != -1)
         {
-            if(!rule_get_state("dark_color")) //  || ds_list_size(orbs_in_use[? g_dark]) == 0
+            if(!rule_get_state(RuleID.DarkColor)) //  || ds_list_size(orbs_in_use[? g_dark]) == 0
             {
                 set_my_color(channel_orig_color);
                 guy_orbs_return(id);
@@ -514,7 +514,7 @@ if(self.channeling)
                 ds_list_clear(new_colors);
             }
             
-            if(instance_exists(charge_ball) && rule_get_state("dark_color") && ds_list_size(orbs_in_use[? g_dark]) > 0)
+            if(instance_exists(charge_ball) && rule_get_state(RuleID.DarkColor) && ds_list_size(orbs_in_use[? g_dark]) > 0)
             {
                 ds_list_add(new_colors, g_dark);
                 auto_chosen_orbs = true;
@@ -538,7 +538,7 @@ if(self.channeling)
 }
 
 // DARK COLOR CHANGE IN LOST_CONTROL
-if(self.wanna_channel && lost_control && my_color != g_dark && rule_get_state("dark_color"))
+if(self.wanna_channel && lost_control && my_color != g_dark && rule_get_state(RuleID.DarkColor))
 {
     set_my_color(g_dark);
     slots_absorbed = 0;
@@ -1744,7 +1744,7 @@ if(!self.frozen_in_time)
             self.my_abi_tint = ds_map_find_value(DB.colormap,my_abi_color);
             
             // this string_lower call is bad for performance
-            if(rule_get_state("abilities") && has_level(id, DB.abimap[? my_abi_color], 1))
+            if(rule_get_state(RuleID.Abilities) && has_level(id, DB.abimap[? my_abi_color], 1))
             {
                 if(abi_cooldown[? my_abi_color] == 0)
                 {
@@ -1860,7 +1860,7 @@ if(!self.frozen_in_time)
             
             if(wanna_abi)
             {
-                if(!rule_get_state("abilities") || !has_level(id, DB.abimap[? potential_color], 1))
+                if(!rule_get_state(RuleID.Abilities) || !has_level(id, DB.abimap[? potential_color], 1))
                 {
                     self.slots_triggered = false;
                 }

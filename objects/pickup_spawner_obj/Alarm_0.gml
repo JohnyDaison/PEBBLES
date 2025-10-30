@@ -68,7 +68,7 @@ else
             {
                 /*
                 new_color = 3;
-                while(new_color == 3 || (!rule_get_state("dark_color") && new_color == 0))
+                while(new_color == 3 || (!rule_get_state(RuleID.DarkColor) && new_color == 0))
                 {
                     new_color = irandom(4);
                 }

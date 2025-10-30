@@ -1,4 +1,6 @@
 function guy_respawn() {
+    var RuleID = global.RuleID;
+
     if(dead && !respawn_allowed())
     {
         my_player.loser = true;
@@ -57,7 +59,7 @@ function guy_respawn() {
     
         ds_list_clear(flashback_queue);
     
-        if(rule_get_state("dark_color"))
+        if(rule_get_state(RuleID.DarkColor))
         {
             set_my_color(g_dark);
             tint_updated = false;

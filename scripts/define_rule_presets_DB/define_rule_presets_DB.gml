@@ -52,18 +52,18 @@ function define_rule_presets_DB(presets) {
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? RuleID.HolographicSpawners] = true;
-    forced_rules[? "base_crystals"] = true;
+    forced_rules[? RuleID.BaseCrystals] = true;
     forced_rules[? RuleID.EqualColors] = true;
-    forced_rules[? "dark_color"] = false;
+    forced_rules[? RuleID.DarkColor] = false;
     forced_rules[? RuleID.BaseColorsOnly] = true;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = true;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
-    forced_rules[? "bad_status_effects"] = false;
-    forced_rules[? "abilities"] = false;
-    forced_rules[? "turrets"] = false;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "mob_portals"] = false;
+    forced_rules[? RuleID.NegativeStatusEffects] = false;
+    forced_rules[? RuleID.Abilities] = false;
+    forced_rules[? RuleID.Turrets] = false;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "bolt_rain"] = false;
@@ -90,10 +90,10 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "guy_shield_power"] = false;
     forced_rules[? "death_limit"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
-    forced_rules[? "bad_status_effects"] = false;
-    forced_rules[? "turrets"] = false;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "mob_portals"] = false;
+    forced_rules[? RuleID.NegativeStatusEffects] = false;
+    forced_rules[? RuleID.Turrets] = false;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? "slime_mob_rain"] = false;
@@ -102,7 +102,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.CurveBalls] = false;
 
     default_rules = preset.default_rules;
-    default_rules[? "base_crystals"] = true;
+    default_rules[? RuleID.BaseCrystals] = true;
     default_rules[? RuleID.HpDeath] = true;
     default_rules[? RuleID.EqualColors] = true;
     default_rules[? RuleID.BaseColorsOnly] = true;
@@ -118,9 +118,9 @@ function define_rule_presets_DB(presets) {
     preset = presets.add("arena_arcade", "Arcade");
     
     forced_rules = preset.forced_rules;
-    forced_rules[? "turrets"] = false;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "mob_portals"] = false;
+    forced_rules[? RuleID.Turrets] = false;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? RuleID.ShieldPush] = true;
@@ -129,13 +129,13 @@ function define_rule_presets_DB(presets) {
 
     default_rules = preset.default_rules;
     default_rules[? "random_item_spawner"] = true;
-    default_rules[? "base_crystals"] = true;
+    default_rules[? RuleID.BaseCrystals] = true;
     default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? RuleID.DarkOrbEnergyLock] = true;
     default_rules[? RuleID.EqualColors] = true;
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
     default_rules[? "artifacts"] = true;
     
     default_rules[? "base_crystal_hp"] = 7;
@@ -145,16 +145,16 @@ function define_rule_presets_DB(presets) {
     preset = presets.add("arena_standard", "Pandemonium");
     
     default_rules = preset.default_rules;
-    default_rules[? "turrets"] = true;
-    default_rules[? "cannons"] = true;
-    default_rules[? "mob_portals"] = true;
+    default_rules[? RuleID.Turrets] = true;
+    default_rules[? RuleID.Cannons] = true;
+    default_rules[? RuleID.MobPortals] = true;
     default_rules[? RuleID.ShieldPush] = true;
 
     default_rules[? RuleID.HpDeath] = true;
-    default_rules[? "base_crystals"] = true;
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.BaseCrystals] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
 
     default_rules[? "snakes_on_a_plane"] = true;
     default_rules[? "slime_mob_rain"] = true;

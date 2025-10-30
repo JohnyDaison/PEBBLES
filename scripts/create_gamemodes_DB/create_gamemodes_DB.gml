@@ -32,9 +32,9 @@ function create_gamemodes_DB() {
     gm[? "is_deathmatch"] = false;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "turrets"] = true;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "mob_portals"] = true;
+    forced_rules[? RuleID.Turrets] = true;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.MobPortals] = true;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
@@ -46,15 +46,15 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
-    forced_rules[? "dark_color"] = true;
+    forced_rules[? RuleID.DarkColor] = true;
     forced_rules[? "bolt_rain"] = false;
-    forced_rules[? "bad_status_effects"] = true;
-    forced_rules[? "abilities"] = false;
+    forced_rules[? RuleID.NegativeStatusEffects] = true;
+    forced_rules[? RuleID.Abilities] = false;
     forced_rules[? "tutorials"] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "slime_mob_rain"] = false;
@@ -81,7 +81,7 @@ function create_gamemodes_DB() {
 
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = true;
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "artifacts"] = false;
@@ -98,9 +98,9 @@ function create_gamemodes_DB() {
     forced_rules[? "sudden_death_start"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
 
 
     // Arena
@@ -133,7 +133,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = false;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     
@@ -142,13 +142,13 @@ function create_gamemodes_DB() {
     forced_rules[? "flag_capture"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "turrets"] = true;
-    default_rules[? "cannons"] = true;
+    default_rules[? RuleID.Turrets] = true;
+    default_rules[? RuleID.Cannons] = true;
     default_rules[? "snakes_on_a_plane"] = false;
     default_rules[? RuleID.HpDeath] = true;
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
 
 
     // Volleyball
@@ -167,7 +167,7 @@ function create_gamemodes_DB() {
 
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = false;
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
@@ -177,12 +177,12 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? RuleID.ShieldPush] = false;
     forced_rules[? "tut_guide"] = false;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "turrets"] = false;
-    forced_rules[? "mob_portals"] = false;
-    forced_rules[? "dark_color"] = false;
-    forced_rules[? "bad_status_effects"] = false;
-    forced_rules[? "abilities"] = false;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.Turrets] = false;
+    forced_rules[? RuleID.MobPortals] = false;
+    forced_rules[? RuleID.DarkColor] = false;
+    forced_rules[? RuleID.NegativeStatusEffects] = false;
+    forced_rules[? RuleID.Abilities] = false;
     forced_rules[? "tutorials"] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = true;
@@ -214,7 +214,7 @@ function create_gamemodes_DB() {
 
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = false;
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
@@ -222,16 +222,16 @@ function create_gamemodes_DB() {
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "bolt_rain"] = false;
-    forced_rules[? "dark_color"] = false;
+    forced_rules[? RuleID.DarkColor] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "tut_guide"] = false;
-    forced_rules[? "cannons"] = false;
-    forced_rules[? "turrets"] = false;
-    forced_rules[? "mob_portals"] = false;
-    forced_rules[? "bad_status_effects"] = false;
-    forced_rules[? "abilities"] = false;
+    forced_rules[? RuleID.Cannons] = false;
+    forced_rules[? RuleID.Turrets] = false;
+    forced_rules[? RuleID.MobPortals] = false;
+    forced_rules[? RuleID.NegativeStatusEffects] = false;
+    forced_rules[? RuleID.Abilities] = false;
     forced_rules[? "tutorials"] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
@@ -264,8 +264,8 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "mob_portals"] = true;
-    forced_rules[? "base_crystals"] = true;
+    forced_rules[? RuleID.MobPortals] = true;
+    forced_rules[? RuleID.BaseCrystals] = true;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "flag_capture"] = false;
@@ -276,11 +276,11 @@ function create_gamemodes_DB() {
     
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.HpDeath] = true;
-    default_rules[? "turrets"] = true;
-    default_rules[? "cannons"] = true;
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.Turrets] = true;
+    default_rules[? RuleID.Cannons] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
     default_rules[? RuleID.WeakTerrain] = true;
 
 
@@ -295,9 +295,9 @@ function create_gamemodes_DB() {
     gm[? "is_deathmatch"] = false;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "turrets"] = true;
-    forced_rules[? "cannons"] = true;
-    forced_rules[? "mob_portals"] = true;
+    forced_rules[? RuleID.Turrets] = true;
+    forced_rules[? RuleID.Cannons] = true;
+    forced_rules[? RuleID.MobPortals] = true;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
@@ -308,15 +308,15 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
-    forced_rules[? "base_crystals"] = false;
+    forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
-    forced_rules[? "dark_color"] = true;
+    forced_rules[? RuleID.DarkColor] = true;
     forced_rules[? "bolt_rain"] = false;
-    forced_rules[? "bad_status_effects"] = true;
-    forced_rules[? "abilities"] = true;
+    forced_rules[? RuleID.NegativeStatusEffects] = true;
+    forced_rules[? RuleID.Abilities] = true;
     forced_rules[? "tutorials"] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "slime_mob_rain"] = false;
@@ -364,9 +364,9 @@ function create_gamemodes_DB() {
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.ShieldPush] = true;
-    default_rules[? "dark_color"] = true;
-    default_rules[? "bad_status_effects"] = true;
-    default_rules[? "abilities"] = true;
+    default_rules[? RuleID.DarkColor] = true;
+    default_rules[? RuleID.NegativeStatusEffects] = true;
+    default_rules[? RuleID.Abilities] = true;
 
     /*
     // Roguelike
@@ -377,9 +377,9 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 1;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "turrets"] = true;
-    forced_rules[? "cannons"] = true;
-    forced_rules[? "mob_portals"] = true;
+    forced_rules[? RuleID.Turrets] = true;
+    forced_rules[? RuleID.Cannons] = true;
+    forced_rules[? RuleID.MobPortals] = true;
     forced_rules[? RuleID.HpDeath] = true;
     */
 }

@@ -46,3 +46,4 @@ Convert these to Structs:
 * `hardpoint_*` maps
 * `gamemode`
 * quest system `transition`, `condition`, `effect`, `state_properties`
+* `message_*` scripts

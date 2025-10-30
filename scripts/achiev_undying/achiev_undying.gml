@@ -21,7 +21,9 @@ function UndyingAchievement(myPlayer) : MyAchievement(myPlayer) constructor {
 
     /// @return {Bool}
     static fail = function() {
-        return !rule_get_state("base_crystals") || myPlayer.stats[? "deaths"] > 0;
+        var RuleID = global.RuleID;
+
+        return !rule_get_state(RuleID.BaseCrystals) || myPlayer.stats[? "deaths"] > 0;
     }
 
     /// @return {Real}

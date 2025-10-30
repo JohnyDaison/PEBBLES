@@ -2,6 +2,7 @@
 /// @param {Id.Instance} player Description
 function create_player_things(player) {
     var new_guy = noone;
+    var RuleID = global.RuleID;
 
     // CREATE SPAWN POINT
     guy_spawn_point_create(self.id, player, true);
@@ -98,7 +99,7 @@ function create_player_things(player) {
     new_guy.control_index = player.control_index;
     player.my_guy = new_guy;
 
-    if (!rule_get_state("dark_color")) {
+    if (!rule_get_state(RuleID.DarkColor)) {
         new_guy.my_color = g_red;
         new_guy.potential_color = new_guy.my_color;
         new_guy.tint_updated = false;

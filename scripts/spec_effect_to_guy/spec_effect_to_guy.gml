@@ -1,5 +1,6 @@
 function spec_effect_to_guy() {
     var effect_charge,orig_effect_charge,sure_hit,has_protection,glow;
+    var RuleID = global.RuleID;
 
     effect_charge = argument0;
     orig_effect_charge = effect_charge;
@@ -19,7 +20,7 @@ function spec_effect_to_guy() {
             return false;
         }
         */
-        if(!ds_map_exists(DB.color_effects, other.my_color) || !rule_get_state("bad_status_effects"))
+        if(!ds_map_exists(DB.color_effects, other.my_color) || !rule_get_state(RuleID.NegativeStatusEffects))
         {
             return false;
         }

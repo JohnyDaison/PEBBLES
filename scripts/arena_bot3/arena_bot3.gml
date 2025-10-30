@@ -394,8 +394,8 @@ function arena_bot3(requested_attack_target) {
 
         var possible = false;
 
-        if (near_room_edge && rule_get_state("abilities")) {
-            if (rule_get_state("dark_color") && has_level(self.id, "rewind", 1) && self.abi_cooldown[? g_dark] == 0) {
+        if (near_room_edge && rule_get_state(RuleID.Abilities)) {
+            if (rule_get_state(RuleID.DarkColor) && has_level(self.id, "rewind", 1) && self.abi_cooldown[? g_dark] == 0) {
                 possible = true;
                 abi_color = g_dark;
             }
@@ -427,7 +427,7 @@ function arena_bot3(requested_attack_target) {
         var support_abi_mode = false;
         abi_color = g_dark;
 
-        if (rule_get_state("abilities")) {
+        if (rule_get_state(RuleID.Abilities)) {
             if ((self.damage - self.min_damage) > 1.5 && (has_level(self.id, "heal", 1) && self.abi_cooldown[? g_green] == 0)) {
                 support_abi_mode = true;
                 abi_color = g_green;
@@ -458,7 +458,7 @@ function arena_bot3(requested_attack_target) {
 
         var possible = false;
 
-        if (rule_get_state("abilities")) {
+        if (rule_get_state(RuleID.Abilities)) {
             if (!self.lost_control && has_level(self.id, "teleport", 1) && self.abi_cooldown[? g_blue] == 0) {
                 var tp_dist = 256;
 
@@ -597,7 +597,7 @@ function arena_bot3(requested_attack_target) {
     }
 
     // TRY TO PREVENT FALLING OUT OF ARENA - USE FLASHBACK OR BASE TP WHEN FALLING
-    if (near_room_edge && rule_get_state("abilities")
+    if (near_room_edge && rule_get_state(RuleID.Abilities)
         && ((has_level(self.id, "rewind", 1) && self.abi_cooldown[? g_dark] == 0)
             || (!self.lost_control && has_level(self.id, "base_teleport", 1) && self.abi_cooldown[? g_white] == 0))) {
         self.next_phase = 2;
@@ -607,7 +607,7 @@ function arena_bot3(requested_attack_target) {
     // TRY TO PREVENT FALLING OUT OF ARENA - USE BLINK TO FINISH JUMPS, ALSO WHEN STUCK FOR LONGER
     var npc_stuck_long = self.npc_stuck && self.npc_stuck_start < self.npc_last_stuck_check;
     var pitfall_danger = above_pit && self.doublejump_count >= max_doublejumps && !instance_exists(self.landing_terrain) && (self.y - self.npc_waypoint_y) > 16;
-    var can_blink = rule_get_state("abilities") && (!self.lost_control && has_level(self.id, "teleport", 1) && self.abi_cooldown[? g_blue] == 0);
+    var can_blink = rule_get_state(RuleID.Abilities) && (!self.lost_control && has_level(self.id, "teleport", 1) && self.abi_cooldown[? g_blue] == 0);
 
     if ((pitfall_danger || npc_stuck_long) && can_blink) {
         self.next_phase = 4;

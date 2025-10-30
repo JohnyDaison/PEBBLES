@@ -20,6 +20,14 @@ function define_rules_DB() {
         "EqualColors",
         "BaseColorsOnly",
         "ShieldPush",
+
+        "Cannons",
+        "Turrets",
+        "MobPortals",
+        "BaseCrystals",
+        "DarkColor",
+        "NegativeStatusEffects",
+        "Abilities",
     ];
 
     // rules
@@ -51,19 +59,19 @@ function define_rules_DB() {
 
 
     // game elements
-    gamemode_rule_create("cannons", "Cannons", RuleType.Bool, true, cannons_mod2_icon, "Base-mounted Artillery which uses extra Orbs as ammo.");
+    gamemode_rule_create("Cannons", "Cannons", RuleType.Bool, true, cannons_mod2_icon, "Base-mounted Artillery which uses extra Orbs as ammo.");
 
-    gamemode_rule_create("turrets", "Turrets", RuleType.Bool, true, turrets_mod_icon, "Terrain-mounted weaponry of various calibers.");
+    gamemode_rule_create("Turrets", "Turrets", RuleType.Bool, true, turrets_mod_icon, "Terrain-mounted weaponry of various calibers.");
 
-    gamemode_rule_create("mob_portals", "Mob Portals", RuleType.Bool, true, mob_portals_mod_icon, "Portals periodically spawn groups of aggressive Mobs.");
+    gamemode_rule_create("MobPortals", "Mob Portals", RuleType.Bool, true, mob_portals_mod_icon, "Portals periodically spawn groups of aggressive Mobs.");
 
-    gamemode_rule_create("base_crystals", "Base Crystals", RuleType.Bool, true, base_crystals_mod_icon, "Base Crystals provide a large Shield, which can Heal you using Shards.");
+    gamemode_rule_create("BaseCrystals", "Base Crystals", RuleType.Bool, true, base_crystals_mod_icon, "Base Crystals provide a large Shield, which can Heal you using Shards.");
 
-    gamemode_rule_create("dark_color", "Dark Color", RuleType.Bool, true, dark_color_mod_icon, "Dark attacks and Abilities mess with space and time.");
+    gamemode_rule_create("DarkColor", "Dark Color", RuleType.Bool, true, dark_color_mod_icon, "Dark attacks and Abilities mess with space and time.");
     
-    gamemode_rule_create("bad_status_effects", "Status Effects", RuleType.Bool, true, bad_status_effects_mod_icon, "Every Color except Dark has a Status Effect, e.g. Slow(Green), Frozen(Blue)...");
+    gamemode_rule_create("NegativeStatusEffects", "Status Effects", RuleType.Bool, true, bad_status_effects_mod_icon, "Every Color except Dark has a Status Effect, e.g. Slow(Green), Frozen(Blue)...");
 
-    gamemode_rule_create("abilities", "Abilities", RuleType.Bool, true, abilities_mod_icon, "Every Color has an Ability, e.g. Heal(Green), Blink(Blue)...");
+    gamemode_rule_create("Abilities", "Abilities", RuleType.Bool, true, abilities_mod_icon, "Every Color has an Ability, e.g. Heal(Green), Blink(Blue)...");
 
 
     // phenomena

@@ -10,9 +10,9 @@ place.description = "Small open arena with two Battery Spawners.";
 place.controller = autogenerate_place_controller_obj;
 
 place.forced_rules[? RuleID.HolographicSpawners] = false;
-place.forced_rules[? "cannons"] = false;
-place.forced_rules[? "turrets"] = false;
-place.forced_rules[? "mob_portals"] = false;
+place.forced_rules[? RuleID.Cannons] = false;
+place.forced_rules[? RuleID.Turrets] = false;
+place.forced_rules[? RuleID.MobPortals] = false;
 
 place_count = ds_list_size(places);
 current_place = places[|0];
