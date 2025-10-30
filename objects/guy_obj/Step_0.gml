@@ -1,5 +1,7 @@
 event_inherited();
 
+var RuleID = self.RuleID;
+
 self.step_count += 1;
 
 // COUNT TIME ON ENEMY SIDE
@@ -552,7 +554,7 @@ if(!self.frozen_in_time)
     var charge_ball_firing = (instance_exists(charge_ball) && charge_ball.firing);
     
     // HEALTH DEATH
-    if(damage >= hp && !dead && rule_get_state("hp_death"))
+    if(damage >= hp && !dead && rule_get_state(RuleID.HpDeath))
     {    
         die_from_damage();
 

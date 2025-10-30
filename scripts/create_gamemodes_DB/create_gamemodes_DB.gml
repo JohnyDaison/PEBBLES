@@ -20,6 +20,7 @@ function create_gamemodes_DB() {
     
     // GAMEMODES
     var gm, forced_rules, default_rules;
+    var RuleID = self.RuleID_DynEnum.dynEnum;
 
     // Quick Training
     gm = gamemode_create("quick_tutorial", "Training", true, quick_tutorial_world_obj);
@@ -43,7 +44,7 @@ function create_gamemodes_DB() {
     forced_rules[? "equal_colors"] = false;
     forced_rules[? "base_colors_only"] = false;
     forced_rules[? "shield_push"] = true;
-    forced_rules[? "hp_death"] = true;
+    forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? "holographic_spawners"] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "weak_terrain"] = false;
@@ -79,7 +80,7 @@ function create_gamemodes_DB() {
     gm[? "start_script"] = gm_sparring_start;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "hp_death"] = true;
+    forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? "slime_mob_rain"] = false;
@@ -144,7 +145,7 @@ function create_gamemodes_DB() {
     default_rules[? "turrets"] = true;
     default_rules[? "cannons"] = true;
     default_rules[? "snakes_on_a_plane"] = false;
-    default_rules[? "hp_death"] = true;
+    default_rules[? RuleID.HpDeath] = true;
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;
     default_rules[? "abilities"] = true;
@@ -165,7 +166,7 @@ function create_gamemodes_DB() {
     ds_list_add(gm[? "rule_presets"], "basic_bumping", "deadly_spiking", "court_attrition", "volley_infinite");
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "hp_death"] = false;
+    forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "holographic_spawners"] = false;
     forced_rules[? "random_item_spawner"] = false;
@@ -212,7 +213,7 @@ function create_gamemodes_DB() {
     gm[? "team_based"] = true;
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "hp_death"] = false;
+    forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "holographic_spawners"] = false;
     forced_rules[? "weak_terrain"] = false;
@@ -274,7 +275,7 @@ function create_gamemodes_DB() {
     forced_rules[? "tut_guide"] = false;
     
     default_rules = gm[? "default_rules"];
-    default_rules[? "hp_death"] = true;
+    default_rules[? RuleID.HpDeath] = true;
     default_rules[? "turrets"] = true;
     default_rules[? "cannons"] = true;
     default_rules[? "dark_color"] = true;
@@ -305,7 +306,7 @@ function create_gamemodes_DB() {
     forced_rules[? "equal_colors"] = false;
     forced_rules[? "base_colors_only"] = false;
     forced_rules[? "shield_push"] = true;
-    forced_rules[? "hp_death"] = true;
+    forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? "holographic_spawners"] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "weak_terrain"] = false;
@@ -379,6 +380,6 @@ function create_gamemodes_DB() {
     forced_rules[? "turrets"] = true;
     forced_rules[? "cannons"] = true;
     forced_rules[? "mob_portals"] = true;
-    forced_rules[? "hp_death"] = true;
+    forced_rules[? RuleID.HpDeath] = true;
     */
 }

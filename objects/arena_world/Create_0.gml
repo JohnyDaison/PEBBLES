@@ -2,6 +2,7 @@ event_inherited();
 
 name = "Arena World";
 
+var RuleID = DB.RuleID_DynEnum.dynEnum;
 var place;
 
 place = add_place_in_room(classic_arena, "Classic Arena", 0,0, 2912,1472, 0);
@@ -42,7 +43,7 @@ place.forced_rules[? "mob_portals"] = false;
 place.forced_rules[? "flag_capture"] = false;
 
 place.forced_rules[? "holographic_spawners"] = true;
-place.forced_rules[? "hp_death"] = true;
+place.forced_rules[? RuleID.HpDeath] = true;
 place.forced_rules[? "dark_color"] = false;
 place.forced_rules[? "dark_orb_energy_lock"] = false;
 place.forced_rules[? "random_item_spawner"] = false;

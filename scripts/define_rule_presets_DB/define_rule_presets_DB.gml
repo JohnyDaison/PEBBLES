@@ -1,5 +1,6 @@
 function define_rule_presets_DB(presets) {
     var preset, forced_rules, default_rules;
+    var RuleID = self.RuleID_DynEnum.dynEnum;
     
     // VOLLEYBALL
     
@@ -49,7 +50,7 @@ function define_rule_presets_DB(presets) {
     preset = presets.add("arena_novice", "Novice");
     
     forced_rules = preset.forced_rules;
-    forced_rules[? "hp_death"] = false;
+    forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "holographic_spawners"] = true;
     forced_rules[? "base_crystals"] = true;
     forced_rules[? "equal_colors"] = true;
@@ -102,7 +103,7 @@ function define_rule_presets_DB(presets) {
 
     default_rules = preset.default_rules;
     default_rules[? "base_crystals"] = true;
-    default_rules[? "hp_death"] = true;
+    default_rules[? RuleID.HpDeath] = true;
     default_rules[? "equal_colors"] = true;
     default_rules[? "base_colors_only"] = true;
     default_rules[? "orbs_energy_min_lock"] = true;
@@ -149,7 +150,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "mob_portals"] = true;
     default_rules[? "shield_push"] = true;
 
-    default_rules[? "hp_death"] = true;
+    default_rules[? RuleID.HpDeath] = true;
     default_rules[? "base_crystals"] = true;
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;

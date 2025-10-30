@@ -4,8 +4,13 @@ enum RuleType {
 }
 
 function define_rules_DB() {
+    self.RuleID_DynEnum = new DynamicEnum();
+    self.convertedRules = [ 
+        "HpDeath",
+    ];
+    
     // rules
-    gamemode_rule_create("hp_death", "HP Death", RuleType.Bool, true, hp_death_mod2_icon, "Losing all HP will result in instant death. (Otherwise you die only by falling off the arena.)");
+    gamemode_rule_create("HpDeath", "HP Death", RuleType.Bool, true, hp_death_mod2_icon, "Losing all HP will result in instant death. (Otherwise you die only by falling off the arena.)");
 
     gamemode_rule_create("holographic_spawners", "Holographic Spawners", RuleType.Bool, true, holo_spawners_mod2_icon, "Base Crystals can't be damaged by attacks. Respawning the Player will still damage them.");
 
