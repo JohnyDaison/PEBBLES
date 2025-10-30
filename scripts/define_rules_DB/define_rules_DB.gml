@@ -19,6 +19,7 @@ function define_rules_DB() {
         "CurveBalls",
         "EqualColors",
         "BaseColorsOnly",
+        "ShieldPush",
     ];
 
     // rules
@@ -46,7 +47,7 @@ function define_rules_DB() {
     
     gamemode_rule_create("BaseColorsOnly", "Base Colors Only", RuleType.Bool, true, base_colors_only_mod_icon, "No multi-Color combos.");
     
-    gamemode_rule_create("shield_push", "Shield Push", RuleType.Bool, true, shield_push_mod_icon, "Shield pushes away mobs and characters.");
+    gamemode_rule_create("ShieldPush", "Shield Push", RuleType.Bool, true, shield_push_mod_icon, "Shield pushes away mobs and characters.");
 
 
     // game elements

@@ -1,6 +1,8 @@
 ///@description:  STATS, DESTRUCTION, REPULSION, UBERSHIELD
 event_inherited();
 
+var RuleID = global.RuleID;
+
 // COPY STATS
 if(instance_exists(my_guy) && my_guy != id)
 {
@@ -73,7 +75,8 @@ if(done_for)
     exit;
 }
 
-if(!rule_get_state("shield_push") && my_guy != id) {
+// When my_guy == id, shield is acting as a shockwave
+if(!rule_get_state(RuleID.ShieldPush) && my_guy != id) {
     exit;
 }
 

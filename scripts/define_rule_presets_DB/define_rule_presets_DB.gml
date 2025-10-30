@@ -81,7 +81,7 @@ function define_rule_presets_DB(presets) {
     default_rules = preset.default_rules;
     default_rules[? "base_crystal_hp"] = 5;
     default_rules[? "score_limit"] = 200;
-    default_rules[? "shield_push"] = true;
+    default_rules[? RuleID.ShieldPush] = true;
     
     
     preset = presets.add("arena_apprentice", "Apprentice");
@@ -108,7 +108,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.BaseColorsOnly] = true;
     default_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
     default_rules[? "artifacts"] = true;
-    default_rules[? "shield_push"] = true;
+    default_rules[? RuleID.ShieldPush] = true;
     
     default_rules[? "base_crystal_hp"] = 5;
     default_rules[? "base_crystal_shield_power"] = 2;
@@ -123,7 +123,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "mob_portals"] = false;
     forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? "base_crystal_shield_power"] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
@@ -148,7 +148,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "turrets"] = true;
     default_rules[? "cannons"] = true;
     default_rules[? "mob_portals"] = true;
-    default_rules[? "shield_push"] = true;
+    default_rules[? RuleID.ShieldPush] = true;
 
     default_rules[? RuleID.HpDeath] = true;
     default_rules[? "base_crystals"] = true;

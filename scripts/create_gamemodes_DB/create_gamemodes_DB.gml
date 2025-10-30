@@ -43,7 +43,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
     forced_rules[? RuleID.BaseColorsOnly] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
@@ -86,7 +86,7 @@ function create_gamemodes_DB() {
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "artifacts"] = false;
     forced_rules[? "lightning_strikes"] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;
@@ -135,7 +135,7 @@ function create_gamemodes_DB() {
     forced_rules = gm[? "forced_rules"];
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "tut_guide"] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;
@@ -175,7 +175,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
-    forced_rules[? "shield_push"] = false;
+    forced_rules[? RuleID.ShieldPush] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? "cannons"] = false;
     forced_rules[? "turrets"] = false;
@@ -239,7 +239,7 @@ function create_gamemodes_DB() {
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "artifacts"] = false;
     forced_rules[? "lightning_strikes"] = false;
-    forced_rules[? "shield_push"] = false;
+    forced_rules[? RuleID.ShieldPush] = false;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;
@@ -271,7 +271,7 @@ function create_gamemodes_DB() {
     forced_rules[? "flag_capture"] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? "tut_guide"] = false;
     
     default_rules = gm[? "default_rules"];
@@ -305,7 +305,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
     forced_rules[? RuleID.BaseColorsOnly] = false;
-    forced_rules[? "shield_push"] = true;
+    forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
@@ -348,7 +348,7 @@ function create_gamemodes_DB() {
     forced_rules[? "tut_guide"] = false;
     
     default_rules = gm[? "default_rules"];
-    default_rules[? "shield_push"] = true;
+    default_rules[? RuleID.ShieldPush] = true;
 
 
     // Test mode
@@ -363,7 +363,7 @@ function create_gamemodes_DB() {
     forced_rules[? "tut_guide"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "shield_push"] = true;
+    default_rules[? RuleID.ShieldPush] = true;
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;
     default_rules[? "abilities"] = true;
