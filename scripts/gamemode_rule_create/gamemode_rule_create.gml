@@ -10,11 +10,7 @@ function gamemode_rule_create(strId, name, type, public, icon = noone, descripti
     }
 
     var rule = new Rule(name, type, public, icon, description);
-    var ruleId = strId;
-    
-    if (array_contains(self.convertedRules, strId)) {
-        ruleId = self.RuleID_DynEnum.member(strId);
-    }
+    var ruleId = self.RuleID_DynEnum.member(strId);
 
     ds_list_add(self.gamemode_rule_list, ruleId);
     self.gamemode_rules[? ruleId] = rule;

@@ -7,50 +7,6 @@ function define_rules_DB() {
     self.RuleID_DynEnum = new DynamicEnum();
     var RuleID = self.RuleID_DynEnum.dynEnum;
 
-    self.convertedRules = [ 
-        "HpDeath",
-        "HolographicSpawners",
-        "WeakTerrain",
-        "IndestructibleTerrain",
-        "RegenerateTerrain",
-        "AlwaysSliding",
-        "DarkOrbEnergyLock",
-        "ColorOrbsEnergyLock",
-        "ColorOrbsEnergyMinLock",
-        "CurveBalls",
-        "EqualColors",
-        "BaseColorsOnly",
-        "ShieldPush",
-
-        "Cannons",
-        "Turrets",
-        "MobPortals",
-        "BaseCrystals",
-        "DarkColor",
-        "NegativeStatusEffects",
-        "Abilities",
-    
-        "RandomItemSpawner",
-        "Snakes",
-        "BoltRain",
-        "SlimeMobRain",
-        "Artifacts",
-        "LightningStrikes",
-    
-        "TutorialOverlay",
-        "TutorialGuide",
-    
-        "BaseCrystalHP",
-        "BaseCrystalShieldHP",
-        "PersonalShieldHP",
-        "FlagCaptureScore",
-        "DeathLimit",
-        "ScoreLimit",
-        "TimeLimit",
-        "SuddenDeathStart",
-        "DarknessLevel"
-    ];
-
     // rules
     gamemode_rule_create("HpDeath", "HP Death", RuleType.Bool, true, hp_death_mod2_icon, "Losing all HP will result in instant death. (Otherwise you die only by falling off the arena.)");
 
