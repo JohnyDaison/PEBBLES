@@ -64,7 +64,7 @@ if(!singleton_obj.paused && game_started && !game_ended)
         }
     }
     
-    if(!rule_get_state("flag_capture"))
+    if(!rule_get_state(RuleID.FlagCaptureScore))
     {
         with(flag_spawner_obj)
         {

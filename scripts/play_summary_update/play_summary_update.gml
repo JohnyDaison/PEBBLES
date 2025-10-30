@@ -5,6 +5,7 @@ function play_summary_update() {
         var place_column_start = 27;
 
         var gm = DB.gamemodes[? gamemode_picker.cur_item_id], place;
+        var RuleID = global.RuleID;
     
         if(!is_undefined(gm))
         {
@@ -33,7 +34,7 @@ function play_summary_update() {
             
             
             // LIMITS
-            var score_limit = gmrule_controls[? "score_limit"].get_value();
+            var score_limit = gmrule_controls[? RuleID.ScoreLimit].get_value();
             if (is_number(score_limit)) {
                 var score_text = "Score to win: " + string(score_limit);
                 

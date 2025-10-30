@@ -1,3 +1,5 @@
+var RuleID = global.RuleID;
+
 my_guy = noone;
 my_spawner = noone;
 my_override = noone;
@@ -28,7 +30,7 @@ light_y_offset = 0;
 light_size_coef = 1;
 darkness_light_size_coef = 3;
 
-var darkness_value = rule_get_state("darkness");
+var darkness_value = rule_get_state(RuleID.DarknessLevel);
 if (is_number(darkness_value)) {
     self.darkness_alpha = darkness_value / 100;
 }

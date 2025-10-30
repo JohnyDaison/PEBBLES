@@ -5,6 +5,7 @@ enum RuleType {
 
 function define_rules_DB() {
     self.RuleID_DynEnum = new DynamicEnum();
+    var RuleID = self.RuleID_DynEnum.dynEnum;
 
     self.convertedRules = [ 
         "HpDeath",
@@ -38,6 +39,16 @@ function define_rules_DB() {
     
         "TutorialOverlay",
         "TutorialGuide",
+    
+        "BaseCrystalHP",
+        "BaseCrystalShieldHP",
+        "PersonalShieldHP",
+        "FlagCaptureScore",
+        "DeathLimit",
+        "ScoreLimit",
+        "TimeLimit",
+        "SuddenDeathStart",
+        "DarknessLevel"
     ];
 
     // rules
@@ -105,32 +116,32 @@ function define_rules_DB() {
 
 
     // number rules
-    gamemode_rule_create("base_crystal_hp", "Base Crystal HP", RuleType.Number, true, base_crystal_hp_mod_icon, "Starting Health of your Base");
-    gamemode_number_rule_values("base_crystal_hp", 10, 1, 10, 1);
+    gamemode_rule_create("BaseCrystalHP", "Base Crystal HP", RuleType.Number, true, base_crystal_hp_mod_icon, "Starting Health of your Base");
+    gamemode_number_rule_values(RuleID.BaseCrystalHP, 10, 1, 10, 1);
     
-    gamemode_rule_create("base_crystal_shield_power", "Base Crystal Shield HP", RuleType.Number, true, base_crystal_sp_mod_icon, "Strength of Base Crystal Shield");
-    gamemode_number_rule_values("base_crystal_shield_power", 6, 0, 6, 1);
+    gamemode_rule_create("BaseCrystalShieldHP", "Base Crystal Shield HP", RuleType.Number, true, base_crystal_sp_mod_icon, "Strength of Base Crystal Shield");
+    gamemode_number_rule_values(RuleID.BaseCrystalShieldHP, 6, 0, 6, 1);
     
-    gamemode_rule_create("guy_shield_power", "Personal Shield HP", RuleType.Number, true, guy_sp_mod_icon, "Strength of Player's Shield");
-    gamemode_number_rule_values("guy_shield_power", 100, 0, 150, 50);
+    gamemode_rule_create("PersonalShieldHP", "Personal Shield HP", RuleType.Number, true, guy_sp_mod_icon, "Strength of Characters' personal Shield");
+    gamemode_number_rule_values(RuleID.PersonalShieldHP, 100, 0, 150, 50);
     
-    gamemode_rule_create("flag_capture", "Capture the Flag", RuleType.Number, true, flag_capture_mod_icon, "Toggle Flag Holders and set score for capturing a Flag.");
-    gamemode_number_rule_values("flag_capture", 60, 10, 120, 10);
+    gamemode_rule_create("FlagCaptureScore", "Capture the Flag", RuleType.Number, true, flag_capture_mod_icon, "Toggle Flag Holders and set score for capturing a Flag.");
+    gamemode_number_rule_values(RuleID.FlagCaptureScore, 60, 10, 120, 10);
     
-    gamemode_rule_create("death_limit", "Death Limit", RuleType.Number, true, death_limit_mod_icon, "Players won't respawn after dying X times.");
-    gamemode_number_rule_values("death_limit", 3, 1, 20, 1);
+    gamemode_rule_create("DeathLimit", "Death Limit", RuleType.Number, true, death_limit_mod_icon, "Players won't respawn after dying X times.");
+    gamemode_number_rule_values(RuleID.DeathLimit, 3, 1, 20, 1);
     
-    gamemode_rule_create("score_limit", "Score Limit", RuleType.Number, true, score_limit_mod_icon, "The game will end if a player reaches X points.");
-    gamemode_number_rule_values("score_limit", 200, 1, 999, 1);
+    gamemode_rule_create("ScoreLimit", "Score Limit", RuleType.Number, true, score_limit_mod_icon, "The game will end if a player reaches X points.");
+    gamemode_number_rule_values(RuleID.ScoreLimit, 200, 1, 999, 1);
     
-    gamemode_rule_create("time_limit", "Time Limit", RuleType.Number, true, time_limit_mod_icon, "The game will end after X minutes.");
-    gamemode_number_rule_values("time_limit", 15, 1, 60, 1);
+    gamemode_rule_create("TimeLimit", "Time Limit", RuleType.Number, true, time_limit_mod_icon, "The game will end after X minutes.");
+    gamemode_number_rule_values(RuleID.TimeLimit, 15, 1, 60, 1);
     
-    gamemode_rule_create("sudden_death_start", "Sudden Death", RuleType.Number, true, sudden_death_start_mod_icon, "Players won't respawn after X minutes pass.");
-    gamemode_number_rule_values("sudden_death_start", 10, 1, 30, 1);
+    gamemode_rule_create("SuddenDeathStart", "Sudden Death", RuleType.Number, true, sudden_death_start_mod_icon, "Players won't respawn after X minutes pass.");
+    gamemode_number_rule_values(RuleID.SuddenDeathStart, 10, 1, 30, 1);
     
-    gamemode_rule_create("darkness", "Darkness", RuleType.Number, true, darkness_mod_icon, "Make the arena dark(er). 100 is pitch black.");
-    gamemode_number_rule_values("darkness", 80, 50, 100, 1);
+    gamemode_rule_create("DarknessLevel", "Darkness", RuleType.Number, true, darkness_mod_icon, "Make the arena dark(er). 100 is pitch black.");
+    gamemode_number_rule_values(RuleID.DarknessLevel, 80, 50, 100, 1);
     
     global.RuleID = self.RuleID_DynEnum.dynEnum;
 }

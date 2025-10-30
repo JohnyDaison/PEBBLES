@@ -1,5 +1,7 @@
 event_inherited();
 
+var RuleID = global.RuleID;
+
 my_spawner = noone;
 my_base = noone;
 my_guy = id;
@@ -82,7 +84,7 @@ self.shield_channel_maxboost = 0.5;
 self.shield_threshold = 3;
 self.shield_repair_time = 180;
 
-var rule_sp = rule_get_state("guy_shield_power");
+var rule_sp = rule_get_state(RuleID.PersonalShieldHP);
 if (!is_undefined(rule_sp) && !is_bool(rule_sp) ) {
     shield_max_charge = rule_sp/100;
 }
@@ -558,10 +560,11 @@ self.impact_speed_particles = instance_create_depth(x, y, 0, impact_speed_wave_o
 impact_speed_particles.my_guy = id;
 
 respawn_allowed = function() {
+    var RuleID = global.RuleID;
     var allowed = !gamemode_obj.sudden_death;
     
     if (allowed) {
-        var rule_death_limit = rule_get_state("death_limit");
+        var rule_death_limit = rule_get_state(RuleID.DeathLimit);
         
         if (!is_undefined(rule_death_limit) && !is_bool(rule_death_limit) ) {
             allowed = my_player.stats[? "deaths"] < rule_death_limit;

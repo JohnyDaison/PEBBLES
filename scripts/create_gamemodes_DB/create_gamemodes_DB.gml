@@ -61,14 +61,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
-    forced_rules[? "death_limit"] = false;
-    forced_rules[? "score_limit"] = false;
-    forced_rules[? "time_limit"] = false;
-    forced_rules[? "sudden_death_start"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
+    forced_rules[? RuleID.ScoreLimit] = false;
+    forced_rules[? RuleID.TimeLimit] = false;
+    forced_rules[? RuleID.SuddenDeathStart] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.TutorialGuide] = true;
@@ -88,14 +88,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
-    forced_rules[? "death_limit"] = 1;
-    forced_rules[? "score_limit"] = false;
-    forced_rules[? "time_limit"] = false;
-    forced_rules[? "sudden_death_start"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
+    forced_rules[? RuleID.DeathLimit] = 1;
+    forced_rules[? RuleID.ScoreLimit] = false;
+    forced_rules[? RuleID.TimeLimit] = false;
+    forced_rules[? RuleID.SuddenDeathStart] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.DarkColor] = true;
@@ -137,9 +137,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.Turrets] = true;
@@ -191,13 +191,13 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "score_limit"] = 10;
+    default_rules[? RuleID.ScoreLimit] = 10;
     
     
     // Hoopball
@@ -241,18 +241,18 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = false;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
-    forced_rules[? "death_limit"] = false;
-    forced_rules[? "score_limit"] = true;
-    forced_rules[? "sudden_death_start"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
+    forced_rules[? RuleID.ScoreLimit] = true;
+    forced_rules[? RuleID.SuddenDeathStart] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? RuleID.RegenerateTerrain] = true;
-    default_rules[? "score_limit"] = 10;
+    default_rules[? RuleID.ScoreLimit] = 10;
 
 
     // Base survival
@@ -268,7 +268,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.BaseCrystals] = true;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "flag_capture"] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
     forced_rules[? RuleID.RandomItemSpawner] = false;
     forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
@@ -323,14 +323,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
     
-    forced_rules[? "base_crystal_hp"] = false;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "flag_capture"] = false;
-    forced_rules[? "death_limit"] = false;
-    forced_rules[? "score_limit"] = false;
-    forced_rules[? "time_limit"] = false;
-    forced_rules[? "sudden_death_start"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
+    forced_rules[? RuleID.ScoreLimit] = false;
+    forced_rules[? RuleID.TimeLimit] = false;
+    forced_rules[? RuleID.SuddenDeathStart] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.TutorialGuide] = true;

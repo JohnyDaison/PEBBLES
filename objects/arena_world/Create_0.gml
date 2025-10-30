@@ -10,7 +10,7 @@ place.description = "Small arena from the dawn of the age.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
 place.forced_rules[? RuleID.Turrets] = false;
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 
 place = add_place_in_room(closed_quarters_arena, "Closed Quarters", 0,0, 2816,2816, 0);
@@ -21,7 +21,7 @@ place.max_team_count = 2;
 place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 place.forced_rules[? RuleID.RandomItemSpawner] = false;
 place.forced_rules[? RuleID.Snakes] = false;
@@ -40,7 +40,7 @@ ds_list_add(place.level_configs_list, "just_2orbs_start");
 place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 place.forced_rules[? RuleID.HolographicSpawners] = true;
 place.forced_rules[? RuleID.HpDeath] = true;
@@ -57,7 +57,7 @@ place.forced_rules[? RuleID.SlimeMobRain] = false;
 place.forced_rules[? RuleID.Artifacts] = false;
 place.forced_rules[? RuleID.LightningStrikes] = false;
 place.forced_rules[? RuleID.Abilities] = false;
-place.forced_rules[? "death_limit"] = true;
+place.forced_rules[? RuleID.DeathLimit] = true;
 place.forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
 
@@ -104,7 +104,7 @@ place.max_team_count = 2;
 place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 place.forced_rules[? RuleID.RandomItemSpawner] = false;
 place.forced_rules[? RuleID.Snakes] = false;
@@ -119,7 +119,7 @@ place.description = "Small arena with rounder geometry with a few Turrets and tw
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 2;
 
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 /*
 place = add_place_in_room(room_tech_war_arena, "Tech war grid", 0,0, 3200,3200, 0);
@@ -132,7 +132,7 @@ place.description = "Four Bases. Destructible terrain. Total chaos.";
 place.controller = autogenerate_place_controller_obj;
 place.max_team_count = 4;
 
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 //place = add_place_in_room(domination1, "Domination", 0,0, 4608,3968, 0);
 
@@ -141,7 +141,7 @@ place = add_place_in_room(alpinus_sandbox, "Alpinus Sandbox", 0,0, 2528,2784, 38
 place.description = "Medium size wacky arena with many gravity anomalies.";
 place.max_team_count = 2;
 
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 //place = add_place_in_room(skull_bones, "Skull & Bones", 0,0, 1280,1280, 0);
 
@@ -150,7 +150,7 @@ place = add_place_in_room(big_arena, "Big Arena", 0,0, 6400,3200, 384);
 place.description = "Huge arena, pointlessly even. Should be filled with some stuff...";
 place.max_team_count = 2;
 
-place.forced_rules[? "flag_capture"] = false;
+place.forced_rules[? RuleID.FlagCaptureScore] = false;
 
 place_count = ds_list_size(places);
 current_place = places[|0];

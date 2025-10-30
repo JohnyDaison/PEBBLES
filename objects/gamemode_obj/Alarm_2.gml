@@ -31,6 +31,7 @@ if(!match_started)
 
 time_limit = 0;
 
+var RuleID = global.RuleID;
 var player;
 var player_defeat_count = 0, team_defeat_count = 0;
 
@@ -85,7 +86,7 @@ if(!limit_reached)
     if (time_started) {
         var limit_value;
     
-        limit_value = rule_get_state("score_limit");
+        limit_value = rule_get_state(RuleID.ScoreLimit);
     
         if (is_number(limit_value)) {
             for(var player_number = 1; player_number <= player_count; player_number++)
@@ -99,7 +100,7 @@ if(!limit_reached)
             }
         }
     
-        limit_value = rule_get_state("time_limit");
+        limit_value = rule_get_state(RuleID.TimeLimit);
     
         if (is_number(limit_value)) {
             time_limit = limit_value * 60;
@@ -110,7 +111,7 @@ if(!limit_reached)
             }
         }
     
-        limit_value = rule_get_state("sudden_death_start");
+        limit_value = rule_get_state(RuleID.SuddenDeathStart);
     
         if (is_number(limit_value)) {
             var sudden_death_start = limit_value * 60;
@@ -310,7 +311,7 @@ else
                     if(reached_limit_name == "score")
                     {
                          var win_score = string(winner.stats[? "score"]);
-                         center_overlay.message += " scored " + string(win_score) +" of " + string(rule_get_state("score_limit"));
+                         center_overlay.message += " scored " + string(win_score) +" of " + string(rule_get_state(RuleID.ScoreLimit));
                     }
                     else
                     {

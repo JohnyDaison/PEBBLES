@@ -10,9 +10,9 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = true;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "death_limit"] = false;
-    forced_rules[? "score_limit"] = true;
-    forced_rules[? "sudden_death_start"] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
+    forced_rules[? RuleID.ScoreLimit] = true;
+    forced_rules[? RuleID.SuddenDeathStart] = false;
 
     
     preset = presets.add("deadly_spiking", "Deadly Spiking");
@@ -30,10 +30,10 @@ function define_rule_presets_DB(presets) {
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "death_limit"] = true;
+    forced_rules[? RuleID.DeathLimit] = true;
 
     default_rules = preset.default_rules;
-    default_rules[? "death_limit"] = 5;
+    default_rules[? RuleID.DeathLimit] = 5;
     
     
     preset = presets.add("volley_infinite", "Infinite Game");
@@ -42,7 +42,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.RegenerateTerrain] = true;
 
     default_rules = preset.default_rules;
-    default_rules[? "score_limit"] = false;
+    default_rules[? RuleID.ScoreLimit] = false;
     
     
     // ARENA
@@ -70,25 +70,25 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
-    forced_rules[? "base_crystal_hp"] = true;
-    forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "death_limit"] = false;
+    forced_rules[? RuleID.BaseCrystalHP] = true;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? RuleID.CurveBalls] = false;
-    forced_rules[? "flag_capture"] = false;
+    forced_rules[? RuleID.FlagCaptureScore] = false;
 
     default_rules = preset.default_rules;
-    default_rules[? "base_crystal_hp"] = 5;
-    default_rules[? "score_limit"] = 200;
+    default_rules[? RuleID.BaseCrystalHP] = 5;
+    default_rules[? RuleID.ScoreLimit] = 200;
     default_rules[? RuleID.ShieldPush] = true;
     
     
     preset = presets.add("arena_apprentice", "Apprentice");
     
     forced_rules = preset.forced_rules;
-    forced_rules[? "guy_shield_power"] = false;
-    forced_rules[? "death_limit"] = false;
+    forced_rules[? RuleID.PersonalShieldHP] = false;
+    forced_rules[? RuleID.DeathLimit] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = false;
     forced_rules[? RuleID.Turrets] = false;
@@ -110,9 +110,9 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.Artifacts] = true;
     default_rules[? RuleID.ShieldPush] = true;
     
-    default_rules[? "base_crystal_hp"] = 5;
-    default_rules[? "base_crystal_shield_power"] = 2;
-    default_rules[? "score_limit"] = 200;
+    default_rules[? RuleID.BaseCrystalHP] = 5;
+    default_rules[? RuleID.BaseCrystalShieldHP] = 2;
+    default_rules[? RuleID.ScoreLimit] = 200;
     
     
     preset = presets.add("arena_arcade", "Arcade");
@@ -124,7 +124,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
-    forced_rules[? "base_crystal_shield_power"] = false;
+    forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
     default_rules = preset.default_rules;
@@ -138,8 +138,8 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.Abilities] = true;
     default_rules[? RuleID.Artifacts] = true;
     
-    default_rules[? "base_crystal_hp"] = 7;
-    default_rules[? "score_limit"] = 200;
+    default_rules[? RuleID.BaseCrystalHP] = 7;
+    default_rules[? RuleID.ScoreLimit] = 200;
     
     
     preset = presets.add("arena_standard", "Pandemonium");
@@ -160,7 +160,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.SlimeMobRain] = true;
     default_rules[? RuleID.Artifacts] = true;
     
-    default_rules[? "base_crystal_hp"] = true;
-    default_rules[? "base_crystal_shield_power"] = true;
-    default_rules[? "score_limit"] = 400;
+    default_rules[? RuleID.BaseCrystalHP] = true;
+    default_rules[? RuleID.BaseCrystalShieldHP] = true;
+    default_rules[? RuleID.ScoreLimit] = 400;
 }
