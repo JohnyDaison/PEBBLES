@@ -2,6 +2,7 @@ event_inherited();
 
 name = "Quick Tutorial";
 
+var RuleID = global.RuleID;
 var place;
 
 
@@ -59,7 +60,7 @@ place.description = "Heal, Invisiblity, Berserk, Haste, Ubershield, Rewind, Blin
 place.controller = quick_tut_abilities_place_controller_obj;
 ds_list_add(place.level_configs_list, "movement", "full_colors", "basic_combat", "shield", 
                                       "inventory", "dark_orb", "just_2orbs_start", "no_abilities");
-place.forced_rules[? "color_orbs_energy_lock" ] = true;
+place.forced_rules[? RuleID.ColorOrbsEnergyLock ] = true;
 place.forced_rules[? "base_crystals"] = true;
 place.forced_rules[? "abilities"] = true;
 

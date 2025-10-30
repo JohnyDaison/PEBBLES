@@ -5,6 +5,8 @@ function arena_bot3(requested_attack_target) {
         return;
     }
 
+    var RuleID = global.RuleID;
+
     // TODO: pl_dist is probably used in many places it shouldn't be
     var pl_dist = 0;
 
@@ -589,7 +591,7 @@ function arena_bot3(requested_attack_target) {
             }
         }
 
-        if (self.phase >= (round(10 / self.bot_speed) + last_phase) || rule_get_state("color_orbs_energy_lock")) {
+        if (self.phase >= (round(10 / self.bot_speed) + last_phase) || rule_get_state(RuleID.ColorOrbsEnergyLock)) {
             self.next_phase = 0;
         }
     }

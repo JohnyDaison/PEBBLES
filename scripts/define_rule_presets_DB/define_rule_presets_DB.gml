@@ -57,7 +57,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "dark_color"] = false;
     forced_rules[? "base_colors_only"] = true;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
-    forced_rules[? "color_orbs_energy_lock"] = true;
+    forced_rules[? RuleID.ColorOrbsEnergyLock] = true;
     forced_rules[? "orbs_energy_min_lock"] = false;
     forced_rules[? "bad_status_effects"] = false;
     forced_rules[? "abilities"] = false;

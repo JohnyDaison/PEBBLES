@@ -2,6 +2,7 @@ event_inherited();
 
 name = "Test world";
 
+var RuleID = global.RuleID;
 var place;
 
 
@@ -58,7 +59,7 @@ place = add_place_in_room(room_show_off, "Show Off!", 0,0, 2368,2048, 0);
 place.description = "Quick jumps";
 ds_list_add(place.level_configs_list, "movement", "no_attacks");
 
-place.forced_rules[? "color_orbs_energy_lock"] = false;
+place.forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
 place.forced_rules[? "dark_color"] = false;
 place.forced_rules[? "abilities"] = false;
 place.forced_rules[? "random_item_spawner"] = false;

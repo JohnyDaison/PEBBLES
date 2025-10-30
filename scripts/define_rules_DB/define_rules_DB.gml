@@ -14,6 +14,7 @@ function define_rules_DB() {
         "RegenerateTerrain",
         "AlwaysSliding",
         "DarkOrbEnergyLock",
+        "ColorOrbsEnergyLock",
     ];
 
     // rules
@@ -31,7 +32,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("DarkOrbEnergyLock", "Dark Orb Energy lock", RuleType.Bool, true, dark_orb_energy_lock_mod_icon, "Dark Orb energy will always be at 100%.");
     
-    gamemode_rule_create("color_orbs_energy_lock", "Color Orb Energy lock", RuleType.Bool, true, orbs_energy_lock_mod_icon, "Color Orb energy will always be at 100%.");
+    gamemode_rule_create("ColorOrbsEnergyLock", "Color Orb Energy lock", RuleType.Bool, true, orbs_energy_lock_mod_icon, "Color Orb energy will always be at 100%.");
     
     gamemode_rule_create("orbs_energy_min_lock", "Orb Energy min-lock", RuleType.Bool, true, orbs_energy_min_lock_mod_on_icon, "Orb energy will not go below 100%.");
 
