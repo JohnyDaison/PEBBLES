@@ -129,7 +129,7 @@ function create_player_things(player) {
         if (!gamemode_obj.no_inventory)
             add_player_overlay(inventory_overlay, player);
         add_player_overlay(overhead_overlay, player);
-        if (rule_get_state("tutorials") && !player.is_cpu)
+        if (rule_get_state(RuleID.TutorialOverlay) && !player.is_cpu)
             add_player_overlay(tutorial_overlay, player);
         add_player_overlay(status_effect_overlay, player);
         add_player_overlay(radial_overlay, player);

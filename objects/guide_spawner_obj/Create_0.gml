@@ -1,5 +1,7 @@
 event_inherited();
 
+var RuleID = global.RuleID;
+
 enabled = true;
 activated = false;
 
@@ -14,7 +16,7 @@ spawn_points = ds_map_create();
 
 alarm[2] = 90;
 
-if(!rule_get_state("tut_guide"))
+if(!rule_get_state(RuleID.TutorialGuide))
 {
     introduction_finished = true;
     alarm[2] = -1;

@@ -55,7 +55,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = true;
     forced_rules[? RuleID.Abilities] = false;
-    forced_rules[? "tutorials"] = false;
+    forced_rules[? RuleID.TutorialOverlay] = false;
     forced_rules[? RuleID.RandomItemSpawner] = false;
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
@@ -71,7 +71,7 @@ function create_gamemodes_DB() {
     forced_rules[? "sudden_death_start"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "tut_guide"] = true;
+    default_rules[? RuleID.TutorialGuide] = true;
 
 
     // Pit Fight
@@ -82,7 +82,7 @@ function create_gamemodes_DB() {
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.BaseCrystals] = false;
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
@@ -116,7 +116,7 @@ function create_gamemodes_DB() {
     ds_list_add(gm[? "rule_presets"], "arena_novice", "arena_apprentice", "arena_arcade", "arena_standard");
 
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
 
     default_rules = gm[? "default_rules"];
 
@@ -134,7 +134,7 @@ function create_gamemodes_DB() {
 
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.BaseCrystals] = false;
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     
     forced_rules[? "base_crystal_hp"] = false;
@@ -176,14 +176,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? RuleID.ShieldPush] = false;
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.Turrets] = false;
     forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? RuleID.DarkColor] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = false;
     forced_rules[? RuleID.Abilities] = false;
-    forced_rules[? "tutorials"] = false;
+    forced_rules[? RuleID.TutorialOverlay] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = true;
     forced_rules[? RuleID.BaseColorsOnly] = false;
@@ -226,13 +226,13 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.Turrets] = false;
     forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = false;
     forced_rules[? RuleID.Abilities] = false;
-    forced_rules[? "tutorials"] = false;
+    forced_rules[? RuleID.TutorialOverlay] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
     forced_rules[? RuleID.BaseColorsOnly] = false;
@@ -272,7 +272,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.RandomItemSpawner] = false;
     forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.HpDeath] = true;
@@ -317,7 +317,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = true;
     forced_rules[? RuleID.Abilities] = true;
-    forced_rules[? "tutorials"] = false;
+    forced_rules[? RuleID.TutorialOverlay] = false;
     forced_rules[? RuleID.RandomItemSpawner] = false;
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
@@ -333,7 +333,7 @@ function create_gamemodes_DB() {
     forced_rules[? "sudden_death_start"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "tut_guide"] = true;
+    default_rules[? RuleID.TutorialGuide] = true;
 
 
     // Loop world
@@ -345,7 +345,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = true;
     
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
     
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.ShieldPush] = true;
@@ -360,7 +360,7 @@ function create_gamemodes_DB() {
     gm[? "is_coop"] = false;
     
     forced_rules = gm[? "forced_rules"];
-    forced_rules[? "tut_guide"] = false;
+    forced_rules[? RuleID.TutorialGuide] = false;
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.ShieldPush] = true;

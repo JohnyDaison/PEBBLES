@@ -35,6 +35,9 @@ function define_rules_DB() {
         "SlimeMobRain",
         "Artifacts",
         "LightningStrikes",
+    
+        "TutorialOverlay",
+        "TutorialGuide",
     ];
 
     // rules
@@ -96,9 +99,9 @@ function define_rules_DB() {
 
 
     // tutorial
-    gamemode_rule_create("tutorials", "Tutorials", RuleType.Bool, true, tutorials_mod_icon, "Context-sensitive tutorials try to teach you as you play a match.");
+    gamemode_rule_create("TutorialOverlay", "Tutorials", RuleType.Bool, true, tutorials_mod_icon, "Context-sensitive tutorials try to teach you as you play a match.");
 
-    gamemode_rule_create("tut_guide", "Tutorial Guide", RuleType.Bool, true, tut_guide_mod_icon, "NPC Guide will show and explain the game to you.");
+    gamemode_rule_create("TutorialGuide", "Tutorial Guide", RuleType.Bool, true, tut_guide_mod_icon, "NPC Guide will show and explain the game to you.");
 
 
     // number rules
