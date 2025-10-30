@@ -56,7 +56,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "equal_colors"] = true;
     forced_rules[? "dark_color"] = false;
     forced_rules[? "base_colors_only"] = true;
-    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? "color_orbs_energy_lock"] = true;
     forced_rules[? "orbs_energy_min_lock"] = false;
     forced_rules[? "bad_status_effects"] = false;
@@ -89,7 +89,7 @@ function define_rule_presets_DB(presets) {
     forced_rules = preset.forced_rules;
     forced_rules[? "guy_shield_power"] = false;
     forced_rules[? "death_limit"] = false;
-    forced_rules[? "dark_orb_energy_lock"] = false;
+    forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? "bad_status_effects"] = false;
     forced_rules[? "turrets"] = false;
     forced_rules[? "cannons"] = false;
@@ -131,7 +131,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "random_item_spawner"] = true;
     default_rules[? "base_crystals"] = true;
     default_rules[? RuleID.WeakTerrain] = true;
-    default_rules[? "dark_orb_energy_lock"] = true;
+    default_rules[? RuleID.DarkOrbEnergyLock] = true;
     default_rules[? "equal_colors"] = true;
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;

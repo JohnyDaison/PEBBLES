@@ -9,7 +9,7 @@ function define_rule_categories_DB(categories) {
     array_push(category.rules, "score_limit", "time_limit", "sudden_death_start", "darkness");
     
     category = categories.add("Colors and Energy");
-    array_push(category.rules, "equal_colors", "dark_color", "base_colors_only", "bad_status_effects", "abilities", "dark_orb_energy_lock", "color_orbs_energy_lock", "orbs_energy_min_lock");
+    array_push(category.rules, "equal_colors", "dark_color", "base_colors_only", "bad_status_effects", "abilities", RuleID.DarkOrbEnergyLock, "color_orbs_energy_lock", "orbs_energy_min_lock");
     
     category = categories.add("Terrain and Devices");
     array_push(category.rules, RuleID.WeakTerrain, RuleID.IndestructibleTerrain, RuleID.RegenerateTerrain, "cannons", "turrets", "mob_portals", "flag_capture");

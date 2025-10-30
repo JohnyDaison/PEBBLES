@@ -1,5 +1,7 @@
 event_inherited();
 
+var RuleID = self.RuleID;
+
 /// ANIMATION ENDS AND ENERGY REGEN
 if (self.sprite_index != no_sprite && self.image_speed > 0 && self.image_index + self.image_speed >= self.image_number) {
     // ADD TO ORBIT
@@ -87,7 +89,7 @@ if (rule_get_state("color_orbs_energy_lock") && self.my_color != g_dark && self.
     self.energy = self.base_energy;
 }
 
-if (rule_get_state("dark_orb_energy_lock") && self.my_color == g_dark && self.energy != self.base_energy) {
+if (rule_get_state(RuleID.DarkOrbEnergyLock) && self.my_color == g_dark && self.energy != self.base_energy) {
     self.energy = self.base_energy;
 }
 
