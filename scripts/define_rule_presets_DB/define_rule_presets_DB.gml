@@ -53,7 +53,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? "base_crystals"] = true;
-    forced_rules[? "equal_colors"] = true;
+    forced_rules[? RuleID.EqualColors] = true;
     forced_rules[? "dark_color"] = false;
     forced_rules[? "base_colors_only"] = true;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
@@ -104,7 +104,7 @@ function define_rule_presets_DB(presets) {
     default_rules = preset.default_rules;
     default_rules[? "base_crystals"] = true;
     default_rules[? RuleID.HpDeath] = true;
-    default_rules[? "equal_colors"] = true;
+    default_rules[? RuleID.EqualColors] = true;
     default_rules[? "base_colors_only"] = true;
     default_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
     default_rules[? "artifacts"] = true;
@@ -132,7 +132,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? "base_crystals"] = true;
     default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? RuleID.DarkOrbEnergyLock] = true;
-    default_rules[? "equal_colors"] = true;
+    default_rules[? RuleID.EqualColors] = true;
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;
     default_rules[? "abilities"] = true;

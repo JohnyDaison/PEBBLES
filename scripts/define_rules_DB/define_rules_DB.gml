@@ -17,6 +17,7 @@ function define_rules_DB() {
         "ColorOrbsEnergyLock",
         "ColorOrbsEnergyMinLock",
         "CurveBalls",
+        "EqualColors",
     ];
 
     // rules
@@ -40,7 +41,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("CurveBalls", "Curve Balls", RuleType.Bool, true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
-    gamemode_rule_create("equal_colors", "Equal Colors", RuleType.Bool, true, equal_colors_mod_icon, "All Colors are equal in damage.");
+    gamemode_rule_create("EqualColors", "Equal Colors", RuleType.Bool, true, equal_colors_mod_icon, "All Colors are equal in damage.");
     
     gamemode_rule_create("base_colors_only", "Base Colors Only", RuleType.Bool, true, base_colors_only_mod_icon, "No multi-Color combos.");
     
