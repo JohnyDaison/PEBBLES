@@ -819,6 +819,7 @@
     {"name":"drop_inv_item","order":6,"path":"scripts/drop_inv_item/drop_inv_item.yy",},
     {"name":"ds_list_of_map_destroy","order":14,"path":"scripts/ds_list_of_map_destroy/ds_list_of_map_destroy.yy",},
     {"name":"DsRegistryEntry","order":4,"path":"scripts/DsRegistryEntry/DsRegistryEntry.yy",},
+    {"name":"DynamicEnum","order":10,"path":"scripts/DynamicEnum/DynamicEnum.yy",},
     {"name":"elephant_command","order":13,"path":"scripts/elephant_command/elephant_command.yy",},
     {"name":"empty_display","order":3,"path":"scripts/empty_display/empty_display.yy",},
     {"name":"end_test_script","order":9,"path":"scripts/end_test_script/end_test_script.yy",},
