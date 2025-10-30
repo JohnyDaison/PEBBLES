@@ -75,7 +75,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "guy_shield_power"] = false;
     forced_rules[? "death_limit"] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
-    forced_rules[? "curve_balls"] = false;
+    forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? "flag_capture"] = false;
 
     default_rules = preset.default_rules;
@@ -99,7 +99,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "lightning_strikes"] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
-    forced_rules[? "curve_balls"] = false;
+    forced_rules[? RuleID.CurveBalls] = false;
 
     default_rules = preset.default_rules;
     default_rules[? "base_crystals"] = true;

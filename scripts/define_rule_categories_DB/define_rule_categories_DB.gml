@@ -18,5 +18,5 @@ function define_rule_categories_DB(categories) {
     array_push(category.rules, "random_item_spawner", "snakes_on_a_plane", "bolt_rain", "slime_mob_rain", "artifacts", "lightning_strikes");
     
     category = categories.add("Other");
-    array_push(category.rules, RuleID.AlwaysSliding, "curve_balls", "shield_push", "tutorials", "tut_guide");
+    array_push(category.rules, RuleID.AlwaysSliding, RuleID.CurveBalls, "shield_push", "tutorials", "tut_guide");
 }

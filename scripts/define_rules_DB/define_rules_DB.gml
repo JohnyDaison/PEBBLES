@@ -16,6 +16,7 @@ function define_rules_DB() {
         "DarkOrbEnergyLock",
         "ColorOrbsEnergyLock",
         "ColorOrbsEnergyMinLock",
+        "CurveBalls",
     ];
 
     // rules
@@ -37,7 +38,7 @@ function define_rules_DB() {
     
     gamemode_rule_create("ColorOrbsEnergyMinLock", "Color Orb Energy min-lock", RuleType.Bool, true, orbs_energy_min_lock_mod_on_icon, "Color Orb energy will not go below 100%.");
 
-    gamemode_rule_create("curve_balls", "Curve Balls", RuleType.Bool, true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
+    gamemode_rule_create("CurveBalls", "Curve Balls", RuleType.Bool, true, heavy_shots_mod_icon, "Projectiles are heavier and their gravity applies immediately.");
     
     gamemode_rule_create("equal_colors", "Equal Colors", RuleType.Bool, true, equal_colors_mod_icon, "All Colors are equal in damage.");
     
