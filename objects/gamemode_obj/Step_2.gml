@@ -56,7 +56,7 @@ if(!singleton_obj.paused && game_started && !game_ended)
         }   
     }
 
-    if(rule_get_state("random_item_spawner"))
+    if(rule_get_state(RuleID.RandomItemSpawner))
     {
         if(!instance_exists(pickup_spawner_obj))
         {

@@ -64,12 +64,12 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.Turrets] = false;
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.MobPortals] = false;
-    forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "bolt_rain"] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.Snakes] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.BoltRain] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? "base_crystal_hp"] = true;
     forced_rules[? "base_crystal_shield_power"] = false;
     forced_rules[? "guy_shield_power"] = false;
@@ -94,10 +94,10 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.Turrets] = false;
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.MobPortals] = false;
-    forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "bolt_rain"] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.Snakes] = false;
+    forced_rules[? RuleID.BoltRain] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? RuleID.CurveBalls] = false;
 
@@ -107,7 +107,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.EqualColors] = true;
     default_rules[? RuleID.BaseColorsOnly] = true;
     default_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
-    default_rules[? "artifacts"] = true;
+    default_rules[? RuleID.Artifacts] = true;
     default_rules[? RuleID.ShieldPush] = true;
     
     default_rules[? "base_crystal_hp"] = 5;
@@ -122,13 +122,13 @@ function define_rule_presets_DB(presets) {
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.MobPortals] = false;
     forced_rules[? RuleID.HolographicSpawners] = true;
-    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? "base_crystal_shield_power"] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
     default_rules = preset.default_rules;
-    default_rules[? "random_item_spawner"] = true;
+    default_rules[? RuleID.RandomItemSpawner] = true;
     default_rules[? RuleID.BaseCrystals] = true;
     default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? RuleID.DarkOrbEnergyLock] = true;
@@ -136,7 +136,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.DarkColor] = true;
     default_rules[? RuleID.NegativeStatusEffects] = true;
     default_rules[? RuleID.Abilities] = true;
-    default_rules[? "artifacts"] = true;
+    default_rules[? RuleID.Artifacts] = true;
     
     default_rules[? "base_crystal_hp"] = 7;
     default_rules[? "score_limit"] = 200;
@@ -156,9 +156,9 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.NegativeStatusEffects] = true;
     default_rules[? RuleID.Abilities] = true;
 
-    default_rules[? "snakes_on_a_plane"] = true;
-    default_rules[? "slime_mob_rain"] = true;
-    default_rules[? "artifacts"] = true;
+    default_rules[? RuleID.Snakes] = true;
+    default_rules[? RuleID.SlimeMobRain] = true;
+    default_rules[? RuleID.Artifacts] = true;
     
     default_rules[? "base_crystal_hp"] = true;
     default_rules[? "base_crystal_shield_power"] = true;

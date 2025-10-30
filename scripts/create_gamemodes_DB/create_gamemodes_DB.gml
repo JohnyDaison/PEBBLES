@@ -35,8 +35,8 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Turrets] = true;
     forced_rules[? RuleID.Cannons] = false;
     forced_rules[? RuleID.MobPortals] = true;
-    forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? RuleID.Snakes] = false;
+    forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
@@ -52,14 +52,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? RuleID.DarkColor] = true;
-    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = true;
     forced_rules[? RuleID.Abilities] = false;
     forced_rules[? "tutorials"] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;
@@ -83,9 +83,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? "tut_guide"] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     
     forced_rules[? "base_crystal_hp"] = false;
@@ -144,7 +144,7 @@ function create_gamemodes_DB() {
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.Turrets] = true;
     default_rules[? RuleID.Cannons] = true;
-    default_rules[? "snakes_on_a_plane"] = false;
+    default_rules[? RuleID.Snakes] = false;
     default_rules[? RuleID.HpDeath] = true;
     default_rules[? RuleID.DarkColor] = true;
     default_rules[? RuleID.NegativeStatusEffects] = true;
@@ -169,9 +169,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.HolographicSpawners] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.Snakes] = false;
+    forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
@@ -187,9 +187,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = true;
     forced_rules[? RuleID.BaseColorsOnly] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;
@@ -219,9 +219,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "snakes_on_a_plane"] = false;
-    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.Snakes] = false;
+    forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.DarkColor] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
@@ -236,9 +236,9 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
     forced_rules[? RuleID.BaseColorsOnly] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = false;
     
     forced_rules[? "base_crystal_hp"] = false;
@@ -269,8 +269,8 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "flag_capture"] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? "tut_guide"] = false;
     
@@ -298,7 +298,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Turrets] = true;
     forced_rules[? RuleID.Cannons] = true;
     forced_rules[? RuleID.MobPortals] = true;
-    forced_rules[? "snakes_on_a_plane"] = false;
+    forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
@@ -314,14 +314,14 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? RuleID.DarkColor] = true;
-    forced_rules[? "bolt_rain"] = false;
+    forced_rules[? RuleID.BoltRain] = false;
     forced_rules[? RuleID.NegativeStatusEffects] = true;
     forced_rules[? RuleID.Abilities] = true;
     forced_rules[? "tutorials"] = false;
-    forced_rules[? "random_item_spawner"] = false;
-    forced_rules[? "slime_mob_rain"] = false;
-    forced_rules[? "artifacts"] = false;
-    forced_rules[? "lightning_strikes"] = false;
+    forced_rules[? RuleID.RandomItemSpawner] = false;
+    forced_rules[? RuleID.SlimeMobRain] = false;
+    forced_rules[? RuleID.Artifacts] = false;
+    forced_rules[? RuleID.LightningStrikes] = false;
     
     forced_rules[? "base_crystal_hp"] = false;
     forced_rules[? "base_crystal_shield_power"] = false;

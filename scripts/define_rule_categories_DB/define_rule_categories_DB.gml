@@ -15,7 +15,7 @@ function define_rule_categories_DB(categories) {
     array_push(category.rules, RuleID.WeakTerrain, RuleID.IndestructibleTerrain, RuleID.RegenerateTerrain, RuleID.Cannons, RuleID.Turrets, RuleID.MobPortals, "flag_capture");
     
     category = categories.add("Phenomena");
-    array_push(category.rules, "random_item_spawner", "snakes_on_a_plane", "bolt_rain", "slime_mob_rain", "artifacts", "lightning_strikes");
+    array_push(category.rules, RuleID.RandomItemSpawner, RuleID.Snakes, RuleID.BoltRain, RuleID.SlimeMobRain, RuleID.Artifacts, RuleID.LightningStrikes);
     
     category = categories.add("Other");
     array_push(category.rules, RuleID.AlwaysSliding, RuleID.CurveBalls, RuleID.ShieldPush, "tutorials", "tut_guide");

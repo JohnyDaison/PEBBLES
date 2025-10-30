@@ -23,12 +23,12 @@ place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
 place.forced_rules[? "flag_capture"] = false;
 
-place.forced_rules[? "random_item_spawner"] = false;
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "bolt_rain"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "artifacts"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.BoltRain] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.Artifacts] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 
 
 place = add_place_in_room(two_towers_arena, "Two Towers", 0,0, 2048,2048, 0);
@@ -46,16 +46,16 @@ place.forced_rules[? RuleID.HolographicSpawners] = true;
 place.forced_rules[? RuleID.HpDeath] = true;
 place.forced_rules[? RuleID.DarkColor] = false;
 place.forced_rules[? RuleID.DarkOrbEnergyLock] = false;
-place.forced_rules[? "random_item_spawner"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
 place.forced_rules[? RuleID.WeakTerrain] = false;
 place.forced_rules[? RuleID.IndestructibleTerrain] = false;
 place.forced_rules[? RuleID.RegenerateTerrain] = false;
-place.forced_rules[? "random_item_spawner"] = false;
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "bolt_rain"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "artifacts"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.BoltRain] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.Artifacts] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 place.forced_rules[? RuleID.Abilities] = false;
 place.forced_rules[? "death_limit"] = true;
 place.forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
@@ -69,10 +69,10 @@ place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
 
-place.forced_rules[? "random_item_spawner"] = false;
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 
 
 place = add_place_in_room(less_vertigo_arena, "New Vertigo", 0,0, 3840,3456, 0);
@@ -83,11 +83,11 @@ place.forced_rules[? RuleID.Turrets] = false;
 place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
 
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 
-place.default_rules[? "random_item_spawner"] = false;
+place.default_rules[? RuleID.RandomItemSpawner] = false;
 
 
 place = add_place_in_room(mayhemburger_arena, "Mayhemburger", 0,0, 4896,2848, 0);
@@ -106,12 +106,12 @@ place.forced_rules[? RuleID.Cannons] = false;
 place.forced_rules[? RuleID.MobPortals] = false;
 place.forced_rules[? "flag_capture"] = false;
 
-place.forced_rules[? "random_item_spawner"] = false;
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "bolt_rain"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "artifacts"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.BoltRain] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.Artifacts] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 
 
 place = add_place_in_room(face_arena, "Face Arena", 0,0, 3104,2016, 0);

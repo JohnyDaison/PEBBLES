@@ -28,6 +28,13 @@ function define_rules_DB() {
         "DarkColor",
         "NegativeStatusEffects",
         "Abilities",
+    
+        "RandomItemSpawner",
+        "Snakes",
+        "BoltRain",
+        "SlimeMobRain",
+        "Artifacts",
+        "LightningStrikes",
     ];
 
     // rules
@@ -75,17 +82,17 @@ function define_rules_DB() {
 
 
     // phenomena
-    gamemode_rule_create("random_item_spawner", "Random Items", RuleType.Bool, true, random_item_spawner_mod_icon, "Items will spawn randomly around the arena.");
+    gamemode_rule_create("RandomItemSpawner", "Random Items", RuleType.Bool, true, random_item_spawner_mod_icon, "Items will spawn randomly around the arena.");
 
-    gamemode_rule_create("snakes_on_a_plane", "Snakes", RuleType.Bool, true, snakes2_mod_icon, "Snakes are allowed to exist and will spawn inside destructible blocks.");
+    gamemode_rule_create("Snakes", "Snakes", RuleType.Bool, true, snakes2_mod_icon, "Snakes are allowed to exist and will spawn inside destructible blocks.");
 
-    gamemode_rule_create("bolt_rain", "Bolt rain", RuleType.Bool, true, bolt_rain_mod_icon, "Showers of stray Barrage shots will fall down periodically.");
+    gamemode_rule_create("BoltRain", "Bolt rain", RuleType.Bool, true, bolt_rain_mod_icon, "Showers of stray Barrage shots will fall down periodically.");
 
-    gamemode_rule_create("slime_mob_rain", "Slime-fall", RuleType.Bool, true, slime_mob_rain_mod_icon, "Ocasionally a bunch of Slimes will from the sky.");
+    gamemode_rule_create("SlimeMobRain", "Slime-fall", RuleType.Bool, true, slime_mob_rain_mod_icon, "Ocasionally a bunch of Slimes will from the sky.");
 
-    gamemode_rule_create("artifacts", "Artifacts", RuleType.Bool, true, artifacts_mod_icon, "Artifacts will appear.");
+    gamemode_rule_create("Artifacts", "Artifacts", RuleType.Bool, true, artifacts_mod_icon, "Artifacts will appear.");
 
-    gamemode_rule_create("lightning_strikes", "Lightning", RuleType.Bool, true, lightning_strikes_mod2_icon, "Lightning strikes... again!");
+    gamemode_rule_create("LightningStrikes", "Lightning", RuleType.Bool, true, lightning_strikes_mod2_icon, "Lightning strikes... again!");
 
 
     // tutorial

@@ -62,12 +62,12 @@ ds_list_add(place.level_configs_list, "movement", "no_attacks");
 place.forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
 place.forced_rules[? RuleID.DarkColor] = false;
 place.forced_rules[? RuleID.Abilities] = false;
-place.forced_rules[? "random_item_spawner"] = false;
-place.forced_rules[? "snakes_on_a_plane"] = false;
-place.forced_rules[? "bolt_rain"] = false;
-place.forced_rules[? "slime_mob_rain"] = false;
-place.forced_rules[? "artifacts"] = false;
-place.forced_rules[? "lightning_strikes"] = false;
+place.forced_rules[? RuleID.RandomItemSpawner] = false;
+place.forced_rules[? RuleID.Snakes] = false;
+place.forced_rules[? RuleID.BoltRain] = false;
+place.forced_rules[? RuleID.SlimeMobRain] = false;
+place.forced_rules[? RuleID.Artifacts] = false;
+place.forced_rules[? RuleID.LightningStrikes] = false;
 
 
 place = add_place_in_room(room_displays_test, "Displays", 0,0, 4800,4800, 384);
@@ -100,7 +100,7 @@ place.description = "Room for testing snakes... it's a mess, what did you expect
 place.max_team_count = 2;
 ds_list_add(place.level_configs_list, "match");
 
-place.forced_rules[? "snakes_on_a_plane"] = true;
+place.forced_rules[? RuleID.Snakes] = true;
 place.forced_rules[? RuleID.BaseCrystals] = true;
 place.default_rules[? RuleID.DarkColor] = true;
 place.default_rules[? RuleID.Abilities] = true;
