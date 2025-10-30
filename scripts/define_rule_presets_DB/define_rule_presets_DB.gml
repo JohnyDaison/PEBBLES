@@ -51,7 +51,7 @@ function define_rule_presets_DB(presets) {
     
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.HpDeath] = false;
-    forced_rules[? "holographic_spawners"] = true;
+    forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? "base_crystals"] = true;
     forced_rules[? "equal_colors"] = true;
     forced_rules[? "dark_color"] = false;
@@ -121,7 +121,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "turrets"] = false;
     forced_rules[? "cannons"] = false;
     forced_rules[? "mob_portals"] = false;
-    forced_rules[? "holographic_spawners"] = true;
+    forced_rules[? RuleID.HolographicSpawners] = true;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? "base_crystal_shield_power"] = false;

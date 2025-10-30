@@ -1,6 +1,9 @@
 /// @description INIT AND PARAMS
 event_inherited();
 
+self.RuleID = DB.RuleID_DynEnum.dynEnum;
+var RuleID = self.RuleID;
+
 name = "Base Crystal";
 self.hp = 10;
 self.immovable = true;
@@ -30,7 +33,7 @@ if (!is_undefined(rule_hp) && rule_hp != false) {
     damage = hp - rule_hp;
 }
 
-holographic = rule_get_state("holographic_spawners");
+holographic = rule_get_state(RuleID.HolographicSpawners);
 
 if(gamemode_obj.inited_player_count == gamemode_obj.player_count)
 {

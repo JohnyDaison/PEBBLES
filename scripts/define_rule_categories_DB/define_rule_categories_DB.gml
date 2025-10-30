@@ -3,7 +3,7 @@ function define_rule_categories_DB(categories) {
     var category;
     
     category = categories.add("Death and HP");
-    array_push(category.rules, RuleID.HpDeath, "holographic_spawners", "base_crystals", "base_crystal_hp", "base_crystal_shield_power", "guy_shield_power", "death_limit");
+    array_push(category.rules, RuleID.HpDeath, RuleID.HolographicSpawners, "base_crystals", "base_crystal_hp", "base_crystal_shield_power", "guy_shield_power", "death_limit");
     
     category = categories.add("Important");
     array_push(category.rules, "score_limit", "time_limit", "sudden_death_start", "darkness");

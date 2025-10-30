@@ -42,7 +42,7 @@ place.forced_rules[? "cannons"] = false;
 place.forced_rules[? "mob_portals"] = false;
 place.forced_rules[? "flag_capture"] = false;
 
-place.forced_rules[? "holographic_spawners"] = true;
+place.forced_rules[? RuleID.HolographicSpawners] = true;
 place.forced_rules[? RuleID.HpDeath] = true;
 place.forced_rules[? "dark_color"] = false;
 place.forced_rules[? "dark_orb_energy_lock"] = false;

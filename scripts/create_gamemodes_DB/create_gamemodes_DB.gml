@@ -45,7 +45,7 @@ function create_gamemodes_DB() {
     forced_rules[? "base_colors_only"] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? RuleID.HpDeath] = true;
-    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "weak_terrain"] = false;
     forced_rules[? "indestr_terrain"] = false;
@@ -168,7 +168,7 @@ function create_gamemodes_DB() {
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "base_crystals"] = false;
-    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "bolt_rain"] = false;
@@ -215,7 +215,7 @@ function create_gamemodes_DB() {
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "base_crystals"] = false;
-    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "weak_terrain"] = false;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = false;
@@ -307,7 +307,7 @@ function create_gamemodes_DB() {
     forced_rules[? "base_colors_only"] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? RuleID.HpDeath] = true;
-    forced_rules[? "holographic_spawners"] = false;
+    forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? "weak_terrain"] = false;
     forced_rules[? "indestr_terrain"] = false;
