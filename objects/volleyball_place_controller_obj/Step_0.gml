@@ -142,7 +142,7 @@ else
 
 with(wall_obj)
 {
-    if(rule_get_state("indestr_terrain"))
+    if(rule_get_state(RuleID.IndestructibleTerrain))
     {
         color_locked = true;
     }

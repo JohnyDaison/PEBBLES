@@ -12,7 +12,7 @@ function define_rule_categories_DB(categories) {
     array_push(category.rules, "equal_colors", "dark_color", "base_colors_only", "bad_status_effects", "abilities", "dark_orb_energy_lock", "color_orbs_energy_lock", "orbs_energy_min_lock");
     
     category = categories.add("Terrain and Devices");
-    array_push(category.rules, RuleID.WeakTerrain, "indestr_terrain", "regenerate_terrain", "cannons", "turrets", "mob_portals", "flag_capture");
+    array_push(category.rules, RuleID.WeakTerrain, RuleID.IndestructibleTerrain, "regenerate_terrain", "cannons", "turrets", "mob_portals", "flag_capture");
     
     category = categories.add("Phenomena");
     array_push(category.rules, "random_item_spawner", "snakes_on_a_plane", "bolt_rain", "slime_mob_rain", "artifacts", "lightning_strikes");

@@ -25,7 +25,8 @@ if(rule_get_state(RuleID.WeakTerrain))
 {
     hp = 1;
 }
-if(rule_get_state("indestr_terrain"))
+
+if(rule_get_state(RuleID.IndestructibleTerrain))
 {
     cover = cover_indestr;
 }

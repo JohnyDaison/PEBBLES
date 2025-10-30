@@ -9,6 +9,7 @@ function define_rules_DB() {
         "HpDeath",
         "HolographicSpawners",
         "WeakTerrain",
+        "IndestructibleTerrain",
     ];
     
     // rules
@@ -18,7 +19,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("WeakTerrain", "Weak Terrain", RuleType.Bool, true, weak_terrain_mod3_icon, "Destructible terrain has 1/3 of normal HP.");
 
-    gamemode_rule_create("indestr_terrain", "Indestructible Terrain", RuleType.Bool, true, indestr_terrain_mod_icon, "All terrain is indestructible.");
+    gamemode_rule_create("IndestructibleTerrain", "Indestructible Terrain", RuleType.Bool, true, indestr_terrain_mod_icon, "All terrain is indestructible.");
 
     gamemode_rule_create("regenerate_terrain", "Regenerate Terrain", RuleType.Bool, true, regenerate_terrain_mod_icon, "Destroyed terrain will reform, with a delay.");
     
