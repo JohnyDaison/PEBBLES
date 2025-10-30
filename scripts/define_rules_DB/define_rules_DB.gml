@@ -8,6 +8,7 @@ function define_rules_DB() {
     self.convertedRules = [ 
         "HpDeath",
         "HolographicSpawners",
+        "WeakTerrain",
     ];
     
     // rules
@@ -15,7 +16,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("HolographicSpawners", "Holographic Spawners", RuleType.Bool, true, holo_spawners_mod2_icon, "Base Crystals can't be damaged by attacks. Respawning the Player will still damage them.");
 
-    gamemode_rule_create("weak_terrain", "Weak Terrain", RuleType.Bool, true, weak_terrain_mod3_icon, "Destructible terrain has 1/3 of normal HP.");
+    gamemode_rule_create("WeakTerrain", "Weak Terrain", RuleType.Bool, true, weak_terrain_mod3_icon, "Destructible terrain has 1/3 of normal HP.");
 
     gamemode_rule_create("indestr_terrain", "Indestructible Terrain", RuleType.Bool, true, indestr_terrain_mod_icon, "All terrain is indestructible.");
 

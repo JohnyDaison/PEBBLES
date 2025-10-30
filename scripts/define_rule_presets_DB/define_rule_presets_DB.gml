@@ -7,7 +7,7 @@ function define_rule_presets_DB(presets) {
     preset = presets.add("basic_bumping", "Basic Bumping");
     
     forced_rules = preset.forced_rules;
-    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? "indestr_terrain"] = true;
     forced_rules[? "regenerate_terrain"] = false;
     forced_rules[? "death_limit"] = false;
@@ -22,7 +22,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "regenerate_terrain"] = true;
 
     default_rules = preset.default_rules;
-    default_rules[? "weak_terrain"] = true;
+    default_rules[? RuleID.WeakTerrain] = true;
     
     
     preset = presets.add("court_attrition", "Court Attrition");
@@ -130,7 +130,7 @@ function define_rule_presets_DB(presets) {
     default_rules = preset.default_rules;
     default_rules[? "random_item_spawner"] = true;
     default_rules[? "base_crystals"] = true;
-    default_rules[? "weak_terrain"] = true;
+    default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? "dark_orb_energy_lock"] = true;
     default_rules[? "equal_colors"] = true;
     default_rules[? "dark_color"] = true;

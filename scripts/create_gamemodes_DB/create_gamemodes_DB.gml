@@ -47,7 +47,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
-    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = false;
     forced_rules[? "always_sliding"] = false;
@@ -216,7 +216,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HpDeath] = false;
     forced_rules[? "base_crystals"] = false;
     forced_rules[? RuleID.HolographicSpawners] = false;
-    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = false;
     forced_rules[? "random_item_spawner"] = false;
@@ -250,7 +250,7 @@ function create_gamemodes_DB() {
     forced_rules[? "sudden_death_start"] = false;
 
     default_rules = gm[? "default_rules"];
-    default_rules[? "weak_terrain"] = true;
+    default_rules[? RuleID.WeakTerrain] = true;
     default_rules[? "regenerate_terrain"] = true;
     default_rules[? "score_limit"] = 10;
 
@@ -281,7 +281,7 @@ function create_gamemodes_DB() {
     default_rules[? "dark_color"] = true;
     default_rules[? "bad_status_effects"] = true;
     default_rules[? "abilities"] = true;
-    default_rules[? "weak_terrain"] = true;
+    default_rules[? RuleID.WeakTerrain] = true;
 
 
     // Old Training
@@ -309,7 +309,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? "base_crystals"] = false;
-    forced_rules[? "weak_terrain"] = false;
+    forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? "indestr_terrain"] = false;
     forced_rules[? "regenerate_terrain"] = false;
     forced_rules[? "always_sliding"] = false;

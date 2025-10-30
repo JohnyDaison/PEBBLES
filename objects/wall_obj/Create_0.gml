@@ -1,5 +1,8 @@
 event_inherited();
 
+self.RuleID = DB.RuleID_DynEnum.dynEnum;
+var RuleID = self.RuleID;
+
 image_speed = 0;
 my_next_color = my_color;
 my_old_color = my_color;
@@ -18,7 +21,7 @@ max_energy = DB.terrain_config[? "max_energy"];
 hp = 3;
 core = core_energy;
 
-if(rule_get_state("weak_terrain"))
+if(rule_get_state(RuleID.WeakTerrain))
 {
     hp = 1;
 }
