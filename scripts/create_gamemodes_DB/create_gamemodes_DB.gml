@@ -39,7 +39,7 @@ function create_gamemodes_DB() {
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
-    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "curve_balls"] = false;
     forced_rules[? "equal_colors"] = false;
     forced_rules[? "base_colors_only"] = false;
@@ -174,7 +174,7 @@ function create_gamemodes_DB() {
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
-    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "shield_push"] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? "cannons"] = false;
@@ -225,7 +225,7 @@ function create_gamemodes_DB() {
     forced_rules[? "dark_color"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
-    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "tut_guide"] = false;
     forced_rules[? "cannons"] = false;
     forced_rules[? "turrets"] = false;
@@ -301,7 +301,7 @@ function create_gamemodes_DB() {
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = false;
-    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "curve_balls"] = false;
     forced_rules[? "equal_colors"] = false;
     forced_rules[? "base_colors_only"] = false;

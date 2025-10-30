@@ -58,7 +58,7 @@ place.forced_rules[? "artifacts"] = false;
 place.forced_rules[? "lightning_strikes"] = false;
 place.forced_rules[? "abilities"] = false;
 place.forced_rules[? "death_limit"] = true;
-place.forced_rules[? "orbs_energy_min_lock"] = true;
+place.forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
 
 place = add_place_in_room(vertigo_arena, "Vertigo", 0,0, 3072,3072, 0);

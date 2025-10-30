@@ -58,7 +58,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "base_colors_only"] = true;
     forced_rules[? RuleID.DarkOrbEnergyLock] = false;
     forced_rules[? RuleID.ColorOrbsEnergyLock] = true;
-    forced_rules[? "orbs_energy_min_lock"] = false;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? "bad_status_effects"] = false;
     forced_rules[? "abilities"] = false;
     forced_rules[? "turrets"] = false;
@@ -106,7 +106,7 @@ function define_rule_presets_DB(presets) {
     default_rules[? RuleID.HpDeath] = true;
     default_rules[? "equal_colors"] = true;
     default_rules[? "base_colors_only"] = true;
-    default_rules[? "orbs_energy_min_lock"] = true;
+    default_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
     default_rules[? "artifacts"] = true;
     default_rules[? "shield_push"] = true;
     
@@ -125,7 +125,7 @@ function define_rule_presets_DB(presets) {
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? "base_crystal_shield_power"] = false;
-    forced_rules[? "orbs_energy_min_lock"] = true;
+    forced_rules[? RuleID.ColorOrbsEnergyMinLock] = true;
 
     default_rules = preset.default_rules;
     default_rules[? "random_item_spawner"] = true;
