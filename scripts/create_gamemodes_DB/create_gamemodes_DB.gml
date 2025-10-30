@@ -50,7 +50,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "always_sliding"] = false;
+    forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? "dark_color"] = true;
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? "bad_status_effects"] = true;
@@ -312,7 +312,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
     forced_rules[? RuleID.RegenerateTerrain] = false;
-    forced_rules[? "always_sliding"] = false;
+    forced_rules[? RuleID.AlwaysSliding] = false;
     forced_rules[? "dark_color"] = true;
     forced_rules[? "bolt_rain"] = false;
     forced_rules[? "bad_status_effects"] = true;

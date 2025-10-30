@@ -11,6 +11,7 @@ function define_rules_DB() {
         "WeakTerrain",
         "IndestructibleTerrain",
         "RegenerateTerrain",
+        "AlwaysSliding",
     ];
     
     // rules
@@ -24,7 +25,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("RegenerateTerrain", "Regenerate Terrain", RuleType.Bool, true, regenerate_terrain_mod_icon, "Destroyed terrain will reform, with a delay.");
     
-    gamemode_rule_create("always_sliding", "Slippery Floor", RuleType.Bool, true, always_sliding_mod_icon, "You're always sliding around.");
+    gamemode_rule_create("AlwaysSliding", "Slippery Floor", RuleType.Bool, true, always_sliding_mod_icon, "You're always sliding around.");
 
     gamemode_rule_create("dark_orb_energy_lock", "Dark Orb Energy lock", RuleType.Bool, true, dark_orb_energy_lock_mod_icon, "Dark Orb energy will always be at 100%.");
     
