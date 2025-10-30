@@ -1534,7 +1534,7 @@ if(!self.frozen_in_time)
                 }
             
                 if(first_color != g_dark && self.current_slot < self.slot_maxnumber
-                && (!rule_get_state("base_colors_only") || first_color == -1 || new_color == first_color))
+                && (!rule_get_state(RuleID.BaseColorsOnly) || first_color == -1 || new_color == first_color))
                 {
                     if(self.current_slot == 0)
                     {

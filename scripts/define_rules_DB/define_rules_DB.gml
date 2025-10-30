@@ -18,6 +18,7 @@ function define_rules_DB() {
         "ColorOrbsEnergyMinLock",
         "CurveBalls",
         "EqualColors",
+        "BaseColorsOnly",
     ];
 
     // rules
@@ -43,7 +44,7 @@ function define_rules_DB() {
     
     gamemode_rule_create("EqualColors", "Equal Colors", RuleType.Bool, true, equal_colors_mod_icon, "All Colors are equal in damage.");
     
-    gamemode_rule_create("base_colors_only", "Base Colors Only", RuleType.Bool, true, base_colors_only_mod_icon, "No multi-Color combos.");
+    gamemode_rule_create("BaseColorsOnly", "Base Colors Only", RuleType.Bool, true, base_colors_only_mod_icon, "No multi-Color combos.");
     
     gamemode_rule_create("shield_push", "Shield Push", RuleType.Bool, true, shield_push_mod_icon, "Shield pushes away mobs and characters.");
 

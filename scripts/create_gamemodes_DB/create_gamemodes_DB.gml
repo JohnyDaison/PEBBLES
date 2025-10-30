@@ -42,7 +42,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
-    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? RuleID.BaseColorsOnly] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
@@ -186,7 +186,7 @@ function create_gamemodes_DB() {
     forced_rules[? "tutorials"] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = true;
-    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? RuleID.BaseColorsOnly] = false;
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "artifacts"] = false;
     forced_rules[? "lightning_strikes"] = false;
@@ -235,7 +235,7 @@ function create_gamemodes_DB() {
     forced_rules[? "tutorials"] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
-    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? RuleID.BaseColorsOnly] = false;
     forced_rules[? "slime_mob_rain"] = false;
     forced_rules[? "artifacts"] = false;
     forced_rules[? "lightning_strikes"] = false;
@@ -304,7 +304,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.ColorOrbsEnergyMinLock] = false;
     forced_rules[? RuleID.CurveBalls] = false;
     forced_rules[? RuleID.EqualColors] = false;
-    forced_rules[? "base_colors_only"] = false;
+    forced_rules[? RuleID.BaseColorsOnly] = false;
     forced_rules[? "shield_push"] = true;
     forced_rules[? RuleID.HpDeath] = true;
     forced_rules[? RuleID.HolographicSpawners] = false;
