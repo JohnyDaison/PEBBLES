@@ -49,7 +49,7 @@ function create_gamemodes_DB() {
     forced_rules[? "base_crystals"] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "always_sliding"] = false;
     forced_rules[? "dark_color"] = true;
     forced_rules[? "bolt_rain"] = false;
@@ -218,7 +218,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.HolographicSpawners] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
     forced_rules[? "bolt_rain"] = false;
@@ -251,7 +251,7 @@ function create_gamemodes_DB() {
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.WeakTerrain] = true;
-    default_rules[? "regenerate_terrain"] = true;
+    default_rules[? RuleID.RegenerateTerrain] = true;
     default_rules[? "score_limit"] = 10;
 
 
@@ -267,7 +267,7 @@ function create_gamemodes_DB() {
     forced_rules[? "mob_portals"] = true;
     forced_rules[? "base_crystals"] = true;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "flag_capture"] = false;
     forced_rules[? "random_item_spawner"] = false;
     forced_rules[? "snakes_on_a_plane"] = false;
@@ -311,7 +311,7 @@ function create_gamemodes_DB() {
     forced_rules[? "base_crystals"] = false;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "always_sliding"] = false;
     forced_rules[? "dark_color"] = true;
     forced_rules[? "bolt_rain"] = false;

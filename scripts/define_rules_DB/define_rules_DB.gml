@@ -10,6 +10,7 @@ function define_rules_DB() {
         "HolographicSpawners",
         "WeakTerrain",
         "IndestructibleTerrain",
+        "RegenerateTerrain",
     ];
     
     // rules
@@ -21,7 +22,7 @@ function define_rules_DB() {
 
     gamemode_rule_create("IndestructibleTerrain", "Indestructible Terrain", RuleType.Bool, true, indestr_terrain_mod_icon, "All terrain is indestructible.");
 
-    gamemode_rule_create("regenerate_terrain", "Regenerate Terrain", RuleType.Bool, true, regenerate_terrain_mod_icon, "Destroyed terrain will reform, with a delay.");
+    gamemode_rule_create("RegenerateTerrain", "Regenerate Terrain", RuleType.Bool, true, regenerate_terrain_mod_icon, "Destroyed terrain will reform, with a delay.");
     
     gamemode_rule_create("always_sliding", "Slippery Floor", RuleType.Bool, true, always_sliding_mod_icon, "You're always sliding around.");
 

@@ -9,7 +9,7 @@ function define_rule_presets_DB(presets) {
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.WeakTerrain] = false;
     forced_rules[? RuleID.IndestructibleTerrain] = true;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "death_limit"] = false;
     forced_rules[? "score_limit"] = true;
     forced_rules[? "sudden_death_start"] = false;
@@ -19,7 +19,7 @@ function define_rule_presets_DB(presets) {
     
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = true;
+    forced_rules[? RuleID.RegenerateTerrain] = true;
 
     default_rules = preset.default_rules;
     default_rules[? RuleID.WeakTerrain] = true;
@@ -29,7 +29,7 @@ function define_rule_presets_DB(presets) {
     
     forced_rules = preset.forced_rules;
     forced_rules[? RuleID.IndestructibleTerrain] = false;
-    forced_rules[? "regenerate_terrain"] = false;
+    forced_rules[? RuleID.RegenerateTerrain] = false;
     forced_rules[? "death_limit"] = true;
 
     default_rules = preset.default_rules;
@@ -39,7 +39,7 @@ function define_rule_presets_DB(presets) {
     preset = presets.add("volley_infinite", "Infinite Game");
     
     forced_rules = preset.forced_rules;
-    forced_rules[? "regenerate_terrain"] = true;
+    forced_rules[? RuleID.RegenerateTerrain] = true;
 
     default_rules = preset.default_rules;
     default_rules[? "score_limit"] = false;
