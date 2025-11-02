@@ -5,34 +5,34 @@ enum CONSOLE_MODE {
 }
 
 function init_console_DB() {
-    console_history = ds_list_create();
-    console_history_cur_item = -1;
-    console_history_selection_pos = -1;
-    console_command_history = ds_list_create();
-    console_menu = ds_map_create();
-    console_scripts = ds_map_create();
-    console_vars = ds_map_create();
-    console_modes = ds_map_create();
-    console_watches = ds_list_create();
-    console_secrets = ds_list_create();
-    console_commands_saved = ds_list_create();
-    console_divider_max_steps = 10;
-    console_divider_step_length = 12;
-    console_popup_on_log = false;
-    dumpfile_folder = "dumpfiles";
-    
-    consoleModeStrings = [
+    self.console_history = ds_list_create();
+    self.console_history_cur_item = -1;
+    self.console_history_selection_pos = -1;
+    self.console_command_history = ds_list_create();
+    self.console_menu = ds_map_create();
+    self.console_scripts = ds_map_create();
+    self.console_vars = ds_map_create();
+    self.console_modes = ds_map_create();
+    self.console_watches = ds_list_create();
+    self.console_secrets = ds_list_create();
+    self.console_commands_saved = ds_list_create();
+    self.console_divider_max_steps = 10;
+    self.console_divider_step_length = 12;
+    self.console_popup_on_log = false;
+    self.dumpfile_folder = "dumpfiles";
+
+    self.consoleModeStrings = [
         "play",
         "test",
         "debug"
     ];
-    
-    var ccs = console_commands_saved;
+
+    var ccs = self.console_commands_saved;
 
     ds_list_add(ccs, "mode debug");
     ds_list_add(ccs, "mode test");
     ds_list_add(ccs, "mode play");
-    
+
     /*
     ds_list_add(ccs, "playerquests 1");
     ds_list_add(ccs, "playerquestrecheck 1");
@@ -49,14 +49,14 @@ function init_console_DB() {
     ds_list_add(ccs, "spawn spitter 100");
 
     ds_list_add(ccs, "consolebg");
-    
 
-    objectmap = ds_map_create();
+
+    self.objectmap = ds_map_create();
 
     create_objectmap();
 
-    ds_list_add(console_secrets, "iamcheatsidoodlin", "elephant");
-    
+    ds_list_add(self.console_secrets, "iamcheatsidoodlin", "elephant");
+
     // NOTE: "object [, object, string]" is valid;
     // "object, [object, string]" will be parsed the same as "object, object [, string]"
 
@@ -130,7 +130,7 @@ function init_console_DB() {
     // play
     var play = ds_list_create();
     ds_list_copy(play, common);
-    console_modes[? CONSOLE_MODE.PLAY] = play;
+    self.console_modes[? CONSOLE_MODE.PLAY] = play;
 
 
     // test
@@ -142,7 +142,7 @@ function init_console_DB() {
     ds_list_add(test, "debugkeylist", "circle_precision", "playerskiptoquest", "goto_quest");
 
     ds_list_add(test, "killall", "spawn", "test", "getvalue", "count", "navgraph", "infocursor", "watches");
-    console_modes[? CONSOLE_MODE.TEST] = test;
+    self.console_modes[? CONSOLE_MODE.TEST] = test;
 
 
     // debug
@@ -155,23 +155,22 @@ function init_console_DB() {
     ds_list_add(debug, "dumpinst", "dumplist", "dumpmap");
 
     ds_list_add(debug, "questlist", "questdebug", "playerstartquest", "playerquestrecheck");
-    console_modes[? CONSOLE_MODE.DEBUG] = debug;
+    self.console_modes[? CONSOLE_MODE.DEBUG] = debug;
 
 
 
     ds_list_destroy(common);
 
 
-    console_mode = CONSOLE_MODE.TEST; // play test debug
+    self.console_mode = CONSOLE_MODE.TEST; // play test debug
 
-    if(debug_mode)
-    {
-        console_mode = CONSOLE_MODE.DEBUG;
+    if (debug_mode) {
+        self.console_mode = CONSOLE_MODE.DEBUG;
     }
 
-    debug_keys_list = create_debug_keys_list();
-    
+    self.debug_keys_list = create_debug_keys_list();
+
     read_command_history_file();
-    
+
     create_watch_types();
 }
