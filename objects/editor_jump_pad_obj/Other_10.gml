@@ -1,9 +1,7 @@
-last_color = color;
-color = ceil(g_white*(max_power/DB.max_jump_pad_power));
-if(last_color != color)
-{
-    self.tint = ds_map_find_value(DB.colormap,color);
-    final_tint = tint;    
+var last_color = self.color;
+self.color = ceil(g_white * (self.max_power / DB.max_jump_pad_power));
+if (last_color != self.color) {
+    self.tint = DB.colormap[? self.color];
+    self.final_tint = self.tint;
 }
-self.ready = (color > g_red);
-
+self.ready = (self.color > g_red);
