@@ -1,7 +1,7 @@
-color = g_dark;
-tint = c_black;
-final_tint = tint;
-damage = 0;
-energy = 0;
+self.color = g_dark;
+self.tint = c_black;
+self.final_tint = self.tint;
+self.damage = 0;
+self.energy = 0;
 
-config_window = noone;
+self.config_window = noone;
