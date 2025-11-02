@@ -1,4 +1,4 @@
-ds_map_destroy(anim_groups);
-ds_map_destroy(anim_sets);
+ds_map_destroy(self.anim_groups);
+ds_map_destroy(self.anim_sets);
 
-action_inherited();
+event_inherited();

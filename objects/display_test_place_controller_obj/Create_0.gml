@@ -1,17 +1,17 @@
-action_inherited();
-trigger_group_id = "display_test/triggers";
-trigger_group = noone;
-anim_groups = ds_map_create();
-anim_sets = ds_map_create();
-active_display_group = noone;
+event_inherited();
 
-anim_groups[? "display_test"] = noone;
-anim_sets[? "display_test"] = display_test_anim_set;
+self.trigger_group_id = "display_test/triggers";
+self.trigger_group = noone;
+self.anim_groups = ds_map_create();
+self.anim_sets = ds_map_create();
+self.active_display_group = noone;
 
-anim_groups[? "clear"] = noone;
-anim_sets[? "clear"] = noone;
+self.anim_groups[? "display_test"] = noone;
+self.anim_sets[? "display_test"] = display_test_anim_set;
 
-anim_group_count = ds_map_size(anim_groups);
+self.anim_groups[? "clear"] = noone;
+self.anim_sets[? "clear"] = noone;
 
-alarm[1]=2;
+self.anim_group_count = ds_map_size(self.anim_groups);
 
+self.alarm[1] = 2;
