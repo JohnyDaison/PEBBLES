@@ -1,23 +1,23 @@
 function create_gamemodes_DB() {
-    gamemode_list = ds_list_create();
-    gamemodes = ds_map_create();
+    self.gamemode_list = ds_list_create();
+    self.gamemodes = ds_map_create();
 
-    gamemode_rule_list = ds_list_create();
+    self.gamemode_rule_list = ds_list_create();
 
-    gamemode_rules = ds_map_create();
-    
-    rule_categories = new RuleCategoriesDB();
-    rule_presets = new RulePresetsDB();
-    
+    self.gamemode_rules = ds_map_create();
+
+    self.rule_categories = new RuleCategoriesDB();
+    self.rule_presets = new RulePresetsDB();
+
     // RULES
     define_rules_DB();
-    
+
     // RULE CATEGORIES (MOD CATEGORIES)
-    define_rule_categories_DB(rule_categories);
+    define_rule_categories_DB(self.rule_categories);
 
     // RULE PRESETS (MOD PRESETS)
-    define_rule_presets_DB(rule_presets);
-    
+    define_rule_presets_DB(self.rule_presets);
+
     // GAMEMODES
     var gm, forced_rules, default_rules;
     var RuleID = global.RuleID;
@@ -60,7 +60,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.PersonalShieldHP] = false;
@@ -87,7 +87,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.PersonalShieldHP] = false;
@@ -112,7 +112,7 @@ function create_gamemodes_DB() {
     gm[? "min_teams"] = 2;
     gm[? "max_teams"] = 4;
     gm[? "start_place_room"] = classic_arena;
-    
+
     ds_list_add(gm[? "rule_presets"], "arena_novice", "arena_apprentice", "arena_arcade", "arena_standard");
 
     forced_rules = gm[? "forced_rules"];
@@ -136,7 +136,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.BaseCrystals] = false;
     forced_rules[? RuleID.TutorialGuide] = false;
     forced_rules[? RuleID.ShieldPush] = true;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.FlagCaptureScore] = false;
@@ -162,7 +162,7 @@ function create_gamemodes_DB() {
     gm[? "max_teams"] = 2;
     gm[? "is_deathmatch"] = false;
     gm[? "team_based"] = true;
-    
+
     ds_list_add(gm[? "rule_presets"], "basic_bumping", "deadly_spiking", "court_attrition", "volley_infinite");
 
     forced_rules = gm[? "forced_rules"];
@@ -190,7 +190,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.PersonalShieldHP] = false;
@@ -198,8 +198,8 @@ function create_gamemodes_DB() {
 
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.ScoreLimit] = 10;
-    
-    
+
+
     // Hoopball
     gm = gamemode_create("hoopball", "Hoopball", false, hoopball_world);
     gm[? "description"] = "Another ball sport.";
@@ -240,7 +240,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
     forced_rules[? RuleID.ShieldPush] = false;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.PersonalShieldHP] = false;
@@ -273,7 +273,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.Snakes] = false;
     forced_rules[? RuleID.ShieldPush] = true;
     forced_rules[? RuleID.TutorialGuide] = false;
-    
+
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.HpDeath] = true;
     default_rules[? RuleID.Turrets] = true;
@@ -322,7 +322,7 @@ function create_gamemodes_DB() {
     forced_rules[? RuleID.SlimeMobRain] = false;
     forced_rules[? RuleID.Artifacts] = false;
     forced_rules[? RuleID.LightningStrikes] = false;
-    
+
     forced_rules[? RuleID.BaseCrystalHP] = false;
     forced_rules[? RuleID.BaseCrystalShieldHP] = false;
     forced_rules[? RuleID.PersonalShieldHP] = false;
@@ -343,10 +343,10 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 1;
     gm[? "start_place_room"] = room_empty_base;
     gm[? "is_coop"] = true;
-    
+
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.TutorialGuide] = false;
-    
+
     default_rules = gm[? "default_rules"];
     default_rules[? RuleID.ShieldPush] = true;
 
@@ -358,7 +358,7 @@ function create_gamemodes_DB() {
     gm[? "max_players"] = 2;
     gm[? "max_teams"] = 2;
     gm[? "is_coop"] = false;
-    
+
     forced_rules = gm[? "forced_rules"];
     forced_rules[? RuleID.TutorialGuide] = false;
 
