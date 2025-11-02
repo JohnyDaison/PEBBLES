@@ -1,24 +1,22 @@
 function destroy_gamemodes_DB() {
-    var i, count, gm_id, gm_map, rule_id, rule_map;
+    var count = ds_list_size(self.gamemode_list);
 
-    count = ds_list_size(gamemode_list);
-    for(i = count-1; i >= 0; i--)
-    {
-        gm_id = gamemode_list[| i];
-        gm_map = gamemodes[? gm_id];
-    
+    for (var i = count - 1; i >= 0; i--) {
+        var gm_id = self.gamemode_list[| i];
+        var gm_map = self.gamemodes[? gm_id];
+
         ds_map_destroy(gm_map[? "default_rules"]);
         ds_map_destroy(gm_map[? "forced_rules"]);
         ds_list_destroy(gm_map[? "rule_presets"]);
-    
+
         ds_map_destroy(gm_map);
     }
 
-    rule_presets.destroy();
+    self.rule_presets.destroy();
 
-    ds_map_destroy(gamemodes);
-    ds_list_destroy(gamemode_list);
+    ds_map_destroy(self.gamemodes);
+    ds_list_destroy(self.gamemode_list);
 
-    ds_map_destroy(gamemode_rules);
-    ds_list_destroy(gamemode_rule_list);
+    ds_map_destroy(self.gamemode_rules);
+    ds_list_destroy(self.gamemode_rule_list);
 }
