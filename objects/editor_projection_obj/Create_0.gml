@@ -1,2 +1,1 @@
-alarm[0] = 1;
-
+self.alarm[0] = 1;
