@@ -1,9 +1,8 @@
-collected = false;
-used = true;
-armed = true;
-draw_label = false;
+self.collected = false;
+self.used = true;
+self.armed = true;
+self.draw_label = false;
 
-step = 0;
-light_yoffset = 0;
-hover_offset = 0;
-
+self.step = 0;
+self.light_yoffset = 0;
+self.hover_offset = 0;

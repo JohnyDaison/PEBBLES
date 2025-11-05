@@ -1,31 +1,25 @@
-//x = other.x+ other.facing*16;
-//y = other.y;
+//self.x = other.x + other.facing * 16;
+//self.y = other.y;
 
-if(other.aim_dist == 0)
-{
-    if(other.facing == 1)
-    {
-        direction = 30;
-    } 
-    else
-    {
-        direction = 150;
+if (other.aim_dist == 0) {
+    if (other.facing == 1) {
+        self.direction = 30;
+    }
+    else {
+        self.direction = 150;
     }
 }
-else
-{
-    if(instance_exists(my_guy.charge_ball))
-    {
-        direction = point_direction(0, 0, my_guy.charge_ball.rel_x, my_guy.charge_ball.rel_y);
+else {
+    if (instance_exists(self.my_guy.charge_ball)) {
+        self.direction = point_direction(0, 0, self.my_guy.charge_ball.rel_x, self.my_guy.charge_ball.rel_y);
     }
-    else
-    {
-        var hor_coef = lengthdir_x(sign(my_guy.desired_aim_dist), my_guy.desired_aim_dir);
-        var ver_coef = lengthdir_y(sign(my_guy.desired_aim_dist), my_guy.desired_aim_dir);
-        
-        hspeed = hor_coef;
-        vspeed = ver_coef;
-        
+    else {
+        var hor_coef = lengthdir_x(sign(self.my_guy.desired_aim_dist), self.my_guy.desired_aim_dir);
+        var ver_coef = lengthdir_y(sign(self.my_guy.desired_aim_dist), self.my_guy.desired_aim_dir);
+
+        self.hspeed = hor_coef;
+        self.vspeed = ver_coef;
+
         /*
         hspeed = 0;
         if(other.hor_dir_held)
@@ -37,11 +31,12 @@ else
         */
     }
 }
-speed = throw_speed;
-hspeed += other.hspeed;
-vspeed += other.vspeed; 
 
-placed = true;
-sticky = true;
-increase_stat(my_player, "grenades_thrown", 1, false);
+self.speed = self.throw_speed;
+self.hspeed += other.hspeed;
+self.vspeed += other.vspeed;
 
+self.placed = true;
+self.sticky = true;
+
+increase_stat(self.my_player, "grenades_thrown", 1, false);
