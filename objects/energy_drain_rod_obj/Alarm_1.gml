@@ -1,18 +1,15 @@
 /// @description  ASSIGN BLOCK
-var ter = instance_nearest(x-16, y-16, terrain_obj);
+var ter = instance_nearest(self.x - 16, self.y - 16, terrain_obj);
 var tc_x = ter.x + 16;
 var tc_y = ter.y + 16;
-var dist = point_distance(tc_x, tc_y, x, y);
-//var dir = point_direction(tc_x,tc_y,x,y);
+var dist = point_distance(tc_x, tc_y, self.x, self.y);
+//var dir = point_direction(tc_x, tc_y, self.x, self.y);
 
-if(dist == 0)
-{
-    my_block = ter;
-    x--;
-    y--;
+if (dist == 0) {
+    self.my_block = ter;
+    self.x--;
+    self.y--;
 }
-else
-{
+else {
     instance_destroy();
 }
-

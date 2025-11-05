@@ -1,33 +1,35 @@
-action_inherited();
-var dir;
-enabled = ds_map_create();
-drainables = ds_list_create();
-ds_list_add(drainables, color_orb_obj, slime_mob_obj, shield_obj);
-potential_targets = ds_list_create();
-potential_drain_rods = ds_list_create();
-nearest_drain_target = ds_map_create();
-drain_target_list = ds_map_create();
-for(dir = 0; dir < 4; dir++)
-{
-    enabled[? dir] = false;
-    nearest_drain_target[? dir] = noone;
-    drain_target_list[? dir] = ds_list_create();
+event_inherited();
+
+self.enabled = ds_map_create();
+self.drainables = ds_list_create();
+
+self.potential_targets = ds_list_create();
+self.potential_drain_rods = ds_list_create();
+self.nearest_drain_target = ds_map_create();
+self.drain_target_list = ds_map_create();
+
+ds_list_add(self.drainables, color_orb_obj, slime_mob_obj, shield_obj);
+
+for (var dir = 0; dir < 4; dir++) {
+    self.enabled[? dir] = false;
+    self.nearest_drain_target[? dir] = noone;
+    self.drain_target_list[? dir] = ds_list_create();
 }
-image_speed = 0;
-my_last_color = g_nothing;
-drain_point_dist = 64;
-range = 96;
-grid_size = 32;
-energy_tick = 0.005;
-activation_threshold = 0.1;
-radius = 2*range;
 
-lightning_tint = c_black;
-lightning_steps = 2;
-lightning_thickness = 4;
-lightning_width = 16;
-lightning_alpha = 1;
-lightning_reset = true;
+self.image_speed = 0;
+self.my_last_color = g_nothing;
+self.drain_point_dist = 64;
+self.range = 96;
+self.grid_size = 32;
+self.energy_tick = 0.005;
+self.activation_threshold = 0.1;
+self.radius = 2 * self.range;
 
-alarm[1] = 2;
+self.lightning_tint = c_black;
+self.lightning_steps = 2;
+self.lightning_thickness = 4;
+self.lightning_width = 16;
+self.lightning_alpha = 1;
+self.lightning_reset = true;
 
+self.alarm[1] = 2;
