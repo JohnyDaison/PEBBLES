@@ -1,25 +1,16 @@
-/// @function has_left_update(instance, value);
-/// @param instance
-/// @param new_value
-function has_left_update() {
-	var inst = argument[0];
-	var value = false;
+/// @self projectile_obj
+/// @param {Id.Instance} instance
+/// @param {Bool} value
+function has_left_update(instance, value = false) {
+    var currentRecordedValue = self.has_left_inst[? instance];
+    var currentValue = is_undefined(currentRecordedValue) || currentRecordedValue;
 
-	if(argument_count > 1)
-	{
-	    value = argument[1];   
-	}
+    if (value == false && currentValue) {
+        ds_list_add(self.has_not_left_list, instance);
+    }
+    else if (value == true && !currentValue) {
+        ds_list_delete(self.has_not_left_list, ds_list_find_index(self.has_not_left_list, instance));
+    }
 
-	if(value == false && (is_undefined(has_left_inst[? inst]) || has_left_inst[? inst]))
-	{
-	    ds_list_add(has_not_left_list, inst);
-	}
-	else if(value == true && !is_undefined(has_left_inst[? inst]) && !has_left_inst[? inst])
-	{
-	    ds_list_delete(has_not_left_list, ds_list_find_index(has_not_left_list, inst));
-	}
-
-	has_left_inst[? inst] = value;
-
-
+    self.has_left_inst[? instance] = value;
 }
