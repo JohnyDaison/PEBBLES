@@ -1,12 +1,7 @@
-/// @function has_left_me(instance);
-/// @param instance
-function has_left_me() {
-	var inst = argument[0];
+/// @param {Id.Instance} instance
+function has_left_me(instance) {
+    var hl_value = instance.has_left_inst[? self.id];
+    var has_left = is_undefined(hl_value) || hl_value;
 
-	var hl_value = inst.has_left_inst[? id];
-	var has_left = is_undefined(hl_value) || hl_value;
-
-	return has_left;
-
-
+    return has_left;
 }
