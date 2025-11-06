@@ -1,56 +1,59 @@
 event_inherited();
 
 // PARTICLES 
-system = part_system_create();
-part_system_automatic_draw(system, true);
-part_system_automatic_update(system, true);
-part_system_depth(system, -20);
-part_system_draw_order(system, true);
-pt = part_type_create();
-part_type_alpha2(pt,0.8,0);
-part_type_blend(pt,true);
+self.system = part_system_create();
+part_system_automatic_draw(self.system, true);
+part_system_automatic_update(self.system, true);
+part_system_depth(self.system, -20);
+part_system_draw_order(self.system, true);
 
-part_type_color1(pt,c_white);
-part_type_sprite(pt,part_sphere_spr,0,0,0);
-part_type_size(pt,0.1,0.1,-0.01,0);
-part_type_life(pt,10,10);
+self.pt = part_type_create();
+part_type_alpha2(self.pt, 0.8, 0);
+part_type_blend(self.pt, true);
 
-part_type_orientation(pt,0,0,0,0,0);
-em = part_emitter_create(system);
+part_type_color1(self.pt, c_white);
+part_type_sprite(self.pt, part_sphere_spr, 0, 0, 0);
+part_type_size(self.pt, 0.1, 0.1, -0.01, 0);
+part_type_life(self.pt, 10, 10);
+
+part_type_orientation(self.pt, 0, 0, 0, 0, 0);
+self.em = part_emitter_create(self.system);
 
 
-col_group = noone; // collision group
-inv_col_group = noone;
+self.col_group = noone; // collision group
+self.inv_col_group = noone;
 
-shape = shape_circle;
-radius = 100;
-gives_light = true;
-orig_ambient_light = 0.6;
-orig_direct_light = 1;
-ambient_light = orig_ambient_light;
-direct_light = orig_direct_light;
-impact_strength = 0;
-shake_range = 480;
-tracked = false;
-weak_force_range = 64;
-strong_force_range = 6;
-gui_x = 0;
-gui_y = 0;
-sitting_on_terrain = false;
-stopped_threshold = 0.5;
-wall_bounce_damping = 0;
-make_particles = true;
-particle_count = 1;
-sound_volume = 1;
+self.shape = shape_circle;
+self.radius = 100;
+self.gives_light = true;
+self.orig_ambient_light = 0.6;
+self.orig_direct_light = 1;
+self.ambient_light = orig_ambient_light;
+self.direct_light = orig_direct_light;
+self.impact_strength = 0;
+self.shake_range = 480;
+self.tracked = false;
+self.weak_force_range = 64;
+self.strong_force_range = 6;
+self.gui_x = 0;
+self.gui_y = 0;
+self.sitting_on_terrain = false;
+self.stopped_threshold = 0.5;
+self.wall_bounce_damping = 0;
+self.make_particles = true;
+self.particle_count = 1;
+self.sound_volume = 1;
 
 self.holo_alpha = 1;
 self.holo_alpha_step = 0.005;
 self.holo_minalpha = 0.4;
 self.holo_maxalpha = 0.6;
 
-x_return = 0;
-y_return = 0;
+self.x_return = 0;
+self.y_return = 0;
+self.hchange = 0;
+self.vchange = 0;
 
-gate_bounce_limit = 3;
-gate_bounce_count = 0;
-gate_bounced = false;
+self.gate_bounce_limit = 3;
+self.gate_bounce_count = 0;
+self.gate_bounced = false;

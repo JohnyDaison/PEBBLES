@@ -2,95 +2,71 @@
 has_left_step();
 
 // TODO: optimize, place_obj should always exist
-/*if(speed < 0.5)
-{*/
-    // DESTROY ITSELF IF OUTSIDE OF PLACE
-    if(instance_exists(gamemode_obj.world) && instance_exists(gamemode_obj.world.current_place))
-    {
-        var place = gamemode_obj.world.current_place;
-        if(x+radius < place.x //|| y+radius < place.y
-        || x-radius > place.x + place.width
-        || y-radius > place.y + place.height)
-        {
-            collided = true;
-            //my_console_log("Energy ball out of bounds DESTROYED");
-        }
+// DESTROY ITSELF IF OUTSIDE OF PLACE
+if (instance_exists(gamemode_obj.world) && instance_exists(gamemode_obj.world.current_place)) {
+    var place = gamemode_obj.world.current_place;
+
+    if (self.x + self.radius < place.x //|| y+radius < place.y
+        || self.x - self.radius > place.x + place.width
+        || self.y - self.radius > place.y + place.height) {
+        self.collided = true;
+        //my_console_log("Energy ball out of bounds DESTROYED");
     }
-    else
-    {
-        if(x+radius < 0 //|| y+radius < 0
-        || x-radius > room_width
-        || y-radius > room_height)
-        {
-            collided = true;
-            //my_console_log("Energy ball out of bounds DESTROYED");
-        }
-    }  
-//}
+}
+else {
+    if (self.x + self.radius < 0 //|| y+radius < 0
+        || self.x - self.radius > room_width
+        || self.y - self.radius > room_height) {
+        self.collided = true;
+        //my_console_log("Energy ball out of bounds DESTROYED");
+    }
+}
 
 
 // CORNER BOUNCE
-if(corner_bounced)
-{
-    if(!collided && !bounced)
-    {
-        if(!place_meeting(x+hspeed+hchange,y+vspeed+vchange, solid_terrain_obj))
-        {
-            //orig_speed = speed;
-            hspeed += hchange;
-            vspeed += vchange;
-            if(orig_speed + speed_delta > 0.2)
-            {
-                speed = orig_speed + speed_delta;
-                if(instance_exists(last_wall_hit) && holographic == last_wall_hit.holographic)
-                {
-                    last_wall_hit.energy += energy_delta;
+if (self.corner_bounced) {
+    if (!self.collided && !self.bounced) {
+        if (!place_meeting(self.x + self.hspeed + self.hchange, self.y + self.vspeed + self.vchange, solid_terrain_obj)) {
+            //self.orig_speed = self.speed;
+            self.hspeed += self.hchange;
+            self.vspeed += self.vchange;
+
+            if (self.orig_speed + self.speed_delta > 0.2) {
+                self.speed = self.orig_speed + self.speed_delta;
+
+                if (instance_exists(self.last_wall_hit) && self.holographic == self.last_wall_hit.holographic) {
+                    self.last_wall_hit.energy += self.energy_delta;
                 }
             }
-            /*
-            if(orig_speed > 0.2)
-            {
-                speed = orig_speed - 0.2;
+            else {
+                self.vspeed = 0;
+                self.gravity = 0;
             }
-            */
-            else
-            {
-                vspeed = 0;
-                gravity = 0;
-            }
-            my_sound_play_colored(shot_bounce_sound, my_color, false, sound_volume);
+
+            my_sound_play_colored(shot_bounce_sound, self.my_color, false, self.sound_volume);
             //show_debug_message("corner bounce applied");
         }
-        else
-        {
-            /*
-            if(speed > 0.2)
-            {
-                speed -= 0.2;
-            }
-            */
-            if(speed + speed_delta > 0.2)
-            {
-                speed += speed_delta;
-                if(instance_exists(last_wall_hit) && holographic == last_wall_hit.holographic)
-                {
-                    last_wall_hit.energy += energy_delta;
+        else {
+            if (self.speed + self.speed_delta > 0.2) {
+                self.speed += self.speed_delta;
+
+                if (instance_exists(self.last_wall_hit) && self.holographic == self.last_wall_hit.holographic) {
+                    self.last_wall_hit.energy += self.energy_delta;
                 }
             }
-            else
-            {
-                vspeed = 0;
-                gravity = 0;                
+            else {
+                self.vspeed = 0;
+                self.gravity = 0;
             }
         }
     }
+
     self.corner_bounced = false;
 }
 
 
 // PARTICLE BURST
-if(make_particles)
-{
-    part_emitter_burst(system, em, pt, particle_count);
-    part_system_automatic_draw(system, !invisible);
+if (self.make_particles) {
+    part_emitter_burst(self.system, self.em, self.pt, self.particle_count);
+    part_system_automatic_draw(self.system, !self.invisible);
 }
