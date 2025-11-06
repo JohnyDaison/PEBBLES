@@ -1,52 +1,47 @@
 event_inherited();
 
-var count = ds_list_size(detect_list), obj;
+var zone = self;
+var detectCount = ds_list_size(self.detect_list);
 
-for(i = count -1; i >= 0; i--)
-{
-    obj = detect_list[| i];
+for (var i = detectCount - 1; i >= 0; i--) {
+    var obj = self.detect_list[| i];
 
-    with(obj)
-    {
-        with(other)
-        {
-            if(ds_list_find_index(inside_list, other.id) == -1 && place_meeting(x,y, other.id))
-            {
-                var log_str = "ENERGY BALL ZONE " + zone_id + " ";
-            
-                if(trigger_script == trigger_target_script)
-                {
-                    log_str += "trigger_target fired by" + string(other.id);
-                    script_execute(trigger_script, other.id);
+    with (obj) {
+        var inst = self;
+
+        with (zone) {
+            if (ds_list_find_index(zone.inside_list, inst.id) == -1 && place_meeting(zone.x, zone.y, inst.id)) {
+                var log_str = "ENERGY BALL ZONE " + zone.zone_id + " ";
+
+                if (trigger_script == trigger_target_script) {
+                    log_str += "trigger_target fired by" + string(inst.id);
+                    script_execute(trigger_script, inst.id);
                 }
-                else
-                {
-                    log_str += "trigger fired by" + string(other.id);
-                    trigger(id, other.id);
+                else {
+                    log_str += "trigger fired by" + string(inst.id);
+                    trigger(zone.id, inst.id);
                 }
-            
+
                 var params = create_params_map();
-                params[? "who"] = other.id;
-            
-                broadcast_event("ballzone_enter", id, params);
-            
+                params[? "who"] = inst.id;
+
+                broadcast_event("ballzone_enter", zone.id, params);
+
                 //my_console_log(log_str);
-            
-                ds_list_add(inside_list, other.id);
+
+                ds_list_add(zone.inside_list, inst.id);
             }
         }
     }
 
 }
 
-var count = ds_list_size(inside_list);
+var insideCount = ds_list_size(zone.inside_list);
 
-for(i = count -1; i >= 0; i--)
-{
-    inst = inside_list[| i];
-    if(!place_meeting(x,y, inst))
-    {
-        ds_list_delete(inside_list, i);
+for (var i = insideCount - 1; i >= 0; i--) {
+    var inst = zone.inside_list[| i];
+
+    if (!place_meeting(zone.x, zone.y, inst)) {
+        ds_list_delete(zone.inside_list, i);
     }
 }
-
