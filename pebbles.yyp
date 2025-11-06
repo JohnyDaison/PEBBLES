@@ -1672,7 +1672,6 @@
     {"id":{"name":"bumper_button_bg_spr","path":"sprites/bumper_button_bg_spr/bumper_button_bg_spr.yy",},},
     {"id":{"name":"bumper_button_highlight_spr","path":"sprites/bumper_button_highlight_spr/bumper_button_highlight_spr.yy",},},
     {"id":{"name":"burner_spr","path":"sprites/burner_spr/burner_spr.yy",},},
-    {"id":{"name":"burst_gradient_spr","path":"sprites/burst_gradient_spr/burst_gradient_spr.yy",},},
     {"id":{"name":"camera_spr","path":"sprites/camera_spr/camera_spr.yy",},},
     {"id":{"name":"cannon_ammo_base","path":"sprites/cannon_ammo_base/cannon_ammo_base.yy",},},
     {"id":{"name":"cannon_ammo_spr","path":"sprites/cannon_ammo_spr/cannon_ammo_spr.yy",},},

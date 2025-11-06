@@ -1420,7 +1420,6 @@
     {"name":"bumper_button_bg_spr","order":8,"path":"sprites/bumper_button_bg_spr/bumper_button_bg_spr.yy",},
     {"name":"bumper_button_highlight_spr","order":9,"path":"sprites/bumper_button_highlight_spr/bumper_button_highlight_spr.yy",},
     {"name":"burner_spr","order":2,"path":"sprites/burner_spr/burner_spr.yy",},
-    {"name":"burst_gradient_spr","order":10,"path":"sprites/burst_gradient_spr/burst_gradient_spr.yy",},
     {"name":"cannon_ammo_base","order":7,"path":"sprites/cannon_ammo_base/cannon_ammo_base.yy",},
     {"name":"cannon_ammo_spr","order":8,"path":"sprites/cannon_ammo_spr/cannon_ammo_spr.yy",},
     {"name":"cannon_barrel_base_spr","order":7,"path":"sprites/cannon_barrel_base_spr/cannon_barrel_base_spr.yy",},
