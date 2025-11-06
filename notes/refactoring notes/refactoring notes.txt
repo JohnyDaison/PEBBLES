@@ -23,6 +23,9 @@ has a lot of repeated code, refactor to methods
 * `black_aoe_obj`
 rework to use `motion_add` instead of `gravity_direction`, like `black_projectile_obj`
 
+* `has_not_left_list`, `has_left_inst`
+in `projectile_obj`
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
