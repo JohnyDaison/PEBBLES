@@ -1,4 +1,4 @@
-custom_energy = false;
-energy = 0;
+self.custom_energy = false;
+self.energy = 0;
 
-alarm[0] = 1;
+self.alarm[0] = 1;

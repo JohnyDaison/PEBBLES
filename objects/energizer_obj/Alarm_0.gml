@@ -1,17 +1,14 @@
-with(wall_obj)
-{
-    if(place_meeting(x,y,other))
-    {
-        if(other.custom_energy)
-        {
-            energy = other.energy;
-        }
-        else
-        {
-            energy = max(energy, outburst_threshold);
-        }
+with (wall_obj) {
+    if (!place_meeting(self.x, self.y, other)) {
+        continue;
+    }
+
+    if (other.custom_energy) {
+        self.energy = other.energy;
+    }
+    else {
+        self.energy = max(self.energy, self.outburst_threshold);
     }
 }
 
 instance_destroy();
-
