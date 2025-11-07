@@ -1,8 +1,6 @@
-group_id = "";
-members = ds_list_create();
-order = ds_map_create();
-member_ids = ds_map_create();
+self.group_id = "";
+self.members = ds_list_create();
+self.order = ds_map_create();
+self.member_ids = ds_map_create();
 
-front_insert = false;
-
-
+self.front_insert = false;

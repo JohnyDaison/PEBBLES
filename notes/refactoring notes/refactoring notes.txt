@@ -26,6 +26,9 @@ rework to use `motion_add` instead of `gravity_direction`, like `black_projectil
 * `has_not_left_list`, `has_left_inst`
 in `projectile_obj`
 
+* `obj_group_obj`
+stop using `ds_*` types
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
