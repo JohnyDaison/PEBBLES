@@ -1,3 +1,3 @@
-action_inherited();
-alarm[2] = 1;
+event_inherited();
 
+self.alarm[2] = 1;
