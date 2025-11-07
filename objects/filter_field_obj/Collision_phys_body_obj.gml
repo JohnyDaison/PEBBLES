@@ -1,86 +1,81 @@
-if(other.my_color != my_color && collision_rectangle(x1-other.hspeed, y1-other.vspeed,
-                                     x2-other.hspeed, y2-other.vspeed, other.id, false, true))
-{
-    if(other.speed > speedlimit) {
-        other.speed *= 0.8;
-    }
-    
-    var oldxdiff = other.xprevious - x;
-    var oldydiff = other.yprevious - y;
-    var xdiff = (other.x + other.hspeed) - x;
-    var ydiff = (other.y + other.vspeed) - y;
-    var leftdiff   =  (other.bbox_right + other.hspeed) - x1;
-    var rightdiff  =  (other.bbox_left + other.hspeed) - x2;
-    var topdiff    =  (other.bbox_bottom + other.vspeed) - y1;
-    var bottomdiff =  (other.bbox_top + other.vspeed) - y2;
-    var boost_coef = 1;
-    var hboost = 0;
-    var vboost = 0;
+var body = other;
 
-    if(abs(leftdiff) < abs(rightdiff))
-    {
-        hboost = -boost_coef;
-    }
-    else
-    {
-        hboost = boost_coef;
-    }
-    
-    if(abs(topdiff) < abs(bottomdiff))
-    {
-        vboost = -boost_coef;
-    }
-    else
-    {
-        vboost = boost_coef;
-    }
-    
-    if(sign(oldxdiff) != sign(xdiff) && abs(other.hspeed) > speedlimit)
-    {
-        other.x = other.xprevious;
-        other.hspeed = 0;
-        hboost *= -1;
-    }
-    
-    if(sign(oldydiff) != sign(ydiff) && abs(other.vspeed) > speedlimit)
-    {
-        other.y = other.yprevious;
-        other.vspeed = 0;
-        vboost *= -1;
-    }
-    
-    if(sign(oldydiff) == -1 && sign(topdiff) == 1)
-    {
-        vboost -= (other.gravity+other.friction);
+if (!self.isValidCollision(body, false)) {
+    exit;
+}
+
+if (body.speed > self.speedlimit) {
+    body.speed *= 0.8;
+}
+
+var oldxdiff = body.xprevious - self.x;
+var oldydiff = body.yprevious - self.y;
+var xdiff = (body.x + body.hspeed) - self.x;
+var ydiff = (body.y + body.vspeed) - self.y;
+var leftdiff = (body.bbox_right + body.hspeed) - self.x1;
+var rightdiff = (body.bbox_left + body.hspeed) - self.x2;
+var topdiff = (body.bbox_bottom + body.vspeed) - self.y1;
+var bottomdiff = (body.bbox_top + body.vspeed) - self.y2;
+var boost_coef = 1;
+var hboost = 0;
+var vboost = 0;
+
+if (abs(leftdiff) < abs(rightdiff)) {
+    hboost = -boost_coef;
+}
+else {
+    hboost = boost_coef;
+}
+
+if (abs(topdiff) < abs(bottomdiff)) {
+    vboost = -boost_coef;
+}
+else {
+    vboost = boost_coef;
+}
+
+if (sign(oldxdiff) != sign(xdiff) && abs(body.hspeed) > self.speedlimit) {
+    body.x = body.xprevious;
+    body.hspeed = 0;
+    hboost *= -1;
+}
+
+if (sign(oldydiff) != sign(ydiff) && abs(body.vspeed) > self.speedlimit) {
+    body.y = body.yprevious;
+    body.vspeed = 0;
+    vboost *= -1;
+}
+
+if (sign(oldydiff) == -1 && sign(topdiff) == 1) {
+    vboost -= (body.gravity + body.friction);
+}
+
+if (object_is_child(body, guy_obj)) {
+    var guy = body;
+
+    if (abs(topdiff) > 2) {
+        guy.holding_wall = false;
     }
 
-    with(other)
-    {
-        if(object_is_ancestor(object_index, guy_obj))
-        {
-            if(abs(topdiff) > 2)
-            {
-                holding_wall = false;
-            }
-            
-            if(air_dashing)
-            {
-                lost_control = true;
-                front_hit = true;
-            }
-            
-            if(max_doublejumps > 0 && doublejump_count == max_doublejumps)
-            {
-                doublejump_count--;
-            }
-        }
-        
-        if(!place_meeting(x+hspeed+hboost, y, terrain_obj)) {
-             hspeed += hboost;
-        }
-        if(!place_meeting(x, y+vspeed+vboost, terrain_obj)) {
-             vspeed += vboost;
-        }
+    if (guy.air_dashing) {
+        guy.lost_control = true;
+        guy.front_hit = true;
+    }
+
+    if (guy.max_doublejumps > 0 && guy.doublejump_count == guy.max_doublejumps) {
+        guy.doublejump_count--;
     }
 }
 
+var boostedX = body.x + body.hspeed + hboost;
+var boostedY = body.y + body.vspeed + vboost;
+
+with (body) {
+    if (!place_meeting(boostedX, body.y, body.blocking_object)) {
+        body.hspeed += hboost;
+    }
+
+    if (!place_meeting(body.x, boostedY, body.blocking_object)) {
+        body.vspeed += vboost;
+    }
+}
