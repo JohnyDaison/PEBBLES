@@ -1,10 +1,9 @@
 event_inherited();
 
-enabled = true;
-active = true;
-paired_projector = noone;
-my_field = noone;
+self.enabled = true;
+self.active = true;
+self.paired_projector = noone;
+self.my_field = noone;
 
-alarm[1] = 2;
-alarm[2] = 8;
-
+self.alarm[1] = 2;
+self.alarm[2] = 8;

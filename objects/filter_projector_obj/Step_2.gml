@@ -1,51 +1,46 @@
 /// @description COLOR AND POSITION UPDATE
 
 // COLOR
-if(instance_exists(my_block))
-{
-    new_col = my_block.my_color;
-    
-    if(new_col != my_color)
-    {
-        my_color = new_col;
-        tint_updated = false;
+if (instance_exists(self.my_block)) {
+    var new_col = self.my_block.my_color;
+
+    if (new_col != self.my_color) {
+        self.my_color = new_col;
+        self.tint_updated = false;
     }
 }
 
 // POSITION CHANGED
-if(xprevious != x || yprevious != y)
-{
+if (self.xprevious != self.x || self.yprevious != self.y) {
     // UPDATE FIELD
-    if(instance_exists(my_field))
-    {
-        my_field.ready = false;
+    if (instance_exists(self.my_field)) {
+        self.my_field.ready = false;
     }
-    
+
     // UPDATE DIRECTION OF PROJECTORS
-    if(instance_exists(paired_projector))
-    {
-        var proj = id, other_proj = paired_projector, dir, tempdir, reldir;
-        repeat(2) 
-        {
-            dir = point_direction(other_proj.x, other_proj.y, proj.x, proj.y);
-            tempdir = (round(dir/90)*90) mod 360;
-            reldir = dir;
-            if(tempdir == 0 && dir > 180)
-            {
-                reldir = dir -360;
+    if (instance_exists(self.paired_projector)) {
+        var proj = self.id;
+        var other_proj = self.paired_projector;
+
+        // TODO: could angle_difference be used here?
+        repeat(2) {
+            var dir = point_direction(other_proj.x, other_proj.y, proj.x, proj.y);
+            var tempdir = (round(dir / 90) * 90) mod 360;
+            var reldir = dir;
+
+            if (tempdir == 0 && dir > 180) {
+                reldir = dir - 360;
             }
-            
-            if(abs(tempdir - reldir) < 1)
-            {
-                proj.image_angle = tempdir;   
+
+            if (abs(tempdir - reldir) < 1) {
+                proj.image_angle = tempdir;
             }
-            else
-            {
-                proj.image_angle = round((dir+45)/90)*90 -45;
+            else {
+                proj.image_angle = round((dir + 45) / 90) * 90 - 45;
             }
-            
-            proj = paired_projector;
-            other_proj = id;
+
+            proj = self.paired_projector;
+            other_proj = self.id;
         }
     }
 }
