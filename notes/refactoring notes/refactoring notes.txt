@@ -44,6 +44,7 @@ Convert Strings used as Enums to Enums:
 * `last_attacker_update` function parameters `target`, `type`
 * `battlefeed_item_obj.setValuesAtIndex` function parameters `type`, `content`
 * `gamemode_obj.score_values` keys
+* `find_display_instance` - `display_type`
 
 
 Convert these to Structs:
@@ -56,3 +57,4 @@ Convert these to Structs:
 * `gamemode`
 * quest system `transition`, `condition`, `effect`, `state_properties`
 * `message_*` scripts
+* `anim_step`
