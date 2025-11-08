@@ -1,12 +1,11 @@
-near_pusher = instance_nearest(x,y, energy_pusher_obj);
-if(near_pusher == noone || !(near_pusher.x == x && near_pusher.y == y))
-{
-    new_pusher = instance_create(x,y, energy_pusher_obj);
-    new_pusher.direction = image_angle;
-    new_pusher.image_angle = image_angle;
-    new_pusher.tick_phase = 2*(floor(image_angle/90));
-    //new_pusher.tick_phase = ( floor(new_pusher.x/32) + floor(new_pusher.y/32) ) mod new_pusher.tick_delay;
+var near_pusher = instance_nearest(self.x, self.y, energy_pusher_obj);
+
+if (near_pusher == noone || !(near_pusher.x == self.x && near_pusher.y == self.y)) {
+    var new_pusher = instance_create(self.x, self.y, energy_pusher_obj);
+
+    new_pusher.direction = self.image_angle;
+    new_pusher.image_angle = self.image_angle;
+    new_pusher.tick_phase = 2 * (floor(self.image_angle / 90));
 }
 
 instance_destroy();
-
