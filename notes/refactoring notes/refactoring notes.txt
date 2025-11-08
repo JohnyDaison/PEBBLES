@@ -29,6 +29,9 @@ in `projectile_obj`
 * `obj_group_obj`
 stop using `ds_*` types
 
+* `string_explode`
+should output array not list
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
