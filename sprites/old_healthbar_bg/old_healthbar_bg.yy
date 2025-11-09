@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"old_healthbar_bg",
   "bboxMode":0,
   "bbox_bottom":27,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2146f394-3516-4d8d-a0a5-9ce14af74cdf","name":"2146f394-3516-4d8d-a0a5-9ce14af74cdf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2146f394-3516-4d8d-a0a5-9ce14af74cdf","name":"2146f394-3516-4d8d-a0a5-9ce14af74cdf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

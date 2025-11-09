@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"hamburger_icon_spr",
   "bboxMode":0,
   "bbox_bottom":20,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"80b20067-bead-41a1-a824-f577a0036f6f","name":"80b20067-bead-41a1-a824-f577a0036f6f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"90a75373-4d1f-41ec-a5ce-eb7e5a51b4f8","name":"90a75373-4d1f-41ec-a5ce-eb7e5a51b4f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"80b20067-bead-41a1-a824-f577a0036f6f","name":"80b20067-bead-41a1-a824-f577a0036f6f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"90a75373-4d1f-41ec-a5ce-eb7e5a51b4f8","name":"90a75373-4d1f-41ec-a5ce-eb7e5a51b4f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

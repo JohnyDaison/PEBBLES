@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"tick_spr",
   "bboxMode":0,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c4b9653c-22e7-4cd6-998d-10c0cea0cf74","name":"c4b9653c-22e7-4cd6-998d-10c0cea0cf74","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c4b9653c-22e7-4cd6-998d-10c0cea0cf74","name":"c4b9653c-22e7-4cd6-998d-10c0cea0cf74","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

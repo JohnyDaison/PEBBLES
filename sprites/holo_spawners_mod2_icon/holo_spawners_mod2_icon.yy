@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"holo_spawners_mod2_icon",
   "bboxMode":0,
   "bbox_bottom":38,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"03d4f0c7-de6f-4b13-a7c4-1e3906cb5bc5","name":"03d4f0c7-de6f-4b13-a7c4-1e3906cb5bc5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"03d4f0c7-de6f-4b13-a7c4-1e3906cb5bc5","name":"03d4f0c7-de6f-4b13-a7c4-1e3906cb5bc5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

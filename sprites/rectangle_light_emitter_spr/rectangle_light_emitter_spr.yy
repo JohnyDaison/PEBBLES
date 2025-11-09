@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"rectangle_light_emitter_spr",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8e380bc8-16a2-40b2-81a7-6fb0cd32581e","name":"8e380bc8-16a2-40b2-81a7-6fb0cd32581e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e380bc8-16a2-40b2-81a7-6fb0cd32581e","name":"8e380bc8-16a2-40b2-81a7-6fb0cd32581e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

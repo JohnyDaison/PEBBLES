@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_hurt",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7cc5212f-567c-4b17-b68a-9ebb78cb7b38","name":"7cc5212f-567c-4b17-b68a-9ebb78cb7b38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4883ca0c-27df-4ddb-b6bf-f249884116ab","name":"4883ca0c-27df-4ddb-b6bf-f249884116ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7cc5212f-567c-4b17-b68a-9ebb78cb7b38","name":"7cc5212f-567c-4b17-b68a-9ebb78cb7b38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4883ca0c-27df-4ddb-b6bf-f249884116ab","name":"4883ca0c-27df-4ddb-b6bf-f249884116ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

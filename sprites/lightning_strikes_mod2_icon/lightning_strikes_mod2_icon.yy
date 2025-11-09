@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"lightning_strikes_mod2_icon",
   "bboxMode":0,
   "bbox_bottom":38,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","name":"e4102e39-1e3a-4d18-91e9-0dcac326f3f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"typed_ceramic_tiles_base_spr",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","name":"c8155b71-ea61-4872-8203-65bf7f8ac7fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

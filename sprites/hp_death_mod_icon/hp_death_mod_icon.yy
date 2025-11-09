@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"hp_death_mod_icon",
   "bboxMode":0,
   "bbox_bottom":39,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"37259b92-2dff-4ca9-9446-c37ecec3f96f","name":"37259b92-2dff-4ca9-9446-c37ecec3f96f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"37259b92-2dff-4ca9-9446-c37ecec3f96f","name":"37259b92-2dff-4ca9-9446-c37ecec3f96f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

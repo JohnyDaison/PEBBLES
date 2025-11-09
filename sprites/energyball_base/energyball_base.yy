@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"energyball_base",
   "bboxMode":2,
   "bbox_bottom":44,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0b68e0c0-cb3d-4d30-84e9-b02300edfcc4","name":"0b68e0c0-cb3d-4d30-84e9-b02300edfcc4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0b68e0c0-cb3d-4d30-84e9-b02300edfcc4","name":"0b68e0c0-cb3d-4d30-84e9-b02300edfcc4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

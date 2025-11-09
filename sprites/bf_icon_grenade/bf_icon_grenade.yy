@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bf_icon_grenade",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f90904d0-a8d9-4b63-855b-1fc09abd5464","name":"f90904d0-a8d9-4b63-855b-1fc09abd5464","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f90904d0-a8d9-4b63-855b-1fc09abd5464","name":"f90904d0-a8d9-4b63-855b-1fc09abd5464","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

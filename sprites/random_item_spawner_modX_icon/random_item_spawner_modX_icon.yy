@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"random_item_spawner_modX_icon",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d3fad688-5e24-4e1b-86f8-04ab8f547e68","name":"d3fad688-5e24-4e1b-86f8-04ab8f547e68","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d3fad688-5e24-4e1b-86f8-04ab8f547e68","name":"d3fad688-5e24-4e1b-86f8-04ab8f547e68","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

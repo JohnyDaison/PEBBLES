@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_crouch",
   "bboxMode":2,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f9615927-5a02-4f38-acd4-0d312e72e9ec","name":"f9615927-5a02-4f38-acd4-0d312e72e9ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"787e7cf5-ea66-4703-b105-a37b0b73767d","name":"787e7cf5-ea66-4703-b105-a37b0b73767d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9615927-5a02-4f38-acd4-0d312e72e9ec","name":"f9615927-5a02-4f38-acd4-0d312e72e9ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"787e7cf5-ea66-4703-b105-a37b0b73767d","name":"787e7cf5-ea66-4703-b105-a37b0b73767d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

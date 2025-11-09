@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"ban_mob_portals_mod_icon",
   "bboxMode":0,
   "bbox_bottom":39,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","name":"bdee1b5f-3cd2-4c3f-b34f-b15639f30a43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

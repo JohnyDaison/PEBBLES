@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"smoke_cloud_spr",
   "bboxMode":2,
   "bbox_bottom":35,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","name":"b53a1fa2-20a5-4227-8c26-a90da5ccab54","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","name":"20458f62-1d64-4edb-bc04-0acd60a6c7ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

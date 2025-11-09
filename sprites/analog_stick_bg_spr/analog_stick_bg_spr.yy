@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"analog_stick_bg_spr",
   "bboxMode":0,
   "bbox_bottom":159,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9155e6c6-6418-45c5-a665-e276e3e5b867","name":"9155e6c6-6418-45c5-a665-e276e3e5b867","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9155e6c6-6418-45c5-a665-e276e3e5b867","name":"9155e6c6-6418-45c5-a665-e276e3e5b867","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

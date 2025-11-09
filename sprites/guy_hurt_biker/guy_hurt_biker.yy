@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_hurt_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"82abf5f5-c493-4f93-b28e-1c84a9a01fd8","name":"82abf5f5-c493-4f93-b28e-1c84a9a01fd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d3bab11f-60bf-4d8a-8b9e-318127b2db40","name":"d3bab11f-60bf-4d8a-8b9e-318127b2db40","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"82abf5f5-c493-4f93-b28e-1c84a9a01fd8","name":"82abf5f5-c493-4f93-b28e-1c84a9a01fd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d3bab11f-60bf-4d8a-8b9e-318127b2db40","name":"d3bab11f-60bf-4d8a-8b9e-318127b2db40","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

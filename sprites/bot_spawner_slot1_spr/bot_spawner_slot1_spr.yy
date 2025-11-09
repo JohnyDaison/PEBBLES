@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bot_spawner_slot1_spr",
   "bboxMode":0,
   "bbox_bottom":57,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0d9ec342-aadf-4510-a25f-cffe01aa601b","name":"0d9ec342-aadf-4510-a25f-cffe01aa601b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"48e99ad3-9630-4b8b-9e68-a97793550390","name":"48e99ad3-9630-4b8b-9e68-a97793550390","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0d9ec342-aadf-4510-a25f-cffe01aa601b","name":"0d9ec342-aadf-4510-a25f-cffe01aa601b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"48e99ad3-9630-4b8b-9e68-a97793550390","name":"48e99ad3-9630-4b8b-9e68-a97793550390","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

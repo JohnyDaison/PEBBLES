@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"dash_wave_spr",
   "bboxMode":2,
   "bbox_bottom":89,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"25490614-2f3f-4837-bbd5-e5b23685cc49","name":"25490614-2f3f-4837-bbd5-e5b23685cc49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"25490614-2f3f-4837-bbd5-e5b23685cc49","name":"25490614-2f3f-4837-bbd5-e5b23685cc49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":4,
   "gridY":4,

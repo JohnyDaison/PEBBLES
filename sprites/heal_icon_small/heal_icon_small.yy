@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"heal_icon_small",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c5778ffc-3c09-4381-b2af-bfa60d435ed2","name":"c5778ffc-3c09-4381-b2af-bfa60d435ed2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c5778ffc-3c09-4381-b2af-bfa60d435ed2","name":"c5778ffc-3c09-4381-b2af-bfa60d435ed2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

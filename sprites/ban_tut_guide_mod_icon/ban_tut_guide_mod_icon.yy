@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"ban_tut_guide_mod_icon",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"65493e5a-c32e-4fbf-aa67-677ada5544e0","name":"65493e5a-c32e-4fbf-aa67-677ada5544e0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"65493e5a-c32e-4fbf-aa67-677ada5544e0","name":"65493e5a-c32e-4fbf-aa67-677ada5544e0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

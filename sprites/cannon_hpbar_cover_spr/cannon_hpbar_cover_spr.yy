@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"cannon_hpbar_cover_spr",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3f58234d-8c16-426c-a320-6b1dd1ce5e0a","name":"3f58234d-8c16-426c-a320-6b1dd1ce5e0a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3f58234d-8c16-426c-a320-6b1dd1ce5e0a","name":"3f58234d-8c16-426c-a320-6b1dd1ce5e0a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

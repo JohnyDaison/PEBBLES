@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"dial_bg_small_spr",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c7ac8a72-41e6-4d7b-93ea-5e1372e0b685","name":"c7ac8a72-41e6-4d7b-93ea-5e1372e0b685","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c7ac8a72-41e6-4d7b-93ea-5e1372e0b685","name":"c7ac8a72-41e6-4d7b-93ea-5e1372e0b685","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

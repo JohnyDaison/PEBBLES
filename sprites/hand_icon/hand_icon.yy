@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"hand_icon",
   "bboxMode":0,
   "bbox_bottom":29,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a90f0c5f-fb8e-47f0-bdda-9594447b9225","name":"a90f0c5f-fb8e-47f0-bdda-9594447b9225","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a90f0c5f-fb8e-47f0-bdda-9594447b9225","name":"a90f0c5f-fb8e-47f0-bdda-9594447b9225","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"cannon_barrel_spr",
   "bboxMode":0,
   "bbox_bottom":20,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5f1a5e79-7bdc-44ea-8632-4516492bf778","name":"5f1a5e79-7bdc-44ea-8632-4516492bf778","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5f1a5e79-7bdc-44ea-8632-4516492bf778","name":"5f1a5e79-7bdc-44ea-8632-4516492bf778","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

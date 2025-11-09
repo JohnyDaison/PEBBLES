@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"hexagon_circle_odd_test_spr",
   "bboxMode":0,
   "bbox_bottom":60,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","name":"8eaadffe-83cc-44e8-b2ce-7da11bb9d198","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

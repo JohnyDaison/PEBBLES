@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_dead_biker",
   "bboxMode":0,
   "bbox_bottom":34,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"64ee6bac-d39c-400c-bf7a-11eb3871e1dd","name":"64ee6bac-d39c-400c-bf7a-11eb3871e1dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f2500b19-2b2c-4585-aed0-ad55d95a7d74","name":"f2500b19-2b2c-4585-aed0-ad55d95a7d74","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"64ee6bac-d39c-400c-bf7a-11eb3871e1dd","name":"64ee6bac-d39c-400c-bf7a-11eb3871e1dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f2500b19-2b2c-4585-aed0-ad55d95a7d74","name":"f2500b19-2b2c-4585-aed0-ad55d95a7d74","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

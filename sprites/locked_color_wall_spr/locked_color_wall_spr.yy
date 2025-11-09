@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"locked_color_wall_spr",
   "bboxMode":2,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"72f1b956-cf92-4bec-920f-855602edafcf","name":"72f1b956-cf92-4bec-920f-855602edafcf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"72f1b956-cf92-4bec-920f-855602edafcf","name":"72f1b956-cf92-4bec-920f-855602edafcf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

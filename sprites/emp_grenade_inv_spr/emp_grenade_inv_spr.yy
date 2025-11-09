@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"emp_grenade_inv_spr",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d5448d26-3a81-4f88-bf6f-0b8e0f51cea5","name":"d5448d26-3a81-4f88-bf6f-0b8e0f51cea5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d5448d26-3a81-4f88-bf6f-0b8e0f51cea5","name":"d5448d26-3a81-4f88-bf6f-0b8e0f51cea5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

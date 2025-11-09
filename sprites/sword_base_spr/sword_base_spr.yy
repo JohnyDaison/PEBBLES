@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sword_base_spr",
   "bboxMode":0,
   "bbox_bottom":29,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4f9a7f03-2f8d-4442-b5b6-09352d5f854a","name":"4f9a7f03-2f8d-4442-b5b6-09352d5f854a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4f9a7f03-2f8d-4442-b5b6-09352d5f854a","name":"4f9a7f03-2f8d-4442-b5b6-09352d5f854a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

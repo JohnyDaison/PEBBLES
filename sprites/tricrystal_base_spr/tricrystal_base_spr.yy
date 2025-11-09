@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"tricrystal_base_spr",
   "bboxMode":0,
   "bbox_bottom":123,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3e3e9461-3d6f-4c45-b5cd-4af08ee0b93f","name":"3e3e9461-3d6f-4c45-b5cd-4af08ee0b93f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3e3e9461-3d6f-4c45-b5cd-4af08ee0b93f","name":"3e3e9461-3d6f-4c45-b5cd-4af08ee0b93f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

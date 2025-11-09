@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"orbs_energy_min_lock_mod_off_icon",
   "bboxMode":0,
   "bbox_bottom":29,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"664b3352-9da9-49fd-8d04-bb9090748dc9","name":"664b3352-9da9-49fd-8d04-bb9090748dc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"664b3352-9da9-49fd-8d04-bb9090748dc9","name":"664b3352-9da9-49fd-8d04-bb9090748dc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":3,
   "gridY":3,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bronze_medal_spr",
   "bboxMode":0,
   "bbox_bottom":28,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b92f7778-4b8b-449c-bf0a-b69508f750fd","name":"b92f7778-4b8b-449c-bf0a-b69508f750fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b92f7778-4b8b-449c-bf0a-b69508f750fd","name":"b92f7778-4b8b-449c-bf0a-b69508f750fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

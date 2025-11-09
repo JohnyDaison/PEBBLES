@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"chaos_drive_icon",
   "bboxMode":0,
   "bbox_bottom":37,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"756a3922-f7c7-4c05-8427-aa2f77db6858","name":"756a3922-f7c7-4c05-8427-aa2f77db6858","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"756a3922-f7c7-4c05-8427-aa2f77db6858","name":"756a3922-f7c7-4c05-8427-aa2f77db6858","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

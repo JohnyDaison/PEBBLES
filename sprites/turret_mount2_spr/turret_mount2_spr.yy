@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"turret_mount2_spr",
   "bboxMode":2,
   "bbox_bottom":24,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9e0a6998-bf0b-49b3-bf3c-95d7f5bf0419","name":"9e0a6998-bf0b-49b3-bf3c-95d7f5bf0419","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9e0a6998-bf0b-49b3-bf3c-95d7f5bf0419","name":"9e0a6998-bf0b-49b3-bf3c-95d7f5bf0419","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

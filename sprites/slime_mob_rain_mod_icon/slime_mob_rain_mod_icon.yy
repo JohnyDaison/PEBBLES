@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"slime_mob_rain_mod_icon",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","name":"0cca0f59-850a-4e19-8bca-0aa4f935da92","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

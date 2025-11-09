@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"piezoplate_spr",
   "bboxMode":0,
   "bbox_bottom":9,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"029d80ed-2a7c-4d0f-8b18-857dacc2f841","name":"029d80ed-2a7c-4d0f-8b18-857dacc2f841","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"64d51566-d098-4add-9213-5eb4d1166000","name":"64d51566-d098-4add-9213-5eb4d1166000","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"029d80ed-2a7c-4d0f-8b18-857dacc2f841","name":"029d80ed-2a7c-4d0f-8b18-857dacc2f841","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"64d51566-d098-4add-9213-5eb4d1166000","name":"64d51566-d098-4add-9213-5eb4d1166000","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

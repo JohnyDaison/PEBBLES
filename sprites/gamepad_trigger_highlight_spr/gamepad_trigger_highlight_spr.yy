@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"gamepad_trigger_highlight_spr",
   "bboxMode":0,
   "bbox_bottom":62,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"180c2056-5eda-41eb-8b63-35d29c5d6fc4","name":"180c2056-5eda-41eb-8b63-35d29c5d6fc4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"180c2056-5eda-41eb-8b63-35d29c5d6fc4","name":"180c2056-5eda-41eb-8b63-35d29c5d6fc4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

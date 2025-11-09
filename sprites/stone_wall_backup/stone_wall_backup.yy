@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"stone_wall_backup",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4fb11ccd-e28c-4033-9ca0-fb12057e2624","name":"4fb11ccd-e28c-4033-9ca0-fb12057e2624","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4fb11ccd-e28c-4033-9ca0-fb12057e2624","name":"4fb11ccd-e28c-4033-9ca0-fb12057e2624","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

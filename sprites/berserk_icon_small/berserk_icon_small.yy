@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"berserk_icon_small",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"82bb1a25-62e0-4566-bfd7-58a21bae998b","name":"82bb1a25-62e0-4566-bfd7-58a21bae998b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"82bb1a25-62e0-4566-bfd7-58a21bae998b","name":"82bb1a25-62e0-4566-bfd7-58a21bae998b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

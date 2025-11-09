@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprinkler_shield_spr",
   "bboxMode":0,
   "bbox_bottom":94,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4a62d9f4-bfe9-4876-8670-266bc5aa9b0b","name":"4a62d9f4-bfe9-4876-8670-266bc5aa9b0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4a62d9f4-bfe9-4876-8670-266bc5aa9b0b","name":"4a62d9f4-bfe9-4876-8670-266bc5aa9b0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

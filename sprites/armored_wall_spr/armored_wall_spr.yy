@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"armored_wall_spr",
   "bboxMode":2,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d917c7a6-4fec-449d-ba30-f627ede70bc9","name":"d917c7a6-4fec-449d-ba30-f627ede70bc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d917c7a6-4fec-449d-ba30-f627ede70bc9","name":"d917c7a6-4fec-449d-ba30-f627ede70bc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

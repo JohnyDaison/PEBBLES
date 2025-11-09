@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"cannons_mod_icon",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"42459fbe-4b68-4cb3-8d9b-8d2f353bdf93","name":"42459fbe-4b68-4cb3-8d9b-8d2f353bdf93","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"42459fbe-4b68-4cb3-8d9b-8d2f353bdf93","name":"42459fbe-4b68-4cb3-8d9b-8d2f353bdf93","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

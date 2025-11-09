@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_slope_slide",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"dcba78cb-e14c-4ce6-9bfb-7c345eee9976","name":"dcba78cb-e14c-4ce6-9bfb-7c345eee9976","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dcba78cb-e14c-4ce6-9bfb-7c345eee9976","name":"dcba78cb-e14c-4ce6-9bfb-7c345eee9976","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

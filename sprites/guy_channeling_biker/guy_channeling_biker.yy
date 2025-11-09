@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_channeling_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b04a0e70-e473-428c-9ee8-979a2c24431a","name":"b04a0e70-e473-428c-9ee8-979a2c24431a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"003b98fa-c3b0-4b42-8f66-9fd8cc7c37c5","name":"003b98fa-c3b0-4b42-8f66-9fd8cc7c37c5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f6ed7d86-7ef3-40bf-ae5d-5d06d069f98d","name":"f6ed7d86-7ef3-40bf-ae5d-5d06d069f98d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d2ac6765-aad8-41a1-aca6-54f754c2c917","name":"d2ac6765-aad8-41a1-aca6-54f754c2c917","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b04a0e70-e473-428c-9ee8-979a2c24431a","name":"b04a0e70-e473-428c-9ee8-979a2c24431a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"003b98fa-c3b0-4b42-8f66-9fd8cc7c37c5","name":"003b98fa-c3b0-4b42-8f66-9fd8cc7c37c5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f6ed7d86-7ef3-40bf-ae5d-5d06d069f98d","name":"f6ed7d86-7ef3-40bf-ae5d-5d06d069f98d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d2ac6765-aad8-41a1-aca6-54f754c2c917","name":"d2ac6765-aad8-41a1-aca6-54f754c2c917","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

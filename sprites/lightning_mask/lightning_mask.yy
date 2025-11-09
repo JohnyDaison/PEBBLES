@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"lightning_mask",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c8e2c57f-dc9f-424b-8b84-5ff73421b1e2","name":"c8e2c57f-dc9f-424b-8b84-5ff73421b1e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c8e2c57f-dc9f-424b-8b84-5ff73421b1e2","name":"c8e2c57f-dc9f-424b-8b84-5ff73421b1e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

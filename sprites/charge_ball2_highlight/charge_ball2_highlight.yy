@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"charge_ball2_highlight",
   "bboxMode":0,
   "bbox_bottom":88,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"71d92bc7-a6b0-4afe-8204-7b2979680ae6","name":"71d92bc7-a6b0-4afe-8204-7b2979680ae6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"66e03189-0a27-4be5-b5cb-e997181874ec","name":"66e03189-0a27-4be5-b5cb-e997181874ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"71d92bc7-a6b0-4afe-8204-7b2979680ae6","name":"71d92bc7-a6b0-4afe-8204-7b2979680ae6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"66e03189-0a27-4be5-b5cb-e997181874ec","name":"66e03189-0a27-4be5-b5cb-e997181874ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"smoke_vent_spr",
   "bboxMode":0,
   "bbox_bottom":44,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"dfdfc243-e158-4218-bef4-6b3c8dfb425b","name":"dfdfc243-e158-4218-bef4-6b3c8dfb425b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dfdfc243-e158-4218-bef4-6b3c8dfb425b","name":"dfdfc243-e158-4218-bef4-6b3c8dfb425b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

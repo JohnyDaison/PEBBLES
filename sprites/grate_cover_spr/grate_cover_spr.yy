@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"grate_cover_spr",
   "bboxMode":0,
   "bbox_bottom":35,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"29a82ae0-9ff1-4991-8cf4-53076943bc56","name":"29a82ae0-9ff1-4991-8cf4-53076943bc56","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"29a82ae0-9ff1-4991-8cf4-53076943bc56","name":"29a82ae0-9ff1-4991-8cf4-53076943bc56","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

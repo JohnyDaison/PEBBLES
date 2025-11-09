@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"wallclimb_glove_base_spr",
   "bboxMode":0,
   "bbox_bottom":24,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e000fb4e-b59d-4fd1-b377-f488c94f319a","name":"e000fb4e-b59d-4fd1-b377-f488c94f319a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d5874fa3-2faa-4742-b99b-018266be8fd3","name":"d5874fa3-2faa-4742-b99b-018266be8fd3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a8f05bc6-b4a0-4c3f-a382-fc18e4255555","name":"a8f05bc6-b4a0-4c3f-a382-fc18e4255555","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e000fb4e-b59d-4fd1-b377-f488c94f319a","name":"e000fb4e-b59d-4fd1-b377-f488c94f319a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d5874fa3-2faa-4742-b99b-018266be8fd3","name":"d5874fa3-2faa-4742-b99b-018266be8fd3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a8f05bc6-b4a0-4c3f-a382-fc18e4255555","name":"a8f05bc6-b4a0-4c3f-a382-fc18e4255555","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

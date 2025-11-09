@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"stairs_flag_icon",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fea4be4e-fca0-4f6c-ba0b-2b7f8fae5ea2","name":"fea4be4e-fca0-4f6c-ba0b-2b7f8fae5ea2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fea4be4e-fca0-4f6c-ba0b-2b7f8fae5ea2","name":"fea4be4e-fca0-4f6c-ba0b-2b7f8fae5ea2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

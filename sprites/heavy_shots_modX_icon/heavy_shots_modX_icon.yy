@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"heavy_shots_modX_icon",
   "bboxMode":0,
   "bbox_bottom":29,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","name":"073abe35-5ffe-4f21-bf0c-bc1f4b20047e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

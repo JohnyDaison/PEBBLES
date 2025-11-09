@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprinkler_gun_spr",
   "bboxMode":0,
   "bbox_bottom":27,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f9987c62-f47b-401e-9016-bbc6764cf2da","name":"f9987c62-f47b-401e-9016-bbc6764cf2da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2c08013d-56fd-4455-aa0b-c81da59d7054","name":"2c08013d-56fd-4455-aa0b-c81da59d7054","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"aba71690-0cc2-4b91-8c8b-8702de9bbec6","name":"aba71690-0cc2-4b91-8c8b-8702de9bbec6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b2be94a1-ae8e-4a18-8280-ee3cd9ff07b6","name":"b2be94a1-ae8e-4a18-8280-ee3cd9ff07b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9987c62-f47b-401e-9016-bbc6764cf2da","name":"f9987c62-f47b-401e-9016-bbc6764cf2da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2c08013d-56fd-4455-aa0b-c81da59d7054","name":"2c08013d-56fd-4455-aa0b-c81da59d7054","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"aba71690-0cc2-4b91-8c8b-8702de9bbec6","name":"aba71690-0cc2-4b91-8c8b-8702de9bbec6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b2be94a1-ae8e-4a18-8280-ee3cd9ff07b6","name":"b2be94a1-ae8e-4a18-8280-ee3cd9ff07b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"gamepad_trigger_bg_spr",
   "bboxMode":0,
   "bbox_bottom":58,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"028725bf-50ed-4d9e-ae1f-ca973d257cc3","name":"028725bf-50ed-4d9e-ae1f-ca973d257cc3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9989a6bc-afc8-493e-9964-52cb2be93513","name":"9989a6bc-afc8-493e-9964-52cb2be93513","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"028725bf-50ed-4d9e-ae1f-ca973d257cc3","name":"028725bf-50ed-4d9e-ae1f-ca973d257cc3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9989a6bc-afc8-493e-9964-52cb2be93513","name":"9989a6bc-afc8-493e-9964-52cb2be93513","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

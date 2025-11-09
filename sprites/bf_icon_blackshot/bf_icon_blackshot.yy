@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bf_icon_blackshot",
   "bboxMode":0,
   "bbox_bottom":44,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"462ce0c3-9dab-41da-8ea4-386a6ee78ef1","name":"462ce0c3-9dab-41da-8ea4-386a6ee78ef1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"462ce0c3-9dab-41da-8ea4-386a6ee78ef1","name":"462ce0c3-9dab-41da-8ea4-386a6ee78ef1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

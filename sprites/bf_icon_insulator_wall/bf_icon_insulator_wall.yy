@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bf_icon_insulator_wall",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d64ca598-1df4-46f5-9c36-5c2ce4ef7d32","name":"d64ca598-1df4-46f5-9c36-5c2ce4ef7d32","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d64ca598-1df4-46f5-9c36-5c2ce4ef7d32","name":"d64ca598-1df4-46f5-9c36-5c2ce4ef7d32","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

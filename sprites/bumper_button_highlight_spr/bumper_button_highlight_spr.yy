@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bumper_button_highlight_spr",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"62b13926-ef1c-4dce-9dec-b54ac92e0925","name":"62b13926-ef1c-4dce-9dec-b54ac92e0925","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"62b13926-ef1c-4dce-9dec-b54ac92e0925","name":"62b13926-ef1c-4dce-9dec-b54ac92e0925","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

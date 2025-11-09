@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"energy_drain_rod_base_spr",
   "bboxMode":0,
   "bbox_bottom":94,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f9e331b6-d66d-46ce-989a-cc5c5174f83c","name":"f9e331b6-d66d-46ce-989a-cc5c5174f83c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"50b7bd1d-106b-4578-b3ea-d51f1d8d43fc","name":"50b7bd1d-106b-4578-b3ea-d51f1d8d43fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cad84856-3763-41a5-ad3d-f64b8436eaeb","name":"cad84856-3763-41a5-ad3d-f64b8436eaeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2f997ce4-8bf5-4693-a028-89f578d28256","name":"2f997ce4-8bf5-4693-a028-89f578d28256","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9e331b6-d66d-46ce-989a-cc5c5174f83c","name":"f9e331b6-d66d-46ce-989a-cc5c5174f83c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"50b7bd1d-106b-4578-b3ea-d51f1d8d43fc","name":"50b7bd1d-106b-4578-b3ea-d51f1d8d43fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cad84856-3763-41a5-ad3d-f64b8436eaeb","name":"cad84856-3763-41a5-ad3d-f64b8436eaeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2f997ce4-8bf5-4693-a028-89f578d28256","name":"2f997ce4-8bf5-4693-a028-89f578d28256","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

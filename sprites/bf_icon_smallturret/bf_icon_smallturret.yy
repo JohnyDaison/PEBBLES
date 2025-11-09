@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bf_icon_smallturret",
   "bboxMode":0,
   "bbox_bottom":24,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a88ac9ae-f57c-4d47-a18a-ecd2f8aaf753","name":"a88ac9ae-f57c-4d47-a18a-ecd2f8aaf753","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a88ac9ae-f57c-4d47-a18a-ecd2f8aaf753","name":"a88ac9ae-f57c-4d47-a18a-ecd2f8aaf753","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

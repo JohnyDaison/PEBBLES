@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sudden_death_start_mod_icon",
   "bboxMode":0,
   "bbox_bottom":38,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4433ce86-9dbc-4374-9e7a-6ddfd362f035","name":"4433ce86-9dbc-4374-9e7a-6ddfd362f035","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4433ce86-9dbc-4374-9e7a-6ddfd362f035","name":"4433ce86-9dbc-4374-9e7a-6ddfd362f035","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

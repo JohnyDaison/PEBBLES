@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"turret_body_base",
   "bboxMode":0,
   "bbox_bottom":49,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7708b9e9-bbcb-478d-8741-8634c5f9fe9d","name":"7708b9e9-bbcb-478d-8741-8634c5f9fe9d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"adf311f2-870b-4685-a702-cbb57a4af54a","name":"adf311f2-870b-4685-a702-cbb57a4af54a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7708b9e9-bbcb-478d-8741-8634c5f9fe9d","name":"7708b9e9-bbcb-478d-8741-8634c5f9fe9d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"adf311f2-870b-4685-a702-cbb57a4af54a","name":"adf311f2-870b-4685-a702-cbb57a4af54a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

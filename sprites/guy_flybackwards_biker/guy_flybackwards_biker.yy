@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_flybackwards_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e8218d1a-cec5-4b41-a44a-0a8f42789bc6","name":"e8218d1a-cec5-4b41-a44a-0a8f42789bc6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e8218d1a-cec5-4b41-a44a-0a8f42789bc6","name":"e8218d1a-cec5-4b41-a44a-0a8f42789bc6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

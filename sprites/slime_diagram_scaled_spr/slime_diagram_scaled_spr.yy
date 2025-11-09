@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"slime_diagram_scaled_spr",
   "bboxMode":0,
   "bbox_bottom":191,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"12e5042e-8df6-47d6-acf1-a265811dbb41","name":"12e5042e-8df6-47d6-acf1-a265811dbb41","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"12e5042e-8df6-47d6-acf1-a265811dbb41","name":"12e5042e-8df6-47d6-acf1-a265811dbb41","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":1,
   "gridY":1,

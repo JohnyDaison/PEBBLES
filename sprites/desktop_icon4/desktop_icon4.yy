@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"desktop_icon4",
   "bboxMode":1,
   "bbox_bottom":347,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8a017b50-8943-4376-a5d9-11fcc078948b","name":"8a017b50-8943-4376-a5d9-11fcc078948b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8a017b50-8943-4376-a5d9-11fcc078948b","name":"8a017b50-8943-4376-a5d9-11fcc078948b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

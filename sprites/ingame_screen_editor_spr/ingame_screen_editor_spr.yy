@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"ingame_screen_editor_spr",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e116b690-161a-4f8c-a4d8-b8d19c04f039","name":"e116b690-161a-4f8c-a4d8-b8d19c04f039","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e116b690-161a-4f8c-a4d8-b8d19c04f039","name":"e116b690-161a-4f8c-a4d8-b8d19c04f039","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

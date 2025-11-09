@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"octarine_square_checkered_spr",
   "bboxMode":0,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"185d0eb3-f321-46aa-9cc5-b5006dc79cca","name":"185d0eb3-f321-46aa-9cc5-b5006dc79cca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"185d0eb3-f321-46aa-9cc5-b5006dc79cca","name":"185d0eb3-f321-46aa-9cc5-b5006dc79cca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

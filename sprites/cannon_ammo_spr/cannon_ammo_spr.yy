@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"cannon_ammo_spr",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d9e9c0c7-bbf5-4a77-9111-9ffa386a2259","name":"d9e9c0c7-bbf5-4a77-9111-9ffa386a2259","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d9e9c0c7-bbf5-4a77-9111-9ffa386a2259","name":"d9e9c0c7-bbf5-4a77-9111-9ffa386a2259","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_orbit_size_plus_spr",
   "bboxMode":2,
   "bbox_bottom":39,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"20710fc7-76df-48a0-8a53-594a79509c6b","name":"20710fc7-76df-48a0-8a53-594a79509c6b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"20710fc7-76df-48a0-8a53-594a79509c6b","name":"20710fc7-76df-48a0-8a53-594a79509c6b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

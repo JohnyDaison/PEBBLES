@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_knockedback_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"111b9988-3ac5-4ad0-a72d-5c6951c90687","name":"111b9988-3ac5-4ad0-a72d-5c6951c90687","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14c12e8a-f6b8-413c-a211-46a5518d8188","name":"14c12e8a-f6b8-413c-a211-46a5518d8188","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"111b9988-3ac5-4ad0-a72d-5c6951c90687","name":"111b9988-3ac5-4ad0-a72d-5c6951c90687","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14c12e8a-f6b8-413c-a211-46a5518d8188","name":"14c12e8a-f6b8-413c-a211-46a5518d8188","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

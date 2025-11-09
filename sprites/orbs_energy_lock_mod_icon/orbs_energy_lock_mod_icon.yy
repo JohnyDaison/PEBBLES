@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"orbs_energy_lock_mod_icon",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fe2f5eff-ea6d-44b6-9595-ea0e62ee57fc","name":"fe2f5eff-ea6d-44b6-9595-ea0e62ee57fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fe2f5eff-ea6d-44b6-9595-ea0e62ee57fc","name":"fe2f5eff-ea6d-44b6-9595-ea0e62ee57fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":3,
   "gridY":3,

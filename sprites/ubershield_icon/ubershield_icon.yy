@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"ubershield_icon",
   "bboxMode":0,
   "bbox_bottom":38,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","name":"58776d0a-e4d4-4ee4-9a95-81582b1faa97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

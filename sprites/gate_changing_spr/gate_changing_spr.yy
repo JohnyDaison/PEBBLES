@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"gate_changing_spr",
   "bboxMode":2,
   "bbox_bottom":38,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a09f8e5f-dde8-4229-ac4e-82087e89fdd0","name":"a09f8e5f-dde8-4229-ac4e-82087e89fdd0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3c131a53-46ef-4f6a-9db4-d1811ae34ec6","name":"3c131a53-46ef-4f6a-9db4-d1811ae34ec6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a09f8e5f-dde8-4229-ac4e-82087e89fdd0","name":"a09f8e5f-dde8-4229-ac4e-82087e89fdd0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3c131a53-46ef-4f6a-9db4-d1811ae34ec6","name":"3c131a53-46ef-4f6a-9db4-d1811ae34ec6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

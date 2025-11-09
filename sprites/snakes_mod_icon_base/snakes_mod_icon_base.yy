@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"snakes_mod_icon_base",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"dcddae50-651f-4529-8da8-1a71ac14779c","name":"dcddae50-651f-4529-8da8-1a71ac14779c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"09c3b297-f282-47d8-8504-10b4b53cf361","name":"09c3b297-f282-47d8-8504-10b4b53cf361","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ab682e80-c36b-4297-8163-f9573183ead7","name":"ab682e80-c36b-4297-8163-f9573183ead7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","name":"9415fe4d-0d2d-4a54-97f0-4d4e8e2f21a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dcddae50-651f-4529-8da8-1a71ac14779c","name":"dcddae50-651f-4529-8da8-1a71ac14779c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"09c3b297-f282-47d8-8504-10b4b53cf361","name":"09c3b297-f282-47d8-8504-10b4b53cf361","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ab682e80-c36b-4297-8163-f9573183ead7","name":"ab682e80-c36b-4297-8163-f9573183ead7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

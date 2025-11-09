@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_jump_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b26c6ea0-d167-4f7e-a16d-abdf8866aad5","name":"b26c6ea0-d167-4f7e-a16d-abdf8866aad5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"551d8dd4-81e7-45df-9c25-99255b916742","name":"551d8dd4-81e7-45df-9c25-99255b916742","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b26c6ea0-d167-4f7e-a16d-abdf8866aad5","name":"b26c6ea0-d167-4f7e-a16d-abdf8866aad5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"551d8dd4-81e7-45df-9c25-99255b916742","name":"551d8dd4-81e7-45df-9c25-99255b916742","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

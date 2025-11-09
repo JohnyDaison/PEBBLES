@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"old_shield_sprite",
   "bboxMode":1,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"982dbdda-d872-45a2-9835-187c4ce946ba","name":"982dbdda-d872-45a2-9835-187c4ce946ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"982dbdda-d872-45a2-9835-187c4ce946ba","name":"982dbdda-d872-45a2-9835-187c4ce946ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

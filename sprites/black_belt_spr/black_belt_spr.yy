@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"black_belt_spr",
   "bboxMode":0,
   "bbox_bottom":23,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7b6be954-e1d9-4801-89e4-1f8b7d182f40","name":"7b6be954-e1d9-4801-89e4-1f8b7d182f40","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7b6be954-e1d9-4801-89e4-1f8b7d182f40","name":"7b6be954-e1d9-4801-89e4-1f8b7d182f40","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

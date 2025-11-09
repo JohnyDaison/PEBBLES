@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"smokeblower_item_spr",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"28b2c1c5-01d9-438e-acd7-0deb2eb1365f","name":"28b2c1c5-01d9-438e-acd7-0deb2eb1365f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"28b2c1c5-01d9-438e-acd7-0deb2eb1365f","name":"28b2c1c5-01d9-438e-acd7-0deb2eb1365f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

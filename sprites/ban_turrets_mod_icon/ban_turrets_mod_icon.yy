@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"ban_turrets_mod_icon",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","name":"35b68767-ddc9-4abb-9764-7e6ce543c2ff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

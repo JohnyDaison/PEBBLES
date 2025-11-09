@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spiral_illusion",
   "bboxMode":0,
   "bbox_bottom":74,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"745457b4-63a0-4060-98fb-1dacfa9e5ded","name":"745457b4-63a0-4060-98fb-1dacfa9e5ded","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"745457b4-63a0-4060-98fb-1dacfa9e5ded","name":"745457b4-63a0-4060-98fb-1dacfa9e5ded","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

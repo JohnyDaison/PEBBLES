@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"mob_portals_mod_icon",
   "bboxMode":0,
   "bbox_bottom":33,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"76af0cda-d9ed-47a9-b23a-4f9c9a56444d","name":"76af0cda-d9ed-47a9-b23a-4f9c9a56444d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"76af0cda-d9ed-47a9-b23a-4f9c9a56444d","name":"76af0cda-d9ed-47a9-b23a-4f9c9a56444d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

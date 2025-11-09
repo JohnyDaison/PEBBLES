@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_jump",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"66c9f5f6-6349-4116-a1a5-5032756387e6","name":"66c9f5f6-6349-4116-a1a5-5032756387e6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bc47be3a-b43e-4b22-a34b-f81e3bc521b6","name":"bc47be3a-b43e-4b22-a34b-f81e3bc521b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"66c9f5f6-6349-4116-a1a5-5032756387e6","name":"66c9f5f6-6349-4116-a1a5-5032756387e6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bc47be3a-b43e-4b22-a34b-f81e3bc521b6","name":"bc47be3a-b43e-4b22-a34b-f81e3bc521b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

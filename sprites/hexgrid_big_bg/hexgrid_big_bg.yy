@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"hexgrid_big_bg",
   "bboxMode":0,
   "bbox_bottom":237,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0c09eee1-6ae0-4bea-b2b8-2909dca4db5f","name":"0c09eee1-6ae0-4bea-b2b8-2909dca4db5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0c09eee1-6ae0-4bea-b2b8-2909dca4db5f","name":"0c09eee1-6ae0-4bea-b2b8-2909dca4db5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

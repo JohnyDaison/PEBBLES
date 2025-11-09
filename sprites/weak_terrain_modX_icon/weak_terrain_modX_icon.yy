@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"weak_terrain_modX_icon",
   "bboxMode":2,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ce9f3a71-218b-436d-b4e2-c04b15e49903","name":"ce9f3a71-218b-436d-b4e2-c04b15e49903","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ce9f3a71-218b-436d-b4e2-c04b15e49903","name":"ce9f3a71-218b-436d-b4e2-c04b15e49903","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

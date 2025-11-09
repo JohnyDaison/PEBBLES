@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_charging_orig",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"527cfbd0-c1dd-400f-b6ad-83fe7f927ed0","name":"527cfbd0-c1dd-400f-b6ad-83fe7f927ed0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"527cfbd0-c1dd-400f-b6ad-83fe7f927ed0","name":"527cfbd0-c1dd-400f-b6ad-83fe7f927ed0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"crystal_ball_torch_spr",
   "bboxMode":0,
   "bbox_bottom":54,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b92c48ce-8c17-47e5-bf8d-e779ed27b8cf","name":"b92c48ce-8c17-47e5-bf8d-e779ed27b8cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b92c48ce-8c17-47e5-bf8d-e779ed27b8cf","name":"b92c48ce-8c17-47e5-bf8d-e779ed27b8cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

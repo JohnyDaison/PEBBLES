@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"item_spawner_arm_spr",
   "bboxMode":0,
   "bbox_bottom":18,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f25dfce7-5bec-49a5-b9b5-04cff91ae1b6","name":"f25dfce7-5bec-49a5-b9b5-04cff91ae1b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f25dfce7-5bec-49a5-b9b5-04cff91ae1b6","name":"f25dfce7-5bec-49a5-b9b5-04cff91ae1b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

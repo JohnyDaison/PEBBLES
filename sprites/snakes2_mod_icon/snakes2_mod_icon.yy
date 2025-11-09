@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"snakes2_mod_icon",
   "bboxMode":0,
   "bbox_bottom":34,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"10897488-d760-48a7-94c8-8deca55468fc","name":"10897488-d760-48a7-94c8-8deca55468fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"10897488-d760-48a7-94c8-8deca55468fc","name":"10897488-d760-48a7-94c8-8deca55468fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":6,
   "gridY":6,

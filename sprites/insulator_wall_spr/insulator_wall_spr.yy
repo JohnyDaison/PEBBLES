@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"insulator_wall_spr",
   "bboxMode":0,
   "bbox_bottom":32,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"08ad1f45-8b6f-43cb-93ed-d4cede1797d2","name":"08ad1f45-8b6f-43cb-93ed-d4cede1797d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"08ad1f45-8b6f-43cb-93ed-d4cede1797d2","name":"08ad1f45-8b6f-43cb-93ed-d4cede1797d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

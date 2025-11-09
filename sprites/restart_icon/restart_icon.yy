@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"restart_icon",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a7b4de21-f5bc-4c41-bce1-f77a1b7137ba","name":"a7b4de21-f5bc-4c41-bce1-f77a1b7137ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a7b4de21-f5bc-4c41-bce1-f77a1b7137ba","name":"a7b4de21-f5bc-4c41-bce1-f77a1b7137ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

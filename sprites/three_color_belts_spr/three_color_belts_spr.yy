@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"three_color_belts_spr",
   "bboxMode":0,
   "bbox_bottom":51,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b1fb9756-cfb3-4292-8a7c-21ea511df725","name":"b1fb9756-cfb3-4292-8a7c-21ea511df725","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b1fb9756-cfb3-4292-8a7c-21ea511df725","name":"b1fb9756-cfb3-4292-8a7c-21ea511df725","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

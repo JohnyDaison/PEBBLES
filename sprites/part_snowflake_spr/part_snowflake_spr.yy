@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"part_snowflake_spr",
   "bboxMode":0,
   "bbox_bottom":59,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"44dd22c9-e036-4fa0-b01b-2b76887e4f13","name":"44dd22c9-e036-4fa0-b01b-2b76887e4f13","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"44dd22c9-e036-4fa0-b01b-2b76887e4f13","name":"44dd22c9-e036-4fa0-b01b-2b76887e4f13","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

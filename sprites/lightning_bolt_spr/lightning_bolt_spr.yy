@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"lightning_bolt_spr",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"070d1e1c-bce3-42f9-ad9e-1ab9465618ed","name":"070d1e1c-bce3-42f9-ad9e-1ab9465618ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"070d1e1c-bce3-42f9-ad9e-1ab9465618ed","name":"070d1e1c-bce3-42f9-ad9e-1ab9465618ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

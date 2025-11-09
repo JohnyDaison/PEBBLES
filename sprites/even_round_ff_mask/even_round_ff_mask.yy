@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"even_round_ff_mask",
   "bboxMode":0,
   "bbox_bottom":263,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7433151a-8427-4a00-8ec0-f5af20e30543","name":"7433151a-8427-4a00-8ec0-f5af20e30543","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7433151a-8427-4a00-8ec0-f5af20e30543","name":"7433151a-8427-4a00-8ec0-f5af20e30543","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

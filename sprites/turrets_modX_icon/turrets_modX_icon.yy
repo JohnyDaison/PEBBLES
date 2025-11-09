@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"turrets_modX_icon",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b8a3e5f3-e6cd-4d57-b5a3-469d5b95b177","name":"b8a3e5f3-e6cd-4d57-b5a3-469d5b95b177","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b8a3e5f3-e6cd-4d57-b5a3-469d5b95b177","name":"b8a3e5f3-e6cd-4d57-b5a3-469d5b95b177","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

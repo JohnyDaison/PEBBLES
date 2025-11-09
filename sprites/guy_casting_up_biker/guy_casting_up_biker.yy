@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_casting_up_biker",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"91de3bc1-4adf-4445-9c9c-bbb0d22e2dab","name":"91de3bc1-4adf-4445-9c9c-bbb0d22e2dab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fd1c289c-d421-46f5-bf02-4615ce1c603e","name":"fd1c289c-d421-46f5-bf02-4615ce1c603e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"50594b22-9ddc-473c-bca6-4ba444f1f165","name":"50594b22-9ddc-473c-bca6-4ba444f1f165","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"91de3bc1-4adf-4445-9c9c-bbb0d22e2dab","name":"91de3bc1-4adf-4445-9c9c-bbb0d22e2dab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fd1c289c-d421-46f5-bf02-4615ce1c603e","name":"fd1c289c-d421-46f5-bf02-4615ce1c603e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"50594b22-9ddc-473c-bca6-4ba444f1f165","name":"50594b22-9ddc-473c-bca6-4ba444f1f165","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

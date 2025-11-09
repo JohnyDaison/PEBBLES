@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_fall",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6b80a7f1-21d1-4edc-b0bc-890e513ffb3c","name":"6b80a7f1-21d1-4edc-b0bc-890e513ffb3c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4d0c145a-3516-4bbc-9512-b769b123a01c","name":"4d0c145a-3516-4bbc-9512-b769b123a01c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b80a7f1-21d1-4edc-b0bc-890e513ffb3c","name":"6b80a7f1-21d1-4edc-b0bc-890e513ffb3c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4d0c145a-3516-4bbc-9512-b769b123a01c","name":"4d0c145a-3516-4bbc-9512-b769b123a01c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

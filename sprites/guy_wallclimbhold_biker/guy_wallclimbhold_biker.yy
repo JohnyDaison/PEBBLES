@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_wallclimbhold_biker",
   "bboxMode":0,
   "bbox_bottom":54,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6fafeaf1-4053-478a-9f8b-b2e0a8929ccb","name":"6fafeaf1-4053-478a-9f8b-b2e0a8929ccb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6fafeaf1-4053-478a-9f8b-b2e0a8929ccb","name":"6fafeaf1-4053-478a-9f8b-b2e0a8929ccb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

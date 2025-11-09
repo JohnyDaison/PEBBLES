@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"big_tick_spr",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f30f4bcc-5f3a-4093-a805-216b077b2fa9","name":"f30f4bcc-5f3a-4093-a805-216b077b2fa9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"51f875f0-23e1-43ec-9209-3587a0dfb4a6","name":"51f875f0-23e1-43ec-9209-3587a0dfb4a6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f30f4bcc-5f3a-4093-a805-216b077b2fa9","name":"f30f4bcc-5f3a-4093-a805-216b077b2fa9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"51f875f0-23e1-43ec-9209-3587a0dfb4a6","name":"51f875f0-23e1-43ec-9209-3587a0dfb4a6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"berserker_anim_test",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c0a1222f-675e-4cca-9f4f-9f28a8bcb885","name":"c0a1222f-675e-4cca-9f4f-9f28a8bcb885","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a71ab053-d8f8-4f0b-a5e0-e6734e1bd226","name":"a71ab053-d8f8-4f0b-a5e0-e6734e1bd226","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"433bec60-b205-4ce2-83dd-f2bc717bd6d0","name":"433bec60-b205-4ce2-83dd-f2bc717bd6d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6b04ec62-4601-4a27-9fac-07b0712ec391","name":"6b04ec62-4601-4a27-9fac-07b0712ec391","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c0a1222f-675e-4cca-9f4f-9f28a8bcb885","name":"c0a1222f-675e-4cca-9f4f-9f28a8bcb885","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a71ab053-d8f8-4f0b-a5e0-e6734e1bd226","name":"a71ab053-d8f8-4f0b-a5e0-e6734e1bd226","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"433bec60-b205-4ce2-83dd-f2bc717bd6d0","name":"433bec60-b205-4ce2-83dd-f2bc717bd6d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b04ec62-4601-4a27-9fac-07b0712ec391","name":"6b04ec62-4601-4a27-9fac-07b0712ec391","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

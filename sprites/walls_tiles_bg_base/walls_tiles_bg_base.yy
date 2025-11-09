@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"walls_tiles_bg_base",
   "bboxMode":0,
   "bbox_bottom":63,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0a4d1288-b5d1-4460-96a2-9b95c7825c3e","name":"0a4d1288-b5d1-4460-96a2-9b95c7825c3e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0a4d1288-b5d1-4460-96a2-9b95c7825c3e","name":"0a4d1288-b5d1-4460-96a2-9b95c7825c3e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

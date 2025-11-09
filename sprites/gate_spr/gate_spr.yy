@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"gate_spr",
   "bboxMode":2,
   "bbox_bottom":38,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","name":"52a5ff45-b1c3-4069-8de3-a9045ae12abb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

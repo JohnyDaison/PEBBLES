@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"R_bumper_face_spr",
   "bboxMode":0,
   "bbox_bottom":21,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"75ce3ecb-d83a-406c-b467-5c86b483e251","name":"75ce3ecb-d83a-406c-b467-5c86b483e251","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"75ce3ecb-d83a-406c-b467-5c86b483e251","name":"75ce3ecb-d83a-406c-b467-5c86b483e251","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

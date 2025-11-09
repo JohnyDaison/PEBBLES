@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"jump_pad_icon",
   "bboxMode":0,
   "bbox_bottom":32,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7d0cbae8-5ccd-4eb6-b75e-7b63ccf57017","name":"7d0cbae8-5ccd-4eb6-b75e-7b63ccf57017","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7d0cbae8-5ccd-4eb6-b75e-7b63ccf57017","name":"7d0cbae8-5ccd-4eb6-b75e-7b63ccf57017","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

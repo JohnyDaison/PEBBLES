@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"tutorials_modX_icon",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0977c3c7-3f97-4914-bb7c-2bde64ae14c9","name":"0977c3c7-3f97-4914-bb7c-2bde64ae14c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0977c3c7-3f97-4914-bb7c-2bde64ae14c9","name":"0977c3c7-3f97-4914-bb7c-2bde64ae14c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

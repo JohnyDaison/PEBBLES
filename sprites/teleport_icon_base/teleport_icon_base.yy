@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"teleport_icon_base",
   "bboxMode":0,
   "bbox_bottom":55,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"36b7b465-6743-47b1-ab78-e2af0ee23116","name":"36b7b465-6743-47b1-ab78-e2af0ee23116","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"eebfd40e-7458-40b0-ba38-7206a19a8240","name":"eebfd40e-7458-40b0-ba38-7206a19a8240","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"36b7b465-6743-47b1-ab78-e2af0ee23116","name":"36b7b465-6743-47b1-ab78-e2af0ee23116","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"eebfd40e-7458-40b0-ba38-7206a19a8240","name":"eebfd40e-7458-40b0-ba38-7206a19a8240","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

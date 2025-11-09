@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sword_pointer_spr",
   "bboxMode":2,
   "bbox_bottom":17,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0d2177d3-f4a5-45bc-98a8-675544f8497e","name":"0d2177d3-f4a5-45bc-98a8-675544f8497e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0d2177d3-f4a5-45bc-98a8-675544f8497e","name":"0d2177d3-f4a5-45bc-98a8-675544f8497e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

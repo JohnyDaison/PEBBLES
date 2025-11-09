@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"bf_icon_spraycan",
   "bboxMode":0,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"298b2bd0-f4e8-498c-8eca-24cb59d1dffa","name":"298b2bd0-f4e8-498c-8eca-24cb59d1dffa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"298b2bd0-f4e8-498c-8eca-24cb59d1dffa","name":"298b2bd0-f4e8-498c-8eca-24cb59d1dffa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

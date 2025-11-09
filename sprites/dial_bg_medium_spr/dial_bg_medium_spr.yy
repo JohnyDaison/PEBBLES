@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"dial_bg_medium_spr",
   "bboxMode":0,
   "bbox_bottom":52,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ff1b27a3-0c58-4111-a5b0-2032daf69b97","name":"ff1b27a3-0c58-4111-a5b0-2032daf69b97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a84f3ec1-fd3a-41a7-986d-d4249e6bbf22","name":"a84f3ec1-fd3a-41a7-986d-d4249e6bbf22","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ff1b27a3-0c58-4111-a5b0-2032daf69b97","name":"ff1b27a3-0c58-4111-a5b0-2032daf69b97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a84f3ec1-fd3a-41a7-986d-d4249e6bbf22","name":"a84f3ec1-fd3a-41a7-986d-d4249e6bbf22","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

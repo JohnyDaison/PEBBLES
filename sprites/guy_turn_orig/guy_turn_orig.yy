@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"guy_turn_orig",
   "bboxMode":0,
   "bbox_bottom":47,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e2d5d2f7-78aa-4689-85e6-ce3e73ffaa1e","name":"e2d5d2f7-78aa-4689-85e6-ce3e73ffaa1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e2d5d2f7-78aa-4689-85e6-ce3e73ffaa1e","name":"e2d5d2f7-78aa-4689-85e6-ce3e73ffaa1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

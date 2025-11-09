@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"tiny_truss_body_spr",
   "bboxMode":0,
   "bbox_bottom":12,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","name":"8e289116-bcf4-4f26-b855-7c3fe515d7c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

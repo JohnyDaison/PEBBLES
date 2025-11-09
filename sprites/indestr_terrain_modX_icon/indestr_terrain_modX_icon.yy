@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"indestr_terrain_modX_icon",
   "bboxMode":2,
   "bbox_bottom":46,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","name":"d4bdda40-bdb2-43f6-9c59-08dee19b23c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
