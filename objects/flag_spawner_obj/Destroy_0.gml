@@ -1,3 +1,3 @@
-ds_list_destroy(lights);
+ds_list_destroy(self.lights);
 
 event_inherited();

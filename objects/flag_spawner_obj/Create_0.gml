@@ -2,70 +2,71 @@ event_inherited();
 
 var RuleID = global.RuleID;
 
-my_team_number = 0;
-flag_icon = noone;
-flag_score = rule_get_state(RuleID.FlagCaptureScore);
-flag_alpha = 0.9;
+self.my_team_number = 0;
+self.flag_icon = noone;
+self.flag_score = rule_get_state(RuleID.FlagCaptureScore);
+self.flag_alpha = 0.9;
 
-has_flag = true;
+self.has_flag = true;
 
-captured_flag_icon = noone;
-captured_flag_player = noone;
-captured_anim_duration = 180;
-captured_anim_fade_duration = 30;
-captured_anim_blink_time = 15;
-captured_anim_phase = 0;
+self.captured_flag_icon = noone;
+self.captured_flag_player = noone;
+self.captured_anim_duration = 180;
+self.captured_anim_fade_duration = 30;
+self.captured_anim_blink_time = 15;
+self.captured_anim_phase = 0;
 
-static_anim_length = 4;
-static_anim_speed = 0.25;
-static_anim_phase = 0;
+self.static_anim_length = 4;
+self.static_anim_speed = 0.25;
+self.static_anim_phase = 0;
 
 // LIGHT
-my_color = g_white;
-radius = 32;
-gives_light = true;
-shape = shape_circle;
-ambient_light = 0.3;
-direct_light = 0.025;
+self.my_color = g_white;
+self.radius = 32;
+self.gives_light = true;
+self.shape = shape_circle;
+self.ambient_light = 0.3;
+self.direct_light = 0.025;
 
-lights = ds_list_create();
+self.lights = ds_list_create();
 var light;
 
-light = instance_create_layer(x, y - 72, "Lights", point_light_emitter_obj);
+light = instance_create_layer(self.x, self.y - 72, "Lights", point_light_emitter_obj);
 light.sprite_index = empty_mask;
 light.my_color = g_green;
-light.my_holder = id;
+light.my_holder = self.id;
 
 ds_list_add(lights, light);
 
-light = instance_create_layer(x - 32, y - 16, "Lights", point_light_emitter_obj);
+light = instance_create_layer(self.x - 32, self.y - 16, "Lights", point_light_emitter_obj);
 light.sprite_index = empty_mask;
 light.my_color = g_green;
-light.my_holder = id;
+light.my_holder = self.id;
 
 ds_list_add(lights, light);
 
-light = instance_create_layer(x + 32, y - 16, "Lights", point_light_emitter_obj);
+light = instance_create_layer(self.x + 32, self.y - 16, "Lights", point_light_emitter_obj);
 light.sprite_index = empty_mask;
 light.my_color = g_green;
-light.my_holder = id;
+light.my_holder = self.id;
 
-ds_list_add(lights, light);
+ds_list_add(self.lights, light);
 
-light_count = ds_list_size(lights);
+self.light_count = ds_list_size(self.lights);
 
-alarm[1] = 2;
+self.alarm[1] = 2;
 
-reset_flag = function() {
+function reset_flag() {
     has_flag = true;
 }
 
-set_lights_state = function(state) {
-    for (var light_index = 0; light_index < light_count; light_index++) {
-        lights[| light_index].gives_light = state;
+/// @param {Bool} state
+function set_lights_state(state) {
+    for (var light_index = 0; light_index < self.light_count; light_index++) {
+        self.lights[| light_index].gives_light = state;
     }
 }
 
-set_lights_state(false);
+self.set_lights_state(false);
 
-name = "Flag Holder";
+self.name = "Flag Holder";
