@@ -1,11 +1,11 @@
 event_inherited();
 
-my_team_number = 0;
-my_flag_spawner = noone;
-flag_icon = noone;
-flag_alpha = 0.9;
+self.my_team_number = 0;
+self.my_flag_spawner = noone;
+self.flag_icon = noone;
+self.flag_alpha = 0.9;
 
-pickup_sound = flag_pickup_sound;
-inventory_spr = sprite_index;
+self.pickup_sound = flag_pickup_sound;
+self.inventory_spr = self.sprite_index;
 
-name = "Flag";
+self.name = "Flag";

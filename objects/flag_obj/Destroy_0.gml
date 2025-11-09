@@ -1,7 +1,7 @@
 /// @description Reset Flag Spawner
 
-if (!cancelled && instance_exists(my_flag_spawner)) {
-    my_flag_spawner.reset_flag();
+if (!self.cancelled && instance_exists(self.my_flag_spawner)) {
+    self.my_flag_spawner.reset_flag();
 }
 
 event_inherited();
