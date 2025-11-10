@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TutorialOverlayMessage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TutorialOverlayMessage",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1432,6 +1432,7 @@
     {"id":{"name":"tut_guide3_init","path":"scripts/tut_guide3_init/tut_guide3_init.yy",},},
     {"id":{"name":"tut_guide3","path":"scripts/tut_guide3/tut_guide3.yy",},},
     {"id":{"name":"tutorial_movement_strings","path":"scripts/tutorial_movement_strings/tutorial_movement_strings.yy",},},
+    {"id":{"name":"TutorialOverlayMessage","path":"scripts/TutorialOverlayMessage/TutorialOverlayMessage.yy",},},
     {"id":{"name":"unregister_item","path":"scripts/unregister_item/unregister_item.yy",},},
     {"id":{"name":"unsubscribe_event","path":"scripts/unsubscribe_event/unsubscribe_event.yy",},},
     {"id":{"name":"update_display","path":"scripts/update_display/update_display.yy",},},

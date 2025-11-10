@@ -5,15 +5,15 @@ if (instance_exists(self.my_guy)) {
 
     // UPDATE MESSAGE
     for (var index = 0; index < self.message_count; index++) {
-        var message_script = self.messages[index];
+        var messageStruct = self.messages[index];
 
         var state = self.message_state[index];
 
         if (state == 0 && self.message == "" && self.fadeout_step == self.fadeout_time) {
-            self.title = script_execute(message_script, "title");
+            self.title = messageStruct.title;
 
-            if (script_execute(message_script, "show_check")) {
-                self.message = script_execute(message_script, "message");
+            if (messageStruct.showCondition()) {
+                self.message = messageStruct.message();
                 self.blink_step = 0;
                 self.cur_message_step = 0;
                 state = 1;
@@ -23,8 +23,8 @@ if (instance_exists(self.my_guy)) {
         }
 
         if (state != 2 && !change_made) {
-            if (script_execute(message_script, "hide_check")) {
-                self.title = script_execute(message_script, "title");
+            if (messageStruct.hideCondition()) {
+                self.title = messageStruct.title;
 
                 if (state == 1) {
                     self.fadeout_step = 0;
@@ -36,8 +36,8 @@ if (instance_exists(self.my_guy)) {
             }
 
             if (state == 1) {
-                if (script_execute(message_script, "cancel_check")) {
-                    self.title = script_execute(message_script, "title");
+                if (messageStruct.cancelCondition()) {
+                    self.title = messageStruct.title;
                     self.fadeout_step = 0;
                     self.blink_step = self.blink_time; //self.message = "";
                     state = 0;

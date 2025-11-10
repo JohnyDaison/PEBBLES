@@ -39,7 +39,7 @@ self.alarm[2] = self.message_delay;
 function addMessage(message) {
     var index = self.message_count++;
     
-    self.messages[index] = message;
+    self.messages[index] = new TutorialOverlayMessage(self.id, message);
     self.message_state[index] = 0;
 }
 
