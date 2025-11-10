@@ -1,321 +1,303 @@
-if(instance_exists(my_block))
-{
-    var i, inv, found, has_field = false;
-    
-    // COPY BLOCK COLOR ON CHANGE
-    if(my_last_color != my_block.my_color && my_color != my_block.my_color)
-    {
-        my_color = my_block.my_color;
-        if(my_last_color == g_nothing || my_color == g_octarine)
-        {
-            my_last_color = my_color;
-        }
-        tint_updated = false;
+if (!instance_exists(self.my_block)) {
+    exit;
+}
+
+// COPY BLOCK COLOR ON CHANGE
+if (self.my_last_color != self.my_block.my_color && self.my_color != self.my_block.my_color) {
+    self.my_color = self.my_block.my_color;
+
+    if (self.my_last_color == g_nothing || self.my_color == g_octarine) {
+        self.my_last_color = self.my_color;
     }
-    
-    // WHILE STABLE
-    if(tint_updated && my_last_color == my_block.my_color)
-    {
-        for(i=0; i<4; i++)
-        {
-            var other_gate = noone;
-            
-            if(instance_exists(field[? i]))
-            {
-                other_gate = field[? i].my_gates[? i];
-                
-                if(instance_exists(other_gate) && other_gate.my_block.object_index == wall_obj)
-                {
-                    var other_block = other_gate.my_block;
-                
-                    if(my_block.energy > other_block.energy
-                    && my_block.energy >= (DB.terrain_config[? "active_threshold"] + transfer_packet_size))
-                    {
-                        my_block.energy -= transfer_packet_size;
-                        other_block.direct_input_buffer += transfer_packet_size;
-                    
-                        if(other_block.my_color == g_dark)
-                        {
-                            other_block.my_next_color = my_block.my_next_color;
-                        }
-                    
-                    }
-                }
+    self.tint_updated = false;
+}
+
+// WHILE STABLE
+if (self.tint_updated && self.my_last_color == self.my_block.my_color) {
+    for (var sideIndex = 0; sideIndex < 4; sideIndex++) {
+        if (!instance_exists(self.field[? sideIndex])) {
+            continue;
+        }
+
+        var other_gate = self.field[? sideIndex].my_gates[? sideIndex];
+
+        if (!instance_exists(other_gate) || other_gate.my_block.object_index != wall_obj) {
+            continue;
+        }
+
+        var other_block = other_gate.my_block;
+
+        if (self.my_block.energy > other_block.energy
+            && self.my_block.energy >= (DB.terrain_config[? "active_threshold"] + self.transfer_packet_size)) {
+            self.my_block.energy -= self.transfer_packet_size;
+            other_block.direct_input_buffer += self.transfer_packet_size;
+
+            if (other_block.my_color == g_dark) {
+                other_block.my_next_color = self.my_block.my_next_color;
             }
         }
-    }
-    
-    if(my_last_color != my_color) {
-        // AT COLOR CHANGE START
-        if(desired_disc_angle == 0
-            && my_color > g_dark && my_color < g_white 
-            && my_last_color > g_dark && my_last_color < g_white)
-        {
-            var old_dir = DB.colordirs[? my_last_color];
-            var new_dir = DB.colordirs[? my_color];
-            var rotation = ((round(new_dir-old_dir+2) mod 4)+4) mod 4 -2;
-        
-            desired_disc_angle = rotation * 90; 
-            rotation_acc = rotation_acc_coef * sqr(rotation);
-        }
-    
-        // WHEN COLOR CHANGE FINISHES
-        if(tint_updated && my_color > g_dark && my_color < g_white)
-        {
-            if(my_last_color > g_dark && my_last_color < g_white)
-            {
-                // EXECUTE COMMAND
-                var old_dir = DB.colordirs[? my_last_color];
-                var new_dir = DB.colordirs[? my_color];
-                rotate_by += ((round(new_dir-old_dir+2) mod 4)+4) mod 4 -2;
-            }   
-        
-            // DISCARD COLOR
-            my_last_color = my_color;
-            my_color = g_dark;
-            tint_updated = false;
-        }
-    }
-    
-    // DISC ROTATION
-    var angle_diff = angle_difference(desired_disc_angle, disc_angle);
-    var too_fast = false, wrong_direction = false;
-    var reverse_coef = 1;
-    
-    if(abs(rotation_speed) > 0) {
-        too_fast = abs(2*angle_diff/rotation_speed) <= abs(rotation_speed/rotation_acc);
-        wrong_direction = sign(angle_diff) != sign(rotation_speed);
-        
-        if (too_fast && !wrong_direction) {
-            reverse_coef = -0.25;
-        }
-        
-        if (wrong_direction) {
-            reverse_coef = 1.5;
-        }
-    }
-    
-    var current_acc = reverse_coef * rotation_acc;
-    var stop_limit = abs(current_acc);
-    
-    if(abs(angle_diff) <= stop_limit && abs(rotation_speed) <= stop_limit) {
-        rotation_speed = 0;
-        disc_angle = desired_disc_angle;
-    } else {
-        rotation_speed += current_acc * sign(angle_diff);
-        disc_angle += rotation_speed;   
-    }
-    
-    // RESET FIELDS
-    if(abs(rotate_by) > 0)
-    {
-        for(i=0; i<4; i++)
-        {
-            if(instance_exists(field[? i]))
-            {
-                instance_destroy(field[? i]);
-            }
-        }
-    }
-    
-    // ROTATE
-    var rotate_failed = false;
-    var orig_rotate_by = rotate_by;
-    var done = false;
-    
-    while(!done)
-    {
-        while(rotate_by != 0)
-        {
-            if(rotate_by > 0)
-            {
-                var orig_last_active = active[?3];
-                for(i=3; i>0; i--)
-                {
-                    active[?i] = active[?i-1];
-                }
-                active[?0] = orig_last_active;
-                
-                rotate_by--;
-            }
-            if(rotate_by < 0)
-            {
-                var orig_first_active = active[?0];
-                for(i=0; i<3; i++)
-                {
-                    active[?i] = active[?i+1];
-                }
-                active[?3] = orig_first_active;
-                
-                rotate_by++;
-            }
-            
-            has_rotated = true;
-        }
-        
-        rotate_failed = false;
-        for(i=0; i<4; i++)
-        {
-            if(active[?i] && !enabled[?i])
-            {
-                rotate_failed = true;
-                has_rotated = false;
-            }
-        }
-        
-        if(rotate_failed)
-        {
-            rotate_by = -orig_rotate_by;
-            desired_disc_angle = 0;
-        }
-        else
-        {
-            if(desired_disc_angle != 0) {
-                disc_angle -= orig_rotate_by * 90;
-                desired_disc_angle = 0;
-            }
-            
-            done = true;
-        }
-    }
-    
-    // MANAGE FIELDS
-    for(i=0; i<4; i++)
-    {
-        inv = (i+2) mod 4; // inverted
-        
-        if(enabled[?i] && active[?i])
-        {
-            if(!instance_exists(field[?i]))
-            {
-                found = false;
-                with(gate_obj)
-                {
-                    if(other.id != id)
-                    {
-                        if(enabled[?inv] && active[?inv] && !instance_exists(field[?inv]))
-                        {
-                            var hor = false;
-                            var vert = false;
-                            var width = 0;
-                            var height = 0;
-                            
-                            //horizontal
-                            if(i mod 2 == 0 && y == other.y)
-                            {
-                                var dir = sign(x-other.x);
-                                if(dir == -i+1) // same dir
-                                {                            
-                                    if(!collision_line(other.x + dir*16, other.y, x - dir*16, y, gate_blocking_terrain_obj, false, false))
-                                    {
-                                        width = abs(x-other.x)-32;
-                                        hor = true;
-                                        found = true;
-                                    }
-                                }
-                            }
-                            //vertical
-                            else if(i mod 2 == 1 && x == other.x)
-                            {
-                                var dir = sign(y-other.y);
-                                if(dir == i-2) // same dir
-                                {                            
-                                    if(!collision_line(other.x, other.y + dir*16, x, y - dir*16, gate_blocking_terrain_obj, false, false))
-                                    {
-                                        height = abs(y-other.y)-32;
-                                        vert = true;
-                                        found = true;
-                                    }
-                                }
-                            }
-                            
-                            if(found)
-                            {
-                                var field_inst = instance_create(ceil((x+other.x)/2)+1, ceil((y+other.y)/2)+1, gate_field_obj);
-                                field[? inv] = field_inst;
-                                other.field[? i] = field_inst;
-                                if(my_player == other.my_player)
-                                    field_inst.my_player = my_player;
-                                    
-                                field_inst.my_gates[? inv] = other.id;
-                                field_inst.my_gates[? i] = id;
-                                
-                                field_inst.horizontal = hor;
-                                field_inst.vertical = vert;
-                                if(width > 0)
-                                    field_inst.width = width;
-                                if(height > 0)    
-                                    field_inst.height = height;
-                                    field_inst.radius = max(width, height);
-                                break;
-                            }
-                        }
-                    }
-                }      
-            }
-            else
-            {
-                has_field = true;
-            }
-        }
-    }
-    
-    if(my_color == g_dark && has_field)
-    {
-        my_color = g_white;
-        tint_updated = false;
-    }
-    else if(my_color == g_white && !has_field)
-    {
-        my_color = g_dark;
-        tint_updated = false;
-    }
- 
-    var ii, col, dir_diff, col_diff, list;
-    
-    // RECALCULATE TINTS
-    if(has_rotated)
-    {
-        for(i=0; i<4; i++)
-        {
-            list = tints[? i];
-            ds_list_clear(list);
-            
-            if(enabled[? i])
-            {
-                if(active[? i])
-                {
-                    ds_list_add(list, DB.colormap[? g_white]);
-                }
-                else if(my_last_color <= g_dark || my_last_color >= g_white)
-                {
-                    ds_list_add(list, DB.colormap[? g_dark]);
-                }
-                else
-                {
-                    for(ii=0; ii<4; ii++)
-                    {
-                        if(active[? ii])
-                        {
-                            for(col = g_red; col <= g_cyan; col++)
-                            {
-                                if(col == my_last_color)
-                                    continue;
-                                    
-                                dir_diff = (i-ii +4) mod 4;
-                                col_diff = round(DB.colordirs[? col] - DB.colordirs[? my_last_color] +4) mod 4;
-                                                                
-                                if(dir_diff == col_diff)
-                                {
-                                    ds_list_add(list, DB.colormap[? col]);
-                                }
-                            }
-                        }
-                    }   
-                }              
-            }
-        }
-        
-        has_rotated = false;
     }
 }
+
+if (self.my_last_color != self.my_color) {
+    // AT COLOR CHANGE START
+    if (self.desired_disc_angle == 0
+        && self.my_color > g_dark && self.my_color < g_white
+        && self.my_last_color > g_dark && self.my_last_color < g_white) {
+        var old_dir = DB.colordirs[? self.my_last_color];
+        var new_dir = DB.colordirs[? self.my_color];
+        var rotation = ((round(new_dir - old_dir + 2) mod 4) +4) mod 4 - 2;
+
+        self.desired_disc_angle = rotation * 90;
+        self.rotation_acc = self.rotation_acc_coef * sqr(rotation);
+    }
+
+    // WHEN COLOR CHANGE FINISHES
+    if (self.tint_updated && self.my_color > g_dark && self.my_color < g_white) {
+        if (self.my_last_color > g_dark && self.my_last_color < g_white) {
+            // EXECUTE COMMAND
+            var old_dir = DB.colordirs[? self.my_last_color];
+            var new_dir = DB.colordirs[? self.my_color];
+            self.rotate_by += ((round(new_dir - old_dir + 2) mod 4) +4) mod 4 - 2;
+        }
+
+        // DISCARD COLOR
+        self.my_last_color = self.my_color;
+        self.my_color = g_dark;
+        self.tint_updated = false;
+    }
+}
+
+// DISC ROTATION
+var angle_diff = angle_difference(self.desired_disc_angle, self.disc_angle);
+var reverse_coef = 1;
+
+if (abs(self.rotation_speed) > 0) {
+    var too_fast = abs(2 * angle_diff / self.rotation_speed) <= abs(self.rotation_speed / self.rotation_acc);
+    var wrong_direction = sign(angle_diff) != sign(self.rotation_speed);
+
+    if (too_fast && !wrong_direction) {
+        reverse_coef = -0.25;
+    }
+
+    if (wrong_direction) {
+        reverse_coef = 1.5;
+    }
+}
+
+var current_acc = reverse_coef * self.rotation_acc;
+var stop_limit = abs(current_acc);
+
+if (abs(angle_diff) <= stop_limit && abs(self.rotation_speed) <= stop_limit) {
+    self.rotation_speed = 0;
+    self.disc_angle = self.desired_disc_angle;
+} else {
+    self.rotation_speed += current_acc * sign(angle_diff);
+    self.disc_angle += self.rotation_speed;
+}
+
+// RESET FIELDS
+if (abs(self.rotate_by) > 0) {
+    for (var sideIndex = 0; sideIndex < 4; sideIndex++) {
+        if (instance_exists(self.field[? sideIndex])) {
+            instance_destroy(self.field[? sideIndex]);
+        }
+    }
+}
+
+// ROTATE
+var rotate_failed = false;
+var orig_rotate_by = self.rotate_by;
+var done = false;
+
+while (!done) {
+    while (self.rotate_by != 0) {
+        if (self.rotate_by > 0) {
+            var orig_last_active = self.active[? 3];
+
+            for (var sideIndex = 3; sideIndex > 0; sideIndex--) {
+                self.active[? sideIndex] = self.active[? sideIndex - 1];
+            }
+
+            self.active[? 0] = orig_last_active;
+            self.rotate_by--;
+        }
+
+        if (self.rotate_by < 0) {
+            var orig_first_active = self.active[? 0];
+
+            for (var sideIndex = 0; sideIndex < 3; sideIndex++) {
+                self.active[? sideIndex] = self.active[? sideIndex + 1];
+            }
+
+            self.active[? 3] = orig_first_active;
+            self.rotate_by++;
+        }
+
+        self.has_rotated = true;
+    }
+
+    rotate_failed = false;
+
+    for (var sideIndex = 0; sideIndex < 4; sideIndex++) {
+        if (self.active[? sideIndex] && !self.enabled[? sideIndex]) {
+            rotate_failed = true;
+            self.has_rotated = false;
+        }
+    }
+
+    if (rotate_failed) {
+        self.rotate_by = -orig_rotate_by;
+        self.desired_disc_angle = 0;
+    }
+    else {
+        if (self.desired_disc_angle != 0) {
+            self.disc_angle -= orig_rotate_by * 90;
+            self.desired_disc_angle = 0;
+        }
+
+        done = true;
+    }
+}
+
+// MANAGE FIELDS
+var has_field = false;
+
+for (var sideIndex = 0; sideIndex < 4; sideIndex++) {
+    var inv = (sideIndex + 2) mod 4; // inverted
+
+    if (!self.enabled[? sideIndex] || !self.active[? sideIndex]) {
+        continue;
+    }
+
+    if (instance_exists(self.field[? sideIndex])) {
+        has_field = true;
+
+        continue;
+    }
+
+    var found = false;
+
+    with (gate_obj) {
+        if (other.id == self.id) {
+            continue;
+        }
+
+        if (!self.enabled[? inv] || !self.active[? inv] || instance_exists(self.field[? inv])) {
+            continue;
+        }
+
+        var hor = false;
+        var vert = false;
+        var width = 0;
+        var height = 0;
+
+        //horizontal
+        if (sideIndex mod 2 == 0 && self.y == other.y) {
+            var dir = sign(self.x - other.x);
+
+            // same dir
+            if (dir == -sideIndex + 1) {
+                if (!collision_line(other.x + dir * 16, other.y, self.x - dir * 16, self.y, gate_blocking_terrain_obj, false, false)) {
+                    width = abs(self.x - other.x) - 32;
+                    hor = true;
+                    found = true;
+                }
+            }
+        }
+        //vertical
+        else if (sideIndex mod 2 == 1 && self.x == other.x) {
+            var dir = sign(self.y - other.y);
+
+            // same dir
+            if (dir == sideIndex - 2) {
+                if (!collision_line(other.x, other.y + dir * 16, self.x, self.y - dir * 16, gate_blocking_terrain_obj, false, false)) {
+                    height = abs(self.y - other.y) - 32;
+                    vert = true;
+                    found = true;
+                }
+            }
+        }
+
+        if (!found) {
+            continue;
+        }
+
+        var field_inst = instance_create(ceil((self.x + other.x) / 2) + 1, ceil((self.y + other.y) / 2) + 1, gate_field_obj);
+
+        self.field[? inv] = field_inst;
+        other.field[? sideIndex] = field_inst;
+
+        if (self.my_player == other.my_player) {
+            field_inst.my_player = self.my_player;
+        }
+
+        field_inst.my_gates[? inv] = other.id;
+        field_inst.my_gates[? sideIndex] = self.id;
+
+        field_inst.horizontal = hor;
+        field_inst.vertical = vert;
+
+        if (width > 0) {
+            field_inst.width = width;
+        }
+
+        if (height > 0) {
+            field_inst.height = height;
+        }
+
+        field_inst.radius = max(width, height);
+        break;
+    }
+}
+
+if (self.my_color == g_dark && has_field) {
+    self.my_color = g_white;
+    self.tint_updated = false;
+}
+else if (self.my_color == g_white && !has_field) {
+    self.my_color = g_dark;
+    self.tint_updated = false;
+}
+
+// RECALCULATE TINTS
+if (!self.has_rotated) {
+    exit;
+}
+
+for (var sideIndex = 0; sideIndex < 4; sideIndex++) {
+    var list = self.tints[? sideIndex];
+    ds_list_clear(list);
+
+    if (!self.enabled[? sideIndex]) {
+        continue;
+    }
+
+    if (self.active[? sideIndex]) {
+        ds_list_add(list, DB.colormap[? g_white]);
+    }
+    else if (self.my_last_color <= g_dark || self.my_last_color >= g_white) {
+        ds_list_add(list, DB.colormap[? g_dark]);
+    }
+    else {
+        for (var ii = 0; ii < 4; ii++) {
+            if (!self.active[? ii]) {
+                continue;
+            }
+
+            for (var col = g_red; col <= g_cyan; col++) {
+                if (col == self.my_last_color)
+                    continue;
+
+                var dir_diff = (sideIndex - ii + 4) mod 4;
+                var col_diff = round(DB.colordirs[? col] - DB.colordirs[? self.my_last_color] + 4) mod 4;
+
+                if (dir_diff == col_diff) {
+                    ds_list_add(list, DB.colormap[? col]);
+                }
+            }
+        }
+    }
+}
+
+self.has_rotated = false;

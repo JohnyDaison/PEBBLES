@@ -32,6 +32,9 @@ stop using `ds_*` types
 * `string_explode`
 should output array not list
 
+* "ASSIGN BLOCK" Alarm Events
+have a lot of of repeating code
+
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
