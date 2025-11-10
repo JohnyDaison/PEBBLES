@@ -1,22 +1,22 @@
-action_inherited();
+event_inherited();
 
-if(self.alpha > 0)
-{
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    my_draw_set_font(self.font);
-    
-    draw_set_alpha(self.alpha);
-    draw_set_color(c_gray);
-    
-    var i=2;
-    repeat(2)
-    {
-        my_draw_text_ext(x+width/2+i, y+height/2+i, string_hash_to_newline(message), line_height, width-32);
-        
-        draw_set_color(self.color);
-        i=0;
-    }
+if (self.alpha <= 0) {
+    exit;
+}
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+my_draw_set_font(self.font);
+
+draw_set_alpha(self.alpha);
+draw_set_color(c_gray);
+
+var i = 2;
+repeat(2) {
+    my_draw_text_ext(self.x + self.width / 2 + i, self.y + self.height / 2 + i, self.message, self.line_height, self.width - 32);
+
+    draw_set_color(self.color);
+    i = 0;
 }
 /*
 draw_set_alpha(1);
