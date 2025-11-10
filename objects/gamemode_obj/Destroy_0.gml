@@ -1,32 +1,27 @@
-for(var i = -1; i <= player_count; i++)
-{
-    player = players[? i];
-    if(!is_undefined(player)) 
-    {
-        with(player)
-        {
-            instance_destroy();
-        }
+for (var playerNumber = -1; playerNumber <= self.player_count; playerNumber++) {
+    var player = self.players[? playerNumber];
+
+    if (!is_undefined(player)) {
+        instance_destroy(player);
     }
 }
 
-ds_map_destroy(players);
-ds_map_destroy(stats);
-ds_map_destroy(score_values);
+ds_map_destroy(self.players);
+ds_map_destroy(self.stats);
+ds_map_destroy(self.score_values);
 
 //levels
-ds_map_destroy(level_min);
-ds_map_destroy(level_max);
-ds_map_destroy(level_minstart);
-ds_map_destroy(level_maxstart);
+ds_map_destroy(self.level_min);
+ds_map_destroy(self.level_max);
+ds_map_destroy(self.level_minstart);
+ds_map_destroy(self.level_maxstart);
 
-ds_list_destroy(losers);
+ds_list_destroy(self.losers);
 
 // rules
-ds_map_destroy(rules_state);
-ds_map_destroy(custom_rules);
+ds_map_destroy(self.rules_state);
+ds_map_destroy(self.custom_rules);
 
-if(instance_exists(world))
-{
-    instance_destroy(world);
+if (instance_exists(self.world)) {
+    instance_destroy(self.world);
 }

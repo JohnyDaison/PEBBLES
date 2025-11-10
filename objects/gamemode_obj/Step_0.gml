@@ -1,3 +1,4 @@
+// TODO: revive this effect but make it apply to individual player views
 /*
 if(pixelating_left > 0)
 {
