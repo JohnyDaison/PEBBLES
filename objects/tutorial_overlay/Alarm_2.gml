@@ -1,15 +1,13 @@
 /// @description  UPDATE MESSAGE
-var message_script;
-
 if (instance_exists(self.my_guy)) {
     self.old_message = self.message;
     var change_made = false;
 
     // UPDATE MESSAGE
-    for (var i = 1; i <= self.message_count; i++) {
-        message_script = ds_map_find_value(self.messages, i);
+    for (var index = 0; index < self.message_count; index++) {
+        var message_script = self.messages[index];
 
-        var state = self.message_state[? i];
+        var state = self.message_state[index];
 
         if (state == 0 && self.message == "" && self.fadeout_step == self.fadeout_time) {
             self.title = script_execute(message_script, "title");
@@ -48,7 +46,7 @@ if (instance_exists(self.my_guy)) {
             }
         }
 
-        self.message_state[? i] = state;
+        self.message_state[index] = state;
 
         //if(self.message != self.old_message) break;
         if (change_made) break;

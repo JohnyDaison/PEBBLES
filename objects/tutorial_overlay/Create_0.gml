@@ -29,34 +29,35 @@ self.fadeout_time = 90;
 self.blink_step = 0;
 self.fadeout_step = 0;
 
-var messages = ds_map_create();
-var i = 1;
-ds_map_add(messages, i++, message_movement);
-ds_map_add(messages, i++, message_attack);
-ds_map_add(messages, i++, message_change_color);
-ds_map_add(messages, i++, message_create_shield);
-ds_map_add(messages, i++, message_crystals);
-ds_map_add(messages, i++, message_sprinkler);
-ds_map_add(messages, i++, message_load_cannon);
-ds_map_add(messages, i++, message_fire_cannon);
-
-ds_map_add(messages, i++, message_flashback);
-ds_map_add(messages, i++, message_berserk);
-ds_map_add(messages, i++, message_heal);
-ds_map_add(messages, i++, message_teleport);
-ds_map_add(messages, i++, message_haste);
-ds_map_add(messages, i++, message_invis);
-ds_map_add(messages, i++, message_ubershield);
-ds_map_add(messages, i++, message_base_teleport);
-
-self.messages = messages;
-self.message_count = ds_map_size(messages);
-
+self.messages = [];
+self.message_count = 0;
 // 0 - NOT SHOWN, 1 - ACTIVE, 2 - WAS SHOWN
-self.message_state = ds_map_create();
-
-for (i = 1; i <= self.message_count; i++) {
-    ds_map_add(self.message_state, i, 0);
-}
+self.message_state = [];
 
 self.alarm[2] = self.message_delay;
+
+function addMessage(message) {
+    var index = self.message_count++;
+    
+    self.messages[index] = message;
+    self.message_state[index] = 0;
+}
+
+// messages
+self.addMessage(message_movement);
+self.addMessage(message_attack);
+self.addMessage(message_change_color);
+self.addMessage(message_create_shield);
+self.addMessage(message_crystals);
+self.addMessage(message_sprinkler);
+self.addMessage(message_load_cannon);
+self.addMessage(message_fire_cannon);
+
+self.addMessage(message_flashback);
+self.addMessage(message_berserk);
+self.addMessage(message_heal);
+self.addMessage(message_teleport);
+self.addMessage(message_haste);
+self.addMessage(message_invis);
+self.addMessage(message_ubershield);
+self.addMessage(message_base_teleport);
