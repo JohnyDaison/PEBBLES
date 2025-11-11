@@ -70,13 +70,8 @@ only_cam = false;
 camera_ready = false;
 
 // looks
-draw_frame = true;
-potential_color = c_orange;
-body_color = c_orange;
-//shield_col = c_orange;
-
-inner_color = c_orange;
-outer_color = c_orange;
+self.draw_frame = true;
+self.frameColor = merge_color(c_dkgray, c_black, 0.8);
 
 // read terrain
 self.read_terrain = true;

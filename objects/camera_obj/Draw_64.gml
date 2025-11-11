@@ -8,79 +8,23 @@ if (self.on) {
     if (instance_exists(self.my_guy)) {
         if (self.draw_frame) {
             draw_set_alpha(1);
-            draw_set_colour(c_black);
-            draw_line(self.view_x, self.view_y, self.view_x, self.view_y + self.height);
-            draw_line(self.view_x, self.view_y, self.view_x + self.width, self.view_y);
-            draw_line(self.view_x + self.width, self.view_y, self.view_x + self.width, self.view_y + self.height);
-            draw_line(self.view_x, self.view_y + self.height, self.view_x + self.width, self.view_y + self.height);
-
-            self.body_color = ds_map_find_value(DB.colormap, g_dark);
-
-            /*
-            body_color = ds_map_find_value(DB.colormap,my_guy.my_color);
-            
-            if(object_is_ancestor(my_guy.object_index,guy_obj))
-            {
-                has_shield = (instance_exists(my_guy.my_shield));
-            }
-            else
-            {
-                has_shield = false;
-            }
-            
-            if(has_shield)
-            {
-                shield_col = ds_map_find_value(DB.colormap,my_guy.my_shield.my_color);
-            }
-            else
-            {
-                shield_col = ds_map_find_value(DB.colormap,g_dark);
-            }
-            */
-            if (object_is_ancestor(self.my_guy.object_index, guy_obj)) {
-                self.potential_color = DB.colormap[? my_guy.potential_color];
-                self.body_color = DB.colormap[? my_guy.my_color];
-
-                if (self.my_guy.channeling) {
-                    self.potential_color = DB.colormap[? g_dark];
-                    self.body_color = DB.colormap[? g_dark];
-                }
-
-                /*
-                if(my_guy.potential_abi_name != "" || my_guy.slots_triggered)
-                {
-                    body_color = inner_color;
-                }
-                */
-
-            }
-
-            //shield_col = body_color;
-            self.inner_color = self.potential_color;
-            //outer_color = body_color;
-            //inner_color = body_color;
-            self.outer_color = self.potential_color;
-
-            draw_set_alpha(1);
 
             for (var i = 0; i < self.border_width; i += 1) {
                 var ratio = i / self.border_width;
 
                 if (ratio <= 1 / 3) {
-                    draw_set_colour(merge_colour(c_black, self.outer_color, sqrt(ratio * 3)));
+                    draw_set_colour(merge_colour(c_black, self.frameColor, sqrt(ratio * 3)));
                 }
                 else {
                     if (ratio <= 2 / 3) {
-                        draw_set_colour(merge_colour(self.outer_color, self.inner_color, (ratio - 1 / 3) * 3));
+                        draw_set_colour(self.frameColor);
                     }
                     else {
-                        draw_set_colour(merge_colour(self.inner_color, self.border_color, sqr(ratio - 2 / 3) * 3));
+                        draw_set_colour(merge_colour(self.frameColor, self.border_color, sqr(ratio - 2 / 3) * 3));
                     }
-
-                    //draw_set_colour(merge_colour(outer_color, inner_color, sqr((ratio - 1/3) * 3/2) ));
                 }
 
-                draw_rectangle(self.view_x + i - 1, self.view_y + i - 1, self.view_x + self.width - i, self.view_y + self.height - i, true);
+                draw_rectangle(self.view_x + i, self.view_y + i, self.view_x + self.width - i, self.view_y + self.height - i, true);
             }
         }
 
