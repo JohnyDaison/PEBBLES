@@ -59,8 +59,8 @@ self.addMessageStruct(MessageCrystals);
 self.addMessageStruct(MessageSprinkler);
 self.addMessageStruct(MessageLoadCannon);
 self.addMessageStruct(MessageFireCannon);
-
-self.addMessage(message_flashback);
+// Ability Messages
+self.addMessageStruct(MessageFlashback);
 self.addMessage(message_berserk);
 self.addMessage(message_heal);
 self.addMessage(message_teleport);

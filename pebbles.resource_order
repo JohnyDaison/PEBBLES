@@ -1208,6 +1208,7 @@
     {"name":"tut_guide3_destroy","order":7,"path":"scripts/tut_guide3_destroy/tut_guide3_destroy.yy",},
     {"name":"tut_guide3_init","order":5,"path":"scripts/tut_guide3_init/tut_guide3_init.yy",},
     {"name":"tut_guide3","order":6,"path":"scripts/tut_guide3/tut_guide3.yy",},
+    {"name":"TutorialOverlayAbilityMessage","order":12,"path":"scripts/TutorialOverlayAbilityMessage/TutorialOverlayAbilityMessage.yy",},
     {"name":"TutorialOverlayMessage","order":11,"path":"scripts/TutorialOverlayMessage/TutorialOverlayMessage.yy",},
     {"name":"unregister_item","order":28,"path":"scripts/unregister_item/unregister_item.yy",},
     {"name":"unsubscribe_event","order":1,"path":"scripts/unsubscribe_event/unsubscribe_event.yy",},
