@@ -52,7 +52,7 @@ function addMessageStruct(message) {
 
 // messages
 self.addMessageStruct(MessageMovement);
-self.addMessage(message_attack);
+self.addMessageStruct(MessageAttack);
 self.addMessage(message_change_color);
 self.addMessage(message_create_shield);
 self.addMessage(message_crystals);
