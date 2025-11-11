@@ -53,7 +53,7 @@ function addMessageStruct(message) {
 // messages
 self.addMessageStruct(MessageMovement);
 self.addMessageStruct(MessageAttack);
-self.addMessage(message_change_color);
+self.addMessageStruct(MessageChangeColor);
 self.addMessage(message_create_shield);
 self.addMessage(message_crystals);
 self.addMessage(message_sprinkler);

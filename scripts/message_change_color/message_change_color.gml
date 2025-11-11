@@ -1,43 +1,28 @@
-function message_change_color(argument0) {
-    var query = argument0;
+function MessageChangeColor(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Change color";
 
-    switch(query)
-    {
-        case "title":
-        {
-            return "Change color";
-        }
-        break;
-    
-        case "message":
-        {
+    static message = function () {
+        with (self.overlay) {
             return  get_control_name(b) + "," +
                     get_control_name(g) + "," +
                     get_control_name(r) + " = choose Color\n" +
                     get_control_name(cast) + " = accept";
         }
-        break;
-    
-        case "show_check":
-        {
-            return true;
-        }
-        break;
-    
-        case "hide_check":
-        {
-            if(my_guy.my_color != g_dark)
-            {
-                return true;
-            }
-            return false;
-        }
-        break;
-    
-        case "cancel_check":
-        {
-            return my_guy.slot_number == 0;
-        }
-        break;
+    }
+
+    static showCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        
+        return get_level(my_guy, "orbs1") > 0 || get_level(my_guy, "orbs2") > 0 || get_level(my_guy, "orbs4") > 0;
+    }
+
+    static hideCondition = function () {
+        var my_guy = self.overlay.my_guy;
+
+        return my_guy.my_color != g_dark;
+    }
+
+    static cancelCondition = function () {
+        return false;
     }
 }
