@@ -1,59 +1,46 @@
-function message_crystals(argument0) {
-	var query = argument0;
+function MessageCrystals(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Shard";
 
-	switch(query)
-	{
-	    case "title":
-	    {
-	        return "Shard";
-	    }
-	    break;
-    
-	    case "message":
-	    {
-	        return "Break its Shield and collect it";
-	    }
-	    break;
-    
-	    case "show_check":
-	    {
-	        var found = false;
-	        with(crystal_obj)
-	        {
-	            var dist = point_distance(x,y, other.my_guy.x,other.my_guy.y);
-	            if(my_guy == id && dist < 320)
-	                found = true;
-	        }
-	        return found;
-	    }
-	    break;
-    
-	    case "hide_check":
-	    {
-	        var found = false;
-	        with(guy_obj)
-	        {
-	            if(find_in_inventory(crystal_obj) != noone)
-	                found = true;
-	        }
-	        return found;
-	    }
-	    break;
-    
-	    case "cancel_check":
-	    {
-	        var found = false;
-	        with(crystal_obj)
-	        {
-	            var dist = point_distance(x,y, other.my_guy.x,other.my_guy.y);
-	            if(my_guy == id && dist < 480)
-	                found = true;
-	        }
-	        return !found || cur_message_step > 900;
-	    }
-	    break;
-	}
+    static message = function () {
+        return "Break the Shard's Shield and collect it";
+    }
 
+    static showCondition = function () {
+        var my_guy = self.overlay.my_guy;
 
+        with (crystal_obj) {
+            var dist = point_distance(self.x, self.y, my_guy.x, my_guy.y);
 
+            if (self.my_guy == self.id && dist < 320) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static hideCondition = function () {
+        with (guy_obj) {
+            if (find_in_inventory(crystal_obj) != noone) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static cancelCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        var found = false;
+
+        with (crystal_obj) {
+            var dist = point_distance(self.x, self.y, my_guy.x, my_guy.y);
+
+            if (self.my_guy == self.id && dist < 480) {
+                found = true;
+            }
+        }
+
+        return !found || self.overlay.cur_message_step > 900;
+    }
 }
