@@ -50,15 +50,14 @@ function addMessageStruct(message) {
     self.message_state[index] = 0;
 }
 
-// messages
-
+// Messages
 self.addMessageStruct(MessageMovement);
 self.addMessageStruct(MessageAttack);
 self.addMessageStruct(MessageChangeColor);
 self.addMessageStruct(MessageCreateShield);
 self.addMessageStruct(MessageCrystals);
 self.addMessageStruct(MessageSprinkler);
-self.addMessage(message_load_cannon);
+self.addMessageStruct(MessageLoadCannon);
 self.addMessageStruct(MessageFireCannon);
 
 self.addMessage(message_flashback);

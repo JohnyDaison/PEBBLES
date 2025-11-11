@@ -1,71 +1,78 @@
-function message_load_cannon(argument0) {
-    var query = argument0;
+function MessageLoadCannon(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Load Cannon";
 
-    switch(query)
-    {
-        case "title":
-        {
-            return "Load Cannon";
-        }
-        break;
-    
-        case "message":
-        {
-            return "You have extra Color Orbs," + "\n" + "get inside your Cannon to load them.";
-        }
-        break;
-    
-        case "show_check":
-        {
-            var orb_found = false;
-            with(my_guy)
-            {
-                for(var col=g_red; col<=g_blue; col++)
-                {
-                    if(orb_reserve[? col] >= 1)
-                        orb_found = true;   
-                }
-            }
-            return orb_found;
-        }
-        break;
-    
-        case "hide_check":
-        {
-            var base = my_guy.my_base;
-        
-            if(instance_exists(base))
-            {
-                if(base.object_index == guy_spawner_obj)
-                {
-                    if(!instance_exists(base.base_cannon))
-                        return true;
-                
-                    if(base.base_cannon.shot_color > g_dark)
-                        return true;
-                } 
-                else
-                {
-                    return true;
-                }
-            }        
+    /// @return {String}
+    static message = function () {
+        return "You have extra Color Orbs,\nget inside your Cannon to load them.";
+    }
+
+    /// @return {Bool}
+    static showCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        var cannon = self.getCannon();
+
+        if (cannon == noone) {
             return false;
         }
-        break;
-    
-        case "cancel_check":
-        {
-            var orb_found = false;
-            with(my_guy)
-            {
-                for(var col=g_red; col<=g_blue; col++)
-                {
-                    if(orb_reserve[? col] >= 1)
-                        orb_found = true;   
-                }
+
+        for (var col = g_red; col <= g_blue; col++) {
+            if (col == g_yellow) {
+                continue;
             }
-            return !orb_found || cur_message_step > 900;
+
+            if (my_guy.orb_reserve[? col] >= 1) {
+                return true;
+            }
         }
-        break;
+
+        return false;
+    }
+
+    /// @return {Bool}
+    static hideCondition = function () {
+        var cannon = self.getCannon();
+
+        if (cannon == noone) {
+            return true;
+        }
+
+        if (cannon.shot_color > g_dark) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /// @return {Bool}
+    static cancelCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        var orb_found = false;
+
+        for (var col = g_red; col <= g_blue; col++) {
+            if (col == g_yellow) {
+                continue;
+            }
+
+            if (my_guy.orb_reserve[? col] >= 1) {
+                orb_found = true;
+            }
+        }
+
+        return !orb_found || self.overlay.cur_message_step > 900;
+    }
+    
+    /// @return {Id.Instance}
+    static getCannon = function () {
+        var base = self.overlay.my_guy.my_base;
+
+        if (!instance_exists(base) || base.object_index != guy_spawner_obj) {
+            return noone;
+        }
+
+        if (!instance_exists(base.base_cannon)) {
+            return noone;
+        }
+        
+        return base.base_cannon;
     }
 }
