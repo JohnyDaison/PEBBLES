@@ -51,12 +51,13 @@ function addMessageStruct(message) {
 }
 
 // messages
+
 self.addMessageStruct(MessageMovement);
 self.addMessageStruct(MessageAttack);
 self.addMessageStruct(MessageChangeColor);
 self.addMessageStruct(MessageCreateShield);
 self.addMessageStruct(MessageCrystals);
-self.addMessage(message_sprinkler);
+self.addMessageStruct(MessageSprinkler);
 self.addMessage(message_load_cannon);
 self.addMessageStruct(MessageFireCannon);
 
