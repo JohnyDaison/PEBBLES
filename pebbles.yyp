@@ -1185,7 +1185,6 @@
     {"id":{"name":"message_sprinkler","path":"scripts/message_sprinkler/message_sprinkler.yy",},},
     {"id":{"name":"message_teleport","path":"scripts/message_teleport/message_teleport.yy",},},
     {"id":{"name":"message_ubershield","path":"scripts/message_ubershield/message_ubershield.yy",},},
-    {"id":{"name":"message_use_abi","path":"scripts/message_use_abi/message_use_abi.yy",},},
     {"id":{"name":"minimap_toolbar_toggle","path":"scripts/minimap_toolbar_toggle/minimap_toolbar_toggle.yy",},},
     {"id":{"name":"move_contact_object","path":"scripts/move_contact_object/move_contact_object.yy",},},
     {"id":{"name":"move_mountain_nav_graph","path":"scripts/move_mountain_nav_graph/move_mountain_nav_graph.yy",},},

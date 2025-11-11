@@ -995,7 +995,6 @@
     {"name":"message_sprinkler","order":6,"path":"scripts/message_sprinkler/message_sprinkler.yy",},
     {"name":"message_teleport","order":3,"path":"scripts/message_teleport/message_teleport.yy",},
     {"name":"message_ubershield","order":6,"path":"scripts/message_ubershield/message_ubershield.yy",},
-    {"name":"message_use_abi","order":5,"path":"scripts/message_use_abi/message_use_abi.yy",},
     {"name":"minimap_toolbar_toggle","order":13,"path":"scripts/minimap_toolbar_toggle/minimap_toolbar_toggle.yy",},
     {"name":"move_contact_object","order":3,"path":"scripts/move_contact_object/move_contact_object.yy",},
     {"name":"my_console_log","order":9,"path":"scripts/my_console_log/my_console_log.yy",},
