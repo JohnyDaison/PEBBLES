@@ -1,59 +1,42 @@
-function message_movement(argument0) {
-	var query = argument0;
-
-	switch(query)
-	{
-	    case "title":
-	    {
-	        return "Movement";
-	    }
-	    break;
+function MessageMovement(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Movement";
     
-	    case "message":
-	    {
-	        return get_control_name(directions) + " = Move/Aim\n"+
-	               get_control_name(jump) +" = Jump \nMOVE OUT!";
-	    }
-	    break;
-    
-	    case "show_check":
-	    {
-	        return true;
-	    }
-	    break;
-    
-	    case "hide_check":
-	    {
-	        var base = my_guy.my_base;
-	        if(instance_exists(base))
-	        {
-	            if(base.object_index == guy_spawner_obj)
-	            {
-	                if(instance_exists(base.my_shield) && point_distance(base.x,base.y,my_guy.x,my_guy.y) > base.my_shield.radius)
-	                {
-	                    return true;
-	                }
-            
-	                if(base.destroyed)
-	                    return true;
-	            } 
-	            else
-	            {
-	                return true;
-	            }
-	        }
-        
-	        return false;
-	    }
-	    break;
-    
-	    case "cancel_check":
-	    {
-	        return false;
-	    }
-	    break;
-	}
+    static message = function () {
+        with (self.overlay) {
+            return get_control_name(directions) + " = Move/Aim\n" +
+                   get_control_name(jump) + " = Jump \nMOVE OUT!";
+        }
+    }
 
+    static showCondition = function () {
+        return true;
+    }
 
+    static hideCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        var base = my_guy.my_base;
 
+        if (!instance_exists(base)) {
+            return false;
+        }
+
+        if (base.object_index == guy_spawner_obj) {
+            if (instance_exists(base.my_shield) && point_distance(base.x, base.y, my_guy.x, my_guy.y) > base.my_shield.radius) {
+                return true;
+            }
+
+            if (base.destroyed) {
+                return true;
+            }
+        }
+        else {
+            return true;
+        }
+
+        return false;
+    }
+
+    static cancelCondition = function () {
+        return false;
+    }
 }

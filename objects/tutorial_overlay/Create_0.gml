@@ -38,13 +38,20 @@ self.alarm[2] = self.message_delay;
 
 function addMessage(message) {
     var index = self.message_count++;
-    
+
     self.messages[index] = new TutorialOverlayMessage(self.id, message);
     self.message_state[index] = 0;
 }
 
+function addMessageStruct(message) {
+    var index = self.message_count++;
+
+    self.messages[index] = new message(self.id);
+    self.message_state[index] = 0;
+}
+
 // messages
-self.addMessage(message_movement);
+self.addMessageStruct(MessageMovement);
 self.addMessage(message_attack);
 self.addMessage(message_change_color);
 self.addMessage(message_create_shield);
