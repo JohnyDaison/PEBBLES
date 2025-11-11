@@ -58,7 +58,7 @@ self.addMessage(message_create_shield);
 self.addMessageStruct(MessageCrystals);
 self.addMessage(message_sprinkler);
 self.addMessage(message_load_cannon);
-self.addMessage(message_fire_cannon);
+self.addMessageStruct(MessageFireCannon);
 
 self.addMessage(message_flashback);
 self.addMessage(message_berserk);
