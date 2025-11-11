@@ -14,26 +14,18 @@ function MessageMovement(overlay): TutorialOverlayMessage(overlay) constructor {
 
     static hideCondition = function () {
         var my_guy = self.overlay.my_guy;
-        var base = my_guy.my_base;
+        var spawner = my_guy.my_spawner;
+        var minDistance = 64;
 
-        if (!instance_exists(base)) {
-            return false;
+        var startX = my_guy.xstart;
+        var startY = my_guy.ystart;
+
+        if (instance_exists(spawner)) {
+            startX = spawner.x;
+            startY = spawner.y;
         }
 
-        if (base.object_index == guy_spawner_obj) {
-            if (instance_exists(base.my_shield) && point_distance(base.x, base.y, my_guy.x, my_guy.y) > base.my_shield.radius) {
-                return true;
-            }
-
-            if (base.destroyed) {
-                return true;
-            }
-        }
-        else {
-            return true;
-        }
-
-        return false;
+        return point_distance(startX, startY, my_guy.x, my_guy.y) > minDistance;
     }
 
     static cancelCondition = function () {
