@@ -1,40 +1,29 @@
-function message_create_shield(argument0) {
-    var query = argument0;
 
-    switch(query)
-    {
-        case "title":
-        {
-            return "Shield";
-        }
-        break;
-    
-        case "message":
-        {
+function MessageCreateShield(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Shield";
+
+    /// @return {String}
+    static message = function () {
+        with (self.overlay) {
             return get_control_name(cast) + " + no direction = Shield";
         }
-        break;
-    
-        case "show_check":
-        {
-            return my_guy.my_color > g_dark;
-        }
-        break;
-    
-        case "hide_check":
-        {
-            if(instance_exists(my_guy.my_shield))
-            {
-                return true;
-            }
-            return false;
-        }
-        break;
-    
-        case "cancel_check":
-        {
-            return my_guy.my_color <= g_dark;
-        }
-        break;
+    }
+
+    /// @return {Bool}
+    static showCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        return my_guy.my_color > g_dark;
+    }
+
+    /// @return {Bool}
+    static hideCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        return instance_exists(my_guy.my_shield);
+    }
+
+    /// @return {Bool}
+    static cancelCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        return my_guy.my_color <= g_dark;
     }
 }

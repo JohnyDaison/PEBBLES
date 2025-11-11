@@ -54,7 +54,7 @@ function addMessageStruct(message) {
 self.addMessageStruct(MessageMovement);
 self.addMessageStruct(MessageAttack);
 self.addMessageStruct(MessageChangeColor);
-self.addMessage(message_create_shield);
+self.addMessageStruct(MessageCreateShield);
 self.addMessageStruct(MessageCrystals);
 self.addMessage(message_sprinkler);
 self.addMessage(message_load_cannon);
