@@ -63,7 +63,7 @@ self.addMessageStruct(MessageFireCannon);
 self.addMessageStruct(MessageFlashback);
 self.addMessageStruct(MessageBerserk);
 self.addMessageStruct(MessageHeal);
-self.addMessage(message_teleport);
+self.addMessageStruct(MessageBlink);
 self.addMessage(message_haste);
 self.addMessage(message_invis);
 self.addMessage(message_ubershield);

@@ -1,47 +1,20 @@
-function message_teleport(argument0) {
-	var query = argument0;
-	var abi_color = g_blue;
+function MessageBlink(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
+    self.title = "Blink";
+    self.abiColor = g_blue;
 
-	switch(query)
-	{
-	    case "title":
-	    {
-	        return "Blink";
-	    }
-	    break;
-    
-	    case "message":
-	    {
-	        return "direction + " + get_control_name(abi) + " = Blink (Blue)\n"
-	            +  "Teleport in a direction by up to 8 blocks";
-	    }
-	    break;
-    
-	    case "show_check":
-	    {
-	        var RuleID = global.RuleID;
+    /// @return {String}
+    static message = function () {
+        with (self.overlay) {
+            return "direction + " + get_control_name(abi) + " = Blink (Blue)\n"
+                +  "Teleport in a direction by up to 8 blocks";
+        }
+    }
 
-            return my_guy.potential_color == abi_color && rule_get_state(RuleID.Abilities) && has_level(my_guy, "teleport", 1);
-	    }
-	    break;
-    
-	    case "hide_check":
-	    {
-	        if(my_guy.abi_cooldown[? abi_color] > 0)
-	        {
-	            return true;
-	        }
-	        return false;
-	    }
-	    break;
-    
-	    case "cancel_check":
-	    {
-	        return my_guy.potential_color != abi_color;
-	    }
-	    break;
-	}
+    /// @return {Bool}
+    static showCondition = function () {
+        var my_guy = self.overlay.my_guy;
+        var RuleID = global.RuleID;
 
-
-
+        return my_guy.potential_color == self.abiColor && rule_get_state(RuleID.Abilities) && has_level(my_guy, "teleport", 1);
+    }
 }
