@@ -1,42 +1,24 @@
-function TutorialOverlayMessage(overlay, messageScript = undefined) constructor {
+function TutorialOverlayMessage(overlay) constructor {
     self.overlay = overlay;
-    self.script = messageScript;
-
     self.title = "";
 
-    if (!is_undefined(messageScript)) {
-        self.title = messageScript("title");
-    }
-
+    /// @return {String}
     static message = function () {
-        var result;
-        with (self.overlay) {
-            result = script_execute(other.script, "message");
-        }
-        return result;
+        return "message";
     }
 
+    /// @return {Bool}
     static showCondition = function () {
-        var result;
-        with (self.overlay) {
-            result = script_execute(other.script, "show_check");
-        }
-        return result;
+        return false;
     }
 
+    /// @return {Bool}
     static hideCondition = function () {
-        var result;
-        with (self.overlay) {
-            result = script_execute(other.script, "hide_check");
-        }
-        return result;
+        return false;
     }
 
+    /// @return {Bool}
     static cancelCondition = function () {
-        var result;
-        with (self.overlay) {
-            result = script_execute(other.script, "cancel_check");
-        }
-        return result;
+        return false;
     }
 }
