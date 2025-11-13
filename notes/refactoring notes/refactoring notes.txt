@@ -1,5 +1,7 @@
 Miscelaneous:
 -------------
+* It isn't the best to use `left` `right` `up` `down` and others as global macros...
+
 * start using nullish operators `??`, `??=`
 
 * `basic_bot` and `shield_obj`

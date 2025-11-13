@@ -1,12 +1,14 @@
 event_inherited();
 
 if (self.playerCamCount > 0 && !self.on) {
-    var total_x = 0;
-    var total_y = 0;
-
+    // stop observing
     if (self.my_chunkgrid != noone) {
         observer_remove(self.my_chunkgrid, self.id);
     }
+
+    // calculate average of Player Camera positions
+    var total_x = 0;
+    var total_y = 0;
 
     for (var viewIndex = 0; viewIndex < self.playerCamCount; viewIndex++) {
         var player_view = self.player_view_list[| viewIndex];
@@ -33,6 +35,7 @@ if (self.playerCamCount > 0 && !self.on) {
         self.y - camera_get_view_height(viewCamera) / 2
     );
 
+    // clear terrain list
     if (self.ter_list_length > 0) {
         for (var terIndex = self.ter_list_length - 1; terIndex >= 0; terIndex--) {
             var ter_block = self.ter_list[| terIndex];
