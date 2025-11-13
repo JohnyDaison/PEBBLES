@@ -1,5 +1,7 @@
 event_inherited();
 
+self.playerCameraToggling();
+
 if (self.playerCamCount > 0 && !self.on) {
     var total_x = 0;
     var total_y = 0;

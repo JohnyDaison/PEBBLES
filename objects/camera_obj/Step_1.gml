@@ -1,5 +1,5 @@
 /// @description FOLLOW AND ZOOM
-if (self.on && self.view != -1) {
+if (self.view != -1) {
     //show_debug_message("CAMERA "+string(view)+" ON");
     var last_zoom_level = self.zoom_level;
     var camera = view_get_camera(self.view);
@@ -172,13 +172,15 @@ if (self.on && self.view != -1) {
 
     // APPLY CHANGES
     if (view_enabled) {
-        if (camera_get_view_target(camera) != self.id) {
-            camera_set_view_target(camera, self.id);
-            update_display();
-        }
+        if (self.on) {
+           if (camera_get_view_target(camera) != self.id) {
+               camera_set_view_target(camera, self.id);
+               update_display();
+           }
 
-        if (zoom_changed) {
-            update_display();
+           if (zoom_changed) {
+               update_display();
+           }
         }
 
         var old_x = self.x;
@@ -215,12 +217,13 @@ if (self.on && self.view != -1) {
             self.shake_dist = 0;
         }
 
-        view_set_visible(self.view, true);
-
-        if (self.view == 0 || self.view == 1) {
-            camera_before_view();
+        if (self.on) {
+           view_set_visible(self.view, true);
+   
+           if (self.view == 0 || self.view == 1) {
+               camera_before_view();
+           }
         }
-
     }
 }
 
