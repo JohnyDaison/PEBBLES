@@ -1,6 +1,7 @@
 function MessageHeal(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Heal";
     self.abiColor = g_green;
+    self.playerLevelId = "heal";
 
     /// @return {String}
     static message = function () {

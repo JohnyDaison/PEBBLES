@@ -1,6 +1,7 @@
 function MessageTeleport(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Teleport";
     self.abiColor = g_white;
+    self.playerLevelId = "base_teleport";
 
     /// @return {String}
     static message = function () {

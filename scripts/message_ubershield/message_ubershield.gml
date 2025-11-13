@@ -1,6 +1,7 @@
 function MessageUbershield(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Ubershield";
     self.abiColor = g_magenta;
+    self.playerLevelId = "ubershield";
 
     /// @return {String}
     static message = function () {

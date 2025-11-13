@@ -50,6 +50,7 @@ Convert Strings used as Enums to Enums:
 * `battlefeed_item_obj.setValuesAtIndex` function parameters `type`, `content`
 * `gamemode_obj.score_values` keys
 * `find_display_instance` - `display_type`
+* Player level IDs
 
 
 Convert these to Structs:

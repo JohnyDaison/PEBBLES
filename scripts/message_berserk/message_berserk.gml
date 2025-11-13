@@ -1,6 +1,7 @@
 function MessageBerserk(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Berserk";
     self.abiColor = g_red;
+    self.playerLevelId = "berserk";
 
     /// @return {String}
     static message = function () {

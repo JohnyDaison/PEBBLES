@@ -1,6 +1,7 @@
 function MessageHaste(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Haste";
     self.abiColor = g_yellow;
+    self.playerLevelId = "haste";
 
     /// @return {String}
     static message = function () {

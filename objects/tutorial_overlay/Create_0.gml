@@ -53,7 +53,7 @@ self.addMessageStruct(MessageSprinkler);
 self.addMessageStruct(MessageLoadCannon);
 self.addMessageStruct(MessageFireCannon);
 // Ability Messages
-self.addMessageStruct(MessageFlashback);
+self.addMessageStruct(MessageRewind);
 self.addMessageStruct(MessageBerserk);
 self.addMessageStruct(MessageHeal);
 self.addMessageStruct(MessageBlink);

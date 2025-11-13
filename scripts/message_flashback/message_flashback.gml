@@ -1,6 +1,7 @@
-function MessageFlashback(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
+function MessageRewind(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Rewind";
     self.abiColor = g_dark;
+    self.playerLevelId = "rewind";
 
     /// @return {String}
     static message = function () {

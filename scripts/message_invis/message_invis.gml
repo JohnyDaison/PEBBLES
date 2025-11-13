@@ -1,6 +1,7 @@
 function MessageInvisibility(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
     self.title = "Invisibility";
     self.abiColor = g_cyan;
+    self.playerLevelId = "invisibility";
 
     /// @return {String}
     static message = function () {
