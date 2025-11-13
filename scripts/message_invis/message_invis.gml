@@ -1,42 +1,12 @@
-function message_invis(argument0) {
-    var query = argument0;
-    var abi_color = g_cyan;
+function MessageInvisibility(overlay): TutorialOverlayAbilityMessage(overlay) constructor {
+    self.title = "Invisibility";
+    self.abiColor = g_cyan;
 
-    switch(query)
-    {
-        case "title":
-        {
-            return "Invisibility";
-        }
-        break;
-    
-        case "message":
-        {
+    /// @return {String}
+    static message = function () {
+        with (self.overlay) {
             return get_control_name(abi) + " = Invisibility (Cyan)\n"
                 +  "Turrets and mobs won't fire at you";
         }
-        break;
-    
-        case "show_check":
-        {
-            return my_guy.potential_color == abi_color;
-        }
-        break;
-    
-        case "hide_check":
-        {
-            if(my_guy.abi_cooldown[? abi_color] > 0)
-            {
-                return true;
-            }
-            return false;
-        }
-        break;
-    
-        case "cancel_check":
-        {
-            return my_guy.potential_color != abi_color;
-        }
-        break;
     }
 }
