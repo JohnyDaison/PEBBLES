@@ -48,6 +48,7 @@ self.addMessageStruct(MessageMovement);
 self.addMessageStruct(MessageAttack);
 self.addMessageStruct(MessageChangeColor);
 self.addMessageStruct(MessageCreateShield);
+self.addMessageStruct(MessageChanneling);
 self.addMessageStruct(MessageCrystals);
 self.addMessageStruct(MessageSprinkler);
 self.addMessageStruct(MessageLoadCannon);

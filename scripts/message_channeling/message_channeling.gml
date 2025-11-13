@@ -1,65 +1,46 @@
-function message_channeling(argument0) {
-    var query = argument0;
+function MessageChanneling(overlay): TutorialOverlayMessage(overlay) constructor {
+    self.title = "Channeling";
 
-    switch(query)
-    {
-        case "title":
-        {
-            return "Channeling";
-        }
-        break;
-    
-        case "message":
-        {
+    /// @return {String}
+    static message = function () {
+        with (self.overlay) {
             return "Low on energy? Return to base, or hold " + get_control_name(channel);
         }
-        break;
-    
-        case "show_check":
-        {
-            var low_color = false;
-            if(my_guy.my_color > g_dark)
-            {
-                comp = color_to_components(my_guy.my_color);
-                for(i = g_red; i <= g_blue; i++)
-                {
-                    if(i != g_yellow)
-                    {
-                        if(comp[i]) //  && my_guy.energy_left[i] < 5 - needs to be updated for Orb energy
-                        {
-                            low_color = true;
-                        }   
-                    }
-                }
-            }
-            return low_color;
-        }
-        break;
-    
-        case "hide_check":
-        {
-            return false;  
-        }
-        break;
-    
-        case "cancel_check":
-        {
-            var low_color = false;
-            comp = color_to_components(my_guy.my_color);
+    }
+
+    /// @return {Bool}
+    static showCondition = function () {
+        return self.guyHasLowColor();
+    }
+
+    /// @return {Bool}
+    static hideCondition = function () {
+        return self.overlay.my_guy.channeling;
+    }
+
+    /// @return {Bool}
+    static cancelCondition = function () {
+        return !self.guyHasLowColor();
+    }
+
+    /// @return {Bool}
+    static guyHasLowColor = function () {
+        var my_guy = self.overlay.my_guy;
+        var comp = color_to_components(my_guy.my_color);
+        var powerLevelThreshold = 0.5;
         
-            for(i = g_red; i <= g_blue; i++)
-            {
-                if(i != g_yellow)
-                {
-                    if(comp[i]) //  && my_guy.energy_left[i] < 5
-                    {
-                        low_color = true;
-                    }   
+        var low_color = false;
+
+        for (var col = g_red; col <= g_blue; col++) {
+            if (col == g_yellow) {
+                    continue;
                 }
+            
+            if (comp[col] && get_orb_list_power_level(my_guy.orbs_in_use[? col]) < powerLevelThreshold) {
+                low_color = true;
             }
-        
-            return !low_color;
         }
-        break;
+
+        return low_color;
     }
 }
