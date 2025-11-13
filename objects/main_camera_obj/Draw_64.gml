@@ -1,6 +1,6 @@
 event_inherited();
 
-if(draw_debug)
+if(self.draw_debug)
 {
     var step = 64, i = step;
     draw_set_colour(c_orange);
@@ -8,11 +8,12 @@ if(draw_debug)
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     my_draw_text(64, i, string(gamemode_obj.player_count));
+    
     i += step;
     with(camera_obj)
     {
-        my_draw_text(64, i, string(view)+": "
-            + string(on) + " " + string(visible) + "|| " + string(zoom_level) + "/" + string(normal_zoom));
+        my_draw_text(64, i, string(self.view)+": "
+            + string(self.on) + " " + string(self.visible) + "|| " + string(self.zoom_level) + "/" + string(self.normal_zoom));
             //string(view_visible[view])
             //+ " " + string(view_yport[view])+ ", " + string(view_hport[view])+ " | "
         i += step;

@@ -1,9 +1,5 @@
 event_inherited();
 
-guy_hor_dist = 128;
-guy_ver_dist = 128;
-on = false;
-
-
-
-
+self.guy_hor_dist = 128;
+self.guy_ver_dist = 128;
+self.on = false;

@@ -1,14 +1,13 @@
-var count = ds_list_size(player_view_list);
+var count = ds_list_size(self.player_view_list);
 
-for(var i = count-1; i >= 0; i--)
-{
-    var player_view = player_view_list[| i];
-    with(self.cameras[? player_view])
-    {
-        instance_destroy();
-    }
+for (var viewIndex = count - 1; viewIndex >= 0; viewIndex--) {
+    var player_view = self.player_view_list[| viewIndex];
+    var camera = self.cameras[? player_view];
+
+    instance_destroy(camera);
 }
+
 ds_map_destroy(self.cameras);
-ds_list_destroy(player_view_list);
+ds_list_destroy(self.player_view_list);
 
 event_inherited();
