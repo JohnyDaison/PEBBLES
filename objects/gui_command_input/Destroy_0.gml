@@ -1,3 +1,3 @@
-ds_list_destroy(items);
+ds_list_destroy(self.items);
 
 event_inherited();
