@@ -1,91 +1,89 @@
 event_inherited();
 
-var xx = x + margin;
-var yy = y + heading_height;
+var xx = self.x + self.margin;
+var yy = self.y + self.heading_height;
 
 var col_shift = 0, row_shift = 0;
-var half_row = row_height/2;
+var halfRow = self.row_height / 2;
+var halfColumn = self.column_width / 2;
 
 
 // column headings and backgrounds
-col_shift = big_gap_size;
-row_y = yy + half_row;
+col_shift = self.big_gap_size;
+var row_y = yy + halfRow;
 
-for(var col = 0; col < color_count; col += 1)
-{
-    var color = color_order[| col];
+for (var col = 0; col < self.color_count; col += 1) {
+    var color = self.color_order[| col];
     var color_value = DB.colormap[? color];
-    var col_x = xx + (col + 1.5) * column_width + col_shift;
-    
-    draw_set_alpha(column_bg_alpha);
-    draw_set_color(merge_color(color_value, c_white, column_white_ratio));
-    draw_rectangle(col_x - column_width/2, yy,
-                   col_x + column_width/2 - 1, yy + row_height - 1, false);
+    var col_x = xx + (col + 1.5) * self.column_width + col_shift;
+
+    draw_set_alpha(self.column_bg_alpha);
+    draw_set_color(merge_color(color_value, c_white, self.column_white_ratio));
+    draw_rectangle(col_x - halfColumn, yy,
+                   col_x + halfColumn - 1, yy + self.row_height - 1, false);
 
     draw_sprite_ext(column_circle_spr, 0, col_x, row_y, 1, 1, 0, color_value, 1);
-                   
-    if(ds_list_find_index(gaps_after, color) != -1) {
-        col_shift += gap_size;
+
+    if (ds_list_find_index(self.gaps_after, color) != -1) {
+        col_shift += self.gap_size;
     }
 }
 
 
 // row arrows and values
-row_shift += big_gap_size;
+row_shift += self.big_gap_size;
 
-for(var row = 0; row < color_count; row += 1)
-{
-    var rcolor = color_order[| row];
-    var rcolor_value = DB.colormap[? rcolor];
-    var row_y = yy + (row + 1.5) * row_height + row_shift;
-    var col_x = xx + column_width/2;
-    
+for (var row = 0; row < self.color_count; row += 1) {
+    var rowColor = self.color_order[| row];
+    var rowColorValue = DB.colormap[? rowColor];
+    row_y = yy + (row + 1.5) * self.row_height + row_shift;
+    var col_x = xx + halfColumn;
+
     draw_set_alpha(0.5);
     draw_set_color(c_dkgray);
-    draw_rectangle(col_x - column_width/2, row_y - half_row,
-                    col_x + column_width/2 - 1, row_y + half_row - 1, false);
-    
-    draw_set_color(rcolor_value);
-    draw_sprite_ext(row_arrow_spr, 0, col_x, row_y, 1, 1, 0, rcolor_value, 1);
-    
-    col_shift = big_gap_size;
-    for(var col = 0; col < color_count; col += 1)
-    {
-        var color = color_order[| col];
+    draw_rectangle(col_x - halfColumn, row_y - halfRow,
+                   col_x + halfColumn - 1, row_y + halfRow - 1, false);
+
+    draw_set_color(rowColorValue);
+    draw_sprite_ext(row_arrow_spr, 0, col_x, row_y, 1, 1, 0, rowColorValue, 1);
+
+    col_shift = self.big_gap_size;
+    for (var col = 0; col < self.color_count; col += 1) {
+        var color = self.color_order[| col];
         var color_value = DB.colormap[? color];
-        var ratio = get_power_ratio(rcolor, color);
-        var halfsize = floor(ratio * base_halfsize);
-        var col_x = xx + (col + 1.5) * column_width + col_shift;
-        
-        draw_set_alpha(column_bg_alpha);
-        draw_set_color(merge_color(color_value, c_white, column_white_ratio));
-        draw_rectangle(col_x - column_width/2, row_y - half_row,
-                        col_x + column_width/2 - 1, row_y + half_row - 1, false);
-        
-        if(rcolor != g_dark) {
-            if(ratio > 0) {
-                draw_set_color(rcolor_value);
+        var ratio = get_power_ratio(rowColor, color);
+        var halfsize = floor(ratio * self.base_halfsize);
+        col_x = xx + (col + 1.5) * self.column_width + col_shift;
+
+        draw_set_alpha(self.column_bg_alpha);
+        draw_set_color(merge_color(color_value, c_white, self.column_white_ratio));
+        draw_rectangle(col_x - halfColumn, row_y - halfRow,
+                       col_x + halfColumn - 1, row_y + halfRow - 1, false);
+
+        if (rowColor != g_dark) {
+            if (ratio > 0) {
+                draw_set_color(rowColorValue);
                 draw_set_alpha(0.5);
-                //draw_set_color(c_ltgray - rcolor_value);
-                draw_rectangle(col_x - (halfsize + 1), row_y - (halfsize + 1), 
+                //draw_set_color(c_ltgray - rowColorValue);
+                draw_rectangle(col_x - (halfsize + 1), row_y - (halfsize + 1),
                                col_x + halfsize, row_y + halfsize, false);
-    
-                //draw_set_color(rcolor_value);
+
+                //draw_set_color(rowColorValue);
                 draw_set_alpha(1);
-                draw_rectangle(col_x - halfsize, row_y - halfsize, 
+                draw_rectangle(col_x - halfsize, row_y - halfsize,
                                col_x + halfsize - 1, row_y + halfsize - 1, false);
             } else {
                 draw_set_alpha(1);
-                draw_sprite_ext(heal_power_spr, 0, col_x, row_y, 1, 1, 0, rcolor_value, 1);
+                draw_sprite_ext(heal_power_spr, 0, col_x, row_y, 1, 1, 0, rowColorValue, 1);
             }
         }
-        
-        if(ds_list_find_index(gaps_after, color) != -1) {
-            col_shift += gap_size;
+
+        if (ds_list_find_index(self.gaps_after, color) != -1) {
+            col_shift += self.gap_size;
         }
     }
-    
-    if(ds_list_find_index(gaps_after, rcolor) != -1) {
-        row_shift += gap_size;
+
+    if (ds_list_find_index(self.gaps_after, rowColor) != -1) {
+        row_shift += self.gap_size;
     }
 }

@@ -37,6 +37,11 @@ should output array not list
 * "ASSIGN BLOCK" Alarm Events
 have a lot of of repeating code
 
+* `c_ltgray -` and `- c_ltgray`
+should be replaced with `makeTextOutlineColor` (maybe rename it to just `makeOutlineColor`)
+
+* `gui_color_power_pane`
+has some repeating code
 
 Convert Strings used as Enums to Enums:
 ---------------------------------------
