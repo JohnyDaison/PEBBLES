@@ -12,7 +12,7 @@ function updateVisibleLineCount() {
 
     switch (singleton_obj.show_console) {
         case "peek":
-            self.visible_line_count = 3;
+            self.visible_line_count = 6;
             break;
         case "normal":
             self.visible_line_count = floor(resolution_coef * 12);
