@@ -43,6 +43,9 @@ should be replaced with `makeTextOutlineColor` (maybe rename it to just `makeOut
 * `gui_color_power_pane`
 has some repeating code
 
+* `effect_create_above`
+is deprecated
+
 Convert Strings used as Enums to Enums:
 ---------------------------------------
 (but store the String to Enum mapping somewhere)
