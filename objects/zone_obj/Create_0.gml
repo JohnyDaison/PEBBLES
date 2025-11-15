@@ -1,15 +1,15 @@
 event_inherited();
 
-triggerable = true;
-trigger_script = empty_script;
-triggerables = ds_list_create();
-trigger_targets = ds_list_create();
+self.triggerable = true;
+self.trigger_script = empty_script;
+self.triggerables = ds_list_create();
+self.trigger_targets = ds_list_create();
 
-detect_list = ds_list_create();
-inside_list = ds_list_create();
+self.detect_list = ds_list_create();
+self.inside_list = ds_list_create();
 
-zone_id = "";
-in_group = false;
-group_id = "zones";
+self.zone_id = "";
+self.in_group = false;
+self.group_id = "zones";
 
-zone_debug_tint = c_white;
+self.zone_debug_tint = c_white;
