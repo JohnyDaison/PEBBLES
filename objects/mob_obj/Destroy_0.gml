@@ -1,8 +1,10 @@
-with(spell_obj)
-{
-    if(my_guy == other.id)
-    {
-        my_guy = id;
+var mob = self;
+
+with (spell_obj) {
+    var spell = self;
+
+    if (spell.my_guy == mob.id) {
+        spell.my_guy = spell.id;
     }
 }
 
