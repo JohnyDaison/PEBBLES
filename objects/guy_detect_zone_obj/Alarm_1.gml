@@ -1,14 +1,15 @@
 /// @description DETECT TRIGGERABLES
-var i, count = ds_list_size(triggerables);
+var count = ds_list_size(self.triggerables);
+var triggerables = self.triggerables;
+var zone = self;
 
-for(i=0; i<count; i++)
-{
-    with(triggerables[| i])
-    {
-        if(place_meeting(x,y, other))
-        {
-            ds_list_add(other.trigger_targets, id);
-            other.trigger_script = trigger_target_script; 
+for (var i = 0; i < count; i++) {
+    with (triggerables[| i]) {
+        var inst = self;
+
+        if (place_meeting(inst.x, inst.y, zone.id)) {
+            ds_list_add(zone.trigger_targets, inst.id);
+            zone.trigger_script = trigger_target_script;
         }
     }
 }
